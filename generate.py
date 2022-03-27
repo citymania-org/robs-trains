@@ -24,7 +24,7 @@ def tmpl_vox_train(filename):
         sprite( 93, 0, 24, 24, xofs=-10, yofs=-16),
         sprite(125, 0, 10, 32, xofs=-3, yofs=-16),
         sprite(143, 0, 24, 24, xofs=-15, yofs=-16),
-        sprite(175, 0, 27, 19, xofs=-10, yofs=-16),
+        sprite(175, 0, 35, 19, xofs=-10, yofs=-16),
         sprite(218, 0, 24, 24, xofs=-10, yofs=-16),
     ]
 
