@@ -5,12 +5,10 @@ import grf
 import lib
 
 g = grf.NewGRF(
-    b'ROBT',
-    8,
-    'Robs Trains',
-    'Robs Trains',
+    grfid=b'ROBT',
+    name='Robs Trains',
+    description='Robs Trains',
 )
-g.strings = lib.StringManager()
 Train = g.bind(lib.Train)
 
 
@@ -44,18 +42,20 @@ Train(
         'B': 'z1989_DSB_MF_IC3_MFA_2_32bpp.png',
     }),
     engine_class=Train.EngineClass.DIESEL,
-    max_speed=lib.kmhishph(104),
+    max_speed=Train.kmhishph(104),
     power=255,
     introduction_date=date(1972, 1, 1),
+    weight=20,
+    tractive_effort_coefficient=79,
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     running_cost_factor=222,
     cargo_capacity=90,
     default_cargo_type=0,
-    cost_factor=246,
+    cost_factor=24,
     refittable_cargo_types=1,
-    additional_text=lib.fake_info_text({
+    additional_text=grf.fake_info_text({
         'Info': 'Leyland',
     }),
 ).add_articulated_part(
@@ -78,5 +78,4 @@ Train(
     refittable_cargo_types=1,
 )
 
-g.add(g.strings)
 g.write('robs_trains.grf')
