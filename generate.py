@@ -34,6 +34,17 @@ def make_vox_liveries(liveries):
     } for name, filename in liveries.items()]
 
 
+# Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
+modern_diesel_sound = {
+    grf.SoundEvent.STOPPED: grf.RAWSound('sounds/modern_diesel_idle.wav'),
+    grf.SoundEvent.VISUAL_EFFECT: grf.RAWSound('sounds/modern_diesel_run.wav'),
+    grf.SoundEvent.RUNNING_16: grf.RAWSound('sounds/modern_diesel_coast.wav'),
+    grf.SoundEvent.START: grf.RAWSound('sounds/horn_4.wav'),
+    grf.SoundEvent.BREAKDOWN: grf.DefaultSound.TRAIN_BREAKDOWN,
+    grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/horn_4.wav'),  # sounds are cached by filename so horn_4 will only be added once
+}
+
+
 Train(
     id=501,
     name='Leyland National',
@@ -42,6 +53,7 @@ Train(
         'B': 'z1989_DSB_MF_IC3_MFA_2_32bpp.png',
     }),
     engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
     max_speed=Train.kmhishph(104),
     power=255,
     introduction_date=date(1972, 1, 1),
