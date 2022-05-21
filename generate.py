@@ -62,6 +62,8 @@ Train(
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
     default_cargo_type=0,
