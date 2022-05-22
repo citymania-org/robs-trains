@@ -16,14 +16,14 @@ def tmpl_vox_train(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
-        sprite(  0, 0, 10, 33, xofs=-3, yofs=-16),
-        sprite( 18, 0, 24, 24, xofs=-15, yofs=-16),
-        sprite( 50, 0, 35, 19, xofs=-10, yofs=-16),
-        sprite( 93, 0, 24, 24, xofs=-10, yofs=-16),
-        sprite(125, 0, 10, 32, xofs=-3, yofs=-16),
-        sprite(143, 0, 24, 24, xofs=-15, yofs=-16),
-        sprite(175, 0, 35, 19, xofs=-10, yofs=-16),
-        sprite(218, 0, 24, 24, xofs=-10, yofs=-16),
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
 
@@ -57,8 +57,6 @@ Train(
     max_speed=Train.kmhishph(104),
     power=255,
     introduction_date=date(1972, 1, 1),
-    weight=20,
-    tractive_effort_coefficient=79,
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
