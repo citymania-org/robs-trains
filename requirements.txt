@@ -1,5 +1,1 @@
-nml==0.6.1
-numpy==1.22.0
-Pillow==8.4.0
-spectra==0.0.11
-git+https://github.com/citymania-org/grf-py.git@7a097c8301bcb7670060826002565e7517920a58#egg=grf
+git+https://github.com/citymania-org/grf-py.git@8cb993dfa5108bb6060f159e3bf991f7f646ddcf#egg=grf

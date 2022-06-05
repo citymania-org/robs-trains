@@ -67,7 +67,7 @@ Train(
     default_cargo_type=0,
     cost_factor=24,
     refittable_cargo_types=1,
-    additional_text=grf.fake_info_text({
+    additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
 ).add_articulated_part(
