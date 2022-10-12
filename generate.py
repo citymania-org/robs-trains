@@ -408,7 +408,7 @@ Train(
     default_cargo_type=0,
     refittable_cargo_types=1,
 ).add_articulated_part(
-    id=503,
+    id=3602,
     liveries = make_vox_liveries({
         'White and Red': 'z1989_DSB_MF_IC3_MFB_1_32bpp.png',
         'Grey, Blue and Green': 'z1989_DSB_MF_IC3_MFB_2_32bpp.png',
@@ -507,7 +507,7 @@ Train(
         'Info': 'Leyland',
     }),
 ).add_articulated_part(
-    id=502,
+    id=5601,
     liveries = make_vox_liveries({
         'Maroon': 'z1933_DSB_S-Tog_1_FM_1_32bpp.png',
     }),
@@ -515,7 +515,7 @@ Train(
     default_cargo_type=0,
     refittable_cargo_types=1,
 ).add_articulated_part(
-    id=503,
+    id=5602,
     liveries = make_vox_liveries({
         'Maroon': 'z1933_DSB_S-Tog_1_FS_1_32bpp.png',
     }),
