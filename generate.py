@@ -10,8 +10,6 @@ g = grf.NewGRF(
     description='Scandinavian Trains made by Rob, dP and Brickblock',
 )
 
-g.add(lib.set_global_train_y_offset(1))
-
 Train = g.bind(lib.Train)
 
 
