@@ -13,13 +13,11 @@ g = grf.NewGRF(
 Train = g.bind(lib.Train)
 
 
-g.add(lib.set_global_train_y_offset(1))
+g.add(lib.set_global_train_y_offset(2))
 
 g.add(lib.set_global_is_32(1))
 
-
-
-def tmpl_vox_train_8(filename):
+def tmpl_vox_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -31,12 +29,96 @@ def tmpl_vox_train_8(filename):
         sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
         sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def tmpl_vox_train_11(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def tmpl_vox_train_10(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def tmpl_vox_train_9(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def tmpl_vox_train_8(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 16, 44, xofs=- 7, yofs=-29),
+        sprite( 24, 0, 34, 32, xofs=-12, yofs=-21),
+        sprite( 66, 0, 47, 26, xofs=-24, yofs=-20),
+        sprite(121, 0, 34, 32, xofs=-12, yofs=-21),
+        sprite(163, 0, 16, 44, xofs=- 7, yofs=-29),
+        sprite(187, 0, 34, 32, xofs=-12, yofs=-21),
+        sprite(229, 0, 47, 26, xofs=-24, yofs=-20),
+        sprite(284, 0, 34, 32, xofs=-12, yofs=-21),
     ]
 
 def tmpl_vox_train_7(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
+        sprite(  0, 0, 16, 42, xofs=- 7, yofs=-29),
+        sprite( 24, 0, 32, 31, xofs=-19, yofs=-21),
+        sprite( 64, 0, 47, 26, xofs=-24, yofs=-20),
+        sprite(119, 0, 32, 31, xofs=-14, yofs=-21),
+        sprite(159, 0, 16, 42, xofs=- 7, yofs=-19),
+        sprite(183, 0, 32, 31, xofs=-19, yofs=-21),
+        sprite(223, 0, 47, 26, xofs=-24, yofs=-20),
+        sprite(278, 0, 32, 31, xofs=-14, yofs=-21),
+    ]
+
+def tmpl_vox_train_6(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 16, 42, xofs=- 7, yofs=-28),
+        sprite( 24, 0, 32, 31, xofs=-17, yofs=-21),
+        sprite( 64, 0, 47, 26, xofs=-20, yofs=-20),
+        sprite(119, 0, 32, 31, xofs=- 9, yofs=-19),
+        sprite(159, 0, 16, 42, xofs=- 7, yofs=-24),
+        sprite(183, 0, 32, 31, xofs=-21, yofs=-19),
+        sprite(223, 0, 47, 26, xofs=-28, yofs=-20),
+        sprite(278, 0, 32, 31, xofs=-13, yofs=-21),
+    ]
+
+def tmpl_vox_train_5(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
         sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
         sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
         sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
@@ -46,6 +128,90 @@ def tmpl_vox_train_7(filename):
         sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
+
+def tmpl_vox_train_4(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def tmpl_vox_train_3(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def tmpl_vox_train_2(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def tmpl_vox_train_1(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
+        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
+        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
+        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
+        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
+    ]
+
+def make_vox_liveries_12(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_12(filename),
+    } for name, filename in liveries.items()]
+
+
+def make_vox_liveries_11(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_11(filename),
+    } for name, filename in liveries.items()]
+
+
+def make_vox_liveries_10(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_10(filename),
+    } for name, filename in liveries.items()]
+
+
+def make_vox_liveries_9(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_9(filename),
+    } for name, filename in liveries.items()]
+
 
     #use this for lenght 8 (0.5 tiles)
 def make_vox_liveries_8(liveries):
@@ -60,6 +226,43 @@ def make_vox_liveries_7(liveries):
         'name': f' ({name})',
         'sprites': tmpl_vox_train_7(filename),
     } for name, filename in liveries.items()]
+
+def make_vox_liveries_6(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_6(filename),
+    } for name, filename in liveries.items()]
+
+def make_vox_liveries_5(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_5(filename),
+    } for name, filename in liveries.items()]
+
+def make_vox_liveries_4(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_4(filename),
+    } for name, filename in liveries.items()]
+
+def make_vox_liveries_3(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_3(filename),
+    } for name, filename in liveries.items()]
+
+def make_vox_liveries_2(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_2(filename),
+    } for name, filename in liveries.items()]
+
+def make_vox_liveries_1(liveries):
+    return [{
+        'name': f' ({name})',
+        'sprites': tmpl_vox_train_1(filename),
+    } for name, filename in liveries.items()]
+
 
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {
@@ -236,7 +439,8 @@ Train(
 Train(
     id=1600,
     name='Rc1',
-    liveries=make_vox_liveries_7({
+    shorten_by=2,
+    liveries=make_vox_liveries_6({
         'Orange and Turquoise': 'z1967_SJ_Rc1_1_32bpp.png',
         'Blue and Red': 'z1967_SJ_Rc1_2_32bpp.png',
     }),
@@ -263,7 +467,8 @@ Train(
 Train(
     id=1610,
     name='Rc2',
-    liveries=make_vox_liveries_7({
+    shorten_by=2,
+    liveries=make_vox_liveries_6({
         'Orange and Turquoise': 'z1969_SJ_Rc2_1_32bpp.png',
         'Blue and Red Old': 'z1969_SJ_Rc2_2_32bpp.png',
         'Blue and Red New': 'z1969_SJ_Rc2_3_32bpp.png',
@@ -291,7 +496,8 @@ Train(
 Train(
     id=1620,
     name='Rc3',
-    liveries=make_vox_liveries_7({
+    shorten_by=2,
+    liveries=make_vox_liveries_6({
         'Orange and Turquoise': 'z1970_SJ_Rc3_1_32bpp.png',
         'Blue and Red': 'z1970_SJ_Rc3_2_32bpp.png',
     }),
@@ -318,7 +524,8 @@ Train(
 Train(
     id=1630,
     name='Rc4',
-    liveries=make_vox_liveries_7({
+    shorten_by=2,
+    liveries=make_vox_liveries_6({
         'Orange and Turquoise': 'z1975_SJ_Rc4_1_32bpp.png',
         'Blue and Red': 'z1975_SJ_Rc4_2_32bpp.png',
     }),
@@ -345,7 +552,8 @@ Train(
 Train(
     id=1640,
     name='Rc5',
-    liveries=make_vox_liveries_7({
+    shorten_by=2,
+    liveries=make_vox_liveries_6({
         'Orange and Turquoise': 'z1982_SJ_Rc5_1_32bpp.png',
         'Blue and Red': 'z1982_SJ_Rc5_2_32bpp.png',
     }),
@@ -372,8 +580,8 @@ Train(
 Train(
     id=1650,
     name='Rc6',
-    shorten_by=1,
-    liveries=make_vox_liveries_7({
+    shorten_by=2,
+    liveries=make_vox_liveries_6({
         'Orange and Turquoise': 'z1984_SJ_Rc6_1_32bpp.png',
         'Blue and Red': 'z1984_SJ_Rc6_2_32bpp.png',
     }),
@@ -555,7 +763,7 @@ Train(
 Train(
     id=6600,
     name='ABs',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries_11({
         'White, Blue and Green': 'z2002_DSB_ABs_1_32bpp.png',
         'White, Blue and Red': 'z2002_DSB_ABs_2_32bpp.png',
     }),
@@ -582,7 +790,7 @@ Train(
 Train(
     id=7100,
     name='B',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries_11({
         'Brown': 'z1965_DSB_B_1_32bpp.png',
         'Red': 'z1967_DSB_B_1_32bpp.png',
         'Red and White': 'z1983_DSB_Bk_1_32bpp.png',
@@ -610,7 +818,7 @@ Train(
 Train(
     id=7110,
     name='A',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries_10({
         'Brown and Yellow': 'z1966_DSB_A_1_32bpp.png',
         'Red and Yellow': 'z1967_DSB_A_1_32bpp.png',
         'Red': 'z1995_DSB_Ba_1_32bpp.png',
@@ -638,7 +846,7 @@ Train(
 Train(
     id=7120,
     name='B II',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries_10({
         'White, Blue and Green': 'z2002_DSB_B_II_1_32bpp.png',
         'White, Blue and Red': 'z2002_DSB_B_II_2_32bpp.png',
     }),
