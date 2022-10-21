@@ -185,82 +185,25 @@ def tmpl_vox_train_1(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def make_vox_liveries_12(liveries):
+def make_vox_liveries(length, liveries):
+    TEMPLATES = {
+        1: tmpl_vox_train_1,
+        2: tmpl_vox_train_2,
+        3: tmpl_vox_train_3,
+        4: tmpl_vox_train_4,
+        5: tmpl_vox_train_5,
+        6: tmpl_vox_train_6,
+        7: tmpl_vox_train_7,
+        8: tmpl_vox_train_8,
+        9: tmpl_vox_train_9,
+        10: tmpl_vox_train_10,
+        11: tmpl_vox_train_11,
+        12: tmpl_vox_train_12,
+    }
+    tmpl = TEMPLATES[length]
     return [{
         'name': f' ({name})',
-        'sprites': tmpl_vox_train_12(filename),
-    } for name, filename in liveries.items()]
-
-
-def make_vox_liveries_11(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_11(filename),
-    } for name, filename in liveries.items()]
-
-
-def make_vox_liveries_10(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_10(filename),
-    } for name, filename in liveries.items()]
-
-
-def make_vox_liveries_9(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_9(filename),
-    } for name, filename in liveries.items()]
-
-
-    #use this for lenght 8 (0.5 tiles)
-def make_vox_liveries_8(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_8(filename),
-    } for name, filename in liveries.items()]
-  
-  #lenght 7
-def make_vox_liveries_7(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_7(filename),
-    } for name, filename in liveries.items()]
-
-def make_vox_liveries_6(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_6(filename),
-    } for name, filename in liveries.items()]
-
-def make_vox_liveries_5(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_5(filename),
-    } for name, filename in liveries.items()]
-
-def make_vox_liveries_4(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_4(filename),
-    } for name, filename in liveries.items()]
-
-def make_vox_liveries_3(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_3(filename),
-    } for name, filename in liveries.items()]
-
-def make_vox_liveries_2(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_2(filename),
-    } for name, filename in liveries.items()]
-
-def make_vox_liveries_1(liveries):
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl_vox_train_1(filename),
+        'sprites': tmpl(filename),
     } for name, filename in liveries.items()]
 
 
@@ -278,7 +221,7 @@ modern_diesel_sound = {
 Train(
     id=1100,
     name='MY II',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'Maroon': 'z1954_DSB_MY_II_1_32bpp.png',
         'Black and Red': 'z1954_DSB_MY_II_2_32bpp.png',
         'Blue': 'z1954_DSB_MY_II_3_32bpp.png',
@@ -306,7 +249,7 @@ Train(
 Train(
     id=1110,
     name='MX II',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'Maroon': 'z1960_DSB_MX_II_1_32bpp.png',
         'Black and Red': 'z1960_DSB_MX_II_2_32bpp.png',
     }),
@@ -333,7 +276,7 @@ Train(
 Train(
     id=1120,
     name='MZ I',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'Maroon': 'z1967_DSB_MZ_I_1_32bpp.png',
         'Black and Red': 'z1967_DSB_MZ_I_2_32bpp.png',
     }),
@@ -360,7 +303,7 @@ Train(
 Train(
     id=1125,
     name='MZ II',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'Maroon': 'z1970_DSB_MZ_II_1_32bpp.png',
         'Black and Red': 'z1970_DSB_MZ_II_2_32bpp.png',
     }),
@@ -387,7 +330,7 @@ Train(
 Train(
     id=1130,
     name='MZ III',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'Black and Red': 'z1972_DSB_MZ_III_1_32bpp.png',
     }),
     engine_class=Train.EngineClass.DIESEL,
@@ -413,7 +356,7 @@ Train(
 Train(
     id=1135,
     name=' MZ IV',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'Black and Red': 'z1977_DSB_MZ_IV_1_32bpp.png',
     }),
     engine_class=Train.EngineClass.DIESEL,
@@ -440,7 +383,7 @@ Train(
     id=1600,
     name='Rc1',
     shorten_by=2,
-    liveries=make_vox_liveries_6({
+    liveries=make_vox_liveries(6, {
         'Orange and Turquoise': 'z1967_SJ_Rc1_1_32bpp.png',
         'Blue and Red': 'z1967_SJ_Rc1_2_32bpp.png',
     }),
@@ -468,7 +411,7 @@ Train(
     id=1610,
     name='Rc2',
     shorten_by=2,
-    liveries=make_vox_liveries_6({
+    liveries=make_vox_liveries(6, {
         'Orange and Turquoise': 'z1969_SJ_Rc2_1_32bpp.png',
         'Blue and Red Old': 'z1969_SJ_Rc2_2_32bpp.png',
         'Blue and Red New': 'z1969_SJ_Rc2_3_32bpp.png',
@@ -497,7 +440,7 @@ Train(
     id=1620,
     name='Rc3',
     shorten_by=2,
-    liveries=make_vox_liveries_6({
+    liveries=make_vox_liveries(6, {
         'Orange and Turquoise': 'z1970_SJ_Rc3_1_32bpp.png',
         'Blue and Red': 'z1970_SJ_Rc3_2_32bpp.png',
     }),
@@ -525,7 +468,7 @@ Train(
     id=1630,
     name='Rc4',
     shorten_by=2,
-    liveries=make_vox_liveries_6({
+    liveries=make_vox_liveries(6, {
         'Orange and Turquoise': 'z1975_SJ_Rc4_1_32bpp.png',
         'Blue and Red': 'z1975_SJ_Rc4_2_32bpp.png',
     }),
@@ -553,7 +496,7 @@ Train(
     id=1640,
     name='Rc5',
     shorten_by=2,
-    liveries=make_vox_liveries_6({
+    liveries=make_vox_liveries(6, {
         'Orange and Turquoise': 'z1982_SJ_Rc5_1_32bpp.png',
         'Blue and Red': 'z1982_SJ_Rc5_2_32bpp.png',
     }),
@@ -581,7 +524,7 @@ Train(
     id=1650,
     name='Rc6',
     shorten_by=2,
-    liveries=make_vox_liveries_6({
+    liveries=make_vox_liveries(6, {
         'Orange and Turquoise': 'z1984_SJ_Rc6_1_32bpp.png',
         'Blue and Red': 'z1984_SJ_Rc6_2_32bpp.png',
     }),
@@ -608,7 +551,7 @@ Train(
 Train(
     id=3600,
     name='MF IC3',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'White and Red': 'z1989_DSB_MF_IC3_MFA_1_32bpp.png',
         'Grey, Blue and Green': 'z1989_DSB_MF_IC3_MFA_2_32bpp.png',
         'Grey, Blue and Red': 'z1989_DSB_MF_IC3_MFA_3_32bpp.png',
@@ -634,7 +577,7 @@ Train(
     }),
 ).add_articulated_part(
     id=3601,
-    liveries = make_vox_liveries_8({
+    liveries = make_vox_liveries(8, {
         'White and Red': 'z1989_DSB_MF_IC3_FF_1_32bpp.png',
         'Grey, Blue and Green': 'z1989_DSB_MF_IC3_FF_2_32bpp.png',
         'Grey, Blue and Red': 'z1989_DSB_MF_IC3_FF_3_32bpp.png',
@@ -645,7 +588,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=3602,
-    liveries = make_vox_liveries_8({
+    liveries = make_vox_liveries(8, {
         'White and Red': 'z1989_DSB_MF_IC3_MFB_1_32bpp.png',
         'Grey, Blue and Green': 'z1989_DSB_MF_IC3_MFB_2_32bpp.png',
         'Grey, Blue and Red': 'z1989_DSB_MF_IC3_MFB_3_32bpp.png',
@@ -659,7 +602,7 @@ Train(
 Train(
     id=4100,
     name='ER IR4',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'White and Red': 'z1993_DSB_ER_IR4_ER20_1_32bpp.png',
         'Grey, Blue and Green': 'z1993_DSB_ER_IR4_ER20_2_32bpp.png',
         'Grey, Blue and Red': 'z1993_DSB_ER_IR4_ER20_3_32bpp.png',
@@ -685,7 +628,7 @@ Train(
     }),
 ).add_articulated_part(
     id=4101,
-    liveries = make_vox_liveries_8({
+    liveries = make_vox_liveries(8, {
         'White and Red': 'z1993_DSB_ER_IR4_FR22_1_32bpp.png',
         'Grey, Blue and Green': 'z1993_DSB_ER_IR4_FR22_2_32bpp.png',
         'Grey, Blue and Red': 'z1993_DSB_ER_IR4_FR22_3_32bpp.png',
@@ -696,7 +639,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=4102,
-    liveries = make_vox_liveries_8({
+    liveries = make_vox_liveries(8, {
         'White and Red': 'z1993_DSB_ER_IR4_FR23_1_32bpp.png',
         'Grey, Blue and Green': 'z1993_DSB_ER_IR4_FR23_2_32bpp.png',
         'Grey, Blue and Red': 'z1993_DSB_ER_IR4_FR23_3_32bpp.png',
@@ -707,7 +650,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=4103,
-    liveries = make_vox_liveries_8({
+    liveries = make_vox_liveries(8, {
         'White and Red': 'z1993_DSB_ER_IR4_ER21_1_32bpp.png',
         'Grey, Blue and Green': 'z1993_DSB_ER_IR4_ER21_2_32bpp.png',
         'Grey, Blue and Red': 'z1993_DSB_ER_IR4_ER21_3_32bpp.png',
@@ -721,7 +664,7 @@ Train(
 Train(
     id=5600,
     name='S-Tog 1',
-    liveries=make_vox_liveries_8({
+    liveries=make_vox_liveries(8, {
         'Maroon': 'z1933_DSB_S-Tog_1_MM_1_32bpp.png',
     }),
     engine_class=Train.EngineClass.DIESEL,
@@ -744,7 +687,7 @@ Train(
     }),
 ).add_articulated_part(
     id=5601,
-    liveries = make_vox_liveries_8({
+    liveries = make_vox_liveries(8, {
         'Maroon': 'z1933_DSB_S-Tog_1_FM_1_32bpp.png',
     }),
     cargo_capacity=90,
@@ -752,7 +695,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=5602,
-    liveries = make_vox_liveries_8({
+    liveries = make_vox_liveries(8, {
         'Maroon': 'z1933_DSB_S-Tog_1_FS_1_32bpp.png',
     }),
     cargo_capacity=90,
@@ -763,7 +706,7 @@ Train(
 Train(
     id=6600,
     name='ABs',
-    liveries=make_vox_liveries_11({
+    liveries=make_vox_liveries(11, {
         'White, Blue and Green': 'z2002_DSB_ABs_1_32bpp.png',
         'White, Blue and Red': 'z2002_DSB_ABs_2_32bpp.png',
     }),
@@ -790,7 +733,7 @@ Train(
 Train(
     id=7100,
     name='B',
-    liveries=make_vox_liveries_11({
+    liveries=make_vox_liveries(11, {
         'Brown': 'z1965_DSB_B_1_32bpp.png',
         'Red': 'z1967_DSB_B_1_32bpp.png',
         'Red and White': 'z1983_DSB_Bk_1_32bpp.png',
@@ -818,7 +761,7 @@ Train(
 Train(
     id=7110,
     name='A',
-    liveries=make_vox_liveries_10({
+    liveries=make_vox_liveries(10, {
         'Brown and Yellow': 'z1966_DSB_A_1_32bpp.png',
         'Red and Yellow': 'z1967_DSB_A_1_32bpp.png',
         'Red': 'z1995_DSB_Ba_1_32bpp.png',
@@ -846,7 +789,7 @@ Train(
 Train(
     id=7120,
     name='B II',
-    liveries=make_vox_liveries_10({
+    liveries=make_vox_liveries(10, {
         'White, Blue and Green': 'z2002_DSB_B_II_1_32bpp.png',
         'White, Blue and Red': 'z2002_DSB_B_II_2_32bpp.png',
     }),
