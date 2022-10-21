@@ -15,7 +15,7 @@ Train = g.bind(lib.Train)
 
 g.add(lib.set_global_train_y_offset(2))
 
-g.add(lib.set_global_is_32(1))
+g.add(lib.set_global_train_depot_width_32())
 
 def tmpl_vox_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
