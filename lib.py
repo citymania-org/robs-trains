@@ -42,7 +42,10 @@ class Train(grf.Train):
             for year, count in year_count.items():
                 if year == 0:
                     continue
-                code.append(f'TEMP[0] = (current_year >= {year}) * {count} + TEMP[0]')
+                if count == 1:
+                    code.append(f'TEMP[0] = (current_year >= {year}) + TEMP[0]')
+                else:
+                    code.append(f'TEMP[0] = (current_year >= {year}) * {count} + TEMP[0]')
             code.append('(cargo_subtype >= TEMP[0]) * -1000 + cargo_subtype')
 
         callbacks.cargo_subtype = grf.Switch(
