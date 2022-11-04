@@ -15,7 +15,7 @@ Train = g.bind(lib.Train)
 
 g.add(lib.set_global_train_y_offset(2))
 
-g.add(lib.set_global_is_32(1))
+g.add(lib.set_global_train_depot_width_32())
 
 def tmpl_vox_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
@@ -201,12 +201,21 @@ def make_vox_liveries(length, liveries):
         12: tmpl_vox_train_12,
     }
     tmpl = TEMPLATES[length]
-    return [{
-        'name': f' ({name})',
-        'sprites': tmpl(filename),
-    } for name, filename in liveries.items()]
-
-
+    res = []
+    for name, filename in liveries.items():
+        if isinstance(filename, tuple):
+            filename, intro_year = filename
+            res.append({
+                'name': f' ({name})',
+                'intro_year': intro_year,
+                'sprites': tmpl(filename),
+            })
+        else:
+            res.append({
+                'name': f' ({name})',
+                'sprites': tmpl(filename),
+            })
+    return res
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {
     grf.SoundEvent.STOPPED: grf.RAWSound('sounds/modern_diesel_idle.wav'),
@@ -223,8 +232,8 @@ Train(
     name='MY II',
     liveries=make_vox_liveries(8, {
         'Maroon': '1954_DK_MY_II_1_1954.png',
-        'Black and Red': '1954_DK_MY_II_2_1972.png',
-        'Blue': '1954_DK_MY_II_3_2004.png',
+        'Black and Red': ('1954_DK_MY_II_2_1972.png', 1972),
+        'Blue': ('1954_DK_MY_II_3_2004.png', 2004),
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
