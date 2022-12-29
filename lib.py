@@ -7,22 +7,77 @@ import grf
 
 class VehicleSpriteTable(grf.VehicleSpriteTable):
     def add_layout(self, sprites):
+        if not sprites:
+            return self.add_empty_layout()
         return self.get_layout(self.add_row(sprites))
+
+    def add_empty_layout(self):
+        return self.add_layout([
+            grf.EmptyGraphicsSprite(),
+            grf.EmptyGraphicsSprite(),
+            grf.EmptyGraphicsSprite(),
+            grf.EmptyGraphicsSprite(),
+            grf.EmptyGraphicsSprite(),
+            grf.EmptyGraphicsSprite(),
+            grf.EmptyGraphicsSprite(),
+            grf.EmptyGraphicsSprite()
+        ])
 
 
 class Train(grf.Train):
 
+    def __init__(self, **kw):
+        self._articulated_length = 0
+        if 'length' in kw:
+            self.length = kw.pop('length')
+            if self.length > 8:
+                if self.length > 24:
+                    raise ValueError("Max Train length is 24")
+                self._head_liveries = []
+                if self.length % 2 == 1:
+                    self._central_length = 7
+                    self._articulated_length = (self.length - 7) // 2
+                else:
+                    self._central_length = 8
+                    self._articulated_length = (self.length - 8) // 2
+                kw['shorten_by'] = 8 - self._articulated_length
+            else:
+                self._central_length = self.length
+                kw['shorten_by'] = 8 - self.length
+
+        super().__init__(**kw)
+
+        if self._articulated_length > 0:
+            self.add_articulated_part(
+                id=kw['id'] + 1,
+                liveries=self.liveries,
+                shorten_by=8 - self._central_length
+            )
+            self._head_liveries = [{'name': l['name']} for l in self.liveries]
+            self.add_articulated_part(
+                id=kw['id'] + 2,
+                liveries=self._head_liveries,
+                shorten_by=8 - self._articulated_length
+            )
+        else:
+            self._head_liveries = self.liveries
+
     def _gen_livery_sprites(self, liveries):
         sprites = VehicleSpriteTable(grf.TRAIN)
 
-        layouts = [sprites.add_layout(l['sprites']) for l in self.liveries]
+        layouts = [sprites.add_layout(l.get('sprites')) for l in self.liveries]
 
-        layout = grf.Switch(
-            related_scope=True,
-            ranges=dict(enumerate(layouts)),
-            default=layouts[0],
-            code='cargo_subtype',
-        )
+        if len(layouts) == 0:
+            layout = sprites.add_empty_layout()
+        elif len(layouts) == 1:
+            layout = layouts[0]
+        else:
+            layout = grf.Switch(
+                related_scope=True,
+                ranges=dict(enumerate(layouts)),
+                default=layouts[0],
+                code='cargo_subtype',
+            )
 
         return sprites, layout
 
@@ -65,29 +120,27 @@ class Train(grf.Train):
         # Sort needed for intro year switch
         self.liveries.sort(key=lambda l: l.get('intro_year', 0))
 
-        callbacks = grf.CallbackManager(grf.Callback.Vehicle)
-
-        veh_sprites, layout = self._gen_liveries(g, callbacks, self.liveries)
+        veh_sprites, self.callbacks.graphics = self._gen_liveries(g, self.callbacks, self.liveries)
 
         if self.additional_text:
-            callbacks.purchase_text = g.strings.add(self.additional_text).get_global_id()
+            self.callbacks.purchase_text = g.strings.add(self.additional_text).get_global_id()
 
         if self.sound_effects:
-            callbacks.sound_effect = grf.Switch(
+            self.callbacks.sound_effect = grf.Switch(
                 ranges=self.sound_effects,
-                default=layout,
+                default=self.callbacks.graphics,
                 code='extra_callback_info1 & 255',
             )
 
         if self._articulated_parts:
-            callbacks.articulated_part = grf.Switch(
+            self.callbacks.articulated_part = grf.Switch(
                 ranges={i + 1: ap[0] for i, ap in enumerate(self._articulated_parts)},
                 default=0x7fff,
                 code='extra_callback_info1 & 255',
             )
 
-        if callbacks.get_flags():
-            self._props['cb_flags'] = self._props.get('cb_flags', 0) | callbacks.get_flags()
+        if self.callbacks.get_flags():
+            self._props['cb_flags'] = self._props.get('cb_flags', 0) | self.callbacks.get_flags()
 
         res = [
             grf.DefineStrings(
@@ -98,7 +151,7 @@ class Train(grf.Train):
             ),
         ]
 
-        res.append(grf.Define(
+        res.append(definition := grf.Define(
             feature=grf.TRAIN,
             id=self.id,
             props={
@@ -108,18 +161,15 @@ class Train(grf.Train):
             }
         ))
 
-        res.append(veh_sprites)
+        if veh_sprites:
+            res.append(veh_sprites)
 
-        default, maps = callbacks.make_switch(layout)
-        res.append(grf.Action3(
-            feature=grf.TRAIN,
-            ids=[self.id],
-            maps=maps,
-            default=default,
-        ))
+        res.append(self.callbacks.make_map_action(definition))
 
-        for apid, liveries, props in self._articulated_parts:
-            res.append(grf.Define(
+        for apid, liveries, initial_callbacks, props in self._articulated_parts:
+            callbacks = grf.CallbackManager(grf.Callback.Vehicle, initial_callbacks)
+
+            res.append(definion := grf.Define(
                 feature=grf.TRAIN,
                 id=apid,
                 props={
@@ -129,15 +179,11 @@ class Train(grf.Train):
                 }
             ))
 
-            veh_sprites, layout = self._gen_livery_sprites(liveries)
-            res.append(veh_sprites)
+            veh_sprites, callbacks.graphics = self._gen_livery_sprites(liveries)
+            if veh_sprites:
+                res.append(veh_sprites)
 
-            res.append(grf.Action3(
-                feature=grf.TRAIN,
-                ids=[apid],
-                maps={},
-                default=layout,
-            ))
+            res.append(callbacks.make_map_action(definition))
         return res
 
 
