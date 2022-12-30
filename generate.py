@@ -1,8 +1,13 @@
+import os
 from datetime import date
 
 import grf
 
 import lib
+
+
+PURCHASE_ICONS_DIR = 'ztemps/purchase list'
+
 
 g = grf.NewGRF(
     grfid=b'ROBT',
@@ -235,6 +240,10 @@ Train(
         'Black and Red': ('1954_DK_MY_II_2_1972.png', 1972),
         'Blue': ('1954_DK_MY_II_3_2004.png', 2004),
     }),
+    country='italy',
+    company='stog',
+    power_type='steam',
+    purchase_sprite_towed_id=1100,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     max_speed=Train.kmhishph(104),
@@ -863,6 +872,56 @@ Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
+)
+
+purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
+
+
+COUNTRY_SPRITES = {
+    'chech': purchase_icon('fch.png'),
+    'italy': purchase_icon('fit.png'),
+}
+
+
+COMPANY_SPRITES = {
+    'stog': purchase_icon('lstog.png'),
+    'metro': purchase_icon('lmetro.png'),
+}
+
+
+POWER_TYPE_SPRITES = {
+    'steam': purchase_icon('psteam.png'),
+    'electricm': purchase_icon('electricm.png'),
+}
+
+
+lib.make_purchase_sprites(
+    newgrf=g,
+    xofs=-29,
+    yofs=-9,
+    parts=[
+        {
+            'offset': (0, 1),
+            'property': 'country',
+            'sprites': COUNTRY_SPRITES,
+        }, {
+            'offset': (2, 1),
+            'property': 'company',
+            'sprites': COMPANY_SPRITES,
+        }, {
+            'offset': (2, 1),
+            'property': 'power_type',
+            'sprites': POWER_TYPE_SPRITES,
+        }, {
+            'offset': (10, 10),
+            'property': 'self',
+        }, {
+            'offset': (-1, 10),
+            'checker': (-4, 4),
+            'property': 'towed',
+        },
+    ],
+    # debug_dir='debug_purchase',
 )
 
 g.write('robs_trains.grf')

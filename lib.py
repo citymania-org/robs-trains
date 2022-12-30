@@ -1,4 +1,8 @@
+import os
 from collections import Counter
+
+from PIL import Image
+import numpy as np
 
 from nml.grfstrings import NewGRFString, default_lang
 
@@ -26,7 +30,7 @@ class VehicleSpriteTable(grf.VehicleSpriteTable):
 
 class Train(grf.Train):
 
-    def __init__(self, **kw):
+    def __init__(self, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, **kw):
         self._articulated_length = 0
         if 'length' in kw:
             self.length = kw.pop('length')
@@ -46,7 +50,11 @@ class Train(grf.Train):
                 kw['shorten_by'] = 8 - self.length
 
         super().__init__(**kw)
-
+        self.country = country
+        self.company = company
+        self.power_type = power_type
+        self.purchase_sprite_towed_id = purchase_sprite_towed_id
+        self.purchase_sprite = None
         if self._articulated_length > 0:
             self.add_articulated_part(
                 id=kw['id'] + 1,
@@ -117,10 +125,21 @@ class Train(grf.Train):
         if self._props.get('is_dual_headed') and self._articulated_parts:
             raise RuntimeError('Articulated parts are not allowed for dual-headed engines (vehicle id {self.id})')
 
+        res = []
+
         # Sort needed for intro year switch
         self.liveries.sort(key=lambda l: l.get('intro_year', 0))
 
+        if self.purchase_sprite:
+            # Make sure purchase layouts go before main action 1
+            res.append(grf.SpriteSet(grf.TRAIN, 1))
+            res.append(self.purchase_sprite)
+            res.append(layout := grf.GenericSpriteLayout(ent1=(0,), ent2=(0,)))
+            self.callbacks.purchase_graphics = layout
+
         veh_sprites, self.callbacks.graphics = self._gen_liveries(g, self.callbacks, self.liveries)
+        if veh_sprites:
+            res.append(veh_sprites)
 
         if self.additional_text:
             self.callbacks.purchase_text = g.strings.add(self.additional_text).get_global_id()
@@ -129,27 +148,27 @@ class Train(grf.Train):
             self.callbacks.sound_effect = grf.Switch(
                 ranges=self.sound_effects,
                 default=self.callbacks.graphics,
-                code='extra_callback_info1 & 255',
+                code='extra_callback_info1_byte',
             )
 
         if self._articulated_parts:
             self.callbacks.articulated_part = grf.Switch(
                 ranges={i + 1: ap[0] for i, ap in enumerate(self._articulated_parts)},
                 default=0x7fff,
-                code='extra_callback_info1 & 255',
+                code='extra_callback_info1_byte',
             )
 
         if self.callbacks.get_flags():
             self._props['cb_flags'] = self._props.get('cb_flags', 0) | self.callbacks.get_flags()
 
-        res = [
+        res.append(
             grf.DefineStrings(
                 feature=grf.TRAIN,
                 offset=self.id,
                 is_generic_offset=False,
                 strings=[self.name.encode('utf-8')]
             ),
-        ]
+        )
 
         res.append(definition := grf.Define(
             feature=grf.TRAIN,
@@ -160,9 +179,6 @@ class Train(grf.Train):
                 **self._props
             }
         ))
-
-        if veh_sprites:
-            res.append(veh_sprites)
 
         res.append(self.callbacks.make_map_action(definition))
 
@@ -184,8 +200,116 @@ class Train(grf.Train):
                 res.append(veh_sprites)
 
             res.append(callbacks.make_map_action(definition))
+
         return res
 
+
+def _make_checker_effect(img, start, length):
+    if start < 0:
+        start = img.size[0] + start
+    img = img.crop((0, 0, start + length, img.size[1]))
+    npimg = np.asarray(img)
+    for x in range(start, start + length):
+        # add start to make sure it's consistent for any start
+        npimg[(x + start) % 2::2, x] = (0, 0, 0, 0)
+    return Image.fromarray(npimg)
+
+
+def make_purchase_sprites(*, newgrf, xofs, yofs, parts, debug_dir=None):
+    if debug_dir:
+        os.makedirs(debug_dir, exist_ok=True)
+
+    train_idx = {}
+    for t in newgrf.generators:
+        if isinstance(t, Train):
+            train_idx[t.id] = t
+
+    for t in newgrf.generators:
+        if not isinstance(t, Train):
+            continue
+
+        def property_image(name, sprites):
+            value = getattr(t, name)
+            if value is None:
+                print(f'No purchase sprite for {t.name}(#{t.id}): {name} is not specified')
+                return None
+
+            sprite = sprites.get(value)
+            if sprite is None:
+                print(f'No purchase sprite for {t.name}(#{t.id}): no sprite for {name} "{value}"')
+                return None
+
+            im = sprite.get_image()[0]
+            assert im.mode == 'RGBA'
+            return im
+            # im.paste(image, pos)
+            # return True
+
+        def train_image(sprite):
+            img = sprite.get_image()[0]
+            assert img.mode == 'RGBA'
+            w, h = img.size
+            npimg = np.asarray(img)
+            x_has_data = [np.any(npimg[:, x, 3]) for x in range(w)]
+            x_first_data = min(i for i, x in enumerate(x_has_data) if x)
+            x_last_data = max(i for i, x in enumerate(x_has_data) if x)
+            y_has_data = [np.any(npimg[y, :, 3]) for y in range(h)]
+            y_last_data = max(i for i, x in enumerate(y_has_data) if x)
+            return img.crop((x_first_data, 0, x_last_data + 1, y_last_data + 1))
+
+        part_imgs = []
+        w, h = 0, 0
+        failed = False
+        res_yofs = None
+        for p in parts:
+            dx, dy = p['offset']
+            if p['property'] == 'self':
+                sprite = t.liveries[0]['sprites'][6]
+                img = train_image(sprite)
+                dy += sprite.yofs
+            elif p['property'] == 'towed':
+                towed_id = t.purchase_sprite_towed_id
+                if towed_id is None:
+                    continue
+                towed = train_idx.get(towed_id)
+                if towed is None:
+                    print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} does not exist')
+                    failed = True
+                    break
+                sprite = towed.liveries[0]['sprites'][6]
+                img = train_image(sprite)
+                dy += sprite.yofs
+            else:
+                img = property_image(p['property'], p['sprites'])
+                if img is None:
+                    failed = True
+                    break
+
+            if 'checker' in p:
+                start, length = p['checker']
+                img = _make_checker_effect(img, start, length)
+
+            w += dx
+            part_imgs.append((img, (w, dy)))
+            w += img.size[0]
+            h = max(h, img.size[1] + dy)
+
+        if failed:
+            continue
+
+        im = Image.new('RGBA', (w, h))
+        for img, dst in part_imgs:
+            im.paste(img, dst)
+
+        t.purchase_sprite = grf.ImageSprite(im, xofs=xofs, yofs=yofs)
+
+        max_width = 98 - t.purchase_sprite.xofs
+        if im.size[0] > max_width:
+            print(f'Warning: purchase sprite for {t.name}(#{t.id}) is too wide: {im.size[0]}px (max {max_width})')
+
+        if debug_dir:
+            fname = os.path.join(debug_dir, f'purchase_{t.id}.png')
+            im.save(fname, 'PNG')
 
 set_global_train_y_offset = lambda ofs: grf.ComputeParameters(target=0x8e, operation=0x00, if_undefined=False, source1=0xff, source2=0xff, value=ofs)
 
