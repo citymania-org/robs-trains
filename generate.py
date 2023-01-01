@@ -993,7 +993,10 @@ lib.make_purchase_sprites(
             'property': 'self',
         }, {
             'offset': (-1, 10),
-            'property': 'towed',
+            'property': 'towed[0]',
+        }, {
+            'offset': (-1, 10),
+            'property': 'towed[1]',
         },
     ],
     checker_effect=(-4, 4),

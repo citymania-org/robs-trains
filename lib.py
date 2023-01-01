@@ -259,6 +259,10 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, checker_effect=None, deb
             y_last_data = max(i for i, x in enumerate(y_has_data) if x)
             return img.crop((x_first_data, 0, x_last_data + 1, y_last_data + 1))
 
+        towed_list = t.purchase_sprite_towed_id
+        if isinstance(towed_list, int):
+            towed_list = [towed_list]
+
         part_imgs = []
         w, h = 0, 0
         failed = False
@@ -269,10 +273,15 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, checker_effect=None, deb
                 sprite = t.liveries[0]['sprites'][6]
                 img = train_image(sprite)
                 dy += sprite.yofs
-            elif p['property'] == 'towed':
-                towed_id = t.purchase_sprite_towed_id
-                if towed_id is None:
+            elif p['property'].startswith('towed'):
+                s = p['property']
+                if '[' in s:
+                    index = int(s[s.find('[') + 1: s.find(']')])
+                else:
+                    index = 0
+                if index >= len(towed_list):
                     continue
+                towed_id = towed_list[index]
                 towed = train_idx.get(towed_id)
                 if towed is None:
                     print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} does not exist')
