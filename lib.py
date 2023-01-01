@@ -215,7 +215,7 @@ def _make_checker_effect(img, start, length):
     return Image.fromarray(npimg)
 
 
-def make_purchase_sprites(*, newgrf, xofs, yofs, parts, debug_dir=None):
+def make_purchase_sprites(*, newgrf, xofs, yofs, parts, checker_effect=None, debug_dir=None):
     if debug_dir:
         os.makedirs(debug_dir, exist_ok=True)
 
@@ -287,10 +287,6 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, debug_dir=None):
                     failed = True
                     break
 
-            if 'checker' in p:
-                start, length = p['checker']
-                img = _make_checker_effect(img, start, length)
-
             w += dx
             part_imgs.append((img, (w, dy)))
             w += img.size[0]
@@ -302,6 +298,10 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, debug_dir=None):
         im = Image.new('RGBA', (w, h))
         for img, dst in part_imgs:
             im.paste(img, dst)
+
+        if checker_effect:
+            start, length = checker_effect
+            im = _make_checker_effect(im, start, length)
 
         t.purchase_sprite = grf.ImageSprite(im, xofs=xofs, yofs=yofs)
 

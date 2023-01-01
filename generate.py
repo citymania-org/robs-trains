@@ -993,11 +993,11 @@ lib.make_purchase_sprites(
             'property': 'self',
         }, {
             'offset': (-1, 10),
-            'checker': (-4, 4),
             'property': 'towed',
         },
     ],
-    debug_dir='debug_purchase',
+    checker_effect=(-4, 4),
+    # debug_dir='debug_purchase',
 )
 
 g.write('robs_trains.grf')
