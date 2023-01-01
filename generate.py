@@ -997,7 +997,7 @@ lib.make_purchase_sprites(
             'property': 'towed',
         },
     ],
-    # debug_dir='debug_purchase',
+    debug_dir='debug_purchase',
 )
 
 g.write('robs_trains.grf')

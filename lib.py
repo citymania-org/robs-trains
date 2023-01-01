@@ -222,7 +222,9 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, debug_dir=None):
     train_idx = {}
     for t in newgrf.generators:
         if isinstance(t, Train):
-            train_idx[t.id] = t
+            train_idx[t.id] = t.liveries[0]
+            for apid, liveries, _, _ in t._articulated_parts or []:
+                train_idx[apid] = liveries[0]
 
     for t in newgrf.generators:
         if not isinstance(t, Train):
@@ -276,7 +278,7 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, debug_dir=None):
                     print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} does not exist')
                     failed = True
                     break
-                sprite = towed.liveries[0]['sprites'][6]
+                sprite = towed['sprites'][6]
                 img = train_image(sprite)
                 dy += sprite.yofs
             else:
