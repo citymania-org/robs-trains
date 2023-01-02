@@ -96,11 +96,11 @@ def tmpl_vox_train_7(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
-        sprite(  0, 0, 16, 42, xofs=- 7, yofs=-29),
+        sprite(  0, 0, 16, 42, xofs=- 7, yofs=-26),
         sprite( 24, 0, 32, 31, xofs=-19, yofs=-21),
         sprite( 64, 0, 47, 26, xofs=-24, yofs=-20),
         sprite(119, 0, 32, 31, xofs=-14, yofs=-21),
-        sprite(159, 0, 16, 42, xofs=- 7, yofs=-19),
+        sprite(159, 0, 16, 42, xofs=- 7, yofs=-26),
         sprite(183, 0, 32, 31, xofs=-19, yofs=-21),
         sprite(223, 0, 47, 26, xofs=-24, yofs=-20),
         sprite(278, 0, 32, 31, xofs=-14, yofs=-21),
@@ -931,6 +931,42 @@ Train(
     refittable_cargo_types=1,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
+    }),
+)
+
+
+#=========================================================
+#                          Narrow guage
+#=========================================================
+
+Train(
+    id=8500,
+    name='X10p',
+    shorten_by=1,
+    liveries=make_vox_liveries(7, {
+        'original': '1990_SE_X10p_I_1990.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='ohle',
+    purchase_sprite_towed_id=8500,
+    engine_class=Train.EngineClass.ELECTRIC,
+    sound_effects=modern_diesel_sound,
+    max_speed=Train.kmhishph(104),
+    power=0,
+    introduction_date=date(1990, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Part of a major refurbisment of Roslagsbanan which saw the replacement of all ',
     }),
 )
 
