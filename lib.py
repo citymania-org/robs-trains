@@ -215,7 +215,38 @@ def _make_checker_effect(img, start, length):
     return Image.fromarray(npimg)
 
 
-def make_purchase_sprites(*, newgrf, xofs, yofs, parts, checker_effect=None, debug_dir=None):
+def _make_fade_effect(img, start, length):
+    if start < 0:
+        start = img.size[0] + start
+    img = img.crop((0, 0, start + length, img.size[1]))
+    npimg = np.asarray(img)
+    step = 1.0 / (length + 1)
+    for x in range(start, start + length):
+        opacity = (length + start - x) * step
+        npimg[:, x, 3] = npimg[:, x, 3] * opacity
+    return Image.fromarray(npimg)
+
+
+def _make_opaque(img, opacity):
+    npimg = np.asarray(img)
+    npimg[:, :, 3] = npimg[:, :, 3] * opacity
+    return Image.fromarray(npimg)
+
+
+def apply_effects(img, effects):
+    for e, args in (effects or {}).items():
+        if e == 'checker':
+            return _make_checker_effect(img, *args)
+        elif e == 'fade_out':
+            return _make_fade_effect(img, *args)
+        elif e == 'opacity':
+            return _make_opaque(img, args)
+        else:
+            raise ValueError(f'Unknown effect "{e}"')
+    return img
+
+
+def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=None):
     if debug_dir:
         os.makedirs(debug_dir, exist_ok=True)
 
@@ -296,6 +327,8 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, checker_effect=None, deb
                     failed = True
                     break
 
+            img = apply_effects(img, p.get('effects'))
+
             w += dx
             part_imgs.append((img, (w, dy)))
             w += img.size[0]
@@ -308,9 +341,7 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, checker_effect=None, deb
         for img, dst in part_imgs:
             im.paste(img, dst)
 
-        if checker_effect:
-            start, length = checker_effect
-            im = _make_checker_effect(im, start, length)
+        im = apply_effects(im, effects)
 
         t.purchase_sprite = grf.ImageSprite(im, xofs=xofs, yofs=yofs)
 

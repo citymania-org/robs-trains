@@ -999,7 +999,9 @@ lib.make_purchase_sprites(
             'property': 'towed[1]',
         },
     ],
-    checker_effect=(-4, 4),
+    effects={
+        'checker': (-4, 4),
+    },
     # debug_dir='debug_purchase',
 )
 
