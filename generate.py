@@ -934,7 +934,6 @@ Train(
     }),
 )
 
-
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
@@ -1002,83 +1001,6 @@ lib.make_purchase_sprites(
     ],
     checker_effect=(-4, 4),
     # debug_dir='debug_purchase',
-
-Train(
-    id=8501,
-    name='YCo5p',
-    shorten_by=1,
-    liveries=make_vox_liveries(7, {
-        'Original': '',
-        #'New': '',
-    }),
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    max_speed=Train.kmhishph(85),#85km/h 
-    power=1,#115kw
-    introduction_date=date(1952, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=0,#15 ton 
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=42,
-    default_cargo_type=0,
-    cost_factor=24,
-    refittable_cargo_types=0,
-    refittable_cargo_classes=1,#cargo classes allow for better compatability 
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Built by Hilding Carlssons Mekaniska Verkstad',
-    }),
-)
-
-Train(
-    id=8502,
-    name='UCFo3yp',
-    shorten_by=7,
-    liveries=make_vox_liveries(1, {
-        'Original': '',
-        #'New': '',
-    }),
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    max_speed=Train.kmhishph(85),#85km/h 
-    power=0,#wagon
-    introduction_date=date(1952, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=0,#15 ton 
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=42,
-    default_cargo_type=0,
-    cost_factor=24,
-    refittable_cargo_types=0,
-    refittable_cargo_classes=6,#cargo classes allow for better compatability 
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Built by Hilding Carlssons Mekaniska Verkstad',
-    }),
-).add_articulated_part(
-    id=5603,
-    shorten_by=3,
-    liveries = make_vox_liveries(7, {
-        'Original': '',
-    }),
-    cargo_capacity=40,
-    default_cargo_type=0,
-    refittable_cargo_types=0,
-    refittable_cargo_classes=1,#cargo classes allow for better compatability,
-).add_articulated_part(
-    id=5604,
-    shorten_by=7,
-    liveries = make_vox_liveries(1, {
-        'Original': '',
-    }),
-    cargo_capacity=0,
-    default_cargo_type=0,
-    refittable_cargo_types=0,
-    refittable_cargo_classes=0,#cargo classes allow for better compatability,
 )
 
 g.write('robs_trains.grf')
