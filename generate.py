@@ -101,13 +101,13 @@ def tmpl_vox_train_7(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
-        sprite(  0, 0, 16, 42, xofs=- 7, yofs=-26),
+        sprite(  0, 0, 16, 44, xofs=- 7, yofs=-26),
         sprite( 24, 0, 32, 31, xofs=-19, yofs=-21),
-        sprite( 64, 0, 47, 26, xofs=-24, yofs=-20),
+        sprite( 66, 0, 47, 26, xofs=-24, yofs=-20),
         sprite(119, 0, 32, 31, xofs=-14, yofs=-21),
-        sprite(159, 0, 16, 42, xofs=- 7, yofs=-26),
+        sprite(163, 0, 16, 42, xofs=- 7, yofs=-26),
         sprite(183, 0, 32, 31, xofs=-19, yofs=-21),
-        sprite(223, 0, 47, 26, xofs=-24, yofs=-20),
+        sprite(229, 0, 47, 26, xofs=-24, yofs=-20),
         sprite(278, 0, 32, 31, xofs=-14, yofs=-21),
     ]
 
@@ -947,14 +947,14 @@ Train(
 Train(
     id=8500,
     name='X10p',
-    shorten_by=1,
-    liveries=make_vox_liveries(7, {
+    shorten_by=0,
+    liveries=make_vox_liveries(8, {
         'original': '1990_SE_X10p_I_1990.png'
     }),
     country='sverige',
     company='na',
     power_type='na',
-    track_type=g.get_railtype_id('RAIL'), #unelecrified 
+    track_type=g.get_railtype_id('NAAN'), #unelecrified 
     purchase_sprite_towed_id=8500,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
@@ -972,7 +972,7 @@ Train(
     cost_factor=24,
     refittable_cargo_types=1,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Part of a major refurbisment of Roslagsbanan which saw the replacement of all other rolling stock',
+        'Info': 'Part of a major refurbisment of Roslagsbanan which saw the replacement of all other rolling stock.\n Can be run in multible of two sets.',
     }),
 )
 
