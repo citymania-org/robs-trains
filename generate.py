@@ -22,6 +22,10 @@ g.add(lib.set_global_train_y_offset(2))
 
 g.add(lib.set_global_train_depot_width_32())
 
+#railtype table
+
+g.set_railtype_table(['RAIL', 'ELRL', '3RDR', 'MTRO'])
+
 def tmpl_vox_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
@@ -948,12 +952,13 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='ohle',
+    power_type='na',
+    track_type=g.get_railtype_id('RAIL'), #unelecrified 
     purchase_sprite_towed_id=8500,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
     max_speed=Train.kmhishph(104),
-    power=0,
+    power=1,
     introduction_date=date(1990, 1, 1),
     vehicle_life=8,
     model_life=144,
@@ -966,7 +971,7 @@ Train(
     cost_factor=24,
     refittable_cargo_types=1,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Part of a major refurbisment of Roslagsbanan which saw the replacement of all ',
+        'Info': 'Part of a major refurbisment of Roslagsbanan which saw the replacement of all other rolling stock',
     }),
 )
 
@@ -1004,6 +1009,7 @@ POWER_TYPE_SPRITES = {
     'metro': purchase_icon('pelectricm.png'),
     'ohle': purchase_icon('pelectricw.png'),
     'steam': purchase_icon('psteam.png'),
+    'na' : purchase_icon('lblank.png'),
 }
 
 
