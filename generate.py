@@ -22,9 +22,10 @@ g.add(lib.set_global_train_y_offset(2))
 
 g.add(lib.set_global_train_depot_width_32())
 
-#railtype table
+#railtype table 
+# might be a good idea to add fallbacks
 
-g.set_railtype_table(['RAIL', 'ELRL', '3RDR', 'MTRO'])
+g.set_railtype_table(['RAIL', 'ELRL', 'MTRO', 'NAAN', 'NAAE'])
 
 def tmpl_vox_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
