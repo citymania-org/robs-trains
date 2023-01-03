@@ -1009,7 +1009,7 @@ POWER_TYPE_SPRITES = {
     'metro': purchase_icon('pelectricm.png'),
     'ohle': purchase_icon('pelectricw.png'),
     'steam': purchase_icon('psteam.png'),
-    'na' : purchase_icon('lblank.png'),
+    'na' : purchase_icon('lblank.png'), #maybe this should be replaced
 }
 
 
