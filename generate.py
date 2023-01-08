@@ -962,6 +962,7 @@ COMPANY_SPRITES = {
     'cmetro': purchase_icon('lcmetro.png'),
     'øresundståg': purchase_icon('løresundståg.png'),
     'stog': purchase_icon('lstog.png'),
+    'sl' : purchase_icon('lsl.png')
 }
 
 
