@@ -428,7 +428,7 @@ Train(
     shorten_by=2,
     liveries=make_vox_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1967_SE_Rc1_2_1997.png',
+        'Blue and Red': '1967_SE_Rc1_2_1990.png',
     }),
     country='sverige',
     company='na',
@@ -460,8 +460,9 @@ Train(
     shorten_by=2,
     liveries=make_vox_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red Old': '1967_SE_Rc1_2_1997.png',
-        'Blue and Red New': '1969_SE_Rc2_3_1997.png',
+        'Blue and Red Old': '1967_SE_Rc1_2_1990.png',
+        'Blue and Red New': '1969_SE_Rc2_3_1990.png',
+        'Black': '1969_SE_Rc2_4_2006.png',
     }),
     country='sverige',
     company='na',
@@ -493,7 +494,8 @@ Train(
     shorten_by=2,
     liveries=make_vox_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1997.png',
+        'Blue and Red': '1969_SE_Rc2_3_1990.png',
+        'Black': '1969_SE_Rc2_4_2006.png',
     }),
     country='sverige',
     company='na',
@@ -525,7 +527,7 @@ Train(
     shorten_by=2,
     liveries=make_vox_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1997.png',
+        'Blue and Red': '1969_SE_Rc2_3_1990.png',
     }),
     country='sverige',
     company='na',
@@ -557,7 +559,7 @@ Train(
     shorten_by=2,
     liveries=make_vox_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1997.png',
+        'Blue and Red': '1969_SE_Rc2_3_1990.png',
     }),
     country='sverige',
     company='na',
@@ -589,7 +591,9 @@ Train(
     shorten_by=2,
     liveries=make_vox_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1997.png',
+        'Blue and Red': '1969_SE_Rc2_3_1990.png',
+        'Dark Blue': '1984_SE_Rc6_1_2005.png',
+        'Black': '1969_SE_Rc2_4_2006.png',
     }),
     country='sverige',
     company='na',
@@ -1000,6 +1004,7 @@ COMPANY_SPRITES = {
     'cmetro': purchase_icon('lcmetro.png'),
     'øresundståg': purchase_icon('løresundståg.png'),
     'stog': purchase_icon('lstog.png'),
+    'sl' : purchase_icon('lsl.png')
 }
 
 

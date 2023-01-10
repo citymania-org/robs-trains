@@ -17,14 +17,14 @@ class VehicleSpriteTable(grf.VehicleSpriteTable):
 
     def add_empty_layout(self):
         return self.add_layout([
-            grf.EmptyGraphicsSprite(),
-            grf.EmptyGraphicsSprite(),
-            grf.EmptyGraphicsSprite(),
-            grf.EmptyGraphicsSprite(),
-            grf.EmptyGraphicsSprite(),
-            grf.EmptyGraphicsSprite(),
-            grf.EmptyGraphicsSprite(),
-            grf.EmptyGraphicsSprite()
+            grf.EMPTY_SPRITE,
+            grf.EMPTY_SPRITE,
+            grf.EMPTY_SPRITE,
+            grf.EMPTY_SPRITE,
+            grf.EMPTY_SPRITE,
+            grf.EMPTY_SPRITE,
+            grf.EMPTY_SPRITE,
+            grf.EMPTY_SPRITE,
         ])
 
 
@@ -55,6 +55,7 @@ class Train(grf.Train):
         self.power_type = power_type
         self.purchase_sprite_towed_id = purchase_sprite_towed_id
         self.purchase_sprite = None
+        self.liveries.sort(key=lambda l: l.get('intro_year', 0))
         if self._articulated_length > 0:
             self.add_articulated_part(
                 id=kw['id'] + 1,
@@ -70,10 +71,11 @@ class Train(grf.Train):
         else:
             self._head_liveries = self.liveries
 
+
     def _gen_livery_sprites(self, liveries):
         sprites = VehicleSpriteTable(grf.TRAIN)
 
-        layouts = [sprites.add_layout(l.get('sprites')) for l in self.liveries]
+        layouts = [sprites.add_layout(l.get('sprites')) for l in (liveries or {})]
 
         if len(layouts) == 0:
             layout = sprites.add_empty_layout()
@@ -89,10 +91,9 @@ class Train(grf.Train):
 
         return sprites, layout
 
-    def _gen_liveries(self, g, callbacks, liveries):
+    def _gen_livery_callback(self, g, callbacks, liveries):
         # TODO check for single livery
 
-        liveries.sort(key=lambda l: l.get('intro_year', 0))
         year_count = Counter(l.get('intro_year', 0) for l in liveries)
 
         cur_count = year_count.get(0, 0)
@@ -117,8 +118,6 @@ class Train(grf.Train):
             code=code,
         )
 
-        return self._gen_livery_sprites(liveries)
-
 
     def get_sprites(self, g):
         # Check in case property was changed after add_articulated
@@ -137,9 +136,12 @@ class Train(grf.Train):
             res.append(layout := grf.GenericSpriteLayout(ent1=(0,), ent2=(0,)))
             self.callbacks.purchase_graphics = layout
 
-        veh_sprites, self.callbacks.graphics = self._gen_liveries(g, self.callbacks, self.liveries)
+        veh_sprites, self.callbacks.graphics = self._gen_livery_sprites(self._head_liveries)
+
         if veh_sprites:
             res.append(veh_sprites)
+
+        self._gen_livery_callback(g, self.callbacks, self.liveries)
 
         if self.additional_text:
             self.callbacks.purchase_text = g.strings.add(self.additional_text).get_global_id()
@@ -185,7 +187,7 @@ class Train(grf.Train):
         for apid, liveries, initial_callbacks, props in self._articulated_parts:
             callbacks = grf.CallbackManager(grf.Callback.Vehicle, initial_callbacks)
 
-            res.append(definion := grf.Define(
+            res.append(definition := grf.Define(
                 feature=grf.TRAIN,
                 id=apid,
                 props={
