@@ -22,6 +22,21 @@ g.add(lib.set_global_train_y_offset(2))
 
 g.add(lib.set_global_train_depot_width_32())
 
+def tmpl_vox_train(filename):
+    png = grf.ImageFile('sprites/' + filename)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    return [
+        sprite(  0, 8, 10, 44, xofs=-4,  yofs=-21),
+        sprite( 20, 8, 42, 44, xofs=-24, yofs=-30),
+        sprite( 70, 8, 69, 44, xofs=-35, yofs=-38),
+        sprite(150, 8, 42, 44, xofs=-16, yofs=-30),
+        sprite(200, 8, 10, 44, xofs=-4,  yofs=-21),
+        sprite(220, 8, 42, 44, xofs=-24, yofs=-30),
+        sprite(270, 8, 69, 44, xofs=-35, yofs=-38),
+        sprite(350, 8, 42, 44, xofs=-16, yofs=-30),
+    ]
+
+#old templates
 def tmpl_vox_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
@@ -204,6 +219,7 @@ def make_vox_liveries(length, liveries):
         10: tmpl_vox_train_10,
         11: tmpl_vox_train_11,
         12: tmpl_vox_train_12,
+        'new':tmpl_vox_train
     }
     tmpl = TEMPLATES[length]
     res = []
@@ -231,6 +247,37 @@ modern_diesel_sound = {
     grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/horn_4.wav'),
 }
 
+#special alignment train
+Train(
+    id=1,
+    name='alignment',
+    length=16,
+    liveries=make_vox_liveries('new', {
+        '': 'template.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='diesel',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
 
 Train(
     id=1100,
