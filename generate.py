@@ -276,8 +276,8 @@ modern_diesel_sound = {
 
 #special alignment train
 Train(
-    id=1,
-    name='alignment',
+    id=16,
+    name='alignment 16',
     length=16,
     liveries=make_vox_liveries('new', {
         '': 'template.png'
@@ -306,6 +306,300 @@ Train(
         'Info': 'Test locomotive',
     }),
 )
+
+'''
+
+Train(
+    id=15,
+    name='alignment 15',
+    length=15,
+    liveries=make_vox_liveries('new', {
+        '': 'template_15.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+
+
+Train(
+    id=8,
+    name='alignment 8',
+    length=8,
+    liveries=make_vox_liveries('new', {
+        '': 'template_8.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+Train(
+    id=7,
+    name='alignment 7',
+    length=7,
+    liveries=make_vox_liveries('new', {
+        '': 'template_7.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+Train(
+    id=6,
+    name='alignment 6',
+    length=6,
+    liveries=make_vox_liveries('new', {
+        '': 'template_6.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+Train(
+    id=5,
+    name='alignment 5',
+    length=5,
+    liveries=make_vox_liveries('new', {
+        '': 'template_5.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+Train(
+    id=4,
+    name='alignment 4',
+    length=4,
+    liveries=make_vox_liveries('new', {
+        '': 'template_4.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+Train(
+    id=3,
+    name='alignment 3',
+    length=3,
+    liveries=make_vox_liveries('new', {
+        '': 'template_3.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+Train(
+    id=2,
+    name='alignment 2',
+    length=2,
+    liveries=make_vox_liveries('new', {
+        '': 'template_2.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+'''
+Train(
+    id=1,
+    name='alignment 1',
+    length=1,
+    liveries=make_vox_liveries('new', {
+        '': 'template_1.png'
+    }),
+    country='sverige',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+#regular trains
 
 Train(
     id=1100,
@@ -371,6 +665,8 @@ Train(
         'Info': 'Leyland',
     }),
 )
+
+
 
 Train(
     id=1120,
@@ -1070,7 +1366,8 @@ POWER_TYPE_SPRITES = {
     'multi': purchase_icon('pelectricw.png'), #replece these sprites
     'dc' : purchase_icon('pelectricw.png'), 
     '15kv' : purchase_icon('pelectricw.png'),
-    '25kv' : purchase_icon('pelectricw.png')
+    '25kv' : purchase_icon('pelectricw.png'),
+    'na' : purchase_icon('pblank.png')
 }
 
 
