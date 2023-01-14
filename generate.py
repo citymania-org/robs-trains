@@ -22,6 +22,33 @@ g.add(lib.set_global_train_y_offset(2))
 
 g.add(lib.set_global_train_depot_width_32())
 
+
+#railtype table 
+
+g.set_railtype_table([
+    ('SAAN', 'RAIL'), #Standard gauge track
+    ('SAAX', 'SAAE', 'ELRL'), #Standard gauge 15kv and 25kv ac (will show up on dc most of the time) x is place holder
+    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  #Standard gauge 1,5kv and stog  dc 
+    ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  #Standard gauge 15kv ac 
+    ('SAAA', 'SAAE', 'ELRL'),  #Standard gauge 25kv ac 
+    ('MTRO', 'SAA4', 'SAA3'), #Standard gauge Metro (MTRO is first be because it is better definded as metro)
+    ('nAAN', 'NAAN', 'NGRL'), #Narrow gauge track 
+    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'), #Narrow gauge 3kv dc 
+    ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'), #Narrow gauge 15kv ac
+    ])
+
+Standard_gauge = track_type=g.get_railtype_id(('SAAN'))
+Standard_gauge_multi = track_type=g.get_railtype_id(('SAAX')) #border crossing trains x is place holder
+Standard_gauge_dc = track_type=g.get_railtype_id(('SAAd')) #stog and saltsjöbanan
+Standard_gauge_25kv = track_type=g.get_railtype_id(('SAAA')) #Denmark
+Standard_gauge_15kv = track_type=g.get_railtype_id(('SAAa')) #Sweden and Norway
+Metro = track_type=g.get_railtype_id(('MTRO')) #Metro 
+p_gauge = track_type=g.get_railtype_id(('nAAN')) #Swedish 3 foot gauge
+p_gauge_dc = track_type=g.get_railtype_id(('nAAd')) #SRJ
+p_gauge_25kv = track_type=g.get_railtype_id(('nAAa')) #NKIJ 
+
+#we might need more narrow guage types if we add norwegian or danish trains but it isn't super important and might not be neccesary 
+
 def tmpl_vox_train(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
@@ -257,10 +284,11 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='diesel',
+    power_type='multi',
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -293,6 +321,7 @@ Train(
     purchase_sprite_towed_id=1100,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -324,6 +353,7 @@ Train(
     purchase_sprite_towed_id=1110,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1960, 1, 1),
@@ -355,6 +385,7 @@ Train(
     purchase_sprite_towed_id=1120,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1967, 1, 1),
@@ -386,6 +417,7 @@ Train(
     purchase_sprite_towed_id=1125,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1970, 1, 1),
@@ -416,6 +448,7 @@ Train(
     purchase_sprite_towed_id=1130,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1972, 1, 1),
@@ -446,6 +479,7 @@ Train(
     purchase_sprite_towed_id=1135,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1977, 1, 1),
@@ -474,10 +508,11 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='ohle',
+    power_type='15kv',
     purchase_sprite_towed_id=1600,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1967, 1, 1),
@@ -508,10 +543,11 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='ohle',
+    power_type='15kv',
     purchase_sprite_towed_id=1610,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1969, 1, 1),
@@ -541,10 +577,11 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='ohle',
+    power_type='15kv',
     purchase_sprite_towed_id=1620,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1970, 1, 1),
@@ -573,10 +610,11 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='ohle',
+    power_type='15kv',
     purchase_sprite_towed_id=1630,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1975, 1, 1),
@@ -605,10 +643,11 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='ohle',
+    power_type='15kv',
     purchase_sprite_towed_id=1640,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1982, 1, 1),
@@ -639,10 +678,11 @@ Train(
     }),
     country='sverige',
     company='na',
-    power_type='ohle',
+    power_type='15kv',
     purchase_sprite_towed_id=1650,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1984, 1, 1),
@@ -676,6 +716,7 @@ Train(
     purchase_sprite_towed_id=3601,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1989, 1, 1),
@@ -727,10 +768,11 @@ Train(
     }),
     country='danmark',
     company='na',
-    power_type='ohle',
+    power_type='25kv',
     purchase_sprite_towed_id=4101,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_25kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1993, 1, 1),
@@ -790,10 +832,11 @@ Train(
     }),
     country='danmark',
     company='stog',
-    power_type='ohle',
+    power_type='dc',
     purchase_sprite_towed_id=5603,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_dc,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1933, 1, 1),
@@ -828,10 +871,11 @@ Train(
     }),
     country='danmark',
     company='stog',
-    power_type='ohle',
+    power_type='dc',
     purchase_sprite_towed_id=5602,
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge_dc,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1933, 1, 1),
@@ -883,6 +927,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(2002, 1, 1),
@@ -912,6 +957,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(1964, 1, 1),
@@ -940,6 +986,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(1966, 1, 1),
@@ -967,6 +1014,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
+    track_type=Standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(2002, 1, 1),
@@ -1018,8 +1066,11 @@ POWER_TYPE_SPRITES = {
     '3rd': purchase_icon('pelectric3.png'),
     'dual': purchase_icon('pelectricdv.png'),
     'metro': purchase_icon('pelectricm.png'),
-    'ohle': purchase_icon('pelectricw.png'),
     'steam': purchase_icon('psteam.png'),
+    'multi': purchase_icon('pelectricw.png'), #replece these sprites
+    'dc' : purchase_icon('pelectricw.png'), 
+    '15kv' : purchase_icon('pelectricw.png'),
+    '25kv' : purchase_icon('pelectricw.png')
 }
 
 
