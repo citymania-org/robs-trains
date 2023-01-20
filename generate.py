@@ -17,37 +17,34 @@ g = grf.NewGRF(
 
 Train = g.bind(lib.Train)
 
-
 g.add(lib.set_global_train_y_offset(2))
 
 g.add(lib.set_global_train_depot_width_32())
 
-
-#railtype table 
-
+# railtype table
 g.set_railtype_table([
-    ('SAAN', 'RAIL'), #Standard gauge track
-    ('SAAX', 'SAAE', 'ELRL'), #Standard gauge 15kv and 25kv ac (will show up on dc most of the time) x is place holder
-    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  #Standard gauge 1,5kv and stog  dc 
-    ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  #Standard gauge 15kv ac 
-    ('SAAA', 'SAAE', 'ELRL'),  #Standard gauge 25kv ac 
-    ('MTRO', 'SAA4', 'SAA3'), #Standard gauge Metro (MTRO is first be because it is better definded as metro)
-    ('nAAN', 'NAAN', 'NGRL'), #Narrow gauge track 
-    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'), #Narrow gauge 3kv dc 
-    ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'), #Narrow gauge 15kv ac
-    ])
+    ('SAAN', 'RAIL'),  # Standard gauge track
+    ('SAAX', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time) x is place holder
+    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
+    ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
+    ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
+    ('MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
+    ('nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
+    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 3kv dc
+    ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
+])
 
-Standard_gauge = track_type=g.get_railtype_id(('SAAN'))
-Standard_gauge_multi = track_type=g.get_railtype_id(('SAAX')) #border crossing trains x is place holder
-Standard_gauge_dc = track_type=g.get_railtype_id(('SAAd')) #stog and saltsjöbanan
-Standard_gauge_25kv = track_type=g.get_railtype_id(('SAAA')) #Denmark
-Standard_gauge_15kv = track_type=g.get_railtype_id(('SAAa')) #Sweden and Norway
-Metro = track_type=g.get_railtype_id(('MTRO')) #Metro 
-p_gauge = track_type=g.get_railtype_id(('nAAN')) #Swedish 3 foot gauge
-p_gauge_dc = track_type=g.get_railtype_id(('nAAd')) #SRJ
-p_gauge_25kv = track_type=g.get_railtype_id(('nAAa')) #NKIJ 
+standard_gauge = g.get_railtype_id('SAAN')
+standard_gauge_multi = g.get_railtype_id('SAAX')  # border crossing trains x is place holder
+standard_gauge_dc = g.get_railtype_id('SAAd')  # stog and saltsjöbanan
+standard_gauge_25kv = g.get_railtype_id('SAAA')  # Denmark
+standard_gauge_15kv = g.get_railtype_id('SAAa')  # Sweden and Norway
+metro = g.get_railtype_id('MTRO')  # Metro
+p_gauge = g.get_railtype_id('nAAN')  # Swedish 3 foot gauge
+p_gauge_dc = g.get_railtype_id('nAAd')  # SRJ
+p_gauge_25kv = g.get_railtype_id('nAAa')  # NKIJ
 
-#we might need more narrow guage types if we add norwegian or danish trains but it isn't super important and might not be neccesary 
+# we might need more narrow guage types if we add norwegian or danish trains but it isn't super important and might not be neccesary
 
 def tmpl_vox_train(filename):
     png = grf.ImageFile('sprites/' + filename)
@@ -63,7 +60,7 @@ def tmpl_vox_train(filename):
         sprite(350, 8, 42, 44, xofs=-16, yofs=-30),
     ]
 
-#old templates
+# old templates
 def tmpl_vox_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
@@ -246,7 +243,7 @@ def make_vox_liveries(length, liveries):
         10: tmpl_vox_train_10,
         11: tmpl_vox_train_11,
         12: tmpl_vox_train_12,
-        'new':tmpl_vox_train
+        'new': tmpl_vox_train,
     }
     tmpl = TEMPLATES[length]
     res = []
@@ -264,6 +261,8 @@ def make_vox_liveries(length, liveries):
                 'sprites': tmpl(filename),
             })
     return res
+
+
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {
     grf.SoundEvent.STOPPED: grf.RAWSound('sounds/modern_diesel_idle.wav'),
@@ -274,7 +273,7 @@ modern_diesel_sound = {
     grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/horn_4.wav'),
 }
 
-#special alignment train
+# special alignment train
 Train(
     id=16,
     name='alignment 16',
@@ -288,7 +287,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -322,7 +321,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -356,7 +355,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -388,7 +387,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -420,7 +419,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -452,7 +451,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -484,7 +483,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -516,7 +515,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -548,7 +547,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -580,7 +579,7 @@ Train(
     purchase_sprite_towed_id=1,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_multi,
+    track_type=standard_gauge_multi,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -599,7 +598,7 @@ Train(
     }),
 )
 
-#regular trains
+# regular trains
 
 Train(
     id=1100,
@@ -615,7 +614,7 @@ Train(
     purchase_sprite_towed_id=1100,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -647,7 +646,7 @@ Train(
     purchase_sprite_towed_id=1110,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1960, 1, 1),
@@ -667,7 +666,6 @@ Train(
 )
 
 
-
 Train(
     id=1120,
     name='MZ I',
@@ -681,7 +679,7 @@ Train(
     purchase_sprite_towed_id=1120,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1967, 1, 1),
@@ -713,7 +711,7 @@ Train(
     purchase_sprite_towed_id=1125,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1970, 1, 1),
@@ -744,7 +742,7 @@ Train(
     purchase_sprite_towed_id=1130,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1972, 1, 1),
@@ -775,7 +773,7 @@ Train(
     purchase_sprite_towed_id=1135,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1977, 1, 1),
@@ -808,7 +806,7 @@ Train(
     purchase_sprite_towed_id=1600,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_15kv,
+    track_type=standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1967, 1, 1),
@@ -843,7 +841,7 @@ Train(
     purchase_sprite_towed_id=1610,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_15kv,
+    track_type=standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1969, 1, 1),
@@ -877,7 +875,7 @@ Train(
     purchase_sprite_towed_id=1620,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_15kv,
+    track_type=standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1970, 1, 1),
@@ -910,7 +908,7 @@ Train(
     purchase_sprite_towed_id=1630,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_15kv,
+    track_type=standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1975, 1, 1),
@@ -943,7 +941,7 @@ Train(
     purchase_sprite_towed_id=1640,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_15kv,
+    track_type=standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1982, 1, 1),
@@ -978,7 +976,7 @@ Train(
     purchase_sprite_towed_id=1650,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_15kv,
+    track_type=standard_gauge_15kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1984, 1, 1),
@@ -1012,7 +1010,7 @@ Train(
     purchase_sprite_towed_id=3601,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1989, 1, 1),
@@ -1031,7 +1029,7 @@ Train(
     }),
 ).add_articulated_part(
     id=3601,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_FF_1_1989.png',
         'Grey, Blue and Green': '1989_DK_MF_IC3_FF_2_2005.png',
         'Grey, Blue and Red': '1989_DK_MF_IC3_FF_3_2012.png',
@@ -1042,7 +1040,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=3602,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_MFB_1_1989.png',
         'Grey, Blue and Green': '1989_DK_MF_IC3_MFB_2_2005.png',
         'Grey, Blue and Red': '1989_DK_MF_IC3_MFB_3_2012.png',
@@ -1068,7 +1066,7 @@ Train(
     purchase_sprite_towed_id=4101,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_25kv,
+    track_type=standard_gauge_25kv,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1993, 1, 1),
@@ -1087,7 +1085,7 @@ Train(
     }),
 ).add_articulated_part(
     id=4101,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_FR22_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_FR22_2_2005.png',
         'Grey, Blue and Red': '1993_DK_ER_IR4_FR22_3_2012.png',
@@ -1098,7 +1096,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=4102,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_FR23_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_FR23_2_2005.png',
         'Grey, Blue and Red': '1993_DK_ER_IR4_FR23_3_2012.png',
@@ -1109,7 +1107,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=4103,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_ER21_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_ER21_2_2005.png',
         'Grey, Blue and Red': '1993_DK_ER_IR4_ER21_3_2012.png',
@@ -1132,7 +1130,7 @@ Train(
     purchase_sprite_towed_id=5603,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_dc,
+    track_type=standard_gauge_dc,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1933, 1, 1),
@@ -1151,7 +1149,7 @@ Train(
     }),
 ).add_articulated_part(
     id=5603,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
     cargo_capacity=90,
@@ -1171,7 +1169,7 @@ Train(
     purchase_sprite_towed_id=5602,
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge_dc,
+    track_type=standard_gauge_dc,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1933, 1, 1),
@@ -1190,7 +1188,7 @@ Train(
     }),
 ).add_articulated_part(
     id=5602,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
@@ -1198,7 +1196,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=5602,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
@@ -1206,7 +1204,7 @@ Train(
     refittable_cargo_types=1,
 ).add_articulated_part(
     id=5603,
-    liveries = make_vox_liveries(8, {
+    liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
     cargo_capacity=90,
@@ -1223,7 +1221,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(2002, 1, 1),
@@ -1253,7 +1251,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(1964, 1, 1),
@@ -1282,7 +1280,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(1966, 1, 1),
@@ -1310,7 +1308,7 @@ Train(
     }),
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=Standard_gauge,
+    track_type=standard_gauge,
     max_speed=Train.kmhishph(104),
     power=0,
     introduction_date=date(2002, 1, 1),
@@ -1353,7 +1351,7 @@ COMPANY_SPRITES = {
     'cmetro': purchase_icon('lcmetro.png'),
     'øresundståg': purchase_icon('løresundståg.png'),
     'stog': purchase_icon('lstog.png'),
-    'sl' : purchase_icon('lsl.png')
+    'sl': purchase_icon('lsl.png')
 }
 
 
@@ -1363,11 +1361,11 @@ POWER_TYPE_SPRITES = {
     'dual': purchase_icon('pelectricdv.png'),
     'metro': purchase_icon('pelectricm.png'),
     'steam': purchase_icon('psteam.png'),
-    'multi': purchase_icon('pelectricw.png'), #replece these sprites
-    'dc' : purchase_icon('pelectricw.png'), 
-    '15kv' : purchase_icon('pelectricw.png'),
-    '25kv' : purchase_icon('pelectricw.png'),
-    'na' : purchase_icon('pblank.png')
+    'multi': purchase_icon('pelectricw.png'),  # replece these sprites
+    'dc': purchase_icon('pelectricw.png'),
+    '15kv': purchase_icon('pelectricw.png'),
+    '25kv': purchase_icon('pelectricw.png'),
+    'na': purchase_icon('pblank.png')
 }
 
 
