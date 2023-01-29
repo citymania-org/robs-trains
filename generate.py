@@ -281,7 +281,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -315,7 +315,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_15.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -349,7 +349,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_8.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -381,7 +381,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_7.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -413,7 +413,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_6.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -445,7 +445,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_5.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -477,7 +477,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_4.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -509,7 +509,7 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_3.png'
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -541,7 +541,39 @@ Train(
     liveries=make_vox_liveries('new', {
         '': 'template_2.png'
     }),
-    country='sverige',
+    country='sweden',
+    company='na',
+    power_type='multi',
+    purchase_sprite_towed_id=1,
+    engine_class=Train.EngineClass.DIESEL,
+    sound_effects=modern_diesel_sound,
+    track_type=standard_gauge_multi,
+    max_speed=Train.kmhishph(104),
+    power=9999,
+    introduction_date=date(1954, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=90,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=90,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Test locomotive',
+    }),
+)
+
+Train(
+    id=1,
+    name='alignment 1',
+    length=1,
+    liveries=make_vox_liveries('new', {
+        '': 'template_1.png'
+    }),
+    country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=1,
@@ -566,38 +598,6 @@ Train(
     }),
 )
 '''
-Train(
-    id=1,
-    name='alignment 1',
-    length=1,
-    liveries=make_vox_liveries('new', {
-        '': 'template_1.png'
-    }),
-    country='sverige',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    default_cargo_type=0,
-    cost_factor=24,
-    refittable_cargo_types=1,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
 # regular trains
 
 Train(
@@ -608,7 +608,7 @@ Train(
         'Black and Red': ('1954_DK_MY_II_2_1972.png', 1972),
         'Blue': ('1954_DK_MY_II_3_2004.png', 2004),
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='diesel',
     purchase_sprite_towed_id=1100,
@@ -640,7 +640,7 @@ Train(
         'Maroon': '1960_DK_MX_II_1_1960.png',
         'Black and Red': '1960_DK_MX_II_2_1972.png',
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='diesel',
     purchase_sprite_towed_id=1110,
@@ -673,7 +673,7 @@ Train(
         'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='diesel',
     purchase_sprite_towed_id=1120,
@@ -705,7 +705,7 @@ Train(
         'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='diesel',
     purchase_sprite_towed_id=1125,
@@ -736,7 +736,7 @@ Train(
     liveries=make_vox_liveries(8, {
         'Black and Red': '1972_DK_MZ_III_1_1972.png',
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='diesel',
     purchase_sprite_towed_id=1130,
@@ -767,7 +767,7 @@ Train(
     liveries=make_vox_liveries(8, {
         'Black and Red': '1977_DK_MZ_IV_1_1977.png',
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='diesel',
     purchase_sprite_towed_id=1135,
@@ -800,7 +800,7 @@ Train(
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1967_SE_Rc1_2_1990.png',
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='15kv',
     purchase_sprite_towed_id=1600,
@@ -835,7 +835,7 @@ Train(
         'Blue and Red New': '1969_SE_Rc2_3_1990.png',
         'Black': '1969_SE_Rc2_4_2006.png',
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='15kv',
     purchase_sprite_towed_id=1610,
@@ -869,7 +869,7 @@ Train(
         'Blue and Red': '1969_SE_Rc2_3_1990.png',
         'Black': '1969_SE_Rc2_4_2006.png',
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='15kv',
     purchase_sprite_towed_id=1620,
@@ -902,7 +902,7 @@ Train(
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1969_SE_Rc2_3_1990.png',
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='15kv',
     purchase_sprite_towed_id=1630,
@@ -935,7 +935,7 @@ Train(
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1969_SE_Rc2_3_1990.png',
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='15kv',
     purchase_sprite_towed_id=1640,
@@ -970,7 +970,7 @@ Train(
         'Dark Blue': '1984_SE_Rc6_1_2005.png',
         'Black': '1969_SE_Rc2_4_2006.png',
     }),
-    country='sverige',
+    country='sweden',
     company='na',
     power_type='15kv',
     purchase_sprite_towed_id=1650,
@@ -1004,7 +1004,7 @@ Train(
         'Grey, Blue and Red': '1989_DK_MF_IC3_MFA_3_2012.png',
         'Red and Black': '1989_DK_MF_IC3_MFA_4_2018.png',
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='diesel',
     purchase_sprite_towed_id=3601,
@@ -1060,7 +1060,7 @@ Train(
         'Grey, Blue and Red': '1993_DK_ER_IR4_ER20_3_2012.png',
         'Red and Black': '1993_DK_ER_IR4_ER20_4_2021.png',
     }),
-    country='danmark',
+    country='denmark',
     company='na',
     power_type='25kv',
     purchase_sprite_towed_id=4101,
@@ -1124,7 +1124,7 @@ Train(
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
     }),
-    country='danmark',
+    country='denmark',
     company='stog',
     power_type='dc',
     purchase_sprite_towed_id=5603,
@@ -1163,7 +1163,7 @@ Train(
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
     }),
-    country='danmark',
+    country='denmark',
     company='stog',
     power_type='dc',
     purchase_sprite_towed_id=5602,
@@ -1327,21 +1327,55 @@ Train(
     }),
 )
 
+# 891 narrow gauge
+
+Train(
+    id=8501,
+    name='UBp',
+    length=9,
+    liveries=make_vox_liveries('new', {
+        'Original': 'xxxx_SE_X10p_UBp_1_XXXX.png',
+    }),
+    engine_class=Train.EngineClass.ELECTRIC,
+    sound_effects=modern_diesel_sound,
+    track_type=p_gauge,
+    country='sweden',
+    company='sl',
+    power_type='dc',
+    purchase_sprite_towed_id=8501,
+    max_speed=Train.kmhishph(80),
+    power=0,
+    introduction_date=date(1988, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=16,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=80,
+    default_cargo_type=0,
+    cost_factor=24,
+    refittable_cargo_types=1, # pax
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Built by ABB railcar. Part of a major refurbisment of Roslagsbanan',
+    }),
+)
+
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
 COUNTRY_SPRITES = {
     'switzerland': purchase_icon('fch.png'),
     'germany': purchase_icon('fde.png'),
-    'danmark': purchase_icon('fdk.png'),
+    'denmark': purchase_icon('fdk.png'),
     'france': purchase_icon('ffr.png'),
     'hrvatska': purchase_icon('fhr.png'),
     'italy': purchase_icon('fit.png'),
-    'norge': purchase_icon('fno.png'),
+    'norway': purchase_icon('fno.png'),
     'srbija': purchase_icon('frs.png'),
     'russia': purchase_icon('fru.png'),
-    'sverige': purchase_icon('fse.png'),
-    'sssr': purchase_icon('fsu.png'),
+    'sweden': purchase_icon('fse.png'),
+    'ussr': purchase_icon('fsu.png'),
     'jugoslavija': purchase_icon('fyu.png'),
 }
 
