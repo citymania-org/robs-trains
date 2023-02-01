@@ -298,9 +298,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -332,9 +331,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -366,9 +364,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -398,9 +395,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -430,9 +426,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -462,9 +457,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -494,9 +488,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -526,9 +519,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -558,9 +550,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -590,9 +581,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
@@ -625,9 +615,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -657,9 +646,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -690,9 +678,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -722,9 +709,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -753,9 +739,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -784,9 +769,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -817,9 +801,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -852,9 +835,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -886,9 +868,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -919,9 +900,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -952,9 +932,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -987,9 +966,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'A Cool train',
     }),
@@ -1021,9 +999,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -1036,8 +1013,7 @@ Train(
         'Red and Black': '1989_DK_MF_IC3_FF_4_2018.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id=3602,
     liveries=make_vox_liveries(8, {
@@ -1047,8 +1023,7 @@ Train(
         'Red and Black': '1989_DK_MF_IC3_MFB_4_2018.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 Train(
@@ -1077,9 +1052,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -1092,8 +1066,7 @@ Train(
         'Red and Black': '1993_DK_ER_IR4_FR22_4_2021.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id=4102,
     liveries=make_vox_liveries(8, {
@@ -1103,8 +1076,7 @@ Train(
         'Red and Black': '1993_DK_ER_IR4_FR23_4_2021.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id=4103,
     liveries=make_vox_liveries(8, {
@@ -1114,8 +1086,7 @@ Train(
         'Red and Black': '1993_DK_ER_IR4_ER21_4_2021.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 Train(
@@ -1141,9 +1112,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Can be combined with 2 and 4 car sets to make sets of 6 and 8',
     }),
@@ -1153,8 +1123,7 @@ Train(
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 Train(
@@ -1180,9 +1149,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Can be combined with 2 and 4 car sets to make sets of 6 and 8',
     }),
@@ -1192,24 +1160,21 @@ Train(
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id=5602,
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id=5603,
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
     cargo_capacity=90,
-    default_cargo_type=0,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 Train(
@@ -1232,9 +1197,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -1262,9 +1226,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -1291,9 +1254,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -1319,9 +1281,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=90,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
@@ -1334,7 +1295,7 @@ Train(
     name='UBp',
     length=9,
     liveries=make_vox_liveries('new', {
-        'Original': 'xxxx_SE_X10p_UBp_1_XXXX.png',
+        'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
     }),
     engine_class=Train.EngineClass.ELECTRIC,
     sound_effects=modern_diesel_sound,
@@ -1353,9 +1314,8 @@ Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=80,
-    default_cargo_type=0,
     cost_factor=24,
-    refittable_cargo_types=1, # pax
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Info': 'Built by ABB railcar. Part of a major refurbisment of Roslagsbanan',
     }),

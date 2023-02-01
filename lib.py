@@ -49,7 +49,10 @@ class Train(grf.Train):
                 self._central_length = self.length
                 kw['shorten_by'] = 8 - self.length
 
-        super().__init__(**kw)
+        super().__init__(
+            # default_cargo_type=grf.DEFAULT_CARGO_FIRST_REFITTABLE,
+            **kw
+        )
         self.country = country
         self.company = company
         self.power_type = power_type
@@ -193,6 +196,7 @@ class Train(grf.Train):
                 props={
                     'sprite_id': 0xfd,  # magic value for newgrf sprites
                     'engine_class': self._props.get('engine_class'),
+                    'default_cargo_type': grf.DEFAULT_CARGO_FIRST_REFITTABLE,
                     **props
                 }
             ))
