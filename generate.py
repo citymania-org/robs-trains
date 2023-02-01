@@ -22,7 +22,17 @@ g.add(lib.set_global_train_y_offset(2))
 g.add(lib.set_global_train_depot_width_32())
 
 # railtype table
-g.set_railtype_table([
+(
+    standard_gauge,
+    standard_gauge_multi,  # border crossing trains x is place holder
+    standard_gauge_dc,  # stog and saltsjöbanan
+    standard_gauge_25kv,  # Denmark
+    standard_gauge_15kv,  # Sweden and Norway
+    metro,  # Metro
+    p_gauge,  # Swedish 3 foot gauge
+    p_gauge_dc,  # SRJ
+    p_gauge_25kv,  # NKIJ
+) = g.set_railtype_table([
     ('SAAN', 'RAIL'),  # Standard gauge track
     ('SAAX', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time) x is place holder
     ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
@@ -34,17 +44,8 @@ g.set_railtype_table([
     ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
 ])
 
-standard_gauge = g.get_railtype_id('SAAN')
-standard_gauge_multi = g.get_railtype_id('SAAX')  # border crossing trains x is place holder
-standard_gauge_dc = g.get_railtype_id('SAAd')  # stog and saltsjöbanan
-standard_gauge_25kv = g.get_railtype_id('SAAA')  # Denmark
-standard_gauge_15kv = g.get_railtype_id('SAAa')  # Sweden and Norway
-metro = g.get_railtype_id('MTRO')  # Metro
-p_gauge = g.get_railtype_id('nAAN')  # Swedish 3 foot gauge
-p_gauge_dc = g.get_railtype_id('nAAd')  # SRJ
-p_gauge_25kv = g.get_railtype_id('nAAa')  # NKIJ
-
 # we might need more narrow guage types if we add norwegian or danish trains but it isn't super important and might not be neccesary
+
 
 def tmpl_vox_train(filename):
     png = grf.ImageFile('sprites/' + filename)
