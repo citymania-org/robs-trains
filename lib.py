@@ -134,7 +134,7 @@ class Train(grf.Train):
 
         if self.purchase_sprite:
             # Make sure purchase layouts go before main action 1
-            res.append(grf.SpriteSet(grf.TRAIN, 1))
+            res.append(grf.SpriteSet(feature=grf.TRAIN, count=1))
             res.append(self.purchase_sprite)
             res.append(layout := grf.GenericSpriteLayout(ent1=(0,), ent2=(0,)))
             self.callbacks.purchase_graphics = layout
