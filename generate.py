@@ -1311,7 +1311,7 @@ Train(
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
-    weight=16,
+    weight=Train.ton(int(16.6)),
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=80,
@@ -1321,6 +1321,52 @@ Train(
         'Info': 'Built by ABB railcar. Part of a major refurbisment of Roslagsbanan',
     }),
 )
+
+Train( # todo make it work with the length for mus
+    id=(8504),
+    name='X10p',
+    length=9,
+    liveries=make_vox_liveries('new', {
+        'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
+    }),
+    country='sweden',
+    company='sl',
+    power_type='dc',
+    purchase_sprite_towed_id=8504,
+    engine_class=Train.EngineClass.ELECTRIC, # unsure about how to enter stats due to units
+    sound_effects=modern_diesel_sound,
+    track_type=p_gauge_dc,
+    max_speed=Train.kmhishph(80),
+    power=536,
+    introduction_date=date(1990, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=Train.ton(int(27.7+15.8+16.6)),
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=72,
+    cost_factor=24,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Built by ABB railcar. Part of a major refurbisment of Roslagsbanan',
+    }),
+).add_articulated_part(
+    id=8507,
+    liveries=make_vox_liveries('new', {
+        'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
+    }),
+    cargo_capacity=80,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id=8510,
+    liveries=make_vox_liveries('new', {
+        'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
+    }),
+    cargo_capacity=76,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
 
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
