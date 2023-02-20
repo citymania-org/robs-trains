@@ -275,7 +275,7 @@ modern_diesel_sound = {
 }
 
 # special alignment train
-Train(
+alignment16 = Train(
     id=16,
     name='alignment 16',
     length=16,
@@ -591,7 +591,7 @@ Train(
 '''
 # regular trains
 
-Train(
+my_ii = Train(
     id=1100,
     name='MY II',
     liveries=make_vox_liveries(8, {
@@ -623,7 +623,7 @@ Train(
     }),
 )
 
-Train(
+mx_ii = Train(
     id=1110,
     name='MX II',
     liveries=make_vox_liveries(8, {
@@ -655,7 +655,7 @@ Train(
 )
 
 
-Train(
+mz_i = Train(
     id=1120,
     name='MZ I',
     liveries=make_vox_liveries(8, {
@@ -686,7 +686,7 @@ Train(
     }),
 )
 
-Train(
+mz_ii = Train(
     id=1125,
     name='MZ II',
     liveries=make_vox_liveries(8, {
@@ -717,7 +717,7 @@ Train(
     }),
 )
 
-Train(
+mz_iii = Train(
     id=1130,
     name='MZ III',
     liveries=make_vox_liveries(8, {
@@ -747,7 +747,7 @@ Train(
     }),
 )
 
-Train(
+mz_iv = Train(
     id=1135,
     name=' MZ IV',
     liveries=make_vox_liveries(8, {
@@ -777,7 +777,7 @@ Train(
     }),
 )
 
-Train(
+rc1 = Train(
     id=1600,
     name='Rc1',
     shorten_by=2,
@@ -809,7 +809,7 @@ Train(
     }),
 )
 
-Train(
+rc2 = Train(
     id=1610,
     name='Rc2',
     shorten_by=2,
@@ -843,7 +843,7 @@ Train(
     }),
 )
 
-Train(
+rc3 = Train(
     id=1620,
     name='Rc3',
     shorten_by=2,
@@ -876,7 +876,7 @@ Train(
     }),
 )
 
-Train(
+rc4 = Train(
     id=1630,
     name='Rc4',
     shorten_by=2,
@@ -908,7 +908,7 @@ Train(
     }),
 )
 
-Train(
+rc5 = Train(
     id=1640,
     name='Rc5',
     shorten_by=2,
@@ -940,7 +940,7 @@ Train(
     }),
 )
 
-Train(
+rc6 = Train(
     id=1650,
     name='Rc6',
     shorten_by=2,
@@ -974,7 +974,7 @@ Train(
     }),
 )
 
-Train(
+mf_ic3 = Train(
     id=3600,
     name='MF IC3',
     liveries=make_vox_liveries(8, {
@@ -1027,7 +1027,7 @@ Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-Train(
+er_ir4 = Train(
     id=4100,
     name='ER IR4',
     liveries=make_vox_liveries(8, {
@@ -1090,7 +1090,7 @@ Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-Train(
+stog_1_2 = Train(
     id=5600,
     name='S-Tog 1 (2 Car)',
     liveries=make_vox_liveries(8, {
@@ -1127,7 +1127,7 @@ Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-Train(
+stog_1_4 = Train(
     id=5601,
     name='S-Tog 1 (4 Car)',
     liveries=make_vox_liveries(8, {
@@ -1178,7 +1178,7 @@ Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-Train(
+ab = Train(
     id=6600,
     name='ABs',
     liveries=make_vox_liveries(11, {
@@ -1205,7 +1205,7 @@ Train(
     }),
 )
 
-Train(
+b = Train(
     id=7100,
     name='B',
     liveries=make_vox_liveries(11, {
@@ -1234,7 +1234,7 @@ Train(
     }),
 )
 
-Train(
+a = Train(
     id=7110,
     name='A',
     liveries=make_vox_liveries(10, {
@@ -1262,7 +1262,7 @@ Train(
     }),
 )
 
-Train(
+b_ii = Train(
     id=7120,
     name='B II',
     liveries=make_vox_liveries(10, {
@@ -1291,7 +1291,7 @@ Train(
 
 # 891mm narrow gauge
 
-Train(
+ubp = Train(
     id=8501,
     name='UBp',
     length=9,
@@ -1322,7 +1322,7 @@ Train(
     }),
 )
 
-Train( # todo make it work with the length for mus
+x10p = Train( # todo make it work with the length for mus
     id=(8504),
     name='X10p',
     length=9,
@@ -1443,5 +1443,31 @@ lib.make_purchase_sprites(
     },
     # debug_dir='debug_purchase',
 )
+
+g.add(grf.SetPurchaseOrder(
+    alignment16,
+    my_ii,
+    mx_ii,
+    mz_i,
+    mz_ii,
+    mz_iii,
+    mz_iv,
+    rc1,
+    rc2,
+    rc3,
+    rc4,
+    rc5,
+    rc6,
+    mf_ic3,
+    er_ir4,
+    stog_1_2,
+    stog_1_4,
+    ab,
+    b,
+    a,
+    b_ii,
+    ubp,
+    x10p,
+))
 
 g.write('robs_trains.grf')

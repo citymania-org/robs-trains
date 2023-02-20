@@ -29,15 +29,6 @@ class VehicleSpriteTable(grf.VehicleSpriteTable):
 
 
 class Train(grf.Train):
-
-    @staticmethod
-    def hp(value):
-        return int(value + .5)
-
-    @staticmethod
-    def ton(value):
-        return int(value + .5)
-
     def __init__(self, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, **kw):
         self._articulated_length = 0
         if 'length' in kw:
