@@ -673,6 +673,7 @@ mz_i = Train(
         'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
+    length=7,
     country='denmark',
     company='na',
     power_type='diesel',

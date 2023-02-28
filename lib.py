@@ -593,7 +593,8 @@ class VoxTrainFile:
 
         def make_sprite(i, xofs, yofs):
             im, (ox, oy) = sprites[i]
-            # return ImageSprite(im, xofs=ox + xofs, yofs=oy + yofs)
+            # return ImageSprite(im, xofs=ox + xofs, yofs=oy + yofs
+            # TODO offset to model center instead of origin
             return grf.ImageSprite(im, xofs=xofs - ox, yofs=yofs - oy)
 
         # sprites = [sprites[x] for x in (7, 1, 4, 0, 6, 3, 5, 2)]
@@ -607,14 +608,14 @@ class VoxTrainFile:
             # make_sprite(3, -34, -16),  # /
             # make_sprite(5, -41, -16),  # -
             # make_sprite(2, -17, -29),  # \
-            make_sprite(7, -26, -14),  # |
-            make_sprite(1, -30, 4),  # /
-            make_sprite(4, -27, -11),  # -
-            make_sprite(0, 3, -10),  # \
-            make_sprite(6, 28, -8),  # |
-            make_sprite(3, 24, 4),  # /
-            make_sprite(5, 26, -11),  # -
-            make_sprite(2, 3, 17),  # \
+            make_sprite(7, -25, -9),  # |
+            make_sprite(1, -31, 4),  # /
+            make_sprite(4, -21, -9),  # -
+            make_sprite(0, 11, -6),  # \
+            make_sprite(6, 26, -7),  # |
+            make_sprite(3, 26, 6),  # /
+            make_sprite(5, 20, -9),  # -
+            make_sprite(2, -6, 17),  # \
         )
         # self._debug_sprites(res)
         return res
