@@ -7,7 +7,9 @@ import lib
 
 
 PURCHASE_ICONS_DIR = 'ztemps/purchase list'
+DEBUG_DIR = 'debug'
 
+os.makedirs(DEBUG_DIR, exist_ok=True)
 
 g = grf.NewGRF(
     grfid=b'ROBT',
@@ -230,6 +232,7 @@ def tmpl_vox_train_1(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
+
 def make_vox_liveries(length, liveries):
     TEMPLATES = {
         1: tmpl_vox_train_1,
@@ -257,6 +260,9 @@ def make_vox_liveries(length, liveries):
 
         if filename.endswith('.vox'):
             sprites = grf.VoxTrainFile(filename).make_sprites()
+            if DEBUG_DIR is not None:
+                debug_fname = os.path.join(DEBUG_DIR, os.path.basename(filename)[:-4]) + '.png'
+                lib.make_debug_sprite_sheet(debug_fname, sprites, scale=5)
         else:
             sprites = tmpl(filename)
 
@@ -1446,7 +1452,7 @@ lib.make_purchase_sprites(
     effects={
         'checker': (-4, 4),
     },
-    # debug_dir='debug_purchase',
+    # debug_dir=DEBUG_DIR,
 )
 
 g.add(grf.SetPurchaseOrder(

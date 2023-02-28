@@ -358,6 +358,24 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
             fname = os.path.join(debug_dir, f'purchase_{t.id}.png')
             im.save(fname, 'PNG')
 
+
+def make_debug_sprite_sheet(filename, sprites, scale=1):
+    rx, ry = 0, 0
+
+    for s in sprites:
+        rx += s.w
+        ry = max(ry, s.h)
+
+    im = Image.new('RGBA', (rx + 10 * len(sprites) - 10, ry))
+    x = 0
+    for s in sprites:
+        im.paste(s.get_image()[0], (x, 0))
+        x += s.w + 10
+    if scale != 1:
+        im = im.resize((im.size[0] * scale, im.size[1] * scale), Image.NEAREST)
+    im.save(filename)
+
+
 set_global_train_y_offset = lambda ofs: grf.ComputeParameters(target=0x8e, operation=0x00, if_undefined=False, source1=0xff, source2=0xff, value=ofs)
 
 set_global_train_misc_flag = lambda pos: grf.ComputeParameters(target=0x9e, operation=0x08, if_undefined=False, source1=0x9e, source2=0xff, value=1 << pos)
