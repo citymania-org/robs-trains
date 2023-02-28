@@ -249,18 +249,22 @@ def make_vox_liveries(length, liveries):
     tmpl = TEMPLATES[length]
     res = []
     for name, filename in liveries.items():
+        data = {}
+
         if isinstance(filename, tuple):
             filename, intro_year = filename
-            res.append({
-                'name': f' ({name})',
-                'intro_year': intro_year,
-                'sprites': tmpl(filename),
-            })
+            data['intro_year'] = intro_year
+
+        if filename.endswith('.vox'):
+            sprites = grf.VoxTrainFile(filename).make_sprites()
         else:
-            res.append({
-                'name': f' ({name})',
-                'sprites': tmpl(filename),
-            })
+            sprites = tmpl(filename)
+
+        res.append({
+            **data,
+            'name': f' ({name})',
+            'sprites': sprites,
+        })
     return res
 
 
@@ -659,6 +663,7 @@ mz_i = Train(
     id=1120,
     name='MZ I',
     liveries=make_vox_liveries(8, {
+        'Vox': 'ztemps/t1967_DSB_MZ_I.vox',
         'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
