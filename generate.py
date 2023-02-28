@@ -259,7 +259,7 @@ def make_vox_liveries(length, liveries):
             data['intro_year'] = intro_year
 
         if filename.endswith('.vox'):
-            sprites = grf.VoxTrainFile(filename).make_sprites()
+            sprites = lib.VoxTrainFile(filename).make_sprites()
             if DEBUG_DIR is not None:
                 debug_fname = os.path.join(DEBUG_DIR, os.path.basename(filename)[:-4]) + '.png'
                 lib.make_debug_sprite_sheet(debug_fname, sprites, scale=5)
