@@ -1379,6 +1379,36 @@ x10p = Train( # todo make it work with the length for mus
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
+Tp = Train( # todo make it work with the length for mus
+    id=(8514),
+    name='Tp',
+    length=5,
+    liveries=make_vox_liveries('new', {
+        'Original': 'xxxx_SE_Tp_1_xxxx.png',
+    }),
+    country='sweden',
+    company='na',
+    power_type='diesel',
+    purchase_sprite_towed_id=8514,
+    engine_class=Train.EngineClass.DIESEL, # unsure about how to enter stats due to units
+    sound_effects=modern_diesel_sound,
+    track_type=p_gauge,
+    max_speed=Train.kmhishph(80),
+    power=778,
+    introduction_date=date(1953, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=46,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=72,
+    cost_factor=24,
+    refittable_cargo_classes=grf.CargoClass.NONE,
+    additional_text=grf.fake_vehicle_info({
+        'Info': '',
+    }),
+)
 
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
@@ -1478,6 +1508,7 @@ g.add(grf.SetPurchaseOrder(
     b,
     a,
     b_ii,
+    Tp,
     ubp,
     x10p,
 ))
