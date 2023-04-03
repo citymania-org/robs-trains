@@ -1303,7 +1303,7 @@ b_ii = Train(
 
 # 891mm narrow gauge
 
-ubp = Train(
+ubp_i = Train(
     id=8501,
     name='UBp',
     length=9,
@@ -1344,7 +1344,7 @@ x10p = Train( # todo make it work with the length for mus
     country='sweden',
     company='sl',
     power_type='dc',
-    purchase_sprite_towed_id=8504,
+    purchase_sprite_towed_id=8507,
     engine_class=Train.EngineClass.ELECTRIC, # unsure about how to enter stats due to units
     sound_effects=modern_diesel_sound,
     track_type=p_gauge_dc,
@@ -1379,7 +1379,7 @@ x10p = Train( # todo make it work with the length for mus
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-Tp = Train( # todo make it work with the length for mus
+Tp = Train( 
     id=(8514),
     name='Tp',
     length=5,
@@ -1402,14 +1402,13 @@ Tp = Train( # todo make it work with the length for mus
     weight=46,
     tractive_effort_coefficient=79,
     running_cost_factor=222,
-    cargo_capacity=72,
+    cargo_capacity=0,
     cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.NONE,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
     additional_text=grf.fake_vehicle_info({
         'Info': '',
     }),
 )
-
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
@@ -1509,7 +1508,7 @@ g.add(grf.SetPurchaseOrder(
     a,
     b_ii,
     Tp,
-    ubp,
+    ubp_i,
     x10p,
 ))
 
