@@ -6,7 +6,7 @@ import grf
 import lib
 
 
-PURCHASE_ICONS_DIR = 'ztemps/purchase list'
+PURCHASE_ICONS_DIR = 'purchase list'
 DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
@@ -295,7 +295,7 @@ alignment16 = Train(
     country='sweden',
     company='na',
     power_type='multi',
-    purchase_sprite_towed_id=1,
+    purchase_sprite_towed_id=16,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=standard_gauge_multi,
@@ -315,56 +315,21 @@ alignment16 = Train(
         'Info': 'Test locomotive',
     }),
 )
-
-'''
-
-Train(
-    id=15,
-    name='alignment 15',
-    length=15,
-    liveries=make_vox_liveries('new', {
-        '': 'template_15.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-
 
 Train(
     id=8,
-    name='alignment 8',
+    name='alignment narrow',
     length=8,
     liveries=make_vox_liveries('new', {
-        '': 'template_8.png'
+        '': 'template_narrow_guage_short.png'
     }),
     country='sweden',
     company='na',
     power_type='multi',
-    purchase_sprite_towed_id=1,
+    purchase_sprite_towed_id=8,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
+    track_type=p_gauge,
     max_speed=Train.kmhishph(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
@@ -382,223 +347,6 @@ Train(
     }),
 )
 
-Train(
-    id=7,
-    name='alignment 7',
-    length=7,
-    liveries=make_vox_liveries('new', {
-        '': 'template_7.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-Train(
-    id=6,
-    name='alignment 6',
-    length=6,
-    liveries=make_vox_liveries('new', {
-        '': 'template_6.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-Train(
-    id=5,
-    name='alignment 5',
-    length=5,
-    liveries=make_vox_liveries('new', {
-        '': 'template_5.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-Train(
-    id=4,
-    name='alignment 4',
-    length=4,
-    liveries=make_vox_liveries('new', {
-        '': 'template_4.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-Train(
-    id=3,
-    name='alignment 3',
-    length=3,
-    liveries=make_vox_liveries('new', {
-        '': 'template_3.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-Train(
-    id=2,
-    name='alignment 2',
-    length=2,
-    liveries=make_vox_liveries('new', {
-        '': 'template_2.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-Train(
-    id=1,
-    name='alignment 1',
-    length=1,
-    liveries=make_vox_liveries('new', {
-        '': 'template_1.png'
-    }),
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id=1,
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_multi,
-    max_speed=Train.kmhishph(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-'''
 # regular trains
 
 my_ii = Train(
@@ -1406,9 +1154,45 @@ Tp = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
     additional_text=grf.fake_vehicle_info({
-        'Info': '',
+        'Info': 'Big boy',
     }),
 )
+
+z4p = Train( # Sport model as variant?
+    id=(8515),
+    name='z4p',
+    length=3,
+    liveries=make_vox_liveries('new', {
+        'SRJ/SJ': 'xxxx_SE_z4p_1_xxxx.png',
+        #'NKIJ': 'xxxx_SE_Tp_1_xxxx.png',
+        #'DONJ': 'xxxx_SE_Tp_1_xxxx.png',
+        #'SL Grey and yellow': 'xxxx_SE_Tp_1_xxxx.png',
+        #'SL Red': 'xxxx_SE_Tp_1_xxxx.png',
+    }),
+    country='sweden',
+    company='na',
+    power_type='diesel',
+    purchase_sprite_towed_id=8515,
+    engine_class=Train.EngineClass.DIESEL, # unsure about how to enter stats due to units
+    sound_effects=modern_diesel_sound,
+    track_type=p_gauge,
+    max_speed=Train.kmhishph(40),
+    power=160,
+    introduction_date=date(1947, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=14,
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=0,
+    cost_factor=24,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Very cool',
+    }),
+)
+
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
@@ -1507,6 +1291,7 @@ g.add(grf.SetPurchaseOrder(
     b,
     a,
     b_ii,
+    z4p,
     Tp,
     ubp_i,
     x10p,
