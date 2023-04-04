@@ -314,6 +314,12 @@ alignment16 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Test locomotive',
     }),
+).add_articulated_part(
+    id=19,
+    length=16,
+    liveries=make_vox_liveries('new', {
+        '': 'template.png'
+    }),
 )
 
 Train(
