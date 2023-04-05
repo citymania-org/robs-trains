@@ -1166,16 +1166,19 @@ Tp = Train(
     }),
 )
 
+
+
 Z4p = Train( # Sport model as variant?
     id=(8515),
     name='Z4p',
     length=3,
     liveries=make_vox_liveries('new', {
-        'SRJ/SJ': 'xxxx_SE_Z4p_1_xxxx.png',
-        'NKIJ': 'xxxx_SE_Z4p_2_xxxx.png',
+        'SRJ/SJ': '1947_SE_Z4p_1_1947.png',
+        'NKIJ': '1947_SE_Z4p_2_1947.png',
         #'DONJ': 'xxxx_SE_Tp_1_xxxx.png',
         #'SL Grey and yellow': 'xxxx_SE_Tp_1_xxxx.png',
         #'SL Red': 'xxxx_SE_Tp_1_xxxx.png',
+    
     }),
     country='sweden',
     company='na',
@@ -1193,7 +1196,7 @@ Z4p = Train( # Sport model as variant?
     weight=14,
     tractive_effort_coefficient=79,
     running_cost_factor=222,
-    cargo_capacity=0,
+    cargo_capacity=1,
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
     additional_text=grf.fake_vehicle_info({
