@@ -1095,7 +1095,7 @@ x10p = Train( # todo make it work with the length for mus
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
     }),
-    country='sweden',
+    #country='sweden', remove when fixed 
     company='sl',
     power_type='dc',
     purchase_sprite_towed_id=8507,
@@ -1119,6 +1119,7 @@ x10p = Train( # todo make it work with the length for mus
     }),
 ).add_articulated_part(
     id=8507,
+    length=9,
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
     }),
@@ -1126,6 +1127,7 @@ x10p = Train( # todo make it work with the length for mus
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id=8510,
+    length=9,
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
     }),
@@ -1160,17 +1162,17 @@ Tp = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Big boy',
+        'Info': "SJ's larger narrow gauge loco",
     }),
 )
 
-z4p = Train( # Sport model as variant?
+Z4p = Train( # Sport model as variant?
     id=(8515),
-    name='z4p',
+    name='Z4p',
     length=3,
     liveries=make_vox_liveries('new', {
-        'SRJ/SJ': 'xxxx_SE_z4p_1_xxxx.png',
-        #'NKIJ': 'xxxx_SE_Tp_1_xxxx.png',
+        'SRJ/SJ': 'xxxx_SE_Z4p_1_xxxx.png',
+        'NKIJ': 'xxxx_SE_Z4p_2_xxxx.png',
         #'DONJ': 'xxxx_SE_Tp_1_xxxx.png',
         #'SL Grey and yellow': 'xxxx_SE_Tp_1_xxxx.png',
         #'SL Red': 'xxxx_SE_Tp_1_xxxx.png',
@@ -1195,7 +1197,7 @@ z4p = Train( # Sport model as variant?
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Very cool',
+        'Info': 'The most common diesel locomotive on narrow gauge lines. The first ones were acquired by SRJ, with other private companies and SJ following suit',
     }),
 )
 
@@ -1239,7 +1241,6 @@ POWER_TYPE_SPRITES = {
     '25kv': purchase_icon('pelectricw.png'),
     'na': purchase_icon('pblank.png')
 }
-
 
 lib.make_purchase_sprites(
     newgrf=g,
@@ -1297,7 +1298,7 @@ g.add(grf.SetPurchaseOrder(
     b,
     a,
     b_ii,
-    z4p,
+    Z4p,
     Tp,
     ubp_i,
     x10p,
