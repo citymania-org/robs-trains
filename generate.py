@@ -325,9 +325,9 @@ alignment16 = Train(
 Train(
     id=8,
     name='alignment narrow',
-    length=8,
+    length=16,
     liveries=make_vox_liveries('new', {
-        '': 'template_narrow_guage_short.png'
+        '': 'template_narrow_guage.png'
     }),
     country='sweden',
     company='na',
@@ -1164,6 +1164,7 @@ Tp = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': "SJ's larger narrow gauge loco",
     }),
+    callbacks={'properties': {'cargo_capacity': 0},}
 )
 
 
