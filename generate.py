@@ -1202,6 +1202,7 @@ Z4p = Train( # Sport model as variant?
     additional_text=grf.fake_vehicle_info({
         'Info': 'The most common diesel locomotive on narrow gauge lines. The first ones were acquired by SRJ, with other private companies and SJ following suit',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},}
 )
 
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
