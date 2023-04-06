@@ -15,6 +15,7 @@ g = grf.NewGRF(
     grfid=b'ROBT',
     name='SCATS',
     description='Scandinavian Trains made by Rob, dP and Brickblock',
+    url='https://github.com/citymania-org/robs-trains',
 )
 
 Train = g.bind(lib.Train)
