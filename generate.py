@@ -27,7 +27,7 @@ g.add(lib.set_global_train_depot_width_32())
 # railtype table
 (
     standard_gauge,
-    standard_gauge_multi,  # border crossing trains x is place holder
+    standard_gauge_multi,  # border crossing trains
     standard_gauge_dc,  # stog and saltsjöbanan
     standard_gauge_25kv,  # Denmark
     standard_gauge_15kv,  # Sweden and Norway
@@ -293,7 +293,7 @@ alignment16 = Train(
     liveries=make_vox_liveries('new', {
         '': 'template.png'
     }),
-    country='sweden',
+    #country='sweden',
     company='na',
     power_type='multi',
     purchase_sprite_towed_id=16,
@@ -324,16 +324,16 @@ alignment16 = Train(
 )
 
 Train(
-    id=8,
+    id=1,
     name='alignment narrow',
     length=16,
     liveries=make_vox_liveries('new', {
         '': 'template_narrow_guage.png'
     }),
-    country='sweden',
+    #country='sweden',
     company='na',
     power_type='multi',
-    purchase_sprite_towed_id=8,
+    purchase_sprite_towed_id=8504,
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=p_gauge,
@@ -423,9 +423,9 @@ mx_ii = Train(
 mz_i = Train(
     id=1120,
     name='MZ I',
-    liveries=make_vox_liveries(7, {
+    liveries=make_vox_liveries(8, {
         #'Vox': 'ztemps/442.vox',
-        'Maroon': '1967_DK_MZ_I_1_1967.png',
+        #'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
     length=7,
@@ -457,7 +457,7 @@ mz_ii = Train(
     id=1125,
     name='MZ II',
     liveries=make_vox_liveries(8, {
-        'Maroon': '1967_DK_MZ_I_1_1967.png',
+        #'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
     country='denmark',
