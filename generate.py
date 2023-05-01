@@ -37,7 +37,7 @@ g.add(lib.set_global_train_depot_width_32())
     p_gauge_15kv,  # NKIJ
 ) = g.set_railtype_table([
     ('SAAN', 'RAIL'),  # Standard gauge track
-    ('SAAX', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time) x is place holder
+    ('NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time) x is place holder
     ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
     ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
     ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
