@@ -29,15 +29,15 @@ g.add(lib.set_global_train_depot_width_32())
     standard_gauge,
     standard_gauge_multi,  # border crossing trains
     standard_gauge_dc,  # stog and saltsjöbanan
-    standard_gauge_25kv,  # Denmark
     standard_gauge_15kv,  # Sweden and Norway
+    standard_gauge_25kv,  # Denmark
     metro,  # Metro
     p_gauge,  # Swedish 3 foot gauge
     p_gauge_dc,  # SRJ
     p_gauge_15kv,  # NKIJ
 ) = g.set_railtype_table([
     ('SAAN', 'RAIL'),  # Standard gauge track
-    ('NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time) x is place holder
+    ('NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
     ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
     ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
     ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
