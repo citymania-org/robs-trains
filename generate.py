@@ -1180,10 +1180,10 @@ Z4p = Train( # Sport model as variant?
     length=3,
     liveries=make_vox_liveries('new', {
         'SRJ/SJ': '1947_SE_Z4p_1_1947.png',
-        'NKIJ': '1947_SE_Z4p_2_1947.png',
-        #'DONJ': 'xxxx_SE_Tp_1_xxxx.png',
-        #'SL Grey and yellow': 'xxxx_SE_Tp_1_xxxx.png',
-        #'SL Red': 'xxxx_SE_Tp_1_xxxx.png',
+        'NKIJ': '1947_SE_Z4p_2_xxxx.png',
+        'DONJ': '1947_SE_Z4p_3_xxxx.png',
+        'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
+        'SL Red': '1947_SE_Z4p_5_xxxx.png',
     
     }),
     country='sweden',
