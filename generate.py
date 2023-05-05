@@ -1095,7 +1095,7 @@ x10p = Train( # todo make it work with the length for mus
     length=9,
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
-        'Overhauled': 'xxxx_SE_X10p_X10p_2_xxxx.png',
+        'Overhauled': ('xxxx_SE_X10p_X10p_2_xxxx.png', 2011)
     }),
     #country='sweden', remove when fixed 
     company='sl',
@@ -1211,7 +1211,7 @@ Z4p = Train( # Sport model as variant?
     callbacks={'properties': {'cargo_capacity': 0},}
 )
 
-x10p = Train( # todo make it work with the length for mus
+x15p = Train( # todo make it work with the length for mus
     id=(8516),
     name='X15p',
     length=9,
