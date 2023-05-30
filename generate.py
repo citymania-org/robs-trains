@@ -328,7 +328,7 @@ Train(
     name='alignment narrow',
     length=16,
     liveries=make_vox_liveries('new', {
-        '': 'template_narrow_guage.png'
+        '': 'Template_Narrow_guage.png'
     }),
     #country='sweden',
     company='na',
@@ -1179,11 +1179,11 @@ Z4p = Train( # Sport model as variant?
     name='Z4p',
     length=3,
     liveries=make_vox_liveries('new', {
-        'SRJ/SJ': '1947_SE_Z4p_1_1947.png',
-        'NKIJ': '1947_SE_Z4p_2_xxxx.png',
-        'DONJ': '1947_SE_Z4p_3_xxxx.png',
-        'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
-        'SL Red': '1947_SE_Z4p_5_xxxx.png',
+        'SRJ/SJ': '1947_SE_z4p_1_1947.png',
+        'NKIJ': '1947_SE_z4p_2_xxxx.png',
+        'DONJ': '1947_SE_z4p_3_xxxx.png',
+        'SL Grey and yellow': '1947_SE_z4p_4_xxxx.png',
+        'SL Red': '1947_SE_z4p_5_xxxx.png',
     
     }),
     country='sweden',
@@ -1204,7 +1204,7 @@ Z4p = Train( # Sport model as variant?
     running_cost_factor=222,
     cargo_capacity=1,
     cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE
     additional_text=grf.fake_vehicle_info({
         'Info': 'The most common diesel locomotive on narrow gauge lines. The first ones were acquired by SRJ, with other private companies and SJ following suit',
     }),
