@@ -82,7 +82,7 @@ def _make_checker_effect(img, start, length):
     if start < 0:
         start = img.size[0] + start
     img = img.crop((0, 0, start + length, img.size[1]))
-    npimg = np.asarray(img)
+    npimg = np.array(img)
     for x in range(start, start + length):
         # add start to make sure it's consistent for any start
         npimg[(x + start) % 2::2, x] = (0, 0, 0, 0)
@@ -93,7 +93,7 @@ def _make_fade_effect(img, start, length):
     if start < 0:
         start = img.size[0] + start
     img = img.crop((0, 0, start + length, img.size[1]))
-    npimg = np.asarray(img)
+    npimg = np.array(img)
     step = 1.0 / (length + 1)
     for x in range(start, start + length):
         opacity = (length + start - x) * step
