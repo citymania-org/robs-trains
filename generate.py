@@ -424,7 +424,8 @@ mz_i = Train(
     id=1120,
     name='MZ I',
     liveries=make_vox_liveries(8, {
-        #'Vox': 'ztemps/442.vox',
+        'Vox': '442.vox',
+        'Vox2': '8.vox',
         #'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
@@ -1097,7 +1098,7 @@ x10p = Train( # todo make it work with the length for mus
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
         'Overhauled': ('xxxx_SE_X10p_X10p_2_xxxx.png', 2011)
     }),
-    #country='sweden', remove when fixed 
+    country='sweden',
     company='sl',
     power_type='dc',
     purchase_sprite_towed_id=8507,
