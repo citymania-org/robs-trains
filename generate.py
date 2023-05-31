@@ -424,8 +424,8 @@ mz_i = Train(
     id=1120,
     name='MZ I',
     liveries=make_vox_liveries(8, {
-        'Vox': '442.vox',
-        'Vox2': '8.vox',
+        # 'Vox': '442.vox',
+        # 'Vox2': '8.vox',
         #'Maroon': '1967_DK_MZ_I_1_1967.png',
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
