@@ -47,7 +47,7 @@ g.add(lib.set_global_train_depot_width_32())
     ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
 ])
 
-# we might need more narrow guage types if we add norwegian or danish trains but it isn't super important and might not be neccesary
+# we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
 
 
 def tmpl_vox_train(filename):
@@ -328,7 +328,7 @@ Train(
     name='alignment narrow',
     length=16,
     liveries=make_vox_liveries('new', {
-        '': 'Template_Narrow_guage.png'
+        '': 'template_narrow_gauge.png'
     }),
     #country='sweden',
     company='na',
@@ -1179,11 +1179,11 @@ Z4p = Train( # Sport model as variant?
     name='Z4p',
     length=3,
     liveries=make_vox_liveries('new', {
-        'SRJ/SJ': '1947_SE_z4p_1_1947.png',
-        'NKIJ': '1947_SE_z4p_2_xxxx.png',
-        'DONJ': '1947_SE_z4p_3_xxxx.png',
-        'SL Grey and yellow': '1947_SE_z4p_4_xxxx.png',
-        'SL Red': '1947_SE_z4p_5_xxxx.png',
+        'SRJ/SJ': '1947_SE_Z4p_1_1947.png',
+        'NKIJ': '1947_SE_Z4p_2_xxxx.png',
+        'DONJ': '1947_SE_Z4p_3_xxxx.png',
+        'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
+        'SL Red': '1947_SE_Z4p_5_xxxx.png',
     
     }),
     country='sweden',
