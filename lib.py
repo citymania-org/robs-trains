@@ -154,6 +154,8 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
         towed_list = t.purchase_sprite_towed_id
         if isinstance(towed_list, int):
             towed_list = [towed_list]
+        if towed_list is None:
+            towed_list = []
 
         part_imgs = []
         w, h = 0, 0
