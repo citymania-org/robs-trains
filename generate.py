@@ -12,9 +12,9 @@ DEBUG_DIR = 'debug'
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
 g = grf.NewGRF(
-    grfid=b'ROBT',
-    name='SCATS',
-    description='Scandinavian Trains made by Rob, dP and Brickblock',
+    grfid=b'ROB1',
+    name='SNDTS (ScaNDinavian Train Set)',
+    description='Scandinavian Trains made by Rob, dP and Brickblock1',
     url='https://github.com/citymania-org/robs-trains',
 )
 
