@@ -953,6 +953,8 @@ ab = Train(
         'White, Blue and Green': '2002_DK_ABs_1_2002.png',
         'White, Blue and Red': '2002_DK_ABs_2_2012.png',
     }),
+    country='denmark',
+    company='na',
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
@@ -976,12 +978,15 @@ ab = Train(
 b = Train(
     id=7100,
     name='B',
-    liveries=make_vox_liveries(11, {
+    length=11,
+    liveries=make_vox_liveries('new', {
         'Brown': '1964_DK_B_1_1964.png',
         'Red (B I)': '1964_DK_B_2_(B_I)_1972.png',
-        'Red (Bk I)': '1964_DK_B_3_(Bk_I)_1974.png',
-        'Red and White (Bk I)': '1964_DK_B_4_(Bk_I)_1983.png',
+        'Red (Bk I)': '1964_DK_B_2_(B_I)_1972.png',
+        'Red and White Stripe (Bk I)': '1964_DK_B_4_(Bk_I)_1983.png',
     }),
+    country='denmark',
+    company='na',
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
@@ -1005,11 +1010,14 @@ b = Train(
 a = Train(
     id=7110,
     name='A',
-    liveries=make_vox_liveries(10, {
+    length=11,
+    liveries=make_vox_liveries('new', {
         'Brown and Yellow': '1966_DK_A_1_1966.png',
         'Red and Yellow': '1966_DK_A_2_1972.png',
         'Red (Ba)': '1966_DK_A_3_(Ba)_1991.png',
     }),
+    country='denmark',
+    company='na',
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
@@ -1037,6 +1045,8 @@ b_ii = Train(
         'White, Blue and Green': '2002_DK_B_II_1_2002.png',
         'White, Blue and Red': '2002_DK_B_II_2_2012.png',
     }),
+    country='denmark',
+    company='na',
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
