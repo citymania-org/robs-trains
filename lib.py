@@ -23,7 +23,6 @@ class Train(grf.Train):
         self.company = company
         self.power_type = power_type
         self.purchase_sprite_towed_id = purchase_sprite_towed_id
-        self.purchase_sprite = None
 
     def _gen_livery_callback(self, g, callbacks, liveries):
         if len(self.liveries) <= 1:
@@ -61,20 +60,8 @@ class Train(grf.Train):
         )
 
     def _set_callbacks(self, g):
-        super()._set_callbacks(g)
+        res = super()._set_callbacks(g)
         self._gen_livery_callback(g, self.callbacks, self.liveries)
-
-    def get_sprites(self, g):
-        res = []
-
-        if self.purchase_sprite:
-            # Make sure purchase layouts go before main action 1
-            res.append(grf.SpriteSet(feature=grf.TRAIN, count=1))
-            res.append(self.purchase_sprite)
-            res.append(layout := grf.GenericSpriteLayout(ent1=(0,), ent2=(0,)))
-            self.callbacks.purchase_graphics = layout
-
-        res.extend(super().get_sprites(g))
         return res
 
 
