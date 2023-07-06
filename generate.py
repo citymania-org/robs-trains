@@ -1707,6 +1707,8 @@ lib.make_purchase_sprites(
     ),
     grf.VariantGroup(
         'MZ',
+        mz_iii1,
+        mz_iv1,
         grf.VariantGroup(
             'MZ I',
             mz_i1,
@@ -1716,14 +1718,6 @@ lib.make_purchase_sprites(
             'MZ II',
             mz_ii1,
             mz_ii2,
-        ),
-        grf.VariantGroup(
-            'MZ III',
-            mz_iii1,
-        ),
-        grf.VariantGroup(
-            'MZ IV',
-            mz_iv1,
         ),
     ),
     rc1,
@@ -1763,7 +1757,6 @@ lib.make_purchase_sprites(
     Tp,
     ubp_i,
     x10p,
-    ),
-).set_variant_callbacks(g))
+).set_variant_callbacks(g)))
 
 g.write('robs_trains.grf')
