@@ -1639,7 +1639,7 @@ x15p = Train( # todo make it work with the length for mus
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
     }),
-    #country='sweden', remove when fixed 
+    country='sweden', 
     company='sl',
     power_type='dc',
     purchase_sprite_towed_id=8507,
