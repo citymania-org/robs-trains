@@ -10,7 +10,7 @@ import grf
 
 
 class Train(grf.Train):
-    def __init__(self, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, **kw):
         # Sort needed for intro year switch
         liveries.sort(key=lambda l: l.get('intro_year', 0))
 

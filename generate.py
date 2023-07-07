@@ -16,6 +16,7 @@ g = grf.NewGRF(
     name='SNDTS (ScaNDinavian Train Set)',
     description='Scandinavian Trains made by Rob, dP and Brickblock1',
     url='https://github.com/citymania-org/robs-trains',
+    id_map_file='id_map.json',
 )
 
 Train = g.bind(lib.Train)
@@ -287,7 +288,7 @@ modern_diesel_sound = {
 
 # special alignment train
 alignment16 = Train(
-    id=16,
+    id='alignment16',
     name='alignment 16',
     length=16,
     liveries=make_vox_liveries('new', {
@@ -324,7 +325,7 @@ alignment16 = Train(
 )
 
 Train(
-    id=1,
+    id='alignment_narrow',
     name='alignment narrow',
     length=16,
     liveries=make_vox_liveries('new', {
@@ -357,7 +358,7 @@ Train(
 # regular trains
 
 my_ii1 = Train(
-    id=1001,
+    id='my_ii1',
     name='MY II',
     liveries=make_vox_liveries(8, {
         'Maroon': '1954_DK_MY_II_1_1954.png',
@@ -387,7 +388,7 @@ my_ii1 = Train(
 )
 
 my_ii2 = Train(
-    id=1002,
+    id='my_ii2',
     name='MY II',
     liveries=make_vox_liveries(8, {
         'Black and Red': '1954_DK_MY_II_2_1972.png',
@@ -417,7 +418,7 @@ my_ii2 = Train(
 )
 
 my_ii3 = Train(
-    id=1003,
+    id='my_ii3',
     name='MY II',
     liveries=make_vox_liveries(8, {
         'Blue': '1954_DK_MY_II_3_2004.png',
@@ -447,7 +448,7 @@ my_ii3 = Train(
 )
 
 mx_ii1 = Train(
-    id=1004,
+    id='mx_ii1',
     name='MX II',
     liveries=make_vox_liveries(8, {
         'Maroon': '1960_DK_MX_II_1_1960.png',
@@ -477,7 +478,7 @@ mx_ii1 = Train(
 )
 
 mx_ii2 = Train(
-    id=1005,
+    id='mx_ii2',
     name='MX II',
     liveries=make_vox_liveries(8, {
         'Black and Red': '1960_DK_MX_II_2_1972.png',
@@ -507,7 +508,7 @@ mx_ii2 = Train(
 )
     
 mz_i1 = Train(
-    id=1006,
+    id='mz_i1',
     name='MZ I',
     liveries=make_vox_liveries(8, {
         'Maroon': '1967_DK_MZ_I_1_1967.png',
@@ -538,7 +539,7 @@ mz_i1 = Train(
 )
 
 mz_i2 = Train(
-    id=1007,
+    id='mz_i2',
     name='MZ I',
     liveries=make_vox_liveries(8, {
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
@@ -569,7 +570,7 @@ mz_i2 = Train(
 )
 
 mz_ii1 = Train(
-    id=1008,
+    id='mz_ii1',
     name='MZ II',
     liveries=make_vox_liveries(8, {
         'Maroon': '1967_DK_MZ_I_1_1967.png',
@@ -599,7 +600,7 @@ mz_ii1 = Train(
 )
 
 mz_ii2 = Train(
-    id=1009,
+    id='mz_ii2',
     name='MZ II',
     liveries=make_vox_liveries(8, {
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
@@ -629,7 +630,7 @@ mz_ii2 = Train(
 )
 
 mz_iii1 = Train(
-    id=1010,
+    id='mz_iii1',
     name='MZ III',
     liveries=make_vox_liveries(8, {
         'Black and Red': '1972_DK_MZ_III_1_1972.png',
@@ -659,7 +660,7 @@ mz_iii1 = Train(
 )
 
 mz_iv1 = Train(
-    id=1011,
+    id='mz_iv1',
     name=' MZ IV',
     liveries=make_vox_liveries(8, {
         'Black and Red': '1977_DK_MZ_IV_1_1977.png',
@@ -720,7 +721,7 @@ me = Train(
 )
 
 rc1 = Train(
-    id=1600,
+    id='rc1',
     name='Rc1',
     shorten_by=2,
     liveries=make_vox_liveries(6, {
@@ -752,7 +753,7 @@ rc1 = Train(
 )
 
 rc2 = Train(
-    id=1610,
+    id='rc2',
     name='Rc2',
     shorten_by=2,
     liveries=make_vox_liveries(6, {
@@ -786,7 +787,7 @@ rc2 = Train(
 )
 
 rc3 = Train(
-    id=1620,
+    id='rc3',
     name='Rc3',
     shorten_by=2,
     liveries=make_vox_liveries(6, {
@@ -819,7 +820,7 @@ rc3 = Train(
 )
 
 rc4 = Train(
-    id=1630,
+    id='rc4',
     name='Rc4',
     shorten_by=2,
     liveries=make_vox_liveries(6, {
@@ -851,7 +852,7 @@ rc4 = Train(
 )
 
 rc5 = Train(
-    id=1640,
+    id='rc5',
     name='Rc5',
     shorten_by=2,
     liveries=make_vox_liveries(6, {
@@ -883,7 +884,7 @@ rc5 = Train(
 )
 
 rc6 = Train(
-    id=1650,
+    id='rc6',
     name='Rc6',
     shorten_by=2,
     liveries=make_vox_liveries(6, {
@@ -948,7 +949,7 @@ ea = Train(
 )
 
 mf_ic3 = Train(
-    id=3600,
+    id='mf_ic3',
     name='MF IC3',
     liveries=make_vox_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_MFA_1_1989.png',
@@ -979,7 +980,7 @@ mf_ic3 = Train(
         'Info': 'Leyland',
     }),
 ).add_articulated_part(
-    id=3601,
+    id='mf_ic3_car2',
     liveries=make_vox_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_FF_1_1989.png',
         'Grey, Blue and Green': '1989_DK_MF_IC3_FF_2_2005.png',
@@ -989,7 +990,7 @@ mf_ic3 = Train(
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id=3602,
+    id='mf_ic3_car3',
     liveries=make_vox_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_MFB_1_1989.png',
         'Grey, Blue and Green': '1989_DK_MF_IC3_MFB_2_2005.png',
@@ -1001,7 +1002,7 @@ mf_ic3 = Train(
 )
 
 er_ir4 = Train(
-    id=4100,
+    id='er_ir4',
     name='ER IR4',
     liveries=make_vox_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_ER20_1_1993.png',
@@ -1032,7 +1033,7 @@ er_ir4 = Train(
         'Info': 'Leyland',
     }),
 ).add_articulated_part(
-    id=4101,
+    id='er_ir4_car2',
     liveries=make_vox_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_FR22_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_FR22_2_2005.png',
@@ -1042,7 +1043,7 @@ er_ir4 = Train(
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id=4102,
+    id='er_ir4_car3',
     liveries=make_vox_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_FR23_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_FR23_2_2005.png',
@@ -1052,7 +1053,7 @@ er_ir4 = Train(
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id=4103,
+    id='er_ir4_car4',
     liveries=make_vox_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_ER21_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_ER21_2_2005.png',
@@ -1064,7 +1065,7 @@ er_ir4 = Train(
 )
 
 stog_1_2 = Train(
-    id=5600,
+    id='stog_1_2',
     name='S-Tog 1 (2 Car)',
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
@@ -1092,7 +1093,7 @@ stog_1_2 = Train(
         'Info': 'Can be combined with 2 and 4 car sets to make sets of 6 and 8',
     }),
 ).add_articulated_part(
-    id=5603,
+    id='stog_1_2_car2',
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
@@ -1101,7 +1102,7 @@ stog_1_2 = Train(
 )
 
 stog_1_4 = Train(
-    id=5601,
+    id='stog_1_4',
     name='S-Tog 1 (4 Car)',
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
@@ -1129,21 +1130,21 @@ stog_1_4 = Train(
         'Info': 'Can be combined with 2 and 4 car sets to make sets of 6 and 8',
     }),
 ).add_articulated_part(
-    id=5602,
+    id='stog_1_4_car2',
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id=5602,
+    id='stog_1_4_car3',
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id=5603,
+    id='stog_1_4_car4',
     liveries=make_vox_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
@@ -1152,7 +1153,7 @@ stog_1_4 = Train(
 )
 
 abs1 = Train(
-    id=6501,
+    id='abs1',
     name='ABs',
     liveries=make_vox_liveries(11, {
         'White, Blue and Green': '2002_DK_ABs_1_2002.png',
@@ -1181,7 +1182,7 @@ abs1 = Train(
 )
 
 abs2 = Train(
-    id=6502,
+    id='abs2',
     name='ABs',
     liveries=make_vox_liveries(11, {
         'White, Blue and Red': '2002_DK_ABs_2_2012.png',
@@ -1210,7 +1211,7 @@ abs2 = Train(
 )
 
 b_ii1 = Train(
-    id=6503,
+    id='b_ii1',
     name='B II',
     liveries=make_vox_liveries(10, {
         'White, Blue and Green': '2002_DK_B_II_1_2002.png',
@@ -1239,7 +1240,7 @@ b_ii1 = Train(
 )
 
 b_ii2 = Train(
-    id=6506,
+    id='b_ii2',
     name='B II',
     liveries=make_vox_liveries(10, {
         'White, Blue and Red': '2002_DK_B_II_2_2012.png',
@@ -1268,7 +1269,7 @@ b_ii2 = Train(
 )
 
 b1 = Train(
-    id=6509,
+    id='b1',
     name='B',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1298,7 +1299,7 @@ b1 = Train(
 )
 
 b2 = Train(
-    id=6512,
+    id='b2',
     name='B I',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1328,7 +1329,7 @@ b2 = Train(
 )
 
 b3 = Train(
-    id=6515,
+    id='b3',
     name='Bk I',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1358,7 +1359,7 @@ b3 = Train(
 )
 
 b4 = Train(
-    id=6518,
+    id='b4',
     name='Bk I',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1388,7 +1389,7 @@ b4 = Train(
 )
 
 a1 = Train(
-    id=6521,
+    id='a1',
     name='A',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1418,7 +1419,7 @@ a1 = Train(
 )
 
 a2 = Train(
-    id=6524,
+    id='a2',
     name='A',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1448,7 +1449,7 @@ a2 = Train(
 )
 
 a3 = Train(
-    id=6527,
+    id='a3',
     name='Ba',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1480,7 +1481,7 @@ a3 = Train(
 # 891mm narrow gauge
 
 ubp_i = Train(
-    id=8501,
+    id='ubp_i',
     name='UBp',
     length=9,
     liveries=make_vox_liveries('new', {
@@ -1511,7 +1512,7 @@ ubp_i = Train(
 )
 
 x10p = Train( # todo make it work with the length for mus
-    id=(8504),
+    id='x10p',
     name='X10p',
     length=9,
     liveries=make_vox_liveries('new', {
@@ -1542,7 +1543,7 @@ x10p = Train( # todo make it work with the length for mus
     }),
     callbacks={'properties': {'cargo_capacity': 0},}
 ).add_articulated_part(
-    id=8507,
+    id='x10p_car2',
     length=9,
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
@@ -1551,7 +1552,7 @@ x10p = Train( # todo make it work with the length for mus
     cargo_capacity=80,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id=8510,
+    id='x10p_car3',
     length=9,
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
@@ -1562,7 +1563,7 @@ x10p = Train( # todo make it work with the length for mus
 )
 
 Tp = Train( 
-    id=(8514),
+    id='tp',
     name='Tp',
     length=5,
     liveries=make_vox_liveries('new', {
@@ -1596,7 +1597,7 @@ Tp = Train(
 
 
 Z4p = Train( # Sport model as variant?
-    id=(8515),
+    id='z4p',
     name='Z4p',
     length=3,
     liveries=make_vox_liveries('new', {
@@ -1633,7 +1634,7 @@ Z4p = Train( # Sport model as variant?
 )
 
 x15p = Train( # todo make it work with the length for mus
-    id=(8516),
+    id='x15p',
     name='X15p',
     length=9,
     liveries=make_vox_liveries('new', {
@@ -1662,7 +1663,7 @@ x15p = Train( # todo make it work with the length for mus
         'Info': 'Needs stats',
     }),
 ).add_articulated_part(
-    id=8519,
+    id='x15p_car2',
     length=9,
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
@@ -1670,7 +1671,7 @@ x15p = Train( # todo make it work with the length for mus
     cargo_capacity=80,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id=8522,
+    id='x15p_car3',
     length=9,
     liveries=make_vox_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
