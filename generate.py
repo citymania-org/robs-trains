@@ -1239,7 +1239,7 @@ b_ii1 = Train(
 )
 
 b_ii2 = Train(
-    id=6504,
+    id=6506,
     name='B II',
     liveries=make_vox_liveries(10, {
         'White, Blue and Red': '2002_DK_B_II_2_2012.png',
@@ -1268,7 +1268,7 @@ b_ii2 = Train(
 )
 
 b1 = Train(
-    id=6505,
+    id=6509,
     name='B',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1298,7 +1298,7 @@ b1 = Train(
 )
 
 b2 = Train(
-    id=6506,
+    id=6512,
     name='B I',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1328,7 +1328,7 @@ b2 = Train(
 )
 
 b3 = Train(
-    id=6507,
+    id=6515,
     name='Bk I',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1358,7 +1358,7 @@ b3 = Train(
 )
 
 b4 = Train(
-    id=6508,
+    id=6518,
     name='Bk I',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1388,7 +1388,7 @@ b4 = Train(
 )
 
 a1 = Train(
-    id=6509,
+    id=6521,
     name='A',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1418,7 +1418,7 @@ a1 = Train(
 )
 
 a2 = Train(
-    id=6510,
+    id=6524,
     name='A',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1448,7 +1448,7 @@ a2 = Train(
 )
 
 a3 = Train(
-    id=6511,
+    id=6527,
     name='Ba',
     length=11,
     liveries=make_vox_liveries('new', {
@@ -1783,12 +1783,15 @@ lib.make_purchase_sprites(
         ),
     ),
     me,
-    rc1,
-    rc2,
-    rc3,
-    rc4,
-    rc5,
-    rc6,
+    grf.VariantGroup(
+        'Rc',
+        rc1,
+        rc2,
+        rc3,
+        rc4,
+        rc5,
+        rc6,
+    ),
     ea,
     mf_ic3,
     er_ir4,
