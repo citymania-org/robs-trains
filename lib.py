@@ -118,7 +118,7 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
     for t in newgrf.generators:
         if isinstance(t, Train):
             train_idx[t.id] = t.liveries[0]['sprites'][6]
-            for apid, liveries, _, _ in t._articulated_parts or []:
+            for apid, _, liveries, _, _ in t._articulated_parts or []:
                 train_idx[apid] = liveries[0]['sprites'][6]
 
     for t in newgrf.generators:
