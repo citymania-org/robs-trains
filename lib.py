@@ -148,14 +148,15 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
             x_first_data = min(i for i, x in enumerate(x_has_data) if x)
             x_last_data = max(i for i, x in enumerate(x_has_data) if x)
             y_has_data = [np.any(npimg[y, :, 3]) for y in range(h)]
+            # y_first_data = min(i for i, x in enumerate(y_has_data) if x)
             y_last_data = max(i for i, x in enumerate(y_has_data) if x)
             return img.crop((x_first_data, 0, x_last_data + 1, y_last_data + 1))
 
         towed_list = t.purchase_sprite_towed_id
-        if isinstance(towed_list, int):
-            towed_list = [towed_list]
         if towed_list is None:
             towed_list = []
+        elif not isinstance(towed_list, (list, tuple)):
+            towed_list = [towed_list]
 
         part_imgs = []
         w, h = 0, 0
@@ -186,7 +187,7 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
                     failed = True
                     break
                 img = train_image(towed)
-                dy += sprite.yofs
+                dy += towed.yofs
             else:
                 img = property_image(p['property'], p['sprites'])
                 if img is None:
