@@ -21,9 +21,9 @@ g = grf.NewGRF(
 
 Train = g.bind(lib.Train)
 
-g.add(lib.set_global_train_y_offset(2))
+g.add(grf.SetGlobalTrainDepotYOffset(2))
 
-g.add(lib.set_global_train_depot_width_32())
+g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH))
 
 # railtype table
 (
