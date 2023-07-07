@@ -97,11 +97,14 @@ def _make_opaque(img, opacity):
 def apply_effects(img, effects):
     for e, args in (effects or {}).items():
         if e == 'checker':
-            return _make_checker_effect(img, *args)
+            img = _make_checker_effect(img, *args)
         elif e == 'fade_out':
-            return _make_fade_effect(img, *args)
+            img = _make_fade_effect(img, *args)
         elif e == 'opacity':
-            return _make_opaque(img, args)
+            img = _make_opaque(img, args)
+        elif e == 'crop_x':
+            max_width = args
+            img = img.crop((0, 0, max_width, img.size[1]))
         else:
             raise ValueError(f'Unknown effect "{e}"')
     return img

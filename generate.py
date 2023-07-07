@@ -1750,6 +1750,7 @@ lib.make_purchase_sprites(
         },
     ],
     effects={
+        'crop_x': 127,
         'checker': (-4, 4),
     },
     # debug_dir=DEBUG_DIR,
