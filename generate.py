@@ -285,7 +285,7 @@ modern_diesel_sound = {
     grf.SoundEvent.BREAKDOWN: grf.DefaultSound.BREAKDOWN_TRAIN_SHIP,
     grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/horn_4.wav'),
 }
-
+'''
 # special alignment train
 alignment16 = Train(
     id='alignment16',
@@ -687,7 +687,7 @@ mz_iv1 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
-)
+)'''
 
 me = Train(
     id=1012,
@@ -719,7 +719,7 @@ me = Train(
         'Info': 'A Cool train',
     }),
 )
-
+'''
 rc1 = Train(
     id='rc1',
     name='Rc1',
@@ -915,7 +915,7 @@ rc6 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'A Cool train',
     }),
-)
+)'''
 
 ea = Train(
     id=1651,
@@ -947,7 +947,7 @@ ea = Train(
         'Info': 'A Cool train',
     }),
 )
-
+'''
 mf_ic3 = Train(
     id='mf_ic3',
     name='MF IC3',
@@ -1266,7 +1266,7 @@ b_ii2 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Leyland',
     }),
-)
+)'''
 
 b1 = Train(
     id='b1',
@@ -1561,7 +1561,7 @@ x10p = Train( # todo make it work with the length for mus
     cargo_capacity=76,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
-
+'''
 Tp = Train( 
     id='tp',
     name='Tp',
@@ -1679,7 +1679,7 @@ x15p = Train( # todo make it work with the length for mus
     cargo_capacity=76,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
-
+'''
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
@@ -1757,53 +1757,52 @@ lib.make_purchase_sprites(
 )
 
 (g.add(grf.SetPurchaseOrder(
-    alignment16,
-    grf.VariantGroup(
-        'MY II',
-        my_ii1,
-        my_ii2,
-        my_ii3,
-    ),
-    grf.VariantGroup(
-        'MX II',
-        mx_ii1,
-        mx_ii2,
-    ),
-    grf.VariantGroup(
-        'MZ',
-        mz_iii1,
-        mz_iv1,
-        grf.VariantGroup(
-            'MZ I',
-            mz_i1,
-            mz_i2,
-        ),
-        grf.VariantGroup(
-            'MZ II',
-            mz_ii1,
-            mz_ii2,
-        ),
-    ),
+    #grf.VariantGroup(
+    #    'MY II',
+        #my_ii1,
+        #my_ii2,
+        #my_ii3,
+    #),
+    #grf.VariantGroup(
+    #    'MX II',
+        #mx_ii1,
+        #mx_ii2,
+    #),
+    #grf.VariantGroup(
+    #    'MZ',
+        #mz_iii1,
+        #mz_iv1,
+    #    grf.VariantGroup(
+    #        'MZ I',
+            #mz_i1,
+            #mz_i2,
+    #    ),
+    #    grf.VariantGroup(
+    #        'MZ II',
+            #mz_ii1,
+            #mz_ii2,
+    #    ),
+    #),
     me,
-    grf.VariantGroup(
-        'Rc',
-        rc1,
-        rc2,
-        rc3,
-        rc4,
-        rc5,
-        rc6,
-    ),
+    #grf.VariantGroup(
+    #    'Rc',
+        #rc1,
+        #rc2,
+        #rc3,
+        #rc4,
+        #rc5,
+        #rc6,
+    #),
     ea,
-    mf_ic3,
-    er_ir4,
-    stog_1_2,
-    stog_1_4,
-    grf.VariantGroup(
-        'ABs',
-        abs1,
-        abs2,
-    ),
+    #mf_ic3,
+    #er_ir4,
+    #stog_1_2,
+    #stog_1_4,
+    #grf.VariantGroup(
+    #    'ABs',
+        #abs1,
+        #abs2,
+    #),
     grf.VariantGroup(
         'B',
         b1,
@@ -1817,13 +1816,13 @@ lib.make_purchase_sprites(
         a2,
         a3,
     ),
-    grf.VariantGroup(
-        'B II',
-        b_ii1,
-        b_ii2,
-    ),
-    Z4p,
-    Tp,
+    #grf.VariantGroup(
+    #    'B II',
+    #    b_ii1,
+    #    b_ii2,
+    #),
+    #Z4p,
+    #Tp,
     ubp_i,
     x10p,
 ).set_variant_callbacks(g)))
