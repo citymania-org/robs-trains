@@ -12,8 +12,8 @@ DEBUG_DIR = 'debug'
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
 g = grf.NewGRF(
-    grfid=b'ROB1',
-    name='SNDTS (ScaNDinavian Train Set)',
+    grfid=b'KSTA',
+    name='KST SNDTS (ScaNDinavian Train Set)',
     description='Scandinavian Trains made by Rob, dP and Brickblock1',
     url='https://github.com/citymania-org/robs-trains',
     id_map_file='id_map.json',
@@ -701,20 +701,22 @@ me = Train(
     power_type='diesel',
     purchase_sprite_towed_id='a1',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
-    max_speed=Train.kmhish(174),
-    power=3255,
+    max_speed=Train.kmhish(175),
+    power=3300,
     introduction_date=date(1981, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=122,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
     cargo_capacity=0,
-    cost_factor=24,
+    cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    'Info': 'Denmarks final diesel locomotive',
+    }),
 )
 '''
 rc1 = Train(
@@ -926,21 +928,23 @@ ea = Train(
     power_type='25kv',
     purchase_sprite_towed_id='a1',
     engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge_25kv,
-    max_speed=Train.kmhish(174),
+    max_speed=Train.kmhish(175),
     power=4962,
     introduction_date=date(1984, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=84,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    tractive_effort_coefficient=150,
+    running_cost_factor=200,
     cargo_capacity=0,
-    cost_factor=24,
+    cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
+    additional_text=grf.fake_vehicle_info({
+    'Info': 'Denmarks first electric locomotive',
+    }),
+)                                          
 '''
 mf_ic3 = Train(
     id='mf_ic3',
@@ -1273,7 +1277,6 @@ b1 = Train(
     company='na',
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
@@ -1283,9 +1286,9 @@ b1 = Train(
     climates_available=grf.ALL_CLIMATES,
     weight=37,
     tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    running_cost_factor=200,
     cargo_capacity=80,
-    cost_factor=24,
+    cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -1300,7 +1303,6 @@ b2 = Train(
     company='na',
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
@@ -1310,9 +1312,9 @@ b2 = Train(
     climates_available=grf.ALL_CLIMATES,
     weight=37,
     tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    running_cost_factor=200,
     cargo_capacity=60,
-    cost_factor=24,
+    cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -1327,7 +1329,6 @@ b3 = Train(
     company='na',
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
@@ -1337,9 +1338,9 @@ b3 = Train(
     climates_available=grf.ALL_CLIMATES,
     weight=40,
     tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    running_cost_factor=200,
     cargo_capacity=48,
-    cost_factor=24,
+    cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -1354,7 +1355,6 @@ b4 = Train(
     company='na',
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
@@ -1364,9 +1364,9 @@ b4 = Train(
     climates_available=grf.ALL_CLIMATES,
     weight=40,
     tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    running_cost_factor=200,
     cargo_capacity=48,
-    cost_factor=24,
+    cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -1381,7 +1381,6 @@ a1 = Train(
     company='na',
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
@@ -1389,11 +1388,11 @@ a1 = Train(
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
-    weight=40,
+    weight=37,
     tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    running_cost_factor=200,
     cargo_capacity=48,
-    cost_factor=24,
+    cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -1408,7 +1407,6 @@ a2 = Train(
     company='na',
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
@@ -1418,9 +1416,9 @@ a2 = Train(
     climates_available=grf.ALL_CLIMATES,
     weight=40,
     tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    running_cost_factor=200,
     cargo_capacity=48,
-    cost_factor=24,
+    cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -1435,7 +1433,6 @@ a3 = Train(
     company='na',
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
@@ -1445,9 +1442,9 @@ a3 = Train(
     climates_available=grf.ALL_CLIMATES,
     weight=40,
     tractive_effort_coefficient=79,
-    running_cost_factor=222,
+    running_cost_factor=200,
     cargo_capacity=48,
-    cost_factor=24,
+    cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -1461,7 +1458,6 @@ ubp_i = Train(
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
     }),
     engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
     track_type=p_gauge,
     country='sweden',
     company='na',
@@ -1497,7 +1493,6 @@ x10p = Train( # todo make it work with the length for mus
     power_type='dc',
     purchase_sprite_towed_id='x10p_car2',
     engine_class=Train.EngineClass.ELECTRIC, # unsure about how to enter stats due to units
-    sound_effects=modern_diesel_sound,
     track_type=p_gauge_dc,
     max_speed=Train.kmhish(80),
     power=536,
@@ -1800,4 +1795,4 @@ lib.make_purchase_sprites(
     x10p,
 ).set_variant_callbacks(g)))
 
-g.write('robs_trains.grf')
+g.write('kst_scandi_train.grf')
