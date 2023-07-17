@@ -922,7 +922,7 @@ ea = Train(
     name='EA',
     length=9,
     liveries=make_vox_liveries('new', {
-        'EA': 'ea.png',
+        'EA': 'ccea.png',
     }),
     country='denmark',
     company='na',
