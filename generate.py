@@ -1268,7 +1268,7 @@ b_ii2 = Train(
 
 b1 = Train(
     id='b1',
-    name='B',
+    name='B 2nd class',
     length=11,
     liveries=make_vox_liveries('new', {
         'Brown': '1964_DK_B_1_1964.png',
@@ -1290,14 +1290,15 @@ b1 = Train(
     cargo_capacity=80,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
 )
 
 b2 = Train(
     id='b2',
-    name='B I',
+    name='B I 2nd class',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red (B I)': '1964_DK_B_2_(B_I)_1972.png',
+        'Red (B I)': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
     company='na',
@@ -1306,24 +1307,25 @@ b2 = Train(
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
-    introduction_date=date(1972, 1, 1),
+    introduction_date=date(1967, 1, 1),
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=37,
     tractive_effort_coefficient=79,
     running_cost_factor=200,
-    cargo_capacity=60,
+    cargo_capacity=80,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
 )
 
 b3 = Train(
     id='b3',
-    name='Bk I',
+    name='Bk I kiosk car',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red (Bk I)': '1964_DK_B_2_(B_I)_1972.png',
+        'Red (Bk I)': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
     company='na',
@@ -1332,7 +1334,7 @@ b3 = Train(
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
-    introduction_date=date(1972, 1, 1),
+    introduction_date=date(1973, 1, 1),
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
@@ -1342,11 +1344,12 @@ b3 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
 )
 
 b4 = Train(
     id='b4',
-    name='Bk I',
+    name='Bk I kiosk car (mod 1983)',
     length=11,
     liveries=make_vox_liveries('new', {
         'Red and White Stripe (Bk I)': '1964_DK_B_4_(Bk_I)_1983.png',
@@ -1368,11 +1371,39 @@ b4 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
+)
+
+b5 = Train(
+    id='b5',
+    name='B I 2nd class (mod 1974)',
+    length=11,
+    liveries=make_vox_liveries('new', {
+        'Red (B I)': '1964_DK_B_2_(B_I)_1967.png',
+    }),
+    country='denmark',
+    company='na',
+    power_type='na',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(1974, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=37,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=60,
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
 )
 
 a1 = Train(
     id='a1',
-    name='A',
+    name='A 1st class',
     length=11,
     liveries=make_vox_liveries('new', {
         'Brown and Yellow': '1966_DK_A_1_1966.png',
@@ -1394,14 +1425,15 @@ a1 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
 )
 
 a2 = Train(
     id='a2',
-    name='A',
+    name='A 1st class',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red and Yellow': '1966_DK_A_2_1972.png',
+        'Red and Yellow': '1966_DK_A_2_1967.png',
     }),
     country='denmark',
     company='na',
@@ -1410,7 +1442,7 @@ a2 = Train(
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
-    introduction_date=date(1972, 1, 1),
+    introduction_date=date(1967, 1, 1),
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
@@ -1420,11 +1452,12 @@ a2 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
 )
 
 a3 = Train(
     id='a3',
-    name='Ba',
+    name='Ba 2nd class',
     length=11,
     liveries=make_vox_liveries('new', {
         'Red (Ba)': '1966_DK_A_3_(Ba)_1991.png',
@@ -1446,6 +1479,7 @@ a3 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
 )
 
 # 891mm narrow gauge
@@ -1775,6 +1809,7 @@ lib.make_purchase_sprites(
         'B',
         b1,
         b2,
+        b5,
         b3,
         b4,
     ),
