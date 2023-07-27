@@ -691,10 +691,10 @@ mz_iv1 = Train(
 
 me = Train(
     id=1012,
-    name='ME',
+    name='ME II',
     length=10,
     liveries=make_vox_liveries('new', {
-        'ME': 'me.png',
+        'Black and Red': '1981_DK_ME_II_1_1981.png',
     }),
     country='denmark',
     company='na',
@@ -921,7 +921,7 @@ ea = Train(
     name='EA',
     length=9,
     liveries=make_vox_liveries('new', {
-        'EA': 'ea.png',
+        'Black and Red': '1984_DK_EA_1_1984.png',
     }),
     country='denmark',
     company='na',
@@ -1268,7 +1268,7 @@ b_ii2 = Train(
 
 b1 = Train(
     id='b1',
-    name='B 2nd class',
+    name='B',
     length=11,
     liveries=make_vox_liveries('new', {
         'Brown': '1964_DK_B_1_1964.png',
@@ -1290,15 +1290,18 @@ b1 = Train(
     cargo_capacity=80,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=15,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': '2nd class',
+    }),
 )
 
 b2 = Train(
     id='b2',
-    name='B I 2nd class',
+    name='B I',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red (B I)': '1964_DK_B_2_(B_I)_1967.png',
+        'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
     company='na',
@@ -1317,15 +1320,18 @@ b2 = Train(
     cargo_capacity=80,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=15,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': '2nd class',
+    }),
 )
 
 b3 = Train(
     id='b3',
-    name='Bk I kiosk car',
+    name='Bk I',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red (Bk I)': '1964_DK_B_2_(B_I)_1967.png',
+        'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
     company='na',
@@ -1344,15 +1350,18 @@ b3 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=15,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': 'kiosk car',
+    }),
 )
 
 b4 = Train(
     id='b4',
-    name='Bk I kiosk car (mod 1983)',
+    name='Bk I mod 1983',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red and White Stripe (Bk I)': '1964_DK_B_4_(Bk_I)_1983.png',
+        'Red and White': '1964_DK_B_4_(Bk_I)_1983.png',
     }),
     country='denmark',
     company='na',
@@ -1371,15 +1380,18 @@ b4 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=15,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': 'kiosk car',
+    }),
 )
 
 b5 = Train(
     id='b5',
-    name='B I 2nd class (mod 1974)',
+    name='B I mod 1974',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red (B I)': '1964_DK_B_2_(B_I)_1967.png',
+        'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
     company='na',
@@ -1398,12 +1410,15 @@ b5 = Train(
     cargo_capacity=60,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=15,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': '2nd class',
+    }),
 )
 
 a1 = Train(
     id='a1',
-    name='A 1st class',
+    name='A',
     length=11,
     liveries=make_vox_liveries('new', {
         'Brown and Yellow': '1966_DK_A_1_1966.png',
@@ -1425,12 +1440,15 @@ a1 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=15,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': '1st class',
+    }),
 )
 
 a2 = Train(
     id='a2',
-    name='A 1st class',
+    name='A',
     length=11,
     liveries=make_vox_liveries('new', {
         'Red and Yellow': '1966_DK_A_2_1967.png',
@@ -1452,15 +1470,18 @@ a2 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=15,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': '1st class',
+    }),
 )
 
 a3 = Train(
     id='a3',
-    name='Ba 2nd class',
+    name='Ba',
     length=11,
     liveries=make_vox_liveries('new', {
-        'Red (Ba)': '1966_DK_A_3_(Ba)_1991.png',
+        'Red': '1966_DK_A_3_(Ba)_1991.png',
     }),
     country='denmark',
     company='na',
@@ -1479,7 +1500,40 @@ a3 = Train(
     cargo_capacity=48,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': '2nd class',
+    }),
+)
+
+bn1 = Train(
+    id='bn1',
+    name='Bn',
+    length=11,
+    liveries=make_vox_liveries('new', {
+        'Red': '1971_DK_Bn_1_1971.png',
+    }),
+    country='denmark',
+    company='na',
+    power_type='na',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(1971, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=40,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=80,
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=15,
+    additional_text=grf.fake_vehicle_info({
+    'Use': '2nd class',
+    }),
 )
 
 # 891mm narrow gauge
@@ -1819,6 +1873,7 @@ lib.make_purchase_sprites(
         a2,
         a3,
     ),
+    bn1,
     #grf.VariantGroup(
     #    'B II',
     #    b_ii1,
