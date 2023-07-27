@@ -689,8 +689,8 @@ mz_iv1 = Train(
     }),
 )'''
 
-me = Train(
-    id=1012,
+meii1 = Train(
+    id='meii1',
     name='ME II',
     length=10,
     liveries=make_vox_liveries('new', {
@@ -718,6 +718,97 @@ me = Train(
     'Info': 'Denmarks final diesel locomotive',
     }),
 )
+
+meii2 = Train(
+    id='meii2',
+    name='ME II',
+    length=10,
+    liveries=make_vox_liveries('new', {
+        'Red and Blue': '1981_DK_ME_II_2_2000.png',
+    }),
+    country='denmark',
+    company='na',
+    power_type='diesel',
+    purchase_sprite_towed_id='a1',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(175),
+    power=3300,
+    introduction_date=date(2000, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=122,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=0,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    'Info': 'Denmarks final diesel locomotive',
+    }),
+)
+
+meii3 = Train(
+    id='meii3',
+    name='ME II',
+    length=10,
+    liveries=make_vox_liveries('new', {
+        'Blue and Red': '1981_DK_ME_II_3_2006.png',
+    }),
+    country='denmark',
+    company='na',
+    power_type='diesel',
+    purchase_sprite_towed_id='a1',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(175),
+    power=3300,
+    introduction_date=date(2006, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=122,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=0,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    'Info': 'Denmarks final diesel locomotive',
+    }),
+)
+
+meii4 = Train(
+    id='meii4',
+    name='ME II',
+    length=10,
+    liveries=make_vox_liveries('new', {
+        'Red': '1981_DK_ME_II_4_2016.png',
+    }),
+    country='denmark',
+    company='na',
+    power_type='diesel',
+    purchase_sprite_towed_id='a1',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(175),
+    power=3300,
+    introduction_date=date(2016, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=122,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=0,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    'Info': 'Denmarks final diesel locomotive',
+    }),
+)
+
 '''
 rc1 = Train(
     id='rc1',
@@ -916,8 +1007,8 @@ rc6 = Train(
     }),
 )'''
 
-ea = Train(
-    id=1651,
+ea1 = Train(
+    id='ea1',
     name='EA',
     length=9,
     liveries=make_vox_liveries('new', {
@@ -944,7 +1035,67 @@ ea = Train(
     additional_text=grf.fake_vehicle_info({
     'Info': 'Denmarks first electric locomotive',
     }),
-)                                          
+)
+
+ea2 = Train(
+    id='ea2',
+    name='EA',
+    length=9,
+    liveries=make_vox_liveries('new', {
+        'Blue and Red': '1984_DK_EA_2_2006.png',
+    }),
+    country='denmark',
+    company='na',
+    power_type='25kv',
+    purchase_sprite_towed_id='a1',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=standard_gauge_25kv,
+    max_speed=Train.kmhish(175),
+    power=4962,
+    introduction_date=date(2006, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=84,
+    tractive_effort_coefficient=150,
+    running_cost_factor=200,
+    cargo_capacity=0,
+    cost_factor=30,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    'Info': 'Denmarks first electric locomotive',
+    }),
+)
+
+ea3 = Train(
+    id='ea3',
+    name='EA',
+    length=9,
+    liveries=make_vox_liveries('new', {
+        'Red': '1984_DK_EA_3_2017.png',
+    }),
+    country='denmark',
+    company='na',
+    power_type='25kv',
+    purchase_sprite_towed_id='a1',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=standard_gauge_25kv,
+    max_speed=Train.kmhish(175),
+    power=4962,
+    introduction_date=date(2017, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=84,
+    tractive_effort_coefficient=150,
+    running_cost_factor=200,
+    cargo_capacity=0,
+    cost_factor=30,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    'Info': 'Denmarks first electric locomotive',
+    }),
+)
 '''
 mf_ic3 = Train(
     id='mf_ic3',
@@ -1839,7 +1990,13 @@ lib.make_purchase_sprites(
             #mz_ii2,
     #    ),
     #),
-    me,
+    grf.VariantGroup(
+        'ME II',
+        meii1,
+        meii2,
+        meii3,
+        meii4,
+    ),
     #grf.VariantGroup(
     #    'Rc',
         #rc1,
@@ -1849,7 +2006,12 @@ lib.make_purchase_sprites(
         #rc5,
         #rc6,
     #),
-    ea,
+    grf.VariantGroup(
+        'EA',
+        ea1,
+        ea2,
+        ea3,
+    ),
     #mf_ic3,
     #er_ir4,
     #stog_1_2,

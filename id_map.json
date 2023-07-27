@@ -97,7 +97,28 @@
             "b5": 391,
             "__bn1_aa_mid": 391,
             "__bn1_aa_tail": 392,
-            "bn1": 393
+            "bn1": 393,
+            "__meii1_aa_mid": 393,
+            "__meii1_aa_tail": 394,
+            "meii1": 395,
+            "__meii2_aa_mid": 396,
+            "__meii2_aa_tail": 397,
+            "meii2": 398,
+            "__meii3_aa_mid": 399,
+            "__meii3_aa_tail": 400,
+            "meii3": 401,
+            "__meii4_aa_mid": 402,
+            "__meii4_aa_tail": 403,
+            "meii4": 404,
+            "__ea1_aa_mid": 405,
+            "__ea1_aa_tail": 406,
+            "ea1": 407,
+            "__ea2_aa_mid": 408,
+            "__ea2_aa_tail": 409,
+            "ea2": 410,
+            "__ea3_aa_mid": 411,
+            "__ea3_aa_tail": 412,
+            "ea3": 413
         }
     }
 }
