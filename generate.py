@@ -1719,7 +1719,7 @@ ubp_i = Train(
     }),
 )
 
-x10p = Train( # todo make it work with the length for mus
+x10p = Train( 
     id='x10p',
     name='X10p',
     length=9,
@@ -1731,7 +1731,7 @@ x10p = Train( # todo make it work with the length for mus
     company='na',
     power_type='dc',
     purchase_sprite_towed_id='x10p_car2',
-    engine_class=Train.EngineClass.ELECTRIC, # unsure about how to enter stats due to units
+    engine_class=Train.EngineClass.ELECTRIC, 
     track_type=p_gauge_dc,
     max_speed=Train.kmhish(80),
     power=536,
