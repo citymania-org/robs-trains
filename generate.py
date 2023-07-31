@@ -51,7 +51,7 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 # we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
 
 
-def tmpl_vox_train(filename):
+def tmpl_train(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -66,7 +66,7 @@ def tmpl_vox_train(filename):
     ]
 
 # old templates
-def tmpl_vox_train_12(filename):
+def tmpl_train_12(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -80,7 +80,7 @@ def tmpl_vox_train_12(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_11(filename):
+def tmpl_train_11(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -94,7 +94,7 @@ def tmpl_vox_train_11(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_10(filename):
+def tmpl_train_10(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -108,7 +108,7 @@ def tmpl_vox_train_10(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_9(filename):
+def tmpl_train_9(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -122,7 +122,7 @@ def tmpl_vox_train_9(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_8(filename):
+def tmpl_train_8(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -136,7 +136,7 @@ def tmpl_vox_train_8(filename):
         sprite(284, 0, 34, 32, xofs=-12, yofs=-21),
     ]
 
-def tmpl_vox_train_7(filename):
+def tmpl_train_7(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -150,7 +150,7 @@ def tmpl_vox_train_7(filename):
         sprite(278, 0, 32, 31, xofs=-14, yofs=-21),
     ]
 
-def tmpl_vox_train_6(filename):
+def tmpl_train_6(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -164,7 +164,7 @@ def tmpl_vox_train_6(filename):
         sprite(278, 0, 32, 31, xofs=-13, yofs=-21),
     ]
 
-def tmpl_vox_train_5(filename):
+def tmpl_train_5(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -178,7 +178,7 @@ def tmpl_vox_train_5(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_4(filename):
+def tmpl_train_4(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -192,7 +192,7 @@ def tmpl_vox_train_4(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_3(filename):
+def tmpl_train_3(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -206,7 +206,7 @@ def tmpl_vox_train_3(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_2(filename):
+def tmpl_train_2(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -220,7 +220,7 @@ def tmpl_vox_train_2(filename):
         sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
     ]
 
-def tmpl_vox_train_1(filename):
+def tmpl_train_1(filename):
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
     return [
@@ -235,25 +235,25 @@ def tmpl_vox_train_1(filename):
     ]
 
 
-def make_vox_liveries(length, liveries):
+def make_liveries(length, liveries):
     TEMPLATES = {
-        1: tmpl_vox_train_1,
-        2: tmpl_vox_train_2,
-        3: tmpl_vox_train_3,
-        4: tmpl_vox_train_4,
-        5: tmpl_vox_train_5,
-        6: tmpl_vox_train_6,
-        7: tmpl_vox_train_7,
-        8: tmpl_vox_train_8,
-        9: tmpl_vox_train_9,
-        10: tmpl_vox_train_10,
-        11: tmpl_vox_train_11,
-        12: tmpl_vox_train_12,
-        'new': tmpl_vox_train,
+        1: tmpl_train_1,
+        2: tmpl_train_2,
+        3: tmpl_train_3,
+        4: tmpl_train_4,
+        5: tmpl_train_5,
+        6: tmpl_train_6,
+        7: tmpl_train_7,
+        8: tmpl_train_8,
+        9: tmpl_train_9,
+        10: tmpl_train_10,
+        11: tmpl_train_11,
+        12: tmpl_train_12,
+        'new': tmpl_train,
     }
     tmpl = TEMPLATES[length]
     res = []
-    for name, filename in liveries.items():
+    for name, filename, in liveries.items():
         data = {}
 
         if isinstance(filename, tuple):
@@ -291,7 +291,7 @@ alignment16 = Train(
     id='alignment16',
     name='alignment 16',
     length=16,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         '': 'template.png'
     }),
     #country='sweden',
@@ -319,7 +319,7 @@ alignment16 = Train(
 ).add_articulated_part(
     id=19,
     length=16,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         '': 'template.png'
     }),
 )
@@ -328,7 +328,7 @@ Train(
     id='alignment_narrow',
     name='alignment narrow',
     length=16,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         '': 'template_narrow_gauge.png'
     }),
     #country='sweden',
@@ -360,7 +360,7 @@ Train(
 my_ii1 = Train(
     id='my_ii1',
     name='MY II',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1954_DK_MY_II_1_1954.png',
     }),
     country='denmark',
@@ -390,7 +390,7 @@ my_ii1 = Train(
 my_ii2 = Train(
     id='my_ii2',
     name='MY II',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Black and Red': '1954_DK_MY_II_2_1972.png',
     }),
     country='denmark',
@@ -420,7 +420,7 @@ my_ii2 = Train(
 my_ii3 = Train(
     id='my_ii3',
     name='MY II',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Blue': '1954_DK_MY_II_3_2004.png',
     }),
     country='denmark',
@@ -450,7 +450,7 @@ my_ii3 = Train(
 mx_ii1 = Train(
     id='mx_ii1',
     name='MX II',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1960_DK_MX_II_1_1960.png',
     }),
     country='denmark',
@@ -480,7 +480,7 @@ mx_ii1 = Train(
 mx_ii2 = Train(
     id='mx_ii2',
     name='MX II',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Black and Red': '1960_DK_MX_II_2_1972.png',
     }),
     country='denmark',
@@ -510,7 +510,7 @@ mx_ii2 = Train(
 mz_i1 = Train(
     id='mz_i1',
     name='MZ I',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1967_DK_MZ_I_1_1967.png',
     }),
     length=7,
@@ -541,7 +541,7 @@ mz_i1 = Train(
 mz_i2 = Train(
     id='mz_i2',
     name='MZ I',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
     length=7,
@@ -572,7 +572,7 @@ mz_i2 = Train(
 mz_ii1 = Train(
     id='mz_ii1',
     name='MZ II',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1967_DK_MZ_I_1_1967.png',
     }),
     country='denmark',
@@ -602,7 +602,7 @@ mz_ii1 = Train(
 mz_ii2 = Train(
     id='mz_ii2',
     name='MZ II',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Black and Red': '1967_DK_MZ_I_2_1972.png',
     }),
     country='denmark',
@@ -632,7 +632,7 @@ mz_ii2 = Train(
 mz_iii1 = Train(
     id='mz_iii1',
     name='MZ III',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Black and Red': '1972_DK_MZ_III_1_1972.png',
     }),
     country='denmark',
@@ -662,7 +662,7 @@ mz_iii1 = Train(
 mz_iv1 = Train(
     id='mz_iv1',
     name=' MZ IV',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Black and Red': '1977_DK_MZ_IV_1_1977.png',
     }),
     country='denmark',
@@ -693,8 +693,9 @@ meii1 = Train(
     id='meii1',
     name='ME II',
     length=10,
-    liveries=make_vox_liveries('new', {
-        'Black and Red': '1981_DK_ME_II_1_1981.png',
+    liveries=make_liveries('new', {
+        'Real': '1981_DK_ME_II_1_1981.png',
+        '2CC': ('cc1981_DK_ME_II_1_1981.png', 'cc_mask_1981_DK_ME_II_1_1981.png'),
     }),
     country='denmark',
     company='na',
@@ -723,7 +724,7 @@ meii2 = Train(
     id='meii2',
     name='ME II',
     length=10,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red and Blue': '1981_DK_ME_II_2_2000.png',
     }),
     country='denmark',
@@ -753,7 +754,7 @@ meii3 = Train(
     id='meii3',
     name='ME II',
     length=10,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Blue and Red': '1981_DK_ME_II_3_2006.png',
     }),
     country='denmark',
@@ -783,7 +784,7 @@ meii4 = Train(
     id='meii4',
     name='ME II',
     length=10,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red': '1981_DK_ME_II_4_2016.png',
     }),
     country='denmark',
@@ -814,7 +815,7 @@ rc1 = Train(
     id='rc1',
     name='Rc1',
     shorten_by=2,
-    liveries=make_vox_liveries(6, {
+    liveries=make_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1967_SE_Rc1_2_1990.png',
     }),
@@ -846,7 +847,7 @@ rc2 = Train(
     id='rc2',
     name='Rc2',
     shorten_by=2,
-    liveries=make_vox_liveries(6, {
+    liveries=make_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red Old': '1967_SE_Rc1_2_1990.png',
         'Blue and Red New': '1969_SE_Rc2_3_1990.png',
@@ -880,7 +881,7 @@ rc3 = Train(
     id='rc3',
     name='Rc3',
     shorten_by=2,
-    liveries=make_vox_liveries(6, {
+    liveries=make_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1969_SE_Rc2_3_1990.png',
         'Black': '1969_SE_Rc2_4_2006.png',
@@ -913,7 +914,7 @@ rc4 = Train(
     id='rc4',
     name='Rc4',
     shorten_by=2,
-    liveries=make_vox_liveries(6, {
+    liveries=make_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1969_SE_Rc2_3_1990.png',
     }),
@@ -945,7 +946,7 @@ rc5 = Train(
     id='rc5',
     name='Rc5',
     shorten_by=2,
-    liveries=make_vox_liveries(6, {
+    liveries=make_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1969_SE_Rc2_3_1990.png',
     }),
@@ -977,7 +978,7 @@ rc6 = Train(
     id='rc6',
     name='Rc6',
     shorten_by=2,
-    liveries=make_vox_liveries(6, {
+    liveries=make_liveries(6, {
         'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
         'Blue and Red': '1969_SE_Rc2_3_1990.png',
         'Dark Blue': '1984_SE_Rc6_1_2005.png',
@@ -1011,7 +1012,7 @@ ea1 = Train(
     id='ea1',
     name='EA',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Black and Red': '1984_DK_EA_1_1984.png',
     }),
     country='denmark',
@@ -1041,7 +1042,7 @@ ea2 = Train(
     id='ea2',
     name='EA',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Blue and Red': '1984_DK_EA_2_2006.png',
     }),
     country='denmark',
@@ -1071,7 +1072,7 @@ ea3 = Train(
     id='ea3',
     name='EA',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red': '1984_DK_EA_3_2017.png',
     }),
     country='denmark',
@@ -1100,7 +1101,7 @@ ea3 = Train(
 mf_ic3 = Train(
     id='mf_ic3',
     name='MF IC3',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_MFA_1_1989.png',
         'Grey, Blue and Green': '1989_DK_MF_IC3_MFA_2_2005.png',
         'Grey, Blue and Red': '1989_DK_MF_IC3_MFA_3_2012.png',
@@ -1130,7 +1131,7 @@ mf_ic3 = Train(
     }),
 ).add_articulated_part(
     id='mf_ic3_car2',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_FF_1_1989.png',
         'Grey, Blue and Green': '1989_DK_MF_IC3_FF_2_2005.png',
         'Grey, Blue and Red': '1989_DK_MF_IC3_FF_3_2012.png',
@@ -1140,7 +1141,7 @@ mf_ic3 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='mf_ic3_car3',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'White and Red': '1989_DK_MF_IC3_MFB_1_1989.png',
         'Grey, Blue and Green': '1989_DK_MF_IC3_MFB_2_2005.png',
         'Grey, Blue and Red': '1989_DK_MF_IC3_MFB_3_2012.png',
@@ -1153,7 +1154,7 @@ mf_ic3 = Train(
 er_ir4 = Train(
     id='er_ir4',
     name='ER IR4',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_ER20_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_ER20_2_2005.png',
         'Grey, Blue and Red': '1993_DK_ER_IR4_ER20_3_2012.png',
@@ -1183,7 +1184,7 @@ er_ir4 = Train(
     }),
 ).add_articulated_part(
     id='er_ir4_car2',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_FR22_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_FR22_2_2005.png',
         'Grey, Blue and Red': '1993_DK_ER_IR4_FR22_3_2012.png',
@@ -1193,7 +1194,7 @@ er_ir4 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='er_ir4_car3',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_FR23_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_FR23_2_2005.png',
         'Grey, Blue and Red': '1993_DK_ER_IR4_FR23_3_2012.png',
@@ -1203,7 +1204,7 @@ er_ir4 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='er_ir4_car4',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'White and Red': '1993_DK_ER_IR4_ER21_1_1993.png',
         'Grey, Blue and Green': '1993_DK_ER_IR4_ER21_2_2005.png',
         'Grey, Blue and Red': '1993_DK_ER_IR4_ER21_3_2012.png',
@@ -1216,7 +1217,7 @@ er_ir4 = Train(
 stog_1_2 = Train(
     id='stog_1_2',
     name='S-Tog 1 (2 Car)',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
     }),
     country='denmark',
@@ -1243,7 +1244,7 @@ stog_1_2 = Train(
     }),
 ).add_articulated_part(
     id='stog_1_2_car2',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
     cargo_capacity=90,
@@ -1253,7 +1254,7 @@ stog_1_2 = Train(
 stog_1_4 = Train(
     id='stog_1_4',
     name='S-Tog 1 (4 Car)',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
     }),
     country='denmark',
@@ -1280,21 +1281,21 @@ stog_1_4 = Train(
     }),
 ).add_articulated_part(
     id='stog_1_4_car2',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='stog_1_4_car3',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FM_1_1933.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='stog_1_4_car4',
-    liveries=make_vox_liveries(8, {
+    liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_FS_1_1933.png',
     }),
     cargo_capacity=90,
@@ -1304,7 +1305,7 @@ stog_1_4 = Train(
 abs1 = Train(
     id='abs1',
     name='ABs',
-    liveries=make_vox_liveries(11, {
+    liveries=make_liveries(11, {
         'White, Blue and Green': '2002_DK_ABs_1_2002.png',
     }),
     country='denmark',
@@ -1333,7 +1334,7 @@ abs1 = Train(
 abs2 = Train(
     id='abs2',
     name='ABs',
-    liveries=make_vox_liveries(11, {
+    liveries=make_liveries(11, {
         'White, Blue and Red': '2002_DK_ABs_2_2012.png',
     }),
     country='denmark',
@@ -1362,7 +1363,7 @@ abs2 = Train(
 b_ii1 = Train(
     id='b_ii1',
     name='B II',
-    liveries=make_vox_liveries(10, {
+    liveries=make_liveries(10, {
         'White, Blue and Green': '2002_DK_B_II_1_2002.png',
     }),
     country='denmark',
@@ -1391,7 +1392,7 @@ b_ii1 = Train(
 b_ii2 = Train(
     id='b_ii2',
     name='B II',
-    liveries=make_vox_liveries(10, {
+    liveries=make_liveries(10, {
         'White, Blue and Red': '2002_DK_B_II_2_2012.png',
     }),
     country='denmark',
@@ -1421,7 +1422,7 @@ b1 = Train(
     id='b1',
     name='B',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Brown': '1964_DK_B_1_1964.png',
     }),
     country='denmark',
@@ -1451,7 +1452,7 @@ b2 = Train(
     id='b2',
     name='B I',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
@@ -1481,7 +1482,7 @@ b3 = Train(
     id='b3',
     name='Bk I',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
@@ -1511,7 +1512,7 @@ b4 = Train(
     id='b4',
     name='Bk I mod 1983',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red and White': '1964_DK_B_4_(Bk_I)_1983.png',
     }),
     country='denmark',
@@ -1541,7 +1542,7 @@ b5 = Train(
     id='b5',
     name='B I mod 1974',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
@@ -1571,7 +1572,7 @@ a1 = Train(
     id='a1',
     name='A',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Brown and Yellow': '1966_DK_A_1_1966.png',
     }),
     country='denmark',
@@ -1601,7 +1602,7 @@ a2 = Train(
     id='a2',
     name='A',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red and Yellow': '1966_DK_A_2_1967.png',
     }),
     country='denmark',
@@ -1631,7 +1632,7 @@ a3 = Train(
     id='a3',
     name='Ba',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red': '1966_DK_A_3_(Ba)_1991.png',
     }),
     country='denmark',
@@ -1661,7 +1662,7 @@ bn1 = Train(
     id='bn1',
     name='Bn',
     length=11,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Red': '1971_DK_Bn_1_1971.png',
     }),
     country='denmark',
@@ -1693,7 +1694,7 @@ ubp_i = Train(
     id='ubp_i',
     name='UBp',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
     }),
     engine_class=Train.EngineClass.ELECTRIC,
@@ -1723,7 +1724,7 @@ x10p = Train(
     id='x10p',
     name='X10p',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
         'Overhauled': ('xxxx_SE_X10p_X10p_2_xxxx.png', 2011)
     }),
@@ -1752,7 +1753,7 @@ x10p = Train(
 ).add_articulated_part(
     id='x10p_car2',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
         'Overhauled': 'xxxx_SE_X10p_UBp_2_xxxx.png',
     }),
@@ -1761,7 +1762,7 @@ x10p = Train(
 ).add_articulated_part(
     id='x10p_car3',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
         'Overhauled': 'xxxx_SE_X10p_UBxp_2_xxxx.png',
     }),
@@ -1773,7 +1774,7 @@ Tp = Train(
     id='tp',
     name='Tp',
     length=5,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_Tp_1_xxxx.png',
     }),
     country='sweden',
@@ -1807,7 +1808,7 @@ Z4p = Train( # Sport model as variant?
     id='z4p',
     name='Z4p',
     length=3,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'SRJ/SJ': '1947_SE_Z4p_1_1947.png',
         'NKIJ': '1947_SE_Z4p_2_xxxx.png',
         'DONJ': '1947_SE_Z4p_3_xxxx.png',
@@ -1844,7 +1845,7 @@ x15p = Train( # todo make it work with the length for mus
     id='x15p',
     name='X15p',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
     }),
     country='sweden', 
@@ -1872,7 +1873,7 @@ x15p = Train( # todo make it work with the length for mus
 ).add_articulated_part(
     id='x15p_car2',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
     }),
     cargo_capacity=80,
@@ -1880,7 +1881,7 @@ x15p = Train( # todo make it work with the length for mus
 ).add_articulated_part(
     id='x15p_car3',
     length=9,
-    liveries=make_vox_liveries('new', {
+    liveries=make_liveries('new', {
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
     }),
     cargo_capacity=76,
