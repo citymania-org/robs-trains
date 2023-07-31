@@ -51,9 +51,13 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 # we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
 
 
-def tmpl_train(filename):
+def tmpl_train(filename, mask_file):
+    mask = grf.FileMask(
+    grf.ImageFile('sprites/' + mask_file),
+    mode=grf.Mask.Mode.OVERDRAW,
+    ) 
     png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
+    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, mask=mask)
     return [
         sprite(  0, 8, 10, 44, xofs=-4,  yofs=-21),
         sprite( 20, 8, 42, 44, xofs=-24, yofs=-30),
@@ -65,190 +69,8 @@ def tmpl_train(filename):
         sprite(350, 8, 42, 44, xofs=-16, yofs=-30),
     ]
 
-# old templates
-def tmpl_train_12(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_11(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_10(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_9(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_8(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 16, 44, xofs=- 7, yofs=-29),
-        sprite( 24, 0, 34, 32, xofs=-12, yofs=-21),
-        sprite( 66, 0, 47, 26, xofs=-24, yofs=-20),
-        sprite(121, 0, 34, 32, xofs=-12, yofs=-21),
-        sprite(163, 0, 16, 44, xofs=- 7, yofs=-29),
-        sprite(187, 0, 34, 32, xofs=-12, yofs=-21),
-        sprite(229, 0, 47, 26, xofs=-24, yofs=-20),
-        sprite(284, 0, 34, 32, xofs=-12, yofs=-21),
-    ]
-
-def tmpl_train_7(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 16, 42, xofs=- 7, yofs=-29),
-        sprite( 24, 0, 32, 31, xofs=-19, yofs=-21),
-        sprite( 64, 0, 47, 26, xofs=-24, yofs=-20),
-        sprite(119, 0, 32, 31, xofs=-14, yofs=-21),
-        sprite(159, 0, 16, 42, xofs=- 7, yofs=-19),
-        sprite(183, 0, 32, 31, xofs=-19, yofs=-21),
-        sprite(223, 0, 47, 26, xofs=-24, yofs=-20),
-        sprite(278, 0, 32, 31, xofs=-14, yofs=-21),
-    ]
-
-def tmpl_train_6(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 16, 42, xofs=- 7, yofs=-28),
-        sprite( 24, 0, 32, 31, xofs=-17, yofs=-21),
-        sprite( 64, 0, 47, 26, xofs=-20, yofs=-20),
-        sprite(119, 0, 32, 31, xofs=- 9, yofs=-19),
-        sprite(159, 0, 16, 42, xofs=- 7, yofs=-24),
-        sprite(183, 0, 32, 31, xofs=-21, yofs=-19),
-        sprite(223, 0, 47, 26, xofs=-28, yofs=-20),
-        sprite(278, 0, 32, 31, xofs=-13, yofs=-21),
-    ]
-
-def tmpl_train_5(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_4(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_3(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_2(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-def tmpl_train_1(filename):
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, bpp=32)
-    return [
-        sprite(  0, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite( 28, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite( 70, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(123, 0, 29, 31, xofs=-10, yofs=-16),
-        sprite(165, 0, 15, 40, xofs=-7, yofs=-16),
-        sprite(193, 0, 29, 31, xofs=-15, yofs=-16),
-        sprite(235, 0, 45, 26, xofs=-10, yofs=-16),
-        sprite(288, 0, 29, 31, xofs=-10, yofs=-16),
-    ]
-
-
 def make_liveries(length, liveries):
     TEMPLATES = {
-        1: tmpl_train_1,
-        2: tmpl_train_2,
-        3: tmpl_train_3,
-        4: tmpl_train_4,
-        5: tmpl_train_5,
-        6: tmpl_train_6,
-        7: tmpl_train_7,
-        8: tmpl_train_8,
-        9: tmpl_train_9,
-        10: tmpl_train_10,
-        11: tmpl_train_11,
-        12: tmpl_train_12,
         'new': tmpl_train,
     }
     tmpl = TEMPLATES[length]
@@ -257,16 +79,20 @@ def make_liveries(length, liveries):
         data = {}
 
         if isinstance(filename, tuple):
-            filename, intro_year = filename
-            data['intro_year'] = intro_year
-
-        if filename.endswith('.vox'):
+            if isinstance(filename[1], int):
+                filename, intro_year = filename
+                data['intro_year'] = intro_year
+        elif filename.endswith('.vox'):
             sprites = lib.VoxTrainFile(filename).make_sprites()
             if DEBUG_DIR is not None:
                 debug_fname = os.path.join(DEBUG_DIR, os.path.basename(filename)[:-4]) + '.png'
                 lib.make_debug_sprite_sheet(debug_fname, sprites, scale=5)
-        else:
-            sprites = tmpl(filename)
+        if isinstance(filename, tuple):
+            if isinstance(filename[1], str):
+                filename, mask_filename = filename
+                sprites = tmpl(filename, mask_filename)
+        else:        
+            sprites = tmpl(filename, 'mask_empty.png')
 
         res.append({
             **data,
@@ -696,7 +522,7 @@ meii1 = Train(
     liveries=make_liveries('new', {
         'Real': '1981_DK_ME_II_1_1981.png',
         '2CC': ('cc1981_DK_ME_II_1_1981.png', 'cc_mask_1981_DK_ME_II_1_1981.png'),
-    }),
+    }), 
     country='denmark',
     company='na',
     power_type='diesel',
@@ -712,7 +538,7 @@ meii1 = Train(
     weight=122,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=0,
+    cargo_capacity=1, # must be non zero value
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -778,6 +604,7 @@ meii3 = Train(
     additional_text=grf.fake_vehicle_info({
     'Info': 'Denmarks final diesel locomotive',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},}
 )
 
 meii4 = Train(
