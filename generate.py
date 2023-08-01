@@ -522,7 +522,8 @@ meii1 = Train(
     liveries=make_liveries('new', {
         'Real': '1981_DK_ME_II_1_1981.png',
         '2CC': ('cc1981_DK_ME_II_1_1981.png', 'cc_mask_1981_DK_ME_II_1_1981.png'),
-    }), 
+    }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='diesel',
