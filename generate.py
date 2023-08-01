@@ -69,11 +69,7 @@ def tmpl_train(filename, mask_file):
         sprite(350, 8, 42, 44, xofs=-16, yofs=-30),
     ]
 
-def make_liveries(length, liveries):
-    TEMPLATES = {
-        'new': tmpl_train,
-    }
-    tmpl = TEMPLATES[length]
+def make_liveries(liveries):
     res = []
     for name, filename, in liveries.items():
         data = {}
@@ -90,9 +86,9 @@ def make_liveries(length, liveries):
         if isinstance(filename, tuple):
             if isinstance(filename[1], str):
                 filename, mask_filename = filename
-                sprites = tmpl(filename, mask_filename)
+                sprites = tmpl_train(filename, mask_filename)
         else:        
-            sprites = tmpl(filename, 'mask_empty.png')
+            sprites = tmpl_train(filename, 'mask_empty.png')
 
         res.append({
             **data,
@@ -117,7 +113,7 @@ alignment16 = Train(
     id='alignment16',
     name='alignment 16',
     length=16,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         '': 'template.png'
     }),
     #country='sweden',
@@ -145,7 +141,7 @@ alignment16 = Train(
 ).add_articulated_part(
     id=19,
     length=16,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         '': 'template.png'
     }),
 )
@@ -154,7 +150,7 @@ Train(
     id='alignment_narrow',
     name='alignment narrow',
     length=16,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         '': 'template_narrow_gauge.png'
     }),
     #country='sweden',
@@ -519,7 +515,7 @@ meii1 = Train(
     id='meii1',
     name='ME II',
     length=10,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Real': '1981_DK_ME_II_1_1981.png',
         '2CC': ('cc1981_DK_ME_II_1_1981.png', 'cc_mask_1981_DK_ME_II_1_1981.png'),
     }),
@@ -551,7 +547,7 @@ meii2 = Train(
     id='meii2',
     name='ME II',
     length=10,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red and Blue': '1981_DK_ME_II_2_2000.png',
     }),
     country='denmark',
@@ -581,7 +577,7 @@ meii3 = Train(
     id='meii3',
     name='ME II',
     length=10,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Blue and Red': '1981_DK_ME_II_3_2006.png',
     }),
     country='denmark',
@@ -612,7 +608,7 @@ meii4 = Train(
     id='meii4',
     name='ME II',
     length=10,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red': '1981_DK_ME_II_4_2016.png',
     }),
     country='denmark',
@@ -840,7 +836,7 @@ ea1 = Train(
     id='ea1',
     name='EA',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Black and Red': '1984_DK_EA_1_1984.png',
     }),
     country='denmark',
@@ -870,7 +866,7 @@ ea2 = Train(
     id='ea2',
     name='EA',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Blue and Red': '1984_DK_EA_2_2006.png',
     }),
     country='denmark',
@@ -900,7 +896,7 @@ ea3 = Train(
     id='ea3',
     name='EA',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red': '1984_DK_EA_3_2017.png',
     }),
     country='denmark',
@@ -1250,7 +1246,7 @@ b1 = Train(
     id='b1',
     name='B',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Brown': '1964_DK_B_1_1964.png',
     }),
     country='denmark',
@@ -1280,7 +1276,7 @@ b2 = Train(
     id='b2',
     name='B I',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
@@ -1310,7 +1306,7 @@ b3 = Train(
     id='b3',
     name='Bk I',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
@@ -1340,7 +1336,7 @@ b4 = Train(
     id='b4',
     name='Bk I mod 1983',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red and White': '1964_DK_B_4_(Bk_I)_1983.png',
     }),
     country='denmark',
@@ -1370,7 +1366,7 @@ b5 = Train(
     id='b5',
     name='B I mod 1974',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red': '1964_DK_B_2_(B_I)_1967.png',
     }),
     country='denmark',
@@ -1400,7 +1396,7 @@ a1 = Train(
     id='a1',
     name='A',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Brown and Yellow': '1966_DK_A_1_1966.png',
     }),
     country='denmark',
@@ -1430,7 +1426,7 @@ a2 = Train(
     id='a2',
     name='A',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red and Yellow': '1966_DK_A_2_1967.png',
     }),
     country='denmark',
@@ -1460,7 +1456,7 @@ a3 = Train(
     id='a3',
     name='Ba',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red': '1966_DK_A_3_(Ba)_1991.png',
     }),
     country='denmark',
@@ -1490,7 +1486,7 @@ bn1 = Train(
     id='bn1',
     name='Bn',
     length=11,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Red': '1971_DK_Bn_1_1971.png',
     }),
     country='denmark',
@@ -1522,7 +1518,7 @@ ubp_i = Train(
     id='ubp_i',
     name='UBp',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
     }),
     engine_class=Train.EngineClass.ELECTRIC,
@@ -1552,7 +1548,7 @@ x10p = Train(
     id='x10p',
     name='X10p',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
         'Overhauled': ('xxxx_SE_X10p_X10p_2_xxxx.png', 2011)
     }),
@@ -1581,7 +1577,7 @@ x10p = Train(
 ).add_articulated_part(
     id='x10p_car2',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
         'Overhauled': 'xxxx_SE_X10p_UBp_2_xxxx.png',
     }),
@@ -1590,7 +1586,7 @@ x10p = Train(
 ).add_articulated_part(
     id='x10p_car3',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
         'Overhauled': 'xxxx_SE_X10p_UBxp_2_xxxx.png',
     }),
@@ -1602,7 +1598,7 @@ Tp = Train(
     id='tp',
     name='Tp',
     length=5,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_Tp_1_xxxx.png',
     }),
     country='sweden',
@@ -1636,7 +1632,7 @@ Z4p = Train( # Sport model as variant?
     id='z4p',
     name='Z4p',
     length=3,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'SRJ/SJ': '1947_SE_Z4p_1_1947.png',
         'NKIJ': '1947_SE_Z4p_2_xxxx.png',
         'DONJ': '1947_SE_Z4p_3_xxxx.png',
@@ -1673,7 +1669,7 @@ x15p = Train( # todo make it work with the length for mus
     id='x15p',
     name='X15p',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
     }),
     country='sweden', 
@@ -1701,7 +1697,7 @@ x15p = Train( # todo make it work with the length for mus
 ).add_articulated_part(
     id='x15p_car2',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
     }),
     cargo_capacity=80,
@@ -1709,7 +1705,7 @@ x15p = Train( # todo make it work with the length for mus
 ).add_articulated_part(
     id='x15p_car3',
     length=9,
-    liveries=make_liveries('new', {
+    liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
     }),
     cargo_capacity=76,
