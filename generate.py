@@ -88,7 +88,7 @@ def make_liveries(liveries):
                 filename, mask_filename = filename
                 sprites = tmpl_train(filename, mask_filename)
         else:        
-            sprites = tmpl_train(filename, 'mask_empty.png')
+            sprites = tmpl_train(filename, 'mask.png')
 
         res.append({
             **data,
@@ -516,7 +516,7 @@ meii1 = Train(
     name='ME II',
     length=10,
     liveries=make_liveries({
-        'Real': '1981_DK_ME_II_1_1981.png',
+        'Black and Red': '1981_DK_ME_II_1_1981.png',
         '2CC': ('cc1981_DK_ME_II_1_1981.png', 'cc_mask_1981_DK_ME_II_1_1981.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
@@ -898,7 +898,9 @@ ea3 = Train(
     length=9,
     liveries=make_liveries({
         'Red': '1984_DK_EA_3_2017.png',
+        '2CC': ('1984_DK_EA_3_2017.png', 'mc1984_DK_EA_3_2017.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='25kv',
@@ -914,7 +916,7 @@ ea3 = Train(
     weight=84,
     tractive_effort_coefficient=150,
     running_cost_factor=200,
-    cargo_capacity=0,
+    cargo_capacity=1,
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -1488,7 +1490,9 @@ bn1 = Train(
     length=11,
     liveries=make_liveries({
         'Red': '1971_DK_Bn_1_1971.png',
+        '2CC': ('1971_DK_Bn_1_1971.png', 'mc1971_DK_Bn_1_1971.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
