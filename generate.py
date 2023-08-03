@@ -517,7 +517,7 @@ meii1 = Train(
     length=10,
     liveries=make_liveries({
         'Black and Red': '1981_DK_ME_II_1_1981.png',
-        '2CC': ('cc1981_DK_ME_II_1_1981.png', 'cc_mask_1981_DK_ME_II_1_1981.png'),
+        '2CC': ('1981_DK_ME_II_1_1981.png', 'mc1981_DK_ME_II_1_1981.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -549,7 +549,9 @@ meii2 = Train(
     length=10,
     liveries=make_liveries({
         'Red and Blue': '1981_DK_ME_II_2_2000.png',
+        '2CC': ('1981_DK_ME_II_2_2000.png', 'mc1981_DK_ME_II_2_2000.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='diesel',
@@ -565,7 +567,7 @@ meii2 = Train(
     weight=122,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=0,
+    cargo_capacity=1,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -579,7 +581,9 @@ meii3 = Train(
     length=10,
     liveries=make_liveries({
         'Blue and Red': '1981_DK_ME_II_3_2006.png',
+        '2CC': ('1981_DK_ME_II_3_2006.png', 'mc1981_DK_ME_II_3_2006.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='diesel',
@@ -595,7 +599,7 @@ meii3 = Train(
     weight=122,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=0,
+    cargo_capacity=1,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -610,7 +614,9 @@ meii4 = Train(
     length=10,
     liveries=make_liveries({
         'Red': '1981_DK_ME_II_4_2016.png',
+        '2CC': ('1981_DK_ME_II_4_2016.png', 'mc1981_DK_ME_II_4_2016.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='diesel',
@@ -626,7 +632,7 @@ meii4 = Train(
     weight=122,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=0,
+    cargo_capacity=1,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -838,7 +844,9 @@ ea1 = Train(
     length=9,
     liveries=make_liveries({
         'Black and Red': '1984_DK_EA_1_1984.png',
+        '2CC': ('1984_DK_EA_1_1984.png', 'mc1984_DK_EA_1_1984.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='25kv',
@@ -854,7 +862,7 @@ ea1 = Train(
     weight=84,
     tractive_effort_coefficient=150,
     running_cost_factor=200,
-    cargo_capacity=0,
+    cargo_capacity=1,
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -868,7 +876,9 @@ ea2 = Train(
     length=9,
     liveries=make_liveries({
         'Blue and Red': '1984_DK_EA_2_2006.png',
+        '2CC': ('1984_DK_EA_2_2006.png', 'mc1984_DK_EA_2_2006.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='25kv',
@@ -884,7 +894,7 @@ ea2 = Train(
     weight=84,
     tractive_effort_coefficient=150,
     running_cost_factor=200,
-    cargo_capacity=0,
+    cargo_capacity=1,
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -1250,7 +1260,9 @@ b1 = Train(
     length=11,
     liveries=make_liveries({
         'Brown': '1964_DK_B_1_1964.png',
+        '2CC': ('1964_DK_B_1_1964.png', 'mc1964_DK_B_1_1964.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
@@ -1280,7 +1292,9 @@ b2 = Train(
     length=11,
     liveries=make_liveries({
         'Red': '1964_DK_B_2_(B_I)_1967.png',
+        '2CC': ('1964_DK_B_2_(B_I)_1967.png', 'mc1964_DK_B_2_(B_I)_1967.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
@@ -1310,7 +1324,9 @@ b3 = Train(
     length=11,
     liveries=make_liveries({
         'Red': '1964_DK_B_2_(B_I)_1967.png',
+        '2CC': ('1964_DK_B_2_(B_I)_1967.png', 'mc1964_DK_B_2_(B_I)_1967.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
@@ -1340,7 +1356,9 @@ b4 = Train(
     length=11,
     liveries=make_liveries({
         'Red and White': '1964_DK_B_4_(Bk_I)_1983.png',
+        '2CC': ('1964_DK_B_4_(Bk_I)_1983.png', 'mc1964_DK_B_4_(Bk_I)_1983.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
@@ -1370,7 +1388,9 @@ b5 = Train(
     length=11,
     liveries=make_liveries({
         'Red': '1964_DK_B_2_(B_I)_1967.png',
+        '2CC': ('1964_DK_B_2_(B_I)_1967.png', 'mc1964_DK_B_2_(B_I)_1967.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
@@ -1400,7 +1420,9 @@ a1 = Train(
     length=11,
     liveries=make_liveries({
         'Brown and Yellow': '1966_DK_A_1_1966.png',
+        '2CC': ('1966_DK_A_1_1966.png', 'mc1966_DK_A_1_1966.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
@@ -1430,7 +1452,9 @@ a2 = Train(
     length=11,
     liveries=make_liveries({
         'Red and Yellow': '1966_DK_A_2_1967.png',
+        '2CC': ('1966_DK_A_2_1967.png', 'mc1966_DK_A_2_1967.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
@@ -1460,7 +1484,9 @@ a3 = Train(
     length=11,
     liveries=make_liveries({
         'Red': '1966_DK_A_3_(Ba)_1991.png',
+        '2CC': ('1966_DK_A_3_(Ba)_1991.png', 'mc1966_DK_A_3_(Ba)_1991.png'),
     }),
+    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
