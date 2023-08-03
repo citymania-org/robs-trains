@@ -53,8 +53,8 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 
 def tmpl_train(filename, mask_file):
     mask = grf.FileMask(
-    grf.ImageFile('sprites/' + mask_file),
-    mode=grf.Mask.Mode.OVERDRAW,
+        grf.ImageFile('sprites/' + mask_file),
+        mode=grf.Mask.Mode.OVERDRAW,
     ) 
     png = grf.ImageFile('sprites/' + filename)
     sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, mask=mask)
@@ -539,7 +539,7 @@ meii1 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-    'Info': 'Denmarks final diesel locomotive',
+        'Info': 'Denmarks final diesel locomotive',
     }),
 )
 
@@ -569,7 +569,7 @@ meii2 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-    'Info': 'Denmarks final diesel locomotive',
+        'Info': 'Denmarks final diesel locomotive',
     }),
 )
 
@@ -599,7 +599,7 @@ meii3 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-    'Info': 'Denmarks final diesel locomotive',
+        'Info': 'Denmarks final diesel locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},}
 )
@@ -630,7 +630,7 @@ meii4 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-    'Info': 'Denmarks final diesel locomotive',
+        'Info': 'Denmarks final diesel locomotive',
     }),
 )
 
@@ -858,7 +858,7 @@ ea1 = Train(
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-    'Info': 'Denmarks first electric locomotive',
+        'Info': 'Denmarks first electric locomotive',
     }),
 )
 
@@ -888,7 +888,7 @@ ea2 = Train(
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-    'Info': 'Denmarks first electric locomotive',
+        'Info': 'Denmarks first electric locomotive',
     }),
 )
 
@@ -918,7 +918,7 @@ ea3 = Train(
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-    'Info': 'Denmarks first electric locomotive',
+        'Info': 'Denmarks first electric locomotive',
     }),
 )
 '''
@@ -1268,7 +1268,7 @@ b1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': '2nd class',
+        'Use': '2nd class',
     }),
 )
 
@@ -1328,7 +1328,7 @@ b3 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'kiosk car',
+        'Use': 'kiosk car',
     }),
 )
 
@@ -1358,7 +1358,7 @@ b4 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'kiosk car',
+        'Use': 'kiosk car',
     }),
 )
 
@@ -1388,7 +1388,7 @@ b5 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': '2nd class',
+        'Use': '2nd class',
     }),
 )
 
@@ -1448,7 +1448,7 @@ a2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': '1st class',
+        'Use': '1st class',
     }),
 )
 
@@ -1508,7 +1508,7 @@ bn1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-    'Use': '2nd class',
+        'Use': '2nd class',
     }),
 )
 
