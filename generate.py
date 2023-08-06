@@ -1586,7 +1586,8 @@ x10p = Train(
     length=9,
     liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
-        'Overhauled': ('xxxx_SE_X10p_X10p_2_xxxx.png', 2011)
+        'Overhauled': ('xxxx_SE_X10p_X10p_2_xxxx.png', 2011),
+        'Upptåget (fictional)': ('SE_X10p_X10p_3.png', 2011),
     }),
     country='sweden',
     company='na',
@@ -1609,13 +1610,13 @@ x10p = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Built by ABB railcar. Part of a major refurbisment of Roslagsbanan',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},}
 ).add_articulated_part(
     id='x10p_car2',
     length=9,
     liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
         'Overhauled': 'xxxx_SE_X10p_UBp_2_xxxx.png',
+        'Upptåget (fictional)': 'SE_X10p_UBp_3.png',
     }),
     cargo_capacity=80,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -1625,6 +1626,7 @@ x10p = Train(
     liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
         'Overhauled': 'xxxx_SE_X10p_UBxp_2_xxxx.png',
+        'Upptåget (fictional)': 'SE_X10p_UBxp_3.png',
     }),
     cargo_capacity=76,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
