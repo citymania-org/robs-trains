@@ -541,6 +541,7 @@ meii1 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Denmarks final diesel locomotive',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 meii2 = Train(
@@ -573,6 +574,7 @@ meii2 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Denmarks final diesel locomotive',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 meii3 = Train(
@@ -605,7 +607,7 @@ meii3 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Denmarks final diesel locomotive',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},}
+    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 meii4 = Train(
@@ -638,6 +640,7 @@ meii4 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Denmarks final diesel locomotive',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 '''
@@ -868,6 +871,7 @@ ea1 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Denmarks first electric locomotive',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 ea2 = Train(
@@ -900,6 +904,7 @@ ea2 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Denmarks first electric locomotive',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 ea3 = Train(
@@ -932,6 +937,7 @@ ea3 = Train(
     additional_text=grf.fake_vehicle_info({
         'Info': 'Denmarks first electric locomotive',
     }),
+    callbacks={'properties': {'cargo_capacity': 0},},
 )
 '''
 mf_ic3 = Train(
