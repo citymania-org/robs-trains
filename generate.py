@@ -1631,6 +1631,36 @@ x10p = Train(
     cargo_capacity=76,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
+
+Co_i = Train(
+    id='co_i',
+    name='Co (1914)',
+    length=8,
+    liveries=make_liveries({
+        'Original': '1914_SE_Co_68-71_1_1914.png',
+    }),
+    engine_class=Train.EngineClass.STEAM,
+    track_type=p_gauge,
+    country='sweden',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='co_i',
+    max_speed=Train.kmhish(75),
+    power=0,
+    introduction_date=date(1914, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=Train.ton(int(18)),
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=72,
+    cost_factor=24,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Info': 'Built by ASEA, Class was originally Co at SRJ later becoming Bop at SJ and finally Bp at SLJ',
+    }),
+)
 '''
 Tp = Train( 
     id='tp',
