@@ -539,7 +539,8 @@ meii1 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Denmarks final diesel locomotive',
+        'Use': 'Universal',
+        'Trivia': 'Denmarks final diesel locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -572,7 +573,8 @@ meii2 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Denmarks final diesel locomotive',
+        'Use': 'Universal',
+        'Trivia': 'Denmarks final diesel locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -605,7 +607,8 @@ meii3 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Denmarks final diesel locomotive',
+        'Use': 'Universal',
+        'Trivia': 'Denmarks final diesel locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -638,7 +641,8 @@ meii4 = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Denmarks final diesel locomotive',
+        'Use': 'Universal',
+        'Trivia': 'Denmarks final diesel locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -869,7 +873,8 @@ ea1 = Train(
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Denmarks first electric locomotive',
+        'Use': 'Universal',
+        'Trivia': 'Denmarks first electric locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -902,7 +907,8 @@ ea2 = Train(
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Denmarks first electric locomotive',
+        'Use': 'Universal',
+        'Trivia': 'Denmarks first electric locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -935,7 +941,8 @@ ea3 = Train(
     cost_factor=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Denmarks first electric locomotive',
+        'Use': 'Universal',
+        'Trivia': 'Denmarks first electric locomotive',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -1513,6 +1520,7 @@ a3 = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
     'Use': '2nd class',
+    'Trivia': 'Originaly first class',
     }),
 )
 
@@ -1544,7 +1552,8 @@ bn1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
+        'Use': 'Local trains, 2nd class',
+        'Trivia': '''Used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
@@ -1576,7 +1585,9 @@ ubp_i = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Built by ABB railcar. Part of a major refurbisment of Roslagsbanan',
+        'Use': 'Passenger',
+        'Trivia': '''The middle part of the new emus were ordered to arive first so that they could be used earlier replacing the oldest rolling stock''',
+        'Builder': 'ABB railcar',
     }),
 )
 
@@ -1608,7 +1619,9 @@ x10p = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Built by ABB railcar. Part of a major refurbisment of Roslagsbanan',
+        'Use': 'Passenger emu', 
+        'Trivia': 'Technically modular but always used in sets of one railcar with an unpowered trailer and a driving trailer in tow.',
+        'Builder': 'ABB railcar',
     }),
 ).add_articulated_part(
     id='x10p_car2',
@@ -1634,7 +1647,7 @@ x10p = Train(
 
 Co_i = Train(
     id='co_i',
-    name='Co (1914)',
+    name='Co "Grindvagn"',
     length=8,
     liveries=make_liveries({
         'Original': '1914_SE_Co_68-71_1_1914.png',
@@ -1658,7 +1671,9 @@ Co_i = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Built by ASEA, Class was originally Co at SRJ later becoming Bop at SJ and finally Bp at SLJ',
+        'Use': 'Longer distance passenger',
+        'Trivia': 'Class was originally Co at SRJ later becoming Bop at SJ and finally Bp at SLJ',
+        'Builder': 'ASEA',
     }),
 )
 '''
