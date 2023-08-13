@@ -517,7 +517,8 @@ meii1 = Train(
     length=10,
     liveries=make_liveries({
         'Black and Red': '1981_DK_ME_II_1_1981.png',
-        '2CC': ('1981_DK_ME_II_1_1981.png', 'mc1981_DK_ME_II_1_1981.png'),
+        '2CC': ('cc1981_DK_ME_II_1_1981.png', 'mc1981_DK_ME_II_1_1981.png'),
+        '2CC alt': ('cc1981_DK_ME_II_1alt_1981.png', 'mc1981_DK_ME_II_1alt_1981.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -535,12 +536,12 @@ meii1 = Train(
     weight=122,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=1, # must be non zero value
+    cargo_capacity=1,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Denmarks final diesel locomotive',
+        'Trivia': '''Denmark's final diesel locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -551,7 +552,8 @@ meii2 = Train(
     length=10,
     liveries=make_liveries({
         'Red and Blue': '1981_DK_ME_II_2_2000.png',
-        '2CC': ('1981_DK_ME_II_2_2000.png', 'mc1981_DK_ME_II_2_2000.png'),
+        '2CC': ('cc1981_DK_ME_II_2_2000.png', 'mc1981_DK_ME_II_2_2000.png'),
+        '2CC alt': ('cc1981_DK_ME_II_3_2006.png', 'mc1981_DK_ME_II_3_2006.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -574,7 +576,7 @@ meii2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Denmarks final diesel locomotive',
+        'Trivia': '''Denmark's final diesel locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -585,7 +587,8 @@ meii3 = Train(
     length=10,
     liveries=make_liveries({
         'Blue and Red': '1981_DK_ME_II_3_2006.png',
-        '2CC': ('1981_DK_ME_II_3_2006.png', 'mc1981_DK_ME_II_3_2006.png'),
+        '2CC': ('cc1981_DK_ME_II_3_2006.png', 'mc1981_DK_ME_II_3_2006.png'),
+        '2CC alt': ('cc1981_DK_ME_II_2_2000.png', 'mc1981_DK_ME_II_2_2000.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -608,7 +611,7 @@ meii3 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Denmarks final diesel locomotive',
+        'Trivia': '''Denmark's final diesel locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -619,7 +622,7 @@ meii4 = Train(
     length=10,
     liveries=make_liveries({
         'Red': '1981_DK_ME_II_4_2016.png',
-        '2CC': ('1981_DK_ME_II_4_2016.png', 'mc1981_DK_ME_II_4_2016.png'),
+        '2CC': ('cc1981_DK_ME_II_4_2016.png', 'mc1981_DK_ME_II_4_2016.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -642,7 +645,7 @@ meii4 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Denmarks final diesel locomotive',
+        'Trivia': '''Denmark's final diesel locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -851,7 +854,8 @@ ea1 = Train(
     length=9,
     liveries=make_liveries({
         'Black and Red': '1984_DK_EA_1_1984.png',
-        '2CC': ('1984_DK_EA_1_1984.png', 'mc1984_DK_EA_1_1984.png'),
+        '2CC': ('cc1984_DK_EA_1_1984.png', 'mc1984_DK_EA_1_1984.png'),
+        '2CC alt': ('cc1984_DK_EA_1alt_1984.png', 'mc1984_DK_EA_1alt_1984.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -874,7 +878,7 @@ ea1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Denmarks first electric locomotive',
+        'Trivia': '''Denmark's first electric locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -885,7 +889,7 @@ ea2 = Train(
     length=9,
     liveries=make_liveries({
         'Blue and Red': '1984_DK_EA_2_2006.png',
-        '2CC': ('1984_DK_EA_2_2006.png', 'mc1984_DK_EA_2_2006.png'),
+        '2CC': ('cc1984_DK_EA_2_2006.png', 'mc1984_DK_EA_2_2006.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -908,7 +912,7 @@ ea2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Denmarks first electric locomotive',
+        'Trivia': '''Denmark's first electric locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -919,7 +923,7 @@ ea3 = Train(
     length=9,
     liveries=make_liveries({
         'Red': '1984_DK_EA_3_2017.png',
-        '2CC': ('1984_DK_EA_3_2017.png', 'mc1984_DK_EA_3_2017.png'),
+        '2CC': ('cc1984_DK_EA_3_2017.png', 'mc1984_DK_EA_3_2017.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -942,7 +946,7 @@ ea3 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Denmarks first electric locomotive',
+        'Trivia': '''Denmark's first electric locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -1520,7 +1524,6 @@ a3 = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
     'Use': '2nd class',
-    'Trivia': 'Originaly first class',
     }),
 )
 
@@ -1553,7 +1556,7 @@ bn1 = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': '''Used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
@@ -1586,7 +1589,7 @@ ubp_i = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Passenger',
-        'Trivia': '''The middle part of the new emus were ordered to arive first so that they could be used earlier replacing the oldest rolling stock''',
+        'Trivia': 'The middle part of the new emus were ordered to arive first so that they could be used earlier replacing the oldest rolling stock',
         'Builder': 'ABB railcar',
     }),
 )
