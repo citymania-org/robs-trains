@@ -46,8 +46,7 @@ class Train(grf.Train):
                     code.append(f'TEMP[0] = (current_year >= {year}) * {count} + TEMP[0]')
             code.append('(cargo_subtype >= TEMP[0]) * -1000 + cargo_subtype')
 
-        del callbacks.cargo_subtype
-        callbacks.cargo_subtype = grf.Switch(
+        callbacks.cargo_subtype_text = grf.Switch(
             ranges={i: g.strings.add(l['name']).get_global_id() for i, l in enumerate(self.liveries)},
             default=0x400,
             code=code,
@@ -89,7 +88,7 @@ def _make_fade_effect(img, start, length):
 
 
 def _make_opaque(img, opacity):
-    npimg = np.asarray(img)
+    npimg = np.asarray(img).copy()
     npimg[:, :, 3] = npimg[:, :, 3] * opacity
     return Image.fromarray(npimg)
 
