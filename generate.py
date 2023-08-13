@@ -890,6 +890,7 @@ ea2 = Train(
     liveries=make_liveries({
         'Blue and Red': '1984_DK_EA_2_2006.png',
         '2CC': ('cc1984_DK_EA_2_2006.png', 'mc1984_DK_EA_2_2006.png'),
+        '2CC alt': ('cc1984_DK_EA_2alt_2006.png', 'mc1984_DK_EA_2alt_2006.png'),
     }),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
