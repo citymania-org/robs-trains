@@ -58,6 +58,16 @@ def _get_image_file(file):
     return f
 
 
+def read_palette_file(file):
+    npimg = np.array(Image.open(file).convert('RGBA'))
+    h, w, _ = npimg.shape
+    npview = npimg.view(dtype=np.uint32).reshape((h, w))
+    res = []
+    for i in range(h * 8):
+        res.append(npview[i // 8, i % 8])
+    return res
+
+
 class AutoMaskingFileSprite(grf.FileSprite):
 
     class Mask(grf.Mask):
@@ -113,10 +123,18 @@ class CCReplacingFileSprite(grf.FileSprite):
         if cc2_replace:
             remap.update(make_remap_range(CC2_COLOURS, cc2_replace))
 
-        self.remap = {
-            k: (a << 24) | (b << 16) | (g << 8) | r
-            for k, (r, g, b, a) in remap.items()
-        }
+        if remap and isinstance(next(iter(remap.values())), tuple):
+            remap = {
+                k: (a << 24) | (b << 16) | (g << 8) | r
+                for k, (r, g, b, a) in remap.items()
+            }
+        else:
+            remap = {
+                k: int(v)
+                for k, v in remap.items()
+            }
+
+        self.remap = remap
 
     def get_image(self):
         if self._image is not None:

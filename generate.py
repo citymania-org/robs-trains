@@ -478,26 +478,9 @@ mz_iv1 = Train(
     }),
 )'''
 
-DANISH_RED = (
-    (100, 0, 0, 255),
-    (120, 0, 0, 255),
-    (140, 0, 0, 255),
-    (160, 0, 0, 255),
-    (180, 0, 0, 255),
-    (200, 0, 0, 255),
-    (220, 0, 0, 255),
-    (240, 0, 0, 255),
-)
-DANISH_BLACK = (
-    (0, 0, 0, 255),
-    (15, 15, 10, 255),
-    (30, 30, 30, 255),
-    (45, 45, 45, 255),
-    (60, 60, 60, 255),
-    (75, 75, 75, 255),
-    (90, 90, 90, 255),
-    (105, 105, 105, 255),
-)
+PALETTE = lib.read_palette_file('pal.png')
+RED_RANGE = PALETTE[60: 68]
+BLACK_RANGE = PALETTE[0: 8]
 
 meii1 = Train(
     id='meii1',
@@ -506,7 +489,7 @@ meii1 = Train(
     liveries={
         'Black and Red': Livery('1981_DK_ME_II_1_1981.png'),
         'AutoCC': Livery('test_cc1981_DK_ME_II_1_1981.png', auto_cc=True),
-        'CCReplace': Livery('test_cc1981_DK_ME_II_1_1981.png', cc_replace=DANISH_RED, cc2_replace=DANISH_BLACK),
+        'CCReplace': Livery('test_cc1981_DK_ME_II_1_1981.png', cc_replace=RED_RANGE, cc2_replace=BLACK_RANGE),
         '2CC': Livery('cc1981_DK_ME_II_1_1981.png', mask='mc1981_DK_ME_II_1_1981.png'),
         '2CC alt': Livery('cc1981_DK_ME_II_1alt_1981.png', mask='mc1981_DK_ME_II_1alt_1981.png'),
     },
