@@ -11,6 +11,10 @@ DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
+PALETTE = lib.read_palette_file('pal.png')
+RED_RANGE = PALETTE[60: 68]
+BLACK_RANGE = PALETTE[0: 8]
+
 g = grf.NewGRF(
     grfid=b'KSTA',
     name='KST SNDTS (ScaNDinavian Train Set)',
@@ -477,10 +481,6 @@ mz_iv1 = Train(
         'Info': 'Leyland',
     }),
 )'''
-
-PALETTE = lib.read_palette_file('pal.png')
-RED_RANGE = PALETTE[60: 68]
-BLACK_RANGE = PALETTE[0: 8]
 
 meii1 = Train(
     id='meii1',
