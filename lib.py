@@ -2,45 +2,51 @@ import os
 from collections import Counter
 
 from PIL import Image, ImageDraw
+from frozendict import frozendict
 import numpy as np
 
 from nml.grfstrings import NewGRFString, default_lang
 
 import grf
 
-# 0xC6 range
+CC_START = 0xC6
 CC_COLOURS = (
-    (8, 24, 88),
-    (12, 36, 104),
-    (20, 52, 124),
-    (28, 68, 140),
-    (40, 92, 164),
-    (56, 120, 188),
-    (72, 152, 216),
-    (100, 172, 224)
+    (8, 24, 88, 255),
+    (12, 36, 104, 255),
+    (20, 52, 124, 255),
+    (28, 68, 140, 255),
+    (40, 92, 164, 255),
+    (56, 120, 188, 255),
+    (72, 152, 216, 255),
+    (100, 172, 224, 255)
 )
 
-# 0x50 range
+CC2_START = 0x50
 CC2_COLOURS = (
-    (8, 52, 0),
-    (16, 64, 0),
-    (32, 80, 4),
-    (48, 96, 4),
-    (64, 112, 12),
-    (84, 132, 20),
-    (104, 148, 28),
-    (128, 168, 44),
+    (8, 52, 0, 255),
+    (16, 64, 0, 255),
+    (32, 80, 4, 255),
+    (48, 96, 4, 255),
+    (64, 112, 12, 255),
+    (84, 132, 20, 255),
+    (104, 148, 28, 255),
+    (128, 168, 44, 255),
 )
 
 AUTO_REMAP = {}
-def add_remap_range(start, colors):
-    for r, g, b in colors:
-        v = 0xFF000000 | (b << 16) | (g << 8) | r
-        AUTO_REMAP[v] = start
-        start += 1
+def make_remap_range(colours, remap):
+    if len(colours) != 8:
+        raise ValueError(f'CC replacement range should contain exactly 8 colours but {len(colours)} were found')
+    if len(remap) != 8:
+        raise ValueError(f'CC replacement range should contain exactly 8 colours but {len(remap)} were found')
+    res = {}
+    for (r, g, b, a), k in zip(colours, remap):
+        v = (a << 24) | (b << 16) | (g << 8) | r
+        res[v] = k
+    return res
 
-add_remap_range(0xC6, CC_COLOURS)
-add_remap_range(0x50, CC2_COLOURS)
+AUTO_REMAP.update(make_remap_range(CC_COLOURS, range(CC_START, CC_START + 8)))
+AUTO_REMAP.update(make_remap_range(CC2_COLOURS, range(CC2_START, CC2_START + 8)))
 
 
 IMAGE_FILES = {}
@@ -66,7 +72,7 @@ class AutoMaskingFileSprite(grf.FileSprite):
 
             image, bpp = self.sprite.get_image()
             if bpp != grf.BPP_32:
-                raise ValueError('Only 32-bit RGBA sprites are currently supported with auto-masking')
+                raise RuntimeError('Only 32-bit RGBA sprites are currently supported with auto-masking')
 
             npimg = np.asarray(image)
             h, w, _ = npimg.shape
@@ -97,18 +103,69 @@ class AutoMaskingFileSprite(grf.FileSprite):
         return self._image
 
 
+class CCReplacingFileSprite(grf.FileSprite):
+    def __init__(self, file, cc_replace, cc2_replace, *args, **kw):
+        super().__init__(file, *args, **kw, mask=None)
+        self._image = None
+        remap = {}
+        if cc_replace:
+            remap.update(make_remap_range(CC_COLOURS, cc_replace))
+        if cc2_replace:
+            remap.update(make_remap_range(CC2_COLOURS, cc2_replace))
+
+        self.remap = {
+            k: (a << 24) | (b << 16) | (g << 8) | r
+            for k, (r, g, b, a) in remap.items()
+        }
+
+    def get_image(self):
+        if self._image is not None:
+            return self._image
+        image, bpp = super().get_image()
+
+        if bpp != grf.BPP_32:
+            raise RuntimeError('Only 32-bit RGBA sprites are currently supported for CC replacement')
+
+        npimg = np.asarray(image).copy()
+        h, w, _ = npimg.shape
+        npview = npimg.view(dtype=np.uint32).reshape(w * h)
+        for k, v in self.remap.items():
+            npview[npview == k] = v
+
+        img = Image.fromarray(npimg, 'RGBA')
+        self._image = img, grf.BPP_32
+        return self._image
+
+    def get_hash(self):
+        return grf.combine_sprite_hash(
+            super().get_hash(),
+            remap=frozendict(self.remap),
+        )
+
+
 class Livery:
-    def __init__(self, template, image, *, mask=None, intro_year=None, auto_cc=False):
+    def __init__(self, template, image, *, mask=None, intro_year=None, auto_cc=False, cc_replace=None, cc2_replace=None):
         self.template = template
         self.image = image
         self.mask = mask
         self.intro_year = intro_year
         self.auto_cc = auto_cc
+        self.cc_replace = cc_replace
+        self.cc2_replace = cc2_replace
+        has_cc_replace = (cc_replace is not None or cc2_replace is not None)
+        if self.auto_cc and has_cc_replace:
+            raise ValueError('cc_replace/cc2_replace and auto_cc can''t be used together')
+        if self.auto_cc and self.mask is not None:
+            raise ValueError('mask and auto_cc can''t be used together')
+        if has_cc_replace and self.mask is not None:
+            raise ValueError('cc_replace/cc2_replace and mask can''t be used together')
 
     def _get_sprite_func(self):
         image_obj = _get_image_file(self.image)
         if self.auto_cc:
             return lambda *args, **kw: AutoMaskingFileSprite(image_obj, *args, **kw)
+        if self.cc_replace or self.cc2_replace:
+            return lambda *args, **kw: CCReplacingFileSprite(image_obj, self.cc_replace, self.cc2_replace, *args, **kw)
         mask_obj = None
         if self.mask is not None:
             mask_obj = _get_image_file(self.mask)
@@ -139,8 +196,8 @@ class LiveryFactory:
     def __init__(self, template):
         self.template = template
 
-    def __call__(self, image, *, mask=None, intro_year=None, auto_cc=False):
-        return Livery(self.template, image, mask=mask, intro_year=intro_year, auto_cc=auto_cc)
+    def __call__(self, image, *, mask=None, intro_year=None, auto_cc=False, cc_replace=None, cc2_replace=None):
+        return Livery(self.template, image, mask=mask, intro_year=intro_year, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
 
 
 def _make_sprite_func(image_file, mask_file=None):
@@ -180,6 +237,7 @@ class Train(grf.Train):
     def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, **kw):
         # Sort needed for intro year switch
         liveries = _make_liveries(liveries)
+        # TODO make it a check instead of sorting, livery order is important for version compatibility
         liveries.sort(key=lambda l: l.get('intro_year', 0))
 
         super().__init__(
