@@ -15,7 +15,7 @@ g = grf.NewGRF(
     grfid=b'KSTA',
     name='KST SNDTS (ScaNDinavian Train Set)',
     description='Scandinavian Trains made by Rob, dP and Brickblock1',
-    url='https://github.com/citymania-org/robs-trains',
+    url='https://github.com/citymania-org/ro.bs-trains',
     id_map_file='id_map.json',
 )
 
@@ -51,52 +51,19 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 # we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
 
 
-def tmpl_train(filename, mask_file):
-    mask = grf.FileMask(
-        grf.ImageFile('sprites/' + mask_file),
-        mode=grf.Mask.Mode.OVERDRAW,
-    ) 
-    png = grf.ImageFile('sprites/' + filename)
-    sprite = lambda *args, **kw: grf.FileSprite(png, *args, **kw, mask=mask)
+def tmpl_train(func):
     return [
-        sprite(  0, 8, 10, 44, xofs=-4,  yofs=-21),
-        sprite( 20, 8, 42, 44, xofs=-24, yofs=-30),
-        sprite( 70, 8, 69, 44, xofs=-35, yofs=-38),
-        sprite(150, 8, 42, 44, xofs=-16, yofs=-30),
-        sprite(200, 8, 10, 44, xofs=-4,  yofs=-21),
-        sprite(220, 8, 42, 44, xofs=-24, yofs=-30),
-        sprite(270, 8, 69, 44, xofs=-35, yofs=-38),
-        sprite(350, 8, 42, 44, xofs=-16, yofs=-30),
+        func(  0, 8, 10, 44, xofs=-4,  yofs=-21),
+        func( 20, 8, 42, 44, xofs=-24, yofs=-30),
+        func( 70, 8, 69, 44, xofs=-35, yofs=-38),
+        func(150, 8, 42, 44, xofs=-16, yofs=-30),
+        func(200, 8, 10, 44, xofs=-4,  yofs=-21),
+        func(220, 8, 42, 44, xofs=-24, yofs=-30),
+        func(270, 8, 69, 44, xofs=-35, yofs=-38),
+        func(350, 8, 42, 44, xofs=-16, yofs=-30),
     ]
 
-def make_liveries(liveries):
-    res = []
-    for name, filename, in liveries.items():
-        data = {}
-
-        if isinstance(filename, tuple):
-            if isinstance(filename[1], int):
-                filename, intro_year = filename
-                data['intro_year'] = intro_year
-        elif filename.endswith('.vox'):
-            sprites = lib.VoxTrainFile(filename).make_sprites()
-            if DEBUG_DIR is not None:
-                debug_fname = os.path.join(DEBUG_DIR, os.path.basename(filename)[:-4]) + '.png'
-                lib.make_debug_sprite_sheet(debug_fname, sprites, scale=5)
-        if isinstance(filename, tuple):
-            if isinstance(filename[1], str):
-                filename, mask_filename = filename
-                sprites = tmpl_train(filename, mask_filename)
-        else:        
-            sprites = tmpl_train(filename, 'mask.png')
-
-        res.append({
-            **data,
-            'name': f' ({name})',
-            'sprites': sprites,
-        })
-    return res
-
+Livery = lib.LiveryFactory(tmpl_train)
 
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {
@@ -515,11 +482,11 @@ meii1 = Train(
     id='meii1',
     name='ME II',
     length=10,
-    liveries=make_liveries({
-        'Black and Red': '1981_DK_ME_II_1_1981.png',
-        '2CC': ('cc1981_DK_ME_II_1_1981.png', 'mc1981_DK_ME_II_1_1981.png'),
-        '2CC alt': ('cc1981_DK_ME_II_1alt_1981.png', 'mc1981_DK_ME_II_1alt_1981.png'),
-    }),
+    liveries={
+        'Black and Red': Livery('1981_DK_ME_II_1_1981.png'),
+        '2CC': Livery('cc1981_DK_ME_II_1_1981.png', mask='mc1981_DK_ME_II_1_1981.png'),
+        '2CC alt': Livery('cc1981_DK_ME_II_1alt_1981.png', mask='mc1981_DK_ME_II_1alt_1981.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -549,11 +516,11 @@ meii2 = Train(
     id='meii2',
     name='ME II',
     length=10,
-    liveries=make_liveries({
-        'Red and Blue': '1981_DK_ME_II_2_2000.png',
-        '2CC': ('cc1981_DK_ME_II_2_2000.png', 'mc1981_DK_ME_II_2_2000.png'),
-        '2CC alt': ('cc1981_DK_ME_II_3_2006.png', 'mc1981_DK_ME_II_3_2006.png'),
-    }),
+    liveries={
+        'Red and Blue': Livery('1981_DK_ME_II_2_2000.png'),
+        '2CC': Livery('cc1981_DK_ME_II_2_2000.png', mask='mc1981_DK_ME_II_2_2000.png'),
+        '2CC alt': Livery('cc1981_DK_ME_II_3_2006.png', mask='mc1981_DK_ME_II_3_2006.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -583,11 +550,11 @@ meii3 = Train(
     id='meii3',
     name='ME II',
     length=10,
-    liveries=make_liveries({
-        'Blue and Red': '1981_DK_ME_II_3_2006.png',
-        '2CC': ('cc1981_DK_ME_II_3_2006.png', 'mc1981_DK_ME_II_3_2006.png'),
-        '2CC alt': ('cc1981_DK_ME_II_2_2000.png', 'mc1981_DK_ME_II_2_2000.png'),
-    }),
+    liveries={
+        'Blue and Red': Livery('1981_DK_ME_II_3_2006.png'),
+        '2CC': Livery('cc1981_DK_ME_II_3_2006.png', mask='mc1981_DK_ME_II_3_2006.png'),
+        '2CC alt': Livery('cc1981_DK_ME_II_2_2000.png', mask='mc1981_DK_ME_II_2_2000.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -617,10 +584,10 @@ meii4 = Train(
     id='meii4',
     name='ME II',
     length=10,
-    liveries=make_liveries({
-        'Red': '1981_DK_ME_II_4_2016.png',
-        '2CC': ('cc1981_DK_ME_II_4_2016.png', 'mc1981_DK_ME_II_4_2016.png'),
-    }),
+    liveries={
+        'Red': Livery('1981_DK_ME_II_4_2016.png'),
+        '2CC': Livery('cc1981_DK_ME_II_4_2016.png', mask='mc1981_DK_ME_II_4_2016.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -848,11 +815,11 @@ ea1 = Train(
     id='ea1',
     name='EA',
     length=9,
-    liveries=make_liveries({
-        'Black and Red': '1984_DK_EA_1_1984.png',
-        '2CC': ('cc1984_DK_EA_1_1984.png', 'mc1984_DK_EA_1_1984.png'),
-        '2CC alt': ('cc1984_DK_EA_1alt_1984.png', 'mc1984_DK_EA_1alt_1984.png'),
-    }),
+    liveries={
+        'Black and Red': Livery('1984_DK_EA_1_1984.png'),
+        '2CC': Livery('cc1984_DK_EA_1_1984.png', mask='mc1984_DK_EA_1_1984.png'),
+        '2CC alt': Livery('cc1984_DK_EA_1alt_1984.png', mask='mc1984_DK_EA_1alt_1984.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -882,11 +849,11 @@ ea2 = Train(
     id='ea2',
     name='EA',
     length=9,
-    liveries=make_liveries({
-        'Blue and Red': '1984_DK_EA_2_2006.png',
-        '2CC': ('cc1984_DK_EA_2_2006.png', 'mc1984_DK_EA_2_2006.png'),
-        '2CC alt': ('cc1984_DK_EA_2alt_2006.png', 'mc1984_DK_EA_2alt_2006.png'),
-    }),
+    liveries={
+        'Blue and Red': Livery('1984_DK_EA_2_2006.png'),
+        '2CC': Livery('cc1984_DK_EA_2_2006.png', mask='mc1984_DK_EA_2_2006.png'),
+        '2CC alt': Livery('cc1984_DK_EA_2alt_2006.png', mask='mc1984_DK_EA_2alt_2006.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -916,10 +883,10 @@ ea3 = Train(
     id='ea3',
     name='EA',
     length=9,
-    liveries=make_liveries({
-        'Red': '1984_DK_EA_3_2017.png',
-        '2CC': ('cc1984_DK_EA_3_2017.png', 'mc1984_DK_EA_3_2017.png'),
-    }),
+    liveries={
+        'Red': Livery('1984_DK_EA_3_2017.png'),
+        '2CC': Livery('cc1984_DK_EA_3_2017.png', mask='mc1984_DK_EA_3_2017.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1269,10 +1236,10 @@ b1 = Train(
     id='b1',
     name='B',
     length=11,
-    liveries=make_liveries({
-        'Brown': '1964_DK_B_1_1964.png',
-        '2CC': ('1964_DK_B_1_1964.png', 'mc1964_DK_B_1_1964.png'),
-    }),
+    liveries={
+        'Brown': Livery('1964_DK_B_1_1964.png'),
+        '2CC': Livery('1964_DK_B_1_1964.png', mask='mc1964_DK_B_1_1964.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1302,10 +1269,10 @@ b2 = Train(
     id='b2',
     name='B I',
     length=11,
-    liveries=make_liveries({
-        'Red': '1964_DK_B_2_(B_I)_1967.png',
-        '2CC': ('1964_DK_B_2_(B_I)_1967.png', 'mc1964_DK_B_2_(B_I)_1967.png'),
-    }),
+    liveries={
+        'Red': Livery('1964_DK_B_2_(B_I)_1967.png'),
+        '2CC': Livery('1964_DK_B_2_(B_I)_1967.png', mask='mc1964_DK_B_2_(B_I)_1967.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1335,10 +1302,10 @@ b3 = Train(
     id='b3',
     name='Bk I',
     length=11,
-    liveries=make_liveries({
-        'Red': '1964_DK_B_2_(B_I)_1967.png',
-        '2CC': ('1964_DK_B_2_(B_I)_1967.png', 'mc1964_DK_B_2_(B_I)_1967.png'),
-    }),
+    liveries={
+        'Red': Livery('1964_DK_B_2_(B_I)_1967.png'),
+        '2CC': Livery('1964_DK_B_2_(B_I)_1967.png', mask='mc1964_DK_B_2_(B_I)_1967.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1368,10 +1335,10 @@ b4 = Train(
     id='b4',
     name='Bk I mod 1983',
     length=11,
-    liveries=make_liveries({
-        'Red and White': '1964_DK_B_4_(Bk_I)_1983.png',
-        '2CC': ('1964_DK_B_4_(Bk_I)_1983.png', 'mc1964_DK_B_4_(Bk_I)_1983.png'),
-    }),
+    liveries={
+        'Red and White': Livery('1964_DK_B_4_(Bk_I)_1983.png'),
+        '2CC': Livery('1964_DK_B_4_(Bk_I)_1983.png', mask='mc1964_DK_B_4_(Bk_I)_1983.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1401,10 +1368,10 @@ b5 = Train(
     id='b5',
     name='B I mod 1974',
     length=11,
-    liveries=make_liveries({
-        'Red': '1964_DK_B_2_(B_I)_1967.png',
-        '2CC': ('1964_DK_B_2_(B_I)_1967.png', 'mc1964_DK_B_2_(B_I)_1967.png'),
-    }),
+    liveries={
+        'Red': Livery('1964_DK_B_2_(B_I)_1967.png'),
+        '2CC': Livery('1964_DK_B_2_(B_I)_1967.png', mask='mc1964_DK_B_2_(B_I)_1967.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1434,10 +1401,10 @@ a1 = Train(
     id='a1',
     name='A',
     length=11,
-    liveries=make_liveries({
-        'Brown and Yellow': '1966_DK_A_1_1966.png',
-        '2CC': ('1966_DK_A_1_1966.png', 'mc1966_DK_A_1_1966.png'),
-    }),
+    liveries={
+        'Brown and Yellow': Livery('1966_DK_A_1_1966.png'),
+        '2CC': Livery('1966_DK_A_1_1966.png', mask='mc1966_DK_A_1_1966.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1467,10 +1434,10 @@ a2 = Train(
     id='a2',
     name='A',
     length=11,
-    liveries=make_liveries({
-        'Red and Yellow': '1966_DK_A_2_1967.png',
-        '2CC': ('1966_DK_A_2_1967.png', 'mc1966_DK_A_2_1967.png'),
-    }),
+    liveries={
+        'Red and Yellow': Livery('1966_DK_A_2_1967.png'),
+        '2CC': Livery('1966_DK_A_2_1967.png', mask='mc1966_DK_A_2_1967.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1500,10 +1467,10 @@ a3 = Train(
     id='a3',
     name='Ba',
     length=11,
-    liveries=make_liveries({
-        'Red': '1966_DK_A_3_(Ba)_1991.png',
-        '2CC': ('1966_DK_A_3_(Ba)_1991.png', 'mc1966_DK_A_3_(Ba)_1991.png'),
-    }),
+    liveries={
+        'Red': Livery('1966_DK_A_3_(Ba)_1991.png'),
+        '2CC': Livery('1966_DK_A_3_(Ba)_1991.png', mask='mc1966_DK_A_3_(Ba)_1991.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1533,10 +1500,10 @@ bn1 = Train(
     id='bn1',
     name='Bn',
     length=11,
-    liveries=make_liveries({
-        'Red': '1971_DK_Bn_1_1971.png',
-        '2CC': ('1971_DK_Bn_1_1971.png', 'mc1971_DK_Bn_1_1971.png'),
-    }),
+    liveries={
+        'Red': Livery('1971_DK_Bn_1_1971.png'),
+        '2CC': Livery('1971_DK_Bn_1_1971.png', mask='mc1971_DK_Bn_1_1971.png'),
+    },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1569,9 +1536,9 @@ ubp_i = Train(
     id='ubp_i',
     name='UBp',
     length=9,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
-    }),
+    liveries={
+        'Original': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
+    },
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=p_gauge,
     country='sweden',
@@ -1601,11 +1568,11 @@ x10p = Train(
     id='x10p',
     name='X10p',
     length=9,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
-        'Overhauled': ('xxxx_SE_X10p_X10p_2_xxxx.png', 2011),
-        'Upptåget (fictional)': ('SE_X10p_X10p_3.png', 2011),
-    }),
+    liveries={
+        'Original': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
+        'Overhauled': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', intro_year=2011),
+        'Upptåget (fictional)': Livery('SE_X10p_X10p_3.png', intro_year=2011),
+    },
     country='sweden',
     company='na',
     power_type='dc',
@@ -1632,21 +1599,21 @@ x10p = Train(
 ).add_articulated_part(
     id='x10p_car2',
     length=9,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
-        'Overhauled': 'xxxx_SE_X10p_UBp_2_xxxx.png',
-        'Upptåget (fictional)': 'SE_X10p_UBp_3.png',
-    }),
+    liveries={
+        'Original': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
+        'Overhauled': Livery('xxxx_SE_X10p_UBp_2_xxxx.png'),
+        'Upptåget (fictional)': Livery('SE_X10p_UBp_3.png'),
+    },
     cargo_capacity=80,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='x10p_car3',
     length=9,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
-        'Overhauled': 'xxxx_SE_X10p_UBxp_2_xxxx.png',
-        'Upptåget (fictional)': 'SE_X10p_UBxp_3.png',
-    }),
+    liveries={
+        'Original': Livery('xxxx_SE_X10p_UBxp_1_xxxx.png'),
+        'Overhauled': Livery('xxxx_SE_X10p_UBxp_2_xxxx.png'),
+        'Upptåget (fictional)': Livery('SE_X10p_UBxp_3.png'),
+    },
     cargo_capacity=76,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
@@ -1655,9 +1622,9 @@ Co_i = Train(
     id='co_i',
     name='Co "Grindvagn"',
     length=8,
-    liveries=make_liveries({
-        'Original': '1914_SE_Co_68-71_1_1914.png',
-    }),
+    liveries={
+        'Original': Livery('1914_SE_Co_68-71_1_1914.png'),
+    },
     engine_class=Train.EngineClass.STEAM,
     track_type=p_gauge,
     country='sweden',

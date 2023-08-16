@@ -9,9 +9,69 @@ from nml.grfstrings import NewGRFString, default_lang
 import grf
 
 
+class Livery:
+    def __init__(self, template, image, *, mask=None, intro_year=None):
+        self.template = template
+        self.image = image
+        self.mask = mask
+        self.intro_year = intro_year
+
+
+class LiveryFactory:
+    def __init__(self, template):
+        self.template = template
+
+    def __call__(self, image, *, mask=None, intro_year=None):
+        return Livery(self.template, image, mask=mask, intro_year=intro_year)
+
+
+IMAGE_FILES = {}
+
+def _get_image_file(file):
+    f = IMAGE_FILES.get(file)
+    if f is None:
+        f = IMAGE_FILES[file] = grf.ImageFile('sprites/' + file)
+    return f
+
+
+def _make_sprite_func(image_file, mask_file=None):
+    mask = None
+    if mask_file is not None:
+        mask = grf.FileMask(
+            _get_image_file(mask_file),
+            mode=grf.Mask.Mode.OVERDRAW,
+        )
+    image = _get_image_file(image_file)
+    return lambda *args, **kw: grf.FileSprite(image, *args, **kw, mask=mask)
+
+
+def _make_liveries(liveries, is_articulated=False):
+    # Currently unused vox stuff
+    # sprites = lib.VoxTrainFile(filename).make_sprites()
+    # if DEBUG_DIR is not None:
+    #     debug_fname = os.path.join(DEBUG_DIR, os.path.basename(filename)[:-4]) + '.png'
+    #     lib.make_debug_sprite_sheet(debug_fname, sprites, scale=5)
+
+    res = []
+    for name, l in liveries.items():
+        sprite_func = _make_sprite_func(l.image, l.mask)
+        data = {
+            'name': f' ({name})',
+            'sprites': l.template(sprite_func),
+        }
+        if l.intro_year is not None:
+            if is_articulated:
+                raise ValueError('Articulated part livery can''t have intro_year')
+            data['intro_year'] = l.intro_year
+        res.append(data)
+
+    return res
+
+
 class Train(grf.Train):
     def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, **kw):
         # Sort needed for intro year switch
+        liveries = _make_liveries(liveries)
         liveries.sort(key=lambda l: l.get('intro_year', 0))
 
         super().__init__(
@@ -52,8 +112,11 @@ class Train(grf.Train):
             code=code,
         )
 
-    def add_articulated_part(self, **props):
+    def add_articulated_part(self, liveries=None, **props):
+        if liveries is not None:
+            liveries = _make_liveries(liveries, True)
         return super().add_articulated_part(
+            liveries=liveries,
             default_cargo_type=grf.DEFAULT_CARGO_FIRST_REFITTABLE,
             **props
         )
@@ -116,6 +179,7 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
     train_idx = {}
     for t in newgrf.generators:
         if isinstance(t, Train):
+            # print(t.id, t.liveries[0]['sprites'][6].file.path)
             train_idx[t.id] = t.liveries[0]['sprites'][6]
             for apid, _, liveries, _, _ in t._articulated_parts or []:
                 train_idx[apid] = liveries[0]['sprites'][6]
