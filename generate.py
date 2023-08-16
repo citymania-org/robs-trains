@@ -1961,4 +1961,4 @@ lib.make_purchase_sprites(
     x10p,
 ).set_variant_callbacks(g)))
 
-g.write('kst_scandi_train.grf')
+grf.main(g, 'kst_scandi_train.grf')
