@@ -484,6 +484,7 @@ meii1 = Train(
     length=10,
     liveries={
         'Black and Red': Livery('1981_DK_ME_II_1_1981.png'),
+        'AutoCC': Livery('test_cc1981_DK_ME_II_1_1981.png', auto_cc=True),
         '2CC': Livery('cc1981_DK_ME_II_1_1981.png', mask='mc1981_DK_ME_II_1_1981.png'),
         '2CC alt': Livery('cc1981_DK_ME_II_1alt_1981.png', mask='mc1981_DK_ME_II_1alt_1981.png'),
     },

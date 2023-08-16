@@ -8,21 +8,39 @@ from nml.grfstrings import NewGRFString, default_lang
 
 import grf
 
+# 0xC6 range
+CC_COLOURS = (
+    (8, 24, 88),
+    (12, 36, 104),
+    (20, 52, 124),
+    (28, 68, 140),
+    (40, 92, 164),
+    (56, 120, 188),
+    (72, 152, 216),
+    (100, 172, 224)
+)
 
-class Livery:
-    def __init__(self, template, image, *, mask=None, intro_year=None):
-        self.template = template
-        self.image = image
-        self.mask = mask
-        self.intro_year = intro_year
+# 0x50 range
+CC2_COLOURS = (
+    (8, 52, 0),
+    (16, 64, 0),
+    (32, 80, 4),
+    (48, 96, 4),
+    (64, 112, 12),
+    (84, 132, 20),
+    (104, 148, 28),
+    (128, 168, 44),
+)
 
+AUTO_REMAP = {}
+def add_remap_range(start, colors):
+    for r, g, b in colors:
+        v = 0xFF000000 | (b << 16) | (g << 8) | r
+        AUTO_REMAP[v] = start
+        start += 1
 
-class LiveryFactory:
-    def __init__(self, template):
-        self.template = template
-
-    def __call__(self, image, *, mask=None, intro_year=None):
-        return Livery(self.template, image, mask=mask, intro_year=intro_year)
+add_remap_range(0xC6, CC_COLOURS)
+add_remap_range(0x50, CC2_COLOURS)
 
 
 IMAGE_FILES = {}
@@ -32,6 +50,97 @@ def _get_image_file(file):
     if f is None:
         f = IMAGE_FILES[file] = grf.ImageFile('sprites/' + file)
     return f
+
+
+class AutoMaskingFileSprite(grf.FileSprite):
+
+    class Mask(grf.Mask):
+        def __init__(self, sprite,):
+            super().__init__(mode=grf.Mask.Mode.OVERDRAW)
+            self.sprite = sprite
+            self._image = None
+
+        def get_image(self):
+            if self._image is not None:
+                return self._image
+
+            image, bpp = self.sprite.get_image()
+            if bpp != grf.BPP_32:
+                raise ValueError('Only 32-bit RGBA sprites are currently supported with auto-masking')
+
+            npimg = np.asarray(image)
+            h, w, _ = npimg.shape
+            npview = npimg.view(dtype=np.uint32).reshape(w * h)
+            npmask = np.zeros(len(npview), dtype=np.uint8)
+            for k, v in AUTO_REMAP.items():
+                npmask[npview == k] = v
+
+            img = Image.fromarray(npmask.reshape((h, w)))
+            img.putpalette(grf.PALETTE)
+            self._image = img, grf.BPP_8
+            return self._image
+
+        def get_watched_files(self):
+            return ()
+
+        def get_hash(self):
+            # it's auto-generated so just return something non-none for sprite hash to work
+            return True
+
+    def __init__(self, *args, **kw):
+        super().__init__(*args, **kw, mask=self.Mask(self))
+        self._image = None
+
+    def get_image(self):
+        if self._image is None:
+            self._image = super().get_image()
+        return self._image
+
+
+class Livery:
+    def __init__(self, template, image, *, mask=None, intro_year=None, auto_cc=False):
+        self.template = template
+        self.image = image
+        self.mask = mask
+        self.intro_year = intro_year
+        self.auto_cc = auto_cc
+
+    def _get_sprite_func(self):
+        image_obj = _get_image_file(self.image)
+        if self.auto_cc:
+            return lambda *args, **kw: AutoMaskingFileSprite(image_obj, *args, **kw)
+        mask_obj = None
+        if self.mask is not None:
+            mask_obj = _get_image_file(self.mask)
+
+        def f(x, y, w, h, *args, **kw):
+            mask = None
+            if mask_obj is not None:
+                mask = grf.FileMask(
+                    mask_obj,
+                    x, y, w, h,
+                    mode=grf.Mask.Mode.OVERDRAW,
+                )
+            return grf.FileSprite(
+                image_obj,
+                x, y, w, h,
+                *args,
+                **kw,
+                mask=mask,
+            )
+
+        return f
+
+    def get_sprites(self):
+        return self.template(self._get_sprite_func())
+
+
+class LiveryFactory:
+    def __init__(self, template):
+        self.template = template
+
+    def __call__(self, image, *, mask=None, intro_year=None, auto_cc=False):
+        return Livery(self.template, image, mask=mask, intro_year=intro_year, auto_cc=auto_cc)
 
 
 def _make_sprite_func(image_file, mask_file=None):
@@ -54,10 +163,9 @@ def _make_liveries(liveries, is_articulated=False):
 
     res = []
     for name, l in liveries.items():
-        sprite_func = _make_sprite_func(l.image, l.mask)
         data = {
             'name': f' ({name})',
-            'sprites': l.template(sprite_func),
+            'sprites': l.get_sprites(),
         }
         if l.intro_year is not None:
             if is_articulated:
@@ -88,7 +196,7 @@ class Train(grf.Train):
         if len(self.liveries) <= 1:
             return
 
-        year_count = Counter(l.get('intro_year', 0) for l in liveries)
+        year_count = Counter(l.get('intro_ryear', 0) for l in liveries)
 
         cur_count = year_count.get(0, 0)
         code = []
