@@ -13,9 +13,30 @@ os.makedirs(DEBUG_DIR, exist_ok=True)
 
 PALETTE = lib.read_palette_file('pal.png')
 BLACK1 = PALETTE[0: 4] + PALETTE[8: 12]
+MAGENTA = PALETTE[44: 52]
+PINK = PALETTE[52: 60]
 RED = PALETTE[60: 68]
 MAROON = PALETTE[68: 76]
-CREAM = PALETTE[108: 116]
+ORANGE = PALETTE[76: 84]
+BROWN = PALETTE[84: 92]
+REDBROWN = PALETTE[92: 100]
+YELLOWBROWN = PALETTE[100: 108]
+DCREAM = PALETTE[108: 116]
+CREAM = PALETTE[116: 124]
+YELLOW = PALETTE[124: 132]
+LIME = PALETTE[132: 140]
+GREEN = PALETTE[140: 148]
+DGREEN = PALETTE[148: 156]
+TURQUOISE = PALETTE[156: 164]
+DTURQUOISE = PALETTE[164: 172]
+SKY = PALETTE[172: 180]
+BLUE = PALETTE[180: 188]
+DBLUE = PALETTE[188: 196]
+COLBALT = PALETTE[196: 204]
+MAUVE = PALETTE[204: 212]
+LAVENDER = PALETTE[212: 220]
+PURPLE = PALETTE[220: 228]
+DPURPLE = PALETTE[228: 236]
 
 g = grf.NewGRF(
     grfid=b'KSTA',
@@ -308,7 +329,7 @@ mzi1 = Train(
     name='MZ I',
     length=10,
     liveries={
-        'Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=CREAM),
+        'Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('cc1967_DK_MZ_I_1_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -406,7 +427,7 @@ mzii1 = Train(
     name='MZ II',
     length=10,
     liveries={
-        'Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=CREAM),
+        'Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('cc1967_DK_MZ_I_1_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -603,11 +624,9 @@ meii1 = Train(
     name='ME II',
     length=10,
     liveries={
-        'Black and Red': Livery('1981_DK_ME_II_1_1981.png'),
-        'AutoCC': Livery('test_cc1981_DK_ME_II_1_1981.png', auto_cc=True),
-        'CCReplace': Livery('test_cc1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
-        '2CC': Livery('cc1981_DK_ME_II_1_1981.png', mask='mc1981_DK_ME_II_1_1981.png'),
-        '2CC alt': Livery('cc1981_DK_ME_II_1alt_1981.png', mask='mc1981_DK_ME_II_1alt_1981.png'),
+        'Black and Red': Livery('cc1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
+        '2CC': Livery('cc1981_DK_ME_II_1_1981.png', auto_cc=True),
+        '2CC alt': Livery('cc1981_DK_ME_II_1alt_1981.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -639,9 +658,9 @@ meii2 = Train(
     name='ME II',
     length=10,
     liveries={
-        'Red and Blue': Livery('1981_DK_ME_II_2_2000.png'),
-        '2CC': Livery('cc1981_DK_ME_II_2_2000.png', mask='mc1981_DK_ME_II_2_2000.png'),
-        '2CC alt': Livery('cc1981_DK_ME_II_3_2006.png', mask='mc1981_DK_ME_II_3_2006.png'),
+        'Red and Blue': Livery('cc1981_DK_ME_II_2_2000.png', cc_replace=RED, cc2_replace=COLBALT),
+        '2CC': Livery('cc1981_DK_ME_II_2_2000.png', auto_cc=True),
+        '2CC alt': Livery('cc1981_DK_ME_II_3_2006.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -673,9 +692,9 @@ meii3 = Train(
     name='ME II',
     length=10,
     liveries={
-        'Blue and Red': Livery('1981_DK_ME_II_3_2006.png'),
-        '2CC': Livery('cc1981_DK_ME_II_3_2006.png', mask='mc1981_DK_ME_II_3_2006.png'),
-        '2CC alt': Livery('cc1981_DK_ME_II_2_2000.png', mask='mc1981_DK_ME_II_2_2000.png'),
+        'Blue and Red': Livery('cc1981_DK_ME_II_3_2006.png', cc_replace=RED, cc2_replace=COLBALT),
+        '2CC': Livery('cc1981_DK_ME_II_3_2006.png', auto_cc=True),
+        '2CC alt': Livery('cc1981_DK_ME_II_2_2000.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -707,8 +726,8 @@ meii4 = Train(
     name='ME II',
     length=10,
     liveries={
-        'Red': Livery('1981_DK_ME_II_4_2016.png'),
-        '2CC': Livery('cc1981_DK_ME_II_4_2016.png', mask='mc1981_DK_ME_II_4_2016.png'),
+        'Red': Livery('cc1981_DK_ME_II_4_2016.png', cc_replace=RED, cc2_replace=RED),
+        '2CC': Livery('cc1981_DK_ME_II_4_2016.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -938,9 +957,9 @@ ea1 = Train(
     name='EA',
     length=9,
     liveries={
-        'Black and Red': Livery('1984_DK_EA_1_1984.png'),
-        '2CC': Livery('cc1984_DK_EA_1_1984.png', mask='mc1984_DK_EA_1_1984.png'),
-        '2CC alt': Livery('cc1984_DK_EA_1alt_1984.png', mask='mc1984_DK_EA_1alt_1984.png'),
+        'Black and Red': Livery('cc1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
+        '2CC': Livery('cc1984_DK_EA_1_1984.png', auto_cc=True),
+        '2CC alt': Livery('cc1984_DK_EA_1alt_1984.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -972,9 +991,9 @@ ea2 = Train(
     name='EA',
     length=9,
     liveries={
-        'Blue and Red': Livery('1984_DK_EA_2_2006.png'),
-        '2CC': Livery('cc1984_DK_EA_2_2006.png', mask='mc1984_DK_EA_2_2006.png'),
-        '2CC alt': Livery('cc1984_DK_EA_2alt_2006.png', mask='mc1984_DK_EA_2alt_2006.png'),
+        'Blue and Red': Livery('cc1984_DK_EA_2_2006.png', cc_replace=RED, cc2_replace=COLBALT),
+        '2CC': Livery('cc1984_DK_EA_2_2006.png', auto_cc=True),
+        '2CC alt': Livery('cc1984_DK_EA_2alt_2006.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1006,8 +1025,8 @@ ea3 = Train(
     name='EA',
     length=9,
     liveries={
-        'Red': Livery('1984_DK_EA_3_2017.png'),
-        '2CC': Livery('cc1984_DK_EA_3_2017.png', mask='mc1984_DK_EA_3_2017.png'),
+        'Red': Livery('cc1984_DK_EA_3_2017.png', cc_replace=RED, cc2_replace=RED),
+        '2CC': Livery('cc1984_DK_EA_3_2017.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
