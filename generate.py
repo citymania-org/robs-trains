@@ -13,6 +13,8 @@ os.makedirs(DEBUG_DIR, exist_ok=True)
 
 PALETTE = lib.read_palette_file('pal.png')
 BLACK1 = PALETTE[0: 4] + PALETTE[8: 12]
+SILVER = PALETTE[11: 12] + PALETTE[4: 8] + PALETTE[12: 15]
+WHITE1 = PALETTE[5: 8] + PALETTE[12: 17]
 MAGENTA = PALETTE[44: 52]
 PINK = PALETTE[52: 60]
 RED = PALETTE[60: 68]
@@ -516,6 +518,39 @@ mzii3 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+mzii4 = Train(
+    id='mzii4',
+    name='TAGAB TMZ 108/109',
+    length=10,
+    liveries={
+        'TAGAB Silver and Red': Livery('cc1970_DK_MZ_II_1_2004.png', cc_replace=SILVER, cc2_replace=RED),
+        '2CC': Livery('cc1970_DK_MZ_II_1_2004.png', auto_cc=True),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(143),
+    power=3300,
+    introduction_date=date(2004, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=117,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Bought from DSB in 2004/2006',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -2008,6 +2043,7 @@ lib.make_purchase_sprites(
         mzii1,
         mzii2,
         mzii3,
+        mzii4,
     ),
     grf.VariantGroup(
         'MZ III',

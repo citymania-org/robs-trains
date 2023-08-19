@@ -89,7 +89,10 @@
             "mziii2": 384,
             "__mziv1_aa_mid": 385,
             "__mziv1_aa_tail": 386,
-            "mziv1": 387
+            "mziv1": 387,
+            "__mzii4_aa_mid": 388,
+            "__mzii4_aa_tail": 389,
+            "mzii4": 390
         }
     }
 }
