@@ -175,8 +175,8 @@ Train(
 '''
 # regular trains
 
-f4671 = Train(
-    id='f4671',
+d_d_frichs_467_1 = Train(
+    id='d_d_frichs_467_1',
     name='HFHJ Frichs 467',
     length=6,
     liveries={
@@ -207,8 +207,8 @@ f4671 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4672 = Train(
-    id='f4672',
+d_d_frichs_467_2 = Train(
+    id='d_d_frichs_467_2',
     name='HFHJ Frichs 467',
     length=6,
     liveries={
@@ -239,8 +239,8 @@ f4672 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4673 = Train(
-    id='f4673',
+d_d_frichs_467_3 = Train(
+    id='d_d_frichs_467_3',
     name='HFHJ Frichs 467',
     length=6,
     liveries={
@@ -271,8 +271,8 @@ f4673 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4674 = Train(
-    id='f4674',
+d_d_frichs_467_4 = Train(
+    id='d_d_frichs_467_4',
     name='HFHJ Frichs 467',
     length=6,
     liveries={
@@ -303,8 +303,8 @@ f4674 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4675 = Train(
-    id='f4675',
+d_d_frichs_467_5 = Train(
+    id='d_d_frichs_467_5',
     name='HFHJ Frichs 467',
     length=6,
     liveries={
@@ -335,8 +335,8 @@ f4675 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4681 = Train(
-    id='f4681',
+d_d_frichs_468_1 = Train(
+    id='d_d_frichs_468_1',
     name='OHJ Frichs 468',
     length=6,
     liveries={
@@ -367,8 +367,8 @@ f4681 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4682 = Train(
-    id='f4682',
+d_d_frichs_468_2 = Train(
+    id='d_d_frichs_468_2',
     name='OHJ Frichs 468',
     length=6,
     liveries={
@@ -399,8 +399,8 @@ f4682 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4683 = Train(
-    id='f4683',
+d_d_frichs_468_3 = Train(
+    id='d_d_frichs_468_3',
     name='OHJ Frichs 468',
     length=6,
     liveries={
@@ -719,8 +719,8 @@ f4711 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 '''
-f4721 = Train(
-    id='f4721',
+d_d_frichs_472_1 = Train(
+    id='d_d_frichs_472_1',
     name='VLTJ Frichs 472',
     length=6,
     liveries={
@@ -751,8 +751,8 @@ f4721 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4722 = Train(
-    id='f4722',
+d_d_frichs_472_2 = Train(
+    id='d_d_frichs_472_2',
     name='VLTJ Frichs 472',
     length=6,
     liveries={
@@ -783,8 +783,8 @@ f4722 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4723 = Train(
-    id='f4723',
+d_d_frichs_472_3 = Train(
+    id='d_d_frichs_472_3',
     name='VLTJ Frichs 472',
     length=6,
     liveries={
@@ -815,8 +815,8 @@ f4723 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4724 = Train(
-    id='f4724',
+d_d_frichs_472_4 = Train(
+    id='d_d_frichs_472_4',
     name='VLTJ Frichs 472',
     length=6,
     liveries={
@@ -847,8 +847,8 @@ f4724 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4725 = Train(
-    id='f4725',
+d_d_frichs_472_5 = Train(
+    id='d_d_frichs_472_5',
     name='VLTJ Frichs 472',
     length=6,
     liveries={
@@ -879,8 +879,8 @@ f4725 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4731 = Train(
-    id='f4731',
+d_d_frichs_473_1 = Train(
+    id='d_d_frichs_473_1',
     name='GDS Frichs 473',
     length=6,
     liveries={
@@ -911,8 +911,8 @@ f4731 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4732 = Train(
-    id='f4732',
+d_d_frichs_473_2 = Train(
+    id='d_d_frichs_473_2',
     name='GDS Frichs 473',
     length=6,
     liveries={
@@ -943,8 +943,8 @@ f4732 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4733 = Train(
-    id='f4733',
+d_d_frichs_473_3 = Train(
+    id='d_d_frichs_473_3',
     name='GDS Frichs 473',
     length=6,
     liveries={
@@ -975,8 +975,8 @@ f4733 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4741 = Train(
-    id='f4741',
+d_d_frichs_474_1 = Train(
+    id='d_d_frichs_474_1',
     name='FFJ Frichs 474',
     length=6,
     liveries={
@@ -1007,8 +1007,8 @@ f4741 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4742 = Train(
-    id='f4742',
+d_d_frichs_474_2 = Train(
+    id='d_d_frichs_474_2',
     name='OHJ Frichs 474',
     length=6,
     liveries={
@@ -1039,8 +1039,8 @@ f4742 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4743 = Train(
-    id='f4743',
+d_d_frichs_474_3 = Train(
+    id='d_d_frichs_474_3',
     name='OHJ Frichs 474',
     length=6,
     liveries={
@@ -1071,8 +1071,8 @@ f4743 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4744 = Train(
-    id='f4744',
+d_d_frichs_474_4 = Train(
+    id='d_d_frichs_474_4',
     name='OHJ Frichs 474',
     length=6,
     liveries={
@@ -1103,8 +1103,8 @@ f4744 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4745 = Train(
-    id='f4745',
+d_d_frichs_474_5 = Train(
+    id='d_d_frichs_474_5',
     name='OHJ Frichs 474',
     length=6,
     liveries={
@@ -1135,8 +1135,8 @@ f4745 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4751 = Train(
-    id='f4751',
+d_d_frichs_475_1 = Train(
+    id='d_d_frichs_475_1',
     name='AHJ Frichs 475',
     length=6,
     liveries={
@@ -1167,8 +1167,8 @@ f4751 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4752 = Train(
-    id='f4752',
+d_d_frichs_475_2 = Train(
+    id='d_d_frichs_475_2',
     name='SB Frichs 475',
     length=6,
     liveries={
@@ -1199,8 +1199,8 @@ f4752 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4753 = Train(
-    id='f4753',
+d_d_frichs_475_3 = Train(
+    id='d_d_frichs_475_3',
     name='SB Frichs 475',
     length=6,
     liveries={
@@ -1231,8 +1231,8 @@ f4753 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4754 = Train(
-    id='f4754',
+d_d_frichs_475_4 = Train(
+    id='d_d_frichs_475_4',
     name='AHJ Frichs 475',
     length=6,
     liveries={
@@ -1413,8 +1413,8 @@ mx_ii2 = Train(
     }),
 )'''
 
-mzi1 = Train(
-    id='mzi1',
+d_d_mz_i_1_dsb = Train(
+    id='d_d_mz_i_1_dsb',
     name='DSB MZ I',
     length=10,
     liveries={
@@ -1445,8 +1445,8 @@ mzi1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mzi2 = Train(
-    id='mzi2',
+d_d_mz_i_2_dsb = Train(
+    id='d_d_mz_i_2_dsb',
     name='DSB MZ I',
     length=10,
     liveries={
@@ -1478,8 +1478,8 @@ mzi2 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mzi3 = Train(
-    id='mzi3',
+d_d_mz_i_3_dsb = Train(
+    id='d_d_mz_i_3_dsb',
     name='DSB MZ I',
     length=10,
     liveries={
@@ -1511,8 +1511,8 @@ mzi3 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mzii1 = Train(
-    id='mzii1',
+d_d_mz_ii_1_dsb = Train(
+    id='d_d_mz_ii_1_dsb',
     name='DSB MZ II',
     length=10,
     liveries={
@@ -1543,8 +1543,8 @@ mzii1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mzii2 = Train(
-    id='mzii2',
+d_d_mz_ii_2_dsb = Train(
+    id='d_d_mz_ii_2_dsb',
     name='DSB MZ II',
     length=10,
     liveries={
@@ -1576,8 +1576,8 @@ mzii2 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mzii3 = Train(
-    id='mzii3',
+d_d_mz_ii_3_dsb = Train(
+    id='d_d_mz_ii_3_dsb',
     name='DSB MZ II',
     length=10,
     liveries={
@@ -1609,8 +1609,8 @@ mzii3 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mzii4 = Train(
-    id='mzii4',
+d_d_mz_ii_4_tågab = Train(
+    id='d_d_mz_ii_4_tågab',
     name='TÅGAB TMZ II',
     length=10,
     liveries={
@@ -1642,8 +1642,8 @@ mzii4 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mziii1 = Train(
-    id='mziii1',
+d_d_mz_iii_1_dsb = Train(
+    id='d_d_mz_iii_1_dsb',
     name='DSB MZ III',
     length=10,
     liveries={
@@ -1675,8 +1675,8 @@ mziii1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mziii2 = Train(
-    id='mziii2',
+d_d_mz_iii_2_dsb = Train(
+    id='d_d_mz_iii_2_dsb',
     name='DSB MZ III',
     length=10,
     liveries={
@@ -1708,8 +1708,8 @@ mziii2 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-mziv1 = Train(
-    id='mziv1',
+d_d_mz_iv_1_dsb = Train(
+    id='d_d_mz_iv_1_dsb',
     name='DSB MZ IV',
     length=10,
     liveries={
@@ -1741,8 +1741,8 @@ mziv1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-meii1 = Train(
-    id='meii1',
+d_d_me_ii_1_dsb = Train(
+    id='d_d_me_ii_1_dsb',
     name='DSB ME II',
     length=10,
     liveries={
@@ -1775,8 +1775,8 @@ meii1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-meii2 = Train(
-    id='meii2',
+d_d_me_ii_2_dsb = Train(
+    id='d_d_me_ii_2_dsb',
     name='DSB ME II',
     length=10,
     liveries={
@@ -1809,8 +1809,8 @@ meii2 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-meii3 = Train(
-    id='meii3',
+d_d_me_ii_3_dsb = Train(
+    id='d_d_me_ii_3_dsb',
     name='DSB ME II',
     length=10,
     liveries={
@@ -1843,8 +1843,8 @@ meii3 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-meii4 = Train(
-    id='meii4',
+d_d_me_ii_4_dsb = Train(
+    id='d_d_me_ii_4_dsb',
     name='DSB ME II',
     length=10,
     liveries={
@@ -2074,8 +2074,8 @@ rc6 = Train(
     }),
 )'''
 
-ea1 = Train(
-    id='ea1',
+d_e_ea_1_dsb = Train(
+    id='d_e_ea_1_dsb',
     name='DSB EA',
     length=9,
     liveries={
@@ -2108,8 +2108,8 @@ ea1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-ea2 = Train(
-    id='ea2',
+d_e_ea_2_dsb = Train(
+    id='d_e_ea_2_dsb',
     name='DSB EA',
     length=9,
     liveries={
@@ -2142,8 +2142,8 @@ ea2 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-ea3 = Train(
-    id='ea3',
+d_e_ea_3_dsb = Train(
+    id='d_e_ea_3_dsb',
     name='DSB EA',
     length=9,
     liveries={
@@ -2495,8 +2495,8 @@ b_ii2 = Train(
     }),
 )'''
 
-b1 = Train(
-    id='b1',
+d_p_b_1_dsb = Train(
+    id='d_p_b_1_dsb',
     name='DSB B',
     length=11,
     liveries={
@@ -2507,7 +2507,7 @@ b1 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b1',
+    purchase_sprite_towed_id='d_p_b_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2528,8 +2528,8 @@ b1 = Train(
     }),
 )
 
-b2 = Train(
-    id='b2',
+d_p_b_i_1_dsb = Train(
+    id='d_p_b_i_1_dsb',
     name='DSB B I',
     length=11,
     liveries={
@@ -2540,7 +2540,7 @@ b2 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b2',
+    purchase_sprite_towed_id='d_p_b_i_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2561,8 +2561,8 @@ b2 = Train(
     }),
 )
 
-b3 = Train(
-    id='b3',
+d_p_bk_i_1_dsb = Train(
+    id='d_p_bk_i_1_dsb',
     name='DSB Bk I',
     length=11,
     liveries={
@@ -2573,7 +2573,7 @@ b3 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b2',
+    purchase_sprite_towed_id='d_p_b_i_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2594,8 +2594,8 @@ b3 = Train(
     }),
 )
 
-b4 = Train(
-    id='b4',
+d_p_bk_i_2_dsb = Train(
+    id='d_p_bk_i_2_dsb',
     name='DSB Bk I mod 1983',
     length=11,
     liveries={
@@ -2606,7 +2606,7 @@ b4 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b2',
+    purchase_sprite_towed_id='d_p_b_i_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2627,8 +2627,8 @@ b4 = Train(
     }),
 )
 
-b5 = Train(
-    id='b5',
+d_p_b_i_2_dsb = Train(
+    id='d_p_b_i_2_dsb',
     name='DSB B I mod 1974',
     length=11,
     liveries={
@@ -2639,7 +2639,7 @@ b5 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b2',
+    purchase_sprite_towed_id='d_p_b_i_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2660,8 +2660,8 @@ b5 = Train(
     }),
 )
 
-a1 = Train(
-    id='a1',
+d_p_a_1_dsb = Train(
+    id='d_p_a_1_dsb',
     name='DSB A',
     length=11,
     liveries={
@@ -2672,7 +2672,7 @@ a1 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b1',
+    purchase_sprite_towed_id='d_p_b_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2693,8 +2693,8 @@ a1 = Train(
     }),
 )
 
-a2 = Train(
-    id='a2',
+d_p_a_2_dsb = Train(
+    id='d_p_a_2_dsb',
     name='DSB A',
     length=11,
     liveries={
@@ -2705,7 +2705,7 @@ a2 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b2',
+    purchase_sprite_towed_id='d_p_b_i_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2726,8 +2726,8 @@ a2 = Train(
     }),
 )
 
-a3 = Train(
-    id='a3',
+d_p_ba_1_dsb = Train(
+    id='d_p_ba_1_dsb',
     name='DSB Ba',
     length=11,
     liveries={
@@ -2738,7 +2738,7 @@ a3 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='b2',
+    purchase_sprite_towed_id='d_p_b_i_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2759,8 +2759,8 @@ a3 = Train(
     }),
 )
 
-bn1 = Train(
-    id='bn1',
+d_p_bn_1_dsb = Train(
+    id='d_p_bn_1_dsb',
     name='DSB Bn',
     length=11,
     liveries={
@@ -2771,7 +2771,7 @@ bn1 = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='bn1',
+    purchase_sprite_towed_id='d_p_bn_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -3111,31 +3111,31 @@ lib.make_purchase_sprites(
 (g.add(grf.SetPurchaseOrder(
     grf.VariantGroup(
         'Frichs 467-475 "Marcipanbrød"',
-        f4671,
-        f4672,
-        f4673,
-        f4674,
-        f4675,
-        f4681,
-        f4682,
-        f4683,
-        f4721,
-        f4722,
-        f4723,
-        f4724,
-        f4725,
-        f4731,
-        f4732,
-        f4733,
-        f4741,
-        f4742,
-        f4743,
-        f4744,
-        f4745,
-        f4751,
-        f4752,
-        f4753,
-        f4754,
+        d_d_frichs_467_1,
+        d_d_frichs_467_2,
+        d_d_frichs_467_3,
+        d_d_frichs_467_4,
+        d_d_frichs_467_5,
+        d_d_frichs_468_1,
+        d_d_frichs_468_2,
+        d_d_frichs_468_3,
+        d_d_frichs_472_1,
+        d_d_frichs_472_2,
+        d_d_frichs_472_3,
+        d_d_frichs_472_4,
+        d_d_frichs_472_5,
+        d_d_frichs_473_1,
+        d_d_frichs_473_2,
+        d_d_frichs_473_3,
+        d_d_frichs_474_1,
+        d_d_frichs_474_2,
+        d_d_frichs_474_3,
+        d_d_frichs_474_4,
+        d_d_frichs_474_5,
+        d_d_frichs_475_1,
+        d_d_frichs_475_2,
+        d_d_frichs_475_3,
+        d_d_frichs_475_4,
     ),
     #grf.VariantGroup(
     #    'MY II',
@@ -3150,29 +3150,29 @@ lib.make_purchase_sprites(
     #),
     grf.VariantGroup(
         'MZ I',
-        mzi1,
-        mzi2,
-        mzi3,
+        d_d_mz_i_1_dsb,
+        d_d_mz_i_2_dsb,
+        d_d_mz_i_3_dsb,
     ),
     grf.VariantGroup(
         'MZ II',
-        mzii1,
-        mzii2,
-        mzii3,
-        mzii4,
+        d_d_mz_ii_1_dsb,
+        d_d_mz_ii_2_dsb,
+        d_d_mz_ii_3_dsb,
+        d_d_mz_ii_4_tågab,
     ),
     grf.VariantGroup(
         'MZ III',
-        mziii1,
-        mziii2,
+        d_d_mz_iii_1_dsb,
+        d_d_mz_iii_2_dsb,
     ),
-    mziv1,
+    d_d_mz_iv_1_dsb,
     grf.VariantGroup(
         'ME II',
-        meii1,
-        meii2,
-        meii3,
-        meii4,
+        d_d_me_ii_1_dsb,
+        d_d_me_ii_2_dsb,
+        d_d_me_ii_3_dsb,
+        d_d_me_ii_4_dsb,
     ),
     #grf.VariantGroup(
     #    'Rc',
@@ -3185,9 +3185,9 @@ lib.make_purchase_sprites(
     #),
     grf.VariantGroup(
         'EA',
-        ea1,
-        ea2,
-        ea3,
+        d_e_ea_1_dsb,
+        d_e_ea_2_dsb,
+        d_e_ea_3_dsb,
     ),
     #mf_ic3,
     #er_ir4,
@@ -3200,22 +3200,22 @@ lib.make_purchase_sprites(
     #),
     grf.VariantGroup(
         'B',
-        b1,
-        b2,
-        b5,
+        d_p_b_1_dsb,
+        d_p_b_i_1_dsb,
+        d_p_b_i_2_dsb,
     ),
     grf.VariantGroup(
         'Bk I',
-        b3,
-        b4,
+        d_p_bk_i_1_dsb,
+        d_p_bk_i_2_dsb,
     ),
     grf.VariantGroup(
         'A',
-        a1,
-        a2,
+        d_p_a_1_dsb,
+        d_p_a_2_dsb,
     ),
-    a3,
-    bn1,
+    d_p_ba_1_dsb,
+    d_p_bn_1_dsb,
     #grf.VariantGroup(
     #    'B II',
     #    b_ii1,
