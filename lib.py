@@ -2,7 +2,6 @@ import os
 from collections import Counter
 
 from PIL import Image, ImageDraw
-from frozendict import frozendict
 import numpy as np
 
 from nml.grfstrings import NewGRFString, default_lang
@@ -96,12 +95,13 @@ class AutoMaskingFileSprite(grf.FileSprite):
             self._image = img, grf.BPP_8
             return self._image
 
-        def get_watched_files(self):
+        def get_resource_files(self):
             return ()
 
-        def get_hash(self):
-            # it's auto-generated so just return something non-none for sprite hash to work
-            return True
+        def get_fingerprint(self):
+            return {
+                'class': self.__class__.__name__
+            }
 
     def __init__(self, *args, **kw):
         super().__init__(*args, **kw, mask=self.Mask(self))
@@ -154,10 +154,10 @@ class CCReplacingFileSprite(grf.FileSprite):
         self._image = img, grf.BPP_32
         return self._image
 
-    def get_hash(self):
-        return grf.combine_sprite_hash(
-            super().get_hash(),
-            remap=frozendict(self.remap),
+    def get_fingerprint(self):
+        return grf.combine_fingerprint(
+            super().get_fingerprint(),
+            remap=self.remap,
         )
 
 
