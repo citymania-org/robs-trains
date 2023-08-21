@@ -1418,7 +1418,7 @@ mzi1 = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'DSB Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('cc1967_DK_MZ_I_1_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1450,7 +1450,7 @@ mzi2 = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_2_1972.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_2alt_1972.png', auto_cc=True),
     },
@@ -1483,7 +1483,7 @@ mzi3 = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_3_1986.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_3alt_1986.png', auto_cc=True),
     },
@@ -1516,7 +1516,7 @@ mzii1 = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'DSB Maroon and Cream': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('cc1967_DK_MZ_I_1_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1548,7 +1548,7 @@ mzii2 = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_2_1972.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_2alt_1972.png', auto_cc=True),
     },
@@ -1581,7 +1581,7 @@ mzii3 = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_3_1986.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_3alt_1986.png', auto_cc=True),
     },
@@ -1611,15 +1611,15 @@ mzii3 = Train(
 
 mzii4 = Train(
     id='mzii4',
-    name='TAGAB TMZ',
+    name='TÅGAB TMZ',
     length=10,
     liveries={
-        'TAGAB Silver and Red': Livery('cc1970_DK_MZ_II_1_2004.png', cc_replace=SILVER, cc2_replace=RED),
+        'TÅGAB Silver and Red': Livery('cc1970_DK_MZ_II_1_2004.png', cc_replace=SILVER, cc2_replace=RED),
         '2CC': Livery('cc1970_DK_MZ_II_1_2004.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
-    company='na',
+    company='taagab',
     power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
@@ -1647,7 +1647,7 @@ mziii1 = Train(
     name='DSB MZ III',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1972_DK_MZ_III_1_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1972_DK_MZ_III_1_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1972_DK_MZ_III_1_1972.png', auto_cc=True),
         '2CC alt': Livery('cc1972_DK_MZ_III_1alt_1972.png', auto_cc=True),
     },
@@ -1680,7 +1680,7 @@ mziii2 = Train(
     name='DSB MZ III',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1972_DK_MZ_III_2_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1972_DK_MZ_III_2_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1972_DK_MZ_III_2_1986.png', auto_cc=True),
         '2CC alt': Livery('cc1972_DK_MZ_III_2alt_1986.png', auto_cc=True),
     },
@@ -1713,7 +1713,7 @@ mziv1 = Train(
     name='DSB MZ IV',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1977_DK_MZ_IV_1_1977.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1977_DK_MZ_IV_1_1977.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1977_DK_MZ_IV_1_1977.png', auto_cc=True),
         '2CC alt': Livery('cc1977_DK_MZ_IV_1alt_1977.png', auto_cc=True),
     },
@@ -1746,7 +1746,7 @@ meii1 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Black and Red': Livery('cc1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1981_DK_ME_II_1_1981.png', auto_cc=True),
         '2CC alt': Livery('cc1981_DK_ME_II_1alt_1981.png', auto_cc=True),
     },
@@ -1780,7 +1780,7 @@ meii2 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Red and Blue': Livery('cc1981_DK_ME_II_2_2000.png', cc_replace=RED, cc2_replace=COLBALT),
+        'DSB Red and Blue': Livery('cc1981_DK_ME_II_2_2000.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('cc1981_DK_ME_II_2_2000.png', auto_cc=True),
         '2CC alt': Livery('cc1981_DK_ME_II_3_2006.png', auto_cc=True),
     },
@@ -1814,7 +1814,7 @@ meii3 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Blue and Red': Livery('cc1981_DK_ME_II_3_2006.png', cc_replace=RED, cc2_replace=COLBALT),
+        'DSB Blue and Red': Livery('cc1981_DK_ME_II_3_2006.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('cc1981_DK_ME_II_3_2006.png', auto_cc=True),
         '2CC alt': Livery('cc1981_DK_ME_II_2_2000.png', auto_cc=True),
     },
@@ -1848,7 +1848,7 @@ meii4 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Red': Livery('cc1981_DK_ME_II_4_2016.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1981_DK_ME_II_4_2016.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1981_DK_ME_II_4_2016.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2079,7 +2079,7 @@ ea1 = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Black and Red': Livery('cc1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
+        'DSB Black and Red': Livery('cc1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1984_DK_EA_1_1984.png', auto_cc=True),
         '2CC alt': Livery('cc1984_DK_EA_1alt_1984.png', auto_cc=True),
     },
@@ -2113,7 +2113,7 @@ ea2 = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Blue and Red': Livery('cc1984_DK_EA_2_2006.png', cc_replace=RED, cc2_replace=COLBALT),
+        'DSB Blue and Red': Livery('cc1984_DK_EA_2_2006.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('cc1984_DK_EA_2_2006.png', auto_cc=True),
         '2CC alt': Livery('cc1984_DK_EA_2alt_2006.png', auto_cc=True),
     },
@@ -2147,7 +2147,7 @@ ea3 = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Red': Livery('cc1984_DK_EA_3_2017.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1984_DK_EA_3_2017.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1984_DK_EA_3_2017.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2500,7 +2500,7 @@ b1 = Train(
     name='DSB B',
     length=11,
     liveries={
-        'Maroon': Livery('cc1964_DK_B_1_1964.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'DSB Maroon': Livery('cc1964_DK_B_1_1964.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('cc1964_DK_B_1_1964.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2533,7 +2533,7 @@ b2 = Train(
     name='DSB B I',
     length=11,
     liveries={
-        'Red': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_2_(B_I)_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2566,7 +2566,7 @@ b3 = Train(
     name='DSB Bk I',
     length=11,
     liveries={
-        'Red': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_2_(B_I)_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2599,7 +2599,7 @@ b4 = Train(
     name='DSB Bk I mod 1983',
     length=11,
     liveries={
-        'Red and White': Livery('cc1964_DK_B_4_(Bk_I)_1983.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red and White': Livery('cc1964_DK_B_4_(Bk_I)_1983.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_4_(Bk_I)_1983.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2632,7 +2632,7 @@ b5 = Train(
     name='DSB B I mod 1974',
     length=11,
     liveries={
-        'Red': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_2_(B_I)_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2665,7 +2665,7 @@ a1 = Train(
     name='DSB A',
     length=11,
     liveries={
-        'Maroon and Yellow': Livery('cc1966_DK_A_1_1966.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'DSB Maroon': Livery('cc1966_DK_A_1_1966.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('cc1966_DK_A_1_1966.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2698,7 +2698,7 @@ a2 = Train(
     name='DSB A',
     length=11,
     liveries={
-        'Red and Yellow': Livery('cc1966_DK_A_2_1967.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1966_DK_A_2_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1966_DK_A_2_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2731,7 +2731,7 @@ a3 = Train(
     name='DSB Ba',
     length=11,
     liveries={
-        'Red': Livery('cc1966_DK_A_3_(Ba)_1991.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1966_DK_A_3_(Ba)_1991.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1966_DK_A_3_(Ba)_1991.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2764,7 +2764,7 @@ bn1 = Train(
     name='DSB Bn',
     length=11,
     liveries={
-        'Red': Livery('cc1971_DK_Bn_1_1971.png', cc_replace=RED, cc2_replace=RED),
+        'DSB Red': Livery('cc1971_DK_Bn_1_1971.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1971_DK_Bn_1_1971.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2797,10 +2797,10 @@ bn1 = Train(
 
 ubp_i = Train(
     id='ubp_i',
-    name='UBp',
+    name='SL UBp',
     length=9,
     liveries={
-        'Original': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
+        'SL': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
     },
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=p_gauge,
@@ -2829,11 +2829,11 @@ ubp_i = Train(
 
 x10p = Train( 
     id='x10p',
-    name='X10p',
+    name='SL X10p',
     length=9,
     liveries={
-        'Original': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
-        'Overhauled': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', intro_year=2011),
+        'SL': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
+        'SL Overhauled': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', intro_year=2011),
         'Upptåget (fictional)': Livery('SE_X10p_X10p_3.png', intro_year=2011),
     },
     country='sweden',
@@ -2883,10 +2883,10 @@ x10p = Train(
 
 Co_i = Train(
     id='co_i',
-    name='Co "Grindvagn"',
+    name='SRJ Co "Grindvagn"',
     length=8,
     liveries={
-        'Original': Livery('1914_SE_Co_68-71_1_1914.png'),
+        'SRJ': Livery('1914_SE_Co_68-71_1_1914.png'),
     },
     engine_class=Train.EngineClass.STEAM,
     track_type=p_gauge,
@@ -3055,7 +3055,8 @@ COMPANY_SPRITES = {
     'cmetro': purchase_icon('lcmetro.png'),
     'øresundståg': purchase_icon('løresundståg.png'),
     'stog': purchase_icon('lstog.png'),
-    'sl': purchase_icon('lsl.png')
+    'sl': purchase_icon('lsl.png'),
+    'taagab': purchase_icon('ltågab.png'),
 }
 
 
