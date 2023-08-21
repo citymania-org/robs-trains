@@ -177,10 +177,10 @@ Train(
 
 f4671 = Train(
     id='f4671',
-    name='Frichs 467 HFHJ M 8',
+    name='HFHJ Frichs 467',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_467_1_1952.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('1952_DK_Frichs_467_1_1952.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('1952_DK_Frichs_467_1_1952.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -209,10 +209,10 @@ f4671 = Train(
 
 f4672 = Train(
     id='f4672',
-    name='Frichs 467 HFHJ M 8',
+    name='HFHJ Frichs 467',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_467_2_1958.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('1952_DK_Frichs_467_2_1958.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('1952_DK_Frichs_467_2_1958.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -241,10 +241,10 @@ f4672 = Train(
 
 f4673 = Train(
     id='f4673',
-    name='Frichs 467 HFHJ M 8',
+    name='HFHJ Frichs 467',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_467_3_1960.png', cc_replace=RED, cc2_replace=CREAM),
+        'Default': Livery('1952_DK_Frichs_467_3_1960.png', cc_replace=RED, cc2_replace=CREAM),
         '2CC': Livery('1952_DK_Frichs_467_3_1960.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -273,10 +273,10 @@ f4673 = Train(
 
 f4674 = Train(
     id='f4674',
-    name='Frichs 467 HFHJ M 8',
+    name='HFHJ Frichs 467',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_467_4_1981.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_467_4_1981.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_467_4_1981.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -305,10 +305,10 @@ f4674 = Train(
 
 f4675 = Train(
     id='f4675',
-    name='Frichs 467 HFHJ M 8',
+    name='HFHJ Frichs 467',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_467_5_1997.png', cc_replace=RED, cc2_replace=CREAM),
+        'Default': Livery('1952_DK_Frichs_467_5_1997.png', cc_replace=RED, cc2_replace=CREAM),
         '2CC': Livery('1952_DK_Frichs_467_5_1997.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -337,10 +337,10 @@ f4675 = Train(
 
 f4681 = Train(
     id='f4681',
-    name='Frichs 468 OHJ 24',
+    name='OHJ Frichs 468',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_468_1_1952.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_468_1_1952.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_468_1_1952.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -369,10 +369,10 @@ f4681 = Train(
 
 f4682 = Train(
     id='f4682',
-    name='Frichs 468 OHJ 24',
+    name='OHJ Frichs 468',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_468_2_1984.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_468_2_1984.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_468_2_1984.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -401,10 +401,10 @@ f4682 = Train(
 
 f4683 = Train(
     id='f4683',
-    name='Frichs 468 OHJ 24',
+    name='OHJ Frichs 468',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_468_3_2017.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_468_3_2017.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_468_3_2017.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -721,10 +721,10 @@ f4711 = Train(
 '''
 f4721 = Train(
     id='f4721',
-    name='Frichs 472 VLTJ ML 12',
+    name='VLTJ Frichs 472',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_472_1_1952.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_472_1_1952.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('1952_DK_Frichs_472_1_1952.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -753,10 +753,10 @@ f4721 = Train(
 
 f4722 = Train(
     id='f4722',
-    name='Frichs 472 VLTJ ML 12',
+    name='VLTJ Frichs 472',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_472_2_1968.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_472_2_1968.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_472_2_1968.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -785,10 +785,10 @@ f4722 = Train(
 
 f4723 = Train(
     id='f4723',
-    name='Frichs 472 VLTJ ML 12',
+    name='VLTJ Frichs 472',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_472_3_1980.png', cc_replace=ORANGE, cc2_replace=CREAM),
+        'Default': Livery('1952_DK_Frichs_472_3_1980.png', cc_replace=ORANGE, cc2_replace=CREAM),
         '2CC': Livery('1952_DK_Frichs_472_3_1980.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -817,10 +817,10 @@ f4723 = Train(
 
 f4724 = Train(
     id='f4724',
-    name='Frichs 472 VLTJ ML 12',
+    name='VLTJ Frichs 472',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_472_4_1997.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_472_4_1997.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_472_4_1997.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -849,10 +849,10 @@ f4724 = Train(
 
 f4725 = Train(
     id='f4725',
-    name='Frichs 472 VLTJ ML 12',
+    name='VLTJ Frichs 472',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_472_5_2009.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_472_5_2009.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('1952_DK_Frichs_472_5_2009.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -881,10 +881,10 @@ f4725 = Train(
 
 f4731 = Train(
     id='f4731',
-    name='Frichs 473 GDS L 1',
+    name='GDS Frichs 473',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_473_1_1952.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1952_DK_Frichs_473_1_1952.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('1952_DK_Frichs_473_1_1952.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -913,10 +913,10 @@ f4731 = Train(
 
 f4732 = Train(
     id='f4732',
-    name='Frichs 473 GDS L 1',
+    name='GDS Frichs 473',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_473_2_1963.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1952_DK_Frichs_473_2_1963.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('1952_DK_Frichs_473_2_1963.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -945,10 +945,10 @@ f4732 = Train(
 
 f4733 = Train(
     id='f4733',
-    name='Frichs 473 GDS L 1',
+    name='GDS Frichs 473',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_473_3_2006.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1952_DK_Frichs_473_3_2006.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('1952_DK_Frichs_473_3_2006.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -977,10 +977,10 @@ f4733 = Train(
 
 f4741 = Train(
     id='f4741',
-    name='Frichs 474 FFJ ML 1216',
+    name='FFJ Frichs 474',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_474_1_1952.png', cc_replace=MAROON, cc2_replace=BLACK1),
+        'Default': Livery('1952_DK_Frichs_474_1_1952.png', cc_replace=MAROON, cc2_replace=BLACK1),
         '2CC': Livery('1952_DK_Frichs_474_1_1952.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1009,10 +1009,10 @@ f4741 = Train(
 
 f4742 = Train(
     id='f4742',
-    name='Frichs 474 OHJ 39',
+    name='OHJ Frichs 474',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_474_2_1969.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_2_1969.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_474_2_1969.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1041,10 +1041,10 @@ f4742 = Train(
 
 f4743 = Train(
     id='f4743',
-    name='Frichs 474 OHJ 39',
+    name='OHJ Frichs 474',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_474_3_1986.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_3_1986.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_474_3_1986.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1073,10 +1073,10 @@ f4743 = Train(
 
 f4744 = Train(
     id='f4744',
-    name='Frichs 474 OHJ 39',
+    name='OHJ Frichs 474',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_474_4_1990.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_4_1990.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_474_4_1990.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1105,10 +1105,10 @@ f4744 = Train(
 
 f4745 = Train(
     id='f4745',
-    name='Frichs 474 OHJ 39',
+    name='OHJ Frichs 474',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_474_5_1993.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_5_1993.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_474_5_1993.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1137,10 +1137,10 @@ f4745 = Train(
 
 f4751 = Train(
     id='f4751',
-    name='Frichs 475 AHJ ML 5206',
+    name='AHJ Frichs 475',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_475_1_1952.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1952_DK_Frichs_475_1_1952.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1952_DK_Frichs_475_1_1952.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1169,10 +1169,10 @@ f4751 = Train(
 
 f4752 = Train(
     id='f4752',
-    name='Frichs 475 SB M 5',
+    name='SB Frichs 475',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_475_2_1976.png', cc_replace=MAROON, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_475_2_1976.png', cc_replace=MAROON, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_475_2_1976.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1201,10 +1201,10 @@ f4752 = Train(
 
 f4753 = Train(
     id='f4753',
-    name='Frichs 475 SB M 5',
+    name='SB Frichs 475',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_475_3_1977.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_475_3_1977.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_475_3_1977.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1233,10 +1233,10 @@ f4753 = Train(
 
 f4754 = Train(
     id='f4754',
-    name='Frichs 475 AHJ ML 5206',
+    name='AHJ Frichs 475',
     length=6,
     liveries={
-        'Real': Livery('1952_DK_Frichs_475_4_2008.png', cc_replace=MAROON, cc2_replace=BLACK1),
+        'Default': Livery('1952_DK_Frichs_475_4_2008.png', cc_replace=MAROON, cc2_replace=BLACK1),
         '2CC': Livery('1952_DK_Frichs_475_4_2008.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1418,7 +1418,7 @@ mzi1 = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Real': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('cc1967_DK_MZ_I_1_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1450,7 +1450,7 @@ mzi2 = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Real': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_2_1972.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_2alt_1972.png', auto_cc=True),
     },
@@ -1483,7 +1483,7 @@ mzi3 = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Real': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_3_1986.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_3alt_1986.png', auto_cc=True),
     },
@@ -1516,7 +1516,7 @@ mzii1 = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Real': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('cc1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
         '2CC': Livery('cc1967_DK_MZ_I_1_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1548,7 +1548,7 @@ mzii2 = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Real': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_2_1972.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_2alt_1972.png', auto_cc=True),
     },
@@ -1581,7 +1581,7 @@ mzii3 = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Real': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1967_DK_MZ_I_3_1986.png', auto_cc=True),
         '2CC alt': Livery('cc1967_DK_MZ_I_3alt_1986.png', auto_cc=True),
     },
@@ -1611,10 +1611,10 @@ mzii3 = Train(
 
 mzii4 = Train(
     id='mzii4',
-    name='TÅGAB TMZ',
+    name='TÅGAB TMZ II',
     length=10,
     liveries={
-        'Real': Livery('cc1970_DK_MZ_II_1_2004.png', cc_replace=SILVER, cc2_replace=RED),
+        'Default': Livery('cc1970_DK_MZ_II_1_2004.png', cc_replace=SILVER, cc2_replace=RED),
         '2CC': Livery('cc1970_DK_MZ_II_1_2004.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1637,7 +1637,7 @@ mzii4 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Bought from DSB in 2004/2006',
+        'Trivia': 'Two locomotives bought from DSB in 2004 and 2006',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -1647,7 +1647,7 @@ mziii1 = Train(
     name='DSB MZ III',
     length=10,
     liveries={
-        'Real': Livery('cc1972_DK_MZ_III_1_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1972_DK_MZ_III_1_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1972_DK_MZ_III_1_1972.png', auto_cc=True),
         '2CC alt': Livery('cc1972_DK_MZ_III_1alt_1972.png', auto_cc=True),
     },
@@ -1680,7 +1680,7 @@ mziii2 = Train(
     name='DSB MZ III',
     length=10,
     liveries={
-        'Real': Livery('cc1972_DK_MZ_III_2_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1972_DK_MZ_III_2_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1972_DK_MZ_III_2_1986.png', auto_cc=True),
         '2CC alt': Livery('cc1972_DK_MZ_III_2alt_1986.png', auto_cc=True),
     },
@@ -1713,7 +1713,7 @@ mziv1 = Train(
     name='DSB MZ IV',
     length=10,
     liveries={
-        'Real': Livery('cc1977_DK_MZ_IV_1_1977.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1977_DK_MZ_IV_1_1977.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1977_DK_MZ_IV_1_1977.png', auto_cc=True),
         '2CC alt': Livery('cc1977_DK_MZ_IV_1alt_1977.png', auto_cc=True),
     },
@@ -1746,7 +1746,7 @@ meii1 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Real': Livery('cc1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1981_DK_ME_II_1_1981.png', auto_cc=True),
         '2CC alt': Livery('cc1981_DK_ME_II_1alt_1981.png', auto_cc=True),
     },
@@ -1780,7 +1780,7 @@ meii2 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Real': Livery('cc1981_DK_ME_II_2_2000.png', cc_replace=RED, cc2_replace=COLBALT),
+        'Default': Livery('cc1981_DK_ME_II_2_2000.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('cc1981_DK_ME_II_2_2000.png', auto_cc=True),
         '2CC alt': Livery('cc1981_DK_ME_II_3_2006.png', auto_cc=True),
     },
@@ -1814,7 +1814,7 @@ meii3 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Real': Livery('cc1981_DK_ME_II_3_2006.png', cc_replace=RED, cc2_replace=COLBALT),
+        'Default': Livery('cc1981_DK_ME_II_3_2006.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('cc1981_DK_ME_II_3_2006.png', auto_cc=True),
         '2CC alt': Livery('cc1981_DK_ME_II_2_2000.png', auto_cc=True),
     },
@@ -1848,7 +1848,7 @@ meii4 = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Real': Livery('cc1981_DK_ME_II_4_2016.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1981_DK_ME_II_4_2016.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1981_DK_ME_II_4_2016.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2079,7 +2079,7 @@ ea1 = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Real': Livery('cc1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('cc1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('cc1984_DK_EA_1_1984.png', auto_cc=True),
         '2CC alt': Livery('cc1984_DK_EA_1alt_1984.png', auto_cc=True),
     },
@@ -2113,7 +2113,7 @@ ea2 = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Real': Livery('cc1984_DK_EA_2_2006.png', cc_replace=RED, cc2_replace=COLBALT),
+        'Default': Livery('cc1984_DK_EA_2_2006.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('cc1984_DK_EA_2_2006.png', auto_cc=True),
         '2CC alt': Livery('cc1984_DK_EA_2alt_2006.png', auto_cc=True),
     },
@@ -2147,7 +2147,7 @@ ea3 = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Real': Livery('cc1984_DK_EA_3_2017.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1984_DK_EA_3_2017.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1984_DK_EA_3_2017.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2500,7 +2500,7 @@ b1 = Train(
     name='DSB B',
     length=11,
     liveries={
-        'Real': Livery('cc1964_DK_B_1_1964.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('cc1964_DK_B_1_1964.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('cc1964_DK_B_1_1964.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2533,7 +2533,7 @@ b2 = Train(
     name='DSB B I',
     length=11,
     liveries={
-        'Real': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_2_(B_I)_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2566,7 +2566,7 @@ b3 = Train(
     name='DSB Bk I',
     length=11,
     liveries={
-        'Real': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_2_(B_I)_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2599,7 +2599,7 @@ b4 = Train(
     name='DSB Bk I mod 1983',
     length=11,
     liveries={
-        'Real': Livery('cc1964_DK_B_4_(Bk_I)_1983.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1964_DK_B_4_(Bk_I)_1983.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_4_(Bk_I)_1983.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2632,7 +2632,7 @@ b5 = Train(
     name='DSB B I mod 1974',
     length=11,
     liveries={
-        'Real': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1964_DK_B_2_(B_I)_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2665,7 +2665,7 @@ a1 = Train(
     name='DSB A',
     length=11,
     liveries={
-        'Real': Livery('cc1966_DK_A_1_1966.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('cc1966_DK_A_1_1966.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('cc1966_DK_A_1_1966.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2698,7 +2698,7 @@ a2 = Train(
     name='DSB A',
     length=11,
     liveries={
-        'Real': Livery('cc1966_DK_A_2_1967.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1966_DK_A_2_1967.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1966_DK_A_2_1967.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2731,7 +2731,7 @@ a3 = Train(
     name='DSB Ba',
     length=11,
     liveries={
-        'Real': Livery('cc1966_DK_A_3_(Ba)_1991.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1966_DK_A_3_(Ba)_1991.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1966_DK_A_3_(Ba)_1991.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -2764,7 +2764,7 @@ bn1 = Train(
     name='DSB Bn',
     length=11,
     liveries={
-        'Real': Livery('cc1971_DK_Bn_1_1971.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('cc1971_DK_Bn_1_1971.png', cc_replace=RED, cc2_replace=RED),
         '2CC': Livery('cc1971_DK_Bn_1_1971.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
