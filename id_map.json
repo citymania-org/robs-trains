@@ -223,7 +223,13 @@
             "d_p_ba_1_dsb": 518,
             "__d_p_bn_1_dsb_aa_mid": 519,
             "__d_p_bn_1_dsb_aa_tail": 520,
-            "d_p_bn_1_dsb": 521
+            "d_p_bn_1_dsb": 521,
+            "d_d_frichs_471_1": 522,
+            "d_d_frichs_471_2": 523,
+            "d_d_frichs_471_3": 524,
+            "d_d_frichs_471_4": 525,
+            "d_d_frichs_471_5": 526,
+            "d_d_frichs_471_6": 527
         }
     }
 }
