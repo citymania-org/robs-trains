@@ -1769,8 +1769,8 @@ d_d_mz_ii_3_dsb = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-d_d_mz_ii_4_tågab = Train(
-    id='d_d_mz_ii_4_tågab',
+d_d_mz_ii_4_taagab = Train(
+    id='d_d_mz_ii_4_taagab',
     name='TÅGAB TMZ II',
     length=10,
     liveries={
@@ -2955,9 +2955,9 @@ d_p_bn_1_dsb = Train(
 
 # 891mm narrow gauge
 
-ubp_i = Train(
-    id='ubp_i',
-    name='SL UBp',
+s_p_UBp_ii_1 = Train(
+    id='s_e_UBp_ii_1',
+    name='SL UBp II',
     length=9,
     liveries={
         'SL': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
@@ -2966,7 +2966,7 @@ ubp_i = Train(
     track_type=p_gauge,
     country='sweden',
     company='na',
-    power_type='dc',
+    power_type='na',
     purchase_sprite_towed_id='ubp_i',
     max_speed=Train.kmhish(80),
     power=0,
@@ -2987,8 +2987,8 @@ ubp_i = Train(
     }),
 )
 
-x10p = Train( 
-    id='x10p',
+s_e_X10p_1 = Train( 
+    id='s_e_X10p_1',
     name='SL X10p',
     length=9,
     liveries={
@@ -2999,7 +2999,7 @@ x10p = Train(
     country='sweden',
     company='na',
     power_type='dc',
-    purchase_sprite_towed_id='x10p_car2',
+    purchase_sprite_towed_id='s_e_X10p_1_car2',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=p_gauge_dc,
     max_speed=Train.kmhish(80),
@@ -3020,7 +3020,7 @@ x10p = Train(
         'Builder': 'ABB railcar',
     }),
 ).add_articulated_part(
-    id='x10p_car2',
+    id='s_e_X10p_1_car2',
     length=9,
     liveries={
         'Original': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
@@ -3030,7 +3030,7 @@ x10p = Train(
     cargo_capacity=80,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id='x10p_car3',
+    id='s_e_X10p_1_car3',
     length=9,
     liveries={
         'Original': Livery('xxxx_SE_X10p_UBxp_1_xxxx.png'),
@@ -3041,8 +3041,8 @@ x10p = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-Co_i = Train(
-    id='co_i',
+s_p_Co_1 = Train(
+    id='s_e_Co_1',
     name='SRJ Co "Grindvagn"',
     length=8,
     liveries={
@@ -3333,7 +3333,7 @@ lib.make_purchase_sprites(
         d_d_mz_ii_1_dsb,
         d_d_mz_ii_2_dsb,
         d_d_mz_ii_3_dsb,
-        d_d_mz_ii_4_tågab,
+        d_d_mz_ii_4_taagab,
     ),
     grf.VariantGroup(
         'MZ III',
@@ -3397,8 +3397,9 @@ lib.make_purchase_sprites(
     #),
     #Z4p,
     #Tp,
-    ubp_i,
-    x10p,
+    s_p_Co_1,
+    s_p_UBp_ii_1,
+    s_e_X10p_1,
 ).set_variant_callbacks(g)))
 
 grf.main(g, 'kst_scandi_train.grf')
