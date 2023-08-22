@@ -3124,19 +3124,19 @@ s_p_Co_1 = Train(
         'Builder': 'ASEA',
     }),
 )
-'''
-Tp = Train( 
-    id='tp',
+
+s_d_Tp_1_sj = Train( 
+    id='s_d_Tp_1_sj',
     name='Tp',
     length=5,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_Tp_1_xxxx.png',
-    }),
+    liveries={
+        'Default': Livery('SE_Tp_1.png'),
+    },
     country='sweden',
     company='na',
     power_type='diesel',
-    purchase_sprite_towed_id='tp',
-    engine_class=Train.EngineClass.DIESEL, # unsure about how to enter stats due to units
+    purchase_sprite_towed_id='s_d_Tp_1_sj',
+    engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=p_gauge,
     max_speed=Train.kmhish(80),
@@ -3152,13 +3152,15 @@ Tp = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
     additional_text=grf.fake_vehicle_info({
-        'Info': "SJ's larger narrow gauge loco",
+        'Use': 'Universal',
+        'Trivia': "SJ's larger narrow gauge loco",
+        'Builder': 'Maschinenbau GmbH and ASJ Falun',
     }),
     callbacks={'properties': {'cargo_capacity': 0},}
 )
 
 
-
+'''
 Z4p = Train( # Sport model as variant?
     id='z4p',
     name='Z4p',
