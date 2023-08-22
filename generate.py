@@ -430,13 +430,13 @@ d_d_frichs_468_3 = Train(
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
-'''
-f4701 = Train(
-    id='f4701',
-    name='Frichs 469 LJ M 32',
+
+d_d_frichs_469_1 = Train(
+    id='d_d_frichs_469_1',
+    name='LJ Frichs 469/470',
     length=6,
     liveries={
-        'Maroon': Livery('1952_DK_Frichs_469_1_1952.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_469_1_1952.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('1952_DK_Frichs_469_1_1952.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -463,12 +463,12 @@ f4701 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4702 = Train(
-    id='f4702',
-    name='Frichs 469 LJ M 32',
+d_d_frichs_469_2 = Train(
+    id='d_d_frichs_469_2',
+    name='LJ Frichs 469/470',
     length=6,
     liveries={
-        'Maroon': Livery('1952_DK_Frichs_469_2_1960.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_469_2_1960.png', cc_replace=MAROON, cc2_replace=MAROON),
         '2CC': Livery('1952_DK_Frichs_469_2_1960.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -495,12 +495,12 @@ f4702 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4703 = Train(
-    id='f4703',
-    name='Frichs 469 LJ M 32',
+d_d_frichs_469_3 = Train(
+    id='d_d_frichs_469_3',
+    name='LJ Frichs 469/470',
     length=6,
     liveries={
-        'Red and White': Livery('1952_DK_Frichs_469_3_1974.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_3_1974.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_469_3_1974.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -527,12 +527,12 @@ f4703 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4704 = Train(
-    id='f4704',
-    name='Frichs 469 LJ M 32',
+d_d_frichs_469_4 = Train(
+    id='d_d_frichs_469_4',
+    name='LJ Frichs 469/470',
     length=6,
     liveries={
-        'Red and White': Livery('1952_DK_Frichs_469_4_1976.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_4_1976.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_469_4_1976.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -559,12 +559,44 @@ f4704 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4705 = Train(
-    id='f4705',
-    name='Frichs 469 LJ M 32',
+d_d_frichs_469_8 = Train(
+    id='d_d_frichs_469_8',
+    name='SB Frichs 469',
     length=6,
     liveries={
-        'Red and White': Livery('1952_DK_Frichs_469_5_1994.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_8_1992.png', cc_replace=RED, cc2_replace=WHITE1),
+        '2CC': Livery('1952_DK_Frichs_469_8_1992.png', auto_cc=True),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(90),
+    power=750,
+    introduction_date=date(1992, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=61,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+d_d_frichs_469_5 = Train(
+    id='d_d_frichs_469_5',
+    name='LJ Frichs 470',
+    length=6,
+    liveries={
+        'Default': Livery('1952_DK_Frichs_469_5_1994.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_469_5_1994.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -591,12 +623,12 @@ f4705 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4706 = Train(
-    id='f4706',
-    name='Frichs 469 LJ M 32',
+d_d_frichs_469_6 = Train(
+    id='d_d_frichs_469_6',
+    name='LJ Frichs 470',
     length=6,
     liveries={
-        'Red and White': Livery('1952_DK_Frichs_469_6_2007.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_6_2007.png', cc_replace=RED, cc2_replace=WHITE1),
         '2CC': Livery('1952_DK_Frichs_469_6_2007.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -623,13 +655,13 @@ f4706 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4706 = Train(
-    id='f4706',
-    name='Frichs 469 LJ M 32',
+d_d_frichs_469_7 = Train(
+    id='d_d_frichs_469_7',
+    name='Contec Frichs 470',
     length=6,
     liveries={
-        'Red and White': Livery('1952_DK_Frichs_469_7_2013.png', cc_replace=RED, cc2_replace=WHITE1),
-        '2CC': Livery('1952_DK_Frichs_469_7_2013.png', auto_cc=True),
+        'Default': Livery('1952_DK_Frichs_469_7_2008.png', cc_replace=RED, cc2_replace=WHITE1),
+        '2CC': Livery('1952_DK_Frichs_469_7_2008.png', auto_cc=True),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -639,7 +671,7 @@ f4706 = Train(
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
     power=750,
-    introduction_date=date(2013, 1, 1),
+    introduction_date=date(2008, 1, 1),
     vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
@@ -655,38 +687,6 @@ f4706 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-f4701 = Train(
-    id='f4701',
-    name='Frichs 470 LJ M 32',
-    length=6,
-    liveries={
-        'Maroon and Cream': Livery('468.png', cc_replace=MAROON, cc2_replace=DCREAM),
-        '2CC': Livery('468.png', auto_cc=True),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1952, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=61,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},},
-)
-'''
 d_d_frichs_471_1 = Train(
     id='d_d_frichs_471_1',
     name='HHJ Frichs 471',
@@ -3279,6 +3279,14 @@ lib.make_purchase_sprites(
         d_d_frichs_468_1,
         d_d_frichs_468_2,
         d_d_frichs_468_3,
+        d_d_frichs_469_1,
+        d_d_frichs_469_2,
+        d_d_frichs_469_3,
+        d_d_frichs_469_4,
+        d_d_frichs_469_8,
+        d_d_frichs_469_5,
+        d_d_frichs_469_6,
+        d_d_frichs_469_7,
         d_d_frichs_471_1,
         d_d_frichs_471_2,
         d_d_frichs_471_3,
