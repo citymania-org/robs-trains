@@ -2956,7 +2956,7 @@ d_p_bn_1_dsb = Train(
 # 891mm narrow gauge
 
 s_p_UBp_ii_1 = Train(
-    id='s_e_UBp_ii_1',
+    id='s_p_UBp_ii_1',
     name='SL UBp II',
     length=9,
     liveries={
@@ -2967,7 +2967,7 @@ s_p_UBp_ii_1 = Train(
     country='sweden',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='ubp_i',
+    purchase_sprite_towed_id='s_p_UBp_ii_1',
     max_speed=Train.kmhish(80),
     power=0,
     introduction_date=date(1988, 1, 1),
@@ -2987,24 +2987,15 @@ s_p_UBp_ii_1 = Train(
     }),
 )
 
-s_e_X10p_1 = Train( 
-    id='s_e_X10p_1',
-    name='SL X10p',
+COMMON_X10p_PROPS = dict(
     length=9,
-    liveries={
-        'SL': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
-        'SL Overhauled': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', intro_year=2011),
-        'Upptåget (fictional)': Livery('SE_X10p_X10p_3.png', intro_year=2011),
-    },
     country='sweden',
     company='na',
     power_type='dc',
-    purchase_sprite_towed_id='s_e_X10p_1_car2',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=p_gauge_dc,
     max_speed=Train.kmhish(80),
     power=536,
-    introduction_date=date(1990, 1, 1),
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
@@ -3019,23 +3010,84 @@ s_e_X10p_1 = Train(
         'Trivia': 'Technically modular but always used in sets of one railcar with an unpowered trailer and a driving trailer in tow.',
         'Builder': 'ABB railcar',
     }),
+)
+
+s_e_X10p_1_sl = Train(
+    **COMMON_X10p_PROPS, 
+    id='s_e_X10p_1_sl,',
+    name='SL X10p',
+    liveries={
+        'Default': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
+    },
+    purchase_sprite_towed_id='s_e_X10p_1_sl_car2',
+    introduction_date=date(1990, 1, 1),
 ).add_articulated_part(
-    id='s_e_X10p_1_car2',
+    id='s_e_X10p_1_sl_car2',
     length=9,
     liveries={
-        'Original': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
-        'Overhauled': Livery('xxxx_SE_X10p_UBp_2_xxxx.png'),
-        'Upptåget (fictional)': Livery('SE_X10p_UBp_3.png'),
+        'Default': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
     },
     cargo_capacity=80,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
-    id='s_e_X10p_1_car3',
+    id='s_e_X10p_1_sl_car3',
     length=9,
     liveries={
-        'Original': Livery('xxxx_SE_X10p_UBxp_1_xxxx.png'),
-        'Overhauled': Livery('xxxx_SE_X10p_UBxp_2_xxxx.png'),
-        'Upptåget (fictional)': Livery('SE_X10p_UBxp_3.png'),
+        'Default': Livery('xxxx_SE_X10p_UBxp_1_xxxx.png'),
+    },
+    cargo_capacity=76,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_X10p_2_sl = Train(
+    **COMMON_X10p_PROPS, 
+    id='s_e_X10p_2_sl,',
+    name='SL X10p mod 2011',
+    liveries={
+        'Default': Livery('xxxx_SE_X10p_X10p_2_xxxx.png'),
+    },
+    purchase_sprite_towed_id='s_e_X10p_2_sl_car2',
+    introduction_date=date(2011, 1, 1),
+).add_articulated_part(
+    id='s_e_X10p_2_sl_car2',
+    length=9,
+    liveries={
+        'Default': Livery('xxxx_SE_X10p_UBp_2_xxxx.png'),
+    },
+    cargo_capacity=80,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_X10p_2_sl_car3',
+    length=9,
+    liveries={
+        'Default': Livery('xxxx_SE_X10p_UBxp_2_xxxx.png'),
+    },
+    cargo_capacity=76,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_X10p_3_ul = Train(
+    **COMMON_X10p_PROPS, 
+    id='s_e_X10p_3_ul,',
+    name='Upptåget X10p (Fictional)',
+    liveries={
+        'Default': Livery('SE_X10p_X10p_3.png'),
+    },
+    purchase_sprite_towed_id='s_e_X10p_3_ul_car2',
+    introduction_date=date(2011, 1, 1),
+).add_articulated_part(
+    id='s_e_X10p_3_ul_car2',
+    length=9,
+    liveries={
+        'Default': Livery('SE_X10p_UBp_3.png'),
+    },
+    cargo_capacity=80,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_X10p_3_ul_car3',
+    length=9,
+    liveries={
+        'Default': Livery('SE_X10p_UBxp_3.png'),
     },
     cargo_capacity=76,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -3053,7 +3105,7 @@ s_p_Co_1 = Train(
     country='sweden',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='co_i',
+    purchase_sprite_towed_id='s_e_Co_1',
     max_speed=Train.kmhish(75),
     power=0,
     introduction_date=date(1914, 1, 1),
@@ -3399,7 +3451,13 @@ lib.make_purchase_sprites(
     #Tp,
     s_p_Co_1,
     s_p_UBp_ii_1,
-    s_e_X10p_1,
+    grf.VariantGroup(
+        'X10p',
+        s_e_X10p_1_sl,
+        s_e_X10p_2_sl,
+        s_e_X10p_3_ul,
+        
+    ),
 ).set_variant_callbacks(g)))
 
 grf.main(g, 'kst_scandi_train.grf')
