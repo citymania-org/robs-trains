@@ -2953,6 +2953,39 @@ d_p_bn_1_dsb = Train(
     }),
 )
 
+d_p_bn_2_dsb = Train(
+    id='d_p_bn_2_dsb',
+    name='DSB Bn',
+    length=11,
+    liveries={
+        'Default': Livery('cc1971_DK_Bn_2_2006.png', cc_replace=COLBALT, cc2_replace=COLBALT),
+        '2CC': Livery('cc1971_DK_Bn_2_2006.png', auto_cc=True),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='d_p_bn_2_dsb',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(2006, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=40,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=80,
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class',
+        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+    }),
+)
 # 891mm narrow gauge
 
 s_p_UBp_ii_1 = Train(
@@ -3443,7 +3476,11 @@ lib.make_purchase_sprites(
         d_p_a_2_dsb,
     ),
     d_p_ba_1_dsb,
-    d_p_bn_1_dsb,
+    grf.VariantGroup(
+        'Bn',
+        d_p_bn_1_dsb,
+        d_p_bn_2_dsb,
+    ),
     #grf.VariantGroup(
     #    'B II',
     #    b_ii1,

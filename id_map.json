@@ -156,7 +156,10 @@
             "__s_p_UBp_ii_1_aa_mid": 570,
             "__s_p_UBp_ii_1_aa_tail": 571,
             "s_p_UBp_ii_1": 572,
-            "s_d_Tp_1_sj": 573
+            "s_d_Tp_1_sj": 573,
+            "__d_p_bn_2_dsb_aa_mid": 574,
+            "__d_p_bn_2_dsb_aa_tail": 575,
+            "d_p_bn_2_dsb": 576
         }
     }
 }
