@@ -159,7 +159,19 @@
             "s_d_Tp_1_sj": 573,
             "__d_p_bn_2_dsb_aa_mid": 574,
             "__d_p_bn_2_dsb_aa_tail": 575,
-            "d_p_bn_2_dsb": 576
+            "d_p_bn_2_dsb": 576,
+            "__d_p_b_ii_1_dsb_aa_mid": 577,
+            "__d_p_b_ii_1_dsb_aa_tail": 578,
+            "d_p_b_ii_1_dsb": 579,
+            "__d_p_b_ii_2_dsb_aa_mid": 580,
+            "__d_p_b_ii_2_dsb_aa_tail": 581,
+            "d_p_b_ii_2_dsb": 582,
+            "__d_p_bk_iii_1_dsb_aa_mid": 583,
+            "__d_p_bk_iii_1_dsb_aa_tail": 584,
+            "d_p_bk_iii_1_dsb": 585,
+            "__d_p_bk_iii_2_dsb_aa_mid": 586,
+            "__d_p_bk_iii_2_dsb_aa_tail": 587,
+            "d_p_bk_iii_2_dsb": 588
         }
     }
 }
