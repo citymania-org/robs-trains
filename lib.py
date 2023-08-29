@@ -8,6 +8,8 @@ from nml.grfstrings import NewGRFString, default_lang
 
 import grf
 
+CC_DEFAULT, CC_SWAPPED = 1, 2
+
 CC_START = 0xC6
 CC_COLOURS = (
     (8, 24, 88, 255),
@@ -32,7 +34,6 @@ CC2_COLOURS = (
     (128, 168, 44, 255),
 )
 
-AUTO_REMAP = {}
 def make_remap_range(colours, remap):
     if len(colours) != 8:
         raise ValueError(f'CC replacement range should contain exactly 8 colours but {len(colours)} were found')
@@ -44,9 +45,13 @@ def make_remap_range(colours, remap):
         res[v] = k
     return res
 
+AUTO_REMAP = {}
 AUTO_REMAP.update(make_remap_range(CC_COLOURS, range(CC_START, CC_START + 8)))
 AUTO_REMAP.update(make_remap_range(CC2_COLOURS, range(CC2_START, CC2_START + 8)))
 
+AUTO_REMAP_SWAPPED = {}
+AUTO_REMAP_SWAPPED.update(make_remap_range(CC2_COLOURS, range(CC_START, CC_START + 8)))
+AUTO_REMAP_SWAPPED.update(make_remap_range(CC_COLOURS, range(CC2_START, CC2_START + 8)))
 
 IMAGE_FILES = {}
 
@@ -70,7 +75,7 @@ def read_palette_file(file):
 class AutoMaskingFileSprite(grf.FileSprite):
 
     class Mask(grf.Mask):
-        def __init__(self, sprite,):
+        def __init__(self, sprite):
             super().__init__(mode=grf.Mask.Mode.OVERDRAW)
             self.sprite = sprite
             self._image = None
@@ -87,7 +92,8 @@ class AutoMaskingFileSprite(grf.FileSprite):
             h, w, _ = npimg.shape
             npview = npimg.view(dtype=np.uint32).reshape(w * h)
             npmask = np.zeros(len(npview), dtype=np.uint8)
-            for k, v in AUTO_REMAP.items():
+            remap = AUTO_REMAP_SWAPPED if self.sprite.cc_mode == CC_SWAPPED else AUTO_REMAP
+            for k, v in remap.items():
                 npmask[npview == k] = v
 
             img = Image.fromarray(npmask.reshape((h, w)))
@@ -103,14 +109,21 @@ class AutoMaskingFileSprite(grf.FileSprite):
                 'class': self.__class__.__name__
             }
 
-    def __init__(self, *args, **kw):
-        super().__init__(*args, **kw, mask=self.Mask(self))
+    def __init__(self, file, cc_mode, *args, **kw):
+        super().__init__(file, *args, **kw, mask=self.Mask(self))
         self._image = None
+        self.cc_mode = cc_mode
 
     def get_image(self):
         if self._image is None:
             self._image = super().get_image()
         return self._image
+
+    def get_fingerprint(self):
+        return grf.combine_fingerprint(
+            super().get_fingerprint(),
+            cm_mode=self.cc_mode,
+        )
 
 
 class CCReplacingFileSprite(grf.FileSprite):
@@ -162,7 +175,7 @@ class CCReplacingFileSprite(grf.FileSprite):
 
 
 class Livery:
-    def __init__(self, template, image, *, mask=None, intro_year=None, auto_cc=False, cc_replace=None, cc2_replace=None):
+    def __init__(self, template, image, *, mask=None, intro_year=None, auto_cc=None, cc_replace=None, cc2_replace=None):
         self.template = template
         self.image = image
         self.mask = mask
@@ -171,7 +184,7 @@ class Livery:
         self.cc_replace = cc_replace
         self.cc2_replace = cc2_replace
         has_cc_replace = (cc_replace is not None or cc2_replace is not None)
-        if self.auto_cc and has_cc_replace:
+        if self.auto_cc is not None and has_cc_replace:
             raise ValueError('cc_replace/cc2_replace and auto_cc can''t be used together')
         if self.auto_cc and self.mask is not None:
             raise ValueError('mask and auto_cc can''t be used together')
@@ -180,8 +193,8 @@ class Livery:
 
     def _get_sprite_func(self):
         image_obj = _get_image_file(self.image)
-        if self.auto_cc:
-            return lambda *args, **kw: AutoMaskingFileSprite(image_obj, *args, **kw)
+        if self.auto_cc is not None:
+            return lambda *args, **kw: AutoMaskingFileSprite(image_obj, self.auto_cc, *args, **kw)
         if self.cc_replace or self.cc2_replace:
             return lambda *args, **kw: CCReplacingFileSprite(image_obj, self.cc_replace, self.cc2_replace, *args, **kw)
         mask_obj = None
@@ -214,7 +227,7 @@ class LiveryFactory:
     def __init__(self, template):
         self.template = template
 
-    def __call__(self, image, *, mask=None, intro_year=None, auto_cc=False, cc_replace=None, cc2_replace=None):
+    def __call__(self, image, *, mask=None, intro_year=None, auto_cc=None, cc_replace=None, cc2_replace=None):
         return Livery(self.template, image, mask=mask, intro_year=intro_year, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
 
 
