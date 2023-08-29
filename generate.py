@@ -3122,6 +3122,39 @@ d_p_bk_iii_2_dsb = Train(
         'Use': '2nd class',
     }),
 )
+
+s_w_Gblssy_2_gc = Train(
+    id='s_w_Gblssy_2_gc',
+    name='GC Gblss-y',
+    length=7,
+    liveries={
+        'Default': Livery('2000_SE_Gblssy_2_2000.png'),
+        '2CC': Livery('2000_SE_Gblssy_2_2000.png', mask='2000_SE_Gblssy_2_2000_MASK.png'),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='s_w_Gblssy_2_gc',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(2000, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=17,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=1, # to be decided
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.MAIL,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Dedicated mail trains',
+    }),
+)
 # 891mm narrow gauge
 
 s_p_UBp_ii_1 = Train(
