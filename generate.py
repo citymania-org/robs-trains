@@ -1645,7 +1645,7 @@ d_d_mz_i_3_dsb = Train(
     liveries={
         'Default': Livery('1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1967_DK_MZ_I_3alt_1986.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1710,7 +1710,7 @@ d_d_mz_ii_2_dsb = Train(
     liveries={
         'Default': Livery('1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1967_DK_MZ_I_2_1972.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1967_DK_MZ_I_2alt_1972.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1967_DK_MZ_I_2_1972.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1743,7 +1743,7 @@ d_d_mz_ii_3_dsb = Train(
     liveries={
         'Default': Livery('1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1967_DK_MZ_I_3alt_1986.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1809,7 +1809,7 @@ d_d_mz_iii_1_dsb = Train(
     liveries={
         'Default': Livery('1972_DK_MZ_III_1_1972.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1972_DK_MZ_III_1_1972.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1972_DK_MZ_III_1alt_1972.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1972_DK_MZ_III_1_1972.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1842,7 +1842,7 @@ d_d_mz_iii_2_dsb = Train(
     liveries={
         'Default': Livery('1972_DK_MZ_III_2_1986.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1972_DK_MZ_III_2_1986.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1972_DK_MZ_III_2alt_1986.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1972_DK_MZ_III_2_1986.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1875,7 +1875,7 @@ d_d_mz_iv_1_dsb = Train(
     liveries={
         'Default': Livery('1977_DK_MZ_IV_1_1977.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1977_DK_MZ_IV_1_1977.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1977_DK_MZ_IV_1alt_1977.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1977_DK_MZ_IV_1_1977.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1908,7 +1908,7 @@ d_d_me_ii_1_dsb = Train(
     liveries={
         'Default': Livery('1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1981_DK_ME_II_1_1981.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1981_DK_ME_II_1alt_1981.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1981_DK_ME_II_1_1981.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1942,7 +1942,7 @@ d_d_me_ii_2_dsb = Train(
     liveries={
         'Default': Livery('1981_DK_ME_II_2_2000.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1981_DK_ME_II_3_2006.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1974,9 +1974,9 @@ d_d_me_ii_3_dsb = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Default': Livery('1981_DK_ME_II_3_2006.png', cc_replace=RED, cc2_replace=COLBALT),
-        '2CC': Livery('1981_DK_ME_II_3_2006.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_DEFAULT),
+        'Default': Livery('1981_DK_ME_II_2_2000.png', cc_replace=COLBALT, cc2_replace=RED),
+        '2CC': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2241,7 +2241,7 @@ d_e_ea_1_dsb = Train(
     liveries={
         'Default': Livery('1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
         '2CC': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1984_DK_EA_1alt_1984.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2275,7 +2275,7 @@ d_e_ea_2_dsb = Train(
     liveries={
         'Default': Livery('1984_DK_EA_2_2006.png', cc_replace=RED, cc2_replace=COLBALT),
         '2CC': Livery('1984_DK_EA_2_2006.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1984_DK_EA_2alt_2006.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1984_DK_EA_2_2006.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2994,7 +2994,7 @@ d_p_b_ii_1_dsb = Train(
     liveries={
         'Default': Livery('2002_DK_B_II_1_2002.png', cc_replace=COLBALT, cc2_replace=WHITE1),
         '2CC': Livery('2002_DK_B_II_1_2002.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_B_II_1alt_2002.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('2002_DK_B_II_1_2002.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -3028,7 +3028,7 @@ d_p_b_ii_2_dsb = Train(
     liveries={
         'Default': Livery('2002_DK_B_II_2_2012.png', cc_replace=COLBALT, cc2_replace=WHITE1),
         '2CC': Livery('2002_DK_B_II_2_2012.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_B_II_2alt_2012.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('2002_DK_B_II_2_2012.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -3062,7 +3062,7 @@ d_p_bk_iii_1_dsb = Train(
     liveries={
         'Default': Livery('2002_DK_Bk_III_1_2002.png', cc_replace=COLBALT, cc2_replace=WHITE1),
         '2CC': Livery('2002_DK_Bk_III_1_2002.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_Bk_III_1alt_2002.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('2002_DK_Bk_III_1_2002.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -3096,7 +3096,7 @@ d_p_bk_iii_2_dsb = Train(
     liveries={
         'Default': Livery('2002_DK_Bk_III_2_2012.png', cc_replace=COLBALT, cc2_replace=WHITE1),
         '2CC': Livery('2002_DK_Bk_III_2_2012.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_Bk_III_2alt_2012.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('2002_DK_Bk_III_2_2012.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
