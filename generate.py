@@ -1975,8 +1975,8 @@ d_d_me_ii_3_dsb = Train(
     length=10,
     liveries={
         'Default': Livery('1981_DK_ME_II_2_2000.png', cc_replace=COLBALT, cc2_replace=RED),
-        '2CC': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_SWAPPED),
+        '2CC': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_SWAPPED),
+        '2CC alt': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_DEFAULT),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
