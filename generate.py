@@ -73,7 +73,7 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
     ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
     ('MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
     ('nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
-    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 3kv dc
+    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 1.5kv dc
     ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
 ])
 
@@ -174,6 +174,43 @@ Train(
 )
 '''
 # regular trains
+
+# steam locos
+
+s_s_N_ii_1_sj = Train(
+    id='s_s_N_ii_1_sj',
+    name='SJ N II',
+    length=5,
+    liveries={
+        'Default': Livery('1900_SE_N_II_1.png', cc_replace=BLACK1, cc2_replace=BLACK1),
+        '2CC': Livery('1900_SE_N_II_1.png', auto_cc=lib.CC_DEFAULT),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='steam',
+    engine_class=Train.EngineClass.STEAM,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(45),
+    power=1000, # come up with value
+    introduction_date=date(1900, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=55,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Shunting',
+        'Builder': 'Multible',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+# diesel locos
 
 d_d_frichs_467_1 = Train(
     id='d_d_frichs_467_1',
@@ -3155,6 +3192,7 @@ s_w_Gblssy_2_gc = Train(
         'Use': 'Dedicated mail trains',
     }),
 )
+
 # 891mm narrow gauge
 
 s_p_UBp_ii_1 = Train(
