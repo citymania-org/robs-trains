@@ -3334,18 +3334,18 @@ s_e_X10p_3_ul = Train(
 )
 
 s_p_Co_1 = Train(
-    id='s_e_Co_1',
+    id='s_p_Co_1',
     name='SRJ Co "Grindvagn"',
     length=8,
     liveries={
-        'SRJ': Livery('1914_SE_Co_68-71_1_1914.png'),
+        'Default': Livery('1914_SE_Co_68-71_1_1914.png'),
     },
     engine_class=Train.EngineClass.STEAM,
     track_type=p_gauge,
     country='sweden',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='s_e_Co_1',
+    purchase_sprite_towed_id='s_p_Co_1',
     max_speed=Train.kmhish(75),
     power=0,
     introduction_date=date(1914, 1, 1),
@@ -3367,7 +3367,7 @@ s_p_Co_1 = Train(
 
 s_d_Tp_1_sj = Train( 
     id='s_d_Tp_1_sj',
-    name='Tp',
+    name='SJ Tp',
     length=5,
     liveries={
         'Default': Livery('SE_Tp_1.png'),
@@ -3399,25 +3399,22 @@ s_d_Tp_1_sj = Train(
     callbacks={'properties': {'cargo_capacity': 0},}
 )
 
-
-'''
-Z4p = Train( # Sport model as variant?
-    id='z4p',
-    name='Z4p',
+s_d_Z4p_1_srj = Train( # Sport model as variant?
+    id='s_d_Z4p_1_srj',
+    name='SJ Z4p',
     length=3,
-    liveries=make_liveries({
-        'SRJ/SJ': '1947_SE_Z4p_1_1947.png',
-        'NKIJ': '1947_SE_Z4p_2_xxxx.png',
-        'DONJ': '1947_SE_Z4p_3_xxxx.png',
-        'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
-        'SL Red': '1947_SE_Z4p_5_xxxx.png',
-    
-    }),
+    liveries={
+        'SRJ/SJ': Livery('1947_SE_Z4p_1_1947.png'),
+    #    'NKIJ': '1947_SE_Z4p_2_xxxx.png',
+    #    'DONJ': '1947_SE_Z4p_3_xxxx.png',
+    #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
+    #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
+    },
     country='sweden',
     company='na',
     power_type='diesel',
-    purchase_sprite_towed_id='z4p',
-    engine_class=Train.EngineClass.DIESEL, # unsure about how to enter stats due to units
+    purchase_sprite_towed_id='s_p_Co_1',
+    engine_class=Train.EngineClass.DIESEL, 
     sound_effects=modern_diesel_sound,
     track_type=p_gauge,
     max_speed=Train.kmhish(40),
@@ -3437,6 +3434,8 @@ Z4p = Train( # Sport model as variant?
     }),
     callbacks={'properties': {'cargo_capacity': 0},}
 )
+
+'''
 
 x15p = Train( # todo make it work with the length for mus
     id='x15p',
@@ -3700,8 +3699,8 @@ lib.make_purchase_sprites(
     #    b_ii1,
     #    b_ii2,
     #),
-    #Z4p,
-    #Tp,
+    s_d_Z4p_1_srj,
+    s_d_Tp_1_sj,
     s_p_Co_1,
     s_p_UBp_ii_1,
     grf.VariantGroup(
