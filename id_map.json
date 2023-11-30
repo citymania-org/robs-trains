@@ -175,7 +175,11 @@
             "s_w_Gblssy_2_gc": 589,
             "s_s_N_ii_1_sj": 590,
             "s_d_Z4p_1_srj": 591,
-            "s_d_Z4p_2_NKLJ": 592
+            "s_d_Z4p_2_NKLJ": 592,
+            "alignment_narrow": 593,
+            "__alignment_narrow_aa_mid": 594,
+            "__alignment_narrow_aa_tail": 595,
+            "s_d_Z4p_3_DONJ": 596
         }
     }
 }
