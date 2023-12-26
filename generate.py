@@ -3193,6 +3193,40 @@ s_w_Gblssy_2_gc = Train(
     }),
 )
 
+s_w_Gblssy_2_gc = Train(
+    id='s_w_Hbis_sj',
+    name='SJ Hbis',
+    length=7,
+    liveries={
+        'Default': Livery('1972_SE_Hbis_1972.png', cc_replace=REDBROWN, cc2_replace=REDBROWN),
+        '2CC': Livery('1972_SE_Hbis_1972.png', auto_cc=lib.CC_DEFAULT),
+        '2CC alt': Livery('1972_SE_Hbis_1972.png', auto_cc=lib.CC_SWAPPED),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='s_w_Hbis_sj',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(100),
+    power=0,
+    introduction_date=date(1972, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=17,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=1, # to be decided
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PIECE_GOODS,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Freight',
+    }),
+)
+
 # 891mm narrow gauge
 
 s_p_UBp_ii_1 = Train(
@@ -3285,6 +3319,9 @@ s_e_X10p_2_sl = Train(
     name='SL X10p mod 2011',
     liveries={
         'Default': Livery('xxxx_SE_X10p_X10p_2_xxxx.png'),
+        '2CC': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
+        'Upptåget (Fictional)': Livery('SE_X10p_X10p_3.png'),
+        'Upptåget 2CC': Livery('SE_X10p_X10p_3.png', auto_cc=lib.CC_DEFAULT),
     },
     purchase_sprite_towed_id='s_e_X10p_2_sl_car2',
     introduction_date=date(2011, 1, 1),
@@ -3293,6 +3330,9 @@ s_e_X10p_2_sl = Train(
     length=9,
     liveries={
         'Default': Livery('xxxx_SE_X10p_UBp_2_xxxx.png'),
+        '2CC': Livery('xxxx_SE_X10p_UBp_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
+        'Upptåget (Fictional)': Livery('SE_X10p_UBp_3.png'),
+        'Upptåget 2CC': Livery('SE_X10p_UBp_3.png', auto_cc=lib.CC_DEFAULT),
     },
     cargo_capacity=80,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -3301,33 +3341,9 @@ s_e_X10p_2_sl = Train(
     length=9,
     liveries={
         'Default': Livery('xxxx_SE_X10p_UBxp_2_xxxx.png'),
-    },
-    cargo_capacity=76,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-
-s_e_X10p_3_ul = Train(
-    **COMMON_X10p_PROPS, 
-    id='s_e_X10p_3_ul,',
-    name='Upptåget X10p (Fictional)',
-    liveries={
-        'Default': Livery('SE_X10p_X10p_3.png'),
-    },
-    purchase_sprite_towed_id='s_e_X10p_3_ul_car2',
-    introduction_date=date(2011, 1, 1),
-).add_articulated_part(
-    id='s_e_X10p_3_ul_car2',
-    length=9,
-    liveries={
-        'Default': Livery('SE_X10p_UBp_3.png'),
-    },
-    cargo_capacity=80,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-).add_articulated_part(
-    id='s_e_X10p_3_ul_car3',
-    length=9,
-    liveries={
-        'Default': Livery('SE_X10p_UBxp_3.png'),
+        '2CC': Livery('xxxx_SE_X10p_UBxp_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
+        'Upptåget (Fictional)': Livery('SE_X10p_UBxp_3.png'),
+        'Upptåget 2CC': Livery('SE_X10p_UBxp_3.png', auto_cc=lib.CC_DEFAULT),
     },
     cargo_capacity=76,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -3780,7 +3796,6 @@ lib.make_purchase_sprites(
         'X10p',
         s_e_X10p_1_sl,
         s_e_X10p_2_sl,
-        s_e_X10p_3_ul, 
     ),
 ).set_variant_callbacks(g)))
 
