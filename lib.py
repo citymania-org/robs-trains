@@ -41,7 +41,8 @@ def make_remap_range(colours, remap):
         raise ValueError(f'CC replacement range should contain exactly 8 colours but {len(remap)} were found')
     res = {}
     for (r, g, b, a), k in zip(colours, remap):
-        v = (a << 24) | (b << 16) | (g << 8) | r
+        # v = (a << 24) | (b << 16) | (g << 8) | r
+        v = (r, g, b)
         res[v] = k
     return res
 
@@ -63,114 +64,69 @@ def _get_image_file(file):
 
 
 def read_palette_file(file):
-    npimg = np.array(Image.open(file).convert('RGBA'))
-    h, w, _ = npimg.shape
-    npview = npimg.view(dtype=np.uint32).reshape((h, w))
+    rgb = np.array(Image.open(file).convert('RGB'))
+    h, w, _ = rgb.shape
     res = []
     for i in range(h * 8):
-        res.append(npview[i // 8, i % 8])
+        res.append(tuple(map(int, rgb[i // 8, i % 8])))
     return res
 
 
 class AutoMaskingFileSprite(grf.FileSprite):
-
-    class Mask(grf.Mask):
-        def __init__(self, sprite):
-            super().__init__(mode=grf.Mask.Mode.OVERDRAW)
-            self.sprite = sprite
-            self._image = None
-
-        def get_image(self):
-            if self._image is not None:
-                return self._image
-
-            image, bpp = self.sprite.get_image()
-            if bpp != grf.BPP_32:
-                raise RuntimeError('Only 32-bit RGBA sprites are currently supported with auto-masking')
-
-            npimg = np.asarray(image)
-            h, w, _ = npimg.shape
-            npview = npimg.view(dtype=np.uint32).reshape(w * h)
-            npmask = np.zeros(len(npview), dtype=np.uint8)
-            remap = AUTO_REMAP_SWAPPED if self.sprite.cc_mode == CC_SWAPPED else AUTO_REMAP
-            for k, v in remap.items():
-                npmask[npview == k] = v
-
-            img = Image.fromarray(npmask.reshape((h, w)))
-            img.putpalette(grf.PALETTE)
-            self._image = img, grf.BPP_8
-            return self._image
-
-        def get_resource_files(self):
-            return ()
-
-        def get_fingerprint(self):
-            return {
-                'class': self.__class__.__name__
-            }
-
     def __init__(self, file, cc_mode, *args, **kw):
-        super().__init__(file, *args, **kw, mask=self.Mask(self))
-        self._image = None
+        super().__init__(file, *args, **kw)
         self.cc_mode = cc_mode
 
-    def get_image(self):
-        if self._image is None:
-            self._image = super().get_image()
-        return self._image
+    def get_image_layers(self, encoder=None):
+        w, h, rgb, alpha, mask = super().get_image_layers(encoder=encoder)
+        assert mask is None
+        t0 = time.time()
+
+        mask = np.zeros((h, w), dtype=np.uint8)
+        remap = AUTO_REMAP_SWAPPED if self.cc_mode == CC_SWAPPED else AUTO_REMAP
+        for k, v in remap.items():
+            mask[rgb == k] = v
+
+        if encoder is not None:
+            encoder.count_custom('Generating auto CC masks', time.time() - t0)
+
+        return w, h, rgb, alpha, mask
 
     def get_fingerprint(self):
         return grf.combine_fingerprint(
             super().get_fingerprint(),
-            cm_mode=self.cc_mode,
+            cc_mode=self.cc_mode,
         )
 
 
 class CCReplacingFileSprite(grf.FileSprite):
     def __init__(self, file, cc_replace, cc2_replace, *args, **kw):
-        super().__init__(file, *args, **kw, mask=None)
+        super().__init__(file, *args, **kw)
         self._image = None
         remap = {}
         if cc_replace:
             remap.update(make_remap_range(CC_COLOURS, cc_replace))
         if cc2_replace:
             remap.update(make_remap_range(CC2_COLOURS, cc2_replace))
-
-        if remap and isinstance(next(iter(remap.values())), tuple):
-            remap = {
-                k: (a << 24) | (b << 16) | (g << 8) | r
-                for k, (r, g, b, a) in remap.items()
-            }
-        else:
-            remap = {
-                k: int(v)
-                for k, v in remap.items()
-            }
-
         self.remap = remap
 
-    def get_image(self):
-        if self._image is not None:
-            return self._image
-        image, bpp = super().get_image()
+    def get_image_layers(self, encoder=None):
+        w, h, rgb, alpha, mask = super().get_image_layers(encoder=encoder)
+        assert mask is None
+        t0 = time.time()
 
-        if bpp != grf.BPP_32:
-            raise RuntimeError('Only 32-bit RGBA sprites are currently supported for CC replacement')
-
-        npimg = np.asarray(image).copy()
-        h, w, _ = npimg.shape
-        npview = npimg.view(dtype=np.uint32).reshape(w * h)
         for k, v in self.remap.items():
-            npview[npview == k] = v
+            rgb[rgb == k] = v
 
-        img = Image.fromarray(npimg, 'RGBA')
-        self._image = img, grf.BPP_32
-        return self._image
+        if encoder is not None:
+            encoder.count_custom('Processing CC replacement', time.time() - t0)
+
+        return w, h, rgb, alpha, mask
 
     def get_fingerprint(self):
         return grf.combine_fingerprint(
             super().get_fingerprint(),
-            remap=self.remap,
+            remap=tuple(self.remap.items()),
         )
 
 
@@ -202,19 +158,21 @@ class Livery:
             mask_obj = _get_image_file(self.mask)
 
         def f(x, y, w, h, *args, **kw):
-            mask = None
-            if mask_obj is not None:
-                mask = grf.FileMask(
-                    mask_obj,
-                    x, y, w, h,
-                    mode=grf.Mask.Mode.OVERDRAW,
-                )
-            return grf.FileSprite(
+            sprite = grf.FileSprite(
                 image_obj,
                 x, y, w, h,
                 *args,
                 **kw,
-                mask=mask,
+            )
+            if mask_obj is None:
+                return sprite
+            return grf.WithMask(
+                sprite,
+                grf.FileSprite(
+                    mask_obj,
+                    x, y, w, h,
+                ),
+                mode=grf.MaskMode.OVERDRAW,
             )
 
         return f
