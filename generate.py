@@ -66,15 +66,15 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
     p_gauge_dc,  # SRJ
     p_gauge_15kv,  # NKIJ
 ) = g.set_railtype_table([
-    ('SAAN', 'RAIL'),  # Standard gauge track
-    ('NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
-    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
-    ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
-    ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
-    ('MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
-    ('nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
-    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 1.5kv dc
-    ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
+    ('INVS', 'SAAN', 'RAIL'),  # Standard gauge track
+    ('INVS', 'NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
+    ('INVS', 'SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
+    ('INVS', 'SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
+    ('INVS', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
+    ('INVS', 'MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
+    ('INVS', 'nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
+    ('INVS', 'nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 1.5kv dc
+    ('INVS', 'nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
 ])
 
 # we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
