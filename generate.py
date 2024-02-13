@@ -66,15 +66,15 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
     p_gauge_dc,  # SRJ
     p_gauge_15kv,  # NKIJ
 ) = g.set_railtype_table([
-    ('INVS', 'SAAN', 'RAIL'),  # Standard gauge track
-    ('INVS', 'NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
-    ('INVS', 'SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
-    ('INVS', 'SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
-    ('INVS', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
-    ('INVS', 'MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
-    ('INVS', 'nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
-    ('INVS', 'nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 1.5kv dc
-    ('INVS', 'nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
+    ('SAAN', 'RAIL'),  # Standard gauge track
+    ('NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
+    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
+    ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
+    ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
+    ('MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
+    ('nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
+    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 1.5kv dc
+    ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
 ])
 
 # we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
@@ -2985,8 +2985,25 @@ d_p_bn_1_dsb = Train(
     name='DSB Bn',
     length=11,
     liveries={
-        'Default': Livery('1971_DK_Bn_1_1971.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1971_DK_Bn_1_1971.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('b1_bd1_bn1',),
+            cc_replace=MAROON,
+            cc2_replace=MAROON
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('b1_bd1_bn1',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('b1_bd1_bn1',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -3019,14 +3036,82 @@ d_p_bn_2_dsb = Train(
     name='DSB Bn',
     length=11,
     liveries={
-        'Default': Livery('1971_DK_Bn_2_2006.png', cc_replace=COLBALT, cc2_replace=COLBALT),
-        '2CC': Livery('1971_DK_Bn_2_2006.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
     purchase_sprite_towed_id='d_p_bn_2_dsb',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(1972, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=40,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=80,
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class',
+        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+    }),
+)
+
+d_p_bn_3_dsb = Train(
+    id='d_p_bn_3_dsb',
+    name='DSB Bn',
+    length=11,
+    liveries={
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('bn3',),
+            cc_replace=COLBALT,
+            cc2_replace=COLBALT
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('bn3',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('bn',),
+            paint=('bn3',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='d_p_bn_3_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -3794,6 +3879,7 @@ lib.make_purchase_sprites(
         'Bn',
         d_p_bn_1_dsb,
         d_p_bn_2_dsb,
+        d_p_bn_3_dsb,
     ),
     grf.VariantGroup(
         'B II',
