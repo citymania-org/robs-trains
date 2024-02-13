@@ -1,8 +1,10 @@
 import os
 from collections import Counter
+from pathlib import Path
 
 from PIL import Image, ImageDraw
 import numpy as np
+from psd_tools import PSDImage
 
 from nml.grfstrings import NewGRFString, default_lang
 
@@ -54,7 +56,9 @@ AUTO_REMAP_SWAPPED = {}
 AUTO_REMAP_SWAPPED.update(make_remap_range(CC2_COLOURS, range(CC_START, CC_START + 8)))
 AUTO_REMAP_SWAPPED.update(make_remap_range(CC_COLOURS, range(CC2_START, CC2_START + 8)))
 
+THIS_FILE = grf.PythonFile(__file__)
 IMAGE_FILES = {}
+
 
 def _get_image_file(file):
     f = IMAGE_FILES.get(file)
@@ -77,18 +81,17 @@ class AutoMaskingFileSprite(grf.FileSprite):
         super().__init__(file, *args, **kw)
         self.cc_mode = cc_mode
 
-    def get_image_layers(self, encoder=None):
-        w, h, rgb, alpha, mask = super().get_image_layers(encoder=encoder)
+    def get_data_layers(self, context):
+        w, h, rgb, alpha, mask = super().get_data_layers(context)
         assert mask is None
-        t0 = time.time()
+        timer = context.start_timer()
 
         mask = np.zeros((h, w), dtype=np.uint8)
         remap = AUTO_REMAP_SWAPPED if self.cc_mode == CC_SWAPPED else AUTO_REMAP
         for k, v in remap.items():
-            mask[rgb == k] = v
+            mask[np.all(np.equal(rgb, k), axis=2)] = v
 
-        if encoder is not None:
-            encoder.count_custom('Generating auto CC masks', time.time() - t0)
+        timer.count_custom('Generating auto CC masks')
 
         return w, h, rgb, alpha, mask
 
@@ -110,16 +113,16 @@ class CCReplacingFileSprite(grf.FileSprite):
             remap.update(make_remap_range(CC2_COLOURS, cc2_replace))
         self.remap = remap
 
-    def get_image_layers(self, encoder=None):
-        w, h, rgb, alpha, mask = super().get_image_layers(encoder=encoder)
+    def get_data_layers(self, context):
+        w, h, rgb, alpha, mask = super().get_data_layers(context)
         assert mask is None
-        t0 = time.time()
+        timer = context.start_timer()
 
+        rgb = grf.np_make_writable(rgb)
         for k, v in self.remap.items():
-            rgb[rgb == k] = v
+            rgb[np.all(np.equal(rgb, k), axis=2)] = v
 
-        if encoder is not None:
-            encoder.count_custom('Processing CC replacement', time.time() - t0)
+        timer.count_custom('Processing CC replacement')
 
         return w, h, rgb, alpha, mask
 
@@ -328,6 +331,8 @@ def apply_effects(img, effects):
 
 
 def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=None):
+    return # FIXME do it with computed sprites
+
     if debug_dir:
         os.makedirs(debug_dir, exist_ok=True)
 
@@ -361,7 +366,7 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
             # return True
 
         def train_image(sprite):
-            img = sprite.get_image()[0]
+            img = sprite.make_rgba_image()
             assert img.mode == 'RGBA'
             w, h = img.size
             npimg = np.asarray(img)
@@ -696,3 +701,375 @@ class VoxTrainFile:
         )
         # self._debug_sprites(res)
         return res
+
+
+class PSDImageFile(grf.ImageFile):
+    _INDEX = {}
+
+    @classmethod
+    def get(cls, path):
+        spath = str(Path(path).resolve())
+        f = cls._INDEX.get(spath)
+        if f is None:
+            f = cls(path)
+            cls._INDEX[spath] = f
+        return f
+
+    def __init__(self, *args, **kw):
+        super().__init__(*args, **kw)
+        self._images = None
+        self._kw_requested = set()
+
+    @staticmethod
+    def _make_kw_key(layers=None):
+        if isinstance(layers, str):
+            layers = (layers,)
+        return tuple(layers or ())
+
+    def prepare(self, **kw):
+        self._kw_requested.add(self._make_kw_key(**kw))
+
+    def _load_frame(self, fname):
+        img = Image.open(fname)
+        if img.mode == 'P':
+            return (img, grf.BPP_8)
+        elif img.mode == 'RGB':
+            return (img, grf.BPP_24)
+        if img.mode != 'RGBA':
+            img = img.convert('RGBA')
+        return (img, grf.BPP_32)
+
+    def load(self):
+        if self._images is not None:
+            return
+
+        psd = PSDImage.open(self.path)
+        self._images = {}
+        layers = set(l.name for l in psd)
+
+        for kw in self._kw_requested:
+            for l in kw:
+                if l not in layers:
+                    raise ValueError(f'Unknown layer `{l}` requested.')
+
+            def layer_filter(layer):
+                return layer.name in kw
+            self._images[kw] = psd.composite(layer_filter=layer_filter)
+
+    def get_image(self, **kw):
+        self.load()
+        key = self._make_kw_key(**kw)
+        return self._images[key], grf.BPP_32
+
+
+class SpriteWrapper(grf.Sprite):
+    def __init__(self, sprites, *, name=None):
+        self.sprites = sprites
+        try:
+            f = next(iter(self._iter_sprites()))
+        except StopIteration:
+            raise ValueError('SpriteWrapper sprites to wrap')
+
+        self.sprite = None
+        if len(sprites) == 1:
+            self.sprite = next(self._iter_sprites())
+
+        super().__init__(w=f.w, h=f.h, xofs=f.xofs, yofs=f.yofs, zoom=f.zoom, bpp=f.bpp, crop=f.crop)
+
+    def _iter_sprites(self):
+        if isinstance(self.sprites, dict):
+            i = self.sprites.values()
+        else:
+            i = self.sprites
+        for s in i:
+            if s is not None:
+                yield s
+
+    def get_image_files(self):
+        return ()
+
+    def get_resource_files(self):
+        # TODO add wrapped class __file__, possibly traversing mro (do that globally?)
+        res = super().get_resource_files() + (THIS_FILE,)
+        for s in self._iter_sprites():
+            res += s.get_resource_files()
+        return res
+
+    def get_fingerprint(self):
+        res = {'class': self.__class__.__name__}
+        if isinstance(self.sprites, dict):
+            sf = {}
+            for k, s in self.sprites.items():
+                if s is None:
+                    sf[k] = None
+                else:
+                    f = s.get_fingerprint()
+                    if f is None:
+                        return None
+                    sf[k] = f
+        else:
+            sf = []
+            for s in self.sprites:
+                if s is None:
+                    sf.append(None)
+                    continue
+                f = s.get_fingerprint()
+                if f is None:
+                    return None
+                sf.append(f)
+        res['sprites'] = sf
+        return res
+
+    def prepare_files(self):
+        for s in self._iter_sprites():
+            s.prepare_files()
+
+
+class CompositeSprite(SpriteWrapper):
+    def __init__(self, sprites, **kw):
+        if len(sprites) == 0:
+            raise ValueError('CompositeSprite requires a non-empty list of sprites to compose')
+        if len(set(s.zoom for s in sprites)) > 1:
+            sprite_list = ', '.join(f'{s.name}<zoom={s.zoom}>' for s in sprites)
+            raise ValueError(f'CompositeSprite requires a list of sprites of same zoom level: {sprite_list}')
+        super().__init__(sprites, **kw)
+
+    def get_data_layers(self, context):
+        npimg = None
+        npalpha = None
+        npmask = None
+        nw, nh = self.w, self.h
+        for s in self.sprites:
+            w, h, ni, na, nm = s.get_data_layers(context)
+            timer = context.start_timer()
+
+            if nw is None:
+                nw = w
+            if nh is None:
+                nh = h
+            if nw != w or nh != h:
+                raise RuntimeError(f'CompositeSprite layers have different size: {self.sprites[0].name}({nw}, {nh}) vs {s.name}({w}, {h})')
+
+            if ni is not None:
+                if npimg is None or na is None:
+                    npimg = ni.copy()
+                    if na is not None:
+                        npalpha = na.copy()
+                    else:
+                        npalpha = None
+                else:
+                    full_mask = (na[:, :] == 255)
+                    partial_mask = (na[:, :] > 0) & ~full_mask
+
+                    npimg[full_mask] = ni[full_mask]
+                    if npalpha is not None:
+                        npalpha[full_mask] = 255
+
+                    if npalpha is None:
+                        npalpha_norm_mask = np.full(partial_mask.sum(), 1.0)
+                    else:
+                        npalpha_norm_mask = npalpha[partial_mask] / 255.0
+
+                    na_norm_mask = na[partial_mask] / 255.0
+                    resa = npalpha_norm_mask + na_norm_mask * (1 - npalpha_norm_mask)
+
+                    npimg[partial_mask] = (
+                        npimg[partial_mask] * npalpha_norm_mask[..., np.newaxis] +
+                        ni[partial_mask] * (na_norm_mask * (1.0 - npalpha_norm_mask))[..., np.newaxis]
+                    ) / resa[..., np.newaxis]
+                    if npalpha is not None:
+                        npalpha[partial_mask] = (resa * 255).astype(np.uint8)
+
+            if nm is not None:
+                if npmask is None:
+                    npmask = nm.copy()
+                else:
+                    mask = (nm[:, :] != 0)
+                    npmask[mask] = nm[mask]
+
+            timer.count_custom('Layering')
+
+        return w, h, npimg, npalpha, npmask
+
+
+
+class AutoMask(SpriteWrapper):
+    def __init__(self, sprite, cc_mode):
+        self.sprite = sprite
+        self.cc_mode = cc_mode
+        super().__init__(dict(sprite=sprite))
+
+    def get_data_layers(self, context):
+        w, h, rgb, alpha, mask = self.sprite.get_data_layers(context)
+        assert mask is None
+        timer = context.start_timer()
+
+        mask = np.zeros((h, w), dtype=np.uint8)
+        remap = AUTO_REMAP_SWAPPED if self.cc_mode == CC_SWAPPED else AUTO_REMAP
+        for k, v in remap.items():
+            mask[np.all(np.equal(rgb, k), axis=2)] = v
+
+        timer.count_custom('Generating auto CC masks')
+
+        return w, h, rgb, alpha, mask
+
+    def get_fingerprint(self):
+        return grf.combine_fingerprint(
+            super().get_fingerprint(),
+            cc_mode=self.cc_mode,
+        )
+
+
+class CCReplace(SpriteWrapper):
+    def __init__(self, sprite, cc_replace, cc2_replace):
+        remap = {}
+        if cc_replace:
+            remap.update(make_remap_range(CC_COLOURS, cc_replace))
+        if cc2_replace:
+            remap.update(make_remap_range(CC2_COLOURS, cc2_replace))
+        self.remap = remap
+        super().__init__(dict(sprite=sprite))
+
+    def get_data_layers(self, context):
+        w, h, rgb, alpha, mask = self.sprite.get_data_layers(context)
+        assert mask is None
+        timer = context.start_timer()
+
+        rgb = grf.np_make_writable(rgb)
+        for k, v in self.remap.items():
+            rgb[np.all(np.equal(rgb, k), axis=2)] = v
+
+        timer.count_custom('Processing CC replacement')
+
+        return w, h, rgb, alpha, mask
+
+    def get_fingerprint(self):
+        return grf.combine_fingerprint(
+            super().get_fingerprint(),
+            remap=tuple(self.remap.items()),
+        )
+
+
+class PSDLivery:
+
+    class Sprite(SpriteWrapper):
+        def __init__(self, *, shading, paint, palette):
+            self.palette = palette
+            super().__init__(dict(shading=shading, paint=paint))
+
+        def get_data_layers(self, context):
+            shading, paint = self.sprites['shading'], self.sprites['paint']
+
+            sw, sh, srgb, salpha, smask = shading.get_data_layers(context)
+            pw, ph, prgb, palpha, pmask = paint.get_data_layers(context)
+
+            assert smask is None and pmask is None
+            assert palpha is not None
+
+            assert sw == pw and ph == ph
+            # rgb = srgb.copy()
+            rgb = np.zeros((sh, sw, 3), dtype=np.uint8)
+            left_mask = (palpha > 0)
+            for k, l in self.palette.items():
+                pmask = np.all(np.equal(prgb, k), axis=2) & left_mask
+                if not np.any(pmask):
+                    continue
+
+                left_mask ^= pmask
+                for i, cc in enumerate(CC_COLOURS):
+                    smask = np.all(np.equal(srgb[pmask], cc[:3]), axis=1)
+                    pcopy = pmask.copy()
+                    pcopy[pcopy] = smask
+                    rgb[pcopy] = l[i]
+
+            unused_pixels = np.where(left_mask)
+            if len(unused_pixels[0]) > 0:
+                x, y = unused_pixels[0][0], unused_pixels[1][0]
+                raise RuntimeError(f'No-main colour used in paint layer, first pixel at ({x}, {y}): {tuple(prgb[y, x])}')
+
+            return sw, sh, rgb, salpha, None
+
+        def get_fingerprint(self):
+            return grf.combine_fingerprint(
+                super().get_fingerprint(),
+                palette=tuple(self.palette.items()),
+            )
+
+
+    def __init__(self, template, paint_palette, path, *, shading=None, paint=None, overlay=None, intro_year=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+        if shading is None and overlay is None:
+            raise ValueError('Sprite must use shading or overlay')
+        self.template = template
+
+        if len(paint_palette) % 8 != 0:
+            raise ValueError('Paint palette must have exactly 8 shades for each colour')
+        self._paint_palette = {}
+
+        for i, ccp in enumerate((CC_COLOURS, CC2_COLOURS)):
+            pal = [c[:3] for c in ccp]
+            if pal != paint_palette[i * 8: i * 8 + 8]:
+                raise ValueError(f'Row {i} in the paint palette doesn''t match CC colours')
+            for c in pal:
+                self._paint_palette[c] = pal
+
+        for i in range(16, len(paint_palette), 8):
+            main_colour = paint_palette[i + 4]
+            if main_colour in self._paint_palette:
+                raise ValueError(f'Colour {main_colour} is used as the main colour more than once in the paint palette (row {i})')
+            self._paint_palette[main_colour] = paint_palette[i: i + 8]
+
+        self.file = PSDImageFile.get(path)
+
+        mklist = lambda l: l if isinstance(l, (tuple, list)) else (None if l is None else (l,))
+        self.shading = mklist(shading)
+        self.paint = mklist(paint)
+        self.overlay = mklist(overlay)
+
+        self.intro_year = intro_year
+        self.auto_cc = auto_cc
+        self.cc_replace = cc_replace
+        self.cc2_replace = cc2_replace
+        self._has_cc_replace = (cc_replace is not None or cc2_replace is not None)
+        if self.auto_cc is not None and self._has_cc_replace:
+            raise ValueError('cc_replace/cc2_replace and auto_cc can''t be used together')
+
+    def _get_sprite_func(self):
+        def f(x, y, w, h, *args, **kw):
+            def mksprite(layers):
+                if layers is None:
+                    return None
+                return grf.FileSprite(
+                    self.file,
+                    x, y, w, h,
+                    *args,
+                    **kw,
+                    layers=layers,
+                )
+
+            if self.shading is None:
+                return mksprite(self.overlay)
+
+            sprite = mksprite(self.shading)
+
+            if self.paint is not None:
+                sprite = self.Sprite(
+                    shading=sprite,
+                    paint=mksprite(self.paint),
+                    palette=self._paint_palette,
+                )
+
+            if self.overlay is not None:
+                sprite = CompositeSprite((sprite, mksprite(self.overlay)))
+
+            if self.auto_cc is not None:
+                return AutoMask(sprite, self.auto_cc)
+
+            if self._has_cc_replace:
+                return CCReplace(sprite, self.cc_replace, self.cc2_replace)
+
+            return sprite
+
+        return f
+
+    def get_sprites(self):
+        return self.template(self._get_sprite_func())

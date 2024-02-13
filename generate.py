@@ -93,6 +93,8 @@ def tmpl_train(func):
     ]
 
 Livery = lib.LiveryFactory(tmpl_train)
+paint_palette = lib.read_palette_file('compal.png')
+PSDLivery = lambda *args, **kw: lib.PSDLivery(tmpl_train, paint_palette, *args, **kw)
 
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {
@@ -2276,9 +2278,31 @@ d_e_ea_1_dsb = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Default': Livery('1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
-        '2CC': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_SWAPPED),
+        'Default': PSDLivery(
+            'pp/ea.psd',
+            shading=('Layer 0',),
+            paint=('dsb 1',),
+            overlay=('dsb logo 1', 'Layer 8'),
+            cc_replace=RED,
+            cc2_replace=BLACK1
+        ),
+        '2CC': PSDLivery(
+            'pp/ea.psd',
+            shading=('Layer 0',),
+            paint=('dsb 1',),
+            overlay=('dsb logo 1', 'Layer 8'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ea.psd',
+            shading=('Layer 0',),
+            paint=('dsb 1',),
+            overlay=('dsb logo 1', 'Layer 8'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
+        # 'Default': Livery('1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
+        # '2CC': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_DEFAULT),
+        # '2CC alt': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
