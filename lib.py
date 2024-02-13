@@ -967,8 +967,8 @@ class PSDLivery:
             assert palpha is not None
 
             assert sw == pw and ph == ph
-            # rgb = srgb.copy()
-            rgb = np.zeros((sh, sw, 3), dtype=np.uint8)
+            rgb = srgb.copy()
+            # rgb = np.zeros((sh, sw, 3), dtype=np.uint8)
             left_mask = (palpha > 0)
             for k, l in self.palette.items():
                 pmask = np.all(np.equal(prgb, k), axis=2) & left_mask
