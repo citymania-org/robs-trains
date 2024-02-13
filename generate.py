@@ -1945,9 +1945,28 @@ d_d_me_ii_1_dsb = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Default': Livery('1981_DK_ME_II_1_1981.png', cc_replace=RED, cc2_replace=BLACK1),
-        '2CC': Livery('1981_DK_ME_II_1_1981.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1981_DK_ME_II_1_1981.png', auto_cc=lib.CC_SWAPPED),
+        'Default': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb1',),
+            overlay=('light'),
+            cc_replace=RED,
+            cc2_replace=BLACK1
+        ),
+        '2CC': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb1',),
+            overlay=('light'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb1',),
+            overlay=('light'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1979,9 +1998,28 @@ d_d_me_ii_2_dsb = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Default': Livery('1981_DK_ME_II_2_2000.png', cc_replace=RED, cc2_replace=COLBALT),
-        '2CC': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_SWAPPED),
+        'Default': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb2/3',),
+            overlay=('light'),
+            cc_replace=RED,
+            cc2_replace=COLBALT
+        ),
+        '2CC': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb2/3',),
+            overlay=('light'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb2/3',),
+            overlay=('light'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2013,9 +2051,28 @@ d_d_me_ii_3_dsb = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Default': Livery('1981_DK_ME_II_2_2000.png', cc_replace=COLBALT, cc2_replace=RED),
-        '2CC': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_SWAPPED),
-        '2CC alt': Livery('1981_DK_ME_II_2_2000.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb2/3',),
+            overlay=('light'),
+            cc_replace=COLBALT,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb2/3',),
+            overlay=('light'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb2/3',),
+            overlay=('light'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2047,8 +2104,28 @@ d_d_me_ii_4_dsb = Train(
     name='DSB ME II',
     length=10,
     liveries={
-        'Default': Livery('1981_DK_ME_II_4_2016.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1981_DK_ME_II_4_2016.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb4',),
+            overlay=('light'),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb4',),
+            overlay=('light'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/me.psd',
+            shading=('me',),
+            paint=('dsb4',),
+            overlay=('light'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2280,29 +2357,26 @@ d_e_ea_1_dsb = Train(
     liveries={
         'Default': PSDLivery(
             'pp/ea.psd',
-            shading=('Layer 0',),
-            paint=('dsb 1',),
-            overlay=('dsb logo 1', 'Layer 8'),
+            shading=('ea',),
+            paint=('dsb1',),
+            overlay=('light'),
             cc_replace=RED,
             cc2_replace=BLACK1
         ),
         '2CC': PSDLivery(
             'pp/ea.psd',
-            shading=('Layer 0',),
-            paint=('dsb 1',),
-            overlay=('dsb logo 1', 'Layer 8'),
+            shading=('ea',),
+            paint=('dsb1',),
+            overlay=('light'),
             auto_cc=lib.CC_DEFAULT,
         ),
         '2CC alt': PSDLivery(
             'pp/ea.psd',
-            shading=('Layer 0',),
-            paint=('dsb 1',),
-            overlay=('dsb logo 1', 'Layer 8'),
+            shading=('ea',),
+            paint=('dsb1',),
+            overlay=('light'),
             auto_cc=lib.CC_SWAPPED,
         ),
-        # 'Default': Livery('1984_DK_EA_1_1984.png', cc_replace=RED, cc2_replace=BLACK1),
-        # '2CC': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_DEFAULT),
-        # '2CC alt': Livery('1984_DK_EA_1_1984.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2334,9 +2408,28 @@ d_e_ea_2_dsb = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Default': Livery('1984_DK_EA_2_2006.png', cc_replace=RED, cc2_replace=COLBALT),
-        '2CC': Livery('1984_DK_EA_2_2006.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1984_DK_EA_2_2006.png', auto_cc=lib.CC_SWAPPED),
+        'Default': PSDLivery(
+            'pp/ea.psd',
+            shading=('ea',),
+            paint=('dsb2',),
+            overlay=('light'),
+            cc_replace=RED,
+            cc2_replace=COLBALT
+        ),
+        '2CC': PSDLivery(
+            'pp/ea.psd',
+            shading=('ea',),
+            paint=('dsb2',),
+            overlay=('light'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ea.psd',
+            shading=('ea',),
+            paint=('dsb2',),
+            overlay=('light'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2368,8 +2461,28 @@ d_e_ea_3_dsb = Train(
     name='DSB EA',
     length=9,
     liveries={
-        'Default': Livery('1984_DK_EA_3_2017.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1984_DK_EA_3_2017.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ea.psd',
+            shading=('ea',),
+            paint=('dsb3',),
+            overlay=('light'),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ea.psd',
+            shading=('ea',),
+            paint=('dsb3',),
+            overlay=('light'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ea.psd',
+            shading=('ea',),
+            paint=('dsb3',),
+            overlay=('light'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2721,8 +2834,25 @@ d_p_b_1_dsb = Train(
     name='DSB B',
     length=11,
     liveries={
-        'Default': Livery('1964_DK_B_1_1964.png', cc_replace=MAROON, cc2_replace=MAROON),
-        '2CC': Livery('1964_DK_B_1_1964.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b1_bd1_bn1',),
+            cc_replace=MAROON,
+            cc2_replace=MAROON
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b1_bd1_bn1',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b1_bd1_bn1',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2754,8 +2884,25 @@ d_p_b_i_1_dsb = Train(
     name='DSB B I',
     length=11,
     liveries={
-        'Default': Livery('1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1964_DK_B_2_(B_I)_1967.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2766,14 +2913,14 @@ d_p_b_i_1_dsb = Train(
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
-    introduction_date=date(1967, 1, 1),
+    introduction_date=date(1972, 1, 1),
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=37,
     tractive_effort_coefficient=79,
     running_cost_factor=200,
-    cargo_capacity=80,
+    cargo_capacity=60,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
@@ -2787,8 +2934,25 @@ d_p_bk_i_1_dsb = Train(
     name='DSB Bk I',
     length=11,
     liveries={
-        'Default': Livery('1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1964_DK_B_2_(B_I)_1967.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2817,11 +2981,28 @@ d_p_bk_i_1_dsb = Train(
 
 d_p_bk_i_2_dsb = Train(
     id='d_p_bk_i_2_dsb',
-    name='DSB Bk I mod 1983',
+    name='DSB Bk I',
     length=11,
     liveries={
-        'Default': Livery('1964_DK_B_4_(Bk_I)_1983.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1964_DK_B_4_(Bk_I)_1983.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('bk2',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('bk2',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('b',),
+            paint=('bk2',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2848,31 +3029,148 @@ d_p_bk_i_2_dsb = Train(
     }),
 )
 
-d_p_b_i_2_dsb = Train(
-    id='d_p_b_i_2_dsb',
-    name='DSB B I mod 1974',
+d_p_ab_1_dsb = Train(
+    id='d_p_ab_1_dsb',
+    name='DSB AB',
     length=11,
     liveries={
-        'Default': Livery('1964_DK_B_2_(B_I)_1967.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1964_DK_B_2_(B_I)_1967.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('ab1',),
+            cc_replace=MAROON,
+            cc2_replace=MAROON
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('ab1',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('ab1',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='d_p_b_i_1_dsb',
+    purchase_sprite_towed_id='d_p_ab_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
-    introduction_date=date(1974, 1, 1),
+    introduction_date=date(1969, 1, 1),
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=37,
     tractive_effort_coefficient=79,
     running_cost_factor=200,
-    cargo_capacity=60,
+    cargo_capacity=64,
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st and 2nd class',
+    }),
+)
+
+d_p_ab_2_dsb = Train(
+    id='d_p_ab_2_dsb',
+    name='DSB AB',
+    length=11,
+    liveries={
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('ab2',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('ab2',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('ab2',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='d_p_ab_2_dsb',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(1972, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=37,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=64,
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st and 2nd class',
+    }),
+)
+
+d_p_ab_3_dsb = Train(
+    id='d_p_ab_3_dsb',
+    name='DSB Bab',
+    length=11,
+    liveries={
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('ab',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='d_p_ab_3_dsb',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(1991, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=37,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=54,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
@@ -2886,8 +3184,25 @@ d_p_a_1_dsb = Train(
     name='DSB A',
     length=11,
     liveries={
-        'Default': Livery('1966_DK_A_1_1966.png', cc_replace=MAROON, cc2_replace=MAROON),
-        '2CC': Livery('1966_DK_A_1_1966.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('a1',),
+            cc_replace=MAROON,
+            cc2_replace=MAROON
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('a1',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('a1',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2919,8 +3234,25 @@ d_p_a_2_dsb = Train(
     name='DSB A',
     length=11,
     liveries={
-        'Default': Livery('1966_DK_A_2_1967.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1966_DK_A_2_1967.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('a2_an1',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('a2_an1',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('a2_an1',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -2931,7 +3263,7 @@ d_p_a_2_dsb = Train(
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
     power=0,
-    introduction_date=date(1967, 1, 1),
+    introduction_date=date(1972, 1, 1),
     vehicle_life=8,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
@@ -2947,19 +3279,36 @@ d_p_a_2_dsb = Train(
     }),
 )
 
-d_p_ba_1_dsb = Train(
-    id='d_p_ba_1_dsb',
+d_p_a_3_dsb = Train(
+    id='d_p_a_3_dsb',
     name='DSB Ba',
     length=11,
     liveries={
-        'Default': Livery('1966_DK_A_3_(Ba)_1991.png', cc_replace=RED, cc2_replace=RED),
-        '2CC': Livery('1966_DK_A_3_(Ba)_1991.png', auto_cc=lib.CC_DEFAULT),
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('a',),
+            paint=('b2_ba1_bab1_bd2_bk1_bn2',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
     },
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='d_p_b_i_1_dsb',
+    purchase_sprite_towed_id='d_p_a_3_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -2976,7 +3325,7 @@ d_p_ba_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': '2nd class',
+        'Use': '2nd class',
     }),
 )
 
@@ -3026,8 +3375,8 @@ d_p_bn_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 2nd class',
-        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Use': 'local trains, 2nd class',
+        'Trivia': '''also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
@@ -3077,8 +3426,8 @@ d_p_bn_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 2nd class',
-        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Use': 'local trains, 2nd class',
+        'Trivia': '''also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
@@ -3128,8 +3477,58 @@ d_p_bn_3_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 2nd class',
-        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Use': 'local trains, 2nd class',
+        'Trivia': '''also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+    }),
+)
+
+d_p_an_1_dsb = Train(
+    id='d_p_an_1_dsb',
+    name='DSB An',
+    length=11,
+    liveries={
+        'Default': PSDLivery(
+            'pp/ab.psd',
+            shading=('an',),
+            paint=('a2_an1',),
+            cc_replace=RED,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/ab.psd',
+            shading=('an',),
+            paint=('a2_an1',),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/ab.psd',
+            shading=('an',),
+            paint=('a2_an1',),
+            auto_cc=lib.CC_SWAPPED,
+        ),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='na',
+    purchase_sprite_towed_id='d_p_an_1_dsb',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    introduction_date=date(1972, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=40,
+    tractive_effort_coefficient=79,
+    running_cost_factor=200,
+    cargo_capacity=64,
+    cost_factor=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    loading_speed=15,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'local trains, 1st class',
     }),
 )
 
@@ -3859,22 +4258,28 @@ lib.make_purchase_sprites(
         #abs2,
     #),
     grf.VariantGroup(
+        'A',
+        d_p_a_1_dsb,
+        d_p_a_2_dsb,
+        d_p_a_3_dsb,
+    ),
+    grf.VariantGroup(
+        'AB',
+        d_p_ab_1_dsb,
+        d_p_ab_2_dsb,
+        d_p_ab_3_dsb,
+    ),
+    grf.VariantGroup(
         'B',
         d_p_b_1_dsb,
         d_p_b_i_1_dsb,
-        d_p_b_i_2_dsb,
     ),
     grf.VariantGroup(
         'Bk I',
         d_p_bk_i_1_dsb,
         d_p_bk_i_2_dsb,
     ),
-    grf.VariantGroup(
-        'A',
-        d_p_a_1_dsb,
-        d_p_a_2_dsb,
-    ),
-    d_p_ba_1_dsb,
+    d_p_an_1_dsb,
     grf.VariantGroup(
         'Bn',
         d_p_bn_1_dsb,
