@@ -1674,6 +1674,59 @@ d_d_mx_ii_2_dsb = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
+d_d_mx_ii_3_vltj = Train(
+    id='d_d_mx_ii_3_vltj',
+    name='VLTJ MX II',
+    length=9,
+    liveries={
+        'Default': PSDLivery(
+            'pp/my.psd',
+            shading=('mx',),
+            paint=('vltjmx1',),
+            overlay=('light'),
+            cc_replace=ORANGE,
+            cc2_replace=RED
+        ),
+        '2CC': PSDLivery(
+            'pp/my.psd',
+            shading=('mx',),
+            paint=('vltjmx1',),
+            overlay=('light'),
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            'pp/my.psd',
+            shading=('mx',),
+            paint=('vltjmx1',),
+            overlay=('light'),
+            auto_cc=lib.CC_SWAPPED,
+        ),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(133),
+    power=1445,
+    introduction_date=date(1993, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=89,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '''designed to be used on branch lines where a lighter locomotive is needed''',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
 d_d_myl_ii_1_dsb = Train(
     id='d_d_myl_ii_1_dsb',
     name='DSB MY II',
@@ -4473,6 +4526,7 @@ lib.make_purchase_sprites(
         'MX II',
         d_d_mx_ii_1_dsb,
         d_d_mx_ii_2_dsb,
+        d_d_mx_ii_3_vltj,
     ),
     grf.VariantGroup(
         'MY II',
