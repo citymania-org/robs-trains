@@ -105,6 +105,34 @@ modern_diesel_sound = {
     grf.SoundEvent.BREAKDOWN: grf.DefaultSound.BREAKDOWN_TRAIN_SHIP,
     grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/horn_4.wav'),
 }
+
+
+def make_psd_cc_liveries(psd_file, *, shading, paint, overlay, cc_replace, cc2_replace):
+    return {
+        'Default': PSDLivery(
+            psd_file,
+            shading=shading,
+            paint=paint,
+            overlay=overlay,
+            cc_replace=cc_replace,
+            cc2_replace=cc2_replace,
+        ),
+        '2CC': PSDLivery(
+            psd_file,
+            shading=shading,
+            paint=paint,
+            overlay=overlay,
+            auto_cc=lib.CC_DEFAULT,
+        ),
+        '2CC alt': PSDLivery(
+            psd_file,
+            shading=shading,
+            paint=paint,
+            overlay=overlay,
+            auto_cc=lib.CC_SWAPPED,
+        ),
+    }
+
 '''
 # special alignment train
 alignment16 = Train(
@@ -2575,30 +2603,14 @@ d_e_ea_1_dsb = Train(
     id='d_e_ea_1_dsb',
     name='DSB EA',
     length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb1',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=BLACK1
-        ),
-        '2CC': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb1',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb1',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
+    liveries=make_psd_cc_liveries(
+        'pp/ea.psd',
+        shading=('ea',),
+        paint=('dsb1',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=BLACK1
+    ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
