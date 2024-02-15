@@ -228,7 +228,13 @@
             "d_d_mx_ii_1_vltj": 642,
             "__d_d_mx_ii_3_vltj_aa_mid": 643,
             "__d_d_mx_ii_3_vltj_aa_tail": 644,
-            "d_d_mx_ii_3_vltj": 645
+            "d_d_mx_ii_3_vltj": 645,
+            "__d_d_my_ii_1_dsb_aa_mid": 646,
+            "__d_d_my_ii_1_dsb_aa_tail": 647,
+            "d_d_my_ii_1_dsb": 648,
+            "__d_d_my_ii_2_dsb_aa_mid": 649,
+            "__d_d_my_ii_2_dsb_aa_tail": 650,
+            "d_d_my_ii_2_dsb": 651
         }
     }
 }

@@ -1494,30 +1494,14 @@ d_d_mye_ii_1_dsb = Train(
     id='d_d_mye_ii_1_dsb',
     name='DSB MY II (early)',
     length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy1',),
-            overlay=('light'),
-            cc_replace=MAROON,
-            cc2_replace=DCREAM
-        ),
-        '2CC': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy1',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy1',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('dsbmy1',),
+        overlay=('light'),
+        cc_replace=MAROON,
+        cc2_replace=DCREAM
+    ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1543,246 +1527,101 @@ d_d_mye_ii_1_dsb = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-d_d_mye_ii_2_dsb = Train(
-    id='d_d_mye_ii_2_dsb',
-    name='DSB MY II (early)',
+COMMON_mx_ii_PROPS = dict(
     length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy2',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=BLACK1
-        ),
-        '2CC': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy2',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy2',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
     power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(133),
-    power=1700,
-    introduction_date=date(1972, 1, 1),
+    power=1445,
     vehicle_life=30,
-    model_life=144,
+    model_life=30,
     climates_available=grf.ALL_CLIMATES,
-    weight=102,
+    weight=89,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=1,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': '''Denmark's first mass-produced modern diesel locomotive''',
-    }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_d_mx_ii_1_dsb = Train(
+    **COMMON_mx_ii_PROPS,
     id='d_d_mx_ii_1_dsb',
     name='DSB MX II',
-    length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('dsbmx1',),
-            overlay=('light'),
-            cc_replace=MAROON,
-            cc2_replace=DCREAM
-        ),
-        '2CC': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('dsbmx1',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('dsbmx1',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('mx',),
+        paint=('dsbmx1',),
+        overlay=('light'),
+        cc_replace=MAROON,
+        cc2_replace=DCREAM
+    ),
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(133),
-    power=1445,
     introduction_date=date(1960, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=89,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''designed to be used on branch lines where a lighter locomotive is needed''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_d_mx_ii_2_dsb = Train(
+    **COMMON_mx_ii_PROPS,
     id='d_d_mx_ii_2_dsb',
     name='DSB MX II',
-    length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('dsbmx2',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=BLACK1
-        ),
-        '2CC': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('dsbmx2',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('dsbmx2',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('mx',),
+        paint=('dsbmx2',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=BLACK1
+    ),
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(133),
-    power=1445,
     introduction_date=date(1972, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=89,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''designed to be used on branch lines where a lighter locomotive is needed''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_d_mx_ii_3_vltj = Train(
+    **COMMON_mx_ii_PROPS,
     id='d_d_mx_ii_3_vltj',
     name='VLTJ MX II',
-    length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('vltjmx1',),
-            overlay=('light'),
-            cc_replace=ORANGE,
-            cc2_replace=RED
-        ),
-        '2CC': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('vltjmx1',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/my.psd',
-            shading=('mx',),
-            paint=('vltjmx1',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('mx',),
+        paint=('vltjmx1',),
+        overlay=('light'),
+        cc_replace=ORANGE,
+        cc2_replace=RED
+    ),
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(133),
-    power=1445,
     introduction_date=date(1993, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=89,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''designed to be used on branch lines where a lighter locomotive is needed''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-d_d_myl_ii_1_dsb = Train(
-    id='d_d_myl_ii_1_dsb',
+d_d_my_ii_1_dsb = Train(
+    id='d_d_my_ii_1_dsb',
     name='DSB MY II',
     length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy1',),
-            overlay=('light'),
-            cc_replace=MAROON,
-            cc2_replace=DCREAM
-        ),
-        '2CC': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy1',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy1',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('dsbmy1',),
+        overlay=('light'),
+        cc_replace=MAROON,
+        cc2_replace=DCREAM
+    ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -1808,34 +1647,18 @@ d_d_myl_ii_1_dsb = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-d_d_myl_ii_2_dsb = Train(
-    id='d_d_myl_ii_2_dsb',
+d_d_my_ii_2_dsb = Train(
+    id='d_d_my_ii_2_dsb',
     name='DSB MY II',
     length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy2',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=BLACK1
-        ),
-        '2CC': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy2',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/my.psd',
-            shading=('my',),
-            paint=('dsbmy2',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('dsbmy2',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=BLACK1
+    ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
@@ -4529,11 +4352,7 @@ lib.make_purchase_sprites(
         d_d_frichs_475_3,
         d_d_frichs_475_4,
     ),
-    grf.VariantGroup(
-        'MY II (early)',
-        d_d_mye_ii_1_dsb,
-        d_d_mye_ii_2_dsb,
-    ),
+    d_d_mye_ii_1_dsb,
     grf.VariantGroup(
         'MX II',
         d_d_mx_ii_1_dsb,
@@ -4542,8 +4361,8 @@ lib.make_purchase_sprites(
     ),
     grf.VariantGroup(
         'MY II',
-        d_d_myl_ii_1_dsb,
-        d_d_myl_ii_2_dsb,
+        d_d_my_ii_1_dsb,
+        d_d_my_ii_2_dsb,
     ),
     grf.VariantGroup(
         'MZ I',
