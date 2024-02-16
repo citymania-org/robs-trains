@@ -107,7 +107,7 @@ modern_diesel_sound = {
 }
 
 
-def make_psd_cc_liveries(psd_file, *, shading, paint, overlay, cc_replace, cc2_replace):
+def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc_replace, cc2_replace):
     return {
         'Default': PSDLivery(
             psd_file,
