@@ -1082,14 +1082,34 @@ d_d_mx_ii_3_vltj = Train(
     introduction_date=date(1993, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''designed to be used on branch lines where a lighter locomotive is needed''',
+        'Trivia': 'one locomotive bought from DSB in 1993 #1025'
     }),
 )
 
+COMMON_my_ii_PROPS = dict(
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(133),
+    power=1950,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=102,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
 d_d_my_ii_1_dsb = Train(
+    **COMMON_my_ii_PROPS,
     id='d_d_my_ii_1_dsb',
     name='DSB MY II',
-    length=9,
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -1098,35 +1118,19 @@ d_d_my_ii_1_dsb = Train(
         cc_replace=MAROON,
         cc2_replace=DCREAM
     ),
-    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(133),
-    power=1950,
     introduction_date=date(1964, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=102,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''a more powerful version of the famous MY locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_d_my_ii_2_dsb = Train(
+    **COMMON_my_ii_PROPS,
     id='d_d_my_ii_2_dsb',
     name='DSB MY II',
-    length=9,
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -1135,29 +1139,13 @@ d_d_my_ii_2_dsb = Train(
         cc_replace=RED,
         cc2_replace=BLACK1
     ),
-    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(133),
-    power=1950,
     introduction_date=date(1972, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=102,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''a more powerful version of the famous MY locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 # toaster
@@ -1490,45 +1478,16 @@ d_d_mz_iv_1_dsb = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-d_d_me_ii_1_dsb = Train(
-    id='d_d_me_ii_1_dsb',
-    name='DSB ME II',
+COMMON_me_ii_PROPS = dict(
     length=10,
-    liveries={
-        'Default': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb1',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=BLACK1
-        ),
-        '2CC': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb1',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb1',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
     power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
+    engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(175),
     power=3300,
-    introduction_date=date(1981, 1, 1),
     vehicle_life=30,
-    model_life=144,
+    model_life=30,
     climates_available=grf.ALL_CLIMATES,
     weight=122,
     tractive_effort_coefficient=80,
@@ -1536,170 +1495,91 @@ d_d_me_ii_1_dsb = Train(
     cargo_capacity=1,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+d_d_me_ii_1_dsb = Train(
+    **COMMON_me_ii_PROPS,
+    id='d_d_me_ii_1_dsb',
+    name='DSB ME II',
+    liveries=make_psd_cc_liveries(
+        'pp/me.psd',
+        shading=('me',),
+        paint=('dsb1',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=BLACK1
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1981, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''Denmark's final diesel locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_d_me_ii_2_dsb = Train(
+    **COMMON_me_ii_PROPS,
     id='d_d_me_ii_2_dsb',
     name='DSB ME II',
-    length=10,
-    liveries={
-        'Default': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb2/3',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=COLBALT
-        ),
-        '2CC': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb2/3',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb2/3',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/me.psd',
+        shading=('me',),
+        paint=('dsb2/3',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=COLBALT
+    ),
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(175),
-    power=3300,
     introduction_date=date(2000, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=122,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''Denmark's final diesel locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_d_me_ii_3_dsb = Train(
+    **COMMON_me_ii_PROPS,
     id='d_d_me_ii_3_dsb',
     name='DSB ME II',
-    length=10,
-    liveries={
-        'Default': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb2/3',),
-            overlay=('light'),
-            cc_replace=COLBALT,
-            cc2_replace=RED
-        ),
-        '2CC': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb2/3',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb2/3',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/me.psd',
+        shading=('me',),
+        paint=('dsb2/3',),
+        overlay=('light'),
+        cc_replace=COLBALT,
+        cc2_replace=RED
+    ),
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(175),
-    power=3300,
     introduction_date=date(2006, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=122,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''Denmark's final diesel locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_d_me_ii_4_dsb = Train(
+    **COMMON_me_ii_PROPS,
     id='d_d_me_ii_4_dsb',
     name='DSB ME II',
-    length=10,
-    liveries={
-        'Default': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb4',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=RED
-        ),
-        '2CC': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb4',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/me.psd',
-            shading=('me',),
-            paint=('dsb4',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/me.psd',
+        shading=('me',),
+        paint=('dsb4',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=RED
+    ),
     country='denmark',
     company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(175),
-    power=3300,
     introduction_date=date(2016, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=122,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''Denmark's final diesel locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 # electric locos leccy
@@ -1901,10 +1781,30 @@ rc6 = Train(
     }),
 )'''
 
+COMMON_ea_PROPS = dict(
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='25kv',
+    engine_class=Train.EngineClass.ELECTRIC, 
+    track_type=standard_gauge_25kv,
+    max_speed=Train.kmhish(175),
+    power=4962,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=84,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
 d_e_ea_1_dsb = Train(
+    **COMMON_ea_PROPS,
     id='d_e_ea_1_dsb',
     name='DSB EA',
-    length=9,
     liveries=make_psd_cc_liveries(
         'pp/ea.psd',
         shading=('ea',),
@@ -1913,135 +1813,55 @@ d_e_ea_1_dsb = Train(
         cc_replace=RED,
         cc2_replace=BLACK1
     ),
-    misc_flags=Train.Flags.USE_2CC,
     country='denmark',
     company='na',
-    power_type='25kv',
-    engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_25kv,
-    max_speed=Train.kmhish(175),
-    power=4962,
     introduction_date=date(1984, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=84,
-    tractive_effort_coefficient=150,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=30,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''Denmark's first electric locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_e_ea_2_dsb = Train(
+    **COMMON_ea_PROPS,
     id='d_e_ea_2_dsb',
     name='DSB EA',
-    length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb2',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=COLBALT
-        ),
-        '2CC': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb2',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb2',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/ea.psd',
+        shading=('ea',),
+        paint=('dsb2',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=COLBALT
+    ),
     country='denmark',
     company='na',
-    power_type='25kv',
-    engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_25kv,
-    max_speed=Train.kmhish(175),
-    power=4962,
     introduction_date=date(2006, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=84,
-    tractive_effort_coefficient=150,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=30,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''Denmark's first electric locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 d_e_ea_3_dsb = Train(
+    **COMMON_ea_PROPS,
     id='d_e_ea_3_dsb',
     name='DSB EA',
-    length=9,
-    liveries={
-        'Default': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb3',),
-            overlay=('light'),
-            cc_replace=RED,
-            cc2_replace=RED
-        ),
-        '2CC': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb3',),
-            overlay=('light'),
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            'pp/ea.psd',
-            shading=('ea',),
-            paint=('dsb3',),
-            overlay=('light'),
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    },
-    misc_flags=Train.Flags.USE_2CC,
+    liveries=make_psd_cc_liveries(
+        'pp/ea.psd',
+        shading=('ea',),
+        paint=('dsb3',),
+        overlay=('light'),
+        cc_replace=RED,
+        cc2_replace=RED
+    ),
     country='denmark',
     company='na',
-    power_type='25kv',
-    engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_25kv,
-    max_speed=Train.kmhish(175),
-    power=4962,
     introduction_date=date(2017, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=84,
-    tractive_effort_coefficient=150,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=30,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''Denmark's first electric locomotive''',
     }),
-    callbacks={'properties': {'cargo_capacity': 0},},
 )
 '''
 mf_ic3 = Train(
