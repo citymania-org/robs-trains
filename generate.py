@@ -5,133 +5,15 @@ import grf
 
 import lib
 
+from header import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_dc, standard_gauge_multi, metro, p_gauge, make_psd_cc_liveries, colours
+
 
 PURCHASE_ICONS_DIR = 'purchase list'
 DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
-PALETTE = lib.read_palette_file('pal.png')
-BLACK1 = PALETTE[0: 4] + PALETTE[8: 12]
-SILVER = PALETTE[11: 12] + PALETTE[4: 8] + PALETTE[12: 15]
-WHITE1 = PALETTE[5: 8] + PALETTE[12: 17]
-MAGENTA = PALETTE[44: 52]
-PINK = PALETTE[52: 60]
-RED = PALETTE[60: 68]
-MAROON = PALETTE[68: 76]
-ORANGE = PALETTE[76: 84]
-BROWN = PALETTE[84: 92]
-REDBROWN = PALETTE[92: 100]
-YELLOWBROWN = PALETTE[100: 108]
-DCREAM = PALETTE[108: 116]
-CREAM = PALETTE[116: 124]
-YELLOW = PALETTE[124: 132]
-LIME = PALETTE[132: 140]
-GREEN = PALETTE[140: 148]
-DGREEN = PALETTE[148: 156]
-TURQUOISE = PALETTE[156: 164]
-DTURQUOISE = PALETTE[164: 172]
-SKY = PALETTE[172: 180]
-BLUE = PALETTE[180: 188]
-DBLUE = PALETTE[188: 196]
-COLBALT = PALETTE[196: 204]
-MAUVE = PALETTE[204: 212]
-LAVENDER = PALETTE[212: 220]
-PURPLE = PALETTE[220: 228]
-DPURPLE = PALETTE[228: 236]
 
-g = grf.NewGRF(
-    grfid=b'KSTA',
-    name='KST SNDTS (ScaNDinavian Train Set)',
-    description='Scandinavian Trains made by Rob, dP and Brickblock1',
-    url='https://github.com/citymania-org/ro.bs-trains',
-    id_map_file='id_map.json',
-)
-
-Train = g.bind(lib.Train)
-
-g.add(grf.SetGlobalTrainDepotYOffset(2))
-
-g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH))
-
-# railtype table
-(
-    standard_gauge,
-    standard_gauge_multi,  # border crossing trains
-    standard_gauge_dc,  # stog and saltsjöbanan
-    standard_gauge_15kv,  # Sweden and Norway
-    standard_gauge_25kv,  # Denmark
-    metro,  # Metro
-    p_gauge,  # Swedish 3 foot gauge
-    p_gauge_dc,  # SRJ
-    p_gauge_15kv,  # NKIJ
-) = g.set_railtype_table([
-    ('SAAN', 'RAIL'),  # Standard gauge track
-    ('NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
-    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
-    ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
-    ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
-    ('MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
-    ('nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
-    ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 1.5kv dc
-    ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
-])
-
-# we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
-
-
-def tmpl_train(func):
-    return [
-        func(  0, 8, 10, 44, xofs=-4,  yofs=-21),
-        func( 20, 8, 42, 44, xofs=-24, yofs=-30),
-        func( 70, 8, 69, 44, xofs=-35, yofs=-38),
-        func(150, 8, 42, 44, xofs=-16, yofs=-30),
-        func(200, 8, 10, 44, xofs=-4,  yofs=-21),
-        func(220, 8, 42, 44, xofs=-24, yofs=-30),
-        func(270, 8, 69, 44, xofs=-35, yofs=-38),
-        func(350, 8, 42, 44, xofs=-16, yofs=-30),
-    ]
-
-Livery = lib.LiveryFactory(tmpl_train)
-paint_palette = lib.read_palette_file('compal.png')
-PSDLivery = lambda *args, **kw: lib.PSDLivery(tmpl_train, paint_palette, *args, **kw)
-
-# Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
-modern_diesel_sound = {
-    grf.SoundEvent.STOPPED: grf.RAWSound('sounds/modern_diesel_idle.wav'),
-    grf.SoundEvent.VISUAL_EFFECT: grf.RAWSound('sounds/modern_diesel_run.wav'),
-    grf.SoundEvent.RUNNING_16: grf.RAWSound('sounds/modern_diesel_coast.wav'),
-    grf.SoundEvent.START: grf.RAWSound('sounds/horn_4.wav'),
-    grf.SoundEvent.BREAKDOWN: grf.DefaultSound.BREAKDOWN_TRAIN_SHIP,
-    grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/horn_4.wav'),
-}
-
-
-def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc_replace, cc2_replace):
-    return {
-        'Default': PSDLivery(
-            psd_file,
-            shading=shading,
-            paint=paint,
-            overlay=overlay,
-            cc_replace=cc_replace,
-            cc2_replace=cc2_replace,
-        ),
-        '2CC': PSDLivery(
-            psd_file,
-            shading=shading,
-            paint=paint,
-            overlay=overlay,
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            psd_file,
-            shading=shading,
-            paint=paint,
-            overlay=overlay,
-            auto_cc=lib.CC_SWAPPED,
-        ),
-    }
 
 '''
 # special alignment train
@@ -212,7 +94,7 @@ s_s_N_ii_1_sj = Train(
     name='SJ N II',
     length=5,
     liveries={
-        'Default': Livery('1900_SE_N_II_1.png', cc_replace=BLACK1, cc2_replace=BLACK1),
+        'Default': Livery('1900_SE_N_II_1.png', cc_replace=colours["BLACK1"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1900_SE_N_II_1.png', auto_cc=lib.CC_DEFAULT),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -267,7 +149,7 @@ d_d_frichs_467_1 = Train(
     id='d_d_frichs_467_1',
     name='HFHJ Frichs 467',
     liveries={
-        'Default': Livery('1952_DK_Frichs_467_1_1952.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('1952_DK_Frichs_467_1_1952.png', cc_replace=colours["RED"], cc2_replace=colours["RED"]),
         '2CC': Livery('1952_DK_Frichs_467_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -285,7 +167,7 @@ d_d_frichs_467_2 = Train(
     id='d_d_frichs_467_2',
     name='HFHJ Frichs 467',
     liveries={
-        'Default': Livery('1952_DK_Frichs_467_2_1958.png', cc_replace=RED, cc2_replace=RED),
+        'Default': Livery('1952_DK_Frichs_467_2_1958.png', cc_replace=colours["RED"], cc2_replace=colours["RED"]),
         '2CC': Livery('1952_DK_Frichs_467_2_1958.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -303,7 +185,7 @@ d_d_frichs_467_3 = Train(
     id='d_d_frichs_467_3',
     name='HFHJ Frichs 467',
     liveries={
-        'Default': Livery('1952_DK_Frichs_467_3_1960.png', cc_replace=RED, cc2_replace=CREAM),
+        'Default': Livery('1952_DK_Frichs_467_3_1960.png', cc_replace=colours["RED"], cc2_replace=colours["CREAM"]),
         '2CC': Livery('1952_DK_Frichs_467_3_1960.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -321,7 +203,7 @@ d_d_frichs_467_4 = Train(
     id='d_d_frichs_467_4',
     name='HFHJ Frichs 467',
     liveries={
-        'Default': Livery('1952_DK_Frichs_467_4_1981.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_467_4_1981.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_467_4_1981.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -339,7 +221,7 @@ d_d_frichs_467_5 = Train(
     id='d_d_frichs_467_5',
     name='HFHJ Frichs 467',
     liveries={
-        'Default': Livery('1952_DK_Frichs_467_5_1997.png', cc_replace=RED, cc2_replace=CREAM),
+        'Default': Livery('1952_DK_Frichs_467_5_1997.png', cc_replace=colours["RED"], cc2_replace=colours["CREAM"]),
         '2CC': Livery('1952_DK_Frichs_467_5_1997.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -357,7 +239,7 @@ d_d_frichs_468_1 = Train(
     id='d_d_frichs_468_1',
     name='OHJ Frichs 468',
     liveries={
-        'Default': Livery('1952_DK_Frichs_468_1_1952.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_468_1_1952.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_468_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -375,7 +257,7 @@ d_d_frichs_468_2 = Train(
     id='d_d_frichs_468_2',
     name='OHJ Frichs 468',
     liveries={
-        'Default': Livery('1952_DK_Frichs_468_2_1984.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_468_2_1984.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_468_2_1984.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -393,7 +275,7 @@ d_d_frichs_468_3 = Train(
     id='d_d_frichs_468_3',
     name='OHJ Frichs 468',
     liveries={
-        'Default': Livery('1952_DK_Frichs_468_3_2017.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_468_3_2017.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_468_3_2017.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -411,7 +293,7 @@ d_d_frichs_469_1 = Train(
     id='d_d_frichs_469_1',
     name='LJ Frichs 469/470',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_1_1952.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_469_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
         '2CC': Livery('1952_DK_Frichs_469_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -429,7 +311,7 @@ d_d_frichs_469_2 = Train(
     id='d_d_frichs_469_2',
     name='LJ Frichs 469/470',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_2_1960.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_469_2_1960.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
         '2CC': Livery('1952_DK_Frichs_469_2_1960.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -447,7 +329,7 @@ d_d_frichs_469_3 = Train(
     id='d_d_frichs_469_3',
     name='LJ Frichs 469/470',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_3_1974.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_3_1974.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_469_3_1974.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -465,7 +347,7 @@ d_d_frichs_469_4 = Train(
     id='d_d_frichs_469_4',
     name='LJ Frichs 469/470',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_4_1976.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_4_1976.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_469_4_1976.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -483,7 +365,7 @@ d_d_frichs_469_8 = Train(
     id='d_d_frichs_469_8',
     name='SB Frichs 469',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_8_1992.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_8_1992.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_469_8_1992.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -501,7 +383,7 @@ d_d_frichs_469_5 = Train(
     id='d_d_frichs_469_5',
     name='LJ Frichs 470',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_5_1994.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_5_1994.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_469_5_1994.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -519,7 +401,7 @@ d_d_frichs_469_6 = Train(
     id='d_d_frichs_469_6',
     name='LJ Frichs 470',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_6_2007.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_6_2007.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_469_6_2007.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -537,7 +419,7 @@ d_d_frichs_469_7 = Train(
     id='d_d_frichs_469_7',
     name='Contec Frichs 470',
     liveries={
-        'Default': Livery('1952_DK_Frichs_469_7_2008.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_469_7_2008.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_469_7_2008.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -555,7 +437,7 @@ d_d_frichs_471_1 = Train(
     id='d_d_frichs_471_1',
     name='HHJ Frichs 471',
     liveries={
-        'Default': Livery('1952_DK_Frichs_471_1_1952.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1952_DK_Frichs_471_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
         '2CC': Livery('1952_DK_Frichs_471_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -573,7 +455,7 @@ d_d_frichs_471_2 = Train(
     id='d_d_frichs_471_2',
     name='HHJ Frichs 471',
     liveries={
-        'Default': Livery('1952_DK_Frichs_471_2_1977.png', cc_replace=RED, cc2_replace=CREAM),
+        'Default': Livery('1952_DK_Frichs_471_2_1977.png', cc_replace=colours["RED"], cc2_replace=colours["CREAM"]),
         '2CC': Livery('1952_DK_Frichs_471_2_1977.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -591,7 +473,7 @@ d_d_frichs_471_3 = Train(
     id='d_d_frichs_471_3',
     name='HHJ Frichs 471',
     liveries={
-        'Default': Livery('1952_DK_Frichs_471_3_1988.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_471_3_1988.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_471_3_1988.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -609,7 +491,7 @@ d_d_frichs_471_4 = Train(
     id='d_d_frichs_471_4',
     name='HHJ Frichs 471',
     liveries={
-        'Default': Livery('1952_DK_Frichs_471_4_1995.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_471_4_1995.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_471_4_1995.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -627,7 +509,7 @@ d_d_frichs_471_5 = Train(
     id='d_d_frichs_471_5',
     name='HHJ Frichs 471',
     liveries={
-        'Default': Livery('1952_DK_Frichs_471_5_2000.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_471_5_2000.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_471_5_2000.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -645,7 +527,7 @@ d_d_frichs_471_6 = Train(
     id='d_d_frichs_471_6',
     name='HHJ Frichs 471',
     liveries={
-        'Default': Livery('1952_DK_Frichs_471_6_2014.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_471_6_2014.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_471_6_2014.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -663,7 +545,7 @@ d_d_frichs_472_1 = Train(
     id='d_d_frichs_472_1',
     name='VLTJ Frichs 472',
     liveries={
-        'Default': Livery('1952_DK_Frichs_472_1_1952.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_472_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
         '2CC': Livery('1952_DK_Frichs_472_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -681,7 +563,7 @@ d_d_frichs_472_2 = Train(
     id='d_d_frichs_472_2',
     name='VLTJ Frichs 472',
     liveries={
-        'Default': Livery('1952_DK_Frichs_472_2_1968.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_472_2_1968.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_472_2_1968.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -699,7 +581,7 @@ d_d_frichs_472_3 = Train(
     id='d_d_frichs_472_3',
     name='VLTJ Frichs 472',
     liveries={
-        'Default': Livery('1952_DK_Frichs_472_3_1980.png', cc_replace=ORANGE, cc2_replace=CREAM),
+        'Default': Livery('1952_DK_Frichs_472_3_1980.png', cc_replace=colours["ORANGE"], cc2_replace=colours["CREAM"]),
         '2CC': Livery('1952_DK_Frichs_472_3_1980.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -717,7 +599,7 @@ d_d_frichs_472_4 = Train(
     id='d_d_frichs_472_4',
     name='VLTJ Frichs 472',
     liveries={
-        'Default': Livery('1952_DK_Frichs_472_4_1997.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_472_4_1997.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_472_4_1997.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -735,7 +617,7 @@ d_d_frichs_472_5 = Train(
     id='d_d_frichs_472_5',
     name='VLTJ Frichs 472',
     liveries={
-        'Default': Livery('1952_DK_Frichs_472_5_2009.png', cc_replace=MAROON, cc2_replace=MAROON),
+        'Default': Livery('1952_DK_Frichs_472_5_2009.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
         '2CC': Livery('1952_DK_Frichs_472_5_2009.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -753,7 +635,7 @@ d_d_frichs_473_1 = Train(
     id='d_d_frichs_473_1',
     name='GDS Frichs 473',
     liveries={
-        'Default': Livery('1952_DK_Frichs_473_1_1952.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1952_DK_Frichs_473_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
         '2CC': Livery('1952_DK_Frichs_473_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -771,7 +653,7 @@ d_d_frichs_473_2 = Train(
     id='d_d_frichs_473_2',
     name='GDS Frichs 473',
     liveries={
-        'Default': Livery('1952_DK_Frichs_473_2_1963.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1952_DK_Frichs_473_2_1963.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
         '2CC': Livery('1952_DK_Frichs_473_2_1963.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -789,7 +671,7 @@ d_d_frichs_473_3 = Train(
     id='d_d_frichs_473_3',
     name='GDS Frichs 473',
     liveries={
-        'Default': Livery('1952_DK_Frichs_473_3_2006.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1952_DK_Frichs_473_3_2006.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
         '2CC': Livery('1952_DK_Frichs_473_3_2006.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -807,7 +689,7 @@ d_d_frichs_474_1 = Train(
     id='d_d_frichs_474_1',
     name='FFJ Frichs 474',
     liveries={
-        'Default': Livery('1952_DK_Frichs_474_1_1952.png', cc_replace=MAROON, cc2_replace=BLACK1),
+        'Default': Livery('1952_DK_Frichs_474_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1952_DK_Frichs_474_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -825,7 +707,7 @@ d_d_frichs_474_2 = Train(
     id='d_d_frichs_474_2',
     name='OHJ Frichs 474',
     liveries={
-        'Default': Livery('1952_DK_Frichs_474_2_1969.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_2_1969.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_474_2_1969.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -843,7 +725,7 @@ d_d_frichs_474_3 = Train(
     id='d_d_frichs_474_3',
     name='OHJ Frichs 474',
     liveries={
-        'Default': Livery('1952_DK_Frichs_474_3_1986.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_3_1986.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_474_3_1986.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -861,7 +743,7 @@ d_d_frichs_474_4 = Train(
     id='d_d_frichs_474_4',
     name='OHJ Frichs 474',
     liveries={
-        'Default': Livery('1952_DK_Frichs_474_4_1990.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_4_1990.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_474_4_1990.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -879,7 +761,7 @@ d_d_frichs_474_5 = Train(
     id='d_d_frichs_474_5',
     name='OHJ Frichs 474',
     liveries={
-        'Default': Livery('1952_DK_Frichs_474_5_1993.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_474_5_1993.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_474_5_1993.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -897,7 +779,7 @@ d_d_frichs_475_1 = Train(
     id='d_d_frichs_475_1',
     name='AHJ Frichs 475',
     liveries={
-        'Default': Livery('1952_DK_Frichs_475_1_1952.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1952_DK_Frichs_475_1_1952.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1952_DK_Frichs_475_1_1952.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -915,7 +797,7 @@ d_d_frichs_475_2 = Train(
     id='d_d_frichs_475_2',
     name='SB Frichs 475',
     liveries={
-        'Default': Livery('1952_DK_Frichs_475_2_1976.png', cc_replace=MAROON, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_475_2_1976.png', cc_replace=colours["MAROON"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_475_2_1976.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -933,7 +815,7 @@ d_d_frichs_475_3 = Train(
     id='d_d_frichs_475_3',
     name='SB Frichs 475',
     liveries={
-        'Default': Livery('1952_DK_Frichs_475_3_1977.png', cc_replace=RED, cc2_replace=WHITE1),
+        'Default': Livery('1952_DK_Frichs_475_3_1977.png', cc_replace=colours["RED"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('1952_DK_Frichs_475_3_1977.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -951,7 +833,7 @@ d_d_frichs_475_4 = Train(
     id='d_d_frichs_475_4',
     name='AHJ Frichs 475',
     liveries={
-        'Default': Livery('1952_DK_Frichs_475_4_2008.png', cc_replace=MAROON, cc2_replace=BLACK1),
+        'Default': Livery('1952_DK_Frichs_475_4_2008.png', cc_replace=colours["MAROON"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1952_DK_Frichs_475_4_2008.png', auto_cc=lib.CC_DEFAULT),
     },
     country='denmark',
@@ -975,8 +857,8 @@ d_d_mye_ii_1_dsb = Train(
         shading=('my',),
         paint=('dsbmy1',),
         overlay=('light'),
-        cc_replace=MAROON,
-        cc2_replace=DCREAM
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["DCREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -1032,8 +914,8 @@ d_d_mx_ii_1_dsb = Train(
         shading=('mx',),
         paint=('dsbmx1',),
         overlay=('light'),
-        cc_replace=MAROON,
-        cc2_replace=DCREAM
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["DCREAM"]
     ),
     country='denmark',
     company='na',
@@ -1053,8 +935,8 @@ d_d_mx_ii_2_dsb = Train(
         shading=('mx',),
         paint=('dsbmx2',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=BLACK1
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLACK1"]
     ),
     country='denmark',
     company='na',
@@ -1074,8 +956,8 @@ d_d_mx_ii_3_vltj = Train(
         shading=('mx',),
         paint=('vltjmx1',),
         overlay=('light'),
-        cc_replace=ORANGE,
-        cc2_replace=RED
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -1115,8 +997,8 @@ d_d_my_ii_1_dsb = Train(
         shading=('my',),
         paint=('dsbmy1',),
         overlay=('light'),
-        cc_replace=MAROON,
-        cc2_replace=DCREAM
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["DCREAM"]
     ),
     country='denmark',
     company='na',
@@ -1136,8 +1018,8 @@ d_d_my_ii_2_dsb = Train(
         shading=('my',),
         paint=('dsbmy2',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=BLACK1
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLACK1"]
     ),
     country='denmark',
     company='na',
@@ -1155,7 +1037,7 @@ d_d_mz_i_1_dsb = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Default': Livery('1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1967_DK_MZ_I_1_1967.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
         '2CC': Livery('1967_DK_MZ_I_1_1967.png', auto_cc=lib.CC_DEFAULT),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1187,7 +1069,7 @@ d_d_mz_i_2_dsb = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Default': Livery('1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1967_DK_MZ_I_2_1972.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1967_DK_MZ_I_2_1972.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1967_DK_MZ_I_2_1972.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -1220,7 +1102,7 @@ d_d_mz_i_3_dsb = Train(
     name='DSB MZ I',
     length=10,
     liveries={
-        'Default': Livery('1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1967_DK_MZ_I_3_1986.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -1253,7 +1135,7 @@ d_d_mz_ii_1_dsb = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Default': Livery('1967_DK_MZ_I_1_1967.png', cc_replace=MAROON, cc2_replace=DCREAM),
+        'Default': Livery('1967_DK_MZ_I_1_1967.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
         '2CC': Livery('1967_DK_MZ_I_1_1967.png', auto_cc=lib.CC_DEFAULT),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1285,7 +1167,7 @@ d_d_mz_ii_2_dsb = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Default': Livery('1967_DK_MZ_I_2_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1967_DK_MZ_I_2_1972.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1967_DK_MZ_I_2_1972.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1967_DK_MZ_I_2_1972.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -1318,7 +1200,7 @@ d_d_mz_ii_3_dsb = Train(
     name='DSB MZ II',
     length=10,
     liveries={
-        'Default': Livery('1967_DK_MZ_I_3_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1967_DK_MZ_I_3_1986.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1967_DK_MZ_I_3_1986.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -1351,7 +1233,7 @@ d_d_mz_ii_4_taagab = Train(
     name='TÅGAB TMZ II',
     length=10,
     liveries={
-        'Default': Livery('1970_DK_MZ_II_1_2004.png', cc_replace=SILVER, cc2_replace=RED),
+        'Default': Livery('1970_DK_MZ_II_1_2004.png', cc_replace=colours["SILVER"], cc2_replace=colours["RED"]),
         '2CC': Livery('1970_DK_MZ_II_1_2004.png', auto_cc=lib.CC_DEFAULT),
     },
     misc_flags=Train.Flags.USE_2CC,
@@ -1384,7 +1266,7 @@ d_d_mz_iii_1_dsb = Train(
     name='DSB MZ III',
     length=10,
     liveries={
-        'Default': Livery('1972_DK_MZ_III_1_1972.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1972_DK_MZ_III_1_1972.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1972_DK_MZ_III_1_1972.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1972_DK_MZ_III_1_1972.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -1417,7 +1299,7 @@ d_d_mz_iii_2_dsb = Train(
     name='DSB MZ III',
     length=10,
     liveries={
-        'Default': Livery('1972_DK_MZ_III_2_1986.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1972_DK_MZ_III_2_1986.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1972_DK_MZ_III_2_1986.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1972_DK_MZ_III_2_1986.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -1450,7 +1332,7 @@ d_d_mz_iv_1_dsb = Train(
     name='DSB MZ IV',
     length=10,
     liveries={
-        'Default': Livery('1977_DK_MZ_IV_1_1977.png', cc_replace=RED, cc2_replace=BLACK1),
+        'Default': Livery('1977_DK_MZ_IV_1_1977.png', cc_replace=colours["RED"], cc2_replace=colours["BLACK1"]),
         '2CC': Livery('1977_DK_MZ_IV_1_1977.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1977_DK_MZ_IV_1_1977.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -1507,8 +1389,8 @@ d_d_me_ii_1_dsb = Train(
         shading=('me',),
         paint=('dsb1',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=BLACK1
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLACK1"]
     ),
     country='denmark',
     company='na',
@@ -1528,8 +1410,8 @@ d_d_me_ii_2_dsb = Train(
         shading=('me',),
         paint=('dsb2/3',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=COLBALT
+        cc_replace=colours["RED"],
+        cc2_replace=colours["COLBALT"]
     ),
     country='denmark',
     company='na',
@@ -1549,8 +1431,8 @@ d_d_me_ii_3_dsb = Train(
         shading=('me',),
         paint=('dsb2/3',),
         overlay=('light'),
-        cc_replace=COLBALT,
-        cc2_replace=RED
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -1570,8 +1452,8 @@ d_d_me_ii_4_dsb = Train(
         shading=('me',),
         paint=('dsb4',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -1810,8 +1692,8 @@ d_e_ea_1_dsb = Train(
         shading=('ea',),
         paint=('dsb1',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=BLACK1
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLACK1"]
     ),
     country='denmark',
     company='na',
@@ -1831,8 +1713,8 @@ d_e_ea_2_dsb = Train(
         shading=('ea',),
         paint=('dsb2',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=COLBALT
+        cc_replace=colours["RED"],
+        cc2_replace=colours["COLBALT"]
     ),
     country='denmark',
     company='na',
@@ -1852,8 +1734,8 @@ d_e_ea_3_dsb = Train(
         shading=('ea',),
         paint=('dsb3',),
         overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2213,8 +2095,8 @@ d_p_b_1_dsb = Train(
         'pp/ab.psd',
         shading=('b',),
         paint=('b1_bd1_bn1',),
-        cc_replace=MAROON,
-        cc2_replace=MAROON
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
     ),
     country='denmark',
     company='na',
@@ -2236,8 +2118,8 @@ d_p_b_i_1_dsb = Train(
         'pp/ab.psd',
         shading=('b',),
         paint=('b2_ba1_bab1_bd2_bk1_bn2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2259,8 +2141,8 @@ d_p_bk_i_1_dsb = Train(
         'pp/ab.psd',
         shading=('b',),
         paint=('b2_ba1_bab1_bd2_bk1_bn2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2282,8 +2164,8 @@ d_p_bk_i_2_dsb = Train(
         'pp/ab.psd',
         shading=('b',),
         paint=('bk2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2305,8 +2187,8 @@ d_p_ab_1_dsb = Train(
         'pp/ab.psd',
         shading=('ab',),
         paint=('ab1',),
-        cc_replace=MAROON,
-        cc2_replace=MAROON
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
     ),
     country='denmark',
     company='na',
@@ -2328,8 +2210,8 @@ d_p_ab_2_dsb = Train(
         'pp/ab.psd',
         shading=('ab',),
         paint=('ab2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2351,8 +2233,8 @@ d_p_ab_3_dsb = Train(
         'pp/ab.psd',
         shading=('ab',),
         paint=('b2_ba1_bab1_bd2_bk1_bn2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2374,8 +2256,8 @@ d_p_a_1_dsb = Train(
         'pp/ab.psd',
         shading=('a',),
         paint=('a1',),
-        cc_replace=MAROON,
-        cc2_replace=MAROON
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
     ),
     country='denmark',
     company='na',
@@ -2397,8 +2279,8 @@ d_p_a_2_dsb = Train(
         'pp/ab.psd',
         shading=('a',),
         paint=('a2_an1',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2420,8 +2302,8 @@ d_p_a_3_dsb = Train(
         'pp/ab.psd',
         shading=('a',),
         paint=('b2_ba1_bab1_bd2_bk1_bn2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2443,8 +2325,8 @@ d_p_bd_1_dsb = Train(
         'pp/ab.psd',
         shading=('bd',),
         paint=('b1_bd1_bn1',),
-        cc_replace=MAROON,
-        cc2_replace=MAROON
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
     ),
     country='denmark',
     company='na',
@@ -2466,8 +2348,8 @@ d_p_bd_2_dsb = Train(
         'pp/ab.psd',
         shading=('bd',),
         paint=('b2_ba1_bab1_bd2_bk1_bn2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2489,8 +2371,8 @@ d_p_bn_1_dsb = Train(
         'pp/ab.psd',
         shading=('bn',),
         paint=('b1_bd1_bn1',),
-        cc_replace=MAROON,
-        cc2_replace=MAROON
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
     ),
     country='denmark',
     company='na',
@@ -2513,8 +2395,8 @@ d_p_bn_2_dsb = Train(
         'pp/ab.psd',
         shading=('bn',),
         paint=('b2_ba1_bab1_bd2_bk1_bn2',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2537,8 +2419,8 @@ d_p_bn_3_dsb = Train(
         'pp/ab.psd',
         shading=('bn',),
         paint=('bn3',),
-        cc_replace=COLBALT,
-        cc2_replace=COLBALT
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["COLBALT"]
     ),
     country='denmark',
     company='na',
@@ -2561,8 +2443,8 @@ d_p_an_1_dsb = Train(
         'pp/ab.psd',
         shading=('an',),
         paint=('a2_an1',),
-        cc_replace=RED,
-        cc2_replace=RED
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -2583,7 +2465,7 @@ d_p_b_ii_1_dsb = Train(
     name='DSB B II',
     length=12,
     liveries={
-        'Default': Livery('2002_DK_B_II_1_2002.png', cc_replace=COLBALT, cc2_replace=WHITE1),
+        'Default': Livery('2002_DK_B_II_1_2002.png', cc_replace=colours["COLBALT"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('2002_DK_B_II_1_2002.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('2002_DK_B_II_1_2002.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -2617,7 +2499,7 @@ d_p_b_ii_2_dsb = Train(
     name='DSB B II',
     length=12,
     liveries={
-        'Default': Livery('2002_DK_B_II_2_2012.png', cc_replace=COLBALT, cc2_replace=WHITE1),
+        'Default': Livery('2002_DK_B_II_2_2012.png', cc_replace=colours["COLBALT"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('2002_DK_B_II_2_2012.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('2002_DK_B_II_2_2012.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -2651,7 +2533,7 @@ d_p_bk_iii_1_dsb = Train(
     name='DSB Bk III',
     length=12,
     liveries={
-        'Default': Livery('2002_DK_Bk_III_1_2002.png', cc_replace=COLBALT, cc2_replace=WHITE1),
+        'Default': Livery('2002_DK_Bk_III_1_2002.png', cc_replace=colours["COLBALT"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('2002_DK_Bk_III_1_2002.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('2002_DK_Bk_III_1_2002.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -2685,7 +2567,7 @@ d_p_bk_iii_2_dsb = Train(
     name='DSB Bk III',
     length=12,
     liveries={
-        'Default': Livery('2002_DK_Bk_III_2_2012.png', cc_replace=COLBALT, cc2_replace=WHITE1),
+        'Default': Livery('2002_DK_Bk_III_2_2012.png', cc_replace=colours["COLBALT"], cc2_replace=colours["WHITE1"]),
         '2CC': Livery('2002_DK_Bk_III_2_2012.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('2002_DK_Bk_III_2_2012.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -2754,7 +2636,7 @@ s_w_Gblssy_2_gc = Train(
     name='SJ Hbis',
     length=7,
     liveries={
-        'Default': Livery('1972_SE_Hbis_1972.png', cc_replace=REDBROWN, cc2_replace=REDBROWN),
+        'Default': Livery('1972_SE_Hbis_1972.png', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"]),
         '2CC': Livery('1972_SE_Hbis_1972.png', auto_cc=lib.CC_DEFAULT),
         '2CC alt': Livery('1972_SE_Hbis_1972.png', auto_cc=lib.CC_SWAPPED),
     },
@@ -2785,299 +2667,15 @@ s_w_Gblssy_2_gc = Train(
 
 # 891mm narrow gauge
 
-s_p_UBp_ii_1 = Train(
-    id='s_p_UBp_ii_1',
-    name='SL UBp II',
-    length=9,
-    liveries={
-        'SL': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
-    },
-    engine_class=Train.EngineClass.ELECTRIC,
-    track_type=p_gauge,
-    country='sweden',
-    company='na',
-    power_type='na',
-    purchase_sprite_towed_id='s_p_UBp_ii_1',
-    max_speed=Train.kmhish(80),
-    power=0,
-    introduction_date=date(1988, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=Train.ton(int(16.6)),
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=80,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Passenger',
-        'Trivia': 'The middle part of the new emus were ordered to arive first so that they could be used earlier replacing the oldest rolling stock',
-        'Builder': 'ABB railcar',
-    }),
-)
+from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
 
-COMMON_X10p_PROPS = dict(
-    length=9,
-    country='sweden',
-    company='na',
-    power_type='dc',
-    engine_class=Train.EngineClass.ELECTRIC, 
-    track_type=p_gauge_dc,
-    max_speed=Train.kmhish(80),
-    power=536,
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=Train.ton(int(27.7+15.8+16.6)),
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=72,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Passenger emu', 
-        'Trivia': 'Technically modular but always used in sets of one railcar with an unpowered trailer and a driving trailer in tow.',
-        'Builder': 'ABB railcar',
-    }),
-)
+from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2_nklj, s_d_Z4p_3_donj
 
-s_e_X10p_1_sl = Train(
-    **COMMON_X10p_PROPS, 
-    id='s_e_X10p_1_sl,',
-    name='SL X10p',
-    liveries={
-        'Default': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
-    },
-    purchase_sprite_towed_id='s_e_X10p_1_sl_car2',
-    introduction_date=date(1990, 1, 1),
-).add_articulated_part(
-    id='s_e_X10p_1_sl_car2',
-    length=9,
-    liveries={
-        'Default': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
-    },
-    cargo_capacity=80,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-).add_articulated_part(
-    id='s_e_X10p_1_sl_car3',
-    length=9,
-    liveries={
-        'Default': Livery('xxxx_SE_X10p_UBxp_1_xxxx.png'),
-    },
-    cargo_capacity=76,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-
-s_e_X10p_2_sl = Train(
-    **COMMON_X10p_PROPS, 
-    id='s_e_X10p_2_sl,',
-    name='SL X10p mod 2011',
-    liveries={
-        'Default': Livery('xxxx_SE_X10p_X10p_2_xxxx.png'),
-        '2CC': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
-        'Upptåget (Fictional)': Livery('SE_X10p_X10p_3.png'),
-        'Upptåget 2CC': Livery('SE_X10p_X10p_3.png', auto_cc=lib.CC_DEFAULT),
-    },
-    purchase_sprite_towed_id='s_e_X10p_2_sl_car2',
-    introduction_date=date(2011, 1, 1),
-).add_articulated_part(
-    id='s_e_X10p_2_sl_car2',
-    length=9,
-    liveries={
-        'Default': Livery('xxxx_SE_X10p_UBp_2_xxxx.png'),
-        '2CC': Livery('xxxx_SE_X10p_UBp_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
-        'Upptåget (Fictional)': Livery('SE_X10p_UBp_3.png'),
-        'Upptåget 2CC': Livery('SE_X10p_UBp_3.png', auto_cc=lib.CC_DEFAULT),
-    },
-    cargo_capacity=80,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-).add_articulated_part(
-    id='s_e_X10p_2_sl_car3',
-    length=9,
-    liveries={
-        'Default': Livery('xxxx_SE_X10p_UBxp_2_xxxx.png'),
-        '2CC': Livery('xxxx_SE_X10p_UBxp_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
-        'Upptåget (Fictional)': Livery('SE_X10p_UBxp_3.png'),
-        'Upptåget 2CC': Livery('SE_X10p_UBxp_3.png', auto_cc=lib.CC_DEFAULT),
-    },
-    cargo_capacity=76,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-
-s_p_Co_1 = Train(
-    id='s_p_Co_1',
-    name='SRJ Co "Grindvagn"',
-    length=8,
-    liveries={
-        'Default': Livery('1914_SE_Co_68-71_1_1914.png'),
-    },
-    engine_class=Train.EngineClass.STEAM,
-    track_type=p_gauge,
-    country='sweden',
-    company='na',
-    power_type='na',
-    purchase_sprite_towed_id='s_p_Co_1',
-    max_speed=Train.kmhish(75),
-    power=0,
-    introduction_date=date(1914, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=Train.ton(int(18)),
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=72,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Longer distance passenger',
-        'Trivia': 'Class was originally Co at SRJ later becoming Bop at SJ and finally Bp at SLJ',
-        'Builder': 'ASEA',
-    }),
-)
-
-s_d_Tp_1_sj = Train( 
-    id='s_d_Tp_1_sj',
-    name='SJ Tp',
-    length=5,
-    liveries={
-        'Default': Livery('SE_Tp_1.png'),
-    },
-    country='sweden',
-    company='na',
-    power_type='diesel',
-    purchase_sprite_towed_id='s_d_Tp_1_sj',
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=p_gauge,
-    max_speed=Train.kmhish(80),
-    power=778,
-    introduction_date=date(1953, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=46,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=0,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': "SJ's larger narrow gauge loco",
-        'Builder': 'Maschinenbau GmbH and ASJ Falun',
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},}
-)
-
-s_d_Z4p_1_srj = Train(
-    id='s_d_Z4p_1_srj',
-    name='SRJ Z4p',
-    length=3,
-    liveries={
-        'Default': Livery('1947_SE_Z4p_1_1947.png', cc_replace=REDBROWN),
-        '2CC': Livery('1947_SE_Z4p_1_1947.png', auto_cc=lib.CC_DEFAULT),
-    #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
-    #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
-    },
-    country='sweden',
-    company='na',
-    power_type='diesel',
-    purchase_sprite_towed_id='s_p_Co_1',
-    engine_class=Train.EngineClass.DIESEL, 
-    sound_effects=modern_diesel_sound,
-    track_type=p_gauge,
-    max_speed=Train.kmhish(40),
-    power=160,
-    introduction_date=date(1947, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=14,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=1,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'The most common diesel locomotive on narrow gauge lines. The first ones were acquired by SRJ, with other private companies and SJ following suit',
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},}
-)
-
-s_d_Z4p_2_nklj = Train(
-    id='s_d_Z4p_2_NKLJ',
-    name='NKlJ Z4p',
-    length=3,
-    liveries={
-        'Default': Livery('1947_SE_Z4p_2_xxxx.png', cc_replace=MAROON, cc2_replace=CREAM),
-        '2CC': Livery('1947_SE_Z4p_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
-    purchase_sprite_towed_id='s_p_Co_1',
-    engine_class=Train.EngineClass.DIESEL, 
-    sound_effects=modern_diesel_sound,
-    track_type=p_gauge,
-    max_speed=Train.kmhish(40),
-    power=160,
-    introduction_date=date(1947, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=14,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=1,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'The most common diesel locomotive on narrow gauge lines. The first ones were acquired by SRJ, with other private companies and SJ following suit',
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},}
-)
-
-
-s_d_Z4p_3_donj = Train(
-    id='s_d_Z4p_3_DONJ',
-    name='DONJ Z4p',
-    length=3,
-    liveries={
-        'Default': Livery('1947_SE_Z4p_3_xxxx.png', cc_replace=ORANGE, cc2_replace=DTURQUOISE),
-        '2CC': Livery('1947_SE_Z4p_3_xxxx.png', auto_cc=lib.CC_DEFAULT),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
-    purchase_sprite_towed_id='s_p_Co_1',
-    engine_class=Train.EngineClass.DIESEL, 
-    sound_effects=modern_diesel_sound,
-    track_type=p_gauge,
-    max_speed=Train.kmhish(40),
-    power=160,
-    introduction_date=date(1947, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=14,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=1,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'The most common diesel locomotive on narrow gauge lines. The first ones were acquired by SRJ, with other private companies and SJ following suit',
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},}
-)
+from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
 
 '''
 
-x15p = Train( # todo make it work with the length for mus
+x15p = Train(
     id='x15p',
     name='X15p',
     length=9,
@@ -3088,7 +2686,7 @@ x15p = Train( # todo make it work with the length for mus
     company='sl',
     power_type='dc',
     purchase_sprite_towed_id='x15p_car2',
-    engine_class=Train.EngineClass.ELECTRIC, # unsure about how to enter stats due to units
+    engine_class=Train.EngineClass.ELECTRIC, 
     sound_effects=modern_diesel_sound,
     track_type=p_gauge_dc,
     max_speed=Train.kmhish(120),
