@@ -1298,7 +1298,7 @@ d_d_mz_ii_4_taagab = Train(
         'pp/mz1.psd',
         shading=('mz2',),
         paint=('tågab1',),
-        overlay=('lighttågab1ol'),
+        overlay=('light', 'tågab1o'),
         cc_replace=SILVER,
         cc2_replace=RED
     ),
