@@ -1451,7 +1451,6 @@ d_d_me_ii_2_dsb = Train(
     introduction_date=date(2000, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Denmark's final diesel locomotive''',
     }),
 )
 
@@ -1472,7 +1471,6 @@ d_d_me_ii_3_dsb = Train(
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Denmark's final diesel locomotive''',
     }),
 )
 
@@ -1493,7 +1491,6 @@ d_d_me_ii_4_dsb = Train(
     introduction_date=date(2016, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Denmark's final diesel locomotive''',
     }),
 )
 
@@ -1724,7 +1721,7 @@ d_e_ea_1_dsb = Train(
         'pp/ea.psd',
         shading=('ea',),
         paint=('dsb1',),
-        overlay=('light'),
+        overlay=('light', 'leccy'),
         cc_replace=RED,
         cc2_replace=BLACK1
     ),
@@ -1745,16 +1742,15 @@ d_e_ea_2_dsb = Train(
         'pp/ea.psd',
         shading=('ea',),
         paint=('dsb2',),
-        overlay=('light'),
-        cc_replace=RED,
-        cc2_replace=COLBALT
+        overlay=('light', 'leccy'),
+        cc_replace=COLBALT,
+        cc2_replace=RED
     ),
     country='denmark',
     company='na',
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Denmark's first electric locomotive''',
     }),
 )
 
@@ -1766,7 +1762,7 @@ d_e_ea_3_dsb = Train(
         'pp/ea.psd',
         shading=('ea',),
         paint=('dsb3',),
-        overlay=('light'),
+        overlay=('light', 'leccy'),
         cc_replace=RED,
         cc2_replace=RED
     ),
@@ -1775,7 +1771,6 @@ d_e_ea_3_dsb = Train(
     introduction_date=date(2017, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Denmark's first electric locomotive''',
     }),
 )
 '''
