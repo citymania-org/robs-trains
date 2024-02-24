@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from header import Train, Livery, p_gauge, modern_diesel_sound
+from common import Train, Livery, p_gauge, modern_diesel_sound
 
 s_p_Co_1 = Train(
     id='s_p_Co_1',
