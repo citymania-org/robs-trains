@@ -1468,7 +1468,7 @@ d_d_me_ii_3_dsb = Train(
     ),
     country='denmark',
     company='na',
-    introduction_date=date(2006, 1, 1),
+    introduction_date=date(2002, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
