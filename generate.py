@@ -1189,7 +1189,28 @@ d_d_mz_ii_4_taagab = Train(
     introduction_date=date(2004, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from DSB in 2004 and 2006',
+        'Trivia': 'Two locomotives bought from DSB in 2004 #1423 and 2006 #1426',
+    }),
+)
+
+d_d_mz_ii_5_ibab = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_ii_5_ibab',
+    name='IBAB TMZ II',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('ibab1',),
+        overlay=('light', 'tågab1o'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["WHITE1"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2012, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from NFRAB in 2012 #1421, named Cathis and 2013 #1413, named Betty',
     }),
 )
 
@@ -2776,6 +2797,7 @@ lib.make_purchase_sprites(
         d_d_mz_ii_2_dsb,
         d_d_mz_ii_3_dsb,
         d_d_mz_ii_4_taagab,
+        d_d_mz_ii_5_ibab,
     ),
     grf.VariantGroup(
         'MZ III',
