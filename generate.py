@@ -117,7 +117,7 @@ s_s_N_ii_1_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Shunting',
-        'Builder': 'Multible',
+        'Builder': 'Multiple',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -922,7 +922,7 @@ d_d_mx_ii_1_dsb = Train(
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''designed to be used on branch lines where a lighter locomotive is needed''',
+        'Trivia': '''Designed to be used on branch lines where a lighter locomotive is needed''',
     }),
 )
 
@@ -943,7 +943,7 @@ d_d_mx_ii_2_dsb = Train(
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''designed to be used on branch lines where a lighter locomotive is needed''',
+        'Trivia': '''Designed to be used on branch lines where a lighter locomotive is needed''',
     }),
 )
 
@@ -964,7 +964,7 @@ d_d_mx_ii_3_vltj = Train(
     introduction_date=date(1993, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'one locomotive bought from DSB in 1993 #1025'
+        'Trivia': 'One locomotive bought from DSB in 1993 #1025'
     }),
 )
 
@@ -1005,7 +1005,7 @@ d_d_my_ii_1_dsb = Train(
     introduction_date=date(1964, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''a more powerful version of the famous MY locomotive''',
+        'Trivia': '''A more powerful version of the famous MY locomotive''',
     }),
 )
 
@@ -1026,7 +1026,7 @@ d_d_my_ii_2_dsb = Train(
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''a more powerful version of the famous MY locomotive''',
+        'Trivia': '''A more powerful version of the famous MY locomotive''',
     }),
 )
 
@@ -1189,7 +1189,7 @@ d_d_mz_ii_4_taagab = Train(
     introduction_date=date(2004, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'two locomotives bought from DSB in 2004 and 2006',
+        'Trivia': 'Two locomotives bought from DSB in 2004 and 2006',
     }),
 )
 
@@ -2062,7 +2062,7 @@ d_p_bk_i_1_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'kiosk car',
+        'Use': 'Kiosk car, 2nd class',
     }),
 )
 
@@ -2085,7 +2085,7 @@ d_p_bk_i_2_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'kiosk car',
+        'Use': 'Kiosk car, 2nd class',
     }),
 )
 
@@ -2246,7 +2246,7 @@ d_p_bd_1_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'luggage carriage',
+    'Use': 'Luggage carriage, 2nd class',
     }),
 )
 
@@ -2269,7 +2269,7 @@ d_p_bd_2_dsb = Train(
     cargo_capacity=36,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'luggage carriage',
+    'Use': 'Luggage carriage, 2nd class',
     }),
 )
 
@@ -2292,8 +2292,8 @@ d_p_bn_1_dsb = Train(
     cargo_capacity=80,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'local trains, 2nd class',
-        'Trivia': '''also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Use': 'Local trains, 2nd class',
+        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
@@ -2316,8 +2316,8 @@ d_p_bn_2_dsb = Train(
     cargo_capacity=80,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'local trains, 2nd class',
-        'Trivia': '''also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Use': 'Local trains, 2nd class',
+        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
@@ -2340,8 +2340,8 @@ d_p_bn_3_dsb = Train(
     cargo_capacity=80,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'local trains, 2nd class',
-        'Trivia': '''also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Use': 'Local trains, 2nd class',
+        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
@@ -2364,7 +2364,7 @@ d_p_an_1_dsb = Train(
     cargo_capacity=64,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'local trains, 1st class',
+        'Use': 'Local trains, 1st class',
     }),
 )
 
