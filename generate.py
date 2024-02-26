@@ -968,6 +968,27 @@ d_d_mx_ii_3_vltj = Train(
     }),
 )
 
+d_d_mx_ii_4_ttt = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_4_ttt',
+    name='TTT MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('mx',),
+        paint=('tttmx1',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["RED"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2012, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+    }),
+)
+
 COMMON_my_ii_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
@@ -1027,6 +1048,27 @@ d_d_my_ii_2_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': '''A more powerful version of the famous MY locomotive''',
+    }),
+)
+
+d_d_my_ii_3_ttt = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_3_ttt',
+    name='TTT MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('tttmy1',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["RED"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2012, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '''Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012''',
     }),
 )
 
@@ -2779,11 +2821,13 @@ lib.make_purchase_sprites(
         d_d_mx_ii_1_dsb,
         d_d_mx_ii_2_dsb,
         d_d_mx_ii_3_vltj,
+        d_d_mx_ii_4_ttt,
     ),
     grf.VariantGroup(
         'MY II',
         d_d_my_ii_1_dsb,
         d_d_my_ii_2_dsb,
+        d_d_my_ii_3_ttt,
     ),
     grf.VariantGroup(
         'MZ I',
