@@ -989,6 +989,48 @@ d_d_mx_ii_4_ttt = Train(
     }),
 )
 
+d_d_mx_ii_5_lt = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_5_lt',
+    name='LT MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('mx',),
+        paint=('ltmx161',),
+        overlay=('light'),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2015, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+    }),
+)
+
+d_d_mx_ii_6_lt = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_6_lt',
+    name='LT MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('mx',),
+        paint=('ltmx361',),
+        overlay=('light'),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2017, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+    }),
+)
+
 COMMON_my_ii_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
@@ -1066,6 +1108,27 @@ d_d_my_ii_3_ttt = Train(
     country='sweden',
     company='na',
     introduction_date=date(2012, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012',
+    }),
+)
+
+d_d_my_ii_4_lt = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_4_lt',
+    name='LT MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('ltmy1',),
+        overlay=('light'),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2020, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012',
@@ -2822,12 +2885,15 @@ lib.make_purchase_sprites(
         d_d_mx_ii_2_dsb,
         d_d_mx_ii_3_vltj,
         d_d_mx_ii_4_ttt,
+        d_d_mx_ii_5_lt,
+        d_d_mx_ii_6_lt,
     ),
     grf.VariantGroup(
         'MY II',
         d_d_my_ii_1_dsb,
         d_d_my_ii_2_dsb,
         d_d_my_ii_3_ttt,
+        d_d_my_ii_4_lt,
     ),
     grf.VariantGroup(
         'MZ I',
