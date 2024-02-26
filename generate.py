@@ -922,7 +922,7 @@ d_d_mx_ii_1_dsb = Train(
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Designed to be used on branch lines where a lighter locomotive is needed''',
+        'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed',
     }),
 )
 
@@ -943,7 +943,7 @@ d_d_mx_ii_2_dsb = Train(
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Designed to be used on branch lines where a lighter locomotive is needed''',
+        'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed',
     }),
 )
 
@@ -1026,7 +1026,7 @@ d_d_my_ii_1_dsb = Train(
     introduction_date=date(1964, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''A more powerful version of the famous MY locomotive''',
+        'Trivia': 'A more powerful version of the famous MY locomotive',
     }),
 )
 
@@ -1047,7 +1047,7 @@ d_d_my_ii_2_dsb = Train(
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''A more powerful version of the famous MY locomotive''',
+        'Trivia': 'A more powerful version of the famous MY locomotive',
     }),
 )
 
@@ -1068,7 +1068,7 @@ d_d_my_ii_3_ttt = Train(
     introduction_date=date(2012, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012''',
+        'Trivia': 'Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012',
     }),
 )
 
