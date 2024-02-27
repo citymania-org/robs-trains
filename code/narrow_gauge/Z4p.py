@@ -31,25 +31,11 @@ s_d_Z4p_1_srj = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_1_srj',
     name='SRJ Z4p',
-    liveries={
-        'Default': Livery('1947_SE_Z4p_1_1947.png', cc_replace=colours["REDBROWN"]),
-        '2CC': Livery('1947_SE_Z4p_1_1947.png', auto_cc=lib.CC_DEFAULT),
-    #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
-    #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
-    },
-    country='sweden',
-    company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
-    introduction_date=date(1947, 1, 1),
-)
-
-s_d_Z4p_1_srj_2 = Train(
-    **COMMON_Z4p_PROPS,
-    id='s_d_Z4p_1_srj_2',
-    name='SRJ Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
+    #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
+    #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
