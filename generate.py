@@ -950,7 +950,7 @@ d_d_mx_ii_2_dsb = Train(
 d_d_mx_ii_3_vltj = Train(
     **COMMON_mx_ii_PROPS,
     id='d_d_mx_ii_3_vltj',
-    name='VLTJ MX II',
+    name='VLTJ MX II Tørfisken',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('mx',),
@@ -964,7 +964,7 @@ d_d_mx_ii_3_vltj = Train(
     introduction_date=date(1993, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from DSB in 1993 #1025'
+        'Trivia': 'One locomotive bought from DSB in 1993 #1025, named Tørfisken'
     }),
 )
 
