@@ -989,21 +989,21 @@ d_d_mx_ii_4_ttt = Train(
     }),
 )
 
-d_d_mx_ii_5_lt = Train(
+d_d_mx_ii_5_lb = Train(
     **COMMON_mx_ii_PROPS,
-    id='d_d_mx_ii_5_lt',
-    name='LT MX II',
+    id='d_d_mx_ii_5_lb',
+    name='LB MX II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('mx',),
-        paint=('ltmx161',),
+        paint=('lbmx1',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
     ),
     country='denmark',
     company='na',
-    introduction_date=date(2015, 1, 1),
+    introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'One locomotive bought from RCT in 2012 #1015'
@@ -1017,7 +1017,7 @@ d_d_mx_ii_6_lt = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('mx',),
-        paint=('ltmx361',),
+        paint=('ltmx1',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
@@ -2884,8 +2884,8 @@ lib.make_purchase_sprites(
         d_d_mx_ii_1_dsb,
         d_d_mx_ii_2_dsb,
         d_d_mx_ii_3_vltj,
+        d_d_mx_ii_5_lb,
         d_d_mx_ii_4_ttt,
-        d_d_mx_ii_5_lt,
         d_d_mx_ii_6_lt,
     ),
     grf.VariantGroup(
