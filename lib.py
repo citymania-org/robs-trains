@@ -284,6 +284,20 @@ class Train(grf.Train):
         self._gen_livery_callback(g, self.callbacks, self.liveries)
         return res
 
+# Below added by John Franklin - Restaurant Cars / Kiosks have a cargo_age_period bonus of 1/4 to other cars
+
+    def cafebonus(age):
+        bonus = grf.Switch(
+            feature=grf.TRAIN,
+            related_scope=True,
+            code='var(0x42, shift=24, and=0x01, add=0, div=1',
+            ranges={1: age * 5},
+            default=age * 4,
+        )
+        return bonus
+
+# Above added by John Franklin
+
 
 def _make_checker_effect(img, start, length):
     if start < 0:

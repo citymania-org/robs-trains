@@ -6,6 +6,8 @@ g = grf.NewGRF(
     description='Scandinavian Trains made by Rob, dP and Brickblock1',
     url='https://github.com/citymania-org/ro.bs-trains',
     id_map_file='id_map.json',
+    version=20240227,
+    min_compatible_version=20240227,
 )
 
 Train = g.bind(lib.Train)

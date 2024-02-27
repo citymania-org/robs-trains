@@ -34,7 +34,7 @@ alignment16 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -71,7 +71,7 @@ Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1522,7 +1522,7 @@ rc1 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1967, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1556,7 +1556,7 @@ rc2 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1969, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1589,7 +1589,7 @@ rc3 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1970, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1621,7 +1621,7 @@ rc4 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1975, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1653,7 +1653,7 @@ rc5 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1982, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1687,7 +1687,7 @@ rc6 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1984, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1801,7 +1801,7 @@ mf_ic3 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1989, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1854,7 +1854,7 @@ er_ir4 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1993, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1914,7 +1914,7 @@ stog_1_2 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1933, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -1951,7 +1951,7 @@ stog_1_4 = Train(
     max_speed=Train.kmhish(104),
     power=9999,
     introduction_date=date(1933, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -2001,7 +2001,7 @@ abs1 = Train(
     max_speed=Train.kmhish(104),
     power=0,
     introduction_date=date(2002, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -2030,7 +2030,7 @@ abs2 = Train(
     max_speed=Train.kmhish(104),
     power=0,
     introduction_date=date(2012, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -2059,7 +2059,7 @@ b_ii1 = Train(
     max_speed=Train.kmhish(104),
     power=0,
     introduction_date=date(2002, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -2088,7 +2088,7 @@ b_ii2 = Train(
     max_speed=Train.kmhish(104),
     power=0,
     introduction_date=date(2012, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=90,
@@ -2143,7 +2143,9 @@ d_p_b_1_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_b_i_1_dsb = Train(
@@ -2165,8 +2167,10 @@ d_p_b_i_1_dsb = Train(
     cargo_capacity=60,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': '2nd class',
+        'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_bk_i_1_dsb = Train(
@@ -2187,8 +2191,11 @@ d_p_bk_i_1_dsb = Train(
     weight=40,
     cargo_capacity=48,
     loading_speed=10,
+    cargo_age_period=225,
+    bitmask_vehicle_info=0b00000001, # It is a restaurant/kiosk car
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Kiosk car, 2nd class',
+        'Use': 'Kiosk car (increasing comfort of other cars), 2nd class',
+        'Comfort': 'Semi-High (225)',
     }),
 )
 
@@ -2210,8 +2217,11 @@ d_p_bk_i_2_dsb = Train(
     weight=40,
     cargo_capacity=48,
     loading_speed=10,
+    cargo_age_period=225,
+    bitmask_vehicle_info=0b00000001, # It is a restaurant/kiosk car
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Kiosk car, 2nd class',
+        'Use': 'Kiosk car (increasing comfort of other cars), 2nd class',
+        'Comfort': 'Semi-High (225)',
     }),
 )
 
@@ -2235,7 +2245,9 @@ d_p_ab_1_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st and 2nd class',
+        'Comfort': 'Normal (200)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(50)},}, # With restaurant/kiosk: 250, Without: 200
 )
 
 d_p_ab_2_dsb = Train(
@@ -2258,7 +2270,9 @@ d_p_ab_2_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st and 2nd class',
+        'Comfort': 'Normal (200)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 250, Without: 200
 )
 
 d_p_ab_3_dsb = Train(
@@ -2281,7 +2295,9 @@ d_p_ab_3_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_a_1_dsb = Train(
@@ -2303,8 +2319,10 @@ d_p_a_1_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': '1st class',
+        'Use': '1st class',
+        'Comfort': 'Semi-High (240)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(60)},}, # With restaurant/kiosk: 300, Without: 240
 )
 
 d_p_a_2_dsb = Train(
@@ -2327,7 +2345,9 @@ d_p_a_2_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
+        'Comfort': 'Semi-High (240)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(60)},}, # With restaurant/kiosk: 300, Without: 240
 )
 
 d_p_a_3_dsb = Train(
@@ -2350,7 +2370,9 @@ d_p_a_3_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_bd_1_dsb = Train(
@@ -2372,8 +2394,10 @@ d_p_bd_1_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'Luggage carriage, 2nd class',
+        'Use': 'Luggage carriage, 2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_bd_2_dsb = Train(
@@ -2395,8 +2419,10 @@ d_p_bd_2_dsb = Train(
     cargo_capacity=36,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'Luggage carriage, 2nd class',
+        'Use': 'Luggage carriage, 2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_bn_1_dsb = Train(
@@ -2417,8 +2443,10 @@ d_p_bn_1_dsb = Train(
     weight=40,
     cargo_capacity=80,
     loading_speed=15,
+    cargo_age_period=180,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
+        'Comfort': 'Normal (180), Restaurant Unavailable',
         'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
@@ -2441,8 +2469,10 @@ d_p_bn_2_dsb = Train(
     weight=40,
     cargo_capacity=80,
     loading_speed=15,
+    cargo_age_period=180,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
+        'Comfort': 'Normal (180), Restaurant Unavailable',
         'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
@@ -2465,8 +2495,10 @@ d_p_bn_3_dsb = Train(
     weight=40,
     cargo_capacity=80,
     loading_speed=15,
+    cargo_age_period=180,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
+        'Comfort': 'Normal (180), Restaurant Unavailable',
         'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
@@ -2489,8 +2521,10 @@ d_p_an_1_dsb = Train(
     weight=40,
     cargo_capacity=64,
     loading_speed=15,
+    cargo_age_period=220,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 1st class',
+        'Comfort': 'Semi-High (220), Restaurant Unavailable',
     }),
 )
 
@@ -2515,7 +2549,7 @@ d_p_b_ii_1_dsb = Train(
     max_speed=Train.kmhish(160),
     power=0,
     introduction_date=date(2002, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=50,
@@ -2527,7 +2561,9 @@ d_p_b_ii_1_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_b_ii_2_dsb = Train(
@@ -2549,7 +2585,7 @@ d_p_b_ii_2_dsb = Train(
     max_speed=Train.kmhish(160),
     power=0,
     introduction_date=date(2012, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=50,
@@ -2561,7 +2597,9 @@ d_p_b_ii_2_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_bk_iii_1_dsb = Train(
@@ -2583,7 +2621,7 @@ d_p_bk_iii_1_dsb = Train(
     max_speed=Train.kmhish(160),
     power=0,
     introduction_date=date(2002, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=50,
@@ -2595,7 +2633,9 @@ d_p_bk_iii_1_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 d_p_bk_iii_2_dsb = Train(
@@ -2617,7 +2657,7 @@ d_p_bk_iii_2_dsb = Train(
     max_speed=Train.kmhish(160),
     power=0,
     introduction_date=date(2012, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=50,
@@ -2629,7 +2669,9 @@ d_p_bk_iii_2_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+        'Comfort': 'Normal (180)',
     }),
+    callbacks={'properties': {'cargo_age_period': Train.cafebonus(45)},}, # With restaurant/kiosk: 225, Without: 180
 )
 
 # wagons
@@ -2652,13 +2694,13 @@ s_w_Gblssy_2_gc = Train(
     max_speed=Train.kmhish(160),
     power=0,
     introduction_date=date(2000, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=17,
     tractive_effort_coefficient=79,
     running_cost_factor=200,
-    cargo_capacity=1, # to be decided
+    cargo_capacity=90, # Modified by John Franklin - The capacity is 22.4t IRL
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.MAIL,
     loading_speed=10,
@@ -2686,13 +2728,13 @@ s_w_Gblssy_2_gc = Train(
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1972, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=17,
     tractive_effort_coefficient=79,
     running_cost_factor=200,
-    cargo_capacity=1, # to be decided
+    cargo_capacity=25, # Modified by John Franklin - According to https://www.svenskmjwiki.se
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.PIECE_GOODS,
     loading_speed=10,
@@ -2728,7 +2770,7 @@ x15p = Train(
     max_speed=Train.kmhish(120),
     power=536,
     introduction_date=date(1990, 1, 1),
-    vehicle_life=8,
+    vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
     weight=Train.ton(int(27.7+15.8+16.6)),
