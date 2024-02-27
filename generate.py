@@ -950,7 +950,7 @@ d_d_mx_ii_2_dsb = Train(
 d_d_mx_ii_3_vltj = Train(
     **COMMON_mx_ii_PROPS,
     id='d_d_mx_ii_3_vltj',
-    name='VLTJ MX II',
+    name='VLTJ MX II Tørfisken',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('mx',),
@@ -961,10 +961,10 @@ d_d_mx_ii_3_vltj = Train(
     ),
     country='denmark',
     company='na',
-    introduction_date=date(1993, 1, 1),
+    introduction_date=date(1994, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from DSB in 1993 #1025'
+        'Trivia': 'One locomotive bought from DSB in 1993 #1025, named Tørfisken'
     }),
 )
 
@@ -989,24 +989,24 @@ d_d_mx_ii_4_ttt = Train(
     }),
 )
 
-d_d_mx_ii_5_lt = Train(
+d_d_mx_ii_5_lb = Train(
     **COMMON_mx_ii_PROPS,
-    id='d_d_mx_ii_5_lt',
-    name='LT MX II',
+    id='d_d_mx_ii_5_lb',
+    name='LB MX II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('mx',),
-        paint=('ltmx161',),
+        paint=('lbmx1',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
     ),
     country='denmark',
     company='na',
-    introduction_date=date(2015, 1, 1),
+    introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+        'Trivia': 'One locomotive bought from HFHJ in 2002 #1045'
     }),
 )
 
@@ -1017,7 +1017,7 @@ d_d_mx_ii_6_lt = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('mx',),
-        paint=('ltmx361',),
+        paint=('ltmx1',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
@@ -1027,7 +1027,28 @@ d_d_mx_ii_6_lt = Train(
     introduction_date=date(2017, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+        'Trivia': 'One locomotive bought from RTOG in 2015 #1043'
+    }),
+)
+
+d_d_mx_ii_7_contec = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_7_contec',
+    name='Contec MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('mx',),
+        paint=('contecmx1',),
+        overlay=('light'),
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["WHITE1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2010, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from CFLCD in 2009 #1008'
     }),
 )
 
@@ -1131,7 +1152,49 @@ d_d_my_ii_4_lt = Train(
     introduction_date=date(2020, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012',
+        'Trivia': 'One locomotive bought from RTOG in 2015 #1145',
+    }),
+)
+
+d_d_my_ii_5_contec = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_5_contec',
+    name='Contec MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('contecmy1',),
+        overlay=('light'),
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["WHITE1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2009, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from CFLCD in 2008 #1158',
+    }),
+)
+
+d_d_my_ii_6_mjbad = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_6_mjbad',
+    name='MjbaD MY II Victoria',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('mjbadmy1',),
+        overlay=('light'),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2016, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from VLTJ in 2008 #1152, named Victoria',
     }),
 )
 
@@ -2926,15 +2989,18 @@ lib.make_purchase_sprites(
         d_d_mx_ii_1_dsb,
         d_d_mx_ii_2_dsb,
         d_d_mx_ii_3_vltj,
+        d_d_mx_ii_7_contec,
+        d_d_mx_ii_5_lb,
         d_d_mx_ii_4_ttt,
-        d_d_mx_ii_5_lt,
         d_d_mx_ii_6_lt,
     ),
     grf.VariantGroup(
         'MY II',
         d_d_my_ii_1_dsb,
         d_d_my_ii_2_dsb,
+        d_d_my_ii_5_contec,
         d_d_my_ii_3_ttt,
+        d_d_my_ii_6_mjbad,
         d_d_my_ii_4_lt,
     ),
     grf.VariantGroup(
