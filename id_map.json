@@ -261,7 +261,10 @@
             "d_d_mx_ii_7_contec": 675,
             "__d_d_my_ii_5_contec_aa_mid": 676,
             "__d_d_my_ii_5_contec_aa_tail": 677,
-            "d_d_my_ii_5_contec": 678
+            "d_d_my_ii_5_contec": 678,
+            "__d_d_my_ii_6_mjbad_aa_mid": 679,
+            "__d_d_my_ii_6_mjbad_aa_tail": 680,
+            "d_d_my_ii_6_mjbad": 681
         }
     }
 }
