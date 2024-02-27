@@ -1006,7 +1006,7 @@ d_d_mx_ii_5_lb = Train(
     introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+        'Trivia': 'One locomotive bought from HFHJ in 2002 #1045'
     }),
 )
 
@@ -1027,7 +1027,7 @@ d_d_mx_ii_6_lt = Train(
     introduction_date=date(2017, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+        'Trivia': 'One locomotive bought from RTOG in 2015 #1043'
     }),
 )
 
@@ -1048,7 +1048,7 @@ d_d_mx_ii_7_contec = Train(
     introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+        'Trivia': 'One locomotive bought from CFLCD in 2009 #1008'
     }),
 )
 
@@ -1152,7 +1152,7 @@ d_d_my_ii_4_lt = Train(
     introduction_date=date(2020, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012',
+        'Trivia': 'One locomotive bought from RTOG in 2015 #1145',
     }),
 )
 
@@ -1173,7 +1173,7 @@ d_d_my_ii_5_contec = Train(
     introduction_date=date(2009, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012',
+        'Trivia': 'One locomotive bought from CFLCD in 2008 #1158',
     }),
 )
 
