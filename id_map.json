@@ -255,7 +255,13 @@
             "d_d_my_ii_4_lt": 669,
             "__d_d_mx_ii_5_lb_aa_mid": 670,
             "__d_d_mx_ii_5_lb_aa_tail": 671,
-            "d_d_mx_ii_5_lb": 672
+            "d_d_mx_ii_5_lb": 672,
+            "__d_d_mx_ii_7_contec_aa_mid": 673,
+            "__d_d_mx_ii_7_contec_aa_tail": 674,
+            "d_d_mx_ii_7_contec": 675,
+            "__d_d_my_ii_5_contec_aa_mid": 676,
+            "__d_d_my_ii_5_contec_aa_tail": 677,
+            "d_d_my_ii_5_contec": 678
         }
     }
 }
