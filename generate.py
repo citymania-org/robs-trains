@@ -903,6 +903,10 @@ COMMON_mx_ii_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    #additional_text=grf.fake_vehicle_info({
+    #    'Use': 'Universal',
+    #    'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed',
+    #}),
 )
 
 d_d_mx_ii_1_dsb = Train(
@@ -920,10 +924,6 @@ d_d_mx_ii_1_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1960, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed',
-    }),
 )
 
 d_d_mx_ii_2_dsb = Train(
@@ -941,10 +941,6 @@ d_d_mx_ii_2_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1972, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed',
-    }),
 )
 
 d_d_mx_ii_3_vltj = Train(
@@ -1070,6 +1066,10 @@ COMMON_my_ii_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    #additional_text=grf.fake_vehicle_info({
+    #    'Use': 'Universal',
+    #    'Trivia': 'A more powerful version of the famous MY locomotive',
+    #}),
 )
 
 d_d_my_ii_1_dsb = Train(
@@ -1087,10 +1087,6 @@ d_d_my_ii_1_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1964, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': 'A more powerful version of the famous MY locomotive',
-    }),
 )
 
 d_d_my_ii_2_dsb = Train(
@@ -1108,10 +1104,6 @@ d_d_my_ii_2_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1972, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': 'A more powerful version of the famous MY locomotive',
-    }),
 )
 
 d_d_my_ii_3_ttt = Train(
@@ -1482,6 +1474,10 @@ COMMON_me_ii_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '''Denmark's final diesel locomotive''',
+    }),
 )
 
 d_d_me_ii_1_dsb = Train(
@@ -1499,10 +1495,6 @@ d_d_me_ii_1_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1981, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': '''Denmark's final diesel locomotive''',
-    }),
 )
 
 d_d_me_ii_2_dsb = Train(
@@ -1520,9 +1512,6 @@ d_d_me_ii_2_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(2000, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
 )
 
 d_d_me_ii_3_dsb = Train(
@@ -1540,9 +1529,6 @@ d_d_me_ii_3_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(2002, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
 )
 
 d_d_me_ii_4_dsb = Train(
@@ -1560,9 +1546,6 @@ d_d_me_ii_4_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(2016, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
 )
 
 # electric locos leccy
@@ -1782,6 +1765,10 @@ COMMON_ea_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '''Denmark's first electric locomotive''',
+    }),
 )
 
 d_e_ea_1_dsb = Train(
@@ -1799,10 +1786,6 @@ d_e_ea_1_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1984, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': '''Denmark's first electric locomotive''',
-    }),
 )
 
 d_e_ea_2_dsb = Train(
@@ -1820,9 +1803,6 @@ d_e_ea_2_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(2006, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
 )
 
 d_e_ea_3_dsb = Train(
@@ -1840,9 +1820,6 @@ d_e_ea_3_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(2017, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
 )
 '''
 mf_ic3 = Train(
@@ -2482,7 +2459,7 @@ d_p_bn_1_dsb = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': '''Also used in Stockholm commuter trains when SL didn't have enough rolling stock''',
+        'Trivia': '''Were used in Stockholm commuter trains when SL didn't have enough rolling stock''',
     }),
 )
 
