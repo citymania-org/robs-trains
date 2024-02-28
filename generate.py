@@ -943,14 +943,13 @@ d_d_mx_ii_2_dsb = Train(
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed',
     }),
 )
 
 d_d_mx_ii_3_vltj = Train(
     **COMMON_mx_ii_PROPS,
     id='d_d_mx_ii_3_vltj',
-    name='VLTJ MX II Tørfisken',
+    name='VLTJ MX II "Tørfisken"',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('mx',),
@@ -1110,7 +1109,6 @@ d_d_my_ii_2_dsb = Train(
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'A more powerful version of the famous MY locomotive',
     }),
 )
 
@@ -1180,7 +1178,7 @@ d_d_my_ii_5_contec = Train(
 d_d_my_ii_6_mjbad = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_6_mjbad',
-    name='MjbaD MY II Victoria',
+    name='MjbaD MY II "Victoria"',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -2482,7 +2480,7 @@ d_p_bn_1_dsb = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold, some used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
     }),
 )
 
@@ -2506,7 +2504,7 @@ d_p_bn_2_dsb = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold, some used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
     }),
 )
 
@@ -2530,7 +2528,7 @@ d_p_bn_3_dsb = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold, some used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
     }),
 )
 
