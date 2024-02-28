@@ -922,7 +922,7 @@ d_d_mx_ii_1_dsb = Train(
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed',
+        'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed, like the MY it is still used today across Europe by private operators, often in pairs with other loco types such as the MZ & CFL 1800',
     }),
 )
 
@@ -1088,7 +1088,7 @@ d_d_my_ii_1_dsb = Train(
     introduction_date=date(1964, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'A more powerful version of the famous MY locomotive',
+        'Trivia': 'A more powerful version of the famous MY locomotive, like the MX it is still used today across Europe by private operators, often in pairs with other loco types such as the MZ & CFL 1800',
     }),
 )
 
