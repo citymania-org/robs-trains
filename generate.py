@@ -1196,6 +1196,69 @@ d_d_my_ii_6_mjbad = Train(
     }),
 )
 
+d_d_my_ii_7_dsb = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_7_dsb',
+    name='DSB MY II Service Locomotive "Den Flyvende Hollænder"',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('dsb3',),
+        overlay=('light'),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["BLACK1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1995, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '''Used to service and maintain Denmark's railways in the 90s #1108, named Den Flyvende Hollænder''',
+    }),
+)
+
+d_d_my_ii_8_taagab = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_8_taagab',
+    name='TÅGAB TMY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('tågab1',),
+        overlay=('light'),
+        cc_replace=colours["SILVER"],
+        cc2_replace=colours["RED"]
+    ),
+    country='sweden',
+    company='taagab',
+    introduction_date=date(1993, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Three locomotives bought from DSB in 1993 #1121, #1123, #1128 and a fourth also from DSB in 1996 #1113',
+    }),
+)
+
+d_d_my_ii_9_taagab = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_9_taagab',
+    name='TÅGAB TMY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('tågab2',),
+        overlay=('light'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["ORANGE"]
+    ),
+    country='sweden',
+    company='taagab',
+    introduction_date=date(1999, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '''One locomotive bought from DSB in 1999 #1108, painted in the Great Northern style for it's role in the film "Dancer in the Dark" starring Björk''',
+    }),
+)
+
 # toaster
 
 COMMON_mze_PROPS = dict(
@@ -2954,6 +3017,9 @@ lib.make_purchase_sprites(
         'MY II',
         d_d_my_ii_1_dsb,
         d_d_my_ii_2_dsb,
+        d_d_my_ii_8_taagab,
+        d_d_my_ii_7_dsb,
+        d_d_my_ii_9_taagab,
         d_d_my_ii_5_contec,
         d_d_my_ii_3_ttt,
         d_d_my_ii_6_mjbad,
