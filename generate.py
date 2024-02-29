@@ -855,7 +855,7 @@ d_d_mye_ii_1_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('dsbmy1',),
+        paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["DCREAM"]
@@ -910,9 +910,9 @@ d_d_mx_ii_1_dsb = Train(
     id='d_d_mx_ii_1_dsb',
     name='DSB MX II',
     liveries=make_psd_cc_liveries(
-        'pp/my.psd',
+        'pp/mx.psd',
         shading=('mx',),
-        paint=('dsbmx1',),
+        paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["DCREAM"]
@@ -931,9 +931,9 @@ d_d_mx_ii_2_dsb = Train(
     id='d_d_mx_ii_2_dsb',
     name='DSB MX II',
     liveries=make_psd_cc_liveries(
-        'pp/my.psd',
+        'pp/mx.psd',
         shading=('mx',),
-        paint=('dsbmx2',),
+        paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["BLACK1"]
@@ -951,9 +951,9 @@ d_d_mx_ii_3_vltj = Train(
     id='d_d_mx_ii_3_vltj',
     name='VLTJ MX II "Tørfisken"',
     liveries=make_psd_cc_liveries(
-        'pp/my.psd',
+        'pp/mx.psd',
         shading=('mx',),
-        paint=('vltjmx1',),
+        paint=('vltj1',),
         overlay=('light'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
@@ -972,9 +972,9 @@ d_d_mx_ii_4_ttt = Train(
     id='d_d_mx_ii_4_ttt',
     name='TTT MX II',
     liveries=make_psd_cc_liveries(
-        'pp/my.psd',
+        'pp/mx.psd',
         shading=('mx',),
-        paint=('tttmx1',),
+        paint=('ttt1',),
         overlay=('light'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
@@ -993,9 +993,9 @@ d_d_mx_ii_5_lb = Train(
     id='d_d_mx_ii_5_lb',
     name='LB MX II',
     liveries=make_psd_cc_liveries(
-        'pp/my.psd',
+        'pp/mx.psd',
         shading=('mx',),
-        paint=('lbmx1',),
+        paint=('lb1',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
@@ -1014,9 +1014,9 @@ d_d_mx_ii_6_lt = Train(
     id='d_d_mx_ii_6_lt',
     name='LT MX II',
     liveries=make_psd_cc_liveries(
-        'pp/my.psd',
+        'pp/mx.psd',
         shading=('mx',),
-        paint=('ltmx1',),
+        paint=('lt1',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
@@ -1035,9 +1035,9 @@ d_d_mx_ii_7_contec = Train(
     id='d_d_mx_ii_7_contec',
     name='Contec MX II',
     liveries=make_psd_cc_liveries(
-        'pp/my.psd',
+        'pp/mx.psd',
         shading=('mx',),
-        paint=('contecmx1',),
+        paint=('contec1',),
         overlay=('light'),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["WHITE1"]
@@ -1078,7 +1078,7 @@ d_d_my_ii_1_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('dsbmy1',),
+        paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["DCREAM"]
@@ -1099,7 +1099,7 @@ d_d_my_ii_2_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('dsbmy2',),
+        paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["BLACK1"]
@@ -1119,7 +1119,7 @@ d_d_my_ii_3_ttt = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('tttmy1',),
+        paint=('ttt1',),
         overlay=('light'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
@@ -1140,7 +1140,7 @@ d_d_my_ii_4_lt = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('ltmy1',),
+        paint=('lt1',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
@@ -1161,7 +1161,7 @@ d_d_my_ii_5_contec = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('contecmy1',),
+        paint=('contec1',),
         overlay=('light'),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["WHITE1"]
@@ -1182,7 +1182,7 @@ d_d_my_ii_6_mjbad = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('mjbadmy1',),
+        paint=('mjbad1',),
         overlay=('light'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
