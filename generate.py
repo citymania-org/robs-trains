@@ -1259,6 +1259,27 @@ d_d_my_ii_9_taagab = Train(
     }),
 )
 
+d_d_my_ii_10_dsb = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_10_dsb',
+    name='DSB MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('dsb4',),
+        overlay=('light'),
+        cc_replace=colours["DBLUE"],
+        cc2_replace=colours["DBLUE"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2005, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '#1101 was the 1st locomotive of the MY class, it is now a museum train and was given a new livery in 2005 to commemorate the 200th anniversary of the birth of the famous Danish author Hans Christian Andersen, known for his works such as "The Little Mermaid" and "The Ugly Duckling"',
+    }),
+)
+
 # toaster
 
 COMMON_mze_PROPS = dict(
@@ -3020,6 +3041,7 @@ lib.make_purchase_sprites(
         d_d_my_ii_8_taagab,
         d_d_my_ii_7_dsb,
         d_d_my_ii_9_taagab,
+        d_d_my_ii_10_dsb,
         d_d_my_ii_5_contec,
         d_d_my_ii_3_ttt,
         d_d_my_ii_6_mjbad,
