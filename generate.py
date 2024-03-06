@@ -1280,6 +1280,27 @@ d_d_my_ii_10_dsb = Train(
     }),
 )
 
+d_d_my_ii_11_dsb = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_11_dsb',
+    name='DSB MY II Service Locomotive "Carina"',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('dsb5',),
+        overlay=('light'),
+        cc_replace=colours["DBLUE"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2004, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '''Used to service and maintain Denmark's railways in the 00s and later as a snow plough loco #1135, named Carina''',
+    }),
+)
+
 # toaster
 
 COMMON_mze_PROPS = dict(
@@ -3041,6 +3062,7 @@ lib.make_purchase_sprites(
         d_d_my_ii_8_taagab,
         d_d_my_ii_7_dsb,
         d_d_my_ii_9_taagab,
+        d_d_my_ii_11_dsb,
         d_d_my_ii_10_dsb,
         d_d_my_ii_5_contec,
         d_d_my_ii_3_ttt,
