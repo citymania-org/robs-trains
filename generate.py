@@ -1051,6 +1051,27 @@ d_d_mx_ii_7_contec = Train(
     }),
 )
 
+d_d_mx_ii_8_ohj = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_8_ohj',
+    name='OHJ MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('ohj1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["WHITE1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1987, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Three locomotives bought from DSB in 1987 #1008, #1009, #1010 and a fourth also from DSB in 1988 #1029'
+    }),
+)
+
 COMMON_my_ii_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
@@ -3049,6 +3070,7 @@ lib.make_purchase_sprites(
         'MX II',
         d_d_mx_ii_1_dsb,
         d_d_mx_ii_2_dsb,
+        d_d_mx_ii_8_ohj,
         d_d_mx_ii_3_vltj,
         d_d_mx_ii_7_contec,
         d_d_mx_ii_5_lb,
