@@ -1322,6 +1322,27 @@ d_d_my_ii_11_dsb = Train(
     }),
 )
 
+d_d_my_ii_12_njj = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_12_njj',
+    name='NJJ MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('njj1',),
+        overlay=('light'),
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["WHITE1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2002, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from DSB in 2002 #1146',
+    }),
+)
+
 # toaster
 
 COMMON_mze_PROPS = dict(
@@ -3084,6 +3105,7 @@ lib.make_purchase_sprites(
         d_d_my_ii_8_taagab,
         d_d_my_ii_7_dsb,
         d_d_my_ii_9_taagab,
+        d_d_my_ii_12_njj,
         d_d_my_ii_11_dsb,
         d_d_my_ii_10_dsb,
         d_d_my_ii_5_contec,
