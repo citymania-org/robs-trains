@@ -1072,6 +1072,27 @@ d_d_mx_ii_8_ohj = Train(
     }),
 )
 
+d_d_mx_ii_9_sb = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_9_sb',
+    name='SB MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('sb1',),
+        overlay=('light'),
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["WHITE1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1994, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from DSB in 1993 #1041 and from OHJ in 1994 #1038, both sold to NJJ in 2001'
+    }),
+)
+
 COMMON_my_ii_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
@@ -3093,6 +3114,7 @@ lib.make_purchase_sprites(
         d_d_mx_ii_2_dsb,
         d_d_mx_ii_8_ohj,
         d_d_mx_ii_3_vltj,
+        d_d_mx_ii_9_sb,
         d_d_mx_ii_7_contec,
         d_d_mx_ii_5_lb,
         d_d_mx_ii_4_ttt,
