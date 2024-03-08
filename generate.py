@@ -1068,7 +1068,7 @@ d_d_mx_ii_8_ohj = Train(
     introduction_date=date(1987, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Three locomotives bought from DSB in 1987 #1008, #1009, #1010 and a fourth also from DSB in 1988 #1029'
+        'Trivia': 'Three locomotives bought from DSB in 1987 #1008, #1009, #1010 & a fourth also from DSB in 1988 #1029'
     }),
 )
 
@@ -1089,7 +1089,7 @@ d_d_mx_ii_9_sb = Train(
     introduction_date=date(1994, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from DSB in 1993 #1041 and from OHJ in 1994 #1038, both sold to NJJ in 2001'
+        'Trivia': 'Two locomotives bought from DSB in 1993 #1041 & from OHJ in 1994 #1038, both sold to NJJ in 2001'
     }),
 )
 
@@ -1110,7 +1110,7 @@ d_d_mx_ii_10_cflcd = Train(
     introduction_date=date(2009, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from ØSJS & DJ in 2007 #1023 and #1029'
+        'Trivia': 'Two locomotives bought from ØSJS & DJ in 2007 #1023 & #1029'
     }),
 )
 
@@ -1213,7 +1213,7 @@ d_d_my_ii_3_ttt = Train(
     introduction_date=date(2012, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from Stena in 2010 #1110 and from RCT in 20XX #1157, in service by 2012',
+        'Trivia': 'Two locomotives bought from Stena in 2010 #1110 & from RCT in 20XX #1157, in service by 2012',
     }),
 )
 
@@ -1297,7 +1297,7 @@ d_d_my_ii_7_dsb = Train(
     introduction_date=date(1995, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Used to service and maintain Denmark's railways in the 90s #1108, named Den Flyvende Hollænder''',
+        'Trivia': '''Used to service & maintain Denmark's railways in the 90s #1108, named Den Flyvende Hollænder''',
     }),
 )
 
@@ -1318,7 +1318,7 @@ d_d_my_ii_8_taagab = Train(
     introduction_date=date(1993, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Three locomotives bought from DSB in 1993 #1121, #1123, #1128 and a fourth also from DSB in 1996 #1113',
+        'Trivia': 'Three locomotives bought from DSB in 1993 #1121, #1123, #1128 & a fourth also from DSB in 1996 #1113',
     }),
 )
 
@@ -1360,7 +1360,7 @@ d_d_my_ii_10_dsb = Train(
     introduction_date=date(2005, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '#1101 was the 1st locomotive of the MY class, it is now a museum train and was given a new livery in 2005 to commemorate the 200th anniversary of the birth of the famous Danish author Hans Christian Andersen, known for his works such as "The Little Mermaid" and "The Ugly Duckling"',
+        'Trivia': '#1101 was the 1st locomotive of the MY class, it is now a museum train & was given a new livery in 2005 to commemorate the 200th anniversary of the birth of the famous Danish author Hans Christian Andersen, known for his works such as "The Little Mermaid" & "The Ugly Duckling"',
     }),
 )
 
@@ -1381,7 +1381,7 @@ d_d_my_ii_11_dsb = Train(
     introduction_date=date(2004, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': '''Used to service and maintain Denmark's railways in the 00s and later as a snow plough loco #1135, named Carina''',
+        'Trivia': '''Used to service & maintain Denmark's railways in the 00s & later as a snow plough loco #1135, named Carina''',
     }),
 )
 
@@ -1444,7 +1444,7 @@ d_d_my_ii_14_vik = Train(
     introduction_date=date(2023, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from CFLCD in 2023 #1146 and #1152',
+        'Trivia': 'Two locomotives bought from CFLCD in 2023 #1146 & #1152',
     }),
 )
 
@@ -1607,7 +1607,7 @@ d_d_mz_ii_4_taagab = Train(
     introduction_date=date(2004, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from DSB in 2004 #1423 and 2006 #1426',
+        'Trivia': 'Two locomotives bought from DSB in 2004 #1423 & 2006 #1426',
     }),
 )
 
@@ -1628,7 +1628,7 @@ d_d_mz_ii_5_ibab = Train(
     introduction_date=date(2012, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from NFRAB in 2012 #1421, named Cathis and 2013 #1413, named Betty',
+        'Trivia': 'Two locomotives bought from NFRAB in 2012 #1421, named Cathis&2013 #1413, named Betty',
     }),
 )
 
@@ -1822,8 +1822,8 @@ rc1 = Train(
     name='Rc1',
     shorten_by=2,
     liveries=make_liveries(6, {
-        'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1967_SE_Rc1_2_1990.png',
+        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
+        'Blue & Red': '1967_SE_Rc1_2_1990.png',
     }),
     country='sweden',
     company='na',
@@ -1854,9 +1854,9 @@ rc2 = Train(
     name='Rc2',
     shorten_by=2,
     liveries=make_liveries(6, {
-        'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red Old': '1967_SE_Rc1_2_1990.png',
-        'Blue and Red New': '1969_SE_Rc2_3_1990.png',
+        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
+        'Blue & Red Old': '1967_SE_Rc1_2_1990.png',
+        'Blue & Red New': '1969_SE_Rc2_3_1990.png',
         'Black': '1969_SE_Rc2_4_2006.png',
     }),
     country='sweden',
@@ -1888,8 +1888,8 @@ rc3 = Train(
     name='Rc3',
     shorten_by=2,
     liveries=make_liveries(6, {
-        'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1990.png',
+        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
+        'Blue & Red': '1969_SE_Rc2_3_1990.png',
         'Black': '1969_SE_Rc2_4_2006.png',
     }),
     country='sweden',
@@ -1921,8 +1921,8 @@ rc4 = Train(
     name='Rc4',
     shorten_by=2,
     liveries=make_liveries(6, {
-        'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1990.png',
+        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
+        'Blue & Red': '1969_SE_Rc2_3_1990.png',
     }),
     country='sweden',
     company='na',
@@ -1953,8 +1953,8 @@ rc5 = Train(
     name='Rc5',
     shorten_by=2,
     liveries=make_liveries(6, {
-        'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1990.png',
+        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
+        'Blue & Red': '1969_SE_Rc2_3_1990.png',
     }),
     country='sweden',
     company='na',
@@ -1985,8 +1985,8 @@ rc6 = Train(
     name='Rc6',
     shorten_by=2,
     liveries=make_liveries(6, {
-        'Orange and Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue and Red': '1969_SE_Rc2_3_1990.png',
+        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
+        'Blue & Red': '1969_SE_Rc2_3_1990.png',
         'Dark Blue': '1984_SE_Rc6_1_2005.png',
         'Black': '1969_SE_Rc2_4_2006.png',
     }),
@@ -2099,10 +2099,10 @@ mf_ic3 = Train(
     id='mf_ic3',
     name='MF IC3',
     liveries=make_liveries(8, {
-        'White and Red': '1989_DK_MF_IC3_MFA_1_1989.png',
-        'Grey, Blue and Green': '1989_DK_MF_IC3_MFA_2_2005.png',
-        'Grey, Blue and Red': '1989_DK_MF_IC3_MFA_3_2012.png',
-        'Red and Black': '1989_DK_MF_IC3_MFA_4_2018.png',
+        'White & Red': '1989_DK_MF_IC3_MFA_1_1989.png',
+        'Grey, Blue & Green': '1989_DK_MF_IC3_MFA_2_2005.png',
+        'Grey, Blue & Red': '1989_DK_MF_IC3_MFA_3_2012.png',
+        'Red & Black': '1989_DK_MF_IC3_MFA_4_2018.png',
     }),
     country='denmark',
     company='na',
@@ -2129,20 +2129,20 @@ mf_ic3 = Train(
 ).add_articulated_part(
     id='mf_ic3_car2',
     liveries=make_liveries(8, {
-        'White and Red': '1989_DK_MF_IC3_FF_1_1989.png',
-        'Grey, Blue and Green': '1989_DK_MF_IC3_FF_2_2005.png',
-        'Grey, Blue and Red': '1989_DK_MF_IC3_FF_3_2012.png',
-        'Red and Black': '1989_DK_MF_IC3_FF_4_2018.png',
+        'White & Red': '1989_DK_MF_IC3_FF_1_1989.png',
+        'Grey, Blue & Green': '1989_DK_MF_IC3_FF_2_2005.png',
+        'Grey, Blue & Red': '1989_DK_MF_IC3_FF_3_2012.png',
+        'Red & Black': '1989_DK_MF_IC3_FF_4_2018.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='mf_ic3_car3',
     liveries=make_liveries(8, {
-        'White and Red': '1989_DK_MF_IC3_MFB_1_1989.png',
-        'Grey, Blue and Green': '1989_DK_MF_IC3_MFB_2_2005.png',
-        'Grey, Blue and Red': '1989_DK_MF_IC3_MFB_3_2012.png',
-        'Red and Black': '1989_DK_MF_IC3_MFB_4_2018.png',
+        'White & Red': '1989_DK_MF_IC3_MFB_1_1989.png',
+        'Grey, Blue & Green': '1989_DK_MF_IC3_MFB_2_2005.png',
+        'Grey, Blue & Red': '1989_DK_MF_IC3_MFB_3_2012.png',
+        'Red & Black': '1989_DK_MF_IC3_MFB_4_2018.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -2152,10 +2152,10 @@ er_ir4 = Train(
     id='er_ir4',
     name='ER IR4',
     liveries=make_liveries(8, {
-        'White and Red': '1993_DK_ER_IR4_ER20_1_1993.png',
-        'Grey, Blue and Green': '1993_DK_ER_IR4_ER20_2_2005.png',
-        'Grey, Blue and Red': '1993_DK_ER_IR4_ER20_3_2012.png',
-        'Red and Black': '1993_DK_ER_IR4_ER20_4_2021.png',
+        'White & Red': '1993_DK_ER_IR4_ER20_1_1993.png',
+        'Grey, Blue & Green': '1993_DK_ER_IR4_ER20_2_2005.png',
+        'Grey, Blue & Red': '1993_DK_ER_IR4_ER20_3_2012.png',
+        'Red & Black': '1993_DK_ER_IR4_ER20_4_2021.png',
     }),
     country='denmark',
     company='na',
@@ -2182,30 +2182,30 @@ er_ir4 = Train(
 ).add_articulated_part(
     id='er_ir4_car2',
     liveries=make_liveries(8, {
-        'White and Red': '1993_DK_ER_IR4_FR22_1_1993.png',
-        'Grey, Blue and Green': '1993_DK_ER_IR4_FR22_2_2005.png',
-        'Grey, Blue and Red': '1993_DK_ER_IR4_FR22_3_2012.png',
-        'Red and Black': '1993_DK_ER_IR4_FR22_4_2021.png',
+        'White & Red': '1993_DK_ER_IR4_FR22_1_1993.png',
+        'Grey, Blue & Green': '1993_DK_ER_IR4_FR22_2_2005.png',
+        'Grey, Blue & Red': '1993_DK_ER_IR4_FR22_3_2012.png',
+        'Red & Black': '1993_DK_ER_IR4_FR22_4_2021.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='er_ir4_car3',
     liveries=make_liveries(8, {
-        'White and Red': '1993_DK_ER_IR4_FR23_1_1993.png',
-        'Grey, Blue and Green': '1993_DK_ER_IR4_FR23_2_2005.png',
-        'Grey, Blue and Red': '1993_DK_ER_IR4_FR23_3_2012.png',
-        'Red and Black': '1993_DK_ER_IR4_FR23_4_2021.png',
+        'White & Red': '1993_DK_ER_IR4_FR23_1_1993.png',
+        'Grey, Blue & Green': '1993_DK_ER_IR4_FR23_2_2005.png',
+        'Grey, Blue & Red': '1993_DK_ER_IR4_FR23_3_2012.png',
+        'Red & Black': '1993_DK_ER_IR4_FR23_4_2021.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='er_ir4_car4',
     liveries=make_liveries(8, {
-        'White and Red': '1993_DK_ER_IR4_ER21_1_1993.png',
-        'Grey, Blue and Green': '1993_DK_ER_IR4_ER21_2_2005.png',
-        'Grey, Blue and Red': '1993_DK_ER_IR4_ER21_3_2012.png',
-        'Red and Black': '1993_DK_ER_IR4_ER21_4_2021.png',
+        'White & Red': '1993_DK_ER_IR4_ER21_1_1993.png',
+        'Grey, Blue & Green': '1993_DK_ER_IR4_ER21_2_2005.png',
+        'Grey, Blue & Red': '1993_DK_ER_IR4_ER21_3_2012.png',
+        'Red & Black': '1993_DK_ER_IR4_ER21_4_2021.png',
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -2237,7 +2237,7 @@ stog_1_2 = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Can be combined with 2 and 4 car sets to make sets of 6 and 8',
+        'Info': 'Can be combined with 2 & 4 car sets to make sets of 6 & 8',
     }),
 ).add_articulated_part(
     id='stog_1_2_car2',
@@ -2274,7 +2274,7 @@ stog_1_4 = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Info': 'Can be combined with 2 and 4 car sets to make sets of 6 and 8',
+        'Info': 'Can be combined with 2 & 4 car sets to make sets of 6 & 8',
     }),
 ).add_articulated_part(
     id='stog_1_4_car2',
@@ -2303,7 +2303,7 @@ abs1 = Train(
     id='abs1',
     name='ABs',
     liveries=make_liveries(11, {
-        'White, Blue and Green': '2002_DK_ABs_1_2002.png',
+        'White, Blue & Green': '2002_DK_ABs_1_2002.png',
     }),
     country='denmark',
     company='na',
@@ -2332,7 +2332,7 @@ abs2 = Train(
     id='abs2',
     name='ABs',
     liveries=make_liveries(11, {
-        'White, Blue and Red': '2002_DK_ABs_2_2012.png',
+        'White, Blue & Red': '2002_DK_ABs_2_2012.png',
     }),
     country='denmark',
     company='na',
@@ -2361,7 +2361,7 @@ b_ii1 = Train(
     id='b_ii1',
     name='B II',
     liveries=make_liveries(10, {
-        'White, Blue and Green': '2002_DK_B_II_1_2002.png',
+        'White, Blue & Green': '2002_DK_B_II_1_2002.png',
     }),
     country='denmark',
     company='na',
@@ -2390,7 +2390,7 @@ b_ii2 = Train(
     id='b_ii2',
     name='B II',
     liveries=make_liveries(10, {
-        'White, Blue and Red': '2002_DK_B_II_2_2012.png',
+        'White, Blue & Red': '2002_DK_B_II_2_2012.png',
     }),
     country='denmark',
     company='na',
@@ -2547,7 +2547,7 @@ d_p_ab_1_dsb = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st and 2nd class',
+        'Use': '1st & 2nd class',
     }),
 )
 
@@ -2570,7 +2570,7 @@ d_p_ab_2_dsb = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st and 2nd class',
+        'Use': '1st & 2nd class',
     }),
 )
 
@@ -2732,7 +2732,7 @@ d_p_bn_1_dsb = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
     }),
 )
 
@@ -2756,7 +2756,7 @@ d_p_bn_2_dsb = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
     }),
 )
 
@@ -2780,7 +2780,7 @@ d_p_bn_3_dsb = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn and variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
     }),
 )
 
