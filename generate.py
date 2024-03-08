@@ -1093,6 +1093,48 @@ d_d_mx_ii_9_sb = Train(
     }),
 )
 
+d_d_mx_ii_10_cflcd = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_10_cflcd',
+    name='CFLCD MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('cflcd1',),
+        overlay=('light'),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2009, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from ØSJS & DJ in 2007 #1023 and #1029'
+    }),
+)
+
+d_d_mx_ii_11_vik = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_11_vik',
+    name='VIK MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('cflcd1',),
+        overlay=('light'),
+        cc_replace=colours["DBLUE"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2023, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from CFLCD in 2023 #1029'
+    }),
+)
+
 COMMON_my_ii_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
@@ -1361,6 +1403,48 @@ d_d_my_ii_12_njj = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'One locomotive bought from DSB in 2002 #1146',
+    }),
+)
+
+d_d_my_ii_13_cflcd = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_13_cflcd',
+    name='CFLCD MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('cflcd1',),
+        overlay=('light'),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2013, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from NJJ in 2008 #1146',
+    }),
+)
+
+d_d_my_ii_14_vik = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_14_vik',
+    name='VIK MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('cflcd1',),
+        overlay=('light'),
+        cc_replace=colours["DBLUE"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2023, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from CFLCD in 2023 #1146 and #1152',
     }),
 )
 
@@ -3115,10 +3199,12 @@ lib.make_purchase_sprites(
         d_d_mx_ii_8_ohj,
         d_d_mx_ii_3_vltj,
         d_d_mx_ii_9_sb,
+        d_d_mx_ii_10_cflcd,
         d_d_mx_ii_7_contec,
         d_d_mx_ii_5_lb,
         d_d_mx_ii_4_ttt,
         d_d_mx_ii_6_lt,
+        d_d_mx_ii_11_vik,
     ),
     grf.VariantGroup(
         'MY II',
@@ -3132,8 +3218,10 @@ lib.make_purchase_sprites(
         d_d_my_ii_10_dsb,
         d_d_my_ii_5_contec,
         d_d_my_ii_3_ttt,
+        d_d_my_ii_13_cflcd,
         d_d_my_ii_6_mjbad,
         d_d_my_ii_4_lt,
+        d_d_my_ii_14_vik,
     ),
     grf.VariantGroup(
         'MZ I',
