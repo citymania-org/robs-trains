@@ -848,43 +848,6 @@ d_d_frichs_475_4 = Train(
 
 # nohab
 
-d_d_mye_ii_1_dsb = Train(
-    id='d_d_mye_ii_1_dsb',
-    name='DSB MY II (early)',
-    length=9,
-    liveries=make_psd_cc_liveries(
-        'pp/my.psd',
-        shading=('my',),
-        paint=('dsb1',),
-        overlay=('light'),
-        cc_replace=colours["MAROON"],
-        cc2_replace=colours["DCREAM"]
-    ),
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(133),
-    power=1700,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=102,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-        'Trivia': '''Denmark's first mass-produced modern diesel locomotive''',
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},},
-)
-
 from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik
         
 from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik
