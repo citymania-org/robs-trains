@@ -1519,6 +1519,27 @@ d_e_ea_4_bulmarket = Train(
         'Trivia': 'Some locos sold to Bulmarket in 2007 for liquified gas trains',
     }),
 )
+
+d_e_ea_5_db = Train(
+    **COMMON_ea_PROPS,
+    id='d_e_ea_5_db',
+    name='DB Schenker Bulgaria EA',
+    liveries=make_psd_cc_liveries(
+        'pp/ea.psd',
+        shading=('ea',),
+        paint=('db1',),
+        overlay=('light', 'leccy'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='na',
+    company='na',
+    introduction_date=date(2010, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Freight',
+        'Trivia': 'Some locos sold to DB Schenker Bulgaria in 2010',
+    }),
+)
 '''
 mf_ic3 = Train(
     id='mf_ic3',
@@ -2689,6 +2710,7 @@ lib.make_purchase_sprites(
         d_e_ea_1_dsb,
         d_e_ea_2_dsb,
         d_e_ea_4_bulmarket,
+        d_e_ea_5_db,
         d_e_ea_3_dsb,
     ),
     #mf_ic3,
