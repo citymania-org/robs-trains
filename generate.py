@@ -1498,6 +1498,27 @@ d_e_ea_3_dsb = Train(
         'Use': 'Universal',
     }),
 )
+
+d_e_ea_4_bulmarket = Train(
+    **COMMON_ea_PROPS,
+    id='d_e_ea_4_bulmarket',
+    name='Bulmarket EA',
+    liveries=make_psd_cc_liveries(
+        'pp/ea.psd',
+        shading=('ea',),
+        paint=('bulmarket1',),
+        overlay=('light', 'leccy'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLUE"]
+    ),
+    country='na',
+    company='na',
+    introduction_date=date(2007, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Freight',
+        'Trivia': 'Some locos sold to Bulmarket in 2007 for liquified gas trains',
+    }),
+)
 '''
 mf_ic3 = Train(
     id='mf_ic3',
@@ -2667,6 +2688,7 @@ lib.make_purchase_sprites(
         'EA',
         d_e_ea_1_dsb,
         d_e_ea_2_dsb,
+        d_e_ea_4_bulmarket,
         d_e_ea_3_dsb,
     ),
     #mf_ic3,
