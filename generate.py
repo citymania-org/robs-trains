@@ -1032,7 +1032,7 @@ d_d_mz_ii_5_ibab = Train(
     introduction_date=date(2012, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from NFRAB in 2012 #1421, named Cathis&2013 #1413, named Betty',
+        'Trivia': 'Two locomotives bought from NFRAB in 2012 #1421, named Cathis & 2013 #1413, named Betty',
     }),
 )
 
@@ -1216,6 +1216,27 @@ d_d_me_ii_4_dsb = Train(
     introduction_date=date(2016, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+    }),
+)
+
+d_d_me_ii_5_nrfab = Train(
+    **COMMON_me_ii_PROPS,
+    id='d_d_me_ii_5_nrfab',
+    name='NRFAB TME II',
+    liveries=make_psd_cc_liveries(
+        'pp/me.psd',
+        shading=('me',),
+        paint=('nrfab1',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["GREEN"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2020, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Eight locomotives bought from DSB in 2020 #1509, #1513 & #1527 & in 2021 #1504, #1518, #1523, #1525 & #1529',
     }),
 )
 
@@ -2575,6 +2596,7 @@ lib.make_purchase_sprites(
         d_d_me_ii_2_dsb,
         d_d_me_ii_3_dsb,
         d_d_me_ii_4_dsb,
+        d_d_me_ii_5_nrfab,
     ),
     #grf.VariantGroup(
     #    'Rc',
