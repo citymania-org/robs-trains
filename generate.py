@@ -1002,7 +1002,7 @@ d_d_mz_ii_4_taagab = Train(
         'pp/mz1.psd',
         shading=('mz2',),
         paint=('tågab1',),
-        overlay=('light', 'tågab1o'),
+        overlay=('light'),
         cc_replace=colours["SILVER"],
         cc2_replace=colours["RED"]
     ),
@@ -1023,7 +1023,7 @@ d_d_mz_ii_5_ibab = Train(
         'pp/mz1.psd',
         shading=('mz2',),
         paint=('ibab1',),
-        overlay=('light', 'tågab1o'),
+        overlay=('light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["WHITE1"]
     ),
@@ -1032,7 +1032,7 @@ d_d_mz_ii_5_ibab = Train(
     introduction_date=date(2012, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Two locomotives bought from NFRAB in 2012 #1421, named Cathis & 2013 #1413, named Betty',
+        'Trivia': 'Two locomotives bought from NRFAB in 2012 #1421, named Cathis & 2013 #1413, named Betty',
     }),
 )
 
