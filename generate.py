@@ -1118,6 +1118,28 @@ d_d_mz_iv_1_dsb = Train(
     }),
 )
 
+d_d_mz_iv_2_dbcsc = Train(
+    **COMMON_mzl_PROPS,
+    id='d_d_mz_iv_2_dbcsc',
+    name='DBCSC MZ IV',
+    liveries=make_psd_cc_liveries(
+        'pp/mz4.psd',
+        shading=('mz1',),
+        paint=('dbcsc1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2018, 1, 1),
+    weight=123,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Four locomotives bought from RSC in 2016 #1449, #1453, #1457 & #1459',
+    }),
+)
+
 from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab
 
 # electric locos leccy
@@ -2469,7 +2491,11 @@ lib.make_purchase_sprites(
         d_d_mz_iii_1_dsb,
         d_d_mz_iii_2_dsb,
     ),
-    d_d_mz_iv_1_dsb,
+    grf.VariantGroup(
+        'MZ IV',
+        d_d_mz_iv_1_dsb,
+        d_d_mz_iv_2_dbcsc,
+    ),
     grf.VariantGroup(
         'ME II',
         d_d_me_ii_1_dsb,
