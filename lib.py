@@ -36,6 +36,7 @@ CC2_COLOURS = (
     (128, 168, 44, 255),
 )
 
+
 def make_remap_range(colours, remap):
     if len(colours) != 8:
         raise ValueError(f'CC replacement range should contain exactly 8 colours but {len(colours)} were found')
@@ -906,8 +907,11 @@ class AutoMask(SpriteWrapper):
 
         mask = np.zeros((h, w), dtype=np.uint8)
         remap = AUTO_REMAP_SWAPPED if self.cc_mode == CC_SWAPPED else AUTO_REMAP
+        rgb = grf.np_make_writable(rgb)
         for k, v in remap.items():
-            mask[np.all(np.equal(rgb, k), axis=2)] = v
+            m = np.all(np.equal(rgb, k), axis=2)
+            mask[m] = v
+            rgb[m] = (grf.DEFAULT_BRIGHTNESS, 0, 0)
 
         timer.count_custom('Generating auto CC masks')
 
