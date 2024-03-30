@@ -97,8 +97,8 @@ class AutoMaskingFileSprite(grf.FileSprite):
         return w, h, rgb, alpha, mask
 
     def get_fingerprint(self):
-        return grf.combine_fingerprint(
-            super().get_fingerprint(),
+        return dict(
+            **super().get_fingerprint(),
             cc_mode=self.cc_mode,
         )
 
@@ -128,8 +128,8 @@ class CCReplacingFileSprite(grf.FileSprite):
         return w, h, rgb, alpha, mask
 
     def get_fingerprint(self):
-        return grf.combine_fingerprint(
-            super().get_fingerprint(),
+        return dict(
+            **super().get_fingerprint(),
             remap=tuple(self.remap.items()),
         )
 
@@ -918,8 +918,8 @@ class AutoMask(SpriteWrapper):
         return w, h, rgb, alpha, mask
 
     def get_fingerprint(self):
-        return grf.combine_fingerprint(
-            super().get_fingerprint(),
+        return dict(
+            **super().get_fingerprint(),
             cc_mode=self.cc_mode,
         )
 
@@ -948,8 +948,8 @@ class CCReplace(SpriteWrapper):
         return w, h, rgb, alpha, mask
 
     def get_fingerprint(self):
-        return grf.combine_fingerprint(
-            super().get_fingerprint(),
+        return dict(
+            **super().get_fingerprint(),
             remap=tuple(self.remap.items()),
         )
 
@@ -994,8 +994,8 @@ class PSDLivery:
             return sw, sh, rgb, salpha, None
 
         def get_fingerprint(self):
-            return grf.combine_fingerprint(
-                super().get_fingerprint(),
+            return dict(
+                **super().get_fingerprint(),
                 palette=tuple(self.palette.items()),
             )
 
