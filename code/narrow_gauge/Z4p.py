@@ -22,9 +22,6 @@ COMMON_Z4p_PROPS = dict(
     cost_factor=25, #balance later
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'The most common diesel locomotive on narrow gauge lines. The first ones were acquired by SRJ, with other private companies and SJ following suit',
-    }),
 )
 
 s_d_Z4p_1_srj = Train(
@@ -34,17 +31,38 @@ s_d_Z4p_1_srj = Train(
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
-    #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
-    #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1947, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SRJ, GJ, SJ, SL, and others (probably)',
+        'Use': 'Universal',
+        'Builder': 'Kalmar Verkstad'
+    }),
 )
 
-s_d_Z4p_2_nklj = Train(
+s_d_Z4p_2 = Train(
     **COMMON_Z4p_PROPS,
-    id='s_d_Z4p_2_NKLJ',
+    id='s_d_Z4p_2_',
+    name='Munkfors Bruk Ms 3',
+    liveries=make_psd_cc_liveries(
+        'pp/Z4p.psd', shading='base', paint='2', overlay='light', cc_replace=colours["DGREEN"], cc2_replace=colours["DGREEN"],
+    ),
+    country='sweden',
+    company='na',
+    purchase_sprite_towed_id='s_p_Co_1',
+    introduction_date=date(1948, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'Munkfors Bruk',
+        'Use': 'Shunting',
+        'Builder': 'Kalmar Verkstad'
+    }),
+)
+
+s_d_Z4p_3_nklj = Train(
+    **COMMON_Z4p_PROPS,
+    id='s_d_Z4p_3_NKLJ',
     name='NKlJ Z4p',
     liveries={
         'Default': Livery('1947_SE_Z4p_2_xxxx.png', cc_replace=colours["MAROON"], cc2_replace=colours["CREAM"]),
@@ -53,13 +71,35 @@ s_d_Z4p_2_nklj = Train(
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
-    introduction_date=date(1947, 1, 1),
+    introduction_date=date(1951, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'NKlJ',
+        'Use': 'Universal',
+        'Builder': 'Kalmar Verkstad'
+    }),
 )
 
-
-s_d_Z4p_3_donj = Train(
+s_d_Z4p_4 = Train(
     **COMMON_Z4p_PROPS,
-    id='s_d_Z4p_3_DONJ',
+    id='s_d_Z4p_4',
+    name='SRJ Z4p',
+    liveries=make_psd_cc_liveries(
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
+    ),
+    country='sweden',
+    company='na',
+    purchase_sprite_towed_id='s_p_Co_1',
+    introduction_date=date(1951, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'Böksholms Bruk',
+        'Use': 'Shunting',
+        'Builder': 'Kalmar Verkstad'
+    }),
+)
+
+s_d_Z4p_5_donj = Train(
+    **COMMON_Z4p_PROPS,
+    id='s_d_Z4p_5_DONJ',
     name='DONJ Z4p',
     liveries={
         'Default': Livery('1947_SE_Z4p_3_xxxx.png', cc_replace=colours["ORANGE"], cc2_replace=colours["DTURQUOISE"]),
@@ -68,5 +108,48 @@ s_d_Z4p_3_donj = Train(
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
+    introduction_date=date(1966, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'DONJ',
+        'Use': 'Universal',
+        'Builder': 'Kalmar Verkstad'
+    }),
+)
+
+s_d_Z4p_6_sl = Train(
+    **COMMON_Z4p_PROPS,
+    id='s_d_Z4p_6_sl',
+    name='SRJ Z4p',
+    liveries=make_psd_cc_liveries(
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
+    ),
+    #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
+    country='sweden',
+    company='na',
+    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1947, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Universal',
+        'Builder': 'Kalmar Verkstad'
+    }),
+)
+
+s_d_Z4p_7_sl = Train(
+    **COMMON_Z4p_PROPS,
+    id='s_d_Z4p_7_sl',
+    name='SRJ Z4p',
+    liveries=make_psd_cc_liveries(
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
+    ),
+    #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
+    country='sweden',
+    company='na',
+    purchase_sprite_towed_id='s_p_Co_1',
+    introduction_date=date(1947, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Universal',
+        'Builder': 'Kalmar Verkstad'
+    }),
 )
