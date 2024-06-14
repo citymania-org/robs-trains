@@ -1,8 +1,14 @@
 # robs_trains
 Rob’s Trains
 
+# Dependencies
+
+[grf-py](https://github.com/citymania-org/grf-py)
+[psd-tools](https://github.com/psd-tools/psd-tools)
+
 # Compiling
 
+run 'pip install -r requirements.txt' or manually download dependencies
 run generate.py
 
 # PSDLivery
