@@ -82,7 +82,7 @@ s_d_Z4p_3_nklj = Train(
 s_d_Z4p_4 = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_4',
-    name='SRJ Z4p',
+    name='Böksholms Bruk     Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
@@ -127,7 +127,7 @@ s_d_Z4p_6_sl = Train(
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
-    introduction_date=date(1947, 1, 1),
+    introduction_date=date(1991, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SL',
         'Use': 'Universal',
@@ -146,7 +146,7 @@ s_d_Z4p_7_sl = Train(
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
-    introduction_date=date(1947, 1, 1),
+    introduction_date=date(2008, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SL',
         'Use': 'Universal',
