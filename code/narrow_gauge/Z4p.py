@@ -64,9 +64,10 @@ s_d_Z4p_3_nklj = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_3_NKLJ',
     name='NKlJ Z4p',
-    liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='3_nklj', overlay='light',  cc_replace=colours["MAROON"], cc2_replace=colours["CREAM"],
-    ),
+    liveries={
+        'Default': Livery('1947_SE_Z4p_2_xxxx.png', cc_replace=colours["MAROON"], cc2_replace=colours["CREAM"]),
+        '2CC': Livery('1947_SE_Z4p_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
+    },
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
@@ -81,9 +82,9 @@ s_d_Z4p_3_nklj = Train(
 s_d_Z4p_4 = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_4',
-    name='Böksholms Bruk Z4p',
+    name='Böksholms Bruk     Z4p',
     liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='4', overlay='light', cc_replace=colours["ORANGE"], cc2_replace=colours["DGREEN"],
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
     country='sweden',
     company='na',
@@ -100,9 +101,10 @@ s_d_Z4p_5_donj = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_5_DONJ',
     name='DONJ Z4p',
-    liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='5_donj', overlay='light', cc_replace=colours["ORANGE"], cc2_replace=colours["DTURQUOISE"],
-    ),
+    liveries={
+        'Default': Livery('1947_SE_Z4p_3_xxxx.png', cc_replace=colours["ORANGE"], cc2_replace=colours["DTURQUOISE"]),
+        '2CC': Livery('1947_SE_Z4p_3_xxxx.png', auto_cc=lib.CC_DEFAULT),
+    },
     country='sweden',
     company='na',
     purchase_sprite_towed_id='s_p_Co_1',
@@ -117,9 +119,9 @@ s_d_Z4p_5_donj = Train(
 s_d_Z4p_6_sl = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_6_sl',
-    name='SL Z4p',
+    name='SRJ Z4p',
     liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='6_sl', overlay='light', cc_replace=colours["YELLOW"], cc2_replace=colours["SILVER"],
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
     #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
     country='sweden',
@@ -136,9 +138,9 @@ s_d_Z4p_6_sl = Train(
 s_d_Z4p_7_sl = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_7_sl',
-    name='SL Z4p',
+    name='SRJ Z4p',
     liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='7_sl', overlay='light', cc_replace=colours["RED"], cc2_replace=colours["RED"],
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
     #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
     country='sweden',

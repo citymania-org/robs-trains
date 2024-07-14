@@ -3,8 +3,8 @@ import grf, lib
 g = grf.NewGRF(
     grfid=b'KSTA',
     name='KST SNDTS (ScaNDinavian Train Set)',
-    description='Scandinavian Trains made by Rob, dP and Brickblock1. Licence: GPL v2',
-    url='https://github.com/citymania-org/robs-trains',
+    description='Scandinavian Trains made by Rob, dP and Brickblock1',
+    url='https://github.com/citymania-org/ro.bs-trains',
     id_map_file='id_map.json',
 )
 
@@ -24,10 +24,10 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
     metro,  # Metro
     p_gauge,  # Swedish 3 foot gauge
     p_gauge_dc,  # SRJ
-    p_gauge_15kv,  # NKlJ
+    p_gauge_15kv,  # NKIJ
 ) = g.set_railtype_table([
     ('SAAN', 'RAIL'),  # Standard gauge track
-    ('SAA$', 'NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
+    ('NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
     ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
     ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
     ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
