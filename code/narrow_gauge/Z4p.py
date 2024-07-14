@@ -121,7 +121,7 @@ s_d_Z4p_6_sl = Train(
     id='s_d_Z4p_6_sl',
     name='SRJ Z4p',
     liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["YELLOW"], cc2_replace=colours["YELLOW"],
     ),
     #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
     country='sweden',
@@ -140,7 +140,7 @@ s_d_Z4p_7_sl = Train(
     id='s_d_Z4p_7_sl',
     name='SRJ Z4p',
     liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
+        'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["RED"], cc2_replace=colours["RED"],
     ),
     #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
     country='sweden',
