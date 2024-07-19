@@ -2194,6 +2194,10 @@ d_p_bk_iii_2_dsb = Train(
     }),
 )
 
+# emu 
+
+from code.standard_gauge.Xoa4 import s_e_Xoa4_1_dj, s_e_Xoa4_2_sj
+
 # wagons
 
 s_w_Gblssy_2_gc = Train(
