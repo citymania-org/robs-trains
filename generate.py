@@ -2342,10 +2342,14 @@ COUNTRY_SPRITES = {
 COMPANY_SPRITES = {
     'na': purchase_icon('lblank.png'),
     'cmetro': purchase_icon('lcmetro.png'),
-    'øresundståg': purchase_icon('løresundståg.png'),
+    'øresundståg': purchase_icon('loeresundstaag.png'),
     'stog': purchase_icon('lstog.png'),
     'sl': purchase_icon('lsl.png'),
-    'taagab': purchase_icon('ltågab.png'),
+    'taagab': purchase_icon('ltaagab.png'),
+    'sj_70s': purchase_icon('lsj70s.png'),
+    'tgojnew': purchase_icon('ltgojnew.png'),
+    'maelartaag': purchase_icon('lmaelartaag.png'),
+    'hectorrail': purchase_icon('lhectorrail.png'),
 }
 
 
