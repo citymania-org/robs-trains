@@ -2196,7 +2196,7 @@ d_p_bk_iii_2_dsb = Train(
 
 # emu 
 
-from code.standard_gauge.Xoa4 import s_e_Xoa4_1_dj, s_e_Xoa4_2_sj
+from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
 
 # wagons
 
@@ -2579,21 +2579,13 @@ lib.make_purchase_sprites(
         d_p_b_ii_2_dsb,
         d_p_bk_iii_2_dsb,
     ),
+    grf.VariantGroup('Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
     #grf.VariantGroup(
     #    'B II',
     #    b_ii1,
     #    b_ii2,
     #),
-    grf.VariantGroup(
-        'Z4p',
-        s_d_Z4p_1_srj,
-        s_d_Z4p_2,
-        s_d_Z4p_3_nklj,
-        s_d_Z4p_4,
-        s_d_Z4p_5_donj,
-        s_d_Z4p_6_sl,
-        s_d_Z4p_7_sl
-    ),
+    grf.VariantGroup('Z4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
     s_p_Co_1,
     s_p_UBp_ii_1,
