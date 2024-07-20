@@ -2340,11 +2340,12 @@ COUNTRY_SPRITES = {
     'sweden': purchase_icon('fse.png'),
     'ussr': purchase_icon('fsu.png'),
     'jugoslavija': purchase_icon('fyu.png'),
+    'na': purchase_icon('blank.png')
 }
 
 
 COMPANY_SPRITES = {
-    'na': purchase_icon('lblank.png'),
+    'na': purchase_icon('blank.png'),
     'cmetro': purchase_icon('lcmetro.png'),
     'øresundståg': purchase_icon('loeresundstaag.png'),
     'stog': purchase_icon('lstog.png'),
@@ -2367,7 +2368,7 @@ POWER_TYPE_SPRITES = {
     'dc': purchase_icon('pelectricw.png'),
     '15kv': purchase_icon('pelectricw.png'),
     '25kv': purchase_icon('pelectricw.png'),
-    'na': purchase_icon('pblank.png')
+    'na': purchase_icon('blank.png')
 }
 
 lib.make_purchase_sprites(
