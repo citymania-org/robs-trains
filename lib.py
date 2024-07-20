@@ -392,7 +392,7 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
         for p in parts:
             dx, dy = p['offset']
             if p['property'] == 'self':
-                sprite = t.liveries[0]['sprites'][6]
+                sprite = t.liveries[0]['sprites'][6] # get the - view for the default livery
                 img = train_image(sprite)
                 dy += sprite.yofs
             elif p['property'].startswith('towed'):
