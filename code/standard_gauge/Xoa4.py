@@ -24,22 +24,24 @@ COMMON_XOA4_PROPS = dict(
     country='sweden',
 )
 
-s_e_Xoa4_1_dj = Train(
+s_e_Xoa4_1_sj = Train(
     **COMMON_XOA4_PROPS,
-    id='s_e_Xoa4_1_dj',
-    name='DJ Xoa4',
+    id='s_e_Xoa4_1_sj',
+    name='SJ Xoa4',
     liveries=make_psd_cc_liveries( # improve later
         'pp/Xoa4.psd',
-        overlay=('sj/dj_original', 'Electrical equipment'),
+        shading='Xoa4',
+        paint='sj/dj_original',
+        overlay=('Lights', 'Electrical equipment'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["CREAM"]
     ),
     company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'DJ, SJ',
-        'Use': '',
-        'Builder': ''
+        'Operator': 'SJ, DJ',
+        'Use': 'Local trains, 3rd class',
+        'Builder': 'ASEA'
     }),
 )
 
@@ -49,7 +51,9 @@ s_e_Xoa4_2_sj = Train(
     name='SJ Xoa4',
     liveries=make_psd_cc_liveries( # improve later
         'pp/Xoa4.psd',
-        overlay=('sj/dj_original', 'sj_brown_mask', 'Electrical equipment'),
+        shading='Xoa4',
+        paint='sj_brown',
+        overlay=('Lights', 'Electrical equipment'),
         cc_replace=colours["REDBROWN"],
         cc2_replace=colours["REDBROWN"]
     ),
@@ -57,7 +61,7 @@ s_e_Xoa4_2_sj = Train(
     introduction_date=date(1950, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SJ',
-        'Use': '',
-        'Builder': ''
+        'Use': 'Local trains, 3rd class',
+        'Builder': 'ASEA'
     }),
 )
