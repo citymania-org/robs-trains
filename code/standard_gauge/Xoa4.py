@@ -19,6 +19,7 @@ COMMON_XOA4_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=75,
+    loading_speed=5,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -29,7 +30,7 @@ s_e_Xoa4_1_sj = Train(
     id='s_e_Xoa4_1_sj',
     name='SJ Xoa4',
     liveries=make_psd_cc_liveries(
-        'pp/Xoa4.psd',
+        'pp/1938_SE_Xoa4.psd',
         shading='Xoa4',
         paint='sj/dj_original',
         overlay=('Lights', 'Electrical equipment'),
@@ -37,7 +38,7 @@ s_e_Xoa4_1_sj = Train(
         cc2_replace=colours["CREAM"]
     ),
     company='na',
-    introduction_date=date(1939, 1, 1),
+    introduction_date=date(1938, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SJ, DJ',
         'Use': 'Local trains, 3rd class',
@@ -50,7 +51,7 @@ s_e_Xoa4_2_sj = Train(
     id='s_e_Xoa4_2_sj',
     name='SJ Xoa4',
     liveries=make_psd_cc_liveries(
-        'pp/Xoa4.psd',
+        'pp/1938_SE_Xoa4.psd',
         shading='Xoa4',
         paint='sj_brown',
         overlay=('Lights', 'Electrical equipment'),
@@ -91,7 +92,7 @@ s_e_Cox4_1_sj = Train(
     id='s_e_Cox4_1_sj',
     name='SJ Cox4',
     liveries=make_psd_cc_liveries(
-        'pp/Cox4.psd',
+        'pp/1939_SE_Cox4.psd',
         shading='Cox4',
         paint='sj/dj_original',
         overlay='Lights',
@@ -112,7 +113,7 @@ s_e_Cox4_2_sj = Train(
     id='s_e_Cox4_2_sj',
     name='SJ Cox4',
     liveries=make_psd_cc_liveries(
-        'pp/Cox4.psd',
+        'pp/1939_SE_Cox4.psd',
         shading='Cox4',
         paint='sj_brown',
         overlay='Lights',

@@ -27,6 +27,7 @@ s_p_Co_1 = Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=72,
+    loading_speed=5,
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({

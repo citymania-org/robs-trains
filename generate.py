@@ -2198,6 +2198,8 @@ d_p_bk_iii_2_dsb = Train(
 
 from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
 
+from code.standard_gauge.Xoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
+
 # wagons
 
 s_w_Gblssy_2_gc = Train(
@@ -2406,7 +2408,11 @@ lib.make_purchase_sprites(
     # debug_dir=DEBUG_DIR,
 )
 
-(g.add(grf.SetPurchaseOrder(
+# chronological order within the categories
+# standard gauge -> narrow gauge
+# steam -> diesel -> electric ohle -> electric 3rd rail -> dmu -> emu -> coach -> metro
+(g.add(grf.SetPurchaseOrder( 
+    s_s_N_ii_1_sj,
     grf.VariantGroup(
         'Frichs 467-475 "Marcipanbrød"',
         d_d_frichs_467_1,
@@ -2534,6 +2540,8 @@ lib.make_purchase_sprites(
     #er_ir4,
     #stog_1_2,
     #stog_1_4,
+    grf.VariantGroup('Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
+    grf.VariantGroup('Xoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
     #grf.VariantGroup(
     #    'ABs',
         #abs1,
@@ -2580,7 +2588,6 @@ lib.make_purchase_sprites(
         d_p_b_ii_2_dsb,
         d_p_bk_iii_2_dsb,
     ),
-    grf.VariantGroup('Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
     #grf.VariantGroup(
     #    'B II',
     #    b_ii1,
@@ -2588,13 +2595,13 @@ lib.make_purchase_sprites(
     #),
     grf.VariantGroup('Z4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
-    s_p_Co_1,
-    s_p_UBp_ii_1,
     grf.VariantGroup(
         'X10p',
         s_e_X10p_1_sl,
         s_e_X10p_2_sl,
     ),
+    s_p_Co_1,
+    s_p_UBp_ii_1,
 ).set_variant_callbacks(g)))
 
 grf.main(g, 'kst_scandi_train.grf')

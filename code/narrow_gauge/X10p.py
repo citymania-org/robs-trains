@@ -52,6 +52,7 @@ COMMON_X10p_PROPS = dict(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=72,
+    loading_speed=5,
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -77,6 +78,7 @@ s_e_X10p_1_sl = Train(
         'Default': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
     },
     cargo_capacity=80,
+    loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_X10p_1_sl_car3',
@@ -85,6 +87,7 @@ s_e_X10p_1_sl = Train(
         'Default': Livery('xxxx_SE_X10p_UBxp_1_xxxx.png'),
     },
     cargo_capacity=76,
+    loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -110,6 +113,7 @@ s_e_X10p_2_sl = Train(
         'Upptåget 2CC': Livery('SE_X10p_UBp_3.png', auto_cc=lib.CC_DEFAULT),
     },
     cargo_capacity=80,
+    loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_X10p_2_sl_car3',
@@ -121,5 +125,6 @@ s_e_X10p_2_sl = Train(
         'Upptåget 2CC': Livery('SE_X10p_UBxp_3.png', auto_cc=lib.CC_DEFAULT),
     },
     cargo_capacity=76,
+    loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

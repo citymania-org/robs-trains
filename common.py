@@ -95,6 +95,7 @@ colours = {
 "LAVENDER" : palette[212: 220],
 "PURPLE" : palette[220: 228],
 "DPURPLE" : palette[228: 236],
+"RPURPLE" : palette[236: 244],
 }
 
 def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc_replace, cc2_replace):
