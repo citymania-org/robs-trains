@@ -65,6 +65,25 @@ s_e_Xoa4_2_sj = Train(
         'Use': 'Local trains, 3rd class',
         'Builder': 'ASEA'
     }),
+)s_e_Xoa4_3_dj = Train(
+    **COMMON_XOA4_PROPS,
+    id='s_e_Xoa4_3_dj',
+    name='DJ Xoa4',
+    liveries=make_psd_cc_liveries(
+        'pp/1939_SE_Xoa4.psd',
+        shading='Xoa4',
+        paint='sj/dj_original',
+        overlay=('Lights', 'Electrical equipment'),
+        cc_replace=colours["RPURPLE"],
+        cc2_replace=colours["CREAM"]
+    ),
+    company='na',
+    introduction_date=date(1939, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'DJ',
+        'Use': 'Local trains, 3rd class',
+        'Builder': 'ASEA'
+    }),
 )
 
 COMMON_COX4_PROPS = dict(
