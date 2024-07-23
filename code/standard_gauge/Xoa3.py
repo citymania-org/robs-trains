@@ -85,7 +85,7 @@ s_e_Xoa3_2_sj = Train(
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa3-B.psd',
         shading='Xoa3-B',
-        #paint='',
+        paint='SJ_brown',
         overlay='Lights',
         cc_replace=colours['REDBROWN'],
         cc2_replace=colours['REDBROWN'],
