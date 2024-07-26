@@ -45,3 +45,23 @@ s_e_Yd_1_sj = Train(
         'Builder': 'Hilding Carlsson'
     }),
 )
+s_e_Yd_2_hnj = Train(
+    **COMMON_Yd_PROPS,
+    id='s_e_Yd_2_hnj',
+    name='HNJ Yd',
+    liveries=make_psd_cc_liveries(
+        'pp/1935_SE_Yd.psd',
+        shading='Yd',
+        paint='HNJ',
+        overlay=('Lights', 'Details'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLACK1"]
+    ),
+    company='na',
+    introduction_date=date(1937, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'HNJ',
+        'Use': 'Local trains, 3rd class',
+        'Builder': 'Hilding Carlsson'
+    }),
+)
