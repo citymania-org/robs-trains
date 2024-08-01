@@ -2196,7 +2196,7 @@ d_p_bk_iii_2_dsb = Train(
 
 # dmu 
 
-from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj
+from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
 
 # emu 
 
@@ -2541,6 +2541,7 @@ lib.make_purchase_sprites(
         d_e_ea_3_dsb,
     ),
     #mf_ic3,
+     grf.VariantGroup('Yd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
     #er_ir4,
     #stog_1_2,
     #stog_1_4,

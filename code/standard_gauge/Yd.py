@@ -65,3 +65,23 @@ s_d_Yd_2_hnj = Train(
         'Builder': 'Hilding Carlsson'
     }),
 )
+s_d_Yd_3_msj = Train(
+    **COMMON_Yd_PROPS,
+    id='s_d_Yd_2_msj',
+    name='MSJ Yd',
+    liveries=make_psd_cc_liveries(
+        'pp/1935_SE_Yd.psd',
+        shading='Yd',
+        paint='MSJ',
+        overlay=('Lights', 'Details'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["CREAM"]
+    ),
+    company='na',
+    introduction_date=date(1937, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'MSJ',
+        'Use': 'Local trains, 3rd class',
+        'Builder': 'Hilding Carlsson'
+    }),
+)
