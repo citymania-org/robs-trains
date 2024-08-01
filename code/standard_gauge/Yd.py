@@ -25,9 +25,9 @@ COMMON_Yd_PROPS = dict(
     country='sweden',
 )
 
-s_e_Yd_1_sj = Train(
+s_d_Yd_1_sj = Train(
     **COMMON_Yd_PROPS,
-    id='s_e_Yd_1_sj',
+    id='s_d_Yd_1_sj',
     name='SJ Yd',
     liveries=make_psd_cc_liveries(
         'pp/1935_SE_Yd.psd',
@@ -45,9 +45,9 @@ s_e_Yd_1_sj = Train(
         'Builder': 'Hilding Carlsson'
     }),
 )
-s_e_Yd_2_hnj = Train(
+s_d_Yd_2_hnj = Train(
     **COMMON_Yd_PROPS,
-    id='s_e_Yd_2_hnj',
+    id='s_d_Yd_2_hnj',
     name='HNJ Yd',
     liveries=make_psd_cc_liveries(
         'pp/1935_SE_Yd.psd',

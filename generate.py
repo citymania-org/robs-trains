@@ -2196,7 +2196,7 @@ d_p_bk_iii_2_dsb = Train(
 
 # dmu 
 
-from code.standard_gauge.Yd import s_e_Yd_1_sj, s_e_Yd_2_hnj
+from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj
 
 # emu 
 

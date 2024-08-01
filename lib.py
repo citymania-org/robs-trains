@@ -989,7 +989,7 @@ class PSDLivery:
             unused_pixels = np.where(left_mask)
             if len(unused_pixels[0]) > 0:
                 x, y = unused_pixels[0][0], unused_pixels[1][0]
-                raise RuntimeError(f'No-main colour used in paint layer, first pixel at ({x}, {y}): {tuple(prgb[y, x])}')
+                raise RuntimeError(f'No-main colour used in paint layer, first pixel at ({x}, {y}) in the croped square: {tuple(prgb[x, y])}')
 
             return sw, sh, rgb, salpha, None
 
