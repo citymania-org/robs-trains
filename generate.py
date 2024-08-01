@@ -2194,6 +2194,10 @@ d_p_bk_iii_2_dsb = Train(
     }),
 )
 
+# dmu 
+
+from code.standard_gauge.Yd import s_e_Yd_1_sj, s_e_Yd_2_hnj
+
 # emu 
 
 from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
