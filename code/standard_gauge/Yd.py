@@ -42,7 +42,8 @@ s_d_Yd_1_sj = Train(
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SJ',
         'Use': 'Local trains, 3rd class',
-        'Builder': 'Hilding Carlsson'
+        'Builder': 'Hilding Carlsson',
+        'Trivia': '''Set the standard for the iconic 1st gen HC railbuses''',
     }),
 )
 s_d_Yd_2_hnj = Train(

@@ -42,7 +42,8 @@ s_d_Yo1s_1_sj = Train(
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SJ',
         'Use': 'Local trains, 3rd class',
-        'Builder': 'Hilding Carlsson'
+        'Builder': 'Hilding Carlsson',
+        'Trivia': '''Larger post-war variant of the HC railbus with more spacious interior''',
     }),
 )
 s_d_Yo1s_2_bj = Train(

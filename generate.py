@@ -122,6 +122,43 @@ s_s_N_ii_1_sj = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
+s_s_Sa_sj = Train(
+    id='s_s_Sa_sj',
+    name='SJ Sa',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/1908_SE_Sa.psd',
+        shading='Sa',
+        paint='SJ',
+        overlay=('Lights'),
+        cc_replace=colours["BLACK1"],
+        cc2_replace=colours["BLACK1"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='steam',
+    engine_class=Train.EngineClass.STEAM,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(45),
+    power=1000, # come up with value
+    introduction_date=date(1908, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=60,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'universal',
+        'Builder': 'Multiple',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
 # diesel locos
 
 # frichs marcipanbrød
@@ -1753,6 +1790,7 @@ lib.make_purchase_sprites(
 # steam -> diesel -> electric ohle -> electric 3rd rail -> dmu -> emu -> coach -> metro
 (g.add(grf.SetPurchaseOrder( 
     s_s_N_ii_1_sj,
+    s_s_Sa_sj,
     grf.VariantGroup(
         'Frichs 467-475 "Marcipanbrød"',
         d_d_frichs_467_1,
