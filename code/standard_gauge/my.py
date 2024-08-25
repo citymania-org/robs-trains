@@ -92,7 +92,7 @@ d_d_my_ii_2_dsb = Train(
         paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -154,7 +154,7 @@ d_d_my_ii_5_contec = Train(
         paint=('contec1',),
         overlay=('light'),
         cc_replace=colours["COLBALT"],
-        cc2_replace=colours["WHITE1"]
+        cc2_replace=colours["GREY1"]
     ),
     country='denmark',
     company='na',
@@ -196,7 +196,7 @@ d_d_my_ii_7_dsb = Train(
         paint=('dsb3',),
         overlay=('light'),
         cc_replace=colours["YELLOW"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -216,7 +216,7 @@ d_d_my_ii_8_taagab = Train(
         shading=('my',),
         paint=('tågab1',),
         overlay=('light'),
-        cc_replace=colours["SILVER"],
+        cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
     country='sweden',
@@ -301,7 +301,7 @@ d_d_my_ii_12_njj = Train(
         paint=('njj1',),
         overlay=('light'),
         cc_replace=colours["COLBALT"],
-        cc2_replace=colours["WHITE1"]
+        cc2_replace=colours["GREY1"]
     ),
     country='denmark',
     company='na',

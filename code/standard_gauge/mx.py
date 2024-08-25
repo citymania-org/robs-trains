@@ -55,7 +55,7 @@ d_d_mx_ii_2_dsb = Train(
         paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -159,7 +159,7 @@ d_d_mx_ii_7_contec = Train(
         paint=('contec1',),
         overlay=('light'),
         cc_replace=colours["COLBALT"],
-        cc2_replace=colours["WHITE1"]
+        cc2_replace=colours["GREY1"]
     ),
     country='denmark',
     company='na',
@@ -180,7 +180,7 @@ d_d_mx_ii_8_ohj = Train(
         paint=('ohj1',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["WHITE1"]
+        cc2_replace=colours["GREY1"]
     ),
     country='denmark',
     company='na',
@@ -201,7 +201,7 @@ d_d_mx_ii_9_sb = Train(
         paint=('sb1',),
         overlay=('light'),
         cc_replace=colours["COLBALT"],
-        cc2_replace=colours["WHITE1"]
+        cc2_replace=colours["GREY1"]
     ),
     country='denmark',
     company='na',

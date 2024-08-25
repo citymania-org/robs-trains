@@ -55,7 +55,7 @@ s_d_Yo1s_2_bj = Train(
         shading='Yo1s',
         paint='BJ',
         overlay=('Lights', 'Details'),
-        cc_replace=colours["RPURPLE"],
+        cc_replace=colours["SEBROWN"],
         cc2_replace=colours["CREAM"]
     ),
     company='na',

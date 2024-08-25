@@ -34,7 +34,7 @@ d_e_ea_1_dsb = Train(
         paint=('dsb1',),
         overlay=('light', 'leccy'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',

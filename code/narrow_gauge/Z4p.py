@@ -119,7 +119,7 @@ s_d_Z4p_6_sl = Train(
     id='s_d_Z4p_6_sl',
     name='SL Z4p',
     liveries=make_psd_cc_liveries(
-        'pp/Z4p.psd', shading='base', paint='6_sl', overlay='light', cc_replace=colours["YELLOW"], cc2_replace=colours["SILVER"],
+        'pp/Z4p.psd', shading='base', paint='6_sl', overlay='light', cc_replace=colours["YELLOW"], cc2_replace=colours["GREY3"],
     ),
     #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
     country='sweden',

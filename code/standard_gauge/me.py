@@ -34,7 +34,7 @@ d_d_me_ii_1_dsb = Train(
         paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -123,5 +123,47 @@ d_d_me_ii_5_nrfab = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Eight locomotives bought from DSB in 2020 #1509, #1513 & #1527 & in 2021 #1504, #1518, #1523, #1525 & #1529',
+    }),
+)
+
+d_d_me_ii_6_mav = Train(
+    **COMMON_me_ii_PROPS,
+    id='d_d_me_ii_6_mav',
+    name='MÁV TME II',
+    liveries=make_psd_cc_liveries(
+        'pp/me.psd',
+        shading=('me',),
+        paint=('mav1',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["SKY"]
+    ),
+    country='hungary',
+    company='na',
+    introduction_date=date(2024, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Fifteen locomotives leased from NRFAB in 2024',
+    }),
+)
+
+d_d_me_ii_7_skpl = Train(
+    **COMMON_me_ii_PROPS,
+    id='d_d_me_ii_7_skpl',
+    name='SKPL SU175',
+    liveries=make_psd_cc_liveries(
+        'pp/me.psd',
+        shading=('me',),
+        paint=('skpl1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY7"]
+    ),
+    country='poland',
+    company='na',
+    introduction_date=date(2022, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Six locomotives leased from NRFAB in 2022',
     }),
 )

@@ -55,7 +55,7 @@ s_d_Yo_2_hnj = Train(
         paint='HNJ',
         overlay=('Lights', 'Details'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     company='na',
     introduction_date=date(1938, 1, 1),

@@ -54,7 +54,7 @@ d_d_mz_i_2_dsb = Train(
         paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -74,7 +74,7 @@ d_d_mz_i_3_dsb = Train(
         paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -135,7 +135,7 @@ d_d_mz_ii_2_dsb = Train(
         paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -155,7 +155,7 @@ d_d_mz_ii_3_dsb = Train(
         paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -174,7 +174,7 @@ d_d_mz_ii_4_taagab = Train(
         shading=('mz2',),
         paint=('tågab1',),
         overlay=('light'),
-        cc_replace=colours["SILVER"],
+        cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
     country='sweden',
@@ -196,7 +196,7 @@ d_d_mz_ii_5_ibab = Train(
         paint=('ibab1',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["WHITE1"]
+        cc2_replace=colours["GREY1"]
     ),
     country='sweden',
     company='na',
@@ -236,7 +236,7 @@ d_d_mz_iii_1_dsb = Train(
         paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -257,7 +257,7 @@ d_d_mz_iii_2_dsb = Train(
         paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',
@@ -278,7 +278,7 @@ d_d_mz_iv_1_dsb = Train(
         paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["BLACK1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='denmark',
     company='na',

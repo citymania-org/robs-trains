@@ -34,7 +34,7 @@ s_e_Xoa3_1_bj = Train(
         shading='Xoa3-A',
         paint='BJ',
         overlay=('Lights', 'Electrical equipment'),
-        cc_replace=colours["RPURPLE"],
+        cc_replace=colours["SEBROWN"],
         cc2_replace=colours["CREAM"]
     ),
     company='na',
@@ -52,7 +52,7 @@ s_e_Xoa3_1_bj = Train(
         shading='Xoa3-B',
         paint='BJ',
         overlay='Lights',
-        cc_replace=colours['RPURPLE'],
+        cc_replace=colours['SEBROWN'],
         cc2_replace=colours['CREAM'],
     ),
     cargo_capacity=72,
