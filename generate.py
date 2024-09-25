@@ -122,725 +122,9 @@ s_s_Sa_sj = Train(
 
 # frichs marcipanbrød
 
-COMMON_frichs_467to475_PROPS = dict(
-    length=6,
-    misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL, 
-    track_type=standard_gauge,
-    vehicle_life=30,
-    model_life=30,
-    climates_available=grf.ALL_CLIMATES,
-    weight=61,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    callbacks={'properties': {'cargo_capacity': 0},},
-)
-
-d_d_frichs_467_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_467_1',
-    name='HFHJ Frichs 467',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_467_1_1952.png', cc_replace=colours["RED"], cc2_replace=colours["RED"]),
-        '2CC': Livery('1952_DK_Frichs_467_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_467_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_467_2',
-    name='HFHJ Frichs 467',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_467_2_1958.png', cc_replace=colours["RED"], cc2_replace=colours["RED"]),
-        '2CC': Livery('1952_DK_Frichs_467_2_1958.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1958, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_467_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_467_3',
-    name='HFHJ Frichs 467',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_467_3_1960.png', cc_replace=colours["RED"], cc2_replace=colours["CREAM"]),
-        '2CC': Livery('1952_DK_Frichs_467_3_1960.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1960, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_467_4 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_467_4',
-    name='HFHJ Frichs 467',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_467_4_1981.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_467_4_1981.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1981, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_467_5 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_467_5',
-    name='HFHJ Frichs 467',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_467_5_1997.png', cc_replace=colours["RED"], cc2_replace=colours["CREAM"]),
-        '2CC': Livery('1952_DK_Frichs_467_5_1997.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1997, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_468_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_468_1',
-    name='OHJ Frichs 468',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_468_1_1952.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_468_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_468_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_468_2',
-    name='OHJ Frichs 468',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_468_2_1984.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_468_2_1984.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1984, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_468_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_468_3',
-    name='OHJ Frichs 468',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_468_3_2017.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_468_3_2017.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(2017, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_1',
-    name='LJ Frichs 469/470',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
-        '2CC': Livery('1952_DK_Frichs_469_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_2',
-    name='LJ Frichs 469/470',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_2_1960.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
-        '2CC': Livery('1952_DK_Frichs_469_2_1960.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1960, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_3',
-    name='LJ Frichs 469/470',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_3_1974.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_469_3_1974.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1974, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_4 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_4',
-    name='LJ Frichs 469/470',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_4_1976.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_469_4_1976.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1976, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_8 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_8',
-    name='SB Frichs 469',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_8_1992.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_469_8_1992.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1992, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_5 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_5',
-    name='LJ Frichs 470',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_5_1994.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_469_5_1994.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(1994, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_6 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_6',
-    name='LJ Frichs 470',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_6_2007.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_469_6_2007.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(2007, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_469_7 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_469_7',
-    name='Contec Frichs 470',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_469_7_2008.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_469_7_2008.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
-    introduction_date=date(2008, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_471_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_471_1',
-    name='HHJ Frichs 471',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_471_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
-        '2CC': Livery('1952_DK_Frichs_471_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_471_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_471_2',
-    name='HHJ Frichs 471',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_471_2_1977.png', cc_replace=colours["RED"], cc2_replace=colours["CREAM"]),
-        '2CC': Livery('1952_DK_Frichs_471_2_1977.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
-    introduction_date=date(1977, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_471_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_471_3',
-    name='HHJ Frichs 471',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_471_3_1988.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_471_3_1988.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
-    introduction_date=date(1988, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_471_4 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_471_4',
-    name='HHJ Frichs 471',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_471_4_1995.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_471_4_1995.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
-    introduction_date=date(1995, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_471_5 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_471_5',
-    name='HHJ Frichs 471',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_471_5_2000.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_471_5_2000.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
-    introduction_date=date(2000, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_471_6 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_471_6',
-    name='HHJ Frichs 471',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_471_6_2014.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_471_6_2014.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
-    introduction_date=date(2014, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_472_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_472_1',
-    name='VLTJ Frichs 472',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_472_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
-        '2CC': Livery('1952_DK_Frichs_472_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_472_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_472_2',
-    name='VLTJ Frichs 472',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_472_2_1968.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_472_2_1968.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
-    introduction_date=date(1968, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_472_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_472_3',
-    name='VLTJ Frichs 472',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_472_3_1980.png', cc_replace=colours["ORANGE"], cc2_replace=colours["CREAM"]),
-        '2CC': Livery('1952_DK_Frichs_472_3_1980.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
-    introduction_date=date(1980, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_472_4 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_472_4',
-    name='VLTJ Frichs 472',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_472_4_1997.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_472_4_1997.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
-    introduction_date=date(1997, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_472_5 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_472_5',
-    name='VLTJ Frichs 472',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_472_5_2009.png', cc_replace=colours["MAROON"], cc2_replace=colours["MAROON"]),
-        '2CC': Livery('1952_DK_Frichs_472_5_2009.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
-    introduction_date=date(2009, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_473_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_473_1',
-    name='GDS Frichs 473',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_473_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
-        '2CC': Livery('1952_DK_Frichs_473_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_473_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_473_2',
-    name='GDS Frichs 473',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_473_2_1963.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
-        '2CC': Livery('1952_DK_Frichs_473_2_1963.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1963, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_473_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_473_3',
-    name='GDS Frichs 473',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_473_3_2006.png', cc_replace=colours["MAROON"], cc2_replace=colours["DCREAM"]),
-        '2CC': Livery('1952_DK_Frichs_473_3_2006.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(2006, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_474_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_474_1',
-    name='FFJ Frichs 474',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_474_1_1952.png', cc_replace=colours["MAROON"], cc2_replace=colours["GREY10"]),
-        '2CC': Livery('1952_DK_Frichs_474_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_474_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_474_2',
-    name='OHJ Frichs 474',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_474_2_1969.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_474_2_1969.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1969, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_474_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_474_3',
-    name='OHJ Frichs 474',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_474_3_1986.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_474_3_1986.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1986, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_474_4 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_474_4',
-    name='OHJ Frichs 474',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_474_4_1990.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_474_4_1990.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1990, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_474_5 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_474_5',
-    name='OHJ Frichs 474',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_474_5_1993.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_474_5_1993.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1993, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_475_1 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_475_1',
-    name='AHJ Frichs 475',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_475_1_1952.png', cc_replace=colours["RED"], cc2_replace=colours["GREY10"]),
-        '2CC': Livery('1952_DK_Frichs_475_1_1952.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1952, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_475_2 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_475_2',
-    name='SB Frichs 475',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_475_2_1976.png', cc_replace=colours["MAROON"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_475_2_1976.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1976, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_475_3 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_475_3',
-    name='SB Frichs 475',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_475_3_1977.png', cc_replace=colours["RED"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('1952_DK_Frichs_475_3_1977.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(1977, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_frichs_475_4 = Train(
-    **COMMON_frichs_467to475_PROPS,
-    id='d_d_frichs_475_4',
-    name='AHJ Frichs 475',
-    liveries={
-        'Default': Livery('1952_DK_Frichs_475_4_2008.png', cc_replace=colours["MAROON"], cc2_replace=colours["GREY10"]),
-        '2CC': Livery('1952_DK_Frichs_475_4_2008.png', auto_cc=lib.CC_DEFAULT),
-    },
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
-    introduction_date=date(2008, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
+'''
+from code.standard_gauge.dk467 import d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4
+'''
 
 from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs
 
@@ -858,7 +142,8 @@ from code.standard_gauge.mz import d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_ds
 
 from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_6_mav, d_d_me_ii_7_skpl
 
-# electric locos leccy
+# electric 15
+
 '''
 rc1 = Train(
     id='rc1',
@@ -1057,6 +342,8 @@ rc6 = Train(
     }),
 )'''
 
+#electric 25
+
 from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
 
 # dmu
@@ -1191,11 +478,15 @@ mf_ic3 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )'''
 
-# emu
+# emu 15
 
 from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
 
 from code.standard_gauge.Xoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
+
+from code.standard_gauge.X1 import s_e_X1_1_sj
+
+# emu 25
 
 '''
 er_ir4 = Train(
@@ -1259,9 +550,11 @@ er_ir4 = Train(
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
+)'''
 
-stog_1_2 = Train(
+# emu dc
+
+'''stog_1_2 = Train(
     id='stog_1_2',
     name='S-Tog 1 (2 Car)',
     liveries=make_liveries(8, {
@@ -1825,129 +1118,17 @@ lib.make_purchase_sprites(
 (g.add(grf.SetPurchaseOrder(
     s_s_N_ii_1_sj,
     s_s_Sa_sj,
-    grf.VariantGroup(
-        'Frichs 467-475 "Marcipanbrød"',
-        d_d_frichs_467_1,
-        d_d_frichs_467_2,
-        d_d_frichs_467_3,
-        d_d_frichs_467_4,
-        d_d_frichs_467_5,
-        d_d_frichs_468_1,
-        d_d_frichs_468_2,
-        d_d_frichs_468_3,
-        d_d_frichs_469_1,
-        d_d_frichs_469_2,
-        d_d_frichs_469_3,
-        d_d_frichs_469_4,
-        d_d_frichs_469_8,
-        d_d_frichs_469_5,
-        d_d_frichs_469_6,
-        d_d_frichs_469_7,
-        d_d_frichs_471_1,
-        d_d_frichs_471_2,
-        d_d_frichs_471_3,
-        d_d_frichs_471_4,
-        d_d_frichs_471_5,
-        d_d_frichs_471_6,
-        d_d_frichs_472_1,
-        d_d_frichs_472_2,
-        d_d_frichs_472_3,
-        d_d_frichs_472_4,
-        d_d_frichs_472_5,
-        d_d_frichs_473_1,
-        d_d_frichs_473_2,
-        d_d_frichs_473_3,
-        d_d_frichs_474_1,
-        d_d_frichs_474_2,
-        d_d_frichs_474_3,
-        d_d_frichs_474_4,
-        d_d_frichs_474_5,
-        d_d_frichs_475_1,
-        d_d_frichs_475_2,
-        d_d_frichs_475_3,
-        d_d_frichs_475_4,
-    ),
-    grf.VariantGroup(
-        '201',
-        be_d_201_1_nmbs,
-        be_d_201_2_nmbs,
-        be_d_201_3_nmbs,
-        be_d_201_4_nmbs,
-        ),
+    #grf.VariantGroup('Frichs 467-475 "Marcipanbrød"', d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4),
+    grf.VariantGroup('201', be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
     d_d_mye_ii_1_dsb,
-    grf.VariantGroup(
-        'MX II',
-        d_d_mx_ii_1_dsb,
-        d_d_mx_ii_2_dsb,
-        d_d_mx_ii_8_ohj,
-        d_d_mx_ii_3_vltj,
-        d_d_mx_ii_9_sb,
-        d_d_mx_ii_10_cflcd,
-        d_d_mx_ii_7_contec,
-        d_d_mx_ii_5_lb,
-        d_d_mx_ii_4_ttt,
-        d_d_mx_ii_6_lt,
-        d_d_mx_ii_11_vik,
-    ),
-    grf.VariantGroup(
-        'M61',
-        hu_d_m61_1_mav,
-        hu_d_m61_2_mav,
-        hu_d_m61_3_mav,
-        hu_d_m61_4_mav,
-        ),
-    grf.VariantGroup(
-        'MY II',
-        d_d_my_ii_1_dsb,
-        d_d_my_ii_2_dsb,
-        d_d_my_ii_8_taagab,
-        d_d_my_ii_7_dsb,
-        d_d_my_ii_9_taagab,
-        d_d_my_ii_12_njj,
-        d_d_my_ii_11_dsb,
-        d_d_my_ii_10_dsb,
-        d_d_my_ii_5_contec,
-        d_d_my_ii_3_ttt,
-        d_d_my_ii_13_cflcd,
-        d_d_my_ii_6_mjbad,
-        d_d_my_ii_4_lt,
-        d_d_my_ii_14_vik,
-    ),
-    grf.VariantGroup(
-        'MZ I',
-        d_d_mz_i_1_dsb,
-        d_d_mz_i_2_dsb,
-        d_d_mz_i_3_dsb,
-        d_d_mz_i_4_ttt,
-    ),
-    grf.VariantGroup(
-        'MZ II',
-        d_d_mz_ii_1_dsb,
-        d_d_mz_ii_2_dsb,
-        d_d_mz_ii_3_dsb,
-        d_d_mz_ii_4_taagab,
-        d_d_mz_ii_5_ibab,
-    ),
-    grf.VariantGroup(
-        'MZ III',
-        d_d_mz_iii_1_dsb,
-        d_d_mz_iii_2_dsb,
-    ),
-    grf.VariantGroup(
-        'MZ IV',
-        d_d_mz_iv_1_dsb,
-        d_d_mz_iv_2_dbcsc,
-    ),
-    grf.VariantGroup(
-        'ME II',
-        d_d_me_ii_1_dsb,
-        d_d_me_ii_2_dsb,
-        d_d_me_ii_3_dsb,
-        d_d_me_ii_4_dsb,
-        d_d_me_ii_5_nrfab,
-        d_d_me_ii_7_skpl,
-        d_d_me_ii_6_mav,
-    ),
+    grf.VariantGroup('MX II', d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik),
+    grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),
+    grf.VariantGroup('MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),
+    grf.VariantGroup('MZ I', d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt),
+    grf.VariantGroup('MZ II', d_d_mz_ii_1_dsb, d_d_mz_ii_2_dsb, d_d_mz_ii_3_dsb, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab),
+    grf.VariantGroup('MZ III', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb),
+    grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
+    grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_7_skpl, d_d_me_ii_6_mav),
     #grf.VariantGroup(
     #    'Rc',
         #rc1,
@@ -1957,14 +1138,7 @@ lib.make_purchase_sprites(
         #rc5,
         #rc6,
     #),
-    grf.VariantGroup(
-        'EA',
-        d_e_ea_1_dsb,
-        d_e_ea_2_dsb,
-        d_e_ea_4_bulmarket,
-        d_e_ea_5_db,
-        d_e_ea_3_dsb,
-    ),
+    grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
     d_d_ml_1_dsb,
     d_d_ml_2_dsb,
     grf.VariantGroup('Yd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
@@ -1973,6 +1147,7 @@ lib.make_purchase_sprites(
     #mf_ic3,
     grf.VariantGroup('Xoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
     grf.VariantGroup('Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
+    s_e_X1_1_sj,
     #er_ir4,
     #stog_1_2,
     #stog_1_4,
@@ -1981,98 +1156,18 @@ lib.make_purchase_sprites(
         #abs1,
         #abs2,
     #),
-    grf.VariantGroup(
-        'CR',
-        d_p_cr_1_dsb,
-        d_p_ca_1_dsb,
-        d_p_car_1_dsb,
-        d_p_cae_1_dsb,
-    ),
-    d_p_ac_i_1_dsb,
-    grf.VariantGroup(
-        'AC II',
-        d_p_ac_ii_1_dsb,
-        d_p_ag_1_dsb,
-        d_p_ag_2_dsb,
-    ),
-    grf.VariantGroup(
-        'AU',
-        d_p_au_1_dsb,
-        d_p_aul_1_dsb,
-        d_p_av_1_dsb,
-        d_p_abv_1_dsb,
-        d_p_abg_1_dsb,
-        d_p_bv_1_dsb,
-    ),
-    grf.VariantGroup(
-        'CC',
-        d_p_cc_1_dsb,
-        d_p_bg_1_dsb,
-        d_p_bg_2_dsb,
-    ),
-    grf.VariantGroup(
-        'UIC-Y 1st class',
-        d_p_a_1_dsb,
-        d_p_a_2_dsb,
-        d_p_a_3_dsb,
-        fr_p_a_1_sncf,
-        fr_p_a_2_sncf,
-        fr_p_a_3_sncf,
-    ),
-    grf.VariantGroup(
-        'UIC-Y 1st & 2nd class',
-        d_p_ab_1_dsb,
-        d_p_ab_2_dsb,
-        d_p_ab_3_dsb,
-        fr_p_ab_1_sncf,
-        fr_p_ab_2_sncf,
-        fr_p_ab_3_sncf,
-    ),
-    grf.VariantGroup(
-        'UIC-Y 2nd class',
-        d_p_b_1_dsb,
-        d_p_b_i_1_dsb,
-        fr_p_b_1_sncf,
-        fr_p_b_2_sncf,
-        fr_p_b_3_sncf,
-    ),
-    grf.VariantGroup(
-        'UIC-Y dining & kiosk',
-        d_p_bk_i_1_dsb,
-        d_p_bk_i_2_dsb,
-    ),
-    grf.VariantGroup(
-        'UIC-Y luggage',
-        d_p_bd_1_dsb,
-        d_p_bd_2_dsb,
-        fr_p_ad_1_sncf,
-        fr_p_ad_2_sncf,
-        fr_p_ad_3_sncf,
-        fr_p_bd_1_sncf,
-        fr_p_bd_2_sncf,
-    ),
-    grf.VariantGroup(
-        'An',
-        d_p_an_1_dsb,
-        d_p_an_2_dsb,
-        d_p_an_3_dsb,
-    ),
-    grf.VariantGroup(
-        'Bn',
-        d_p_bn_1_dsb,
-        d_p_bn_2_dsb,
-        d_p_bn_5_dsb,
-        d_p_bn_6_dsb,
-        d_p_bn_4_dsb,
-        d_p_bn_3_dsb,
-    ),
-    grf.VariantGroup(
-        'B II',
-        d_p_b_ii_1_dsb,
-        d_p_bk_iii_1_dsb,
-        d_p_b_ii_2_dsb,
-        d_p_bk_iii_2_dsb,
-    ),
+    grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
+    grf.VariantGroup('Danish 30s stock 1st class', d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb),
+    grf.VariantGroup('Danish 30s stock 1st & 2nd class', d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb),
+    grf.VariantGroup('Danish 30s stock 2nd class', d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb),
+    grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf),
+    grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf),
+    grf.VariantGroup('UIC-Y 2nd class', d_p_b_1_dsb, d_p_b_i_1_dsb, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf),
+    grf.VariantGroup('UIC-Y dining & kiosk', d_p_bk_i_1_dsb, d_p_bk_i_2_dsb),
+    grf.VariantGroup('UIC-Y luggage', d_p_bd_1_dsb, d_p_bd_2_dsb, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf),
+    grf.VariantGroup('An', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb),
+    grf.VariantGroup('Bn', d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb),
+    grf.VariantGroup('B II', d_p_b_ii_1_dsb, d_p_bk_iii_1_dsb, d_p_b_ii_2_dsb, d_p_bk_iii_2_dsb),
     #grf.VariantGroup(
     #    'B II',
     #    b_ii1,
@@ -2083,11 +1178,7 @@ lib.make_purchase_sprites(
     # narrow gauge
     grf.VariantGroup('Z4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
-    grf.VariantGroup(
-        'X10p',
-        s_e_X10p_1_sl,
-        s_e_X10p_2_sl,
-    ),
+    grf.VariantGroup('X10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
     s_p_Co_1,
     s_p_UBp_ii_1,
 ).set_variant_callbacks(g)))

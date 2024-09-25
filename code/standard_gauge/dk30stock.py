@@ -144,8 +144,6 @@ d_p_ac_i_1_dsb = Train(
     }),
 )
 
-# acii
-
 d_p_ac_ii_1_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_ac_ii_1_dsb',

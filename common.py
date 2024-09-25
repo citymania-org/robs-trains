@@ -105,6 +105,7 @@ colours = {
 "GREY10" : palette[304: 312],
 "SEBROWN" : palette[344: 352],
 "SCARLET" : palette[352: 360],
+"SLBLUE" : palette[360: 368],
 }
 
 def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc_replace, cc2_replace):
