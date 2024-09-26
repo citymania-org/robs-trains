@@ -484,7 +484,7 @@ from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj
 
 from code.standard_gauge.Xoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
 
-from code.standard_gauge.X1 import s_e_X1_1_sj
+from code.standard_gauge.X1 import s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl
 
 # emu 25
 
@@ -1147,7 +1147,7 @@ lib.make_purchase_sprites(
     #mf_ic3,
     grf.VariantGroup('Xoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
     grf.VariantGroup('Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
-    s_e_X1_1_sj,
+    grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
     #er_ir4,
     #stog_1_2,
     #stog_1_4,
