@@ -2,8 +2,8 @@ import grf, lib
 
 g = grf.NewGRF(
     grfid=b'KSTA',
-    name='KST SNDTS (ScaNDinavian Train Set)',
-    description='Scandinavian Trains made by Rob, dP and Brickblock1. Licence: GPL v2',
+    name='KST - Kitchen Sink Trains',
+    description='Mostly European trains made by Rob, dP, Brickblock1 and Meja. Licence: GPL v2',
     url='https://github.com/citymania-org/robs-trains',
     id_map_file='id_map.json',
 )

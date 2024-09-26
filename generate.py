@@ -418,6 +418,8 @@ d_d_ml_2_dsb = Train(
     }),
 )
 
+from code.standard_gauge.mq import d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
+
 from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
 
 from code.standard_gauge.Yo import s_d_Yo_1_sj, s_d_Yo_2_hnj
@@ -1141,6 +1143,9 @@ lib.make_purchase_sprites(
     grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
     d_d_ml_1_dsb,
     d_d_ml_2_dsb,
+    d_d_mq_1_dsb,
+    d_d_mp_1_dsb,
+    grf.VariantGroup('MO', d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb),
     grf.VariantGroup('Yd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
     grf.VariantGroup('Yo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
     grf.VariantGroup('Yo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
@@ -1183,4 +1188,4 @@ lib.make_purchase_sprites(
     s_p_UBp_ii_1,
 ).set_variant_callbacks(g)))
 
-grf.main(g, 'kst_scandi_train.grf')
+grf.main(g, 'KST_Kitchen_Sink_Trains.grf')
