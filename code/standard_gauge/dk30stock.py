@@ -435,3 +435,51 @@ d_p_bg_2_dsb = Train(
         'Use': '2nd class',
     }),
 )
+
+d_p_b_1_lj = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_b_1_lj',
+    name='LJ B 79',
+    liveries=make_psd_cc_liveries(
+        'pp/dk30stock.psd',
+        shading=('cc',),
+        paint=('ljb79',),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    purchase_sprite_towed_id='d_p_b_1_lj',
+    max_speed=Train.kmhish(140),
+    introduction_date=date(1983, 1, 1),
+    weight=34,
+    cargo_capacity=72,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+    }),
+)
+
+d_p_b_2_lj = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_b_2_lj',
+    name='LJ B 75',
+    liveries=make_psd_cc_liveries(
+        'pp/dk30stock.psd',
+        shading=('bg',),
+        paint=('ljb75',),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    purchase_sprite_towed_id='d_p_b_2_lj',
+    max_speed=Train.kmhish(140),
+    introduction_date=date(1989, 1, 1),
+    weight=34,
+    cargo_capacity=72,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+    }),
+)

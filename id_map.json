@@ -510,7 +510,13 @@
             "__s_e_X1_1_sj_aa_mid": 924,
             "__s_e_X1_1_sj_aa_tail": 925,
             "__s_e_X1_1_sj_car2_aa_mid": 926,
-            "__s_e_X1_1_sj_car2_aa_tail": 927
+            "__s_e_X1_1_sj_car2_aa_tail": 927,
+            "__d_p_b_1_lj_aa_mid": 928,
+            "__d_p_b_1_lj_aa_tail": 929,
+            "d_p_b_1_lj": 930,
+            "__d_p_b_2_lj_aa_mid": 931,
+            "__d_p_b_2_lj_aa_tail": 932,
+            "d_p_b_2_lj": 933
         }
     }
 }
