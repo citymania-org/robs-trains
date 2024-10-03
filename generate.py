@@ -44,9 +44,9 @@ Train(
     }),
 )
 
-# regular trains
+# regular
 
-# steam locos
+# steam
 
 s_s_N_ii_1_sj = Train(
     id='s_s_N_ii_1_sj',
@@ -118,7 +118,7 @@ s_s_Sa_sj = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-# diesel locos
+# diesel
 
 # frichs marcipanbrød
 
@@ -342,9 +342,13 @@ rc6 = Train(
     }),
 )'''
 
-#electric 25
+# electric 25
 
 from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
+
+# electric dc
+
+# electric 3rd
 
 # dmu
 
@@ -642,9 +646,15 @@ stog_1_4 = Train(
     }),
     cargo_capacity=90,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
+)'''
 
-abs1 = Train(
+# emu 3rd
+
+from code.standard_gauge.C1 import s_e_C1_1_ss
+
+# carriages
+
+'''abs1 = Train(
     id='abs1',
     name='ABs',
     liveries=make_liveries(11, {
@@ -760,15 +770,9 @@ b_ii2 = Train(
     }),
 )'''
 
-# carriages
-
 from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj
 
-# dsb b
-
 from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf
-
-# dsb double decker dd
 
 d_p_b_ii_1_dsb = Train(
     id='d_p_b_ii_1_dsb',
@@ -975,6 +979,10 @@ s_w_Hbis_sj = Train(
     }),
 )
 
+# metros
+
+from code.standard_gauge.C1 import s_e_C1_1_ss
+
 # 891mm narrow gauge
 
 from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
@@ -1116,10 +1124,11 @@ lib.make_purchase_sprites(
 
 # chronological order within the categories
 # standard gauge -> narrow gauge
-# steam -> diesel -> electric ohle -> electric 3rd rail -> dmu -> emu -> coach -> metro
 (g.add(grf.SetPurchaseOrder(
+    # steam
     s_s_N_ii_1_sj,
     s_s_Sa_sj,
+    # diesel
     #grf.VariantGroup('Frichs 467-475 "Marcipanbrød"', d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4),
     grf.VariantGroup('201', be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
     d_d_mye_ii_1_dsb,
@@ -1131,6 +1140,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('MZ III', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb),
     grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
     grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_7_skpl, d_d_me_ii_6_mav),
+    # electric 15
     #grf.VariantGroup(
     #    'Rc',
         #rc1,
@@ -1140,7 +1150,11 @@ lib.make_purchase_sprites(
         #rc5,
         #rc6,
     #),
+    # electric 25
     grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
+    # electric dc
+    # electric 3rd
+    # dmu
     d_d_ml_1_dsb,
     d_d_ml_2_dsb,
     d_d_mq_1_dsb,
@@ -1150,12 +1164,18 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Yo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
     grf.VariantGroup('Yo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
     #mf_ic3,
+    # emu 15
     grf.VariantGroup('Xoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
     grf.VariantGroup('Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
     grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
+    # emu 25
     #er_ir4,
+    # emu dc
     #stog_1_2,
     #stog_1_4,
+    # emu 3rd
+    s_e_C1_1_ss,
+    # carriages
     #grf.VariantGroup(
     #    'ABs',
         #abs1,
@@ -1178,8 +1198,11 @@ lib.make_purchase_sprites(
     #    b_ii1,
     #    b_ii2,
     #),
+    # wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
+    # metros
+    s_e_C1_1_ss,
     # narrow gauge
     grf.VariantGroup('Z4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
