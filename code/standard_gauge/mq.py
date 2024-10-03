@@ -79,7 +79,7 @@ d_d_mo_ii_1_dsb = Train(
     name='DSB MO I/II',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/_w_mo.psd',
+        'pp/mo.psd',
         shading=('mo2',),
         paint=('dsb1',),
         overlay=('light'),
@@ -105,7 +105,7 @@ d_d_mo_ii_1_dsb = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'edit',
+        'Use': 'Local passengers & light freight',
     }),
 )
 
@@ -114,7 +114,7 @@ d_d_mo_iv_1_dsb = Train(
     name='DSB MO III/IV',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/_w_mo.psd',
+        'pp/mo.psd',
         shading=('mo4',),
         paint=('dsb1',),
         overlay=('light'),
@@ -140,7 +140,7 @@ d_d_mo_iv_1_dsb = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'edit',
+        'Use': 'Local passengers & light freight',
     }),
 )
 
@@ -149,9 +149,9 @@ d_d_mo_v_1_dsb = Train(
     name='DSB MO V',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/_w_mo.psd',
+        'pp/mo.psd',
         shading=('mo5',),
-        paint=('dsb1',),
+        paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
@@ -175,6 +175,6 @@ d_d_mo_v_1_dsb = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'edit',
+        'Use': 'Local passengers & light freight',
     }),
 )
