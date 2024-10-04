@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 src/grf/
 
-kst_scandi_train.grf
+*.grf
 debug/

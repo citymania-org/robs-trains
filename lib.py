@@ -286,54 +286,162 @@ class Train(grf.Train):
         return res
 
 
-def _make_checker_effect(img, start, length):
-    if start < 0:
-        start = img.size[0] + start
-    img = img.crop((0, 0, start + length, img.size[1]))
-    npimg = np.array(img)
-    for x in range(start, start + length):
-        # add start to make sure it's consistent for any start
-        npimg[(x + start) % 2::2, x] = (0, 0, 0, 0)
-    return Image.fromarray(npimg)
+# TODO write it better
+class PurchaseSprite(grf.SpriteWrapper):
 
+    def __init__(self, xofs, yofs, parts, effects, train, towed, debug_dir):
+        self.leading_sprite = train.liveries[0]['sprites'][6]   # get the - view for the default livery
+        self.train = train
+        self.towed = towed
+        self.effects = effects
+        self.debug_dir = debug_dir
+        failed = False
 
-def _make_fade_effect(img, start, length):
-    if start < 0:
-        start = img.size[0] + start
-    img = img.crop((0, 0, start + length, img.size[1]))
-    npimg = np.array(img)
-    step = 1.0 / (length + 1)
-    for x in range(start, start + length):
-        opacity = (length + start - x) * step
-        npimg[:, x, 3] = npimg[:, x, 3] * opacity
-    return Image.fromarray(npimg)
+        def property_image(name, sprites):
+            value = getattr(self.train, name)
+            if value is None:
+                raise RuntimeError(f'No purchase sprite for {self.train.name}(#{self.train.id}): {name} is not specified')
 
+            sprite = sprites.get(value)
+            if sprite is None:
+                raise RuntimeError(f'No purchase sprite for {self.train.name}(#{self.train.id}): no sprite for {name} "{value}"')
 
-def _make_opaque(img, opacity):
-    npimg = np.asarray(img).copy()
-    npimg[:, :, 3] = npimg[:, :, 3] * opacity
-    return Image.fromarray(npimg)
+            return sprite
+            # im = sprite.get_image()[0]
+            # assert im.mode == 'RGBA'
+            # return im
 
+        self.parts = []
+        sprites = [self.leading_sprite]
+        for p in parts:
+            dx, dy = p['offset']
+            if p['property'] == 'self':
+                sprite = self.leading_sprite
+                is_train = True
+            elif p['property'].startswith('towed'):
+                s = p['property']
+                if '[' in s:
+                    index = int(s[s.find('[') + 1: s.find(']')])
+                else:
+                    index = 0
+                if index >= len(self.towed):
+                    continue
+                sprite = self.towed[index]
+                is_train = True
+            else:
+                sprite = property_image(p['property'], p['sprites'])
+                is_train = False
 
-def apply_effects(img, effects):
-    for e, args in (effects or {}).items():
-        if e == 'checker':
-            img = _make_checker_effect(img, *args)
-        elif e == 'fade_out':
-            img = _make_fade_effect(img, *args)
-        elif e == 'opacity':
-            img = _make_opaque(img, args)
-        elif e == 'crop_x':
-            max_width = args
-            img = img.crop((0, 0, max_width, img.size[1]))
-        else:
-            raise ValueError(f'Unknown effect "{e}"')
-    return img
+            if sprite is None:
+                failed = True
+                break
+
+            self.parts.append((is_train, sprite, dx, dy, p.get('effects')))
+            sprites.append(sprite)
+
+        super().__init__(sprites)
+        self.w = self.h = None
+        self.xofs = xofs
+        self.yofs = yofs
+
+    @staticmethod
+    def _make_checker_effect(img, start, length):
+        if start < 0:
+            start = img.size[0] + start
+        img = img.crop((0, 0, start + length, img.size[1]))
+        npimg = np.array(img)
+        for x in range(start, start + length):
+            # add start to make sure it's consistent for any start
+            npimg[(x + start) % 2::2, x] = (0, 0, 0, 0)
+        return Image.fromarray(npimg)
+
+    @staticmethod
+    def _make_fade_effect(img, start, length):
+        if start < 0:
+            start = img.size[0] + start
+        img = img.crop((0, 0, start + length, img.size[1]))
+        npimg = np.array(img)
+        step = 1.0 / (length + 1)
+        for x in range(start, start + length):
+            opacity = (length + start - x) * step
+            npimg[:, x, 3] = npimg[:, x, 3] * opacity
+        return Image.fromarray(npimg)
+
+    @staticmethod
+    def _make_opaque(img, opacity):
+        npimg = np.asarray(img).copy()
+        npimg[:, :, 3] = npimg[:, :, 3] * opacity
+        return Image.fromarray(npimg)
+
+    @staticmethod
+    def apply_effects(img, effects):
+        for e, args in (effects or {}).items():
+            if e == 'checker':
+                img = PurchaseSprite._make_checker_effect(img, *args)
+            elif e == 'fade_out':
+                img = PurchaseSprite._make_fade_effect(img, *args)
+            elif e == 'opacity':
+                img = PurchaseSprite._make_opaque(img, args)
+            elif e == 'crop_x':
+                max_width = args
+                img = img.crop((0, 0, max_width, img.size[1]))
+            else:
+                raise ValueError(f'Unknown effect "{e}"')
+        return img
+
+    @staticmethod
+    def train_image(sprite):
+        img = sprite.make_rgba_image()
+        assert img.mode == 'RGBA'
+        w, h = img.size
+        npimg = np.asarray(img)
+        x_has_data = [np.any(npimg[:, x, 3]) for x in range(w)]
+        x_first_data = min(i for i, x in enumerate(x_has_data) if x)
+        x_last_data = max(i for i, x in enumerate(x_has_data) if x)
+        y_has_data = [np.any(npimg[y, :, 3]) for y in range(h)]
+        # y_first_data = min(i for i, x in enumerate(y_has_data) if x)
+        y_last_data = max(i for i, x in enumerate(y_has_data) if x)
+        return img.crop((x_first_data, 0, x_last_data + 1, y_last_data + 1))
+
+    def get_image(self):
+        w, h = 0, 0
+        part_imgs = []
+
+        for is_train, sprite, dx, dy, effects in self.parts:
+            if is_train:
+                img = PurchaseSprite.train_image(sprite)
+                dy += sprite.yofs
+            else:
+                img = sprite.get_image()[0]
+            w += dx
+            part_imgs.append((img, (w, dy)))
+            w += img.size[0]
+            h = max(h, img.size[1] + dy)
+
+        # FIXME
+        # if failed:
+        #     print(self.leading_sprite)
+        #     return self.leading_sprite.get_image()
+
+        im = Image.new('RGBA', (w, h))
+        for img, dst in part_imgs:
+            im.paste(img, dst)
+
+        im = PurchaseSprite.apply_effects(im, self.effects)
+
+        max_width = 98 - self.xofs
+        if im.size[0] > max_width:
+            print(f'Warning: purchase sprite for {self.train.name}(#{self.train.id}) is too wide: {im.size[0]}px (max {max_width})')
+
+        if self.debug_dir:
+            fname = os.path.join(debug_dir, f'purchase_{self.train.id}.png')
+            im.save(fname, 'PNG')
+
+        self.w, self.h = im.size
+        return im, grf.BPP_32
 
 
 def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=None):
-    return # FIXME do it with computed sprites
-
     if debug_dir:
         os.makedirs(debug_dir, exist_ok=True)
 
@@ -349,103 +457,29 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
         if not isinstance(t, Train):
             continue
 
-        def property_image(name, sprites):
-            value = getattr(t, name)
-            if value is None:
-                print(f'No purchase sprite for {t.name}(#{t.id}): {name} is not specified')
-                return None
-
-            sprite = sprites.get(value)
-            if sprite is None:
-                print(f'No purchase sprite for {t.name}(#{t.id}): no sprite for {name} "{value}"')
-                return None
-
-            im = sprite.get_image()[0]
-            assert im.mode == 'RGBA'
-            return im
-            # im.paste(image, pos)
-            # return True
-
-        def train_image(sprite):
-            img = sprite.make_rgba_image()
-            assert img.mode == 'RGBA'
-            w, h = img.size
-            npimg = np.asarray(img)
-            x_has_data = [np.any(npimg[:, x, 3]) for x in range(w)]
-            x_first_data = min(i for i, x in enumerate(x_has_data) if x)
-            x_last_data = max(i for i, x in enumerate(x_has_data) if x)
-            y_has_data = [np.any(npimg[y, :, 3]) for y in range(h)]
-            # y_first_data = min(i for i, x in enumerate(y_has_data) if x)
-            y_last_data = max(i for i, x in enumerate(y_has_data) if x)
-            return img.crop((x_first_data, 0, x_last_data + 1, y_last_data + 1))
-
         towed_list = t.purchase_sprite_towed_id
         if towed_list is None:
             towed_list = []
         elif not isinstance(towed_list, (list, tuple)):
             towed_list = [towed_list]
 
-        part_imgs = []
-        w, h = 0, 0
-        failed = False
-        res_yofs = None
-        for p in parts:
-            dx, dy = p['offset']
-            if p['property'] == 'self':
-                sprite = t.liveries[0]['sprites'][6] # get the - view for the default livery
-                img = train_image(sprite)
-                dy += sprite.yofs
-            elif p['property'].startswith('towed'):
-                s = p['property']
-                if '[' in s:
-                    index = int(s[s.find('[') + 1: s.find(']')])
-                else:
-                    index = 0
-                if index >= len(towed_list):
-                    continue
-                towed_id = towed_list[index]
-                towed = train_idx.get(towed_id)
-                if towed is None:
-                    print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} does not exist')
-                    failed = True
-                    break
-                if not isinstance(towed, (grf.FileSprite, grf.ImageSprite)):
-                    print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} has no usable graphics')
-                    failed = True
-                    break
-                img = train_image(towed)
-                dy += towed.yofs
-            else:
-                img = property_image(p['property'], p['sprites'])
-                if img is None:
-                    failed = True
-                    break
+        towed_sprites = []
+        for towed_id in towed_list:
+            towed = train_idx.get(towed_id)
+            if towed is None:
+                print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} does not exist')
+                failed = True
+                break
+            if not isinstance(towed, (grf.FileSprite, grf.ImageSprite)):
+                print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} has no usable graphics')
+                failed = True
+                break
+            towed_sprites.append(towed)
 
-            img = apply_effects(img, p.get('effects'))
-
-            w += dx
-            part_imgs.append((img, (w, dy)))
-            w += img.size[0]
-            h = max(h, img.size[1] + dy)
-
-        if failed:
-            continue
-
-        im = Image.new('RGBA', (w, h))
-        for img, dst in part_imgs:
-            im.paste(img, dst)
-
-        im = apply_effects(im, effects)
-
-        t.purchase_sprite = grf.ImageSprite(im, xofs=xofs, yofs=yofs)
-
-        max_width = 98 - t.purchase_sprite.xofs
-        if im.size[0] > max_width:
-            print(f'Warning: purchase sprite for {t.name}(#{t.id}) is too wide: {im.size[0]}px (max {max_width})')
-
-        if debug_dir:
-            fname = os.path.join(debug_dir, f'purchase_{t.id}.png')
-            im.save(fname, 'PNG')
+        try:
+            t.purchase_sprite = PurchaseSprite(xofs, yofs, parts, effects, t, towed_sprites, debug_dir)
+        except RuntimeError as e:
+            print(str(e))
 
 
 def make_debug_sprite_sheet(filename, sprites, scale=1):
