@@ -1,2 +1,2 @@
-git+https://github.com/citymania-org/grf-py.git@109d98e8082efd144b420ae45bdde2f716cb9371#egg=grf
+git+https://github.com/citymania-org/grf-py.git@e3e3ec6931a48304653f19c3dcf3f14326ab4789#egg=grf
 psd-tools==1.9.28
