@@ -105,7 +105,7 @@ d_d_my_ii_2_dsb = Train(
 d_d_my_ii_3_ttt = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_3_ttt',
-    name='TTT MY II',
+    name='TTT TMY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),

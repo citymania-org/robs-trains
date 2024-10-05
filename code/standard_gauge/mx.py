@@ -89,7 +89,7 @@ d_d_mx_ii_3_vltj = Train(
 d_d_mx_ii_4_ttt = Train(
     **COMMON_mx_ii_PROPS,
     id='d_d_mx_ii_4_ttt',
-    name='TTT MX II',
+    name='TTT TMX II',
     liveries=make_psd_cc_liveries(
         'pp/mx.psd',
         shading=('mx',),

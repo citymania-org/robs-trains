@@ -37,7 +37,7 @@ s_e_C1_1_ss = Train(
         cc_replace=colours["GREEN"],
         cc2_replace=colours["GREEN"]
     ),
-    company='',
+    company='ss',
     introduction_date=date(1949, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SS/SL',

@@ -33,7 +33,6 @@ s_d_Z4p_1_srj = Train(
     ),
     country='sweden',
     company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1947, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SRJ, GJ, SJ, SL, and others (probably)',
@@ -51,7 +50,6 @@ s_d_Z4p_2 = Train(
     ),
     country='sweden',
     company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1948, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'Munkfors Bruk',
@@ -69,7 +67,6 @@ s_d_Z4p_3_nklj = Train(
     ),
     country='sweden',
     company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'NKlJ',
@@ -87,7 +84,6 @@ s_d_Z4p_4 = Train(
     ),
     country='sweden',
     company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'Böksholms Bruk',
@@ -105,7 +101,6 @@ s_d_Z4p_5_donj = Train(
     ),
     country='sweden',
     company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1966, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'DONJ',
@@ -124,7 +119,6 @@ s_d_Z4p_6_sl = Train(
     #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
     country='sweden',
     company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(1991, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SL',
@@ -143,7 +137,6 @@ s_d_Z4p_7_sl = Train(
     #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
     country='sweden',
     company='na',
-    purchase_sprite_towed_id='s_p_Co_1',
     introduction_date=date(2008, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SL',
