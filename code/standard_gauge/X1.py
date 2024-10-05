@@ -37,7 +37,7 @@ s_e_X1_1_sj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["BLUE"]
     ),
-    company='sj70s',
+    company='sj_70s',
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SJ',

@@ -16,7 +16,6 @@ s_p_UBp_ii_1 = Train(
     country='sweden',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='s_p_UBp_ii_1',
     max_speed=Train.kmhish(80),
     power=0,
     introduction_date=date(1988, 1, 1),

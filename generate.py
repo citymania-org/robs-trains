@@ -13,39 +13,6 @@ DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
-Train(
-    id='alignment_narrow',
-    name='alignment narrow',
-    length=8,
-    liveries={
-        '': Livery('alignment_narrow_gauge_short.png')
-    },
-    country='sweden',
-    company='na',
-    power_type='multi',
-    purchase_sprite_towed_id='s_e_X10p_2_sl_car2',
-    engine_class=Train.EngineClass.DIESEL,
-    sound_effects=modern_diesel_sound,
-    track_type=p_gauge,
-    max_speed=Train.kmhish(104),
-    power=9999,
-    introduction_date=date(1954, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Test locomotive',
-    }),
-)
-
-# regular
-
 # steam
 
 s_s_N_ii_1_sj = Train(
@@ -354,7 +321,7 @@ from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarke
 
 d_d_ml_1_dsb = Train(
     id='d_d_ml_1_dsb',
-    name='DSB ML',
+    name='?DSB ML',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/w_ml.psd',
@@ -389,7 +356,7 @@ d_d_ml_1_dsb = Train(
 
 d_d_ml_2_dsb = Train(
     id='d_d_ml_2_dsb',
-    name='DSB ML',
+    name='?DSB ML',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/w_ml.psd',
@@ -787,7 +754,6 @@ d_p_b_ii_1_dsb = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='d_p_b_ii_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -821,7 +787,6 @@ d_p_b_ii_2_dsb = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='d_p_b_ii_2_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -855,7 +820,6 @@ d_p_bk_iii_1_dsb = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='d_p_b_ii_1_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -889,7 +853,6 @@ d_p_bk_iii_2_dsb = Train(
     country='denmark',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='d_p_b_ii_2_dsb',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -924,7 +887,6 @@ s_w_Gblssy_2_gc = Train(
     country='sweden',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='s_w_Gblssy_2_gc',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -958,7 +920,6 @@ s_w_Hbis_sj = Train(
     country='sweden',
     company='na',
     power_type='na',
-    purchase_sprite_towed_id='s_w_Hbis_sj',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(100),
@@ -1040,19 +1001,28 @@ purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE
 
 
 COUNTRY_SPRITES = {
+    'austria': purchase_icon('fat.png'),
+    'belgium': purchase_icon('fbe.png'),
+    'bulgaria': purchase_icon('fbg.png'),
     'switzerland': purchase_icon('fch.png'),
+    'czechrepublic': purchase_icon('fcz.png'),
     'germany': purchase_icon('fde.png'),
     'denmark': purchase_icon('fdk.png'),
     'france': purchase_icon('ffr.png'),
     'hrvatska': purchase_icon('fhr.png'),
+    'hungary': purchase_icon('fhu.png'),
     'italy': purchase_icon('fit.png'),
+    'luxembourg': purchase_icon('flu.png'),
     'norway': purchase_icon('fno.png'),
+    'poland': purchase_icon('fpl.png'),
     'srbija': purchase_icon('frs.png'),
     'russia': purchase_icon('fru.png'),
     'sweden': purchase_icon('fse.png'),
+    'slovenija ': purchase_icon('fsi.png'),
+    'slovakia ': purchase_icon('fsk.png'),
     'ussr': purchase_icon('fsu.png'),
     'jugoslavija': purchase_icon('fyu.png'),
-    'na': purchase_icon('blank.png')
+    'na': purchase_icon('blank.png'),
 }
 
 
@@ -1067,6 +1037,7 @@ COMPANY_SPRITES = {
     'tgojnew': purchase_icon('ltgojnew.png'),
     'maelartaag': purchase_icon('lmaelartaag.png'),
     'hectorrail': purchase_icon('lhectorrail.png'),
+    'ss': purchase_icon('lss.png'),
 }
 
 
@@ -1074,12 +1045,13 @@ POWER_TYPE_SPRITES = {
     'diesel': purchase_icon('pdiesel.png'),
     '3rd': purchase_icon('pelectric3.png'),
     'dual': purchase_icon('pelectricdv.png'),
-    'metro': purchase_icon('pelectricm.png'),
+    'metro': purchase_icon('pelectric3.png'),
     'steam': purchase_icon('psteam.png'),
-    'multi': purchase_icon('pelectricw.png'),  # replece these sprites
-    'dc': purchase_icon('pelectricw.png'),
-    '15kv': purchase_icon('pelectricw.png'),
-    '25kv': purchase_icon('pelectricw.png'),
+    'multi': purchase_icon('pelectricdv.png'),  # replece these sprites
+    'dc': purchase_icon('pelectricdc1500.png'),
+    'dc3000': purchase_icon('pelectricdc3000.png'),
+    '15kv': purchase_icon('pelectric15.png'),
+    '25kv': purchase_icon('pelectric25.png'),
     'na': purchase_icon('blank.png')
 }
 

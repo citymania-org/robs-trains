@@ -97,7 +97,7 @@ d_e_ea_4_bulmarket = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["BLUE"]
     ),
-    country='na',
+    country='bulgaria',
     company='na',
     introduction_date=date(2007, 1, 1),
     additional_text=grf.fake_vehicle_info({
@@ -118,7 +118,7 @@ d_e_ea_5_db = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='na',
+    country='bulgaria',
     company='na',
     introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
