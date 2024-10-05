@@ -527,6 +527,8 @@ er_ir4 = Train(
 
 # emu dc
 
+from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
+
 '''stog_1_2 = Train(
     id='stog_1_2',
     name='S-Tog 1 (2 Car)',
@@ -1139,6 +1141,7 @@ lib.make_purchase_sprites(
     # emu 25
     #er_ir4,
     # emu dc
+    grf.VariantGroup('OS T', n_o_T_1_os, n_o_T_2_os,),
     #stog_1_2,
     #stog_1_4,
     # emu 3rd
