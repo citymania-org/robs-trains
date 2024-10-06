@@ -18,7 +18,7 @@ COMMON_X1_A_PROPS = dict(
     weight=78,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=196,
+    cargo_capacity=296,
     loading_speed=5,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -107,7 +107,7 @@ s_e_X1_3_sl = Train(
         paint='SL_2',
         overlay=('Lights', 'Electrical equipment'),
         cc_replace=colours["SLBLUE"],
-        cc2_replace=colours["SLBLUE"]
+        cc2_replace=colours["GREY1"]
     ),
     company='sl',
     introduction_date=date(1996, 1, 1),
@@ -126,7 +126,7 @@ s_e_X1_3_sl = Train(
         paint='SL_2',
         overlay=['Lights', 'Details'],
         cc_replace=colours['SLBLUE'],
-        cc2_replace=colours['SLBLUE'],
+        cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=0,
     loading_speed=5,
