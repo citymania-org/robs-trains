@@ -527,6 +527,8 @@ er_ir4 = Train(
 
 # emu dc
 
+from code.standard_gauge.HKB_Wes_1 import n_o_Wes_1_hkb
+
 from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
 
 '''stog_1_2 = Train(
@@ -1141,6 +1143,7 @@ lib.make_purchase_sprites(
     # emu 25
     #er_ir4,
     # emu dc
+    n_o_Wes_1_hkb,
     grf.VariantGroup('OS T', n_o_T_1_os, n_o_T_2_os,),
     #stog_1_2,
     #stog_1_4,
