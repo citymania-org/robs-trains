@@ -623,7 +623,9 @@ stog_1_4 = Train(
 
 from code.standard_gauge.C1 import s_e_C1_1_ss
 
-from code.standard_gauge.C4 import s_e_C4_1_ss
+from code.standard_gauge.C4 import s_e_C4_1_ss, s_e_C4_2_sl
+
+from code.standard_gauge.C5 import s_e_C5_1_ss
 
 # carriages
 
@@ -1152,6 +1154,8 @@ lib.make_purchase_sprites(
     # emu 3rd
     s_e_C1_1_ss,
     s_e_C4_1_ss,
+    s_e_C4_2_sl,
+    s_e_C5_1_ss,
     # carriages
     #grf.VariantGroup(
     #    'ABs',
