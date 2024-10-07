@@ -11,7 +11,7 @@ COMMON_C4_PROPS = dict(
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=metro,
     max_speed=Train.kmhish(80),
-    power=435,
+    power=870,
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
@@ -56,7 +56,7 @@ s_e_C4_1_ss = Train(
         cc_replace=colours['GREEN'],
         cc2_replace=colours['GREEN'],
     ),
-    cargo_capacity=0,
+    cargo_capacity=156,
     loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
@@ -82,7 +82,7 @@ s_e_C4_2_sl = Train(
         'Trivia': ''' ''',
     }),
 ).add_articulated_part(
-    id='s_e_C4_2_ss_car2',
+    id='s_e_C4_2_sl_car2',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/1960_SE_C4-B.psd',
@@ -92,7 +92,7 @@ s_e_C4_2_sl = Train(
         cc_replace=colours['SLBLUE'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=0,
+    cargo_capacity=156,
     loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

@@ -18,7 +18,7 @@ COMMON_X1_A_PROPS = dict(
     weight=78,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=255,  # FIXME 296 is too much for the game
+    cargo_capacity=148,
     loading_speed=5,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -56,7 +56,7 @@ s_e_X1_1_sj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['BLUE'],
     ),
-    cargo_capacity=0,
+    cargo_capacity=148,
     loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
@@ -92,7 +92,7 @@ s_e_X1_2_sl = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['BLUE'],
     ),
-    cargo_capacity=0,
+    cargo_capacity=148,
     loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
@@ -128,7 +128,7 @@ s_e_X1_3_sl = Train(
         cc_replace=colours['SLBLUE'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=0,
+    cargo_capacity=148,
     loading_speed=5,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
