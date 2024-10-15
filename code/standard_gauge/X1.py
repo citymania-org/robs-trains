@@ -71,7 +71,7 @@ s_e_X1_2_sl = Train(
         paint='SL_1',
         overlay=('Lights', 'Electrical equipment'),
         cc_replace=colours["BLUE"],
-        cc2_replace=colours["BLUE"]
+        cc2_replace=colours["GREY1"]
     ),
     company='sl',
     introduction_date=date(1988, 1, 1),
@@ -90,7 +90,7 @@ s_e_X1_2_sl = Train(
         paint='SL_1',
         overlay=['Lights', 'Details'],
         cc_replace=colours['BLUE'],
-        cc2_replace=colours['BLUE'],
+        cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=148,
     loading_speed=5,

@@ -559,7 +559,28 @@
             "s_e_C4_2_sl": 973,
             "s_e_C4_2_sl_car2": 974,
             "s_e_C5_2_ss_car2": 975,
-            "s_e_C5_1_ss": 976
+            "s_e_C5_1_ss": 976,
+            "__n_o_type69_1_nsb_aa_mid": 977,
+            "__n_o_type69_1_nsb_aa_tail": 978,
+            "n_o_type69_1_nsb": 979,
+            "__n_o_BM69A_1_nsb_aa_mid": 980,
+            "__n_o_BM69A_1_nsb_aa_tail": 981,
+            "n_o_BS69A_1_nsb": 982,
+            "__n_o_BS69A_1_nsb_aa_mid": 983,
+            "__n_o_BS69A_1_nsb_aa_tail": 984,
+            "n_o_BM69A_1_nsb": 985,
+            "__n_o_BM69A_2_nsb_aa_mid": 986,
+            "__n_o_BM69A_2_nsb_aa_tail": 987,
+            "n_o_BS69A_2_nsb": 988,
+            "__n_o_BS69A_2_nsb_aa_mid": 989,
+            "__n_o_BS69A_2_nsb_aa_tail": 990,
+            "n_o_BM69A_2_nsb": 991,
+            "n_o_BS69A_3_nsb": 992,
+            "__n_o_BS69A_3_nsb_aa_mid": 993,
+            "__n_o_BS69A_3_nsb_aa_tail": 994,
+            "__n_o_BM69A_3_nsb_aa_mid": 995,
+            "__n_o_BM69A_3_nsb_aa_tail": 996,
+            "n_o_BM69A_3_nsb": 997
         }
     }
 }
