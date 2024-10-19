@@ -28,7 +28,7 @@ COMMON_C5_PROPS = dict(
 s_e_C5_1_ss = Train(
     **COMMON_C5_PROPS,
     id='s_e_C5_1_ss',
-    name='''SS/SL C5 'Silverpilen' ''',
+    name='?SS/SL C5 "Silverpilen"',
     liveries=make_psd_cc_liveries(
         'pp/1960_SE_C4-A.psd',
         shading='C4',

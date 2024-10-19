@@ -28,7 +28,7 @@ COMMON_HKBw_PROPS = dict(
 n_o_Wes_1_hkb = Train(
     **COMMON_HKBw_PROPS,
     id='n_o_Wes_1_hkb',
-    name='''HKB 'trunke' ''',
+    name='?HKB "Trunke"',
     liveries=make_psd_cc_liveries(
         'pp/1910_NO_Wes_1.psd',
         shading='Trunken',
@@ -37,7 +37,7 @@ n_o_Wes_1_hkb = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    company='',
+    company='na',
     introduction_date=date(1910, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'HKB',

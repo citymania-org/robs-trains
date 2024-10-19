@@ -580,7 +580,19 @@
             "__n_o_BS69A_3_nsb_aa_tail": 994,
             "__n_o_BM69A_3_nsb_aa_mid": 995,
             "__n_o_BM69A_3_nsb_aa_tail": 996,
-            "n_o_BM69A_3_nsb": 997
+            "n_o_BM69A_3_nsb": 997,
+            "ch_p_2pax_1_sbb": 998,
+            "ch_p_2bag_1_sbb": 999,
+            "ch_p_4pax_1_sbb": 1000,
+            "ch_p_4bag_1_sbb": 1001,
+            "ch_e_rei_1_sbb": 1002,
+            "ch_e_rei_2_sbb": 1003,
+            "ch_e_rei_3_sbb": 1004,
+            "ch_e_reii_1_sbb": 1005,
+            "ch_e_reii_2_sbb": 1006,
+            "ch_e_reii_3_sbb": 1007,
+            "ch_e_reii_4_sbb": 1008,
+            "ch_e_reii_5_sbb": 1009
         }
     }
 }

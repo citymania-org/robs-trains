@@ -28,7 +28,7 @@ COMMON_XOA3_A_PROPS = dict(
 s_e_Xoa3_1_bj = Train(
     **COMMON_XOA3_A_PROPS,
     id='s_e_Xoa3_1_bj',
-    name='BJ Xoa3',
+    name='?BJ Xoa3',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa3-A.psd',
         shading='Xoa3-A',
@@ -63,7 +63,7 @@ s_e_Xoa3_1_bj = Train(
 s_e_Xoa3_2_sj = Train(
     **COMMON_XOA3_A_PROPS,
     id='s_e_Xoa3_2_sj',
-    name='SJ Xoa3',
+    name='?SJ Xoa3',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa3-A.psd',
         shading='Xoa3-A',

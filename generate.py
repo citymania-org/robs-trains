@@ -17,7 +17,7 @@ os.makedirs(DEBUG_DIR, exist_ok=True)
 
 s_s_N_ii_1_sj = Train(
     id='s_s_N_ii_1_sj',
-    name='SJ N II',
+    name='?SJ N II',
     length=5,
     liveries={
         'Default': Livery('1900_SE_N_II_1.png', cc_replace=colours["GREY10"], cc2_replace=colours["GREY10"]),
@@ -50,8 +50,8 @@ s_s_N_ii_1_sj = Train(
 
 s_s_Sa_sj = Train(
     id='s_s_Sa_sj',
-    name='SJ Sa',
-    length=5,
+    name='?SJ Sa',
+    length=6,
     liveries=make_psd_cc_liveries(
         'pp/1908_SE_Sa.psd',
         shading='Sa',
@@ -114,7 +114,7 @@ from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3
 '''
 rc1 = Train(
     id='rc1',
-    name='Rc1',
+    name='?Rc1',
     shorten_by=2,
     liveries=make_liveries(6, {
         'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
@@ -146,7 +146,7 @@ rc1 = Train(
 
 rc2 = Train(
     id='rc2',
-    name='Rc2',
+    name='?Rc2',
     shorten_by=2,
     liveries=make_liveries(6, {
         'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
@@ -180,7 +180,7 @@ rc2 = Train(
 
 rc3 = Train(
     id='rc3',
-    name='Rc3',
+    name='?Rc3',
     shorten_by=2,
     liveries=make_liveries(6, {
         'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
@@ -213,7 +213,7 @@ rc3 = Train(
 
 rc4 = Train(
     id='rc4',
-    name='Rc4',
+    name='?Rc4',
     shorten_by=2,
     liveries=make_liveries(6, {
         'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
@@ -245,7 +245,7 @@ rc4 = Train(
 
 rc5 = Train(
     id='rc5',
-    name='Rc5',
+    name='?Rc5',
     shorten_by=2,
     liveries=make_liveries(6, {
         'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
@@ -277,7 +277,7 @@ rc5 = Train(
 
 rc6 = Train(
     id='rc6',
-    name='Rc6',
+    name='?Rc6',
     shorten_by=2,
     liveries=make_liveries(6, {
         'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
@@ -400,7 +400,7 @@ from code.standard_gauge.Yo1s import s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tg
 '''
 mf_ic3 = Train(
     id='mf_ic3',
-    name='MF IC3',
+    name='?MF IC3',
     liveries=make_liveries(8, {
         'White & Red': '1989_DK_MF_IC3_MFA_1_1989.png',
         'Grey, Blue & Green': '1989_DK_MF_IC3_MFA_2_2005.png',
@@ -466,7 +466,7 @@ from code.standard_gauge.type69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM6
 '''
 er_ir4 = Train(
     id='er_ir4',
-    name='ER IR4',
+    name='?ER IR4',
     liveries=make_liveries(8, {
         'White & Red': '1993_DK_ER_IR4_ER20_1_1993.png',
         'Grey, Blue & Green': '1993_DK_ER_IR4_ER20_2_2005.png',
@@ -535,7 +535,7 @@ from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
 
 '''stog_1_2 = Train(
     id='stog_1_2',
-    name='S-Tog 1 (2 Car)',
+    name='?S-Tog 1 (2 Car)',
     liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
     }),
@@ -572,7 +572,7 @@ from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
 
 stog_1_4 = Train(
     id='stog_1_4',
-    name='S-Tog 1 (4 Car)',
+    name='?S-Tog 1 (4 Car)',
     liveries=make_liveries(8, {
         'Maroon': '1933_DK_S-Tog_1_MM_1_1933.png',
     }),
@@ -633,7 +633,7 @@ from code.standard_gauge.C5 import s_e_C5_1_ss
 
 '''abs1 = Train(
     id='abs1',
-    name='ABs',
+    name='?ABs',
     liveries=make_liveries(11, {
         'White, Blue & Green': '2002_DK_ABs_1_2002.png',
     }),
@@ -662,7 +662,7 @@ from code.standard_gauge.C5 import s_e_C5_1_ss
 
 abs2 = Train(
     id='abs2',
-    name='ABs',
+    name='?ABs',
     liveries=make_liveries(11, {
         'White, Blue & Red': '2002_DK_ABs_2_2012.png',
     }),
@@ -691,7 +691,7 @@ abs2 = Train(
 
 b_ii1 = Train(
     id='b_ii1',
-    name='B II',
+    name='?B II',
     liveries=make_liveries(10, {
         'White, Blue & Green': '2002_DK_B_II_1_2002.png',
     }),
@@ -720,7 +720,7 @@ b_ii1 = Train(
 
 b_ii2 = Train(
     id='b_ii2',
-    name='B II',
+    name='?B II',
     liveries=make_liveries(10, {
         'White, Blue & Red': '2002_DK_B_II_2_2012.png',
     }),
@@ -753,7 +753,7 @@ from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_
 
 d_p_b_ii_1_dsb = Train(
     id='d_p_b_ii_1_dsb',
-    name='DSB B II',
+    name='?DSB B II',
     length=12,
     liveries={
         'Default': Livery('2002_DK_B_II_1_2002.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
@@ -786,7 +786,7 @@ d_p_b_ii_1_dsb = Train(
 
 d_p_b_ii_2_dsb = Train(
     id='d_p_b_ii_2_dsb',
-    name='DSB B II',
+    name='?DSB B II',
     length=12,
     liveries={
         'Default': Livery('2002_DK_B_II_2_2012.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
@@ -819,7 +819,7 @@ d_p_b_ii_2_dsb = Train(
 
 d_p_bk_iii_1_dsb = Train(
     id='d_p_bk_iii_1_dsb',
-    name='DSB Bk III',
+    name='?DSB Bk III',
     length=12,
     liveries={
         'Default': Livery('2002_DK_Bk_III_1_2002.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
@@ -852,7 +852,7 @@ d_p_bk_iii_1_dsb = Train(
 
 d_p_bk_iii_2_dsb = Train(
     id='d_p_bk_iii_2_dsb',
-    name='DSB Bk III',
+    name='?DSB Bk III',
     length=12,
     liveries={
         'Default': Livery('2002_DK_Bk_III_2_2012.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
@@ -887,7 +887,7 @@ d_p_bk_iii_2_dsb = Train(
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
-    name='GC Gblss-y',
+    name='?GC Gblss-y',
     length=7,
     liveries={
         'Default': Livery('2000_SE_Gblssy_2_2000.png'),
@@ -919,7 +919,7 @@ s_w_Gblssy_2_gc = Train(
 
 s_w_Hbis_sj = Train(
     id='s_w_Hbis_sj',
-    name='SJ Hbis',
+    name='?SJ Hbis',
     length=7,
     liveries={
         'Default': Livery('1972_SE_Hbis_1972.png', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"]),
@@ -962,7 +962,7 @@ from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
 
 x15p = Train(
     id='x15p',
-    name='X15p',
+    name='?X15p',
     length=9,
     liveries=make_liveries({
         'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
@@ -1007,6 +1007,13 @@ x15p = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 '''
+
+# old sbb
+
+from code.standard_gauge.sbb import ch_p_2pax_1_sbb, ch_p_2bag_1_sbb, ch_p_4pax_1_sbb, ch_p_4bag_1_sbb, ch_e_rei_1_sbb, ch_e_rei_2_sbb, ch_e_rei_3_sbb, ch_e_reii_1_sbb, ch_e_reii_2_sbb, ch_e_reii_3_sbb, ch_e_reii_4_sbb, ch_e_reii_5_sbb
+
+# end
+
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
@@ -1107,18 +1114,20 @@ lib.make_purchase_sprites(
     s_s_N_ii_1_sj,
     s_s_Sa_sj,
     # diesel
-    #grf.VariantGroup('Frichs 467-475 "Marcipanbrød"', d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4),
-    grf.VariantGroup('201', be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
+    #grf.VariantGroup('?Frichs 467-475 "Marcipanbrød"', d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4),
+    grf.VariantGroup('?201', be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
     d_d_mye_ii_1_dsb,
     grf.VariantGroup('MX II', d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik),
-    grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),
-    grf.VariantGroup('MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),
+    grf.VariantGroup('?M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),
+    grf.VariantGroup('?MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),
     grf.VariantGroup('MZ I', d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt),
     grf.VariantGroup('MZ II', d_d_mz_ii_1_dsb, d_d_mz_ii_2_dsb, d_d_mz_ii_3_dsb, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab),
     grf.VariantGroup('MZ III', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb),
     grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
     grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_7_skpl, d_d_me_ii_6_mav),
     # electric 15
+    grf.VariantGroup('Re 4/4 I', ch_e_rei_1_sbb, ch_e_rei_2_sbb, ch_e_rei_3_sbb),
+    grf.VariantGroup('Re 4/4 II', ch_e_reii_1_sbb, ch_e_reii_2_sbb, ch_e_reii_3_sbb, ch_e_reii_4_sbb, ch_e_reii_5_sbb),
     #grf.VariantGroup(
     #    'Rc',
         #rc1,
@@ -1129,7 +1138,7 @@ lib.make_purchase_sprites(
         #rc6,
     #),
     # electric 25
-    grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
+    grf.VariantGroup('?EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
     # electric dc
     # electric 3rd
     # dmu
@@ -1138,20 +1147,20 @@ lib.make_purchase_sprites(
     d_d_mq_1_dsb,
     d_d_mp_1_dsb,
     grf.VariantGroup('MO', d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb),
-    grf.VariantGroup('Yd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
-    grf.VariantGroup('Yo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
-    grf.VariantGroup('Yo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
+    grf.VariantGroup('?Yd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
+    grf.VariantGroup('?Yo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
+    grf.VariantGroup('?Yo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
     #mf_ic3,
     # emu 15
-    grf.VariantGroup('Xoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
-    grf.VariantGroup('Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
-    grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
-    grf.VariantGroup('BM69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
+    grf.VariantGroup('?Xoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
+    grf.VariantGroup('?Xoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
+    grf.VariantGroup('?X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
+    grf.VariantGroup('?BM69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
     # emu 25
     #er_ir4,
     # emu dc
     n_o_Wes_1_hkb,
-    grf.VariantGroup('OS T', n_o_T_1_os, n_o_T_2_os,),
+    grf.VariantGroup('?OS T', n_o_T_1_os, n_o_T_2_os,),
     #stog_1_2,
     #stog_1_4,
     # emu 3rd
@@ -1165,6 +1174,8 @@ lib.make_purchase_sprites(
         #abs1,
         #abs2,
     #),
+    ch_p_2pax_1_sbb,
+    ch_p_4pax_1_sbb,
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
     grf.VariantGroup('Danish 30s stock 1st class', d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb),
     grf.VariantGroup('Danish 30s stock 1st & 2nd class', d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb),
@@ -1176,19 +1187,21 @@ lib.make_purchase_sprites(
     grf.VariantGroup('UIC-Y luggage', d_p_bd_1_dsb, d_p_bd_2_dsb, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf),
     grf.VariantGroup('An', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb),
     grf.VariantGroup('Bn', d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb),
-    grf.VariantGroup('B II', d_p_b_ii_1_dsb, d_p_bk_iii_1_dsb, d_p_b_ii_2_dsb, d_p_bk_iii_2_dsb),
+    grf.VariantGroup('?B II', d_p_b_ii_1_dsb, d_p_bk_iii_1_dsb, d_p_b_ii_2_dsb, d_p_bk_iii_2_dsb),
     #grf.VariantGroup(
     #    'B II',
     #    b_ii1,
     #    b_ii2,
     #),
     # wagons
+    ch_p_2bag_1_sbb,
+    ch_p_4bag_1_sbb,
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
     # narrow gauge
-    grf.VariantGroup('Z4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
+    grf.VariantGroup('?Z4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
-    grf.VariantGroup('X10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
+    grf.VariantGroup('?X10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
     s_p_Co_1,
     s_p_UBp_ii_1,
 ).set_variant_callbacks(g)))

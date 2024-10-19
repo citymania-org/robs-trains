@@ -28,7 +28,7 @@ COMMON_C1_PROPS = dict(
 s_e_C1_1_ss = Train(
     **COMMON_C1_PROPS,
     id='s_e_C1_1',
-    name='SS/SL C1',
+    name='?SS/SL C1',
     liveries=make_psd_cc_liveries(
         'pp/1949_SE_C1.psd',
         shading='C1',

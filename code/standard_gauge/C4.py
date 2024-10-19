@@ -28,7 +28,7 @@ COMMON_C4_PROPS = dict(
 s_e_C4_1_ss = Train(
     **COMMON_C4_PROPS,
     id='s_e_C4_1_ss',
-    name='SS/SL C4',
+    name='?SS/SL C4',
     liveries=make_psd_cc_liveries(
         'pp/1960_SE_C4-A.psd',
         shading='C4',
@@ -64,7 +64,7 @@ s_e_C4_1_ss = Train(
 s_e_C4_2_sl = Train(
     **COMMON_C4_PROPS,
     id='s_e_C4_2_sl',
-    name='SL C4',
+    name='?SL C4',
     liveries=make_psd_cc_liveries(
         'pp/1960_SE_C4-A.psd',
         shading='C4',
