@@ -6,7 +6,7 @@ from common import Train, Livery, p_gauge, p_gauge_dc
 
 s_p_UBp_ii_1 = Train(
     id='s_p_UBp_ii_1',
-    name='SL UBp II',
+    name='њSL UBp II',
     length=9,
     liveries={
         'SL': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
@@ -51,7 +51,7 @@ COMMON_X10p_PROPS = dict(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=72,
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -64,7 +64,7 @@ COMMON_X10p_PROPS = dict(
 s_e_X10p_1_sl = Train(
     **COMMON_X10p_PROPS, 
     id='s_e_X10p_1_sl,',
-    name='SL X10p',
+    name='њSL X10p',
     liveries={
         'Default': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
     },
@@ -77,7 +77,7 @@ s_e_X10p_1_sl = Train(
         'Default': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
     },
     cargo_capacity=80,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_X10p_1_sl_car3',
@@ -86,14 +86,14 @@ s_e_X10p_1_sl = Train(
         'Default': Livery('xxxx_SE_X10p_UBxp_1_xxxx.png'),
     },
     cargo_capacity=76,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 s_e_X10p_2_sl = Train(
     **COMMON_X10p_PROPS, 
     id='s_e_X10p_2_sl,',
-    name='SL X10p mod 2011',
+    name='њSL X10p mod 2011',
     liveries={
         'Default': Livery('xxxx_SE_X10p_X10p_2_xxxx.png'),
         '2CC': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
@@ -112,7 +112,7 @@ s_e_X10p_2_sl = Train(
         'Upptåget 2CC': Livery('SE_X10p_UBp_3.png', auto_cc=lib.CC_DEFAULT),
     },
     cargo_capacity=80,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_X10p_2_sl_car3',
@@ -124,6 +124,6 @@ s_e_X10p_2_sl = Train(
         'Upptåget 2CC': Livery('SE_X10p_UBxp_3.png', auto_cc=lib.CC_DEFAULT),
     },
     cargo_capacity=76,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

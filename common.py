@@ -44,11 +44,11 @@ def tmpl_train(func):
     return [
         func(  0, 8, 10, 44, xofs=-4,  yofs=-21),
         func( 20, 8, 42, 44, xofs=-24, yofs=-30),
-        func( 70, 8, 69, 44, xofs=-35, yofs=-38),
+        func( 70, 8, 69, 44, xofs=-34, yofs=-38),
         func(150, 8, 42, 44, xofs=-16, yofs=-30),
         func(200, 8, 10, 44, xofs=-4,  yofs=-21),
         func(220, 8, 42, 44, xofs=-24, yofs=-30),
-        func(270, 8, 69, 44, xofs=-35, yofs=-38),
+        func(270, 8, 69, 44, xofs=-34, yofs=-38),
         func(350, 8, 42, 44, xofs=-16, yofs=-30),
     ]
 

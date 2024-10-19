@@ -19,7 +19,7 @@ COMMON_T_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=164,
-    loading_speed=5,
+    loading_speed=20,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='norway',
@@ -28,7 +28,7 @@ COMMON_T_PROPS = dict(
 n_o_T_1_os = Train(
     **COMMON_T_PROPS,
     id='n_o_T_1_os',
-    name='OS T',
+    name='њOS T',
     liveries=make_psd_cc_liveries(
         'pp/1959_NO_T.psd',
         shading='T',
@@ -37,7 +37,7 @@ n_o_T_1_os = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["BLUE"]
     ),
-    company='',
+    company='na',
     introduction_date=date(1959, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'os',
@@ -50,7 +50,7 @@ n_o_T_1_os = Train(
 n_o_T_2_os = Train(
     **COMMON_T_PROPS,
     id='n_o_T_2_os',
-    name='OS T',
+    name='њOS T',
     liveries=make_psd_cc_liveries(
         'pp/1959_NO_T.psd',
         shading='T',
@@ -59,7 +59,7 @@ n_o_T_2_os = Train(
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["GREY1"]
     ),
-    company='',
+    company='na',
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'os',

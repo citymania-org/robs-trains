@@ -19,7 +19,7 @@ COMMON_X1_A_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=148,
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_X1_A_PROPS = dict(
 s_e_X1_1_sj = Train(
     **COMMON_X1_A_PROPS,
     id='s_e_X1_1_sj',
-    name='SJ/SL X1',
+    name='њSJ/SL X1',
     liveries=make_psd_cc_liveries(
         'pp/1968_SE_X1-A.psd',
         shading='X1',
@@ -57,14 +57,14 @@ s_e_X1_1_sj = Train(
         cc2_replace=colours['BLUE'],
     ),
     cargo_capacity=148,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 s_e_X1_2_sl = Train(
     **COMMON_X1_A_PROPS,
     id='s_e_X1_2_sl',
-    name='SL X1',
+    name='њSL X1',
     liveries=make_psd_cc_liveries(
         'pp/1968_SE_X1-A.psd',
         shading='X1 1988 rebuild',
@@ -93,14 +93,14 @@ s_e_X1_2_sl = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=148,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 s_e_X1_3_sl = Train(
     **COMMON_X1_A_PROPS,
     id='s_e_X1_3_sl',
-    name='SL X1',
+    name='њSL X1',
     liveries=make_psd_cc_liveries(
         'pp/1968_SE_X1-A.psd',
         shading='X1 1988 rebuild',
@@ -129,6 +129,6 @@ s_e_X1_3_sl = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=148,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

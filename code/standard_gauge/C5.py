@@ -19,7 +19,7 @@ COMMON_C5_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=156,
-    loading_speed=5,
+    loading_speed=20,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_C5_PROPS = dict(
 s_e_C5_1_ss = Train(
     **COMMON_C5_PROPS,
     id='s_e_C5_1_ss',
-    name='''SS/SL C5 'Silverpilen' ''',
+    name='њSS/SL C5 "Silverpilen"',
     liveries=make_psd_cc_liveries(
         'pp/1960_SE_C4-A.psd',
         shading='C4',
@@ -57,6 +57,6 @@ s_e_C5_1_ss = Train(
         cc2_replace=colours['GREY5'],
     ),
     cargo_capacity=156,
-    loading_speed=5,
+    loading_speed=20,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

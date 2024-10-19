@@ -27,7 +27,7 @@ COMMON_Z4p_PROPS = dict(
 s_d_Z4p_1_srj = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_1_srj',
-    name='SRJ Z4p',
+    name='њSRJ Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
@@ -44,7 +44,7 @@ s_d_Z4p_1_srj = Train(
 s_d_Z4p_2 = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_2_',
-    name='Munkfors Bruk Ms 3',
+    name='њMunkfors Bruk Ms 3',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='2', overlay='light', cc_replace=colours["DGREEN"], cc2_replace=colours["DGREEN"],
     ),
@@ -61,7 +61,7 @@ s_d_Z4p_2 = Train(
 s_d_Z4p_3_nklj = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_3_NKLJ',
-    name='NKlJ Z4p',
+    name='њNKlJ Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='3_nklj', overlay='light',  cc_replace=colours["MAROON"], cc2_replace=colours["CREAM"],
     ),
@@ -78,7 +78,7 @@ s_d_Z4p_3_nklj = Train(
 s_d_Z4p_4 = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_4',
-    name='Böksholms Bruk Z4p',
+    name='њBöksholms Bruk Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='4', overlay='light', cc_replace=colours["ORANGE"], cc2_replace=colours["DGREEN"],
     ),
@@ -95,7 +95,7 @@ s_d_Z4p_4 = Train(
 s_d_Z4p_5_donj = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_5_DONJ',
-    name='DONJ Z4p',
+    name='њDONJ Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='5_donj', overlay='light', cc_replace=colours["ORANGE"], cc2_replace=colours["DTURQUOISE"],
     ),
@@ -112,7 +112,7 @@ s_d_Z4p_5_donj = Train(
 s_d_Z4p_6_sl = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_6_sl',
-    name='SL Z4p',
+    name='њSL Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='6_sl', overlay='light', cc_replace=colours["YELLOW"], cc2_replace=colours["GREY3"],
     ),
@@ -130,7 +130,7 @@ s_d_Z4p_6_sl = Train(
 s_d_Z4p_7_sl = Train(
     **COMMON_Z4p_PROPS,
     id='s_d_Z4p_7_sl',
-    name='SL Z4p',
+    name='њSL Z4p',
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='7_sl', overlay='light', cc_replace=colours["RED"], cc2_replace=colours["RED"],
     ),

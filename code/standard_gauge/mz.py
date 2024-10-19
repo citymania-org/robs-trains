@@ -27,7 +27,7 @@ COMMON_mze_PROPS = dict(
 d_d_mz_i_1_dsb = Train(
     **COMMON_mze_PROPS,
     id='d_d_mz_i_1_dsb',
-    name='DSB MZ I',
+    name='DSB MZ I/II',
     liveries=make_psd_cc_liveries(
         'pp/mz1.psd',
         shading=('mz1',),
@@ -41,13 +41,14 @@ d_d_mz_i_1_dsb = Train(
     introduction_date=date(1967, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+        'Note': 'MZ II introduced in 1970',
     }),
 )
 
 d_d_mz_i_2_dsb = Train(
     **COMMON_mze_PROPS,
     id='d_d_mz_i_2_dsb',
-    name='DSB MZ I',
+    name='DSB MZ I/II',
     liveries=make_psd_cc_liveries(
         'pp/mz1.psd',
         shading=('mz1',),
@@ -67,7 +68,7 @@ d_d_mz_i_2_dsb = Train(
 d_d_mz_i_3_dsb = Train(
     **COMMON_mze_PROPS,
     id='d_d_mz_i_3_dsb',
-    name='DSB MZ I',
+    name='DSB MZ I/II',
     liveries=make_psd_cc_liveries(
         'pp/mz1.psd',
         shading=('mz2',),
@@ -102,66 +103,6 @@ d_d_mz_i_4_ttt = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'One locomotive bought from TÅGAB in 2005 #1407',
-    }),
-)
-
-d_d_mz_ii_1_dsb = Train(
-    **COMMON_mze_PROPS,
-    id='d_d_mz_ii_1_dsb',
-    name='DSB MZ II',
-    liveries=make_psd_cc_liveries(
-        'pp/mz1.psd',
-        shading=('mz1',),
-        paint=('dsb1',),
-        overlay=('light'),
-        cc_replace=colours["MAROON"],
-        cc2_replace=colours["DCREAM"]
-    ),
-    country='denmark',
-    company='na',
-    introduction_date=date(1970, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_mz_ii_2_dsb = Train(
-    **COMMON_mze_PROPS,
-    id='d_d_mz_ii_2_dsb',
-    name='DSB MZ II',
-    liveries=make_psd_cc_liveries(
-        'pp/mz1.psd',
-        shading=('mz1',),
-        paint=('dsb2',),
-        overlay=('light'),
-        cc_replace=colours["RED"],
-        cc2_replace=colours["GREY10"]
-    ),
-    country='denmark',
-    company='na',
-    introduction_date=date(1972, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
-    }),
-)
-
-d_d_mz_ii_3_dsb = Train(
-    **COMMON_mze_PROPS,
-    id='d_d_mz_ii_3_dsb',
-    name='DSB MZ II',
-    liveries=make_psd_cc_liveries(
-        'pp/mz1.psd',
-        shading=('mz2',),
-        paint=('dsb2',),
-        overlay=('light'),
-        cc_replace=colours["RED"],
-        cc2_replace=colours["GREY10"]
-    ),
-    country='denmark',
-    company='na',
-    introduction_date=date(1986, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
     }),
 )
 

@@ -19,7 +19,7 @@ COMMON_C4_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=156,
-    loading_speed=5,
+    loading_speed=20,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_C4_PROPS = dict(
 s_e_C4_1_ss = Train(
     **COMMON_C4_PROPS,
     id='s_e_C4_1_ss',
-    name='SS/SL C4',
+    name='њSS/SL C4',
     liveries=make_psd_cc_liveries(
         'pp/1960_SE_C4-A.psd',
         shading='C4',
@@ -57,14 +57,14 @@ s_e_C4_1_ss = Train(
         cc2_replace=colours['GREEN'],
     ),
     cargo_capacity=156,
-    loading_speed=5,
+    loading_speed=20,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 s_e_C4_2_sl = Train(
     **COMMON_C4_PROPS,
     id='s_e_C4_2_sl',
-    name='SL C4',
+    name='њSL C4',
     liveries=make_psd_cc_liveries(
         'pp/1960_SE_C4-A.psd',
         shading='C4',
@@ -93,6 +93,6 @@ s_e_C4_2_sl = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=156,
-    loading_speed=5,
+    loading_speed=20,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

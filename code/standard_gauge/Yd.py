@@ -19,7 +19,7 @@ COMMON_Yd_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=24,
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_Yd_PROPS = dict(
 s_d_Yd_1_sj = Train(
     **COMMON_Yd_PROPS,
     id='s_d_Yd_1_sj',
-    name='SJ Yd',
+    name='њSJ Yd',
     liveries=make_psd_cc_liveries(
         'pp/1935_SE_Yd.psd',
         shading='Yd',
@@ -49,7 +49,7 @@ s_d_Yd_1_sj = Train(
 s_d_Yd_2_hnj = Train(
     **COMMON_Yd_PROPS,
     id='s_d_Yd_2_hnj',
-    name='HNJ Yd',
+    name='њHNJ Yd',
     liveries=make_psd_cc_liveries(
         'pp/1935_SE_Yd.psd',
         shading='Yd',
@@ -69,7 +69,7 @@ s_d_Yd_2_hnj = Train(
 s_d_Yd_3_msj = Train(
     **COMMON_Yd_PROPS,
     id='s_d_Yd_2_msj',
-    name='MSJ Yd',
+    name='њMSJ Yd',
     liveries=make_psd_cc_liveries(
         'pp/1935_SE_Yd.psd',
         shading='Yd',

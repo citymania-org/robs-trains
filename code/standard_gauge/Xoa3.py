@@ -19,7 +19,7 @@ COMMON_XOA3_A_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=50, # and 2t luggage
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_XOA3_A_PROPS = dict(
 s_e_Xoa3_1_bj = Train(
     **COMMON_XOA3_A_PROPS,
     id='s_e_Xoa3_1_bj',
-    name='BJ Xoa3',
+    name='њBJ Xoa3',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa3-A.psd',
         shading='Xoa3-A',
@@ -56,14 +56,14 @@ s_e_Xoa3_1_bj = Train(
         cc2_replace=colours['CREAM'],
     ),
     cargo_capacity=72,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 s_e_Xoa3_2_sj = Train(
     **COMMON_XOA3_A_PROPS,
     id='s_e_Xoa3_2_sj',
-    name='SJ Xoa3',
+    name='њSJ Xoa3',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa3-A.psd',
         shading='Xoa3-A',
@@ -91,6 +91,6 @@ s_e_Xoa3_2_sj = Train(
         cc2_replace=colours['REDBROWN'],
     ),
     cargo_capacity=72,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

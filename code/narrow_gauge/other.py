@@ -6,7 +6,7 @@ from common import Train, Livery, p_gauge, modern_diesel_sound
 
 s_p_Co_1 = Train(
     id='s_p_Co_1',
-    name='SRJ Co "Grindvagn"',
+    name='њSRJ Co "Grindvagn"',
     length=8,
     liveries={
         'Default': Livery('1914_SE_Co_68-71_1_1914.png'),
@@ -26,7 +26,7 @@ s_p_Co_1 = Train(
     tractive_effort_coefficient=79,
     running_cost_factor=222,
     cargo_capacity=72,
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -38,7 +38,7 @@ s_p_Co_1 = Train(
 
 s_d_Tp_1_sj = Train( 
     id='s_d_Tp_1_sj',
-    name='SJ Tp',
+    name='њSJ Tp',
     length=5,
     liveries={
         'Default': Livery('SE_Tp_1.png'),

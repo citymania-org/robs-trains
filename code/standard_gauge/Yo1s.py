@@ -19,7 +19,7 @@ COMMON_Yo1s_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=48,
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_Yo1s_PROPS = dict(
 s_d_Yo1s_1_sj = Train(
     **COMMON_Yo1s_PROPS,
     id='s_d_Yo1s_1_sj',
-    name='SJ Yo1s',
+    name='њSJ Yo1s',
     liveries=make_psd_cc_liveries(
         'pp/1946_SE_Yo1s.psd',
         shading='Yo1s',
@@ -49,7 +49,7 @@ s_d_Yo1s_1_sj = Train(
 s_d_Yo1s_2_bj = Train(
     **COMMON_Yo1s_PROPS,
     id='s_d_Yo1s_2_bj',
-    name='BJ Yo8',
+    name='њBJ Yo8',
     liveries=make_psd_cc_liveries(
         'pp/1946_SE_Yo1s.psd',
         shading='Yo1s',
@@ -69,7 +69,7 @@ s_d_Yo1s_2_bj = Train(
 s_d_Yo1s_3_tgoj = Train(
     **COMMON_Yo1s_PROPS,
     id='s_d_Yo1s_3_tgoj',
-    name='TGOJ Yo8',
+    name='њTGOJ Yo8',
     liveries=make_psd_cc_liveries(
         'pp/1946_SE_Yo1s.psd',
         shading='Yo1s',

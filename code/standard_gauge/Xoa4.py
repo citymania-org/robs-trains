@@ -19,7 +19,7 @@ COMMON_XOA4_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=75,
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_XOA4_PROPS = dict(
 s_e_Xoa4_1_sj = Train(
     **COMMON_XOA4_PROPS,
     id='s_e_Xoa4_1_sj',
-    name='SJ Xoa4',
+    name='њSJ Xoa4',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa4.psd',
         shading='Xoa4',
@@ -49,7 +49,7 @@ s_e_Xoa4_1_sj = Train(
 s_e_Xoa4_2_sj = Train(
     **COMMON_XOA4_PROPS,
     id='s_e_Xoa4_2_sj',
-    name='SJ Xoa4',
+    name='њSJ Xoa4',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa4.psd',
         shading='Xoa4',
@@ -90,7 +90,7 @@ COMMON_COX4_PROPS = dict(
 s_e_Cox4_1_sj = Train(
     **COMMON_COX4_PROPS,
     id='s_e_Cox4_1_sj',
-    name='SJ Cox4',
+    name='њSJ Cox4',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Cox4.psd',
         shading='Cox4',
@@ -111,7 +111,7 @@ s_e_Cox4_1_sj = Train(
 s_e_Cox4_2_sj = Train(
     **COMMON_COX4_PROPS,
     id='s_e_Cox4_2_sj',
-    name='SJ Cox4',
+    name='њSJ Cox4',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Cox4.psd',
         shading='Cox4',

@@ -27,7 +27,7 @@ COMMON_ea_PROPS = dict(
 d_e_ea_1_dsb = Train(
     **COMMON_ea_PROPS,
     id='d_e_ea_1_dsb',
-    name='DSB EA',
+    name='њDSB EA',
     liveries=make_psd_cc_liveries(
         'pp/ea.psd',
         shading=('ea',),
@@ -48,7 +48,7 @@ d_e_ea_1_dsb = Train(
 d_e_ea_2_dsb = Train(
     **COMMON_ea_PROPS,
     id='d_e_ea_2_dsb',
-    name='DSB EA',
+    name='њDSB EA',
     liveries=make_psd_cc_liveries(
         'pp/ea.psd',
         shading=('ea',),
@@ -68,7 +68,7 @@ d_e_ea_2_dsb = Train(
 d_e_ea_3_dsb = Train(
     **COMMON_ea_PROPS,
     id='d_e_ea_3_dsb',
-    name='DSB EA',
+    name='њDSB EA',
     liveries=make_psd_cc_liveries(
         'pp/ea.psd',
         shading=('ea',),
@@ -88,7 +88,7 @@ d_e_ea_3_dsb = Train(
 d_e_ea_4_bulmarket = Train(
     **COMMON_ea_PROPS,
     id='d_e_ea_4_bulmarket',
-    name='Bulmarket EA',
+    name='њBulmarket EA',
     liveries=make_psd_cc_liveries(
         'pp/ea.psd',
         shading=('ea',),
@@ -109,7 +109,7 @@ d_e_ea_4_bulmarket = Train(
 d_e_ea_5_db = Train(
     **COMMON_ea_PROPS,
     id='d_e_ea_5_db',
-    name='DB Schenker Bulgaria EA',
+    name='њDB Schenker Bulgaria EA',
     liveries=make_psd_cc_liveries(
         'pp/ea.psd',
         shading=('ea',),

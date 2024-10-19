@@ -19,7 +19,7 @@ COMMON_C1_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=152,
-    loading_speed=5,
+    loading_speed=20,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -28,7 +28,7 @@ COMMON_C1_PROPS = dict(
 s_e_C1_1_ss = Train(
     **COMMON_C1_PROPS,
     id='s_e_C1_1',
-    name='SS/SL C1',
+    name='њSS/SL C1',
     liveries=make_psd_cc_liveries(
         'pp/1949_SE_C1.psd',
         shading='C1',
