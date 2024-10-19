@@ -6,7 +6,7 @@ from common import Train, Livery, p_gauge, p_gauge_dc
 
 s_p_UBp_ii_1 = Train(
     id='s_p_UBp_ii_1',
-    name='SL UBp II',
+    name='?SL UBp II',
     length=9,
     liveries={
         'SL': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
@@ -64,7 +64,7 @@ COMMON_X10p_PROPS = dict(
 s_e_X10p_1_sl = Train(
     **COMMON_X10p_PROPS, 
     id='s_e_X10p_1_sl,',
-    name='SL X10p',
+    name='?SL X10p',
     liveries={
         'Default': Livery('xxxx_SE_X10p_X10p_1_xxxx.png'),
     },
@@ -93,7 +93,7 @@ s_e_X10p_1_sl = Train(
 s_e_X10p_2_sl = Train(
     **COMMON_X10p_PROPS, 
     id='s_e_X10p_2_sl,',
-    name='SL X10p mod 2011',
+    name='?SL X10p mod 2011',
     liveries={
         'Default': Livery('xxxx_SE_X10p_X10p_2_xxxx.png'),
         '2CC': Livery('xxxx_SE_X10p_X10p_2_xxxx.png', auto_cc=lib.CC_DEFAULT),

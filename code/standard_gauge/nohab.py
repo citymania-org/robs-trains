@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 hu_d_m61_1_mav = Train(
     id='hu_d_m61_1_mav',
-    name='MÁV M61',
+    name='?MÁV M61',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
@@ -42,7 +42,7 @@ hu_d_m61_1_mav = Train(
 
 hu_d_m61_2_mav = Train(
     id='hu_d_m61_2_mav',
-    name='MÁV M61',
+    name='?MÁV M61',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
@@ -79,7 +79,7 @@ hu_d_m61_2_mav = Train(
 
 hu_d_m61_3_mav = Train(
     id='hu_d_m61_3_mav',
-    name='MÁV M61',
+    name='?MÁV M61',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
@@ -115,7 +115,7 @@ hu_d_m61_3_mav = Train(
 
 hu_d_m61_4_mav = Train(
     id='hu_d_m61_4_mav',
-    name='MÁV M61',
+    name='?MÁV M61',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/my.psd',

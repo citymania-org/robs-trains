@@ -6,7 +6,7 @@ from common import Train, Livery, p_gauge, modern_diesel_sound
 
 s_p_Co_1 = Train(
     id='s_p_Co_1',
-    name='SRJ Co "Grindvagn"',
+    name='?SRJ Co "Grindvagn"',
     length=8,
     liveries={
         'Default': Livery('1914_SE_Co_68-71_1_1914.png'),
@@ -38,7 +38,7 @@ s_p_Co_1 = Train(
 
 s_d_Tp_1_sj = Train( 
     id='s_d_Tp_1_sj',
-    name='SJ Tp',
+    name='?SJ Tp',
     length=5,
     liveries={
         'Default': Livery('SE_Tp_1.png'),

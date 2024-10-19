@@ -28,7 +28,7 @@ COMMON_Yo_PROPS = dict(
 s_d_Yo_1_sj = Train(
     **COMMON_Yo_PROPS,
     id='s_d_Yo_1_sj',
-    name='SJ Yo',
+    name='?SJ Yo',
     liveries=make_psd_cc_liveries(
         'pp/1938_SE_Yo.psd',
         shading='Yo',
@@ -48,7 +48,7 @@ s_d_Yo_1_sj = Train(
 s_d_Yo_2_hnj = Train(
     **COMMON_Yo_PROPS,
     id='s_d_Yo_2_hnj',
-    name='HNJ Ydo',
+    name='?HNJ Ydo',
     liveries=make_psd_cc_liveries(
         'pp/1938_SE_Yo.psd',
         shading='Yo',
