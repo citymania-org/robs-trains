@@ -19,7 +19,7 @@ COMMON_type69_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=158,
-    loading_speed=5,
+    loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='norway',
@@ -28,7 +28,7 @@ COMMON_type69_PROPS = dict(
 n_o_BM69A_1_nsb = Train(
     **COMMON_type69_PROPS,
     id='n_o_BM69A_1_nsb',
-    name='?NSB Type 69A',
+    name='њNSB Type 69A',
     liveries=make_psd_cc_liveries(
         'pp/1970_NO_BM69A.psd',
         shading='BM69A',
@@ -56,14 +56,14 @@ n_o_BM69A_1_nsb = Train(
         cc2_replace=colours['YELLOW'],
     ),
     cargo_capacity=158,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 n_o_BM69A_2_nsb = Train(
     **COMMON_type69_PROPS,
     id='n_o_BM69A_2_nsb',
-    name='?NSB Type 69A',
+    name='њNSB Type 69A',
     liveries=make_psd_cc_liveries(
         'pp/1970_NO_BM69A.psd',
         shading='BM69A',
@@ -91,14 +91,14 @@ n_o_BM69A_2_nsb = Train(
         cc2_replace=colours['GREY10'],
     ),
     cargo_capacity=158,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 n_o_BM69A_3_nsb = Train(
     **COMMON_type69_PROPS,
     id='n_o_BM69A_3_nsb',
-    name='?NSB Type 69A',
+    name='њNSB Type 69A',
     liveries=make_psd_cc_liveries(
         'pp/1970_NO_BM69A.psd',
         shading='BM69A',
@@ -126,6 +126,6 @@ n_o_BM69A_3_nsb = Train(
         cc2_replace=colours['GREY5'],
     ),
     cargo_capacity=158,
-    loading_speed=5,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

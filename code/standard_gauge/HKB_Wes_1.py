@@ -19,7 +19,7 @@ COMMON_HKBw_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=164,
-    loading_speed=5,
+    loading_speed=20,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='norway',
@@ -28,7 +28,7 @@ COMMON_HKBw_PROPS = dict(
 n_o_Wes_1_hkb = Train(
     **COMMON_HKBw_PROPS,
     id='n_o_Wes_1_hkb',
-    name='?HKB "Trunke"',
+    name='њHKB "Trunke"',
     liveries=make_psd_cc_liveries(
         'pp/1910_NO_Wes_1.psd',
         shading='Trunken',

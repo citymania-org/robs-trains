@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 be_d_201_1_nmbs = Train(
     id='be_d_201_1_nmbs',
-    name='?NMBS 201',
+    name='њNMBS HLD 201/HLD 59',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/w_201.psd',
@@ -36,14 +36,13 @@ be_d_201_1_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Reclassed to NMBS 59 after 1971',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 be_d_201_2_nmbs = Train(
     id='be_d_201_2_nmbs',
-    name='?NMBS 201',
+    name='њNMBS HLD 201/HLD 59',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/w_201.psd',
@@ -73,14 +72,13 @@ be_d_201_2_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Reclassed to NMBS 59 after 1971',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 be_d_201_3_nmbs = Train(
     id='be_d_201_3_nmbs',
-    name='?NMBS 201',
+    name='њNMBS HLD 201/HLD 59',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/w_201.psd',
@@ -110,14 +108,13 @@ be_d_201_3_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Reclassed to NMBS 59 after 1971',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 be_d_201_4_nmbs = Train(
     id='be_d_201_4_nmbs',
-    name='?NMBS 201',
+    name='њNMBS HLD 201/HLD 59',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/w_201.psd',
@@ -147,7 +144,6 @@ be_d_201_4_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Reclassed to NMBS 59 after 1971',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )

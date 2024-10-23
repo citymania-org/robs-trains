@@ -64,7 +64,7 @@ COMMON_my_ii_PROPS = dict(
 d_d_my_ii_1_dsb = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_1_dsb',
-    name='?DSB MY II',
+    name='DSB MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -85,7 +85,7 @@ d_d_my_ii_1_dsb = Train(
 d_d_my_ii_2_dsb = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_2_dsb',
-    name='?DSB MY II',
+    name='DSB MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -105,7 +105,7 @@ d_d_my_ii_2_dsb = Train(
 d_d_my_ii_3_ttt = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_3_ttt',
-    name='?TTT TMY II',
+    name='TTT TMY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -126,7 +126,7 @@ d_d_my_ii_3_ttt = Train(
 d_d_my_ii_4_lt = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_4_lt',
-    name='?LT MY II',
+    name='LT MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -147,7 +147,7 @@ d_d_my_ii_4_lt = Train(
 d_d_my_ii_5_contec = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_5_contec',
-    name='?Contec MY II',
+    name='Contec MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -168,7 +168,7 @@ d_d_my_ii_5_contec = Train(
 d_d_my_ii_6_mjbad = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_6_mjbad',
-    name='?MjbaD MY II "Victoria"',
+    name='MjbaD MY II "Victoria"',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -189,7 +189,7 @@ d_d_my_ii_6_mjbad = Train(
 d_d_my_ii_7_dsb = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_7_dsb',
-    name='?DSB MY II Service Locomotive "Den Flyvende Hollænder"',
+    name='DSB MY II Service Locomotive "Den Flyvende Hollænder"',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -210,7 +210,7 @@ d_d_my_ii_7_dsb = Train(
 d_d_my_ii_8_taagab = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_8_taagab',
-    name='?TÅGAB TMY II',
+    name='TÅGAB TMY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -231,7 +231,7 @@ d_d_my_ii_8_taagab = Train(
 d_d_my_ii_9_taagab = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_9_taagab',
-    name='?TÅGAB TMY II',
+    name='TÅGAB TMY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -252,7 +252,7 @@ d_d_my_ii_9_taagab = Train(
 d_d_my_ii_10_dsb = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_10_dsb',
-    name='?DSB MY II',
+    name='DSB MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -273,7 +273,7 @@ d_d_my_ii_10_dsb = Train(
 d_d_my_ii_11_dsb = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_11_dsb',
-    name='?DSB MY II Service Locomotive "Carina"',
+    name='DSB MY II Service Locomotive "Carina"',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -294,7 +294,7 @@ d_d_my_ii_11_dsb = Train(
 d_d_my_ii_12_njj = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_12_njj',
-    name='?NJJ MY II',
+    name='NJJ MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -315,7 +315,7 @@ d_d_my_ii_12_njj = Train(
 d_d_my_ii_13_cflcd = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_13_cflcd',
-    name='?CFLCD MY II',
+    name='CFLCD MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
@@ -336,7 +336,7 @@ d_d_my_ii_13_cflcd = Train(
 d_d_my_ii_14_vik = Train(
     **COMMON_my_ii_PROPS,
     id='d_d_my_ii_14_vik',
-    name='?VIK MY II',
+    name='VIK MY II',
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
