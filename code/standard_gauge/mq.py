@@ -4,6 +4,76 @@ from datetime import date
 
 from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
+d_d_ml_1_dsb = Train(
+    id='d_d_ml_1_dsb',
+    name='?DSB ML',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/w_ml.psd',
+        shading=('ml',),
+        paint=('dsb1',),
+        overlay=('light'),
+        cc_replace=colours["BROWN"],
+        cc2_replace=colours["BROWN"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(75),
+    power=240,
+    introduction_date=date(1929, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=44,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=70,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+    }),
+)
+
+d_d_ml_2_dsb = Train(
+    id='d_d_ml_2_dsb',
+    name='?DSB ML',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/w_ml.psd',
+        shading=('ml',),
+        paint=('dsb1',),
+        overlay=('light'),
+        cc_replace=colours["BROWN"],
+        cc2_replace=colours["BROWN"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(75),
+    power=300,
+    introduction_date=date(1943, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=44,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=70,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+    }),
+)
+
 d_d_mq_1_dsb = Train(
     id='d_d_mq_1_dsb',
     name='DSB MQ',

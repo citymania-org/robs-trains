@@ -113,203 +113,7 @@ from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3
 
 # electric 15
 
-'''
-rc1 = Train(
-    id='rc1',
-    name='?Rc1',
-    shorten_by=2,
-    liveries=make_liveries(6, {
-        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue & Red': '1967_SE_Rc1_2_1990.png',
-    }),
-    country='sweden',
-    company='na',
-    power_type='15kv',
-    purchase_sprite_towed_id='rc1',
-    engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_15kv,
-    max_speed=Train.kmhish(104),
-    power=9999,
-    introduction_date=date(1967, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Leyland',
-    }),
-)
-
-rc2 = Train(
-    id='rc2',
-    name='?Rc2',
-    shorten_by=2,
-    liveries=make_liveries(6, {
-        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue & Red Old': '1967_SE_Rc1_2_1990.png',
-        'Blue & Red New': '1969_SE_Rc2_3_1990.png',
-        'Black': '1969_SE_Rc2_4_2006.png',
-    }),
-    country='sweden',
-    company='na',
-    power_type='15kv',
-    purchase_sprite_towed_id='rc2',
-    engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_15kv,
-    max_speed=Train.kmhish(104),
-    power=9999,
-    introduction_date=date(1969, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Leyland',
-    }),
-)
-
-rc3 = Train(
-    id='rc3',
-    name='?Rc3',
-    shorten_by=2,
-    liveries=make_liveries(6, {
-        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue & Red': '1969_SE_Rc2_3_1990.png',
-        'Black': '1969_SE_Rc2_4_2006.png',
-    }),
-    country='sweden',
-    company='na',
-    power_type='15kv',
-    purchase_sprite_towed_id='rc3',
-    engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_15kv,
-    max_speed=Train.kmhish(104),
-    power=9999,
-    introduction_date=date(1970, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Leyland',
-    }),
-)
-
-rc4 = Train(
-    id='rc4',
-    name='?Rc4',
-    shorten_by=2,
-    liveries=make_liveries(6, {
-        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue & Red': '1969_SE_Rc2_3_1990.png',
-    }),
-    country='sweden',
-    company='na',
-    power_type='15kv',
-    purchase_sprite_towed_id='rc4',
-    engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_15kv,
-    max_speed=Train.kmhish(104),
-    power=9999,
-    introduction_date=date(1975, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Leyland',
-    }),
-)
-
-rc5 = Train(
-    id='rc5',
-    name='?Rc5',
-    shorten_by=2,
-    liveries=make_liveries(6, {
-        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue & Red': '1969_SE_Rc2_3_1990.png',
-    }),
-    country='sweden',
-    company='na',
-    power_type='15kv',
-    purchase_sprite_towed_id='rc5',
-    engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_15kv,
-    max_speed=Train.kmhish(104),
-    power=9999,
-    introduction_date=date(1982, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Leyland',
-    }),
-)
-
-rc6 = Train(
-    id='rc6',
-    name='?Rc6',
-    shorten_by=2,
-    liveries=make_liveries(6, {
-        'Orange & Turquoise': '1967_SE_Rc1_1_1967.png',
-        'Blue & Red': '1969_SE_Rc2_3_1990.png',
-        'Dark Blue': '1984_SE_Rc6_1_2005.png',
-        'Black': '1969_SE_Rc2_4_2006.png',
-    }),
-    country='sweden',
-    company='na',
-    power_type='15kv',
-    purchase_sprite_towed_id='rc6',
-    engine_class=Train.EngineClass.ELECTRIC,
-    sound_effects=modern_diesel_sound,
-    track_type=standard_gauge_15kv,
-    max_speed=Train.kmhish(104),
-    power=9999,
-    introduction_date=date(1984, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=90,
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=90,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'A Cool train',
-    }),
-)'''
+from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj
 
 # electric 25
 
@@ -321,77 +125,7 @@ from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarke
 
 # dmu
 
-d_d_ml_1_dsb = Train(
-    id='d_d_ml_1_dsb',
-    name='?DSB ML',
-    length=10,
-    liveries=make_psd_cc_liveries(
-        'pp/w_ml.psd',
-        shading=('ml',),
-        paint=('dsb1',),
-        overlay=('light'),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
-    ),
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(75),
-    power=240,
-    introduction_date=date(1929, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=44,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=70,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
-    }),
-)
-
-d_d_ml_2_dsb = Train(
-    id='d_d_ml_2_dsb',
-    name='?DSB ML',
-    length=10,
-    liveries=make_psd_cc_liveries(
-        'pp/w_ml.psd',
-        shading=('ml',),
-        paint=('dsb1',),
-        overlay=('light'),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
-    ),
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(75),
-    power=300,
-    introduction_date=date(1945, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=44,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=70,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
-    }),
-)
-
-from code.standard_gauge.mq import d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
+from code.standard_gauge.mq import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
 
 from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
 
@@ -1019,22 +753,15 @@ lib.make_purchase_sprites(
     grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
     grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_7_skpl, d_d_me_ii_6_mav),
     # electric 15
-    #grf.VariantGroup(
-    #    'Rc',
-        #rc1,
-        #rc2,
-        #rc3,
-        #rc4,
-        #rc5,
-        #rc6,
-    #),
+    grf.VariantGroup('?Rc3/Rc6', s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj),
+    grf.VariantGroup('?Rm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
+    s_e_rc7_1_sj,
     # electric 25
     grf.VariantGroup('?EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
     # electric dc
     # electric 3rd
     # dmu
-    d_d_ml_1_dsb,
-    d_d_ml_2_dsb,
+    grf.VariantGroup('?ML', d_d_ml_1_dsb, d_d_ml_2_dsb),
     d_d_mq_1_dsb,
     d_d_mp_1_dsb,
     grf.VariantGroup('MO', d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb),
