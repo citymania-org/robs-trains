@@ -26,7 +26,7 @@ COMMON_rc_PROPS = dict(
 s_e_rc1245_1_sj = Train(
     id='s_e_rc1245_1_sj',
     **COMMON_rc_PROPS,
-    name='љњSJ Rc1/2/4/5',
+    name='њSJ Rc1/2/4/5',
     liveries=make_psd_cc_liveries(
         'pp/7Template.psd',
         shading=('1',),
@@ -46,7 +46,7 @@ s_e_rc1245_1_sj = Train(
 s_e_rc1245_2_sj = Train(
     id='s_e_rc1245_2_sj',
     **COMMON_rc_PROPS,
-    name='љњSJ Rc1/2/4/5',
+    name='њSJ Rc1/2/4/5',
     liveries=make_psd_cc_liveries(
         'pp/7Template.psd',
         shading=('1',),
@@ -66,7 +66,7 @@ s_e_rc1245_2_sj = Train(
 s_e_rc1245_3_sj = Train(
     id='s_e_rc1245_3_sj',
     **COMMON_rc_PROPS,
-    name='љњSJ Rc1/2', #this is the rc one
+    name='њSJ Rc1/2', #this is the rc one
     liveries=make_psd_cc_liveries(
         'pp/7Template.psd',
         shading=('1',),
@@ -86,7 +86,7 @@ s_e_rc1245_3_sj = Train(
 s_e_rc1245_4_sj = Train(
     id='s_e_rc1245_4_sj',
     **COMMON_rc_PROPS,
-    name='љњGC Rc2/4',
+    name='њGC Rc2/4',
     liveries=make_psd_cc_liveries(
         'pp/7Template.psd',
         shading=('1',),
@@ -106,7 +106,7 @@ s_e_rc1245_4_sj = Train(
 s_e_rc1245_5_sj = Train(
     id='s_e_rc1245_5_sj',
     **COMMON_rc_PROPS,
-    name='љњTÅGAB Rc2',
+    name='њTÅGAB Rc2',
     liveries=make_psd_cc_liveries(
         'pp/7Template.psd',
         shading=('1',),
@@ -126,7 +126,7 @@ s_e_rc1245_5_sj = Train(
 s_e_rc1245_6_sj = Train(
     id='s_e_rc1245_6_sj',
     **COMMON_rc_PROPS,
-    name='љњSJ Rc5',
+    name='њSJ Rc5',
     liveries=make_psd_cc_liveries(
         'pp/7Template.psd',
         shading=('1',),
