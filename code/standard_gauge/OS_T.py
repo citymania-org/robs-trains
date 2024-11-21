@@ -7,7 +7,7 @@ from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge_d
 COMMON_T_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='3rd',
+    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_dc,
     max_speed=Train.kmhish(60),
