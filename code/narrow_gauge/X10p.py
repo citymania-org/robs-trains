@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, Livery, p_gauge, p_gauge_dc
+from common import Train, Livery, extra_narrow_gauge, extra_narrow_gauge_1500v
 
 s_p_UBp_ii_1 = Train(
     id='s_p_UBp_ii_1',
@@ -12,7 +12,7 @@ s_p_UBp_ii_1 = Train(
         'SL': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
     },
     engine_class=Train.EngineClass.ELECTRIC,
-    track_type=p_gauge,
+    track_type=extra_narrow_gauge,
     country='sweden',
     company='na',
     power_type='na',
@@ -41,7 +41,7 @@ COMMON_X10p_PROPS = dict(
     company='na',
     power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC, 
-    track_type=p_gauge_dc,
+    track_type=extra_narrow_gauge_1500v,
     max_speed=Train.kmhish(80),
     power=536,
     vehicle_life=8,

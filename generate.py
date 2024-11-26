@@ -5,7 +5,7 @@ import grf
 
 import lib
 
-from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_dc, standard_gauge_multi, metro, p_gauge, make_psd_cc_liveries, colours
+from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours
 
 
 PURCHASE_ICONS_DIR = 'purchase list'
@@ -161,7 +161,15 @@ from code.standard_gauge.øt import d_e_et_1_dsb, d_e_et_2_dsb
 
 from code.standard_gauge.HKB_Wes_1 import n_o_Wes_1_hkb
 
+from code.standard_gauge.stog1 import d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb
+
 from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
+
+from code.standard_gauge.stog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb
+
+from code.standard_gauge.stog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
+
+from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb
 
 # emu 3rd
 
@@ -490,7 +498,7 @@ POWER_TYPE_SPRITES = {
     'dual': purchase_icon('pelectricdv.png'),
     'metro': purchase_icon('pelectric3.png'),
     'steam': purchase_icon('psteam.png'),
-    'multi': purchase_icon('pelectricdv.png'),  # replece these sprites
+    'multi': purchase_icon('pelectricdv.png'), # replece these sprites
     'dc': purchase_icon('pelectricdc1500.png'),
     'dc3000': purchase_icon('pelectricdc3000.png'),
     '15kv': purchase_icon('pelectric15.png'),
@@ -583,7 +591,11 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њET (Øresundstog)', d_e_et_1_dsb, d_e_et_2_dsb),
     # emu dc
     n_o_Wes_1_hkb,
+    grf.VariantGroup('њS-Tog 1', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
     grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
+    grf.VariantGroup('њS-Tog 2', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
+    grf.VariantGroup('њS-Tog 3', d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb),
+    grf.VariantGroup('њS-Tog 4', d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
     # emu 3rd
     s_e_C1_1_ss,
     s_e_C4_1_ss,

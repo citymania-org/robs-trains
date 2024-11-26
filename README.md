@@ -1,6 +1,11 @@
 # robs_trains
 Rob’s Trains
 
+# Notes 
+
+Њ means there’s bad graphics or i need to review them <br>
+Љ means bad code
+
 # Dependencies
 
 [grf-py](https://github.com/citymania-org/grf-py) <br>
