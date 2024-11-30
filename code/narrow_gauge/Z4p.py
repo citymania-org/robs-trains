@@ -2,14 +2,14 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, Livery, p_gauge, colours, make_psd_cc_liveries
+from common import Train, Livery, extra_narrow_gauge, colours, make_psd_cc_liveries
 
 COMMON_Z4p_PROPS = dict(
     length=3,
     misc_flags=Train.Flags.USE_2CC,
     power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
-    track_type=p_gauge, 
+    track_type=extra_narrow_gauge, 
     max_speed=Train.kmhish(40),
     power=160,
     vehicle_life=30,

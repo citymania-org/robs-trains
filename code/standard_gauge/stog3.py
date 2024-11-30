@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_dc
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v
 
 d_e_stog3_1_dsb = Train(
     id='d_e_stog3_1_dsb',
@@ -20,7 +20,7 @@ d_e_stog3_1_dsb = Train(
     company='na',
     power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_dc,
+    track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(120),
     power=2339,
     introduction_date=date(1979, 1, 1),
@@ -92,7 +92,7 @@ d_e_stog3_2_dsb = Train(
     company='na',
     power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_dc,
+    track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(120),
     power=2253,
     introduction_date=date(1979, 1, 1),
@@ -164,7 +164,7 @@ d_e_stog3_3_dsb = Train(
     company='na',
     power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_dc,
+    track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(100),
     power=2253,
     introduction_date=date(1986, 1, 1),
@@ -236,7 +236,7 @@ d_e_stog3_4_dsb = Train(
     company='na',
     power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_dc,
+    track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(100),
     power=2253,
     introduction_date=date(1993, 1, 1), #bike symbols introduced

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, Livery, p_gauge, modern_diesel_sound
+from common import Train, Livery, extra_narrow_gauge, modern_diesel_sound
 
 s_p_Co_1 = Train(
     id='s_p_Co_1',
@@ -12,7 +12,7 @@ s_p_Co_1 = Train(
         'Default': Livery('1914_SE_Co_68-71_1_1914.png'),
     },
     engine_class=Train.EngineClass.STEAM,
-    track_type=p_gauge,
+    track_type=extra_narrow_gauge,
     country='sweden',
     company='na',
     power_type='na',
@@ -48,7 +48,7 @@ s_d_Tp_1_sj = Train(
     power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
-    track_type=p_gauge,
+    track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(80),
     power=778,
     introduction_date=date(1953, 1, 1),

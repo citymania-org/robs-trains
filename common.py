@@ -17,28 +17,49 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 # railtype table
 (
     standard_gauge,
-    standard_gauge_multi,  # border crossing trains
-    standard_gauge_dc,  # stog and saltsjöbanan
+    standard_gauge_1500v,  # Stog and Saltsjöbanan
+    standard_guage_3kv,
     standard_gauge_15kv,  # Sweden and Norway
     standard_gauge_25kv,  # Denmark
+    standard_gauge_25kv_15kv,  # border crossing trains
+    standard_gauge_3kv_1500v,
+    standard_gauge_25kv_3kv,
+    standard_gauge_25kv_1500v,
+    standard_gauge_15kv_3kv,
+    standard_gauge_15kv_1500v,
+    standard_gauge_25kv_15kv_3kv,
+    standard_gauge_25kv_15kv_1500v,
+    standard_gauge_25kv_3kv_1500v,
+    standard_gauge_15kv_3kv_1500v,
+    standard_gauge_all_voltages,
     metro,  # Metro
-    p_gauge,  # Swedish 3 foot gauge
-    p_gauge_dc,  # SRJ
-    p_gauge_15kv,  # NKlJ
+    extra_narrow_gauge,  # Swedish 3 foot gauge
+    extra_narrow_gauge_1500v,  # SRJ
+    extra_narrow_gauge_15kv,  # NKlJ
 ) = g.set_railtype_table([
     ('SAAN', 'RAIL'),  # Standard gauge track
-    ('SAA$', 'NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on dc most of the time)
-    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog  dc
+    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog dc
+    ('SAAD', 'SAAE', 'ELRL'),  # Standard gauge 3kv dc
     ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
     ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
+    ('SAA$', 'NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on all most of the time)
+    ('SAA=', 'SAAE', 'ELRL'),  # Standard gauge 1500v and 3kv dc (will show up on all most of the time)
+    ('SAA)', 'SAAE', 'ELRL'),  # Standard gauge 25kv and 3kv dc (will show up on all most of the time)
+    ('SAA(', 'SAAE', 'ELRL'),  # Standard gauge 25kv and 1500kv ac/dc (will show up on all most of the time)
+    ('SAA]', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 3kv ac/dc (will show up on all most of the time)
+    ('SAA[', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 1500v ac/dc (will show up on all most of the time)
+    ("SAA'", 'SAAE', 'ELRL'),  # Standard gauge 25kv, 15kv and 3kv ac/dc (will show up on all most of the time)
+    ('SAA^', 'SAAE', 'ELRL'),  # Standard gauge 25kv, 15kv and 1500v ac/dc (will show up on all most of the time)
+    ('SAA_', 'SAAE', 'ELRL'),  # Standard gauge 25kv, 3kv and 1500v ac/dc (will show up on all most of the time)
+    ('SAA,', 'SAAE', 'ELRL'),  # Standard gauge 15kv, 3kv adn 1500v ac/dc (will show up on all most of the time)
+    ('SAA*', 'SAAE', 'ELRL'),  # Standard gauge all voltages ac/dc
     ('MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
     ('nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
     ('nAAd', 'nAAD', 'nAAE', 'NAAd', 'NAAD', 'NAAE', 'ELNG'),  # Narrow gauge 1.5kv dc
     ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
 ])
 
-# we might need more narrow gauge types if we add norwegian or danish trains but it isn't super important and might not be neccesary
-
+# Add SAAZ? for Oslo metro won't be purfect (could work with sets)
 
 def tmpl_train(func):
     return [
