@@ -350,6 +350,52 @@ d_p_bv_1_dsb = Train(
 
 # cc
 
+d_p_crl_1_dsb = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_crl_1_dsb',
+    name='DSB CRL',
+    liveries=make_psd_cc_liveries(
+        'pp/dk30stock.psd',
+        shading=('cc',),
+        paint=('cc1',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1939, 1, 1),
+    weight=35,
+    cargo_capacity=72,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '3rd class',
+    }),
+)
+
+d_p_cb_1_dsb = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_cb_1_dsb',
+    name='DSB CB',
+    liveries=make_psd_cc_liveries(
+        'pp/dk30stock.psd',
+        shading=('cc',),
+        paint=('cc1',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1941, 1, 1),
+    weight=35,
+    cargo_capacity=72,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+    }),
+)
+
 d_p_cc_1_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_cc_1_dsb',
@@ -376,7 +422,7 @@ d_p_cc_1_dsb = Train(
 d_p_bg_1_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_bg_1_dsb',
-    name='DSB Bg',
+    name='DSB Cc',
     liveries=make_psd_cc_liveries(
         'pp/dk30stock.psd',
         shading=('bg',),
@@ -387,7 +433,7 @@ d_p_bg_1_dsb = Train(
     country='denmark',
     company='na',
     max_speed=Train.kmhish(140),
-    introduction_date=date(1970, 1, 1),
+    introduction_date=date(1968, 1, 1),
     weight=34,
     cargo_capacity=72,
     loading_speed=10,

@@ -353,3 +353,45 @@ d_d_my_ii_14_vik = Train(
         'Trivia': 'Two locomotives bought from CFLCD in 2023 #1146 & #1152',
     }),
 )
+
+d_d_my_ii_15_bk = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_15_bk',
+    name='BK TMY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('bk1',),
+        overlay=('light'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2000, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from BSM in 2000 #1111',
+    }),
+)
+
+d_d_my_ii_16_lj = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_16_lj',
+    name='LJ MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('lj1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["DBLUE"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2002, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from DSB in 2002 #1153',
+    }),
+)

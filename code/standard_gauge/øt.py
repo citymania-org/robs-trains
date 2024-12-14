@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv
 
 COMMON_et_PROPS = dict(
     length=11,
@@ -11,7 +11,7 @@ COMMON_et_PROPS = dict(
     company='na',
     power_type='25kv',
     engine_class=Train.EngineClass.ELECTRIC,
-    track_type=standard_gauge_25kv,
+    track_type=standard_gauge_25kv_15kv,
     max_speed=Train.kmhish(180),
     power=2843,
     vehicle_life=30,

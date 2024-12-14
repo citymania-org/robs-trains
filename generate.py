@@ -101,9 +101,9 @@ from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201
 
 from code.standard_gauge.nohab import hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav
 
-from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik
+from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik
         
-from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik
+from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik
 
 # toaster
 
@@ -181,7 +181,9 @@ from code.standard_gauge.C5 import s_e_C5_1_ss
 
 # carriages
 
-from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj
+from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj
+
+from code.standard_gauge.albl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb
 
 from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf
 
@@ -554,9 +556,9 @@ lib.make_purchase_sprites(
     d_d_mx_i_1_dsb,
     grf.VariantGroup('њHLD 201/HLD 59', be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
     d_d_mye_ii_1_dsb,
-    grf.VariantGroup('MX II', d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik),
+    grf.VariantGroup('MX II', d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik),
     grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),
-    grf.VariantGroup('MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),
+    grf.VariantGroup('MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),
     grf.VariantGroup('MZ I/II', d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab),
     grf.VariantGroup('MZ III', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb),
     grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
@@ -609,7 +611,8 @@ lib.make_purchase_sprites(
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
     grf.VariantGroup('Danish 30s stock 1st class', d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb),
     grf.VariantGroup('Danish 30s stock 1st & 2nd class', d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb),
-    grf.VariantGroup('Danish 30s stock 2nd class', d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj),
+    grf.VariantGroup('Danish 30s stock 2nd class', d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj),
+    grf.VariantGroup('AL/BL', d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb),
     grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf),
     grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf),
     grf.VariantGroup('UIC-Y 2nd class', d_p_b_1_dsb, d_p_b_i_1_dsb, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf),
