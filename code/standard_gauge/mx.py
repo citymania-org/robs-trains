@@ -253,3 +253,24 @@ d_d_mx_ii_11_vik = Train(
         'Trivia': 'One locomotive bought from CFLCD in 2023 #1029'
     }),
 )
+
+d_d_mx_ii_12_bk = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_12_bk',
+    name='BK TMX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('bk1',),
+        overlay=('light'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2000, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from BSM in 2000 #1024 & #1042'
+    }),
+)
