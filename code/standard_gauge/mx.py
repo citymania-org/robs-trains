@@ -274,3 +274,24 @@ d_d_mx_ii_12_bk = Train(
         'Trivia': 'Two locomotives bought from BSM in 2000 #1024 & #1042'
     }),
 )
+
+d_d_mx_ii_13_lj = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_13_lj',
+    name='LJ MX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('lj1',),
+        overlay=('light'),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1990, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from DSB in 1988 #1031 & #1033'
+    }),
+)
