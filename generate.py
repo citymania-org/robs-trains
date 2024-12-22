@@ -547,7 +547,7 @@ lib.make_purchase_sprites(
 
 # chronological order within the categories
 # standard gauge -> narrow gauge
-(g.add(grf.SetPurchaseOrder(
+(g.add(lib.SetPurchaseOrder(
     # steam
     s_s_N_ii_1_sj,
     s_s_Sa_sj,

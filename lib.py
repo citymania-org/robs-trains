@@ -1111,3 +1111,18 @@ class PSDLivery:
 
     def get_sprites(self):
         return self.template(self._get_sprite_func())
+    
+class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top level contain the lowest level one this is not suported by grf-py nativly.
+
+    def set_variant_callbacks(self, g):
+        for _, (x, names) in self._variant_callbacks.items():
+            c = x.callbacks.name = grf.Switch(
+                code='extra_callback_info1',
+                ranges = {
+                    0x20 | (level << 8): g.strings.add(name + " - {SILVER}" + x.name).get_global_id()
+                    for level, name in names.items()
+                },
+                default=0x400,
+            )
+        self._variant_callbacks_set = True
+        return self
