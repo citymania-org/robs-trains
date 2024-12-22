@@ -392,6 +392,8 @@ from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_
 
 from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
 
+from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
+
 '''
 
 x15p = Train(
@@ -625,6 +627,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
     grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
+    grf.VariantGroup('NKlJ AEG', s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj),
     s_p_Co_1,
     s_p_UBp_ii_1,
 ).set_variant_callbacks(g)))
