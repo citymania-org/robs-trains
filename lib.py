@@ -274,6 +274,8 @@ class Train(grf.Train):
     def add_articulated_part(self, liveries=None, **props):
         if liveries is not None:
             liveries = _make_liveries(liveries, True)
+        if self._props.get('misc_flags') != None and props['misc_flags'] == None: # we don't want to add this is the main definition so that it is consistent for length > 8 and < 8
+            props['misc_flags']=self._props.get('misc_flags')
         return super().add_articulated_part(
             liveries=liveries,
             default_cargo_type=grf.DEFAULT_CARGO_FIRST_REFITTABLE,
