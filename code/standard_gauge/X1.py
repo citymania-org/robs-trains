@@ -19,7 +19,7 @@ COMMON_X1_A_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=148,
-    loading_speed=10,
+    loading_speed=30,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -57,7 +57,7 @@ s_e_X1_1_sj = Train(
         cc2_replace=colours['BLUE'],
     ),
     cargo_capacity=148,
-    loading_speed=10,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -93,7 +93,7 @@ s_e_X1_2_sl = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=148,
-    loading_speed=10,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -129,6 +129,6 @@ s_e_X1_3_sl = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=148,
-    loading_speed=10,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

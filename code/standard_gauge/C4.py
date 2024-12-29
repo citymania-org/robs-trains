@@ -15,11 +15,11 @@ COMMON_C4_PROPS = dict(
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
-    weight=23,
+    weight=46,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=156,
-    loading_speed=20,
+    loading_speed=40,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
@@ -57,7 +57,7 @@ s_e_C4_1_ss = Train(
         cc2_replace=colours['GREEN'],
     ),
     cargo_capacity=156,
-    loading_speed=20,
+    loading_speed=50,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -93,6 +93,6 @@ s_e_C4_2_sl = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=156,
-    loading_speed=20,
+    loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
