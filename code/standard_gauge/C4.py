@@ -57,7 +57,7 @@ s_e_C4_1_ss = Train(
         cc2_replace=colours['GREEN'],
     ),
     cargo_capacity=156,
-    loading_speed=50,
+    loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
