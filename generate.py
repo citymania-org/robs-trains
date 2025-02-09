@@ -572,7 +572,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њRm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
     s_e_rc7_1_sj,
     # electric 25
-    grf.VariantGroup('њEA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
+    grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
     # electric dc
     # electric 3rd
     # dmu
