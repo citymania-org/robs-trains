@@ -548,64 +548,53 @@ lib.make_purchase_sprites(
 # chronological order within the categories
 # standard gauge -> narrow gauge
 (g.add(lib.SetPurchaseOrder(
-    # steam
-    s_s_N_ii_1_sj,
-    s_s_Sa_sj,
-    # diesel
-    #grf.VariantGroup('љњFrichs 467-475 "Marcipanbrød"', d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4),
-    d_d_mx_i_1_dsb,
+    # start
+    # be
+    # be diesel
     grf.VariantGroup('њHLD 201/HLD 59', be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
-    d_d_mye_ii_1_dsb,
-    grf.VariantGroup('MX II', d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik),
-    grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),
-    grf.VariantGroup('MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),
-    grf.VariantGroup('MZ I/II', d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab),
-    grf.VariantGroup('MZ III', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb),
-    grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
-    grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_7_skpl, d_d_me_ii_6_mav),
-    # electric 15
+    # bg
+    # bg electric 25
+    grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
+    # de
+    # de electric 15
     de_e_dre93_1_dr,
     de_e_dre94_1_dr,
-    grf.VariantGroup('њRc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj),
     grf.VariantGroup('њ103', de_e_db103_1_db, de_e_db103_2_db, de_e_db103_3_db, de_e_db103_4_radve),
-    grf.VariantGroup('њRc3/6', s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj),
-    grf.VariantGroup('њRm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
-    s_e_rc7_1_sj,
-    # electric 25
-    grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb),
-    # electric dc
-    # electric 3rd
-    # dmu
+    # dk
+    # dk steam
+    # dk diesel
+    #grf.VariantGroup('љњFrichs 467-475 "Marcipanbrød"', d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4),
+    d_d_mx_i_1_dsb,
+    d_d_mye_ii_1_dsb,
+    grf.VariantGroup('MX II', d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik),
+    grf.VariantGroup('MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_7_dsb, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),
+    grf.VariantGroup('MZ I/II', d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb),
+    grf.VariantGroup('MZ III', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb),
+    grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
+    grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb),
+    # dk electric 15
+    # dk electric 25
+    grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_3_dsb),
+    # dk electric dc
+    # dk electric 3rd
+    # dk dmu
     grf.VariantGroup('њML', d_d_ml_1_dsb, d_d_ml_2_dsb),
     d_d_mq_1_dsb,
     d_d_mp_1_dsb,
     grf.VariantGroup('MO', d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb),
-    grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
-    grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
-    grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
     grf.VariantGroup('њMR', d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb),
-    grf.VariantGroup('њMF (IC3)/Y2', d_d_mf_1_dsb, s_d_mf_5_sj, d_d_mf_2_dsb, s_d_mf_6_sj, d_d_mf_3_dsb, d_d_mf_4_dsb),
-    # emu 15
-    grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
-    grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
-    grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
-    grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
-    # emu 25
+    grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
+    # dk emu 15
+    # dk emu 25
     grf.VariantGroup('њER (IR4)', d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb),
     grf.VariantGroup('њET (Øresundstog)', d_e_et_1_dsb, d_e_et_2_dsb),
-    # emu dc
-    n_o_Wes_1_hkb,
+    # dk emu dc
     grf.VariantGroup('њS-Tog 1', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
-    grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
     grf.VariantGroup('њS-Tog 2', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
     grf.VariantGroup('њS-Tog 3', d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb),
     grf.VariantGroup('њS-Tog 4', d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
-    # emu 3rd
-    s_e_C1_1_ss,
-    s_e_C4_1_ss,
-    s_e_C4_2_sl,
-    s_e_C5_1_ss,
-    # carriages
+    # dk emu 3rd
+    # dk carriages
     ch_p_2pax_1_sbb,
     ch_p_4pax_1_sbb,
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
@@ -621,9 +610,51 @@ lib.make_purchase_sprites(
     grf.VariantGroup('An', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb),
     grf.VariantGroup('Bn', d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb),
     grf.VariantGroup('љњB II', d_p_b_ii_1_dsb, d_p_bk_iii_1_dsb, d_p_b_ii_2_dsb, d_p_bk_iii_2_dsb),
-    # wagons
+    # dk wagons
     ch_p_2bag_1_sbb,
     ch_p_4bag_1_sbb,
+    # hu
+    # hu diesel
+    grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),
+    d_d_me_ii_6_mav,
+    # no
+    # no emu 15
+    grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
+    # no emu dc
+    n_o_Wes_1_hkb,
+    grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
+    # pl
+    # pl diesel
+    d_d_me_ii_7_skpl,
+    # se
+    # se steam
+    s_s_N_ii_1_sj,
+    s_s_Sa_sj,
+    # se diesel
+    grf.VariantGroup('TMX II', d_d_mx_ii_12_bk, d_d_mx_ii_4_ttt),
+    grf.VariantGroup('TMY II', d_d_my_ii_8_taagab, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_3_ttt),
+    grf.VariantGroup('TMZ I/II', d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab),
+    d_d_me_ii_5_nrfab,
+    # se electric 15
+    grf.VariantGroup('њRc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj),
+    grf.VariantGroup('њRc3/6', s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj),
+    grf.VariantGroup('њRm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
+    s_e_rc7_1_sj,
+    # se dmu
+    grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
+    grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
+    grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
+    grf.VariantGroup('њY2', s_d_mf_5_sj, s_d_mf_6_sj),
+    # se emu 15
+    grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
+    grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
+    grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
+    # se emu 3rd
+    s_e_C1_1_ss,
+    s_e_C4_1_ss,
+    s_e_C4_2_sl,
+    s_e_C5_1_ss,
+    # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
     # narrow gauge
