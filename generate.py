@@ -588,8 +588,8 @@ lib.make_purchase_sprites(
     # emu 15
     grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj,),
     grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
-    grf.VariantGroup('њX1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
-    grf.VariantGroup('њBM69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
+    grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
+    grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
     # emu 25
     grf.VariantGroup('њER (IR4)', d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb),
     grf.VariantGroup('њET (Øresundstog)', d_e_et_1_dsb, d_e_et_2_dsb),

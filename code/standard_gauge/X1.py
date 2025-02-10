@@ -28,7 +28,7 @@ COMMON_X1_A_PROPS = dict(
 s_e_X1_1_sj = Train(
     **COMMON_X1_A_PROPS,
     id='s_e_X1_1_sj',
-    name='њSJ/SL X1',
+    name='SJ/SL X1',
     liveries=make_psd_cc_liveries(
         'pp/1968_SE_X1-A.psd',
         shading='X1',
@@ -64,7 +64,7 @@ s_e_X1_1_sj = Train(
 s_e_X1_2_sl = Train(
     **COMMON_X1_A_PROPS,
     id='s_e_X1_2_sl',
-    name='њSL X1',
+    name='SL X1',
     liveries=make_psd_cc_liveries(
         'pp/1968_SE_X1-A.psd',
         shading='X1 1988 rebuild',
@@ -100,7 +100,7 @@ s_e_X1_2_sl = Train(
 s_e_X1_3_sl = Train(
     **COMMON_X1_A_PROPS,
     id='s_e_X1_3_sl',
-    name='њSL X1',
+    name='SL X1',
     liveries=make_psd_cc_liveries(
         'pp/1968_SE_X1-A.psd',
         shading='X1 1988 rebuild',
