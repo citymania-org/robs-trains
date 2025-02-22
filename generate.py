@@ -137,7 +137,7 @@ from code.standard_gauge.Yo import s_d_Yo_1_sj, s_d_Yo_2_hnj
 
 from code.standard_gauge.Yo1s import s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj
 
-from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d_mr_4_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb
+from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d_mr_4_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_7_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb, dl_d_mr_1_dlj
 
 from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj
 
@@ -463,6 +463,7 @@ COUNTRY_SPRITES = {
     'czechrepublic': purchase_icon('fcz.png'),
     'germany': purchase_icon('fde.png'),
     'denmark': purchase_icon('fdk.png'),
+    'doggerland': purchase_icon('fdl.png'),
     'france': purchase_icon('ffr.png'),
     'hrvatska': purchase_icon('fhr.png'),
     'hungary': purchase_icon('fhu.png'),
@@ -582,7 +583,7 @@ lib.make_purchase_sprites(
     d_d_mq_1_dsb,
     d_d_mp_1_dsb,
     grf.VariantGroup('MO', d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb),
-    grf.VariantGroup('њMR', d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb),
+    grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
     # dk emu 15
     # dk emu 25
@@ -613,6 +614,9 @@ lib.make_purchase_sprites(
     # dk wagons
     ch_p_2bag_1_sbb,
     ch_p_4bag_1_sbb,
+    # dl
+    # dl dmu
+    dl_d_mr_1_dlj,
     # hu
     # hu diesel
     grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),

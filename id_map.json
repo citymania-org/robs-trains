@@ -1026,7 +1026,31 @@
             "d_p_bl_1_dsb": 1440,
             "__d_p_bl_2_dsb_aa_mid": 1441,
             "__d_p_bl_2_dsb_aa_tail": 1442,
-            "d_p_bl_2_dsb": 1443
+            "d_p_bl_2_dsb": 1443,
+            "__d_d_mr_7_dsb_aa_mid": 1444,
+            "__d_d_mr_7_dsb_aa_tail": 1445,
+            "d_d_mrd_7_dsb": 1446,
+            "__d_d_mrd_7_dsb_aa_mid": 1447,
+            "__d_d_mrd_7_dsb_aa_tail": 1448,
+            "d_d_mr_7_dsb": 1449,
+            "__d_d_mr_8_dsb_aa_mid": 1450,
+            "__d_d_mr_8_dsb_aa_tail": 1451,
+            "d_d_mrd_8_dsb": 1452,
+            "__d_d_mrd_8_dsb_aa_mid": 1453,
+            "__d_d_mrd_8_dsb_aa_tail": 1454,
+            "d_d_mr_8_dsb": 1455,
+            "__d_d_mr_9_dsb_aa_mid": 1456,
+            "__d_d_mr_9_dsb_aa_tail": 1457,
+            "d_d_mrd_9_dsb": 1458,
+            "__d_d_mrd_9_dsb_aa_mid": 1459,
+            "__d_d_mrd_9_dsb_aa_tail": 1460,
+            "d_d_mr_9_dsb": 1461,
+            "__dl_d_mr_1_dlj_aa_mid": 1462,
+            "__dl_d_mr_1_dlj_aa_tail": 1463,
+            "dl_d_mrd_1_dlj": 1464,
+            "__dl_d_mrd_1_dlj_aa_mid": 1465,
+            "__dl_d_mrd_1_dlj_aa_tail": 1466,
+            "dl_d_mr_1_dlj": 1467
         }
     }
 }

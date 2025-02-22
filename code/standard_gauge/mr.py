@@ -7,7 +7,6 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge
 COMMON_mr_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
     company='na',
     power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
@@ -28,14 +27,16 @@ COMMON_mr_PROPS = dict(
 d_d_mr_1_dsb = Train(
     id='d_d_mr_1_dsb',
     **COMMON_mr_PROPS,
-    name='њDSB MR',
+    name='DSB MR',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrdsb1',),
+        overlay=('mrlight'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
+    country='denmark',
     introduction_date=date(1978, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
@@ -45,9 +46,10 @@ d_d_mr_1_dsb = Train(
     id='d_d_mrd_1_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrddsb1',
+        overlay='mrdlight',
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
@@ -58,14 +60,16 @@ d_d_mr_1_dsb = Train(
 d_d_mr_2_dsb = Train(
     id='d_d_mr_2_dsb',
     **COMMON_mr_PROPS,
-    name='њDSB MR',
+    name='DSB MR',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrdsb2',),
+        overlay=('mrlight'),
         cc_replace=colours["GREY1"],
         cc2_replace=colours["RED"]
     ),
+    country='denmark',
     introduction_date=date(1994, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
@@ -75,9 +79,10 @@ d_d_mr_2_dsb = Train(
     id='d_d_mrd_2_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrddsb2',
+        overlay='mrdlight',
         cc_replace=colours['GREY1'],
         cc2_replace=colours['RED'],
     ),
@@ -88,14 +93,16 @@ d_d_mr_2_dsb = Train(
 d_d_mr_3_dsb = Train(
     id='d_d_mr_3_dsb',
     **COMMON_mr_PROPS,
-    name='њDSB MR',
+    name='DSB MR',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["GREY7"],
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrdsb3',),
+        overlay=('mrlight'),
+        cc_replace=colours["GREY3"],
         cc2_replace=colours["COLBALT"]
     ),
+    country='denmark',
     introduction_date=date(2004, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
@@ -105,10 +112,11 @@ d_d_mr_3_dsb = Train(
     id='d_d_mrd_3_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
-        cc_replace=colours['GREY7'],
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrddsb3',
+        overlay='mrdlight',
+        cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
     cargo_capacity=48,
@@ -118,14 +126,16 @@ d_d_mr_3_dsb = Train(
 d_d_mr_4_dsb = Train(
     id='d_d_mr_4_dsb',
     **COMMON_mr_PROPS,
-    name='њArriva MR',
+    name='Arriva MR',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["GREY1"],
-        cc2_replace=colours["TURQUOISE"]
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrarriva1',),
+        overlay=('mrlight'),
+        cc_replace=colours["TURQUOISE"],
+        cc2_replace=colours["RED"]
     ),
+    country='denmark',
     introduction_date=date(2003, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
@@ -135,11 +145,12 @@ d_d_mr_4_dsb = Train(
     id='d_d_mrd_4_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
-        cc_replace=colours['GREY1'],
-        cc2_replace=colours['TURQUOISE'],
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrdarriva1',
+        overlay='mrdlight',
+        cc_replace=colours['TURQUOISE'],
+        cc2_replace=colours['RED'],
     ),
     cargo_capacity=48,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -148,14 +159,16 @@ d_d_mr_4_dsb = Train(
 d_d_mr_5_dsb = Train(
     id='d_d_mr_5_dsb',
     **COMMON_mr_PROPS,
-    name='њArriva MR',
+    name='Arriva MR',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrarriva2',),
+        overlay=('mrlight'),
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["CREAM"]
     ),
+    country='denmark',
     introduction_date=date(2005, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
@@ -165,9 +178,10 @@ d_d_mr_5_dsb = Train(
     id='d_d_mrd_5_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrdarriva2',
+        overlay='mrdlight',
         cc_replace=colours['TURQUOISE'],
         cc2_replace=colours['CREAM'],
     ),
@@ -178,14 +192,16 @@ d_d_mr_5_dsb = Train(
 d_d_mr_6_dsb = Train(
     id='d_d_mr_6_dsb',
     **COMMON_mr_PROPS,
-    name='њDSB MR',
+    name='DSB MR',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["GREY7"],
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrdsb4',),
+        overlay=('mrlight'),
+        cc_replace=colours["GREY3"],
         cc2_replace=colours["COLBALT"]
     ),
+    country='denmark',
     introduction_date=date(2012, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
@@ -195,11 +211,144 @@ d_d_mr_6_dsb = Train(
     id='d_d_mrd_6_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
-        cc_replace=colours['GREY7'],
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrddsb4',
+        overlay='mrdlight',
+        cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
+    ),
+    cargo_capacity=48,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_mr_7_dsb = Train(
+    id='d_d_mr_7_dsb',
+    **COMMON_mr_PROPS,
+    name='DSB MR',
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrdsb5',),
+        overlay=('mrlight'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    introduction_date=date(1986, 1, 1),
+    cargo_capacity=56,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers with 1st class carriage',
+    }),
+).add_articulated_part(
+    id='d_d_mrd_7_dsb',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrddsb1',
+        overlay='mrdlight',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=48,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_mr_8_dsb = Train(
+    id='d_d_mr_8_dsb',
+    **COMMON_mr_PROPS,
+    name='CRSA MR',
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrcrsa1',),
+        overlay=('mrlight'),
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["COLBALT"]
+    ),
+    country='denmark',
+    introduction_date=date(2019, 1, 1),
+    cargo_capacity=64,
+    additional_text=grf.fake_vehicle_info({
+        'Trivia': '''Used to service & maintain Denmark's railways''',
+    }),
+).add_articulated_part(
+    id='d_d_mrd_8_dsb',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrdcrsa1',
+        overlay='mrdlight',
+        cc_replace=colours['COLBALT'],
+        cc2_replace=colours['COLBALT'],
+    ),
+    cargo_capacity=48,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_mr_9_dsb = Train(
+    id='d_d_mr_9_dsb',
+    **COMMON_mr_PROPS,
+    name='Scandia Ekspressen MR',
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrse1',),
+        overlay=('mrlight'),
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    introduction_date=date(2019, 1, 1),
+    cargo_capacity=64,
+    additional_text=grf.fake_vehicle_info({
+        'Trivia': 'A static restaurant train that can be found in Randers, Denmark',
+    }),
+).add_articulated_part(
+    id='d_d_mrd_9_dsb',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrdse1',
+        overlay='mrdlight',
+        cc_replace=colours['COLBALT'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=48,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+dl_d_mr_1_dlj = Train(
+    id='dl_d_mr_1_dlj',
+    **COMMON_mr_PROPS,
+    name='DLJ MR',
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading=('mr',),
+        paint=('mrdlj1',),
+        overlay=('mrlight'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["RED"]
+    ),
+    country='doggerland',
+    introduction_date=date(1986, 1, 1),
+    cargo_capacity=64,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+    }),
+).add_articulated_part(
+    id='dl_d_mrd_1_dlj',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/mr.psd',
+        shading='mrd',
+        paint='mrddlj1',
+        overlay='mrdlight',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['RED'],
     ),
     cargo_capacity=48,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
