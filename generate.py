@@ -556,6 +556,12 @@ lib.make_purchase_sprites(
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
+    # ch
+    # ch carriages
+    ch_p_2pax_1_sbb,
+    ch_p_4pax_1_sbb,
+    ch_p_2bag_1_sbb,
+    ch_p_4bag_1_sbb,
     # de
     # de electric 15
     de_e_dre93_1_dr,
@@ -596,27 +602,29 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њS-Tog 4', d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
     # dk emu 3rd
     # dk carriages
-    ch_p_2pax_1_sbb,
-    ch_p_4pax_1_sbb,
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
     grf.VariantGroup('Danish 30s stock 1st class', d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb),
     grf.VariantGroup('Danish 30s stock 1st & 2nd class', d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb),
     grf.VariantGroup('Danish 30s stock 2nd class', d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj),
     grf.VariantGroup('AL/BL', d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb),
-    grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf),
-    grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf),
-    grf.VariantGroup('UIC-Y 2nd class', d_p_b_1_dsb, d_p_b_i_1_dsb, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf),
+    grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb),
+    grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb),
+    grf.VariantGroup('UIC-Y 2nd class', d_p_b_1_dsb, d_p_b_i_1_dsb),
     grf.VariantGroup('UIC-Y dining & kiosk', d_p_bk_i_1_dsb, d_p_bk_i_2_dsb),
-    grf.VariantGroup('UIC-Y luggage', d_p_bd_1_dsb, d_p_bd_2_dsb, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf),
+    grf.VariantGroup('UIC-Y luggage', d_p_bd_1_dsb, d_p_bd_2_dsb),
     grf.VariantGroup('An', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb),
     grf.VariantGroup('Bn', d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb),
     grf.VariantGroup('љњB II', d_p_b_ii_1_dsb, d_p_bk_iii_1_dsb, d_p_b_ii_2_dsb, d_p_bk_iii_2_dsb),
     # dk wagons
-    ch_p_2bag_1_sbb,
-    ch_p_4bag_1_sbb,
     # dl
     # dl dmu
     dl_d_mr_1_dlj,
+    # fr
+    # fr carriages
+    grf.VariantGroup('UIC-Y 1st class', fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf),
+    grf.VariantGroup('UIC-Y 1st & 2nd class', fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf),
+    grf.VariantGroup('UIC-Y 2nd class', fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf),
+    grf.VariantGroup('UIC-Y luggage', fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf),
     # hu
     # hu diesel
     grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, hu_d_m61_4_mav),
