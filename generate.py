@@ -187,137 +187,7 @@ from code.standard_gauge.albl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d
 
 from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf
 
-d_p_b_ii_1_dsb = Train(
-    id='d_p_b_ii_1_dsb',
-    name='љњDSB B II',
-    length=12,
-    liveries={
-        'Default': Livery('2002_DK_B_II_1_2002.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('2002_DK_B_II_1_2002.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_B_II_1_2002.png', auto_cc=lib.CC_SWAPPED),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='na',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(160),
-    power=0,
-    introduction_date=date(2002, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=50,
-    tractive_effort_coefficient=79,
-    running_cost_factor=200,
-    cargo_capacity=110,
-    cost_factor=200,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=10,
-    additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
-    }),
-)
-
-d_p_b_ii_2_dsb = Train(
-    id='d_p_b_ii_2_dsb',
-    name='љњDSB B II',
-    length=12,
-    liveries={
-        'Default': Livery('2002_DK_B_II_2_2012.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('2002_DK_B_II_2_2012.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_B_II_2_2012.png', auto_cc=lib.CC_SWAPPED),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='na',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(160),
-    power=0,
-    introduction_date=date(2012, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=50,
-    tractive_effort_coefficient=79,
-    running_cost_factor=200,
-    cargo_capacity=110,
-    cost_factor=200,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=10,
-    additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
-    }),
-)
-
-d_p_bk_iii_1_dsb = Train(
-    id='d_p_bk_iii_1_dsb',
-    name='љњDSB Bk III',
-    length=12,
-    liveries={
-        'Default': Livery('2002_DK_Bk_III_1_2002.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('2002_DK_Bk_III_1_2002.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_Bk_III_1_2002.png', auto_cc=lib.CC_SWAPPED),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='na',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(160),
-    power=0,
-    introduction_date=date(2002, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=50,
-    tractive_effort_coefficient=79,
-    running_cost_factor=200,
-    cargo_capacity=102,
-    cost_factor=200,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=10,
-    additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
-    }),
-)
-
-d_p_bk_iii_2_dsb = Train(
-    id='d_p_bk_iii_2_dsb',
-    name='љњDSB Bk III',
-    length=12,
-    liveries={
-        'Default': Livery('2002_DK_Bk_III_2_2012.png', cc_replace=colours["COLBALT"], cc2_replace=colours["GREY1"]),
-        '2CC': Livery('2002_DK_Bk_III_2_2012.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('2002_DK_Bk_III_2_2012.png', auto_cc=lib.CC_SWAPPED),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='na',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(160),
-    power=0,
-    introduction_date=date(2012, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=50,
-    tractive_effort_coefficient=79,
-    running_cost_factor=200,
-    cargo_capacity=102,
-    cost_factor=200,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    loading_speed=10,
-    additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
-    }),
-)
+from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb
 
 # wagons
 
@@ -614,7 +484,8 @@ lib.make_purchase_sprites(
     grf.VariantGroup('UIC-Y luggage', d_p_bd_1_dsb, d_p_bd_2_dsb),
     grf.VariantGroup('An', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb),
     grf.VariantGroup('Bn', d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb),
-    grf.VariantGroup('љњB II', d_p_b_ii_1_dsb, d_p_bk_iii_1_dsb, d_p_b_ii_2_dsb, d_p_bk_iii_2_dsb),
+    grf.VariantGroup('B II', d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb),
+    grf.VariantGroup('Bk III', d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb),
     # dk wagons
     # dl
     # dl dmu
