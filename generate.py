@@ -316,10 +316,6 @@ x15p = Train(
 )
 '''
 
-# old sbb
-
-from code.standard_gauge.sbb import ch_p_2pax_1_sbb, ch_p_2bag_1_sbb, ch_p_4pax_1_sbb, ch_p_4bag_1_sbb
-
 # end
 
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
@@ -426,12 +422,6 @@ lib.make_purchase_sprites(
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
-    # ch
-    # ch carriages
-    ch_p_2pax_1_sbb,
-    ch_p_4pax_1_sbb,
-    ch_p_2bag_1_sbb,
-    ch_p_4bag_1_sbb,
     # de
     # de electric 15
     de_e_dre93_1_dr,
