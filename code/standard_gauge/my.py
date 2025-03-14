@@ -395,3 +395,66 @@ d_d_my_ii_16_lj = Train(
         'Trivia': 'One locomotive bought from DSB in 2002 #1153',
     }),
 )
+
+d_d_my_ii_17_bsbs = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_17_bsbs',
+    name='BSBS MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('bsbs1',),
+        overlay=('light'),
+        cc_replace=colours["GREY8"],
+        cc2_replace=colours["RED"]
+    ),
+    country='germany',
+    company='na',
+    introduction_date=date(2010, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from STRABAG in 2010 #1142',
+    }),
+)
+
+d_d_my_ii_18_et = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_18_et',
+    name='Euro-Track MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('et1',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='germany',
+    company='na',
+    introduction_date=date(1998, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Ten locomotives bought from DSB in 1998 & 1999',
+    }),
+)
+
+d_d_my_ii_19_er = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_19_er',
+    name='Eichholz Rail MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('er1',),
+        overlay=('light'),
+        cc_replace=colours["DBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='germany',
+    company='na',
+    introduction_date=date(2006, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from Euro-Track in 2003 #1147',
+    }),
+)
