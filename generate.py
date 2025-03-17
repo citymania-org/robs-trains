@@ -179,6 +179,8 @@ from code.standard_gauge.C4 import s_e_C4_1_ss, s_e_C4_2_sl
 
 from code.standard_gauge.C5 import s_e_C5_1_ss
 
+from code.standard_gauge.C6 import s_e_C6_1_sl, s_e_C6_2_sl
+
 # carriages
 
 from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj
