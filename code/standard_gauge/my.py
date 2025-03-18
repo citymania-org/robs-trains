@@ -458,3 +458,45 @@ d_d_my_ii_19_er = Train(
         'Trivia': 'One locomotive bought from Euro-Track in 2003 #1147',
     }),
 )
+
+d_d_my_ii_20_strabag = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_20_strabag',
+    name='STRABAG MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('strabag1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY3"]
+    ),
+    country='germany',
+    company='na',
+    introduction_date=date(2007, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from Eichholz in 2007 #1125',
+    }),
+)
+
+d_d_my_ii_21_mav = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_21_mav',
+    name='MÁV MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('mav4',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY3"]
+    ),
+    country='hungary',
+    company='na',
+    introduction_date=date(2012, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from STRABAG in 2012 #1125',
+    }),
+)
