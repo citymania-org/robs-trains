@@ -1071,7 +1071,13 @@
             "d_d_my_ii_20_strabag": 1485,
             "__d_d_my_ii_21_mav_aa_mid": 1486,
             "__d_d_my_ii_21_mav_aa_tail": 1487,
-            "d_d_my_ii_21_mav": 1488
+            "d_d_my_ii_21_mav": 1488,
+            "__d_d_my_ii_22_et_aa_mid": 1489,
+            "__d_d_my_ii_22_et_aa_tail": 1490,
+            "d_d_my_ii_22_et": 1491,
+            "__d_d_my_ii_23_strabag_aa_mid": 1492,
+            "__d_d_my_ii_23_strabag_aa_tail": 1493,
+            "d_d_my_ii_23_strabag": 1494
         }
     }
 }
