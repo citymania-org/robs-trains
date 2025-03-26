@@ -58,7 +58,7 @@ d_p_b_i_1_dsb = Train(
     company='na',
     introduction_date=date(1972, 1, 1),
     weight=37,
-    cargo_capacity=60,
+    cargo_capacity=80,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
     'Use': '2nd class',
@@ -80,7 +80,7 @@ d_p_bk_i_1_dsb = Train(
     company='na',
     introduction_date=date(1973, 1, 1),
     weight=40,
-    cargo_capacity=48,
+    cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Kiosk car, 2nd class',
@@ -278,7 +278,7 @@ d_p_bd_2_dsb = Train(
     company='na',
     introduction_date=date(1972, 1, 1),
     weight=37,
-    cargo_capacity=36,
+    cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
     'Use': 'Luggage carriage, 2nd class',

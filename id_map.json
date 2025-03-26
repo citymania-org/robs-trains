@@ -1095,7 +1095,13 @@
             "s_e_x1b_3_sj": 1509,
             "__s_e_x1b_3_sj_aa_mid": 1510,
             "__s_e_x1b_3_sj_aa_tail": 1511,
-            "s_e_x1a_3_sj": 1512
+            "s_e_x1a_3_sj": 1512,
+            "__d_d_mki_1_dsb_aa_mid": 1513,
+            "__d_d_mki_1_dsb_aa_tail": 1514,
+            "d_d_fk_1_dsb": 1515,
+            "__d_d_fk_1_dsb_aa_mid": 1516,
+            "__d_d_fk_1_dsb_aa_tail": 1517,
+            "d_d_mki_1_dsb": 1518
         }
     }
 }
