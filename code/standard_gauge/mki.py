@@ -40,7 +40,7 @@ d_d_mki_1_dsb = Train(
     introduction_date=date(1943, 1, 1),
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers & light freight',
     }),
 ).add_articulated_part(
     id='d_d_fk_1_dsb',
