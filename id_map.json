@@ -1101,7 +1101,13 @@
             "d_d_fk_1_dsb": 1515,
             "__d_d_fk_1_dsb_aa_mid": 1516,
             "__d_d_fk_1_dsb_aa_tail": 1517,
-            "d_d_mki_1_dsb": 1518
+            "d_d_mki_1_dsb": 1518,
+            "__d_e_eb_1_dsb_aa_mid": 1519,
+            "__d_e_eb_1_dsb_aa_tail": 1520,
+            "d_e_eb_1_dsb": 1521,
+            "__d_e_eb_2_dsb_aa_mid": 1522,
+            "__d_e_eb_2_dsb_aa_tail": 1523,
+            "d_e_eb_2_dsb": 1524
         }
     }
 }

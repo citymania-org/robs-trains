@@ -123,6 +123,8 @@ from code.standard_gauge.db103 import de_e_db103_1_db, de_e_db103_2_db, de_e_db1
 
 from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
 
+from code.standard_gauge.eb import d_e_eb_1_dsb, d_e_eb_2_dsb
+
 # electric dc
 
 # electric 3rd
@@ -446,6 +448,7 @@ lib.make_purchase_sprites(
     # dk electric 15
     # dk electric 25
     grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_3_dsb),
+    grf.VariantGroup('EB', d_e_eb_1_dsb, d_e_eb_2_dsb),
     # dk electric dc
     # dk electric 3rd
     # dk dmu
