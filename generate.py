@@ -218,6 +218,23 @@ from code.standard_gauge.notype49å import no_s_49_1
 from code.standard_gauge.sessnj import se_e_xf_1
 from code.standard_gauge.sec20 import se_e_C20_1, se_e_C20u_1
 
+# carriages
+from code.standard_gauge.se80stock import s_p_80s_A, s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_6_sj, s_p_A7_7_sj, s_p_A7_8_ssrt, s_p_A11_1_sj
+
+from code.standard_gauge.se80stock import s_p_80s_AB
+
+from code.standard_gauge.se80stock import s_p_80s_B, s_p_B7_1_sj, s_p_B7_2_sj, s_p_B7_3_sj, s_p_B7_4_sj, s_p_B7_5_sj, s_p_B7_6_sj, s_p_B7_7_tagab, s_p_B4_1_sj, s_p_BF4_2_sj, s_p_BF4_3_sj, s_p_BF4_3_sj, s_p_BF4_4_sj, s_p_BF4_5_ssrt, s_p_BF7_6_sj, s_p_B2_1_sj, s_p_B2_2_sj, s_p_B2_3_sj, s_p_B2_4_sj, s_p_B2_5_ssrt, s_p_B7B_1_sj, s_p_B8_2_sj, s_p_B8_3_sj, s_p_B8_4_sj, s_p_B9_1_sj, s_p_B9_2_tkab, s_p_B9_3_sj, s_p_B9_3_ssrt, s_p_B10_1_sj, s_p_B10_2_sj, s_p_B10_3_sj, s_p_B10_4_sj, s_p_B11_1_sj
+
+#from code.standard_gauge.se80stock import s_p_80s_BC
+
+#from code.standard_gauge.se80stock import s_p_80s_WL
+
+#from code.standard_gauge.se80stock import s_p_80s_R
+
+#from code.standard_gauge.se80stock import s_p_80s_S
+
+# wagons
+
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
     name='љњGC Gblss-y',
@@ -724,6 +741,14 @@ lib.make_purchase_sprites(
     s_e_C30_1_sl,
     # se carriages
     grf.VariantGroup('OKB "Hechtwagen"', se_p_BCo_1, se_p_BCort_1, se_p_BCo6b_1, se_p_Ro2b_1),
+    # se carriages
+    grf.VariantGroup('80s stock 1st class', s_p_80s_A, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj), s_p_A11_1_sj),
+    #grf.VariantGroup('80s stock 1st & 2nd class', s_p_80s_AB, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    grf.VariantGroup('80s stock 2nd class', s_p_80s_B, grf.VariantGroup('B7', s_p_B7_1_sj, s_p_B7_2_sj, s_p_B7_3_sj, s_p_B7_4_sj, s_p_B7_5_sj, s_p_B7_6_sj, s_p_B7_7_tagab), grf.VariantGroup('B4/BF4/BF7', s_p_B4_1_sj, s_p_BF4_2_sj, s_p_BF4_3_sj, s_p_BF4_4_sj, s_p_BF4_5_ssrt, s_p_BF7_6_sj), grf.VariantGroup('B2', s_p_B2_1_sj, s_p_B2_2_sj, s_p_B2_3_sj, s_p_B2_4_sj, s_p_B2_5_ssrt), grf.VariantGroup('B7B/B8', s_p_B7B_1_sj, s_p_B8_2_sj, s_p_B8_3_sj, s_p_B8_4_sj), grf.VariantGroup('B9', s_p_B9_1_sj, s_p_B9_2_tkab, s_p_B9_3_sj, s_p_B9_3_ssrt), grf.VariantGroup('B10', s_p_B10_1_sj, s_p_B10_2_sj, s_p_B10_3_sj, s_p_B10_4_sj), s_p_B11_1_sj),
+    #grf.VariantGroup('80s stock Coachette', s_p_80s_AC, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    #grf.VariantGroup('80s stock Sleeper', s_p_80s_WL, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    #grf.VariantGroup('80s stock Resturant/kiosk', s_p_80s_R, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    #grf.VariantGroup('80s stock Special', s_p_80s_S, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
     # se wagons
     se_w_121to122_1 ,
     se_w_F3_1,
