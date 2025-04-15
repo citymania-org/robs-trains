@@ -193,6 +193,37 @@ from code.standard_gauge.dkteak import dk_p_teak_1, dk_p_teak_2, dk_p_teak_3, dk
 from code.standard_gauge.seiore import se_e_iore_1
 from code.standard_gauge.dkcompl import dk_p_compl_1, dk_p_compl_2, dk_p_compl_3, dk_p_compl_4, dk_p_compl_5
 from code.standard_gauge.chae814 import ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3, ch_e_ae814_4, ch_e_ae814_5, ch_e_ae814_6, ch_e_ae814_7
+from code.standard_gauge.stog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb
+from code.standard_gauge.stog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
+from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
+
+# emu 3rd
+
+from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss
+
+# carriages
+
+from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj, d_p_cl_1_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb, d_p_cl_5_dsb, d_p_cl_7_dsb, d_p_cl_8_dsb, d_p_cl_9_dsb, d_p_cl_10_dsb, d_p_cl_11_dsb, d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb, d_p_bdg_1_dsb
+from code.standard_gauge.albl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb, d_p_al_5_dsb, d_p_bl_3_dsb
+from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb, d_p_bns_6_dsb, d_p_bd_3_dsb
+from code.standard_gauge.ic5 import d_p_ic5_1_dsb, d_p_ic5_2_dsb
+from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb
+
+from code.standard_gauge.se80stock import s_p_80s_A, s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_6_sj, s_p_A7_7_sj, s_p_A7_8_ssrt, s_p_A11_1_sj
+
+from code.standard_gauge.se80stock import s_p_80s_AB
+
+from code.standard_gauge.se80stock import s_p_80s_B, s_p_B7_1_sj, s_p_B7_2_sj, s_p_B7_3_sj, s_p_B7_4_sj, s_p_B7_5_sj, s_p_B7_6_sj, s_p_B7_7_tagab, s_p_B4_1_sj, s_p_BF4_2_sj, s_p_BF4_3_sj, s_p_BF4_3_sj, s_p_BF4_4_sj, s_p_BF4_5_ssrt, s_p_BF7_6_sj, s_p_B2_1_sj, s_p_B2_2_sj, s_p_B2_3_sj, s_p_B2_4_sj, s_p_B2_5_ssrt, s_p_B7B_1_sj, s_p_B8_2_sj, s_p_B8_3_sj, s_p_B8_4_sj, s_p_B9_1_sj, s_p_B9_2_tkab, s_p_B9_3_sj, s_p_B9_3_ssrt, s_p_B10_1_sj, s_p_B10_2_sj, s_p_B10_3_sj, s_p_B10_4_sj, s_p_B11_1_sj
+
+#from code.standard_gauge.se80stock import s_p_80s_BC
+
+#from code.standard_gauge.se80stock import s_p_80s_WL
+
+#from code.standard_gauge.se80stock import s_p_80s_R
+
+#from code.standard_gauge.se80stock import s_p_80s_S
+
+# wagons
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -628,6 +659,14 @@ lib.make_purchase_sprites(
     # se emu 3rd
     grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C8_1_sl, s_e_C8_2_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl),
     s_e_C30_1_sl, 
+    # se carriages
+    grf.VariantGroup('80s stock 1st class', s_p_80s_A, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj), s_p_A11_1_sj),
+    #grf.VariantGroup('80s stock 1st & 2nd class', s_p_80s_AB, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    grf.VariantGroup('80s stock 2nd class', s_p_80s_B, grf.VariantGroup('B7', s_p_B7_1_sj, s_p_B7_2_sj, s_p_B7_3_sj, s_p_B7_4_sj, s_p_B7_5_sj, s_p_B7_6_sj, s_p_B7_7_tagab), grf.VariantGroup('B4/BF4/BF7', s_p_B4_1_sj, s_p_BF4_2_sj, s_p_BF4_3_sj, s_p_BF4_4_sj, s_p_BF4_5_ssrt, s_p_BF7_6_sj), grf.VariantGroup('B2', s_p_B2_1_sj, s_p_B2_2_sj, s_p_B2_3_sj, s_p_B2_4_sj, s_p_B2_5_ssrt), grf.VariantGroup('B7B/B8', s_p_B7B_1_sj, s_p_B8_2_sj, s_p_B8_3_sj, s_p_B8_4_sj), grf.VariantGroup('B9', s_p_B9_1_sj, s_p_B9_2_tkab, s_p_B9_3_sj, s_p_B9_3_ssrt), grf.VariantGroup('B10', s_p_B10_1_sj, s_p_B10_2_sj, s_p_B10_3_sj, s_p_B10_4_sj), s_p_B11_1_sj),
+    #grf.VariantGroup('80s stock Coachette', s_p_80s_AC, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    #grf.VariantGroup('80s stock Sleeper', s_p_80s_WL, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    #grf.VariantGroup('80s stock Resturant/kiosk', s_p_80s_R, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    #grf.VariantGroup('80s stock Special', s_p_80s_S, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
     # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
