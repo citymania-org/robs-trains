@@ -542,3 +542,24 @@ d_d_my_ii_23_strabag = Train(
         'Trivia': 'One locomotive bought from Eichholz in 2007 #1131',
     }),
 )
+
+d_d_my_ii_24_bsx = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_24_bsx',
+    name='BSX TMY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('bsx1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(1996, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from DSB in 1996 #1111',
+    }),
+)

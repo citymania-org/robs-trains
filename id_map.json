@@ -1107,7 +1107,19 @@
             "d_e_eb_1_dsb": 1521,
             "__d_e_eb_2_dsb_aa_mid": 1522,
             "__d_e_eb_2_dsb_aa_tail": 1523,
-            "d_e_eb_2_dsb": 1524
+            "d_e_eb_2_dsb": 1524,
+            "__d_d_my_ii_24_bsx_aa_mid": 1525,
+            "__d_d_my_ii_24_bsx_aa_tail": 1526,
+            "d_d_my_ii_24_bsx": 1527,
+            "__d_d_mx_ii_14_bsx_aa_mid": 1528,
+            "__d_d_mx_ii_14_bsx_aa_tail": 1529,
+            "d_d_mx_ii_14_bsx": 1530,
+            "__d_d_mx_ii_15_bsx_aa_mid": 1531,
+            "__d_d_mx_ii_15_bsx_aa_tail": 1532,
+            "d_d_mx_ii_15_bsx": 1533,
+            "__d_d_mx_ii_16_bsm_aa_mid": 1534,
+            "__d_d_mx_ii_16_bsm_aa_tail": 1535,
+            "d_d_mx_ii_16_bsm": 1536
         }
     }
 }

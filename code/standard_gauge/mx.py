@@ -295,3 +295,66 @@ d_d_mx_ii_13_lj = Train(
         'Trivia': 'Two locomotives bought from DSB in 1988 #1031 & #1033'
     }),
 )
+
+d_d_mx_ii_14_bsx = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_14_bsx',
+    name='BSX TMX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('bsx1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(1994, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from DSB in 1994 #1012'
+    }),
+)
+
+d_d_mx_ii_15_bsx = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_15_bsx',
+    name='BSX TMX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('bsx2',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(1994, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from DSB in 1994 #1024 & #1042'
+    }),
+)
+
+d_d_mx_ii_16_bsm = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_16_bsm',
+    name='BSM TMX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('bsm1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(1997, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from BSX in 1997 #1012'
+    }),
+)
