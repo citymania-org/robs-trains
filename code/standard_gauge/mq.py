@@ -9,7 +9,7 @@ d_d_ml_1_dsb = Train(
     name='њDSB ML',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/w_ml.psd',
+        'pp/ml.psd',
         shading=('ml',),
         paint=('dsb1',),
         overlay=('light'),
@@ -42,10 +42,10 @@ d_d_ml_1_dsb = Train(
 
 d_d_ml_2_dsb = Train(
     id='d_d_ml_2_dsb',
-    name='њDSB ML',
+    name='њDSB ML (Büssing)',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/w_ml.psd',
+        'pp/ml.psd',
         shading=('ml',),
         paint=('dsb1',),
         overlay=('light'),
