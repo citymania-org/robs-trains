@@ -4,7 +4,7 @@ from datetime import date
 
 from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
 
-COMMON_x1_PROPS = dict(
+COMMON_X1_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
     power_type='15kv',
@@ -23,9 +23,9 @@ COMMON_x1_PROPS = dict(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-s_e_x1a_1_sj = Train(
-    id='s_e_x1a_1_sj',
-    **COMMON_x1_PROPS,
+s_e_X1a_1_sj = Train(
+    id='s_e_X1a_1_sj',
+    **COMMON_X1_PROPS,
     name='SJ/SL X1',
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',
@@ -44,7 +44,7 @@ s_e_x1a_1_sj = Train(
         'Trivia': 'Built by ASEA and developed from the X6 this train was used on the Stockholm Commuter Rail with 5 allowed to couple together to make a 10 car train set. One unit was modified for tilting and high speed research',
     }),
 ).add_articulated_part(
-    id='s_e_x1b_1_sj',
+    id='s_e_X1b_1_sj',
     length=11,
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',
@@ -58,9 +58,9 @@ s_e_x1a_1_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-s_e_x1a_2_sj = Train(
-    id='s_e_x1a_2_sj',
-    **COMMON_x1_PROPS,
+s_e_X1a_2_sj = Train(
+    id='s_e_X1a_2_sj',
+    **COMMON_X1_PROPS,
     name='SL X1',
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',
@@ -79,7 +79,7 @@ s_e_x1a_2_sj = Train(
         'Trivia': 'This rebuild took place in 1988 to increase reliability in cold weather',
     }),
 ).add_articulated_part(
-    id='s_e_x1b_2_sj',
+    id='s_e_X1b_2_sj',
     length=11,
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',
@@ -93,9 +93,9 @@ s_e_x1a_2_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-s_e_x1a_3_sj = Train(
-    id='s_e_x1a_3_sj',
-    **COMMON_x1_PROPS,
+s_e_X1a_3_sj = Train(
+    id='s_e_X1a_3_sj',
+    **COMMON_X1_PROPS,
     name='SL X1',
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',
@@ -114,7 +114,7 @@ s_e_x1a_3_sj = Train(
         'Trivia': 'Two sets given the same livery as contemporary stock',
     }),
 ).add_articulated_part(
-    id='s_e_x1b_3_sj',
+    id='s_e_X1b_3_sj',
     length=11,
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',

@@ -1119,7 +1119,25 @@
             "d_d_mx_ii_15_bsx": 1533,
             "__d_d_mx_ii_16_bsm_aa_mid": 1534,
             "__d_d_mx_ii_16_bsm_aa_tail": 1535,
-            "d_d_mx_ii_16_bsm": 1536
+            "d_d_mx_ii_16_bsm": 1536,
+            "__s_e_X1a_1_sj_aa_mid": 1537,
+            "__s_e_X1a_1_sj_aa_tail": 1538,
+            "s_e_X1b_1_sj": 1539,
+            "__s_e_X1b_1_sj_aa_mid": 1540,
+            "__s_e_X1b_1_sj_aa_tail": 1541,
+            "s_e_X1a_1_sj": 1542,
+            "__s_e_X1a_2_sj_aa_mid": 1543,
+            "__s_e_X1a_2_sj_aa_tail": 1544,
+            "s_e_X1b_2_sj": 1545,
+            "__s_e_X1b_2_sj_aa_mid": 1546,
+            "__s_e_X1b_2_sj_aa_tail": 1547,
+            "s_e_X1a_2_sj": 1548,
+            "__s_e_X1a_3_sj_aa_mid": 1549,
+            "__s_e_X1a_3_sj_aa_tail": 1550,
+            "s_e_X1b_3_sj": 1551,
+            "__s_e_X1b_3_sj_aa_mid": 1552,
+            "__s_e_X1b_3_sj_aa_tail": 1553,
+            "s_e_X1a_3_sj": 1554
         }
     }
 }
