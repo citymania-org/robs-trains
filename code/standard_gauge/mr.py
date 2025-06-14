@@ -11,6 +11,26 @@ COMMON_mr_PROPS = dict(
     power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
+    max_speed=Train.kmhish(130),
+    power=636,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=70,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_mrred_PROPS = dict(
+    length=10,
+    misc_flags=Train.Flags.USE_2CC,
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
     max_speed=Train.kmhish(120),
     power=636,
     vehicle_life=30,
@@ -26,7 +46,7 @@ COMMON_mr_PROPS = dict(
 
 d_d_mr_1_dsb = Train(
     id='d_d_mr_1_dsb',
-    **COMMON_mr_PROPS,
+    **COMMON_mrred_PROPS,
     name='DSB MR',
     liveries=make_psd_cc_liveries(
         'pp/mr.psd',
@@ -224,7 +244,7 @@ d_d_mr_6_dsb = Train(
 
 d_d_mr_7_dsb = Train(
     id='d_d_mr_7_dsb',
-    **COMMON_mr_PROPS,
+    **COMMON_mrred_PROPS,
     name='DSB MR',
     liveries=make_psd_cc_liveries(
         'pp/mr.psd',
