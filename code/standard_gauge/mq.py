@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 d_d_ml_1_dsb = Train(
     id='d_d_ml_1_dsb',
-    name='њDSB ML',
+    name='DSB ML',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/ml.psd',
@@ -42,7 +42,7 @@ d_d_ml_1_dsb = Train(
 
 d_d_ml_2_dsb = Train(
     id='d_d_ml_2_dsb',
-    name='њDSB ML (Büssing)',
+    name='DSB ML (Büssing)',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/ml.psd',

@@ -452,7 +452,7 @@ lib.make_purchase_sprites(
     # dk electric dc
     # dk electric 3rd
     # dk dmu
-    grf.VariantGroup('њML', d_d_ml_1_dsb, d_d_ml_2_dsb),
+    grf.VariantGroup('ML', d_d_ml_1_dsb, d_d_ml_2_dsb),
     d_d_mq_1_dsb,
     d_d_mp_1_dsb,
     grf.VariantGroup('MO', d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb),
