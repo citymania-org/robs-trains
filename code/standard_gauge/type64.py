@@ -37,7 +37,7 @@ n_e_type64_1_nsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='',
+    company='na',
     introduction_date=date(1935, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'NSB',

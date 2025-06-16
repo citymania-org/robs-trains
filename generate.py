@@ -149,11 +149,7 @@ from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj
 
 from code.standard_gauge.Xoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
 
-<<<<<<< Updated upstream
 from code.standard_gauge.X1 import s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl
-=======
-from code.standard_gauge.X1 import s_e_x1a_1_sj, s_e_x1a_2_sj, s_e_x1a_3_sj
->>>>>>> Stashed changes
 
 from code.standard_gauge.type69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb
 
@@ -274,6 +270,7 @@ from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
 
 from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
 
+from code.narrow_gauge.MÖJ_2to5 import s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj
 '''
 
 x15p = Train(
