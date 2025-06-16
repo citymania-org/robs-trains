@@ -42,8 +42,8 @@ s_d_ÖCJ25_1 = Train(
     }),
 )
 
-s_d_ÖCJ25_1 = Train(
-    id='s_d_ÖCJ25_1',
+s_d_ÖCJ25_2 = Train(
+    id='s_d_ÖCJ25_2',
     name='ÖCJ 25',
     length=5,
     liveries=make_psd_cc_liveries(

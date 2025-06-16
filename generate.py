@@ -129,6 +129,8 @@ from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarke
 
 # dmu
 
+from code.standard_gauge.ÖCJ_25 import s_d_ÖCJ25_1, s_d_ÖCJ25_2
+
 from code.standard_gauge.mq import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
 
 from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
@@ -365,6 +367,7 @@ COMPANY_SPRITES = {
     'sl': purchase_icon('lsl.png'),
     'taagab': purchase_icon('ltaagab.png'),
     'sj_70s': purchase_icon('lsj70s.png'),
+    'tgojold': purchase_icon('ltgojold.png'),
     'tgojnew': purchase_icon('ltgojnew.png'),
     'maelartaag': purchase_icon('lmaelartaag.png'),
     'hectorrail': purchase_icon('lhectorrail.png'),
@@ -507,6 +510,7 @@ lib.make_purchase_sprites(
     d_d_me_ii_6_mav,
     # no
     # no emu 15
+    n_e_type64_1_nsb,
     grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
     # no emu dc
     n_o_Wes_1_hkb,
@@ -529,6 +533,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њRm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
     s_e_rc7_1_sj,
     # se dmu
+    grf.VariantGroup('ÖCJ Bilvagn', s_d_ÖCJ25_1, s_d_ÖCJ25_2),
     grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
     grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
     grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
