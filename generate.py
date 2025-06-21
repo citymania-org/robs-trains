@@ -30,7 +30,7 @@ s_s_N_ii_1_sj = Train(
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
     max_speed=Train.kmhish(45),
-    power=1000, # come up with value
+    power=500, # come up with value
     introduction_date=date(1900, 1, 1),
     vehicle_life=30,
     model_life=144,
@@ -67,7 +67,7 @@ s_s_Sa_sj = Train(
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
     max_speed=Train.kmhish(45),
-    power=1000, # come up with value
+    power=750, # come up with value
     introduction_date=date(1908, 1, 1),
     vehicle_life=30,
     model_life=144,
@@ -79,7 +79,7 @@ s_s_Sa_sj = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'universal',
+        'Use': 'Universal',
         'Builder': 'Multiple',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},

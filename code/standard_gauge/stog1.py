@@ -9,7 +9,7 @@ d_e_stog1_1_dsb = Train(
     name='њDSB S-Tog 1 "De Brune S-Tog"',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["MAROON"],
@@ -43,7 +43,7 @@ d_e_stog1_1_dsb = Train(
     id='d_e_stog12_1_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -55,7 +55,7 @@ d_e_stog1_1_dsb = Train(
     id='d_e_stog13_1_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -70,7 +70,7 @@ d_e_stog1_2_dsb = Train(
     name='њDSB S-Tog 1 "De Brune S-Tog"',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["MAROON"],
@@ -103,7 +103,7 @@ d_e_stog1_2_dsb = Train(
     id='d_e_stog12_2_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -118,7 +118,7 @@ d_e_stog1_3_dsb = Train(
     name='њDSB S-Tog 1 "De Brune S-Tog"',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["MAROON"],
@@ -152,7 +152,7 @@ d_e_stog1_3_dsb = Train(
     id='d_e_stog12_3_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -164,7 +164,7 @@ d_e_stog1_3_dsb = Train(
     id='d_e_stog13_3_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -176,7 +176,7 @@ d_e_stog1_3_dsb = Train(
     id='d_e_stog14_3_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -193,7 +193,7 @@ d_e_stog1_4_dsb = Train(
     name='њDSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["MAROON"],
@@ -226,7 +226,7 @@ d_e_stog1_4_dsb = Train(
     id='d_e_stog12_4_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -241,7 +241,7 @@ d_e_stog1_5_dsb = Train(
     name='њDSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["MAROON"],
@@ -275,7 +275,7 @@ d_e_stog1_5_dsb = Train(
     id='d_e_stog12_5_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -287,7 +287,7 @@ d_e_stog1_5_dsb = Train(
     id='d_e_stog13_5_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
@@ -299,7 +299,7 @@ d_e_stog1_5_dsb = Train(
     id='d_e_stog14_5_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
+        'pp/stog1.psd',
         shading='1',
         paint='2',
         cc_replace=colours['MAROON'],
