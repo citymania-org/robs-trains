@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v
 
 d_e_stog1_1_dsb = Train(
     id='d_e_stog1_1_dsb',
-    name='њDSB S-Tog 1 "De Brune S-Tog"',
+    name='DSB S-Tog 1 "De Brune S-Tog"',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -69,7 +69,7 @@ d_e_stog1_1_dsb = Train(
 
 d_e_stog1_2_dsb = Train(
     id='d_e_stog1_2_dsb',
-    name='њDSB S-Tog 1 "De Brune S-Tog"',
+    name='DSB S-Tog 1 "De Brune S-Tog"',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -119,7 +119,7 @@ d_e_stog1_2_dsb = Train(
 
 d_e_stog1_3_dsb = Train(
     id='d_e_stog1_3_dsb',
-    name='њDSB S-Tog 1 "De Brune S-Tog"',
+    name='DSB S-Tog 1 "De Brune S-Tog"',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -196,7 +196,7 @@ d_e_stog1_3_dsb = Train(
 
 d_e_stog1_4_dsb = Train(
     id='d_e_stog1_4_dsb',
-    name='њDSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
+    name='DSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -246,7 +246,7 @@ d_e_stog1_4_dsb = Train(
 
 d_e_stog1_5_dsb = Train(
     id='d_e_stog1_5_dsb',
-    name='њDSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
+    name='DSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
