@@ -95,7 +95,7 @@ from code.standard_gauge.dk467 import d_d_frichs_467_1, d_d_frichs_467_2, d_d_fr
 
 from code.standard_gauge.mxe import d_d_mx_i_1_dsb
 
-from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs
+from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs, be_d_201_5_nmbs
 
 # nohab
 
@@ -422,7 +422,7 @@ lib.make_purchase_sprites(
     # start
     # be
     # be diesel
-    grf.VariantGroup('њHLD 201/HLD 59', be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
+    grf.VariantGroup('HLD 201/HLD 59', be_d_201_1_nmbs, be_d_201_5_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
