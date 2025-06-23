@@ -129,7 +129,7 @@ from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarke
 
 # dmu
 
-from code.standard_gauge.ÖCJ_25 import s_d_ÖCJ25_1, s_d_ÖCJ25_2
+from code.standard_gauge.ÖCJ_25 import s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2
 
 from code.standard_gauge.mq import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
 
@@ -177,13 +177,7 @@ from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog
 
 # emu 3rd
 
-from code.standard_gauge.C1 import s_e_C1_1_ss
-
-from code.standard_gauge.C4 import s_e_C4_1_ss, s_e_C4_2_sl
-
-from code.standard_gauge.C5 import s_e_C5_1_ss
-
-from code.standard_gauge.C6 import s_e_C6_1_sl, s_e_C6_2_sl
+from code.standard_gauge.Cx import s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss
 
 # carriages
 
@@ -263,6 +257,8 @@ s_w_Hbis_sj = Train(
 )
 
 # 891mm narrow gauge
+
+from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
 
 from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
 
@@ -533,7 +529,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њRm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
     s_e_rc7_1_sj,
     # se dmu
-    grf.VariantGroup('ÖCJ Bilvagn', s_d_ÖCJ25_1, s_d_ÖCJ25_2),
+    grf.VariantGroup('ÖCJ Bilvagn', s_d_ÖCJ25_1_1, s_d_ÖCJ25_2_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_2),
     grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
     grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
     grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
@@ -543,16 +539,14 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
     grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
     # se emu 3rd
-    s_e_C1_1_ss,
-    s_e_C4_1_ss,
-    s_e_C4_2_sl,
-    s_e_C5_1_ss,
+    grf.VariantGroup('Cx', s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss,),
     # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
     # narrow gauge
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
+    grf.VariantGroup('MÖJ 2-5', s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj),
     grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
     grf.VariantGroup('NKlJ AEG', s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj),
     s_p_Co_1,

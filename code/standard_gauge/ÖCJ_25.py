@@ -4,9 +4,9 @@ from datetime import date
 
 from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
-s_d_ÖCJ25_1 = Train(
-    id='s_d_ÖCJ25_1',
-    name='ÖCJ 25 (early)',
+s_d_ÖCJ25_1_1 = Train(
+    id='s_d_ÖCJ25_1_1',
+    name='ÖCJ 24-25 (early)',
     length=5,
     liveries=make_psd_cc_liveries(
         'pp/ÖCJ_25.psd',
@@ -42,9 +42,61 @@ s_d_ÖCJ25_1 = Train(
     }),
 )
 
-s_d_ÖCJ25_2 = Train(
-    id='s_d_ÖCJ25_2',
-    name='ÖCJ 25',
+s_d_ÖCJ25_1_2 = Train(
+    id='s_d_ÖCJ25_1_2',
+    name='ÖCJ 24-25 (early)',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/ÖCJ_25.psd',
+        shading=('ÖCJ 25',),
+        paint=('ÖCJ',),
+        overlay=('öcjlights'),
+        cc_replace=colours["CREAM"],
+        cc2_replace=colours["DGREEN"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(40),
+    power=110,
+    introduction_date=date(1924, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=28,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=38,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'ÖCJ',
+        'Use': 'Local passengers',
+        'Builder': 'WUMAG',
+    }),
+).add_articulated_part(
+    id='s_d_ÖCJ25_1_2_car2',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/ÖCJ_25.psd',
+        shading='ÖCJ 25_2',
+        paint='ÖCJ_2',
+        overlay=['öcjlights_2'],
+        cc_replace=colours['CREAM'],
+        cc2_replace=colours['DGREEN'],
+    ),
+    cargo_capacity=38,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_d_ÖCJ25_2_1 = Train(
+    id='s_d_ÖCJ25_2_1',
+    name='ÖCJ 24-25',
     length=5,
     liveries=make_psd_cc_liveries(
         'pp/ÖCJ_25.psd',
@@ -78,4 +130,56 @@ s_d_ÖCJ25_2 = Train(
         'Use': 'Local passengers',
         'Builder': 'WUMAG',
     }),
+)
+
+s_d_ÖCJ25_2_2 = Train(
+    id='s_d_ÖCJ25_2_2',
+    name='ÖCJ 24-25',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/ÖCJ_25.psd',
+        shading=('ÖCJ 25',),
+        paint=('ÖCJ',),
+        overlay=('öcjlights'),
+        cc_replace=colours["SEBROWN"],
+        cc2_replace=colours["SEBROWN"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(60),
+    power=55,
+    introduction_date=date(1924, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=14,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=45,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'ÖCJ',
+        'Use': 'Local passengers',
+        'Builder': 'WUMAG',
+    }),
+).add_articulated_part(
+    id='s_d_ÖCJ25_2_2_car2',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/ÖCJ_25.psd',
+        shading='ÖCJ 25_2',
+        paint='ÖCJ_2',
+        overlay=['öcjlights_2'],
+        cc_replace=colours['SEBROWN'],
+        cc2_replace=colours['SEBROWN'],
+    ),
+    cargo_capacity=45,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
