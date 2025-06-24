@@ -177,7 +177,7 @@ from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog
 
 # emu 3rd
 
-from code.standard_gauge.Cx import s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss
+from code.standard_gauge.Cx import s_e_C1_1_ss, s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss
 
 # carriages
 
@@ -539,7 +539,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj,),
     grf.VariantGroup('X1', s_e_X1_1_sj, s_e_X1_2_sl, s_e_X1_3_sl,),
     # se emu 3rd
-    grf.VariantGroup('Cx', s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss,),
+    grf.VariantGroup('Cx', s_e_C1_1_ss, s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss,),
     # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
