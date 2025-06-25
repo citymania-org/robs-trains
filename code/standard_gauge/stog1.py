@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v
 
 d_e_stog1_1_dsb = Train(
     id='d_e_stog1_1_dsb',
-    name='DSB S-Tog 1 "De Brune S-Tog"',
+    name='DSB S-Tog 1',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -14,7 +14,7 @@ d_e_stog1_1_dsb = Train(
         paint=('mmdsb1',),
         overlay=('mmlight'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -48,7 +48,7 @@ d_e_stog1_1_dsb = Train(
         shading='fm',
         paint='fmdsb1',
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=101,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -61,7 +61,7 @@ d_e_stog1_1_dsb = Train(
         paint='fsdsb1',
         overlay=('mmrlight'),
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -69,7 +69,7 @@ d_e_stog1_1_dsb = Train(
 
 d_e_stog1_2_dsb = Train(
     id='d_e_stog1_2_dsb',
-    name='DSB S-Tog 1 "De Brune S-Tog"',
+    name='DSB S-Tog 1',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -77,7 +77,7 @@ d_e_stog1_2_dsb = Train(
         paint=('mmdsb1',),
         overlay=('mmlight'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -111,7 +111,7 @@ d_e_stog1_2_dsb = Train(
         paint='fsdsb1',
         overlay=('fslight'),
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -119,7 +119,7 @@ d_e_stog1_2_dsb = Train(
 
 d_e_stog1_3_dsb = Train(
     id='d_e_stog1_3_dsb',
-    name='DSB S-Tog 1 "De Brune S-Tog"',
+    name='DSB S-Tog 1',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -127,7 +127,7 @@ d_e_stog1_3_dsb = Train(
         paint=('mmdsb1',),
         overlay=('mmlight'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -161,7 +161,7 @@ d_e_stog1_3_dsb = Train(
         shading='fm',
         paint='fmdsb1',
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=251,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -173,7 +173,7 @@ d_e_stog1_3_dsb = Train(
         shading='fm',
         paint='fmdsb1',
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -186,7 +186,7 @@ d_e_stog1_3_dsb = Train(
         paint='fsdsb1',
         overlay=('mmrlight'),
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -196,7 +196,7 @@ d_e_stog1_3_dsb = Train(
 
 d_e_stog1_4_dsb = Train(
     id='d_e_stog1_4_dsb',
-    name='DSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
+    name='DSB S-Tog 1', #with 1 instead of 2 pantos
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -204,7 +204,7 @@ d_e_stog1_4_dsb = Train(
         paint=('mmdsb1',),
         overlay=('modmmlight'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -238,7 +238,7 @@ d_e_stog1_4_dsb = Train(
         paint='fsdsb1',
         overlay=('fslight'),
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -246,7 +246,7 @@ d_e_stog1_4_dsb = Train(
 
 d_e_stog1_5_dsb = Train(
     id='d_e_stog1_5_dsb',
-    name='DSB S-Tog 1 "De Brune S-Tog"', #with 1 instead of 2 pantos
+    name='DSB S-Tog 1', #with 1 instead of 2 pantos
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/stog1.psd',
@@ -254,7 +254,7 @@ d_e_stog1_5_dsb = Train(
         paint=('mmdsb1',),
         overlay=('modmmlight'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -288,7 +288,7 @@ d_e_stog1_5_dsb = Train(
         shading='fm',
         paint='fmdsb1',
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=251,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -300,7 +300,7 @@ d_e_stog1_5_dsb = Train(
         shading='fm',
         paint='fmdsb1',
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -313,7 +313,7 @@ d_e_stog1_5_dsb = Train(
         paint='fsdsb1',
         overlay=('modmmrlight'),
         cc_replace=colours['MAROON'],
-        cc2_replace=colours['GREY1'],
+        cc2_replace=colours['MAROON'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
