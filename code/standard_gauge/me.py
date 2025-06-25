@@ -22,6 +22,7 @@ COMMON_me_ii_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 7),
 )
 
 d_d_me_ii_1_dsb = Train(

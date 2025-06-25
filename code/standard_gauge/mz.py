@@ -22,6 +22,7 @@ COMMON_mze_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 7),
 )
 
 d_d_mz_i_1_dsb = Train(
@@ -165,6 +166,7 @@ COMMON_mzl_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 7),
 )
 
 d_d_mz_iii_1_dsb = Train(

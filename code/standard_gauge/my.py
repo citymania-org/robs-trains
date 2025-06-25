@@ -39,6 +39,7 @@ d_d_mye_ii_1_dsb = Train(
         'Trivia': '''Denmark's first mass-produced modern diesel locomotive''',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 7),
 )
 
 COMMON_my_ii_PROPS = dict(
@@ -59,6 +60,7 @@ COMMON_my_ii_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 7),
 )
 
 d_d_my_ii_1_dsb = Train(
