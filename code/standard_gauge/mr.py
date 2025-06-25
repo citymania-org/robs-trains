@@ -343,7 +343,7 @@ d_d_mr_9_dsb = Train(
 
 dl_d_mr_1_dlj = Train(
     id='dl_d_mr_1_dlj',
-    **COMMON_mr_PROPS,
+    **COMMON_mrred_PROPS,
     name='DLJ MR',
     liveries=make_psd_cc_liveries(
         'pp/mr.psd',
