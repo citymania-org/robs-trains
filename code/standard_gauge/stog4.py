@@ -4,9 +4,9 @@ from datetime import date
 
 from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v
 
-d_e_stog4_1_dsb = Train(
-    id='d_e_stog4_1_dsb',
-    name='њDSB S-Tog 4 "Hamster"',
+d_e_stog4_5_dsb = Train(
+    id='d_e_stog4_5_dsb',
+    name='њDSB S-Tog 4 Prototype',
     length=5,
     liveries=make_psd_cc_liveries(
         'pp/5Template.psd',
@@ -24,6 +24,126 @@ d_e_stog4_1_dsb = Train(
     max_speed=Train.kmhish(120),
     power=2307,
     introduction_date=date(1995, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=124,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=200, #312 seats, 28 collapsible seats, ca 360 standing = 700
+    cost_factor=25,
+    loading_speed=40,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Short distance local passengers',
+        'Class': 'SA',
+    }),
+).add_articulated_part(
+    id='d_e_stog42_5_dsb',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_e_stog43_5_dsb',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_e_stog44_5_dsb',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=96,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_e_stog45_5_dsb',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_e_stog46_5_dsb',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_e_stog47_5_dsb',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_e_stog48_5_dsb',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_e_stog4_1_dsb = Train(
+    id='d_e_stog4_1_dsb',
+    name='њDSB S-Tog 4',
+    length=5,
+    liveries=make_psd_cc_liveries(
+        'pp/5Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='denmark',
+    company='na',
+    power_type='dc',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=standard_gauge_1500v,
+    max_speed=Train.kmhish(120),
+    power=2307,
+    introduction_date=date(1998, 1, 1),
     vehicle_life=30,
     model_life=144,
     climates_available=grf.ALL_CLIMATES,
@@ -126,7 +246,7 @@ d_e_stog4_1_dsb = Train(
 
 d_e_stog4_2_dsb = Train(
     id='d_e_stog4_2_dsb',
-    name='њDSB S-Tog 4 "Hamster"',
+    name='њDSB S-Tog 4',
     length=5,
     liveries=make_psd_cc_liveries(
         'pp/5Template.psd',
@@ -246,7 +366,7 @@ d_e_stog4_2_dsb = Train(
 
 d_e_stog4_3_dsb = Train(
     id='d_e_stog4_3_dsb',
-    name='њDSB S-Tog 4 "Hamsterunge"',
+    name='њDSB S-Tog 4',
     length=5,
     liveries=make_psd_cc_liveries(
         'pp/5Template.psd',
@@ -318,7 +438,7 @@ d_e_stog4_3_dsb = Train(
 
 d_e_stog4_4_dsb = Train(
     id='d_e_stog4_4_dsb',
-    name='њDSB S-Tog 4 "Hamsterunge"',
+    name='њDSB S-Tog 4',
     length=5,
     liveries=make_psd_cc_liveries(
         'pp/5Template.psd',
