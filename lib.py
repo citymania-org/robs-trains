@@ -227,11 +227,15 @@ def _make_liveries(liveries, is_articulated=False):
 
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, **kw):
         # Sort needed for intro year switch
         liveries = _make_liveries(liveries)
         # TODO make it a check instead of sorting, livery order is important for version compatibility
         liveries.sort(key=lambda l: l.get('intro_year', 0))
+        if visual_effect != None:
+            if visual_effect[1] >= 24:
+                raise Exception("Train visual effect may not be outside the train")
+        self.visual_effect = visual_effect
 
         super().__init__(
             liveries=liveries,
@@ -242,6 +246,15 @@ class Train(grf.Train):
         self.company = company
         self.power_type = power_type
         self.purchase_sprite_towed_id = purchase_sprite_towed_id
+        
+        # Add visual effect to this part if it is specified in the front. We add it to the other parts further down
+        mid_shorten, art_shorten, art_liveries = self._calc_length_articulation(
+            kw['length'], kw.get('shorten_by'), liveries)
+        if visual_effect is not None:
+            if visual_effect[1] <= (8 - art_shorten):
+                self._props['visual_effect_and_powered'] = self.visual_effect_and_powered(visual_effect[0], position=visual_effect[1], wagon_power=False)
+            else :
+                self._props['visual_effect_and_powered'] = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
 
     def _gen_livery_callback(self, g, callbacks, liveries):
         if len(self.liveries) <= 1:
@@ -270,6 +283,38 @@ class Train(grf.Train):
             default=0x400,
             code=code,
         )
+        
+    def _add_auto_articulated_parts(self, id, mid_shorten, mid_liveries, art_shorten, art_liveries, props):
+        # TODO move auto-articulated stuff to the generation phase so props can be changed after creation.
+        art_props = {}
+        flags = self._props.get('misc_flags')
+        if flags is not None:
+            copy_flags = self.Flags.TILT | self.Flags.MULTIPLE_UNIT | self.Flags.USE_2CC
+            art_props['misc_flags'] = flags & copy_flags
+        # Copy power for the right 2cc colour, effective power will be zero anyway.
+        for k in ('track_type', 'power'):
+            if k in props:
+                art_props[k] = props[k]
+        # Add visual effect to articulated parts if necessary
+        if self.visual_effect is not None:
+            if self.visual_effect[1] > (8 - art_shorten): # It is not the first part
+                if self.visual_effect[1] > (16 - art_shorten - mid_shorten): # It is in the last part
+                    mid_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+                    tail_vis = self.visual_effect_and_powered(self.visual_effect[0], position=(self.visual_effect[1] - art_shorten - mid_shorten), wagon_power=False)
+                else:
+                    mid_vis = self.visual_effect_and_powered(self.visual_effect[0], position=(self.visual_effect[1] + 8 - art_shorten), wagon_power=False)
+                    tail_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+            else:
+                mid_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+                tail_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+            
+            art_props['visual_effect_and_powered'] = mid_vis
+            self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, art_props)
+            art_props['visual_effect_and_powered'] = tail_vis
+            self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, art_props)
+        else:
+            self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, art_props)
+            self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, art_props)
 
     def add_articulated_part(self, liveries=None, **props):
         if liveries is not None:

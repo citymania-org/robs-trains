@@ -43,6 +43,7 @@ d_d_mx_ii_1_dsb = Train(
         'Use': 'Universal',
         'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed, like the MY it is still used today across Europe by private operators, often in pairs with other loco types such as the MZ & CFL 1800',
     }),
+    visual_effect=(Train.VisualEffect.STEAM, 9),
 )
 
 d_d_mx_ii_2_dsb = Train(
@@ -63,6 +64,7 @@ d_d_mx_ii_2_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
+    visual_effect=(Train.VisualEffect.STEAM, 6),
 )
 
 d_d_mx_ii_3_vltj = Train(
