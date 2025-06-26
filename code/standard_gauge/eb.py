@@ -7,7 +7,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15k
 COMMON_eb_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='25kv',
+    power_type='15kv/25kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_25kv_15kv,
     max_speed=Train.kmhish(200),

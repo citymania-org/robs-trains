@@ -7,9 +7,9 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15k
 COMMON_et_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
+    country='sweden',
     company='na',
-    power_type='25kv',
+    power_type='15kv/25kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_25kv_15kv,
     max_speed=Train.kmhish(180),
@@ -27,7 +27,7 @@ COMMON_et_PROPS = dict(
 d_e_et_1_dsb = Train(
     id='d_e_et_1_dsb',
     **COMMON_et_PROPS,
-    name='њDSB ET (Øresundstog)',
+    name='њSJ X31K/DSB ET (Øresundstog)',
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading=('1',),
@@ -70,7 +70,7 @@ d_e_et_1_dsb = Train(
 d_e_et_2_dsb = Train(
     id='d_e_et_2_dsb',
     **COMMON_et_PROPS,
-    name='њDSB ET (Øresundstog)',
+    name='њSJ X31K/DSB ET (Øresundstog)',
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading=('1',),

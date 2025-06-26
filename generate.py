@@ -377,7 +377,9 @@ POWER_TYPE_SPRITES = {
     'dc': purchase_icon('pelectricdc1500.png'),
     'dc3000': purchase_icon('pelectricdc3000.png'),
     '15kv': purchase_icon('pelectric15.png'),
+    '15kv/25kv': purchase_icon('pelectric1525.png'),
     '25kv': purchase_icon('pelectric25.png'),
+    'dc/dc3000/15kv/25kv': purchase_icon('pelectric150030001525.png'),
     'na': purchase_icon('blank.png')
 }
 
@@ -445,11 +447,12 @@ lib.make_purchase_sprites(
     grf.VariantGroup('MZ III', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb),
     grf.VariantGroup('MZ IV', d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
     grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb),
+    # dk electric dc
+    # dk electric dc 3000
     # dk electric 15
     # dk electric 25
     grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_3_dsb),
     grf.VariantGroup('EB', d_e_eb_1_dsb, d_e_eb_2_dsb),
-    # dk electric dc
     # dk electric 3rd
     # dk dmu
     grf.VariantGroup('ML', d_d_ml_1_dsb, d_d_ml_2_dsb),
@@ -459,15 +462,15 @@ lib.make_purchase_sprites(
     d_d_mki_1_dsb,
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
-    # dk emu 15
-    # dk emu 25
-    grf.VariantGroup('њER (IR4)', d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb),
-    grf.VariantGroup('њET (Øresundstog)', d_e_et_1_dsb, d_e_et_2_dsb),
     # dk emu dc
     grf.VariantGroup('S-Tog 1 "De Brune S-Tog"', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
     grf.VariantGroup('њS-Tog 2 "De Røde S-Tog"', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_4_dsb, d_e_stog2_3_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
     grf.VariantGroup('њS-Tog 3', d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb),
     grf.VariantGroup('њS-Tog 4 "Hamster" & "Hamsterunge"', d_e_stog4_5_dsb, d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
+    # dk emu dc 3000
+    # dk emu 15
+    # dk emu 25
+    grf.VariantGroup('њER (IR4)', d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb),
     # dk emu 3rd
     # dk carriages
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
@@ -499,11 +502,11 @@ lib.make_purchase_sprites(
     d_d_my_ii_21_mav,
     d_d_me_ii_6_mav,
     # no
-    # no emu 15
-    grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
     # no emu dc
     n_o_Wes_1_hkb,
     grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
+    # no emu 15
+    grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
     # pl
     # pl diesel
     d_d_me_ii_7_skpl,
@@ -530,6 +533,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj),
     grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj),
     grf.VariantGroup('X1', s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj),
+    grf.VariantGroup('њX31K/ET/X32K (Øresundstog)', d_e_et_1_dsb, d_e_et_2_dsb),
     # se emu 3rd
     s_e_C1_1_ss,
     s_e_C4_1_ss,
