@@ -169,11 +169,11 @@ from code.standard_gauge.stog1 import d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog
 
 from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
 
-from code.standard_gauge.stog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb
+from code.standard_gauge.stog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb
 
 from code.standard_gauge.stog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
 
-from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb
+from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
 
 # emu 3rd
 
@@ -464,10 +464,10 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њER (IR4)', d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb),
     grf.VariantGroup('њET (Øresundstog)', d_e_et_1_dsb, d_e_et_2_dsb),
     # dk emu dc
-    grf.VariantGroup('S-Tog 1', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
-    grf.VariantGroup('њS-Tog 2', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
+    grf.VariantGroup('S-Tog 1 "De Brune S-Tog"', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
+    grf.VariantGroup('њS-Tog 2 "De Røde S-Tog"', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_4_dsb, d_e_stog2_3_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
     grf.VariantGroup('њS-Tog 3', d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb),
-    grf.VariantGroup('њS-Tog 4', d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
+    grf.VariantGroup('њS-Tog 4 "Hamster" & "Hamsterunge"', d_e_stog4_5_dsb, d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
     # dk emu 3rd
     # dk carriages
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
