@@ -301,7 +301,7 @@ d_p_bn_1_dsb = Train(
     introduction_date=date(1971, 1, 1),
     weight=40,
     cargo_capacity=80,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
         'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
@@ -324,7 +324,7 @@ d_p_bn_2_dsb = Train(
     introduction_date=date(1972, 1, 1),
     weight=40,
     cargo_capacity=80,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
         'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
@@ -347,7 +347,7 @@ d_p_bn_3_dsb = Train(
     introduction_date=date(2006, 1, 1),
     weight=40,
     cargo_capacity=80,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
         'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
@@ -370,7 +370,7 @@ d_p_bn_4_dsb = Train(
     introduction_date=date(1993, 1, 1),
     weight=36,
     cargo_capacity=48,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class, bike storage',
     }),
@@ -392,7 +392,7 @@ d_p_bn_5_dsb = Train(
     introduction_date=date(1990, 1, 1),
     weight=36,
     cargo_capacity=48,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': '''Local trains, 2nd class, children's carriage''',
         'Trivia': 'Features a ball pit, DSB staff act as child carers',
@@ -415,7 +415,7 @@ d_p_bn_6_dsb = Train(
     introduction_date=date(1992, 1, 1),
     weight=40,
     cargo_capacity=80,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
         'Trivia': 'Four carriages bought from DSB in 1992 and 1993',
@@ -438,7 +438,7 @@ d_p_an_1_dsb = Train(
     introduction_date=date(1972, 1, 1),
     weight=40,
     cargo_capacity=64,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 1st class',
     }),
@@ -460,7 +460,7 @@ d_p_an_2_dsb = Train(
     introduction_date=date(1991, 1, 1),
     weight=40,
     cargo_capacity=64,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
     }),
@@ -482,7 +482,7 @@ d_p_an_3_dsb = Train(
     introduction_date=date(1991, 1, 1),
     weight=37,
     cargo_capacity=48,
-    loading_speed=15,
+    loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class, bike storage',
     }),
