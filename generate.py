@@ -147,6 +147,8 @@ from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d
 
 from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj
 
+from code.standard_gauge.mq2 import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb
+
 # emu 15
 
 from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
@@ -466,6 +468,7 @@ lib.make_purchase_sprites(
     d_d_mki_1_dsb,
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
+    grf.VariantGroup('њMQ "Desiro"', d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb),
     # dk emu dc
     grf.VariantGroup('S-Tog 1 "De Brune S-Tog"', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
     grf.VariantGroup('њS-Tog 2 "De Røde S-Tog"', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_4_dsb, d_e_stog2_3_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
