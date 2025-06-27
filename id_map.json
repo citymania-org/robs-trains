@@ -1176,7 +1176,28 @@
             "d_e_stog46_5_dsb": 1590,
             "d_e_stog47_5_dsb": 1591,
             "d_e_stog48_5_dsb": 1592,
-            "d_e_stog4_5_dsb": 1593
+            "d_e_stog4_5_dsb": 1593,
+            "__d_d_ms_1_dsb_aa_mid": 1594,
+            "__d_d_ms_1_dsb_aa_tail": 1595,
+            "d_d_ms2_1_dsb": 1596,
+            "__d_d_ms2_1_dsb_aa_mid": 1597,
+            "__d_d_ms2_1_dsb_aa_tail": 1598,
+            "d_d_ms3_1_dsb": 1599,
+            "__d_d_ms3_1_dsb_aa_mid": 1600,
+            "__d_d_ms3_1_dsb_aa_tail": 1601,
+            "d_d_ms_1_dsb": 1602,
+            "__d_d_mb_1_dsb_aa_mid": 1603,
+            "__d_d_mb_1_dsb_aa_tail": 1604,
+            "d_d_mb2_1_dsb": 1605,
+            "__d_d_mb2_1_dsb_aa_mid": 1606,
+            "__d_d_mb2_1_dsb_aa_tail": 1607,
+            "d_d_mb3_1_dsb": 1608,
+            "__d_d_mb3_1_dsb_aa_mid": 1609,
+            "__d_d_mb3_1_dsb_aa_tail": 1610,
+            "d_d_mb4_1_dsb": 1611,
+            "__d_d_mb4_1_dsb_aa_mid": 1612,
+            "__d_d_mb4_1_dsb_aa_tail": 1613,
+            "d_d_mb_1_dsb": 1614
         }
     }
 }

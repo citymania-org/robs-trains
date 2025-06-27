@@ -133,6 +133,8 @@ from code.standard_gauge.eb import d_e_eb_1_dsb, d_e_eb_2_dsb
 
 from code.standard_gauge.mq import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
 
+from code.standard_gauge.ms import d_d_ms_1_dsb, d_d_mb_1_dsb
+
 from code.standard_gauge.mki import d_d_mki_1_dsb
 
 from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
@@ -459,6 +461,8 @@ lib.make_purchase_sprites(
     d_d_mq_1_dsb,
     d_d_mp_1_dsb,
     grf.VariantGroup('MO', d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb),
+    d_d_ms_1_dsb,
+    d_d_mb_1_dsb,
     d_d_mki_1_dsb,
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
@@ -533,7 +537,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj),
     grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj),
     grf.VariantGroup('X1', s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj),
-    grf.VariantGroup('њX31K/ET/X32K (Øresundstog)', d_e_et_1_dsb, d_e_et_2_dsb),
+    grf.VariantGroup('њX31K/ET/X32K (Øresundståg)', d_e_et_1_dsb, d_e_et_2_dsb),
     # se emu 3rd
     s_e_C1_1_ss,
     s_e_C4_1_ss,
