@@ -27,7 +27,7 @@ COMMON_et_PROPS = dict(
 d_e_et_1_dsb = Train(
     id='d_e_et_1_dsb',
     **COMMON_et_PROPS,
-    name='њSJ X31K/DSB ET (Øresundstog)',
+    name='њSJ X31K/DSB ET (Øresundståg)',
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading=('1',),
@@ -39,7 +39,7 @@ d_e_et_1_dsb = Train(
     cargo_capacity=86,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Intercity passengers, up to 5 Øresundstog can be coupled together into a train set',
+        'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_e_et2_1_dsb',
@@ -70,7 +70,7 @@ d_e_et_1_dsb = Train(
 d_e_et_2_dsb = Train(
     id='d_e_et_2_dsb',
     **COMMON_et_PROPS,
-    name='њSJ X31K/DSB ET (Øresundstog)',
+    name='њSJ X31K/DSB ET (Øresundståg)',
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading=('1',),
@@ -82,7 +82,7 @@ d_e_et_2_dsb = Train(
     cargo_capacity=86,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Intercity passengers, up to 5 Øresundstog can be coupled together into a train set',
+        'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_e_et2_2_dsb',
