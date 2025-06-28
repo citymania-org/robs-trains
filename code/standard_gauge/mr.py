@@ -60,7 +60,7 @@ d_d_mr_1_dsb = Train(
     introduction_date=date(1978, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mrd_1_dsb',
@@ -93,7 +93,7 @@ d_d_mr_2_dsb = Train(
     introduction_date=date(1994, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mrd_2_dsb',
@@ -126,7 +126,7 @@ d_d_mr_3_dsb = Train(
     introduction_date=date(2004, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mrd_3_dsb',
@@ -159,7 +159,7 @@ d_d_mr_4_dsb = Train(
     introduction_date=date(2003, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mrd_4_dsb',
@@ -192,7 +192,7 @@ d_d_mr_5_dsb = Train(
     introduction_date=date(2005, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mrd_5_dsb',
@@ -225,7 +225,7 @@ d_d_mr_6_dsb = Train(
     introduction_date=date(2012, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mrd_6_dsb',
@@ -258,7 +258,7 @@ d_d_mr_7_dsb = Train(
     introduction_date=date(1986, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers with 1st class carriage',
+        'Use': 'Local passengers with 1st class carriage, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mrd_7_dsb',
@@ -357,7 +357,7 @@ dl_d_mr_1_dlj = Train(
     introduction_date=date(1986, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='dl_d_mrd_1_dlj',

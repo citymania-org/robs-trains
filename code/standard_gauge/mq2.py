@@ -39,7 +39,7 @@ d_d_mq2_1_dsb = Train(
     introduction_date=date(2002, 1, 1),
     cargo_capacity=127,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mq22_1_dsb',
@@ -70,7 +70,7 @@ d_d_mq2_2_dsb = Train(
     introduction_date=date(2012, 1, 1),
     cargo_capacity=127,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
     id='d_d_mq22_2_dsb',
@@ -101,7 +101,7 @@ d_d_mq2_3_dsb = Train(
     introduction_date=date(2020, 1, 1),
     cargo_capacity=127,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'Four sets bought from DSB in 2020 #4111, #4112, #4113 & #4114',
     }),
 ).add_articulated_part(
@@ -133,7 +133,7 @@ d_d_mq2_4_dsb = Train(
     introduction_date=date(2020, 1, 1),
     cargo_capacity=127,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'Sixteen sets bought from DSB in 2020 #4115 - #4130',
     }),
 ).add_articulated_part(
@@ -165,7 +165,7 @@ d_d_mq2_5_dsb = Train(
     introduction_date=date(2024, 1, 1),
     cargo_capacity=127,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'Sixteen sets bought from Arriva in 2024',
     }),
 ).add_articulated_part(
