@@ -147,7 +147,7 @@ from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d
 
 from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj
 
-from code.standard_gauge.mq2 import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb
+from code.standard_gauge.mq2 import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb, d_d_mq2_6_dsb, d_d_mq2_7_dsb, d_d_mq2_8_dsb, d_d_mq2_9_dsb, d_d_mq2_10_dsb, d_d_mq2_11_dsb
 
 from code.standard_gauge.mp import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_dsb, d_d_mg_2_dsb
 
@@ -470,7 +470,7 @@ lib.make_purchase_sprites(
     d_d_mki_1_dsb,
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
-    grf.VariantGroup('њMQ "Desiro"', d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb),
+    grf.VariantGroup('њMQ "Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
     grf.VariantGroup('њMG (IC4)', d_d_mg_1_dsb, d_d_mg_2_dsb),
     grf.VariantGroup('њMP (IC2)', d_d_mp2_1_dsb, d_d_mp2_2_dsb),
     # dk emu dc
