@@ -1299,7 +1299,16 @@
             "d_d_mq22_11_dsb": 1713,
             "__d_d_mq22_11_dsb_aa_mid": 1714,
             "__d_d_mq22_11_dsb_aa_tail": 1715,
-            "d_d_mq2_11_dsb": 1716
+            "d_d_mq2_11_dsb": 1716,
+            "__d_e_eg_1_dsb_aa_mid": 1717,
+            "__d_e_eg_1_dsb_aa_tail": 1718,
+            "d_e_eg_1_dsb": 1719,
+            "__d_e_eg_2_dsb_aa_mid": 1720,
+            "__d_e_eg_2_dsb_aa_tail": 1721,
+            "d_e_eg_2_dsb": 1722,
+            "__d_e_eg_3_dsb_aa_mid": 1723,
+            "__d_e_eg_3_dsb_aa_tail": 1724,
+            "d_e_eg_3_dsb": 1725
         }
     }
 }

@@ -27,7 +27,7 @@ COMMON_eb_PROPS = dict(
 d_e_eb_1_dsb = Train(
     **COMMON_eb_PROPS,
     id='d_e_eb_1_dsb',
-    name='DSB EB "Vectron"',
+    name='њDSB EB',
     liveries=make_psd_cc_liveries(
         'pp/eb.psd',
         shading=('1',),
@@ -46,7 +46,7 @@ d_e_eb_1_dsb = Train(
 d_e_eb_2_dsb = Train(
     **COMMON_eb_PROPS,
     id='d_e_eb_2_dsb',
-    name='DSB EB "Vectron"',
+    name='њDSB EB',
     liveries=make_psd_cc_liveries(
         'pp/eb.psd',
         shading=('1',),

@@ -123,6 +123,8 @@ from code.standard_gauge.db103 import de_e_db103_1_db, de_e_db103_2_db, de_e_db1
 
 from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
 
+from code.standard_gauge.eg import d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb
+
 from code.standard_gauge.eb import d_e_eb_1_dsb, d_e_eb_2_dsb
 
 # electric dc
@@ -458,7 +460,8 @@ lib.make_purchase_sprites(
     # dk electric 15
     # dk electric 25
     grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_3_dsb),
-    grf.VariantGroup('EB', d_e_eb_1_dsb, d_e_eb_2_dsb),
+    grf.VariantGroup('њ"EuroSprinter"', d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb),
+    grf.VariantGroup('њ"Vectron"', d_e_eb_1_dsb, d_e_eb_2_dsb),
     # dk electric 3rd
     # dk dmu
     grf.VariantGroup('ML', d_d_ml_1_dsb, d_d_ml_2_dsb),
@@ -470,7 +473,7 @@ lib.make_purchase_sprites(
     d_d_mki_1_dsb,
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
-    grf.VariantGroup('њMQ "Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
+    grf.VariantGroup('њ"Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
     grf.VariantGroup('њMG (IC4)', d_d_mg_1_dsb, d_d_mg_2_dsb),
     grf.VariantGroup('њMP (IC2)', d_d_mp2_1_dsb, d_d_mp2_2_dsb),
     # dk emu dc
