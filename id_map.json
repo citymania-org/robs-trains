@@ -1308,7 +1308,13 @@
             "d_e_eg_2_dsb": 1722,
             "__d_e_eg_3_dsb_aa_mid": 1723,
             "__d_e_eg_3_dsb_aa_tail": 1724,
-            "d_e_eg_3_dsb": 1725
+            "d_e_eg_3_dsb": 1725,
+            "__d_d_ic2_1_dsb_aa_mid": 1726,
+            "__d_d_ic2_1_dsb_aa_tail": 1727,
+            "d_d_ic22_1_dsb": 1728,
+            "__d_d_ic22_1_dsb_aa_mid": 1729,
+            "__d_d_ic22_1_dsb_aa_tail": 1730,
+            "d_d_ic2_1_dsb": 1731
         }
     }
 }
