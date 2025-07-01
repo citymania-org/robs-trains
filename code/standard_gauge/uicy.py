@@ -906,6 +906,28 @@ d_p_bns_5_dsb = Train(
     }),
 )
 
+d_p_bns_6_dsb = Train(
+    **COMMON_b_PROPS,
+    id='d_p_bns_6_dsb',
+    name='њOHJ Bns 270',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1994, 1, 1),
+    weight=40,
+    cargo_capacity=72,
+    loading_speed=20,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class DVT',
+    }),
+)
+
 COMMON_bTEST_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
@@ -1039,6 +1061,30 @@ d_p_bns_5_dsb_test = Train(
     visual_effect=(Train.VisualEffect.DISABLE, 7),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 1st & 2nd class DVT',
+        'Trivia': 'USE AT OWN RISK',
+    }),
+)
+
+d_p_bns_6_dsb_test = Train(
+    **COMMON_bTEST_PROPS,
+    id='d_p_bns_6_dsb_test',
+    name='њOHJ Bns 270',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1994, 1, 1),
+    weight=40,
+    cargo_capacity=72,
+    loading_speed=20,
+    visual_effect=(Train.VisualEffect.DISABLE, 7),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class DVT',
         'Trivia': 'USE AT OWN RISK',
     }),
 )

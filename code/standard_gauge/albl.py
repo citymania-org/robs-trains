@@ -108,6 +108,27 @@ d_p_al_4_dsb = Train(
     }),
 )
 
+d_p_al_5_dsb = Train(
+    **COMMON_albl_PROPS,
+    id='d_p_al_5_dsb',
+    name='њNSB B6',
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='norway',
+    company='na',
+    introduction_date=date(1991, 1, 1),
+    weight=36,
+    cargo_capacity=42,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st class',
+    }),
+)
+
 # bl
 
 d_p_bl_1_dsb = Train(
@@ -145,6 +166,27 @@ d_p_bl_2_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1972, 1, 1),
+    weight=34,
+    cargo_capacity=60,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+    }),
+)
+
+d_p_bl_3_dsb = Train(
+    **COMMON_albl_PROPS,
+    id='d_p_bl_3_dsb',
+    name='њOHJ Bf',
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1993, 1, 1),
     weight=34,
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({

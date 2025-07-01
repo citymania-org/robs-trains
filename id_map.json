@@ -1437,7 +1437,19 @@
             "d_p_cl_11_dsb": 1851,
             "__d_p_cl_8_dsb_aa_mid": 1852,
             "__d_p_cl_8_dsb_aa_tail": 1853,
-            "d_p_cl_8_dsb": 1854
+            "d_p_cl_8_dsb": 1854,
+            "__d_p_al_5_dsb_aa_mid": 1855,
+            "__d_p_al_5_dsb_aa_tail": 1856,
+            "d_p_al_5_dsb": 1857,
+            "__d_p_bl_3_dsb_aa_mid": 1858,
+            "__d_p_bl_3_dsb_aa_tail": 1859,
+            "d_p_bl_3_dsb": 1860,
+            "__d_p_bns_6_dsb_aa_mid": 1861,
+            "__d_p_bns_6_dsb_aa_tail": 1862,
+            "d_p_bns_6_dsb": 1863,
+            "__d_p_bns_6_dsb_test_aa_mid": 1864,
+            "__d_p_bns_6_dsb_test_aa_tail": 1865,
+            "d_p_bns_6_dsb_test": 1866
         }
     }
 }
