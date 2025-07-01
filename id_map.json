@@ -1422,7 +1422,22 @@
             "d_p_cl_5_dsb": 1836,
             "__d_p_cl_6_dsb_aa_mid": 1837,
             "__d_p_cl_6_dsb_aa_tail": 1838,
-            "d_p_cl_6_dsb": 1839
+            "d_p_cl_6_dsb": 1839,
+            "__d_p_cl_7_dsb_aa_mid": 1840,
+            "__d_p_cl_7_dsb_aa_tail": 1841,
+            "d_p_cl_7_dsb": 1842,
+            "__d_p_cl_9_dsb_aa_mid": 1843,
+            "__d_p_cl_9_dsb_aa_tail": 1844,
+            "d_p_cl_9_dsb": 1845,
+            "__d_p_cl_10_dsb_aa_mid": 1846,
+            "__d_p_cl_10_dsb_aa_tail": 1847,
+            "d_p_cl_10_dsb": 1848,
+            "__d_p_cl_11_dsb_aa_mid": 1849,
+            "__d_p_cl_11_dsb_aa_tail": 1850,
+            "d_p_cl_11_dsb": 1851,
+            "__d_p_cl_8_dsb_aa_mid": 1852,
+            "__d_p_cl_8_dsb_aa_tail": 1853,
+            "d_p_cl_8_dsb": 1854
         }
     }
 }

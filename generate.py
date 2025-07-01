@@ -195,7 +195,7 @@ from code.standard_gauge.C5 import s_e_C5_1_ss
 
 # carriages
 
-from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj, d_p_cl_1_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb, d_p_cl_4_dsb, d_p_cl_5_dsb, d_p_cl_6_dsb
+from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj, d_p_cl_1_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb, d_p_cl_4_dsb, d_p_cl_5_dsb, d_p_cl_6_dsb, d_p_cl_7_dsb, d_p_cl_8_dsb, d_p_cl_9_dsb, d_p_cl_10_dsb, d_p_cl_11_dsb
 
 from code.standard_gauge.albl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb
 
@@ -496,7 +496,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('30s stock 1st class', d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb),
     grf.VariantGroup('30s stock 1st & 2nd class', d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb),
     grf.VariantGroup('30s stock 2nd class', d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj),
-    grf.VariantGroup('њCL/CLE/CLS', d_p_cl_1_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb),
+    grf.VariantGroup('њCL/CLE/CLS', d_p_cl_1_dsb, d_p_cl_9_dsb, d_p_cl_10_dsb, d_p_cl_11_dsb, d_p_cl_8_dsb, d_p_cl_7_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb),
     grf.VariantGroup('AL/BL', d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb),
     grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb),
     grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb),

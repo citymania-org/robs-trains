@@ -552,6 +552,131 @@ d_p_cl_1_dsb = Train(
     }),
 )
 
+d_p_cl_9_dsb = Train(
+    **COMMON_CL_PROPS,
+    id='d_p_cl_9_dsb',
+    name='њHFHJ C 61',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=0,
+    introduction_date=date(1949, 1, 1),
+    weight=29,
+    cargo_capacity=71,
+    loading_speed=20,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class',
+    }),
+)
+
+d_p_cl_10_dsb = Train(
+    **COMMON_CL_PROPS,
+    id='d_p_cl_10_dsb',
+    name='њHFHJ C 61',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["CREAM"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=0,
+    introduction_date=date(1958, 1, 1),
+    weight=29,
+    cargo_capacity=71,
+    loading_speed=20,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class',
+    }),
+)
+
+d_p_cl_11_dsb = Train(
+    **COMMON_CL_PROPS,
+    id='d_p_cl_11_dsb',
+    name='њHFHJ C 61',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=0,
+    introduction_date=date(1975, 1, 1),
+    weight=29,
+    cargo_capacity=71,
+    loading_speed=20,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class',
+    }),
+)
+
+d_p_cl_8_dsb = Train(
+    **COMMON_CL_PROPS,
+    id='d_p_cl_8_dsb',
+    name='њLJ P 76',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=0,
+    introduction_date=date(1975, 1, 1),
+    weight=29,
+    cargo_capacity=87,
+    loading_speed=20,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class',
+    }),
+)
+
+d_p_cl_7_dsb = Train(
+    **COMMON_CL_PROPS,
+    id='d_p_cl_7_dsb',
+    name='њHTJ CLE 71',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=0,
+    introduction_date=date(1981, 1, 1),
+    weight=29,
+    cargo_capacity=87,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class luggage carriage',
+    }),
+)
+
 d_p_cl_2_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_2_dsb',
