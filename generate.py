@@ -95,6 +95,8 @@ from code.standard_gauge.dk467 import d_d_frichs_467_1, d_d_frichs_467_2, d_d_fr
 
 from code.standard_gauge.mxe import d_d_mx_i_1_dsb
 
+from code.standard_gauge.sbm6 import d_d_sbm6_1_dsb, d_d_sbm6_2_dsb
+
 from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs, be_d_201_5_nmbs
 
 # nohab
@@ -452,6 +454,7 @@ lib.make_purchase_sprites(
     # dk diesel
     #grf.VariantGroup('љњFrichs 467-475 "Marcipanbrød"', d_d_frichs_467_1, d_d_frichs_467_2, d_d_frichs_467_3, d_d_frichs_467_4, d_d_frichs_467_5, d_d_frichs_468_1, d_d_frichs_468_2, d_d_frichs_468_3, d_d_frichs_469_1, d_d_frichs_469_2, d_d_frichs_469_3, d_d_frichs_469_4, d_d_frichs_469_8, d_d_frichs_469_5, d_d_frichs_469_6, d_d_frichs_469_7, d_d_frichs_471_1, d_d_frichs_471_2, d_d_frichs_471_3, d_d_frichs_471_4, d_d_frichs_471_5, d_d_frichs_471_6, d_d_frichs_472_1, d_d_frichs_472_2, d_d_frichs_472_3, d_d_frichs_472_4, d_d_frichs_472_5, d_d_frichs_473_1, d_d_frichs_473_2, d_d_frichs_473_3, d_d_frichs_474_1, d_d_frichs_474_2, d_d_frichs_474_3, d_d_frichs_474_4, d_d_frichs_474_5, d_d_frichs_475_1, d_d_frichs_475_2, d_d_frichs_475_3, d_d_frichs_475_4),
     d_d_mx_i_1_dsb,
+    grf.VariantGroup('SB M 6', d_d_sbm6_1_dsb, d_d_sbm6_2_dsb),
     d_d_mye_ii_1_dsb,
     grf.VariantGroup('MX II', d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik),
     grf.VariantGroup('MY II', d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_7_dsb, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik),

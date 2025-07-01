@@ -1449,7 +1449,9 @@
             "d_p_bns_6_dsb": 1863,
             "__d_p_bns_6_dsb_test_aa_mid": 1864,
             "__d_p_bns_6_dsb_test_aa_tail": 1865,
-            "d_p_bns_6_dsb_test": 1866
+            "d_p_bns_6_dsb_test": 1866,
+            "d_d_sbm6_1_dsb": 1867,
+            "d_d_sbm6_2_dsb": 1868
         }
     }
 }
