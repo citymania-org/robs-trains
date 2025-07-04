@@ -1451,7 +1451,18 @@
             "__d_p_bns_6_dsb_test_aa_tail": 1865,
             "d_p_bns_6_dsb_test": 1866,
             "d_d_sbm6_1_dsb": 1867,
-            "d_d_sbm6_2_dsb": 1868
+            "d_d_sbm6_2_dsb": 1868,
+            "n_e_type64_1_nsb": 1869,
+            "s_e_C2_1": 1870,
+            "s_e_C3_1": 1871,
+            "s_e_C4_1_ss_car2": 1872,
+            "s_e_C4_1_sl_car2": 1873,
+            "s_e_C5_1_ss_car2": 1874,
+            "__s_d_Xo6p_1_srj_aa_mid": 1875,
+            "__s_d_Xo6p_1_srj_aa_tail": 1876,
+            "s_d_Xo6p_1_srj": 1877,
+            "s_e_M\u00d6J_2to5_1_m\u00f6j": 1878,
+            "s_e_M\u00d6J_2to5_2_m\u00f6j": 1879
         }
     }
 }
