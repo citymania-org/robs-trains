@@ -511,6 +511,81 @@ d_p_b_2_lj = Train(
     }),
 )
 
+# dance
+
+d_p_bu_1_dsb = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_bu_1_dsb',
+    name='њDSB BU',
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["CREAM"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1964, 1, 1),
+    weight=43,
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Excursion & dance carriage',
+    }),
+)
+
+d_p_bu_2_dsb = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_bu_2_dsb',
+    name='њDSB BU',
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["CREAM"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1964, 1, 1),
+    weight=43,
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Excursion & dance carriage',
+    }),
+)
+
+d_p_bu_3_dsb = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_bu_3_dsb',
+    name='њDSB Buh',
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1973, 1, 1),
+    weight=43,
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Excursion & dance carriage',
+        'Trivia': '#704 appeared in the film "Olsenbanden på Sporet" in 1975',
+    }),
+)
+
 # local
 
 COMMON_CL_PROPS = dict(
