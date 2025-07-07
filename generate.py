@@ -159,9 +159,11 @@ from code.standard_gauge.mp import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_dsb, d
 
 # emu 15
 
-from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
+from code.standard_gauge.type64 import n_e_type64_1_nsb
 
 from code.standard_gauge.Xoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
+
+from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
 
 from code.standard_gauge.X1 import s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj
 
@@ -189,11 +191,7 @@ from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog
 
 # emu 3rd
 
-from code.standard_gauge.C1 import s_e_C1_1_ss
-
-from code.standard_gauge.C4 import s_e_C4_1_ss, s_e_C4_2_sl
-
-from code.standard_gauge.C5 import s_e_C5_1_ss
+from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss
 
 # carriages
 
@@ -276,13 +274,17 @@ s_w_Hbis_sj = Train(
 
 # 891mm narrow gauge
 
-from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
-
 from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl
 
 from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
 
+from code.narrow_gauge.MÖJ_2to5 import s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj
+
 from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
+
+from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
+
+from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
 
 '''
 
@@ -533,6 +535,7 @@ lib.make_purchase_sprites(
     n_o_Wes_1_hkb,
     grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
     # no emu 15
+    n_e_type64_1_nsb,
     grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
     # no carriages
     d_p_al_5_dsb,
@@ -564,18 +567,17 @@ lib.make_purchase_sprites(
     grf.VariantGroup('X1', s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj),
     grf.VariantGroup('њX31K/ET/X32K (Øresundståg)', d_e_et_1_dsb, d_e_et_2_dsb),
     # se emu 3rd
-    s_e_C1_1_ss,
-    s_e_C4_1_ss,
-    s_e_C4_2_sl,
-    s_e_C5_1_ss,
+    grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss),
     # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
     # narrow gauge
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
-    grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
+    grf.VariantGroup('MÖJ 2-5', s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj),
     grf.VariantGroup('NKlJ AEG', s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj),
+    s_d_Xo6p_1_srj,
+    grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
     s_p_Co_1,
     s_p_UBp_ii_1,
     # junk
