@@ -511,6 +511,31 @@ d_p_b_2_lj = Train(
     }),
 )
 
+# luggage
+
+d_p_bdg_1_dsb = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_bdg_1_dsb',
+    name='њDSB BDg',
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(140),
+    introduction_date=date(1972, 1, 1),
+    weight=37,
+    cargo_capacity=40,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Luggage carriage, 2nd class',
+    }),
+)
+
 # dance
 
 d_p_bu_1_dsb = Train(

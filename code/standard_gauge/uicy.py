@@ -285,6 +285,28 @@ d_p_bd_2_dsb = Train(
     }),
 )
 
+d_p_bd_3_dsb = Train(
+    **COMMON_b_PROPS,
+    id='d_p_bd_3_dsb',
+    name='њDSB BDk',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1986, 1, 1),
+    weight=37,
+    cargo_capacity=18,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+    'Use': 'Luggage carriage with kiosk, 2nd class',
+    }),
+)
+
 d_p_bn_1_dsb = Train(
     **COMMON_b_PROPS,
     id='d_p_bn_1_dsb',
