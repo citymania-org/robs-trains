@@ -203,7 +203,7 @@ from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_
 
 from code.standard_gauge.ic5 import d_p_ic5_1_dsb, d_p_ic5_2_dsb, d_p_ic5_3_dsb, d_p_ic5_4_dsb
 
-from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb
+from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb, d_p_abs_1_dsb_test, d_p_abs_2_dsb_test, d_p_abs_3_dsb_test
 
 # wagons
 
@@ -516,6 +516,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њIC5/APO Lyntog Prototype', d_p_ic5_1_dsb, d_p_ic5_2_dsb,),
     grf.VariantGroup('B II', d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb),
     grf.VariantGroup('Bk III', d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb),
+    grf.VariantGroup('њABs', d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb),
     # dk wagons
     # dl
     # dl dmu
@@ -582,7 +583,7 @@ lib.make_purchase_sprites(
     s_p_Co_1,
     s_p_UBp_ii_1,
     # junk
-    grf.VariantGroup('њTEST VEHICLES', d_p_cl_4_dsb, d_p_cl_6_dsb, d_p_bns_1_dsb_test, d_p_ic5_3_dsb, d_p_ic5_4_dsb, d_p_bns_2_dsb_test, d_p_bns_3_dsb_test, d_p_bns_6_dsb_test, d_p_bns_4_dsb_test, d_p_bns_5_dsb_test,),
+    grf.VariantGroup('њTEST VEHICLES', d_p_cl_4_dsb, d_p_cl_6_dsb, d_p_bns_1_dsb_test, d_p_ic5_3_dsb, d_p_ic5_4_dsb, d_p_bns_2_dsb_test, d_p_bns_3_dsb_test, d_p_bns_6_dsb_test, d_p_abs_1_dsb_test, d_p_bns_4_dsb_test, d_p_bns_5_dsb_test, d_p_abs_2_dsb_test, d_p_abs_3_dsb_test,),
     
 ).set_variant_callbacks(g)))
 
