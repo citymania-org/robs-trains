@@ -42,6 +42,44 @@ d_d_mye_ii_1_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 7),
 )
 
+lu_d_1600_1_cfl = Train(
+    id='lu_d_1600_1_cfl',
+    name='CFL 1600',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('cfl1',),
+        overlay=('light'),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='luxembourg',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(120),
+    power=1750,
+    introduction_date=date(1955, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=108,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'CFL bought four of these',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 7),
+)
+
 COMMON_my_ii_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,

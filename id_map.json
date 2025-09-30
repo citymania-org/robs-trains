@@ -1498,7 +1498,10 @@
             "d_p_abs_3_dsb_test": 1912,
             "__d_d_my_ii_25_strabag_aa_mid": 1913,
             "__d_d_my_ii_25_strabag_aa_tail": 1914,
-            "d_d_my_ii_25_strabag": 1915
+            "d_d_my_ii_25_strabag": 1915,
+            "__lu_d_1600_1_cfl_aa_mid": 1916,
+            "__lu_d_1600_1_cfl_aa_tail": 1917,
+            "lu_d_1600_1_cfl": 1918
         }
     }
 }

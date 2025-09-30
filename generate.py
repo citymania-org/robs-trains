@@ -103,7 +103,7 @@ from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201
 
 from code.standard_gauge.m61 import hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav
 
-from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik, d_d_my_ii_17_bsbs, d_d_my_ii_18_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_21_mav, d_d_my_ii_22_et, d_d_my_ii_23_strabag, d_d_my_ii_24_bsx, d_d_my_ii_25_strabag
+from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik, d_d_my_ii_17_bsbs, d_d_my_ii_18_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_21_mav, d_d_my_ii_22_et, d_d_my_ii_23_strabag, d_d_my_ii_24_bsx, d_d_my_ii_25_strabag, lu_d_1600_1_cfl
         
 from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik, d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm
 
@@ -532,6 +532,9 @@ lib.make_purchase_sprites(
     grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav),
     d_d_my_ii_21_mav,
     d_d_me_ii_6_mav,
+    # lu
+    # lu diesel
+    lu_d_1600_1_cfl,
     # no
     # no emu dc
     n_o_Wes_1_hkb,
