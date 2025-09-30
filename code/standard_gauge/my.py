@@ -565,3 +565,24 @@ d_d_my_ii_24_bsx = Train(
         'Trivia': 'One locomotive bought from DSB in 1996 #1111',
     }),
 )
+
+d_d_my_ii_25_strabag = Train(
+    **COMMON_my_ii_PROPS,
+    id='d_d_my_ii_25_strabag',
+    name='STRABAG MY II',
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('strabag2',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='germany',
+    company='na',
+    introduction_date=date(2008, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from Eichholz in 2007 and later painted in the "Kansas City" design #1151',
+    }),
+)
