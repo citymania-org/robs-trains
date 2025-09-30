@@ -440,7 +440,7 @@ lib.make_purchase_sprites(
     # start
     # be
     # be diesel
-    grf.VariantGroup('HLD 201/HLD 59', be_d_201_1_nmbs, be_d_201_5_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
+    grf.VariantGroup('HLD 201', be_d_201_1_nmbs, be_d_201_5_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),

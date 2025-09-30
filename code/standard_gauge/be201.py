@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 be_d_201_1_nmbs = Train(
     id='be_d_201_1_nmbs',
-    name='NMBS HLD 201/HLD 59',
+    name='NMBS HLD 201',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/201.psd',
@@ -36,13 +36,14 @@ be_d_201_1_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 59',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 be_d_201_2_nmbs = Train(
     id='be_d_201_2_nmbs',
-    name='NMBS HLD 201/HLD 59',
+    name='NMBS HLD 201',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/201.psd',
@@ -72,13 +73,14 @@ be_d_201_2_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 59',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 be_d_201_3_nmbs = Train(
     id='be_d_201_3_nmbs',
-    name='NMBS HLD 201/HLD 59',
+    name='NMBS HLD 201',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/201.psd',
@@ -108,13 +110,14 @@ be_d_201_3_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 59',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 be_d_201_4_nmbs = Train(
     id='be_d_201_4_nmbs',
-    name='NMBS HLD 201/HLD 59',
+    name='NMBS HLD 201',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/201.psd',
@@ -144,13 +147,14 @@ be_d_201_4_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 59',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
 be_d_201_5_nmbs = Train(
     id='be_d_201_5_nmbs',
-    name='NMBS HLD 201/HLD 59',
+    name='NMBS HLD 201',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/201.psd',
@@ -180,6 +184,7 @@ be_d_201_5_nmbs = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 59',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
