@@ -50,7 +50,7 @@ lu_d_1600_1_cfl = Train(
         'pp/my.psd',
         shading=('my',),
         paint=('cfl1',),
-        overlay=('light'),
+        overlay=('bllight'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),

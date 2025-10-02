@@ -101,6 +101,8 @@ from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201
 
 # nohab
 
+from code.standard_gauge.be202 import be_d_202_1_nmbs, be_d_202_2_nmbs, be_d_202_3_nmbs, be_d_202_4_nmbs, be_d_202_5_nmbs, be_d_202_6_nmbs, be_d_202_7_nmbs, be_d_202_8_nmbs
+
 from code.standard_gauge.m61 import hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav
 
 from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik, d_d_my_ii_17_bsbs, d_d_my_ii_18_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_21_mav, d_d_my_ii_22_et, d_d_my_ii_23_strabag, d_d_my_ii_24_bsx, d_d_my_ii_25_strabag, lu_d_1600_1_cfl
@@ -441,6 +443,8 @@ lib.make_purchase_sprites(
     # be
     # be diesel
     grf.VariantGroup('HLD 201', be_d_201_1_nmbs, be_d_201_5_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
+    grf.VariantGroup('HLD 202/203', be_d_202_1_nmbs, be_d_202_2_nmbs, be_d_202_3_nmbs, be_d_202_4_nmbs),
+    grf.VariantGroup('HLD 204', be_d_202_5_nmbs, be_d_202_6_nmbs, be_d_202_7_nmbs, be_d_202_8_nmbs),
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
