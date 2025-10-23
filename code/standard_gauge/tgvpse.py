@@ -1,0 +1,410 @@
+import grf, lib
+
+from datetime import date
+
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv_1500v
+
+COMMON_pse_PROPS = dict(
+    misc_flags=Train.Flags.USE_2CC,
+    company='na',
+    power_type='dc/15kv/25kv',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=standard_gauge_25kv_15kv_1500v,
+    power=9119,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=385,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+fr_e_pse_1_sncf = Train(
+    id='fr_e_pse_1_sncf',
+    **COMMON_pse_PROPS,
+    name='њSNCF TGV PSE',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='france',
+    introduction_date=date(1981, 1, 1),
+    max_speed=Train.kmhish(270),
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'High speed passengers',
+    }),
+).add_articulated_part(
+    id='fr_e_pse2_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=100,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse3_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=100,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse4_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=49,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse5_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse6_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse7_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse8_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse9_1_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse10_1_sncf',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+fr_e_pse_2_sncf = Train(
+    id='fr_e_pse_2_sncf',
+    **COMMON_pse_PROPS,
+    name='њSNCF TGV PSE',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    country='france',
+    introduction_date=date(1996, 1, 1),
+    max_speed=Train.kmhish(300),
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'High speed passengers',
+    }),
+).add_articulated_part(
+    id='fr_e_pse2_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=100,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse3_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=100,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse4_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=49,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse5_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse6_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse7_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse8_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse9_2_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse10_2_sncf',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["BLUE"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+fr_e_pse_3_sncf = Train(
+    id='fr_e_pse_3_sncf',
+    **COMMON_pse_PROPS,
+    name='њSNCF TGV PSE',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    country='france',
+    introduction_date=date(2011, 1, 1),
+    max_speed=Train.kmhish(300),
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'High speed passengers',
+    }),
+).add_articulated_part(
+    id='fr_e_pse2_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=100,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse3_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=100,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse4_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=49,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse5_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse6_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse7_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse8_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse9_3_sncf',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='fr_e_pse10_3_sncf',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY6"],
+        cc2_replace=colours["RED"]
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
