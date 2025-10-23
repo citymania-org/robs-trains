@@ -119,9 +119,13 @@ from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3
 
 from code.standard_gauge.dre9394 import de_e_dre93_1_dr, de_e_dre94_1_dr
 
-from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj, s_e_rc36_7_sj, s_e_rc1245_1_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_6_sj
+from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj, s_e_rc36_7_sj, s_e_rc1245_1_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc36_8_sj
 
 from code.standard_gauge.db103 import de_e_db103_1_db, de_e_db103_2_db, de_e_db103_3_db, de_e_db103_4_radve
+
+from code.standard_gauge.tgvpse import fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf
+
+from code.standard_gauge.tgvm import fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf
 
 # electric 25
 
@@ -397,6 +401,7 @@ POWER_TYPE_SPRITES = {
     '15kv': purchase_icon('pelectric15.png'),
     '15kv/25kv': purchase_icon('pelectric1525.png'),
     '25kv': purchase_icon('pelectric25.png'),
+    'dc/15kv/25kv': purchase_icon('pelectric15001525.png'),
     'dc/dc3000/15kv/25kv': purchase_icon('pelectric150030001525.png'),
     'na': purchase_icon('blank.png')
 }
@@ -526,6 +531,9 @@ lib.make_purchase_sprites(
     # dl dmu
     dl_d_mr_1_dlj,
     # fr
+    # fr emu dc
+    grf.VariantGroup('њTGV PSE', fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf),
+    grf.VariantGroup('њTGV M', fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf),
     # fr carriages
     grf.VariantGroup('UIC-Y 1st class', fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf),
     grf.VariantGroup('UIC-Y 1st & 2nd class', fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf),
@@ -561,8 +569,8 @@ lib.make_purchase_sprites(
     grf.VariantGroup('TMZ I/II', d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab),
     d_d_me_ii_5_nrfab,
     # se electric 15
-    grf.VariantGroup('њRc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj),
-    grf.VariantGroup('њRc3/6', s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj),
+    grf.VariantGroup('њRc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj),
+    grf.VariantGroup('њRc3/6', s_e_rc36_1_sj, s_e_rc36_8_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj),
     grf.VariantGroup('њRm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
     s_e_rc7_1_sj,
     # se dmu
