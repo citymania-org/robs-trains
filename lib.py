@@ -135,11 +135,10 @@ class CCReplacingFileSprite(grf.FileSprite):
 
 
 class Livery:
-    def __init__(self, template, image, *, mask=None, intro_year=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+    def __init__(self, template, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
         self.template = template
         self.image = image
         self.mask = mask
-        self.intro_year = intro_year
         self.auto_cc = auto_cc
         self.cc_replace = cc_replace
         self.cc2_replace = cc2_replace
@@ -189,8 +188,8 @@ class LiveryFactory:
     def __init__(self, template):
         self.template = template
 
-    def __call__(self, image, *, mask=None, intro_year=None, auto_cc=None, cc_replace=None, cc2_replace=None):
-        return Livery(self.template, image, mask=mask, intro_year=intro_year, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
+    def __call__(self, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+        return Livery(self.template, image, mask=mask, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
 
 
 def _make_sprite_func(image_file, mask_file=None):
@@ -217,10 +216,6 @@ def _make_liveries(liveries, is_articulated=False):
             'name': f' ({name})',
             'sprites': l.get_sprites(),
         }
-        if l.intro_year is not None:
-            if is_articulated:
-                raise ValueError('Articulated part livery can''t have intro_year')
-            data['intro_year'] = l.intro_year
         res.append(data)
 
     return res
@@ -228,10 +223,7 @@ def _make_liveries(liveries, is_articulated=False):
 
 class Train(grf.Train):
     def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, **kw):
-        # Sort needed for intro year switch
         liveries = _make_liveries(liveries)
-        # TODO make it a check instead of sorting, livery order is important for version compatibility
-        liveries.sort(key=lambda l: l.get('intro_year', 0))
         if visual_effect != None:
             if visual_effect[1] >= 24:
                 raise Exception("Train visual effect may not be outside the train")
@@ -260,28 +252,10 @@ class Train(grf.Train):
         if len(self.liveries) <= 1:
             return
 
-        year_count = Counter(l.get('intro_ryear', 0) for l in liveries)
-
-        cur_count = year_count.get(0, 0)
-        code = []
-
-        if len(self.liveries) == cur_count:
-            code.append('cargo_subtype')
-        else:
-            code.append(f'TEMP[0] = {cur_count}')
-            for year, count in year_count.items():
-                if year == 0:
-                    continue
-                if count == 1:
-                    code.append(f'TEMP[0] = (current_year >= {year}) + TEMP[0]')
-                else:
-                    code.append(f'TEMP[0] = (current_year >= {year}) * {count} + TEMP[0]')
-            code.append('(cargo_subtype >= TEMP[0]) * -1000 + cargo_subtype')
-
         callbacks.cargo_subtype_text = grf.Switch(
             ranges={i: g.strings.add(l['name']).get_global_id() for i, l in enumerate(self.liveries)},
             default=0x400,
-            code=code,
+            code='cargo_subtype',
         )
         
     def _add_auto_articulated_parts(self, id, mid_shorten, mid_liveries, art_shorten, art_liveries, props):
@@ -1086,7 +1060,7 @@ class PSDLivery:
             )
 
 
-    def __init__(self, template, paint_palette, path, *, shading=None, paint=None, overlay=None, intro_year=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+    def __init__(self, template, paint_palette, path, *, shading=None, paint=None, overlay=None, auto_cc=None, cc_replace=None, cc2_replace=None):
         if shading is None and overlay is None:
             raise ValueError('Sprite must use shading or overlay')
         self.template = template
@@ -1115,7 +1089,6 @@ class PSDLivery:
         self.paint = mklist(paint)
         self.overlay = mklist(overlay)
 
-        self.intro_year = intro_year
         self.auto_cc = auto_cc
         self.cc_replace = cc_replace
         self.cc2_replace = cc2_replace
