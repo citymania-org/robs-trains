@@ -435,7 +435,7 @@ s_e_x12_1_sj = Train(
         'pp/11Template.psd',
         shading=('1',),
         paint=('2',),
-        cc_replace=colours["RED"],
+        cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
     introduction_date=date(1991, 1, 1),
@@ -450,8 +450,68 @@ s_e_x12_1_sj = Train(
         'pp/11Template.psd',
         shading='1',
         paint='2',
-        cc_replace=colours['RED'],
+        cc_replace=colours['BLUE'],
         cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x12_2_sj = Train(
+    id='s_e_x12_2_sj',
+    **COMMON_x12_PROPS,
+    name='њVästtrafik X12',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["GREY4"]
+    ),
+    introduction_date=date(2008, 1, 1),
+    cargo_capacity=114,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x122_2_sj',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x12_3_sj = Train(
+    id='s_e_x12_3_sj',
+    **COMMON_x12_PROPS,
+    name='њSJ X12',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY4"],
+        cc2_replace=colours["GREY7"]
+    ),
+    introduction_date=date(2012, 1, 1),
+    cargo_capacity=114,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x122_3_sj',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY7'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -486,7 +546,7 @@ s_e_x14_1_sj = Train(
         'pp/11Template.psd',
         shading=('1',),
         paint=('2',),
-        cc_replace=colours["RED"],
+        cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
     introduction_date=date(1994, 1, 1),
@@ -501,8 +561,158 @@ s_e_x14_1_sj = Train(
         'pp/11Template.psd',
         shading='1',
         paint='2',
-        cc_replace=colours['RED'],
+        cc_replace=colours['BLUE'],
         cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x14_2_sj = Train(
+    id='s_e_x14_2_sj',
+    **COMMON_x14_PROPS,
+    name='њGL X14',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    introduction_date=date(1994, 1, 1),
+    cargo_capacity=142,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x142_2_sj',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x14_3_sj = Train(
+    id='s_e_x14_3_sj',
+    **COMMON_x14_PROPS,
+    name='њÖstgötatrafiken X14',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY1"],
+        cc2_replace=colours["RED"]
+    ),
+    introduction_date=date(1994, 1, 1),
+    cargo_capacity=142,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x142_3_sj',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY1'],
+        cc2_replace=colours['RED'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x14_4_sj = Train(
+    id='s_e_x14_4_sj',
+    **COMMON_x14_PROPS,
+    name='њÖstgötatrafiken X14',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["ORANGE"]
+    ),
+    introduction_date=date(2003, 1, 1),
+    cargo_capacity=142,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x142_4_sj',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['ORANGE'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x14_5_sj = Train(
+    id='s_e_x14_5_sj',
+    **COMMON_x14_PROPS,
+    name='њVästtrafik X14',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["GREY4"]
+    ),
+    introduction_date=date(2010, 1, 1),
+    cargo_capacity=142,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x142_5_sj',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x14_6_sj = Train(
+    id='s_e_x14_6_sj',
+    **COMMON_x14_PROPS,
+    name='њKrösatågen X14',
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["GREY1"]
+    ),
+    introduction_date=date(2015, 1, 1),
+    cargo_capacity=142,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x142_6_sj',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/11Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
