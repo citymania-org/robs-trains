@@ -838,7 +838,10 @@ class PSDImageFile(grf.ImageFile):
 
             def layer_filter(layer):
                 return layer.name in kw
-            self._images[kw] = psd.composite(layer_filter=layer_filter)
+            # Use force=True to force RGBA output even if psd mode is RGB
+            img = psd.composite(layer_filter=layer_filter, force=True)
+            assert img.mode == 'RGBA'
+            self._images[kw] = img
 
     def get_image(self, **kw):
         self.load()
