@@ -153,6 +153,8 @@ from code.standard_gauge.Yo import s_d_Yo_1_sj, s_d_Yo_2_hnj
 
 from code.standard_gauge.Yo1s import s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj
 
+from code.standard_gauge.ma import d_d_ma_1_dsb, d_d_ma_2_dsb, d_d_ma_3_dsb, d_d_ma_4_dsb, d_d_ma_5_dsb, d_d_ma_6_dsb, d_d_ma_7_dsb, d_d_ma_8_dsb, d_d_ma_9_dsb, d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb
+
 from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d_mr_4_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_7_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb, dl_d_mr_1_dlj
 
 from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj
@@ -491,6 +493,10 @@ lib.make_purchase_sprites(
     d_d_ms_1_dsb,
     d_d_mb_1_dsb,
     d_d_mki_1_dsb,
+    grf.VariantGroup('њMA (Part 1)', d_d_ma_1_dsb, d_d_ma_2_dsb, d_d_ma_3_dsb),
+    grf.VariantGroup('њMA (Part 2)', d_d_ma_4_dsb, d_d_ma_5_dsb, d_d_ma_6_dsb),
+    grf.VariantGroup('њMA (Part 1 reversed)', d_d_ma_7_dsb, d_d_ma_8_dsb, d_d_ma_9_dsb),
+    grf.VariantGroup('њMA (Part 2 reversed)', d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb),
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
     d_d_ic2_1_dsb,

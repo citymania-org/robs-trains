@@ -1,0 +1,708 @@
+import grf, lib
+
+from datetime import date
+
+from common import Train, colours, make_psd_cc_liveries, standard_gauge
+
+COMMON_ma_PROPS = dict(
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=1100,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_1_dsb = Train(
+    id='d_d_ma_1_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 1)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1963, 1, 1),
+    weight=132,
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'MA-AM-BR-BS',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_1_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_1_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_1_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_2_dsb = Train(
+    id='d_d_ma_2_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 1)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1972, 1, 1),
+    weight=132,
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'MA-AM-BR-BS',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_2_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_2_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_2_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_3_dsb = Train(
+    id='d_d_ma_3_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 1)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    country='denmark',
+    introduction_date=date(1983, 1, 1),
+    weight=132,
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'MA-AM-BMK-BS',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_3_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=21,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_3_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_3_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_4_dsb = Train(
+    id='d_d_ma_4_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 2)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1963, 1, 1),
+    weight=134,
+    cargo_capacity=131,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'MA-AM-BM-BS',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_4_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_4_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_4_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_5_dsb = Train(
+    id='d_d_ma_5_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 2)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1972, 1, 1),
+    weight=134,
+    cargo_capacity=131,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'MA-AM-BM-BS',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_5_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_5_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_5_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_6_dsb = Train(
+    id='d_d_ma_6_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 2)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    country='denmark',
+    introduction_date=date(1983, 1, 1),
+    weight=134,
+    cargo_capacity=131,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'MA-AM-BM-BS',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_6_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_6_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_6_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_7_dsb = Train(
+    id='d_d_ma_7_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 1 reversed)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1963, 1, 1),
+    weight=132,
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'BS-BR-AM-MA',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_7_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_7_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_7_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_8_dsb = Train(
+    id='d_d_ma_8_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 1 reversed)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1972, 1, 1),
+    weight=132,
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'BS-BR-AM-MA',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_8_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_8_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_8_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_9_dsb = Train(
+    id='d_d_ma_9_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 1 reversed)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    country='denmark',
+    introduction_date=date(1983, 1, 1),
+    weight=132,
+    cargo_capacity=100,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'BS-BMK-AM-MA',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_9_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=21,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_9_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_9_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_10_dsb = Train(
+    id='d_d_ma_10_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 2 reversed)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1963, 1, 1),
+    weight=134,
+    cargo_capacity=131,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'BS-BM-AM-MA',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_10_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_10_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_10_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_11_dsb = Train(
+    id='d_d_ma_11_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 2 reversed)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    introduction_date=date(1972, 1, 1),
+    weight=134,
+    cargo_capacity=131,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'BS-BM-AM-MA',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_11_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_11_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_11_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ma_12_dsb = Train(
+    id='d_d_ma_12_dsb',
+    **COMMON_ma_PROPS,
+    name='њDSB MA (Part 2 reversed)',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    country='denmark',
+    introduction_date=date(1983, 1, 1),
+    weight=134,
+    cargo_capacity=131,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Formation': 'BS-BM-AM-MA',
+    }),
+).add_articulated_part(
+    id='d_d_ma2_12_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma3_12_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='d_d_ma4_12_dsb',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY4'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
