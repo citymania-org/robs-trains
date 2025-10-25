@@ -4,51 +4,415 @@ from datetime import date
 
 from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
 
-COMMON_x10_PROPS = dict(
-    length=11,
+COMMON_x60_PROPS = dict(
+    length=9,
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
     company='na',
     power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_15kv,
-    max_speed=Train.kmhish(140),
-    power=1717,
+    max_speed=Train.kmhish(160),
+    power=4023,
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
-    weight=100,
+    weight=206,
+    loading_speed=30,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-s_e_x10_1_sl = Train(
-    id='s_e_x10_1_sl',
-    **COMMON_x10_PROPS,
-    name='љњSL X10',
+s_e_x60_1_sj = Train(
+    id='s_e_x60_1_sj',
+    **COMMON_x60_PROPS,
+    name='љњSL X60',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["GREY1"],
+        cc2_replace=colours["SLBLUE"]
+    ),
+    introduction_date=date(2005, 1, 1),
+    cargo_capacity=200,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x602_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY1'],
+        cc2_replace=colours['SLBLUE'],
+    ),
+    cargo_capacity=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x603_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY1'],
+        cc2_replace=colours['SLBLUE'],
+    ),
+    cargo_capacity=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x604_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY1'],
+        cc2_replace=colours['SLBLUE'],
+    ),
+    cargo_capacity=200,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x605_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY1'],
+        cc2_replace=colours['SLBLUE'],
+    ),
+    cargo_capacity=100,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x606_1_sj',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['GREY1'],
+        cc2_replace=colours['SLBLUE'],
+    ),
+    cargo_capacity=24,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_x61_PROPS = dict(
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='15kv',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=standard_gauge_15kv,
+    max_speed=Train.kmhish(160),
+    power=2682,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=154,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x61_1_sj = Train(
+    id='s_e_x61_1_sj',
+    **COMMON_x61_PROPS,
+    name='љњSkånetrafiken X61',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["LAVENDER"],
+        cc2_replace=colours["MAUVE"]
+    ),
+    introduction_date=date(2009, 1, 1),
+    cargo_capacity=200,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x612_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['LAVENDER'],
+        cc2_replace=colours['MAUVE'],
+    ),
+    cargo_capacity=30,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x613_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['LAVENDER'],
+        cc2_replace=colours['MAUVE'],
+    ),
+    cargo_capacity=2,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x614_1_sj',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['LAVENDER'],
+        cc2_replace=colours['MAUVE'],
+    ),
+    cargo_capacity=2,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x61_2_sj = Train(
+    id='s_e_x61_2_sj',
+    **COMMON_x61_PROPS,
+    name='љњÖstgötatrafiken X61',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["RED"],
-        cc2_replace=colours["RED"]
+        cc2_replace=colours["ORANGE"]
     ),
-    introduction_date=date(1982, 1, 1),
-    cargo_capacity=183,
+    introduction_date=date(2010, 1, 1),
+    cargo_capacity=200,
+    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'meatball transport',
+        'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
-    id='s_e_x102_1_sl',
-    length=11,
+    id='s_e_x612_2_sj',
+    length=8,
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
+        'pp/8Template.psd',
         shading='1',
         paint='2',
         cc_replace=colours['RED'],
-        cc2_replace=colours['RED'],
+        cc2_replace=colours['ORANGE'],
+    ),
+    cargo_capacity=30,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x613_2_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['ORANGE'],
+    ),
+    cargo_capacity=2,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x614_2_sj',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['ORANGE'],
+    ),
+    cargo_capacity=2,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x61_3_sj = Train(
+    id='s_e_x61_3_sj',
+    **COMMON_x61_PROPS,
+    name='љњVästtrafik X61',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["GREY4"]
+    ),
+    introduction_date=date(2011, 1, 1),
+    cargo_capacity=200,
+    loading_speed=15,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x612_3_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x613_3_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=6,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x614_3_sj',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x61_4_sj = Train(
+    id='s_e_x61_4_sj',
+    **COMMON_x61_PROPS,
+    name='љњVästtrafik X61',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["GREY4"]
+    ),
+    introduction_date=date(2025, 1, 1),
+    cargo_capacity=200,
+    loading_speed=15,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x612_4_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x613_4_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=6,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x614_4_sj',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['GREY4'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_x62_PROPS = dict(
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='15kv',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=standard_gauge_15kv,
+    max_speed=Train.kmhish(180),
+    power=2682,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=155,
+    loading_speed=10,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_x62_1_sj = Train(
+    id='s_e_x62_1_sj',
+    **COMMON_x62_PROPS,
+    name='љњNorrtåg X62',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["SKY"]
+    ),
+    introduction_date=date(2011, 1, 1),
+    cargo_capacity=191,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Meatball transport',
+    }),
+).add_articulated_part(
+    id='s_e_x622_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['SKY'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x623_1_sj',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['SKY'],
+    ),
+    cargo_capacity=1,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='s_e_x624_1_sj',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['BLUE'],
+        cc2_replace=colours['SKY'],
     ),
     cargo_capacity=1,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,

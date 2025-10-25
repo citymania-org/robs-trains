@@ -177,6 +177,8 @@ from code.standard_gauge.X1 import s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj
 
 from code.standard_gauge.x10111214 import s_e_x10_1_sj, s_e_x10_2_sj, s_e_x10_3_sj, s_e_x10_4_sj, s_e_x10_5_sj, s_e_x10_6_sj, s_e_x10_7_sj, s_e_x11_1_sj, s_e_x11_2_sj, s_e_x11_3_sj, s_e_x11_4_sj, s_e_x11_5_sj, s_e_x12_1_sj, s_e_x12_2_sj, s_e_x12_3_sj, s_e_x14_1_sj, s_e_x14_2_sj, s_e_x14_3_sj, s_e_x14_4_sj, s_e_x14_5_sj, s_e_x14_6_sj
 
+from code.standard_gauge.x606162 import s_e_x60_1_sj, s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj, s_e_x62_1_sj
+
 from code.standard_gauge.type69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb
 
 # emu 25
@@ -595,6 +597,9 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њX12', s_e_x12_1_sj, s_e_x12_2_sj, s_e_x12_3_sj),
     grf.VariantGroup('њX14', s_e_x14_1_sj, s_e_x14_2_sj, s_e_x14_3_sj, s_e_x14_4_sj, s_e_x14_5_sj, s_e_x14_6_sj),
     grf.VariantGroup('њX31K/ET/X32K (Øresundståg)', d_e_et_1_dsb, d_e_et_2_dsb),
+    s_e_x60_1_sj, # љ because the lengths may be wrong
+    grf.VariantGroup('љњX61', s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj), # љ because the lengths may be wrong
+    s_e_x62_1_sj, # љ because the lengths may be wrong
     # se emu 3rd
     grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss),
     # se wagons
