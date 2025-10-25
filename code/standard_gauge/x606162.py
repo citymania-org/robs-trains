@@ -5,7 +5,7 @@ from datetime import date
 from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
 
 COMMON_x60_PROPS = dict(
-    length=9,
+    length=10,
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
     company='na',
@@ -28,9 +28,9 @@ COMMON_x60_PROPS = dict(
 s_e_x60_1_sj = Train(
     id='s_e_x60_1_sj',
     **COMMON_x60_PROPS,
-    name='љњSL X60',
+    name='њSL X60',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["GREY1"],
@@ -91,9 +91,9 @@ s_e_x60_1_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x606_1_sj',
-    length=9,
+    length=10,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading='1',
         paint='2',
         cc_replace=colours['GREY1'],
@@ -104,7 +104,7 @@ s_e_x60_1_sj = Train(
 )
 
 COMMON_x61_PROPS = dict(
-    length=9,
+    length=10,
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
     company='na',
@@ -126,9 +126,9 @@ COMMON_x61_PROPS = dict(
 s_e_x61_1_sj = Train(
     id='s_e_x61_1_sj',
     **COMMON_x61_PROPS,
-    name='љњSkånetrafiken X61',
+    name='њSkånetrafiken X61',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["LAVENDER"],
@@ -166,9 +166,9 @@ s_e_x61_1_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_1_sj',
-    length=9,
+    length=10,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading='1',
         paint='2',
         cc_replace=colours['LAVENDER'],
@@ -181,9 +181,9 @@ s_e_x61_1_sj = Train(
 s_e_x61_2_sj = Train(
     id='s_e_x61_2_sj',
     **COMMON_x61_PROPS,
-    name='љњÖstgötatrafiken X61',
+    name='њÖstgötatrafiken X61',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["RED"],
@@ -221,9 +221,9 @@ s_e_x61_2_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_2_sj',
-    length=9,
+    length=10,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading='1',
         paint='2',
         cc_replace=colours['RED'],
@@ -236,9 +236,9 @@ s_e_x61_2_sj = Train(
 s_e_x61_3_sj = Train(
     id='s_e_x61_3_sj',
     **COMMON_x61_PROPS,
-    name='љњVästtrafik X61',
+    name='њVästtrafik X61',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["YELLOW"],
@@ -276,9 +276,9 @@ s_e_x61_3_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_3_sj',
-    length=9,
+    length=10,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading='1',
         paint='2',
         cc_replace=colours['YELLOW'],
@@ -291,9 +291,9 @@ s_e_x61_3_sj = Train(
 s_e_x61_4_sj = Train(
     id='s_e_x61_4_sj',
     **COMMON_x61_PROPS,
-    name='љњVästtrafik X61',
+    name='њVästtrafik X61',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["BLUE"],
@@ -331,9 +331,9 @@ s_e_x61_4_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_4_sj',
-    length=9,
+    length=10,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading='1',
         paint='2',
         cc_replace=colours['BLUE'],
@@ -344,7 +344,7 @@ s_e_x61_4_sj = Train(
 )
 
 COMMON_x62_PROPS = dict(
-    length=9,
+    length=10,
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
     company='na',
@@ -367,9 +367,9 @@ COMMON_x62_PROPS = dict(
 s_e_x62_1_sj = Train(
     id='s_e_x62_1_sj',
     **COMMON_x62_PROPS,
-    name='љњNorrtåg X62',
+    name='њNorrtåg X62',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading=('1',),
         paint=('2',),
         cc_replace=colours["BLUE"],
@@ -406,9 +406,9 @@ s_e_x62_1_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x624_1_sj',
-    length=9,
+    length=10,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
+        'pp/10Template.psd',
         shading='1',
         paint='2',
         cc_replace=colours['BLUE'],
