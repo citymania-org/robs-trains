@@ -170,9 +170,10 @@ d_d_y4_1_dsb = Train(
     **COMMON_y4_PROPS,
     name='YM-YS',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('y41',),
+        paint=('y41lj1',),
+        overlay=('y41light'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -507,7 +508,7 @@ d_d_y8_1_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
         shading=('y8',),
-        paint=('lj1',),
+        paint=('y8lj1',),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
