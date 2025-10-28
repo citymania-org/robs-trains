@@ -1,25 +1,3 @@
-COMMON_y6_PROPS = dict( # this is based on the OHJ YM 51 and LJ YS 80
-    length=8,
-    misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(105),
-    power=360,
-    vehicle_life=30,
-    model_life=30,
-    climates_available=grf.ALL_CLIMATES,
-    weight=44,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cost_factor=25,
-    dual_headed=1,
-    cargo_capacity=105,
-    loading_speed=10,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-
 d_d_y6_1_dsb = Train(
     id='d_d_y6_1_dsb',
     **COMMON_y6_PROPS,
@@ -110,28 +88,6 @@ d_d_y6_3_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     cargo_capacity=1,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-
-COMMON_y7_PROPS = dict( # this is based on the OHJ YM 51
-    length=8,
-    misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(105),
-    power=720,
-    vehicle_life=30,
-    model_life=30,
-    climates_available=grf.ALL_CLIMATES,
-    weight=52,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cost_factor=25,
-    dual_headed=1,
-    cargo_capacity=99,
-    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
