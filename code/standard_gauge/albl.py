@@ -111,11 +111,11 @@ d_p_al_4_dsb = Train(
 d_p_al_5_dsb = Train(
     **COMMON_albl_PROPS,
     id='d_p_al_5_dsb',
-    name='њNSB B6',
+    name='NSB B6',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/albl.psd',
+        shading=('al',),
+        paint=('nsb1',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -176,11 +176,11 @@ d_p_bl_2_dsb = Train(
 d_p_bl_3_dsb = Train(
     **COMMON_albl_PROPS,
     id='d_p_bl_3_dsb',
-    name='њOHJ Bf',
+    name='OHJ Bf',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/albl.psd',
+        shading=('bl',),
+        paint=('ohj1',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
