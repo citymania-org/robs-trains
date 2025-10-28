@@ -263,8 +263,8 @@ d_d_y6_1_dsb = Train(
     }),
 )
 
-d_d_y6_1_dsb = Train(
-    id='d_d_y6_1_dsb',
+d_d_y6_2_dsb = Train(
+    id='d_d_y6_2_dsb',
     **COMMON_y6_PROPS,
     name='VLTJ YM',
     liveries=make_psd_cc_liveries(
@@ -282,8 +282,8 @@ d_d_y6_1_dsb = Train(
     }),
 )
 
-d_d_y6_1_dsb = Train(
-    id='d_d_y6_1_dsb',
+d_d_y6_3_dsb = Train(
+    id='d_d_y6_3_dsb',
     **COMMON_y6_PROPS,
     name='VLTJ YM',
     liveries=make_psd_cc_liveries(
@@ -341,8 +341,8 @@ d_d_y7_1_dsb = Train(
     }),
 )
 
-d_d_y7_1_dsb = Train(
-    id='d_d_y7_1_dsb',
+d_d_y7_2_dsb = Train(
+    id='d_d_y7_2_dsb',
     **COMMON_y7_PROPS,
     name='VLTJ YM (rear)',
     liveries=make_psd_cc_liveries(
@@ -360,8 +360,8 @@ d_d_y7_1_dsb = Train(
     }),
 )
 
-d_d_y7_1_dsb = Train(
-    id='d_d_y7_1_dsb',
+d_d_y7_3_dsb = Train(
+    id='d_d_y7_3_dsb',
     **COMMON_y7_PROPS,
     name='VLTJ YM (rear)',
     liveries=make_psd_cc_liveries(
