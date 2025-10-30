@@ -541,11 +541,11 @@ d_p_bdg_1_dsb = Train(
 d_p_bu_1_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_bu_1_dsb',
-    name='њDSB BU',
+    name='DSB BU',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('au',),
+        paint=('bu1',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["CREAM"]
     ),
@@ -565,11 +565,11 @@ d_p_bu_1_dsb = Train(
 d_p_bu_2_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_bu_2_dsb',
-    name='њDSB BU',
+    name='DSB BU',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('au',),
+        paint=('bu2',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["CREAM"]
     ),
@@ -589,11 +589,11 @@ d_p_bu_2_dsb = Train(
 d_p_bu_3_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_bu_3_dsb',
-    name='њDSB Buh',
+    name='DSB Buh',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('au',),
+        paint=('bu3',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),

@@ -481,7 +481,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('30s stock 2nd class', d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj),
     grf.VariantGroup('њCL/CLE/CLS', d_p_cl_1_dsb, d_p_cl_9_dsb, d_p_cl_10_dsb, d_p_cl_11_dsb, d_p_cl_8_dsb, d_p_cl_7_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb),
     grf.VariantGroup('AL/BL', d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb, d_p_bl_3_dsb),
-    grf.VariantGroup('њExcursion & dance carriages', d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb),
+    grf.VariantGroup('Excursion & dance carriages', d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb),
     grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb),
     grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb),
     grf.VariantGroup('UIC-Y 2nd class', d_p_b_1_dsb, d_p_b_i_1_dsb),
