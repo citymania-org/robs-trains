@@ -37,7 +37,7 @@ fr_e_m_1_sncf = Train(
     introduction_date=date(2026, 1, 1),
     max_speed=Train.kmhish(320),
     weight=360,
-    cargo_capacity=100,
+    cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
         'Use': 'High speed passengers',
     }),
@@ -51,7 +51,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m3_1_sncf',
@@ -63,7 +64,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m4_1_sncf',
@@ -75,7 +77,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m5_1_sncf',
@@ -87,7 +90,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m6_1_sncf',
@@ -99,7 +103,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=97,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m7_1_sncf',
@@ -111,7 +116,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m8_1_sncf',
@@ -123,7 +129,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m9_1_sncf',
@@ -135,7 +142,8 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=66,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -155,7 +163,7 @@ fr_e_m_2_sncf = Train(
     introduction_date=date(2026, 1, 1),
     max_speed=Train.kmhish(320),
     weight=380,
-    cargo_capacity=100,
+    cargo_capacity=67,
     additional_text=grf.fake_vehicle_info({
         'Use': 'High speed passengers',
     }),
@@ -169,7 +177,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m3_2_sncf',
@@ -181,7 +190,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m4_2_sncf',
@@ -193,7 +203,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m5_2_sncf',
@@ -205,7 +216,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m6_2_sncf',
@@ -217,7 +229,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m7_2_sncf',
@@ -230,6 +243,7 @@ fr_e_m_2_sncf = Train(
         cc2_replace=colours["GREY1"]
     ),
     cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m8_2_sncf',
@@ -241,7 +255,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m9_2_sncf',
@@ -253,7 +268,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m10_2_sncf',
@@ -265,7 +281,8 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -285,7 +302,7 @@ fr_e_m_3_sncf = Train(
     introduction_date=date(2026, 1, 1),
     max_speed=Train.kmhish(320),
     weight=400,
-    cargo_capacity=100,
+    cargo_capacity=70,
     additional_text=grf.fake_vehicle_info({
         'Use': 'High speed passengers',
     }),
@@ -299,7 +316,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m3_3_sncf',
@@ -311,7 +329,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m4_3_sncf',
@@ -323,7 +342,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m5_3_sncf',
@@ -335,7 +355,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m6_3_sncf',
@@ -347,7 +368,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m7_3_sncf',
@@ -359,7 +381,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=100,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m8_3_sncf',
@@ -371,7 +394,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=37,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m9_3_sncf',
@@ -383,7 +407,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m10_3_sncf',
@@ -395,7 +420,8 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='fr_e_m11_3_sncf',
@@ -407,6 +433,7 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    cargo_capacity=1,
+    cargo_capacity=67,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
