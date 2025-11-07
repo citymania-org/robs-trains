@@ -36,7 +36,7 @@ d_e_et_1_dsb = Train(
         cc2_replace=colours["DPURPLE"]
     ),
     introduction_date=date(2000, 1, 1),
-    cargo_capacity=86,
+    cargo_capacity=74,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
@@ -51,7 +51,8 @@ d_e_et_1_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['DPURPLE'],
     ),
-    cargo_capacity=58,
+    cargo_capacity=74,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_et3_1_dsb',
@@ -63,7 +64,8 @@ d_e_et_1_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['DPURPLE'],
     ),
-    cargo_capacity=79,
+    cargo_capacity=75,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -79,7 +81,7 @@ d_e_et_2_dsb = Train(
         cc2_replace=colours["GREY9"]
     ),
     introduction_date=date(2018, 1, 1),
-    cargo_capacity=86,
+    cargo_capacity=74,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
@@ -94,7 +96,8 @@ d_e_et_2_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['GREY9'],
     ),
-    cargo_capacity=58,
+    cargo_capacity=74,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_et3_2_dsb',
@@ -106,6 +109,7 @@ d_e_et_2_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['GREY9'],
     ),
-    cargo_capacity=79,
+    cargo_capacity=75,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

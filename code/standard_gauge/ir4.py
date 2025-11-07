@@ -48,6 +48,7 @@ d_e_er_1_dsb = Train(
         cc2_replace=colours['RED'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er3_1_dsb',
@@ -60,6 +61,7 @@ d_e_er_1_dsb = Train(
         cc2_replace=colours['RED'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er4_1_dsb',
@@ -72,6 +74,7 @@ d_e_er_1_dsb = Train(
         cc2_replace=colours['RED'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -119,6 +122,7 @@ d_e_er_2_dsb = Train(
         cc2_replace=colours['COLBALT'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er3_2_dsb',
@@ -131,6 +135,7 @@ d_e_er_2_dsb = Train(
         cc2_replace=colours['COLBALT'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er4_2_dsb',
@@ -143,6 +148,7 @@ d_e_er_2_dsb = Train(
         cc2_replace=colours['COLBALT'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -190,6 +196,7 @@ d_e_er_3_dsb = Train(
         cc2_replace=colours['COLBALT'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er3_3_dsb',
@@ -202,6 +209,7 @@ d_e_er_3_dsb = Train(
         cc2_replace=colours['COLBALT'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er4_3_dsb',
@@ -214,6 +222,7 @@ d_e_er_3_dsb = Train(
         cc2_replace=colours['COLBALT'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -261,6 +270,7 @@ d_e_er_4_dsb = Train(
         cc2_replace=colours['GREY10'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er3_4_dsb',
@@ -273,6 +283,7 @@ d_e_er_4_dsb = Train(
         cc2_replace=colours['GREY10'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_er4_4_dsb',
@@ -285,5 +296,6 @@ d_e_er_4_dsb = Train(
         cc2_replace=colours['GREY10'],
     ),
     cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

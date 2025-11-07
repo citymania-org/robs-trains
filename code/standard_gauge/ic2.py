@@ -37,7 +37,7 @@ d_d_ic2_1_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(1997, 1, 1),
-    cargo_capacity=123,
+    cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
         'Trivia': 'All thirteen locomotives obtained by RTOG in 2009 and later LT in 2015',
@@ -52,6 +52,7 @@ d_d_ic2_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['DBLUE'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=62,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
