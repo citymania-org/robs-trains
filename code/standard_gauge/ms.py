@@ -30,7 +30,7 @@ d_d_ms_1_dsb = Train(
     weight=138,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=154,
+    cargo_capacity=52,
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -47,7 +47,8 @@ d_d_ms_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_d_ms3_1_dsb',
@@ -59,7 +60,8 @@ d_d_ms_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -89,7 +91,7 @@ d_d_mb_1_dsb = Train(
     weight=171,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=203,
+    cargo_capacity=52,
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -106,7 +108,8 @@ d_d_mb_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_d_mb3_1_dsb',
@@ -118,7 +121,8 @@ d_d_mb_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     ).add_articulated_part(
     id='d_d_mb4_1_dsb',
@@ -130,6 +134,7 @@ d_d_mb_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

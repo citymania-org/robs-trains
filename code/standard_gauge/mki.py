@@ -38,7 +38,7 @@ d_d_mki_1_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(1943, 1, 1),
-    cargo_capacity=34,
+    cargo_capacity=58,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers & light freight',
     }),
@@ -53,6 +53,7 @@ d_d_mki_1_dsb = Train(
         cc_replace=colours['MAROON'],
         cc2_replace=colours['MAROON'],
     ),
-    cargo_capacity=82,
+    cargo_capacity=58,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
