@@ -37,7 +37,7 @@ d_d_mp2_1_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2011, 1, 1),
-    cargo_capacity=112,
+    cargo_capacity=57,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2004, all retired by 2016',
@@ -52,7 +52,8 @@ d_d_mp2_1_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -69,7 +70,7 @@ d_d_mp2_2_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2012, 1, 1),
-    cargo_capacity=112,
+    cargo_capacity=57,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2004, all retired by 2016',
@@ -84,7 +85,8 @@ d_d_mp2_2_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -121,7 +123,7 @@ d_d_mg_1_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2007, 1, 1),
-    cargo_capacity=201,
+    cargo_capacity=51,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2003',
@@ -136,7 +138,8 @@ d_d_mg_1_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_d_mg3_1_dsb',
@@ -148,7 +151,8 @@ d_d_mg_1_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_d_mg4_1_dsb',
@@ -160,7 +164,8 @@ d_d_mg_1_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -177,7 +182,7 @@ d_d_mg_2_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2012, 1, 1),
-    cargo_capacity=201,
+    cargo_capacity=51,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2003',
@@ -192,7 +197,8 @@ d_d_mg_2_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_d_mg3_2_dsb',
@@ -204,7 +210,8 @@ d_d_mg_2_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_d_mg4_2_dsb',
@@ -216,6 +223,7 @@ d_d_mg_2_dsb = Train(
         cc_replace=colours['GREY7'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=51,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

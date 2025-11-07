@@ -37,7 +37,7 @@ d_p_ic5_1_dsb = Train(
     company='na',
     introduction_date=date(1981, 1, 1),
     power=0,
-    cargo_capacity=200,
+    cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, basically a DVT on steroids',
         'Trivia': 'This is a prototype set, two were built, it was designed specifically to go on ferries between Danish islands but it was too long and too heavy. The findings from this experiment led to the much more successful IC3 and IR4',
@@ -52,7 +52,8 @@ d_p_ic5_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic53_1_dsb',
@@ -64,7 +65,8 @@ d_p_ic5_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic54_1_dsb',
@@ -76,7 +78,8 @@ d_p_ic5_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic55_1_dsb',
@@ -88,7 +91,8 @@ d_p_ic5_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -107,7 +111,7 @@ d_p_ic5_2_dsb = Train(
     company='na',
     introduction_date=date(1988, 1, 1),
     power=0,
-    cargo_capacity=200,
+    cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, basically a DVT on steroids',
         'Trivia': 'This is a prototype set, two were built, it was designed specifically to go on ferries between Danish islands but it was too long and too heavy. The findings from this experiment led to the much more successful IC3 and IR4',
@@ -122,7 +126,8 @@ d_p_ic5_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic53_2_dsb',
@@ -134,7 +139,8 @@ d_p_ic5_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic54_2_dsb',
@@ -146,7 +152,8 @@ d_p_ic5_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic55_2_dsb',
@@ -158,7 +165,8 @@ d_p_ic5_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -177,7 +185,7 @@ d_p_ic5_3_dsb = Train(
     company='na',
     introduction_date=date(1981, 1, 1),
     power=1,
-    cargo_capacity=200,
+    cargo_capacity=62,
     visual_effect=(Train.VisualEffect.DISABLE, 7),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, basically a DVT on steroids',
@@ -193,7 +201,8 @@ d_p_ic5_3_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic53_3_dsb',
@@ -205,7 +214,8 @@ d_p_ic5_3_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic54_3_dsb',
@@ -217,7 +227,8 @@ d_p_ic5_3_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic55_3_dsb',
@@ -229,7 +240,8 @@ d_p_ic5_3_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -248,7 +260,7 @@ d_p_ic5_4_dsb = Train(
     company='na',
     introduction_date=date(1988, 1, 1),
     power=1,
-    cargo_capacity=200,
+    cargo_capacity=62,
     visual_effect=(Train.VisualEffect.DISABLE, 7),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, basically a DVT on steroids',
@@ -264,7 +276,8 @@ d_p_ic5_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic53_4_dsb',
@@ -276,7 +289,8 @@ d_p_ic5_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=50,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic54_4_dsb',
@@ -288,7 +302,8 @@ d_p_ic5_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic55_4_dsb',
@@ -300,6 +315,7 @@ d_p_ic5_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=60,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
