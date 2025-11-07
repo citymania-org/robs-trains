@@ -30,7 +30,7 @@ d_e_stog3_1_dsb = Train(
     weight=166,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=200, #212 seats, 28 collapsible seats, ca 200 standing = 440
+    cargo_capacity=110, #212 seats, 28 collapsible seats, ca 200 standing = 440
     cost_factor=25,
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -48,7 +48,8 @@ d_e_stog3_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=200,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog33_1_dsb',
@@ -60,7 +61,8 @@ d_e_stog3_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=39,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog34_1_dsb',
@@ -72,7 +74,8 @@ d_e_stog3_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -102,7 +105,7 @@ d_e_stog3_2_dsb = Train(
     weight=166,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=200, #212 seats, 28 collapsible seats, ca 200 standing = 440
+    cargo_capacity=110, #212 seats, 28 collapsible seats, ca 200 standing = 440
     cost_factor=25,
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -120,7 +123,8 @@ d_e_stog3_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=200,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog33_2_dsb',
@@ -132,7 +136,8 @@ d_e_stog3_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=39,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog34_2_dsb',
@@ -144,7 +149,8 @@ d_e_stog3_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -174,7 +180,7 @@ d_e_stog3_3_dsb = Train(
     weight=166,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=200, #212 seats, 28 collapsible seats, ca 200 standing = 440
+    cargo_capacity=110, #212 seats, 28 collapsible seats, ca 200 standing = 440
     cost_factor=25,
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -192,7 +198,8 @@ d_e_stog3_3_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=200,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog33_3_dsb',
@@ -204,7 +211,8 @@ d_e_stog3_3_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=39,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog34_3_dsb',
@@ -216,7 +224,8 @@ d_e_stog3_3_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -246,7 +255,7 @@ d_e_stog3_4_dsb = Train(
     weight=166,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=200, #212 seats, 28 collapsible seats, ca 200 standing = 440
+    cargo_capacity=110, #212 seats, 28 collapsible seats, ca 200 standing = 440
     cost_factor=25,
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -264,7 +273,8 @@ d_e_stog3_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=200,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog33_4_dsb',
@@ -276,7 +286,8 @@ d_e_stog3_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=39,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_stog34_4_dsb',
@@ -288,6 +299,7 @@ d_e_stog3_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=110,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
