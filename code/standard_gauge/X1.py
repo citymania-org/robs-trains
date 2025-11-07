@@ -55,6 +55,7 @@ s_e_X1a_1_sj = Train(
         cc2_replace=colours['DBLUE'],
     ),
     cargo_capacity=148,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -90,6 +91,7 @@ s_e_X1a_2_sj = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=148,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -125,5 +127,6 @@ s_e_X1a_3_sj = Train(
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=148,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

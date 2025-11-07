@@ -58,7 +58,7 @@ d_d_mr_1_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(1978, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
@@ -73,7 +73,8 @@ d_d_mr_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -91,7 +92,7 @@ d_d_mr_2_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(1994, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
@@ -106,7 +107,8 @@ d_d_mr_2_dsb = Train(
         cc_replace=colours['GREY1'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -124,7 +126,7 @@ d_d_mr_3_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2004, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
@@ -139,7 +141,8 @@ d_d_mr_3_dsb = Train(
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -157,7 +160,7 @@ d_d_mr_4_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2003, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
@@ -172,7 +175,8 @@ d_d_mr_4_dsb = Train(
         cc_replace=colours['TURQUOISE'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -190,7 +194,7 @@ d_d_mr_5_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2005, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
@@ -205,7 +209,8 @@ d_d_mr_5_dsb = Train(
         cc_replace=colours['TURQUOISE'],
         cc2_replace=colours['CREAM'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -223,7 +228,7 @@ d_d_mr_6_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2012, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
@@ -238,7 +243,8 @@ d_d_mr_6_dsb = Train(
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -256,7 +262,7 @@ d_d_mr_7_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(1986, 1, 1),
-    cargo_capacity=56,
+    cargo_capacity=52,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers with 1st class carriage, up to 5 can be coupled together into a train set',
     }),
@@ -271,7 +277,8 @@ d_d_mr_7_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=52,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -289,7 +296,7 @@ d_d_mr_8_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2019, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Trivia': '''Used to service & maintain Denmark's railways''',
     }),
@@ -304,7 +311,8 @@ d_d_mr_8_dsb = Train(
         cc_replace=colours['COLBALT'],
         cc2_replace=colours['COLBALT'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -322,7 +330,7 @@ d_d_mr_9_dsb = Train(
     ),
     country='denmark',
     introduction_date=date(2019, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Trivia': 'A static restaurant train that can be found in Randers, Denmark',
     }),
@@ -337,7 +345,8 @@ d_d_mr_9_dsb = Train(
         cc_replace=colours['COLBALT'],
         cc2_replace=colours['GREY1'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -355,7 +364,7 @@ dl_d_mr_1_dlj = Train(
     ),
     country='doggerland',
     introduction_date=date(1986, 1, 1),
-    cargo_capacity=64,
+    cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
     }),
@@ -370,6 +379,7 @@ dl_d_mr_1_dlj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['RED'],
     ),
-    cargo_capacity=48,
+    cargo_capacity=56,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )

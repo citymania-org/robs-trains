@@ -37,7 +37,7 @@ s_e_x60_1_sj = Train(
         cc2_replace=colours["SLBLUE"]
     ),
     introduction_date=date(2005, 1, 1),
-    cargo_capacity=200,
+    cargo_capacity=154,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Meatball transport',
     }),
@@ -51,7 +51,8 @@ s_e_x60_1_sj = Train(
         cc_replace=colours['GREY1'],
         cc2_replace=colours['SLBLUE'],
     ),
-    cargo_capacity=200,
+    cargo_capacity=154,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x603_1_sj',
@@ -63,7 +64,8 @@ s_e_x60_1_sj = Train(
         cc_replace=colours['GREY1'],
         cc2_replace=colours['SLBLUE'],
     ),
-    cargo_capacity=200,
+    cargo_capacity=154,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x604_1_sj',
@@ -75,7 +77,8 @@ s_e_x60_1_sj = Train(
         cc_replace=colours['GREY1'],
         cc2_replace=colours['SLBLUE'],
     ),
-    cargo_capacity=200,
+    cargo_capacity=154,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x605_1_sj',
@@ -87,7 +90,8 @@ s_e_x60_1_sj = Train(
         cc_replace=colours['GREY1'],
         cc2_replace=colours['SLBLUE'],
     ),
-    cargo_capacity=100,
+    cargo_capacity=154,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x606_1_sj',
@@ -99,7 +103,8 @@ s_e_x60_1_sj = Train(
         cc_replace=colours['GREY1'],
         cc2_replace=colours['SLBLUE'],
     ),
-    cargo_capacity=24,
+    cargo_capacity=154,
+    loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -135,7 +140,7 @@ s_e_x61_1_sj = Train(
         cc2_replace=colours["MAUVE"]
     ),
     introduction_date=date(2009, 1, 1),
-    cargo_capacity=200,
+    cargo_capacity=59,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Meatball transport',
@@ -150,7 +155,8 @@ s_e_x61_1_sj = Train(
         cc_replace=colours['LAVENDER'],
         cc2_replace=colours['MAUVE'],
     ),
-    cargo_capacity=30,
+    cargo_capacity=59,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x613_1_sj',
@@ -162,7 +168,8 @@ s_e_x61_1_sj = Train(
         cc_replace=colours['LAVENDER'],
         cc2_replace=colours['MAUVE'],
     ),
-    cargo_capacity=2,
+    cargo_capacity=58,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_1_sj',
@@ -174,7 +181,8 @@ s_e_x61_1_sj = Train(
         cc_replace=colours['LAVENDER'],
         cc2_replace=colours['MAUVE'],
     ),
-    cargo_capacity=2,
+    cargo_capacity=58,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -190,7 +198,7 @@ s_e_x61_2_sj = Train(
         cc2_replace=colours["ORANGE"]
     ),
     introduction_date=date(2010, 1, 1),
-    cargo_capacity=200,
+    cargo_capacity=59,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Meatball transport',
@@ -205,7 +213,8 @@ s_e_x61_2_sj = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['ORANGE'],
     ),
-    cargo_capacity=30,
+    cargo_capacity=59,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x613_2_sj',
@@ -217,7 +226,8 @@ s_e_x61_2_sj = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['ORANGE'],
     ),
-    cargo_capacity=2,
+    cargo_capacity=58,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_2_sj',
@@ -229,7 +239,8 @@ s_e_x61_2_sj = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['ORANGE'],
     ),
-    cargo_capacity=2,
+    cargo_capacity=58,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -245,7 +256,7 @@ s_e_x61_3_sj = Train(
         cc2_replace=colours["GREY4"]
     ),
     introduction_date=date(2011, 1, 1),
-    cargo_capacity=200,
+    cargo_capacity=59,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Meatball transport',
@@ -260,7 +271,8 @@ s_e_x61_3_sj = Train(
         cc_replace=colours['YELLOW'],
         cc2_replace=colours['GREY4'],
     ),
-    cargo_capacity=20,
+    cargo_capacity=56,
+    loading_speed=15,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x613_3_sj',
@@ -272,7 +284,8 @@ s_e_x61_3_sj = Train(
         cc_replace=colours['YELLOW'],
         cc2_replace=colours['GREY4'],
     ),
-    cargo_capacity=6,
+    cargo_capacity=56,
+    loading_speed=15,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_3_sj',
@@ -284,7 +297,8 @@ s_e_x61_3_sj = Train(
         cc_replace=colours['YELLOW'],
         cc2_replace=colours['GREY4'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=56,
+    loading_speed=15,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -300,7 +314,7 @@ s_e_x61_4_sj = Train(
         cc2_replace=colours["GREY4"]
     ),
     introduction_date=date(2025, 1, 1),
-    cargo_capacity=200,
+    cargo_capacity=59,
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Meatball transport',
@@ -315,7 +329,8 @@ s_e_x61_4_sj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['GREY4'],
     ),
-    cargo_capacity=20,
+    cargo_capacity=56,
+    loading_speed=15,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x613_4_sj',
@@ -327,7 +342,8 @@ s_e_x61_4_sj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['GREY4'],
     ),
-    cargo_capacity=6,
+    cargo_capacity=56,
+    loading_speed=15,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x614_4_sj',
@@ -339,7 +355,8 @@ s_e_x61_4_sj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['GREY4'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=56,
+    loading_speed=15,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -376,7 +393,7 @@ s_e_x62_1_sj = Train(
         cc2_replace=colours["SKY"]
     ),
     introduction_date=date(2011, 1, 1),
-    cargo_capacity=191,
+    cargo_capacity=49,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Meatball transport',
     }),
@@ -390,7 +407,8 @@ s_e_x62_1_sj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['SKY'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=49,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x623_1_sj',
@@ -402,7 +420,8 @@ s_e_x62_1_sj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['SKY'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=48,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='s_e_x624_1_sj',
@@ -414,6 +433,7 @@ s_e_x62_1_sj = Train(
         cc_replace=colours['BLUE'],
         cc2_replace=colours['SKY'],
     ),
-    cargo_capacity=1,
+    cargo_capacity=48,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
