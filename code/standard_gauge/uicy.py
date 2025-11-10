@@ -288,11 +288,11 @@ d_p_bd_2_dsb = Train(
 d_p_bd_3_dsb = Train(
     **COMMON_b_PROPS,
     id='d_p_bd_3_dsb',
-    name='њDSB BDk',
+    name='DSB BDk',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/uicy.psd',
+        shading=('bd',),
+        paint=('bdk1',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),

@@ -516,11 +516,11 @@ d_p_b_2_lj = Train(
 d_p_bdg_1_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_bdg_1_dsb',
-    name='њDSB BDg',
+    name='DSB BDg',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('bdg',),
+        paint=('bg1',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),

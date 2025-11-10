@@ -485,7 +485,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb),
     grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb),
     grf.VariantGroup('UIC-Y 2nd class', d_p_b_1_dsb, d_p_b_i_1_dsb),
-    grf.VariantGroup('њUIC-Y other', d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_3_dsb),
+    grf.VariantGroup('UIC-Y other', d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_3_dsb),
     d_p_cl_5_dsb,
     grf.VariantGroup('An', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb),
     grf.VariantGroup('Bn', d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb),
