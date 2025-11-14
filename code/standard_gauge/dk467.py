@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, Livery, colours, make_psd_cc_liveries, standard_gauge
 
 COMMON_frichs_467to475_PROPS = dict(
     length=6,
@@ -13,6 +13,8 @@ COMMON_frichs_467to475_PROPS = dict(
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
+    max_speed=Train.kmhish(90),
+    power=750,
     weight=61,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
@@ -32,8 +34,6 @@ d_d_frichs_467_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -50,8 +50,6 @@ d_d_frichs_467_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -68,8 +66,6 @@ d_d_frichs_467_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -86,8 +82,6 @@ d_d_frichs_467_4 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1981, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -104,8 +98,6 @@ d_d_frichs_467_5 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1997, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -122,8 +114,6 @@ d_d_frichs_468_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -140,8 +130,6 @@ d_d_frichs_468_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -158,8 +146,6 @@ d_d_frichs_468_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(2017, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -176,8 +162,6 @@ d_d_frichs_469_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -194,8 +178,6 @@ d_d_frichs_469_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -212,8 +194,6 @@ d_d_frichs_469_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1974, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -230,8 +210,6 @@ d_d_frichs_469_4 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1976, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -248,8 +226,6 @@ d_d_frichs_469_8 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1992, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -266,8 +242,6 @@ d_d_frichs_469_5 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(1994, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -284,8 +258,6 @@ d_d_frichs_469_6 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(2007, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -302,8 +274,6 @@ d_d_frichs_469_7 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(90),
-    power=750,
     introduction_date=date(2008, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -320,8 +290,6 @@ d_d_frichs_471_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -338,8 +306,6 @@ d_d_frichs_471_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
     introduction_date=date(1977, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -356,8 +322,6 @@ d_d_frichs_471_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
     introduction_date=date(1988, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -374,8 +338,6 @@ d_d_frichs_471_4 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
     introduction_date=date(1995, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -392,8 +354,6 @@ d_d_frichs_471_5 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
     introduction_date=date(2000, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -410,8 +370,6 @@ d_d_frichs_471_6 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=500,
     introduction_date=date(2014, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -428,8 +386,6 @@ d_d_frichs_472_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -446,8 +402,6 @@ d_d_frichs_472_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -464,8 +418,6 @@ d_d_frichs_472_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
     introduction_date=date(1980, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -482,8 +434,6 @@ d_d_frichs_472_4 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
     introduction_date=date(1997, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -500,8 +450,6 @@ d_d_frichs_472_5 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=700,
     introduction_date=date(2009, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -518,8 +466,6 @@ d_d_frichs_473_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -536,8 +482,6 @@ d_d_frichs_473_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1963, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -554,8 +498,6 @@ d_d_frichs_473_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -572,8 +514,6 @@ d_d_frichs_474_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -590,8 +530,6 @@ d_d_frichs_474_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1969, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -608,8 +546,6 @@ d_d_frichs_474_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1986, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -626,8 +562,6 @@ d_d_frichs_474_4 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1990, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -644,8 +578,6 @@ d_d_frichs_474_5 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1993, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -662,8 +594,6 @@ d_d_frichs_475_1 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -680,8 +610,6 @@ d_d_frichs_475_2 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1976, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -698,8 +626,6 @@ d_d_frichs_475_3 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(1977, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -716,8 +642,6 @@ d_d_frichs_475_4 = Train(
     },
     country='denmark',
     company='na',
-    max_speed=Train.kmhish(75),
-    power=750,
     introduction_date=date(2008, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
