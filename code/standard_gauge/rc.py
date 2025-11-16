@@ -132,11 +132,11 @@ s_e_rc1245_5_sj = Train(
 s_e_rc1245_6_sj = Train(
     id='s_e_rc1245_6_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc5',
+    name='SJ Rc5',
     liveries=make_psd_cc_liveries(
         'pp/rc.psd',
         shading=('rc',),
-        paint=('2',),
+        paint=('sj8',),
         overlay=('light'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY1"]
