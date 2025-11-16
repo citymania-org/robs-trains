@@ -149,6 +149,27 @@ d_d_mz_ii_5_ibab = Train(
     }),
 )
 
+d_d_mz_ii_6_stab = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_ii_6_stab',
+    name='STAB TMZ II',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('stab1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2015, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from DSB in 2005 #1425',
+    }),
+)
+
 COMMON_mzl_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
