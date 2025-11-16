@@ -23,16 +23,19 @@ COMMON_rc_PROPS = dict(
     country='sweden',
 )
 
+# early
+
 s_e_rc1245_1_sj = Train(
     id='s_e_rc1245_1_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc1/2/4/5',
+    name='SJ Rc1/2/4/5',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj1',),
+        overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["DBLUE"]
     ),
     company='na',
     max_speed=Train.kmhish(135),
@@ -46,11 +49,12 @@ s_e_rc1245_1_sj = Train(
 s_e_rc1245_2_sj = Train(
     id='s_e_rc1245_2_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc1/2/4/5',
+    name='SJ Rc1/2/4/5',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj5',),
+        overlay=('light'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -66,11 +70,12 @@ s_e_rc1245_2_sj = Train(
 s_e_rc1245_3_sj = Train(
     id='s_e_rc1245_3_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc1/2', #this is the rc one
+    name='SJ Rc1/2', #this is the rc one
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj6',),
+        overlay=('light'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -106,11 +111,12 @@ s_e_rc1245_4_sj = Train(
 s_e_rc1245_5_sj = Train(
     id='s_e_rc1245_5_sj',
     **COMMON_rc_PROPS,
-    name='њTÅGAB Rc2',
+    name='TÅGAB Rc2',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('tågab1',),
+        overlay=('light'),
         cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
@@ -128,31 +134,56 @@ s_e_rc1245_6_sj = Train(
     **COMMON_rc_PROPS,
     name='њSJ Rc5',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
+        'pp/rc.psd',
+        shading=('rc',),
         paint=('2',),
-        cc_replace=colours["GREY1"],
-        cc2_replace=colours["BLUE"]
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["GREY1"]
     ),
     company='na',
     max_speed=Train.kmhish(135),
     weight=76,
-    introduction_date=date(1986, 1, 1),
+    introduction_date=date(1988, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
 )
 
+s_e_rc1245_7_sj = Train(
+    id='s_e_rc1245_7_sj',
+    **COMMON_rc_PROPS,
+    name='SJ Rc2/5',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj7',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["RED"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(135),
+    weight=76,
+    introduction_date=date(1989, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+# late
+
 s_e_rc36_1_sj = Train(
     id='s_e_rc36_1_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc3/6',
+    name='SJ Rc3/6',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj1',),
+        overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["DBLUE"]
     ),
     company='na',
     max_speed=Train.kmhish(160),
@@ -166,11 +197,12 @@ s_e_rc36_1_sj = Train(
 s_e_rc36_2_sj = Train(
     id='s_e_rc36_2_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc3/6',
+    name='SJ Rc3/6',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj5',),
+        overlay=('light'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -186,13 +218,14 @@ s_e_rc36_2_sj = Train(
 s_e_rc36_3_sj = Train(
     id='s_e_rc36_3_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc6',
+    name='SJ Rc6',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj2',),
+        overlay=('light'),
         cc_replace=colours["COLBALT"],
-        cc2_replace=colours["RED"]
+        cc2_replace=colours["GREY10"]
     ),
     company='na',
     max_speed=Train.kmhish(160),
@@ -206,13 +239,14 @@ s_e_rc36_3_sj = Train(
 s_e_rc36_4_sj = Train(
     id='s_e_rc36_4_sj',
     **COMMON_rc_PROPS,
-    name='њSSRT Rc3/6',
+    name='SSRT Rc3/6',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["GREY7"],
-        cc2_replace=colours["GREY9"]
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('ssrt1',),
+        overlay=('light'),
+        cc_replace=colours["GREY4"],
+        cc2_replace=colours["GREY6"]
     ),
     company='na',
     max_speed=Train.kmhish(160),
@@ -226,11 +260,12 @@ s_e_rc36_4_sj = Train(
 s_e_rc36_5_sj = Train(
     id='s_e_rc36_5_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc3/6',
+    name='SJ Rc3/6',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj3',),
+        overlay=('light'),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -246,12 +281,13 @@ s_e_rc36_5_sj = Train(
 s_e_rc36_6_sj = Train(
     id='s_e_rc36_6_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc6',
+    name='SJ Rc6',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["GREY7"],
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj4',),
+        overlay=('light'),
+        cc_replace=colours["GREY4"],
         cc2_replace=colours["GREY10"]
     ),
     company='na',
@@ -266,11 +302,12 @@ s_e_rc36_6_sj = Train(
 s_e_rc36_7_sj = Train(
     id='s_e_rc36_7_sj',
     **COMMON_rc_PROPS,
-    name='њHCTOR Rc3',
+    name='HCTOR Rc3',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('hctor1',),
+        overlay=('light'),
         cc_replace=colours["GREY7"],
         cc2_replace=colours["ORANGE"]
     ),
@@ -283,16 +320,40 @@ s_e_rc36_7_sj = Train(
     }),
 )
 
+s_e_rc36_8_sj = Train(
+    id='s_e_rc36_8_sj',
+    **COMMON_rc_PROPS,
+    name='SJ Rc3/6',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj7',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["RED"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(160),
+    weight=76,
+    introduction_date=date(1989, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+# rc7
+
 s_e_rc7_1_sj = Train(
     id='s_e_rc7_1_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rc7',
+    name='SJ Rc7',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj2',),
+        overlay=('light'),
         cc_replace=colours["COLBALT"],
-        cc2_replace=colours["RED"]
+        cc2_replace=colours["GREY10"]
     ),
     company='na',
     max_speed=Train.kmhish(180),
@@ -303,16 +364,19 @@ s_e_rc7_1_sj = Train(
     }),
 )
 
+# rm
+
 s_e_rm_1_sj = Train(
     id='s_e_rm_1_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rm',
+    name='SJ Rm',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj1',),
+        overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["DBLUE"]
     ),
     company='na',
     max_speed=Train.kmhish(100),
@@ -326,18 +390,19 @@ s_e_rm_1_sj = Train(
 s_e_rm_2_sj = Train(
     id='s_e_rm_2_sj',
     **COMMON_rc_PROPS,
-    name='њSJ Rm',
+    name='SJ Rm',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj5',),
+        overlay=('light'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
     company='na',
     max_speed=Train.kmhish(100),
     weight=90,
-    introduction_date=date(1990, 1, 1),
+    introduction_date=date(1997, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
     }),
@@ -366,11 +431,12 @@ s_e_rm_3_sj = Train(
 s_e_rm_4_sj = Train(
     id='s_e_rm_4_sj',
     **COMMON_rc_PROPS,
-    name='њTÅGAB Rm',
+    name='TÅGAB Rm',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('tågab1',),
+        overlay=('light'),
         cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
