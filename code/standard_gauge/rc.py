@@ -213,6 +213,27 @@ s_e_rc1245_9_sj = Train(
     }),
 )
 
+s_e_rc1245_10_sj = Train(
+    id='s_e_rc1245_10_sj',
+    **COMMON_rc_PROPS,
+    name='STAB Rc2',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('stab1',),
+        overlay=('light'),
+        cc_replace=colours["GREY10"],
+        cc2_replace=colours["ORANGE"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(135),
+    weight=76,
+    introduction_date=date(2018, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 # late
 
 s_e_rc36_1_sj = Train(
