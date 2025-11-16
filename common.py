@@ -92,10 +92,10 @@ colours = {
     
 "MAGENTA" : palette[16: 24],
 "PINK" : palette[24: 32],
-"RED" : palette[32: 40],
-"MAROON" : palette[40: 48],
+"RED" : palette[32: 40], # DSB
+"MAROON" : palette[40: 48], # old DSB
 "ORANGE" : palette[48: 56],
-"BROWN" : palette[56: 64],
+"BROWN" : palette[56: 64], # wood
 "REDBROWN" : palette[64: 72],
 "YELLOWBROWN" : palette[72: 80],
 "DCREAM" : palette[80: 88],
@@ -109,12 +109,12 @@ colours = {
 "SKY" : palette[144: 152],
 "BLUE" : palette[152: 160],
 "DBLUE" : palette[160: 168],
-"COLBALT" : palette[168: 176],
+"COLBALT" : palette[168: 176], # rc7 late DSB Bn
 "MAUVE" : palette[176: 184],
 "LAVENDER" : palette[184: 192],
 "PURPLE" : palette[192: 200],
 "DPURPLE" : palette[200: 208],
-"GREY1" : palette[232: 240],
+"GREY1" : palette[232: 240], # white
 "GREY2" : palette[240: 248],
 "GREY3" : palette[248: 256],
 "GREY4" : palette[256: 264],
@@ -123,9 +123,9 @@ colours = {
 "GREY7" : palette[280: 288],
 "GREY8" : palette[288: 296],
 "GREY9" : palette[296: 304],
-"GREY10" : palette[304: 312],
-"SEBROWN" : palette[344: 352],
-"SCARLET" : palette[352: 360],
+"GREY10" : palette[304: 312], # black
+"SEBROWN" : palette[344: 352], # SJ D, SJ F
+"SCARLET" : palette[352: 360], # lolland
 "SLBLUE" : palette[360: 368],
 }
 

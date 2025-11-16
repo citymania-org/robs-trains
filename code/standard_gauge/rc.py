@@ -171,6 +171,48 @@ s_e_rc1245_7_sj = Train(
     }),
 )
 
+s_e_rc1245_8_sj = Train(
+    id='s_e_rc1245_8_sj',
+    **COMMON_rc_PROPS,
+    name='Banverket ELL',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('bv1',),
+        overlay=('light'),
+        cc_replace=colours["LIME"],
+        cc2_replace=colours["GREY4"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(135),
+    weight=76,
+    introduction_date=date(2002, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+s_e_rc1245_9_sj = Train(
+    id='s_e_rc1245_9_sj',
+    **COMMON_rc_PROPS,
+    name='NRFAB Rc4',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('nrfab1',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLUE"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(135),
+    weight=76,
+    introduction_date=date(2025, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 # late
 
 s_e_rc36_1_sj = Train(
@@ -302,7 +344,7 @@ s_e_rc36_6_sj = Train(
 s_e_rc36_7_sj = Train(
     id='s_e_rc36_7_sj',
     **COMMON_rc_PROPS,
-    name='HCTOR Rc3',
+    name='HCTOR 143',
     liveries=make_psd_cc_liveries(
         'pp/rc.psd',
         shading=('rc',),
