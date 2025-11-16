@@ -359,3 +359,24 @@ d_d_mx_ii_16_bsm = Train(
         'Trivia': 'One locomotive bought from BSX in 1997 #1012'
     }),
 )
+
+d_d_mx_ii_17_stab = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_17_stab',
+    name='STAB TMX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('stab1',),
+        overlay=('light'),
+        cc_replace=colours["GREY10"],
+        cc2_replace=colours["ORANGE"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2022, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from RCT in 2022 #1021'
+    }),
+)
