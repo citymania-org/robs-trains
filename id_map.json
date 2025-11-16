@@ -2096,7 +2096,10 @@
             "d_d_mx_ii_17_stab": 2510,
             "__d_d_mz_ii_6_stab_aa_mid": 2511,
             "__d_d_mz_ii_6_stab_aa_tail": 2512,
-            "d_d_mz_ii_6_stab": 2513
+            "d_d_mz_ii_6_stab": 2513,
+            "__d_d_mz_ii_7_stab_aa_mid": 2514,
+            "__d_d_mz_ii_7_stab_aa_tail": 2515,
+            "d_d_mz_ii_7_stab": 2516
         }
     }
 }

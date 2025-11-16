@@ -166,7 +166,28 @@ d_d_mz_ii_6_stab = Train(
     introduction_date=date(2015, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from DSB in 2005 #1425',
+        'Trivia': 'One locomotive bought from DSB in 2015 #1425',
+    }),
+)
+
+d_d_mz_ii_7_stab = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_ii_7_stab',
+    name='STAB TMZ II',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('stab2',),
+        overlay=('light'),
+        cc_replace=colours["GREY9"],
+        cc2_replace=colours["GREY3"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2013, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from Stena in 2010 #1418',
     }),
 )
 
