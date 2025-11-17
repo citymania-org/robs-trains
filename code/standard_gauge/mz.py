@@ -107,6 +107,27 @@ d_d_mz_i_4_ttt = Train(
     }),
 )
 
+d_d_mz_i_5_vida = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_i_5_vida',
+    name='VIDA TMZ I',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('vida1',),
+        overlay=('light'),
+        cc_replace=colours["GREY1"],
+        cc2_replace=colours["RED"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2004, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from STT in 2004 #1406',
+    }),
+)
+
 d_d_mz_ii_4_taagab = Train(
     **COMMON_mze_PROPS,
     id='d_d_mz_ii_4_taagab',

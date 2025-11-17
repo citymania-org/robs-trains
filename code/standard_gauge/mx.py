@@ -380,3 +380,24 @@ d_d_mx_ii_17_stab = Train(
         'Trivia': 'One locomotive bought from RCT in 2022 #1021'
     }),
 )
+
+d_d_mx_ii_18_vida = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_18_vida',
+    name='VIDA TMX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('vida1',),
+        overlay=('light'),
+        cc_replace=colours["GREY1"],
+        cc2_replace=colours["RED"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2019, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive rented from NRFAB in 2019 #1024'
+    }),
+)

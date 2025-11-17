@@ -404,6 +404,27 @@ s_e_rc36_8_sj = Train(
     }),
 )
 
+s_e_rc36_9_sj = Train(
+    id='s_e_rc36_9_sj',
+    **COMMON_rc_PROPS,
+    name='VIDA Rc3',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('vida1',),
+        overlay=('light'),
+        cc_replace=colours["GREY1"],
+        cc2_replace=colours["RED"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(160),
+    weight=76,
+    introduction_date=date(2021, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 # rc7
 
 s_e_rc7_1_sj = Train(
