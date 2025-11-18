@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 d_d_mye_ii_1_dsb = Train(
     id='d_d_mye_ii_1_dsb',
-    name='DSB MY II (early)',
+    name='DSB MY II (MV II)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/my.psd',

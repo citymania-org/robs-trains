@@ -28,7 +28,7 @@ COMMON_dre93_PROPS = dict(
 de_e_dre93_1_dr = Train(
     id='de_e_dre93_1_dr',
     **COMMON_dre93_PROPS,
-    name='њDR E 93/DB 193',
+    name='њDR E 93',
     liveries=make_psd_cc_liveries(
         'pp/8Template.psd',
         shading=('1',),
@@ -40,6 +40,7 @@ de_e_dre93_1_dr = Train(
     introduction_date=date(1933, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
+        'Trivia': 'Later classed as DB 193',
     }),
 )
 
@@ -67,7 +68,7 @@ COMMON_dre94_PROPS = dict(
 de_e_dre94_1_dr = Train(
     id='de_e_dre94_1_dr',
     **COMMON_dre94_PROPS,
-    name='њDR E 94/DB 194/DR 254',
+    name='њDR E 94',
     liveries=make_psd_cc_liveries(
         'pp/9Template.psd',
         shading=('1',),
@@ -79,5 +80,6 @@ de_e_dre94_1_dr = Train(
     introduction_date=date(1940, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
+        'Trivia': 'Later classed as DB 194 & DR 254',
     }),
 )

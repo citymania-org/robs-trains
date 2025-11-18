@@ -326,7 +326,7 @@ d_p_bn_1_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold',
     }),
 )
 
@@ -349,7 +349,7 @@ d_p_bn_2_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
+        'Trivia': 'Used in Stockholm when SL lacked rolling stock - 1 or 2 of these can also be sandwiched between 2 MO railbusses',
     }),
 )
 
@@ -372,7 +372,6 @@ d_p_bn_3_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class',
-        'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold - Used in Stockholm when SL lacked rolling stock',
     }),
 )
 
