@@ -495,18 +495,19 @@ s_e_rm_2_sj = Train(
 s_e_rm_3_sj = Train(
     id='s_e_rm_3_sj',
     **COMMON_rc_PROPS,
-    name='њGC Rm',
+    name='GC Rm',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["GREEN"],
-        cc2_replace=colours["RED"]
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('gc1',),
+        overlay=('light'),
+        cc_replace=colours["APPLE"],
+        cc2_replace=colours["GREY10"]
     ),
     company='na',
     max_speed=Train.kmhish(100),
     weight=90,
-    introduction_date=date(2001, 1, 1),
+    introduction_date=date(2008, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
     }),

@@ -277,7 +277,7 @@ d_d_my_ii_9_taagab = Train(
         shading=('my',),
         paint=('tågab2',),
         overlay=('light'),
-        cc_replace=colours["DGREEN"],
+        cc_replace=colours["MECONIUM"],
         cc2_replace=colours["ORANGE"]
     ),
     country='sweden',

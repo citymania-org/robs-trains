@@ -127,6 +127,9 @@ colours = {
 "SEBROWN" : palette[344: 352], # SJ D, SJ F
 "SCARLET" : palette[352: 360], # lolland
 "SLBLUE" : palette[360: 368],
+"APPLE" : palette[368: 376], # green cargo
+"MECONIUM" : palette[376: 384], # meja green
+"SBB" : palette[384: 392], # sbb green
 }
 
 def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc_replace, cc2_replace):
