@@ -91,13 +91,14 @@ s_e_rc1245_3_sj = Train(
 s_e_rc1245_4_sj = Train(
     id='s_e_rc1245_4_sj',
     **COMMON_rc_PROPS,
-    name='њGC Rc2/4',
+    name='GC Rc2/4',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["GREEN"],
-        cc2_replace=colours["GREY7"]
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('gc1',),
+        overlay=('light'),
+        cc_replace=colours["APPLE"],
+        cc2_replace=colours["GREY10"]
     ),
     company='na',
     max_speed=Train.kmhish(135),
