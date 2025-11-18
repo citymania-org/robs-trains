@@ -401,3 +401,24 @@ d_d_mx_ii_18_vida = Train(
         'Trivia': 'One locomotive rented from NRFAB in 2019 #1024'
     }),
 )
+
+d_d_mx_ii_19_ibab = Train(
+    **COMMON_mx_ii_PROPS,
+    id='d_d_mx_ii_19_ibab',
+    name='IBAB TMX II',
+    liveries=make_psd_cc_liveries(
+        'pp/mx.psd',
+        shading=('mx',),
+        paint=('ibab1',),
+        overlay=('light'),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2006, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Two locomotives bought from DSB in 1994 #1013 & #1016'
+    }),
+)

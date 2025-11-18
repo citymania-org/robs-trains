@@ -94,7 +94,7 @@ from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201
 from code.standard_gauge.be202 import be_d_202_1_nmbs, be_d_202_2_nmbs, be_d_202_3_nmbs, be_d_202_4_nmbs, be_d_202_5_nmbs, be_d_202_6_nmbs, be_d_202_7_nmbs, be_d_202_8_nmbs
 from code.standard_gauge.m61 import hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav
 from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik, d_d_my_ii_17_bsbs, d_d_my_ii_18_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_21_mav, d_d_my_ii_22_et, d_d_my_ii_23_strabag, d_d_my_ii_24_bsx, d_d_my_ii_25_strabag, lu_d_1600_1_cfl
-from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik, d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_17_stab, d_d_mx_ii_18_vida
+from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik, d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_17_stab, d_d_mx_ii_18_vida, d_d_mx_ii_19_ibab
 from code.standard_gauge.mz import d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb, d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc, d_d_mz_ii_6_stab, d_d_mz_ii_7_stab, d_d_mz_i_5_vida
 from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_6_mav, d_d_me_ii_7_skpl
 
@@ -522,7 +522,7 @@ lib.make_purchase_sprites(
     s_s_N_ii_1_sj,
     s_s_Sa_sj,
     # se diesel
-    grf.VariantGroup('TMX II', d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_12_bk, d_d_mx_ii_4_ttt, d_d_mx_ii_18_vida, d_d_mx_ii_17_stab),
+    grf.VariantGroup('TMX II', d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_12_bk, d_d_mx_ii_19_ibab, d_d_mx_ii_4_ttt, d_d_mx_ii_18_vida, d_d_mx_ii_17_stab),
     grf.VariantGroup('TMY II', d_d_my_ii_8_taagab, d_d_my_ii_24_bsx, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_3_ttt),
     grf.VariantGroup('TMZ I/II', d_d_mz_i_5_vida, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_ii_7_stab),
     d_d_me_ii_5_nrfab,
