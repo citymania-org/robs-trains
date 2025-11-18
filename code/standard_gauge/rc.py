@@ -235,6 +235,27 @@ s_e_rc1245_10_sj = Train(
     }),
 )
 
+s_e_rc1245_11_sj = Train(
+    id='s_e_rc1245_11_sj',
+    **COMMON_rc_PROPS,
+    name='GC Rc4',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('gc2',),
+        overlay=('light'),
+        cc_replace=colours["APPLE"],
+        cc2_replace=colours["GREY10"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(135),
+    weight=76,
+    introduction_date=date(2009, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 # late
 
 s_e_rc36_1_sj = Train(
