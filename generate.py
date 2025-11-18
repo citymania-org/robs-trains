@@ -568,4 +568,4 @@ lib.make_purchase_sprites(
     
 ).set_variant_callbacks(g)))
 
-grf.main(g, 'KST_Kitchen_Sink_Trains.grf')
+grf.main(g, 'The_International_Train_Set.grf')

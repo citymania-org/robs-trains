@@ -2,7 +2,7 @@ import grf, lib
 
 g = grf.NewGRF(
     grfid=b'KSTA',
-    name='KST - Kitchen Sink Trains',
+    name='The International Train Set',
     description='Mostly European trains made by Rob, dP, Brickblock1 and Meja. Licence: GPL v2',
     url='https://github.com/citymania-org/robs-trains',
     id_map_file='id_map.json',
