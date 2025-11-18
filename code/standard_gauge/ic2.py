@@ -27,7 +27,7 @@ COMMON_ic2_PROPS = dict(
 d_d_ic2_1_dsb = Train(
     id='d_d_ic2_1_dsb',
     **COMMON_ic2_PROPS,
-    name='њGDS/LJ/OHJ MF (IC2)',
+    name='њMF (IC2)',
     liveries=make_psd_cc_liveries(
         'pp/10Template.psd',
         shading=('1',),
@@ -40,10 +40,45 @@ d_d_ic2_1_dsb = Train(
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Trivia': 'All thirteen locomotives obtained by RTOG in 2009 and later LT in 2015',
+        'Owners': 'GDS, LJ, OHJ, VL, RTOG',
+        'Trivia': 'All thirteen locomotives obtained by RTOG in 2009',
     }),
 ).add_articulated_part(
     id='d_d_ic22_1_dsb',
+    length=10,
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading='1',
+        paint='2',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['DBLUE'],
+    ),
+    cargo_capacity=62,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_ic2_2_dsb = Train( # AC units on roof
+    id='d_d_ic2_2_dsb',
+    **COMMON_ic2_PROPS,
+    name='њMF (IC2)',
+    liveries=make_psd_cc_liveries(
+        'pp/10Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["DBLUE"]
+    ),
+    country='denmark',
+    introduction_date=date(2013, 1, 1),
+    cargo_capacity=62,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+        'Owners': 'RTOG, LT',
+        'Trivia': 'All thirteen locomotives obtained by LT in 2015',
+    }),
+).add_articulated_part(
+    id='d_d_ic22_2_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
         'pp/10Template.psd',

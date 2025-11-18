@@ -2106,7 +2106,13 @@
             "__d_d_mz_i_5_vida_aa_mid": 2520,
             "__d_d_mz_i_5_vida_aa_tail": 2521,
             "d_d_mz_i_5_vida": 2522,
-            "s_e_rc36_9_sj": 2523
+            "s_e_rc36_9_sj": 2523,
+            "__d_d_ic2_2_dsb_aa_mid": 2524,
+            "__d_d_ic2_2_dsb_aa_tail": 2525,
+            "d_d_ic22_2_dsb": 2526,
+            "__d_d_ic22_2_dsb_aa_mid": 2527,
+            "__d_d_ic22_2_dsb_aa_tail": 2528,
+            "d_d_ic2_2_dsb": 2529
         }
     }
 }
