@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, dsb_me_sound
 
 COMMON_me_ii_PROPS = dict(
     length=10,
@@ -20,6 +20,7 @@ COMMON_me_ii_PROPS = dict(
     running_cost_factor=200,
     cargo_capacity=1,
     cost_factor=25,
+    sound_effects=dsb_me_sound,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     visual_effect=(Train.VisualEffect.DIESEL, 7),
