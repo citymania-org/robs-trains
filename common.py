@@ -115,6 +115,9 @@ dsb_me_sound = {
 }
 
 dsb_stog4_sound = {
+    grf.SoundEvent.STOPPED: grf.RAWSound('sounds/electric4_idle.wav'),
+    grf.SoundEvent.VISUAL_EFFECT: grf.RAWSound('sounds/electric4_run.wav'),
+    grf.SoundEvent.RUNNING_16: grf.RAWSound('sounds/electric4_coast.wav'),
     grf.SoundEvent.START: grf.RAWSound('sounds/stog4_start.wav'),
     grf.SoundEvent.BREAKDOWN: grf.DefaultSound.BREAKDOWN_TRAIN_SHIP,
     grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/stog4_horn.wav'),
