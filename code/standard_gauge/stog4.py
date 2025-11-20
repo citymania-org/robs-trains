@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v, dsb_stog4_sound
 
 d_e_stog4_5_dsb = Train(
     id='d_e_stog4_5_dsb',
@@ -32,6 +32,7 @@ d_e_stog4_5_dsb = Train(
     running_cost_factor=200,
     cargo_capacity=91, #312 seats, 28 collapsible seats, ca 360 standing = 700
     cost_factor=25,
+    dsb_stog4_sound,
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -159,6 +160,7 @@ d_e_stog4_1_dsb = Train(
     running_cost_factor=200,
     cargo_capacity=91, #312 seats, 28 collapsible seats, ca 360 standing = 700
     cost_factor=25,
+    dsb_stog4_sound,
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -286,6 +288,7 @@ d_e_stog4_2_dsb = Train(
     running_cost_factor=200,
     cargo_capacity=91, #312 seats, 28 collapsible seats, ca 360 standing = 700
     cost_factor=25,
+    dsb_stog4_sound,
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -413,6 +416,7 @@ d_e_stog4_3_dsb = Train(
     running_cost_factor=200,
     cargo_capacity=84, #134 seats, 16 collapsible seats, ca 180 standing = 330
     cost_factor=25,
+    dsb_stog4_sound,
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
@@ -488,6 +492,7 @@ d_e_stog4_4_dsb = Train(
     running_cost_factor=200,
     cargo_capacity=84, #134 seats, 16 collapsible seats, ca 180 standing = 330
     cost_factor=25,
+    dsb_stog4_sound,
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({

@@ -96,6 +96,22 @@ dsb_my_sound = {
     grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/my_whistle.wav'),
 }
 
+dsb_mz_sound = {
+    grf.SoundEvent.STOPPED: grf.RAWSound('sounds/my_idle.wav'),
+    grf.SoundEvent.VISUAL_EFFECT: grf.RAWSound('sounds/my_start.wav'),
+    grf.SoundEvent.RUNNING_16: grf.RAWSound('sounds/my_coast.wav'),
+    grf.SoundEvent.START: grf.RAWSound('sounds/mz_horn.wav'),
+    grf.SoundEvent.BREAKDOWN: grf.DefaultSound.BREAKDOWN_TRAIN_SHIP,
+    grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/mz_horn.wav'),
+}
+
+dsb_stog4_sound = {
+    grf.SoundEvent.VISUAL_EFFECT: grf.RAWSound('sounds/stog4_start.wav'),
+    grf.SoundEvent.START: grf.RAWSound('sounds/stog4_horn.wav'),
+    grf.SoundEvent.BREAKDOWN: grf.DefaultSound.BREAKDOWN_TRAIN_SHIP,
+    grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/stog4_horn.wav'),
+}
+
 palette = lib.read_palette_file('compal.png')
 colours = {
     
