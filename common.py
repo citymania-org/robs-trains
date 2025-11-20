@@ -87,6 +87,15 @@ modern_diesel_sound = {
     grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/horn_4.wav'),
 }
 
+dsb_my_sound = {
+    grf.SoundEvent.STOPPED: grf.RAWSound('sounds/my_idle.wav'),
+    grf.SoundEvent.VISUAL_EFFECT: grf.RAWSound('sounds/my_start.wav'),
+    grf.SoundEvent.RUNNING_16: grf.RAWSound('sounds/my_coast.wav'),
+    grf.SoundEvent.START: grf.RAWSound('sounds/my_whistle.wav'),
+    grf.SoundEvent.BREAKDOWN: grf.DefaultSound.BREAKDOWN_TRAIN_SHIP,
+    grf.SoundEvent.TUNNEL: grf.RAWSound('sounds/my_whistle.wav'),
+}
+
 palette = lib.read_palette_file('compal.png')
 colours = {
     
