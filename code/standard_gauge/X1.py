@@ -65,7 +65,7 @@ s_e_X1a_2_sj = Train(
     name='SL X1',
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',
-        shading=('x1a',),
+        shading=('x1ab',),
         paint=('x1asl1',),
         overlay=('x1alight'),
         cc_replace=colours["DBLUE"],
@@ -101,7 +101,7 @@ s_e_X1a_3_sj = Train(
     name='SL X1',
     liveries=make_psd_cc_liveries(
         'pp/x1.psd',
-        shading=('x1a',),
+        shading=('x1ab',),
         paint=('x1asl2',),
         overlay=('x1alight'),
         cc_replace=colours["SLBLUE"],
