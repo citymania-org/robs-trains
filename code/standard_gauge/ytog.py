@@ -210,9 +210,10 @@ d_d_y5_1_dsb = Train(
     **COMMON_y5_PROPS,
     name='YM (early) (rear)',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('y5',),
+        paint=('y5lj1',),
+        overlay=('y5light'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
