@@ -307,7 +307,84 @@ class Train(grf.Train):
         res = super()._set_callbacks(g)
         self._gen_livery_callback(g, self.callbacks, self.liveries)
         return res
+    
+    def sw_capacity_calculaiton(load_limit):
+        res = grf.Switch(code=f'cargo_unit_weight',
+            ranges={i: int(load_limit * 16 / i) for i in range(1, 17)},
+            default=0
+        )
+        return res
 
+# class for trains with multiple capacities
+class LuggageTrain(Train):
+
+    def switch_cargo_capacity_by_load_limit(load_limit):
+        res = grf.Switch(code='cargo_subtype',
+            ranges = {
+                0: 0,
+                1: Train.sw_capacity_calculaiton(load_limit)
+            },
+            default=0,
+        )
+        return res
+
+    def switch_subtype(g: grf.NewGRF):
+        res = grf.Switch(code='cargo_subtype',
+            ranges = {
+                0: g.strings.add(' (No cargo)').get_global_id(),
+                1: g.strings.add(' (Cargo)').get_global_id()
+            },
+            default=0x400,
+        )
+        return res
+    
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, luggage_stats=None, **kw):
+        self.luggage_stats = luggage_stats
+        if kw['length'] <= 8:
+            raise Exception('length must (currently) be more than 8 for multi-capacity trains')
+        super().__init__(liveries=liveries, country=country, company=company, power_type=power_type, purchase_sprite_towed_id=purchase_sprite_towed_id, visual_effect=visual_effect, **kw)
+    
+    def _add_auto_articulated_parts(self, id, mid_shorten, mid_liveries, art_shorten, art_liveries, props):
+        # TODO move auto-articulated stuff to the generation phase so props can be changed after creation.
+        art_props = {}
+        flags = self._props.get('misc_flags')
+        if flags is not None:
+            copy_flags = self.Flags.TILT | self.Flags.MULTIPLE_UNIT | self.Flags.USE_2CC
+            art_props['misc_flags'] = flags & copy_flags
+        # Copy power for the right 2cc colour, effective power will be zero anyway.
+        for k in ('track_type', 'power'):
+            if k in props:
+                art_props[k] = props[k]
+        mid_props = {}
+        for k, v in art_props.items():
+            mid_props[k] = v
+        end_props = art_props
+        if self.luggage_stats is not None:
+            # Get callbacks for the mid part
+            luggage_callbacks = self.luggage_stats.get('callbacks')
+            # Get cargoes for mid part
+            for k, v in self.luggage_stats.items():
+                if k != 'callbacks':
+                    mid_props[k] = v
+        else:              
+            luggage_callbacks = None       
+        # Add visual effect to articulated parts if necessary
+        if self.visual_effect is not None:
+            if self.visual_effect[1] > (8 - art_shorten): # It is not the first part
+                if self.visual_effect[1] > (16 - art_shorten - mid_shorten): # It is in the last part
+                    mid_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+                    tail_vis = self.visual_effect_and_powered(self.visual_effect[0], position=(self.visual_effect[1] - art_shorten - mid_shorten), wagon_power=False)
+                else:
+                    mid_vis = self.visual_effect_and_powered(self.visual_effect[0], position=(self.visual_effect[1] + 8 - art_shorten), wagon_power=False)
+                    tail_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+            else:
+                mid_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+                tail_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
+            
+            mid_props['visual_effect_and_powered'] = mid_vis
+            end_props['visual_effect_and_powered'] = tail_vis
+        self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, mid_props, callbacks=luggage_callbacks)
+        self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, end_props)
 
 # TODO write it better
 class PurchaseSprite(grf.SpriteWrapper):
@@ -1144,7 +1221,7 @@ class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top 
             c = x.callbacks.name = grf.Switch(
                 code='extra_callback_info1',
                 ranges = {
-                    0x20 | (level << 8): g.strings.add(name + " - {SILVER}" + x.name).get_global_id()
+                    0x20 | (level << 8): g.strings.add(name + ' - {SILVER}' + x.name).get_global_id()
                     for level, name in names.items()
                 },
                 default=0x400,

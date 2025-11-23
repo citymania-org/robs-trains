@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, LuggageTrain, colours, make_psd_cc_liveries, standard_gauge, g
 
 COMMON_dk30stock_PROPS = dict(
     length=10,
@@ -91,7 +91,7 @@ d_p_car_1_dsb = Train(
     }),
 )
 
-d_p_cae_1_dsb = Train(
+d_p_cae_1_dsb = LuggageTrain(
     **COMMON_dk30stock_PROPS,
     id='d_p_cae_1_dsb',
     name='DSB CAE',
@@ -112,6 +112,16 @@ d_p_cae_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Luggage carriage, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 3,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(3)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
 # aci
@@ -513,7 +523,7 @@ d_p_b_2_lj = Train(
 
 # luggage
 
-d_p_bdg_1_dsb = Train(
+d_p_bdg_1_dsb = LuggageTrain(
     **COMMON_dk30stock_PROPS,
     id='d_p_bdg_1_dsb',
     name='DSB BDg',
@@ -534,11 +544,21 @@ d_p_bdg_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Luggage carriage, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 3,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(3)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
 # dance
 
-d_p_bu_1_dsb = Train(
+d_p_bu_1_dsb = LuggageTrain(
     **COMMON_dk30stock_PROPS,
     id='d_p_bu_1_dsb',
     name='DSB BU',

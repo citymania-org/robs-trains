@@ -194,13 +194,16 @@ s_w_Gblssy_2_gc = Train(
     weight=17,
     tractive_effort_coefficient=79,
     running_cost_factor=200,
-    cargo_capacity=1, # to be decided
+    cargo_capacity=1,
     cost_factor=200,
     refittable_cargo_classes=grf.CargoClass.MAIL,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Dedicated mail trains',
     }),
+    callbacks={
+        'properties': {'cargo_capacity': Train.sw_capacity_calculaiton(22.4)}
+    }
 )
 
 s_w_Hbis_sj = Train(
@@ -227,13 +230,16 @@ s_w_Hbis_sj = Train(
     weight=17,
     tractive_effort_coefficient=79,
     running_cost_factor=200,
-    cargo_capacity=1, # to be decided
+    cargo_capacity=1, 
     cost_factor=200,
-    refittable_cargo_classes=grf.CargoClass.PIECE_GOODS,
+    refittable_cargo_classes=grf.CargoClass.PIECE_GOODS + grf.CargoClass.EXPRESS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
     }),
+    callbacks={
+        'properties': {'cargo_capacity': Train.sw_capacity_calculaiton(25)}
+    }
 )
 
 # 891mm narrow gauge
