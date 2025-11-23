@@ -44,6 +44,45 @@ d_d_y1_1_dsb = Train(
     }),
 )
 
+COMMON_y1dvt_PROPS = dict( # this is based on the HHJ YS 41
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    company='na',
+    power_type='na',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(80),
+    power=0,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=18,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    cargo_capacity=58,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+d_d_y1dvt_1_dsb = Train(
+    id='d_d_y1dvt_1_dsb',
+    **COMMON_y1dvt_PROPS,
+    name='HHJ YS Railbus DVT',
+    liveries=make_psd_cc_liveries(
+        'pp/9Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    introduction_date=date(1968, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+    }),
+)
+
 COMMON_y2_PROPS = dict( # this is based on the LNJ YM 17
     length=9,
     misc_flags=Train.Flags.USE_2CC,
@@ -264,6 +303,25 @@ d_d_y6_1_dsb = Train(
     }),
 )
 
+d_d_y6_4_dsb = Train(
+    id='d_d_y6_4_dsb',
+    **COMMON_y6_PROPS,
+    name='YM',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    introduction_date=date(1983, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+        'Owners': 'HHGB, HHJ',
+    }),
+)
+
 d_d_y6_2_dsb = Train(
     id='d_d_y6_2_dsb',
     **COMMON_y6_PROPS,
@@ -338,6 +396,25 @@ d_d_y7_1_dsb = Train(
     introduction_date=date(1975, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
+    }),
+)
+
+d_d_y7_4_dsb = Train(
+    id='d_d_y7_4_dsb',
+    **COMMON_y7_PROPS,
+    name='YM (rear)',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1',),
+        paint=('2',),
+        cc_replace=colours["SCARLET"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    introduction_date=date(1983, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+        'Owners': 'HHGB, HHJ',
     }),
 )
 
