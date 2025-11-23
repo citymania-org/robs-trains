@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, LuggageTrain, colours, make_psd_cc_liveries, standard_gauge
 
 COMMON_dk30stock_PROPS = dict(
     length=10,
@@ -538,7 +538,7 @@ d_p_bdg_1_dsb = Train(
 
 # dance
 
-d_p_bu_1_dsb = Train(
+d_p_bu_1_dsb = LuggageTrain(
     **COMMON_dk30stock_PROPS,
     id='d_p_bu_1_dsb',
     name='DSB BU',

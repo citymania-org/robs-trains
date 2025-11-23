@@ -308,6 +308,13 @@ class Train(grf.Train):
         self._gen_livery_callback(g, self.callbacks, self.liveries)
         return res
 
+# class for trains with multiple capacities
+class LuggageTrain(Train):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, **kw):
+        super().__init__(liveries=liveries, country=country, company=company, power_type=power_type, purchase_sprite_towed_id=purchase_sprite_towed_id, visual_effect=visual_effect, **kw)
+    
+    def _add_auto_articulated_parts(self, id, mid_shorten, mid_liveries, art_shorten, art_liveries, props):
+        return super()._add_auto_articulated_parts(id, mid_shorten, mid_liveries, art_shorten, art_liveries, props)
 
 # TODO write it better
 class PurchaseSprite(grf.SpriteWrapper):

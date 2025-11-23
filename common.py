@@ -10,6 +10,8 @@ g = grf.NewGRF(
 
 Train = g.bind(lib.Train)
 
+LuggageTrain = g.bind(lib.LuggageTrain)
+
 g.add(grf.SetGlobalTrainDepotYOffset(2))
 
 g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH))
