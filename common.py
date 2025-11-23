@@ -60,6 +60,7 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 ])
 
 # Add SAAZ? for Oslo metro won't be purfect (could work with sets)
+# OTTD PR https://github.com/OpenTTD/OpenTTD/pull/14357 will solve this
 
 # cargo table
 
