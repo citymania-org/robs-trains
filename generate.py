@@ -126,7 +126,7 @@ from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
 from code.standard_gauge.Yo import s_d_Yo_1_sj, s_d_Yo_2_hnj
 from code.standard_gauge.Yo1s import s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj
 from code.standard_gauge.ma import d_d_ma_1_dsb, d_d_ma_2_dsb, d_d_ma_3_dsb, d_d_ma_4_dsb, d_d_ma_5_dsb, d_d_ma_6_dsb, d_d_ma_7_dsb, d_d_ma_8_dsb, d_d_ma_9_dsb, d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb
-from code.standard_gauge.ytog import d_d_y1_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y5_1_dsb, d_d_y6_1_dsb, d_d_y6_2_dsb, d_d_y6_3_dsb, d_d_y7_1_dsb, d_d_y7_2_dsb, d_d_y7_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_2_dsb
+from code.standard_gauge.ytog import d_d_y1_1_dsb, d_d_y1dvt_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y5_1_dsb, d_d_y6_1_dsb, d_d_y6_4_dsb, d_d_y6_2_dsb, d_d_y6_3_dsb, d_d_y7_1_dsb, d_d_y7_4_dsb, d_d_y7_2_dsb, d_d_y7_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_2_dsb
 from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d_mr_4_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_7_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb, dl_d_mr_1_dlj
 from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj
 from code.standard_gauge.ic2 import d_d_ic2_1_dsb, d_d_ic2_2_dsb
@@ -446,7 +446,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њMA (Part 2)', d_d_ma_4_dsb, d_d_ma_5_dsb, d_d_ma_6_dsb),
     grf.VariantGroup('њMA (Part 1 reversed)', d_d_ma_7_dsb, d_d_ma_8_dsb, d_d_ma_9_dsb),
     grf.VariantGroup('њMA (Part 2 reversed)', d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb),
-    grf.VariantGroup('Y-Tog "Lynette" "Grisen"', d_d_y1_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y5_1_dsb, d_d_y6_1_dsb, d_d_y6_2_dsb, d_d_y6_3_dsb, d_d_y7_1_dsb, d_d_y7_2_dsb, d_d_y7_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_2_dsb),
+    grf.VariantGroup('Y-Tog "Lynette" "Grisen"', d_d_y1_1_dsb, d_d_y1dvt_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y5_1_dsb, d_d_y6_1_dsb, d_d_y6_4_dsb, d_d_y6_2_dsb, d_d_y6_3_dsb, d_d_y7_1_dsb, d_d_y7_4_dsb, d_d_y7_2_dsb, d_d_y7_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_2_dsb),
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
     grf.VariantGroup('њMF (IC2)', d_d_ic2_1_dsb, d_d_ic2_2_dsb),
