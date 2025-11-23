@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, LuggageTrain, colours, make_psd_cc_liveries, standard_gauge
 
 COMMON_b_PROPS = dict(
     length=11,
@@ -241,7 +241,9 @@ d_p_a_3_dsb = Train(
     }),
 )
 
-d_p_bd_1_dsb = Train(
+
+
+d_p_bd_1_dsb = LuggageTrain(
     **COMMON_b_PROPS,
     id='d_p_bd_1_dsb',
     name='DSB BD',
@@ -261,9 +263,19 @@ d_p_bd_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
     'Use': 'Luggage carriage, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
-d_p_bd_2_dsb = Train(
+d_p_bd_2_dsb = LuggageTrain(
     **COMMON_b_PROPS,
     id='d_p_bd_2_dsb',
     name='DSB BD',
@@ -283,9 +295,19 @@ d_p_bd_2_dsb = Train(
     additional_text=grf.fake_vehicle_info({
     'Use': 'Luggage carriage, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
-d_p_bd_3_dsb = Train(
+d_p_bd_3_dsb = LuggageTrain(
     **COMMON_b_PROPS,
     id='d_p_bd_3_dsb',
     name='DSB BDk',
@@ -305,6 +327,16 @@ d_p_bd_3_dsb = Train(
     additional_text=grf.fake_vehicle_info({
     'Use': 'Luggage carriage with kiosk, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
 d_p_bn_1_dsb = Train(
@@ -707,7 +739,7 @@ fr_p_b_3_sncf = Train(
     }),
 )
 
-fr_p_ad_1_sncf = Train(
+fr_p_ad_1_sncf = LuggageTrain(
     **COMMON_b_PROPS,
     id='fr_p_ad_1_sncf',
     name='SNCF A7D',
@@ -727,9 +759,19 @@ fr_p_ad_1_sncf = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Luggage carriage, 1st class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
-fr_p_ad_2_sncf = Train(
+fr_p_ad_2_sncf = LuggageTrain(
     **COMMON_b_PROPS,
     id='fr_p_ad_2_sncf',
     name='SNCF A7D',
@@ -749,9 +791,19 @@ fr_p_ad_2_sncf = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Luggage carriage, 1st class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
-fr_p_ad_3_sncf = Train(
+fr_p_ad_3_sncf = LuggageTrain(
     **COMMON_b_PROPS,
     id='fr_p_ad_3_sncf',
     name='SNCF B7D',
@@ -771,9 +823,19 @@ fr_p_ad_3_sncf = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Luggage carriage, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
-fr_p_bd_1_sncf = Train(
+fr_p_bd_1_sncf = LuggageTrain(
     **COMMON_b_PROPS,
     id='fr_p_bd_1_sncf',
     name='SNCF B5D',
@@ -793,9 +855,19 @@ fr_p_bd_1_sncf = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Luggage carriage, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
-fr_p_bd_2_sncf = Train(
+fr_p_bd_2_sncf = LuggageTrain(
     **COMMON_b_PROPS,
     id='fr_p_bd_2_sncf',
     name='SNCF B5D',
@@ -815,6 +887,16 @@ fr_p_bd_2_sncf = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Luggage carriage, 2nd class',
     }),
+    luggage_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'callbacks': {
+            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(4)},
+            'cargo_subtype_text': LuggageTrain.switch_subtype(g),
+        },
+    },
 )
 
 d_p_bns_1_dsb = Train(

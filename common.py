@@ -2,7 +2,7 @@ import grf, lib
 
 g = grf.NewGRF(
     grfid=b'KSTA',
-    name='The International Train Set',
+    name='The International Train Set - TITS',
     description='Mostly European trains made by Rob, dP, Brickblock1 and Meja. Licence: GPL v2',
     url='https://github.com/citymania-org/robs-trains',
     id_map_file='id_map.json',
@@ -62,6 +62,12 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 ])
 
 # Add SAAZ? for Oslo metro won't be purfect (could work with sets)
+
+# cargo table
+
+(ct_mail, ct_goods, ct_food, ct_parcels, ) = g.set_cargo_table(["MAIL", "GOOD", "FOOD", "PCL_"])
+
+# try to keep the order used here for now https://newgrf-specs.tt-wiki.net/wiki/CargoTypes
 
 def tmpl_train(func):
     return [
