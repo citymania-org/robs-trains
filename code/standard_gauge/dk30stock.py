@@ -558,7 +558,7 @@ d_p_bdg_1_dsb = LuggageTrain(
 
 # dance
 
-d_p_bu_1_dsb = LuggageTrain(
+d_p_bu_1_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_bu_1_dsb',
     name='DSB BU',

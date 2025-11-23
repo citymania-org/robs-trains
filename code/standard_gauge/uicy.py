@@ -241,8 +241,6 @@ d_p_a_3_dsb = Train(
     }),
 )
 
-
-
 d_p_bd_1_dsb = LuggageTrain(
     **COMMON_b_PROPS,
     id='d_p_bd_1_dsb',
