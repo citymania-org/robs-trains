@@ -180,7 +180,7 @@ d_d_y4_1_dsb = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'LJ',
+        'Owners': 'HHGB, HHJ, LJ',
     }),
 )
 
@@ -221,7 +221,7 @@ d_d_y5_1_dsb = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'LJ',
+        'Owners': 'HHGB, HHJ, LJ',
     }),
 )
 
@@ -261,7 +261,6 @@ d_d_y6_1_dsb = Train(
     introduction_date=date(1975, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'X',
     }),
 )
 
@@ -339,7 +338,6 @@ d_d_y7_1_dsb = Train(
     introduction_date=date(1975, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'X',
     }),
 )
 
@@ -418,7 +416,7 @@ d_d_y8_1_dsb = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'LJ',
+        'Owners': 'HHGB, HHJ, LJ',
     }),
 )
 
@@ -515,7 +513,7 @@ d_d_y9_1_dsb = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'LJ',
+        'Owners': 'HHJ, LJ',
     }),
 )
 
