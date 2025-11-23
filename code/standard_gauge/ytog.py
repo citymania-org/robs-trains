@@ -407,9 +407,10 @@ d_d_y8_1_dsb = Train(
     **COMMON_y8_PROPS,
     name='YS',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('y8',),
+        paint=('y5lj1',),
+        overlay=('y5light'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -426,9 +427,10 @@ d_d_y8_2_dsb = Train(
     **COMMON_y8_PROPS,
     name='OHJ YS',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('y8',),
+        paint=('y5lj1',),
+        overlay=('y5light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -444,9 +446,10 @@ d_d_y8_3_dsb = Train(
     **COMMON_y8_PROPS,
     name='VLTJ YS',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('y8',),
+        paint=('y8vltj1',),
+        overlay=('y5light'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["CREAM"]
     ),
@@ -462,9 +465,10 @@ d_d_y8_4_dsb = Train(
     **COMMON_y8_PROPS,
     name='VLTJ YS',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('y8',),
+        paint=('y8vltj2',),
+        overlay=('y5light'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
@@ -512,5 +516,23 @@ d_d_y9_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
         'Owners': 'LJ',
+    }),
+)
+
+d_d_y9_2_dsb = Train(
+    id='d_d_y9_2_dsb',
+    **COMMON_y9_PROPS,
+    name='OHJ YP',
+    liveries=make_psd_cc_liveries(
+        'pp/ytog.psd',
+        shading=('y9',),
+        paint=('y9lj1',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='denmark',
+    introduction_date=date(1984, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
     }),
 )
