@@ -13,6 +13,10 @@ DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
+# cargo
+
+g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
+
 # steam
 
 s_s_N_ii_1_sj = Train(
