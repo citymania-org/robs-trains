@@ -25,7 +25,7 @@ COMMON_ic5_PROPS = dict(
 d_p_ic5_1_dsb = Train(
     **COMMON_ic5_PROPS,
     id='d_p_ic5_1_dsb',
-    name='њDSB IC5',
+    name='њDSB APO Lyntog Prototype (IC5)',
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading=('1',),
@@ -100,7 +100,7 @@ d_p_ic5_1_dsb = Train(
 d_p_ic5_2_dsb = Train(
     **COMMON_ic5_PROPS,
     id='d_p_ic5_2_dsb',
-    name='њDSB IC5',
+    name='њDSB APO Lyntog Prototype (IC5)',
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading=('1',),
