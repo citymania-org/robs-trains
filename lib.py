@@ -222,13 +222,15 @@ def _make_liveries(liveries, is_articulated=False):
 
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, misc_flags=None, **kw):
         liveries = _make_liveries(liveries)
         if visual_effect != None:
             if visual_effect[1] >= 24:
                 raise Exception("Train visual effect may not be outside the train")
         self.visual_effect = visual_effect
-
+        if misc_flags != None:
+            kw['misc_flags'] = misc_flags | grf.Train.Flags.USE_CARGO_MULT
+        
         super().__init__(
             liveries=liveries,
             default_cargo_type=grf.DEFAULT_CARGO_FIRST_REFITTABLE,

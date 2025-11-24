@@ -118,7 +118,7 @@ d_p_cae_1_dsb = LuggageTrain(
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'callbacks': {
-            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(3)},
+            'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(3),
             'cargo_subtype_text': LuggageTrain.switch_subtype(g),
         },
     },
@@ -550,7 +550,7 @@ d_p_bdg_1_dsb = LuggageTrain(
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'callbacks': {
-            'properties': {'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(3)},
+            'cargo_capacity': LuggageTrain.switch_cargo_capacity_by_load_limit(3),
             'cargo_subtype_text': LuggageTrain.switch_subtype(g),
         },
     },
