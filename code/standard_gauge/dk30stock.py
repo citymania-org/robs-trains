@@ -837,44 +837,16 @@ d_p_cl_3_dsb = Train(
     country='denmark',
     company='na',
     max_speed=Train.kmhish(120),
-    power=0,
-    introduction_date=date(1960, 1, 1),
-    weight=37,
-    cargo_capacity=87,
-    loading_speed=20,
-    additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 2nd class DVT',
-    }),
-)
-
-d_p_cl_4_dsb = Train(
-    **COMMON_CL_PROPS,
-    id='d_p_cl_4_dsb',
-    name='њDSB CLS',
-    length=10,
-    liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["MAROON"],
-        cc2_replace=colours["MAROON"]
-    ),
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(120),
     power=1,
+    callbacks={'properties': {'power': 0},},
     introduction_date=date(1960, 1, 1),
     weight=37,
     cargo_capacity=87,
     loading_speed=20,
-    visual_effect=(Train.VisualEffect.DISABLE, 7),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class DVT',
-        'Trivia': 'USE AT OWN RISK',
     }),
 )
-
-# dvt
 
 d_p_cl_5_dsb = Train(
     **COMMON_CL_PROPS,
@@ -891,39 +863,13 @@ d_p_cl_5_dsb = Train(
     country='denmark',
     company='na',
     max_speed=Train.kmhish(100),
-    power=0,
-    introduction_date=date(1968, 1, 1),
-    weight=37,
-    cargo_capacity=73,
-    loading_speed=10,
-    additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT for use with MO railcars',
-    }),
-)
-
-d_p_cl_6_dsb = Train(
-    **COMMON_CL_PROPS,
-    id='d_p_cl_6_dsb',
-    name='њDSB Bhs',
-    length=10,
-    liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
-        cc_replace=colours["MAROON"],
-        cc2_replace=colours["MAROON"]
-    ),
-    country='denmark',
-    company='na',
-    max_speed=Train.kmhish(100),
     power=1,
+    callbacks={'properties': {'power': 0},},
     introduction_date=date(1968, 1, 1),
     weight=37,
     cargo_capacity=73,
     loading_speed=10,
-    visual_effect=(Train.VisualEffect.DISABLE, 7),
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT for use with MO railcars',
-        'Trivia': 'USE AT OWN RISK',
     }),
 )
