@@ -97,6 +97,7 @@ s_e_rc1245_4_sj = Train(
         shading=('rc',),
         paint=('gc1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["GREY10"]
     ),

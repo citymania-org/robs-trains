@@ -80,10 +80,22 @@ def tmpl_train(func):
         func(270, 8, 69, 44, xofs=-34, yofs=-38),
         func(350, 8, 42, 44, xofs=-16, yofs=-30),
     ]
+    
+def tmpl_train_r(func):
+    return [
+        func(200, 8, 10, 44, xofs=-4,  yofs=-21),
+        func(220, 8, 42, 44, xofs=-24, yofs=-30),
+        func(270, 8, 69, 44, xofs=-34, yofs=-38),
+        func(350, 8, 42, 44, xofs=-16, yofs=-30),
+        func(  0, 8, 10, 44, xofs=-4,  yofs=-21),
+        func( 20, 8, 42, 44, xofs=-24, yofs=-30),
+        func( 70, 8, 69, 44, xofs=-34, yofs=-38),
+        func(150, 8, 42, 44, xofs=-16, yofs=-30),
+    ]
 
-Livery = lib.LiveryFactory(tmpl_train)
+Livery = lib.LiveryFactory(tmpl_train, tmpl_train)
 paint_palette = lib.read_palette_file('compal.png')
-PSDLivery = lambda *args, **kw: lib.PSDLivery(tmpl_train, paint_palette, *args, **kw)
+PSDLivery = lambda *args, **kw: lib.PSDLivery(tmpl_train, tmpl_train, paint_palette, *args, **kw)
 
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {
@@ -176,13 +188,14 @@ colours = {
 "SBB" : palette[384: 392], # sbb green
 }
 
-def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc_replace, cc2_replace):
+def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_overlay=None, cc_replace, cc2_replace):
     return {
         'Default': PSDLivery(
             psd_file,
             shading=shading,
             paint=paint,
             overlay=overlay,
+            r_overlay=r_overlay,
             cc_replace=cc_replace,
             cc2_replace=cc2_replace,
         ),
@@ -191,6 +204,7 @@ def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc
             shading=shading,
             paint=paint,
             overlay=overlay,
+            r_overlay=r_overlay,
             auto_cc=lib.CC_DEFAULT,
         ),
         '2CC alt': PSDLivery(
@@ -198,6 +212,7 @@ def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, cc
             shading=shading,
             paint=paint,
             overlay=overlay,
+            r_overlay=r_overlay,
             auto_cc=lib.CC_SWAPPED,
         ),
     }

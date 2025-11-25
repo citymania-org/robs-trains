@@ -135,8 +135,9 @@ class CCReplacingFileSprite(grf.FileSprite):
 
 
 class Livery:
-    def __init__(self, template, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+    def __init__(self, template, r_template, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
         self.template = template
+        self.r_template = r_template
         self.image = image
         self.mask = mask
         self.auto_cc = auto_cc
@@ -182,14 +183,18 @@ class Livery:
 
     def get_sprites(self):
         return self.template(self._get_sprite_func())
+    
+    def get_r_sprites(self):
+        return self.r_template(self._get_sprite_func())
 
 
 class LiveryFactory:
-    def __init__(self, template):
+    def __init__(self, template, r_template):
         self.template = template
+        self.r_template = r_template
 
     def __call__(self, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
-        return Livery(self.template, image, mask=mask, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
+        return Livery(self.template, self.r_template, image, mask=mask, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
 
 
 def _make_sprite_func(image_file, mask_file=None):
@@ -212,9 +217,11 @@ def _make_liveries(liveries, is_articulated=False):
 
     res = []
     for name, l in liveries.items():
+        l :Livery
         data = {
             'name': f' ({name})',
             'sprites': l.get_sprites(),
+            'rsprites': l.get_r_sprites()
         }
         res.append(data)
 
@@ -304,6 +311,70 @@ class Train(grf.Train):
             default_cargo_type=grf.DEFAULT_CARGO_FIRST_REFITTABLE,
             **props
         )
+        
+    def _make_graphics(self, liveries, position):
+        try:
+            assert liveries
+            res = [grf.Action1(
+                feature=grf.TRAIN,
+                set_count=2*len(liveries),
+                sprite_count=8,
+            )]
+            layouts = []
+            layouts_r = []
+            for i, l in enumerate(liveries):
+                res.extend(l['sprites'])
+                layouts.append(grf.GenericSpriteLayout(
+                    ent1=(i*2,),
+                    ent2=(i*2,),
+                ))
+                res.extend(l['rsprites'])
+                layouts_r.append(grf.GenericSpriteLayout(
+                    ent1=(i*2+1,),
+                    ent2=(i*2+1,),
+                ))
+
+            if len(liveries) <= 1:
+                return res, grf.Switch(code='vehicle_is_flipped',
+                related_scope=False,
+                ranges={
+                    0: layouts[0],
+                    1: subtype_r[0],
+                },
+                default=layouts[0],
+            )
+
+            subtype_code = 'cargo_subtype'
+            if position > 0:
+                subtype_code=f'''
+                    TEMP[0x10F]=-{position}
+                    var(0x61, param=0xF2, shift=0, and=0xFF)
+                ''',
+
+            subtype = grf.Switch(
+                related_scope=False,
+                ranges=dict(enumerate(layouts)),
+                default=layouts[0],
+                code=subtype_code,
+            )
+            
+            subtype_r = grf.Switch(
+                related_scope=False,
+                ranges=dict(enumerate(layouts_r)),
+                default=layouts_r[0],
+                code=subtype_code,
+            )
+            
+            return res, grf.Switch(code='vehicle_is_flipped',
+                related_scope=False,
+                ranges={
+                    0: subtype,
+                    1: subtype_r,
+                },
+                default=subtype,
+            )
+        except:
+            return super()._make_graphics(liveries, position)
 
     def _set_callbacks(self, g):
         res = super()._set_callbacks(g)
@@ -1139,10 +1210,11 @@ class PSDLivery:
             )
 
 
-    def __init__(self, template, paint_palette, path, *, shading=None, paint=None, overlay=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+    def __init__(self, template, r_template, paint_palette, path, *, shading=None, paint=None, overlay=None, r_overlay=None, auto_cc=None, cc_replace=None, cc2_replace=None):
         if shading is None and overlay is None:
             raise ValueError('Sprite must use shading or overlay')
         self.template = template
+        self.r_template = r_template
 
         if len(paint_palette) % 8 != 0:
             raise ValueError('Paint palette must have exactly 8 shades for each colour')
@@ -1167,6 +1239,7 @@ class PSDLivery:
         self.shading = mklist(shading)
         self.paint = mklist(paint)
         self.overlay = mklist(overlay)
+        self.r_overlay = mklist(r_overlay)
 
         self.auto_cc = auto_cc
         self.cc_replace = cc_replace
@@ -1175,7 +1248,7 @@ class PSDLivery:
         if self.auto_cc is not None and self._has_cc_replace:
             raise ValueError('cc_replace/cc2_replace and auto_cc can''t be used together')
 
-    def _get_sprite_func(self):
+    def _get_sprite_func(self, reverse):
         def f(x, y, w, h, *args, **kw):
             def mksprite(layers):
                 if layers is None:
@@ -1200,9 +1273,12 @@ class PSDLivery:
                     palette=self._paint_palette,
                 )
 
-            if self.overlay is not None:
+            if self.overlay is not None and reverse == False:
                 sprite = CompositeSprite((sprite, mksprite(self.overlay)))
 
+            if self.r_overlay is not None and reverse == True:
+                sprite = CompositeSprite((sprite, mksprite(self.r_overlay)))
+            
             if self.auto_cc is not None:
                 return AutoMask(sprite, self.auto_cc)
 
@@ -1214,7 +1290,10 @@ class PSDLivery:
         return f
 
     def get_sprites(self):
-        return self.template(self._get_sprite_func())
+        return self.template(self._get_sprite_func(False))
+    
+    def get_r_sprites(self):
+        return self.r_template(self._get_sprite_func(True))
     
 class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top level contain the lowest level one this is not suported by grf-py nativly.
 
