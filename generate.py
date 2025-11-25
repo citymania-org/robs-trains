@@ -170,7 +170,7 @@ from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4
 from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj, d_p_cl_1_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb, d_p_cl_5_dsb, d_p_cl_7_dsb, d_p_cl_8_dsb, d_p_cl_9_dsb, d_p_cl_10_dsb, d_p_cl_11_dsb, d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb, d_p_bdg_1_dsb
 from code.standard_gauge.albl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb, d_p_al_5_dsb, d_p_bl_3_dsb
 from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb, d_p_bns_6_dsb, d_p_bd_3_dsb
-from code.standard_gauge.ic5 import d_p_ic5_1_dsb, d_p_ic5_2_dsb, d_p_ic5_3_dsb, d_p_ic5_4_dsb
+from code.standard_gauge.ic5 import d_p_ic5_1_dsb, d_p_ic5_2_dsb
 from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb
 
 # wagons
@@ -458,6 +458,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њMA (Part 2 reversed)', d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb),
     grf.VariantGroup('Y-Tog "Lynette" "Grisen"', d_d_y1_1_dsb, d_d_y1dvt_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y5_1_dsb, d_d_y6_1_dsb, d_d_y6_4_dsb, d_d_y6_2_dsb, d_d_y6_3_dsb, d_d_y7_1_dsb, d_d_y7_4_dsb, d_d_y7_2_dsb, d_d_y7_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_2_dsb),
     grf.VariantGroup('MR', d_d_mr_1_dsb, d_d_mr_7_dsb, d_d_mr_2_dsb, d_d_mr_4_dsb, d_d_mr_3_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb),
+    grf.VariantGroup('њAPO Lyntog Prototype (IC5)', d_p_ic5_1_dsb, d_p_ic5_2_dsb,),
     grf.VariantGroup('њMF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
     grf.VariantGroup('њMF (IC2)', d_d_ic2_1_dsb, d_d_ic2_2_dsb),
     grf.VariantGroup('њ"Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
@@ -487,7 +488,6 @@ lib.make_purchase_sprites(
     grf.VariantGroup('UIC-Y other', d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_3_dsb),
     grf.VariantGroup('њ70s local stock', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_6_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb,),
     d_p_bdg_1_dsb,
-    grf.VariantGroup('њIC5/APO Lyntog Prototype', d_p_ic5_1_dsb, d_p_ic5_2_dsb,),
     grf.VariantGroup('њ4th gen Bombardier DD carriages', d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb),
     # dk wagons
     # dl
@@ -568,8 +568,6 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
     s_p_Co_1,
     s_p_UBp_ii_1,
-    # junk
-    grf.VariantGroup('њTEST VEHICLES', d_p_ic5_3_dsb, d_p_ic5_4_dsb),
     
 ).set_variant_callbacks(g)))
 
