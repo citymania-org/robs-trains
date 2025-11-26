@@ -312,59 +312,103 @@ class Train(grf.Train):
             **props
         )
         
+    def _get_set_count(self, liveries):
+        sets = 0
+        for l in liveries:
+            sprites = l.get('sprites')
+            if sprites is not None:
+                sets += 1
+            sprites_r = l.get('rsprites')
+            if sprites_r is not None:
+                sets += 1
+            rods_sprites = l.get('rods_sprites')
+            if rods_sprites is not None:
+                sets += 1
+            rods_sprites_r = l.get('rods_rsprites')
+            if rods_sprites_r is not None:
+                sets += 1
+        return sets
+        
     def _make_graphics(self, liveries, position):
-        try:
-            assert liveries
-            res = [grf.Action1(
-                feature=grf.TRAIN,
-                set_count=2*len(liveries),
-                sprite_count=8,
-            )]
-            layouts = []
-            layouts_r = []
-            for i, l in enumerate(liveries):
-                res.extend(l['sprites'])
-                layouts.append(grf.GenericSpriteLayout(
-                    ent1=(i*2,),
-                    ent2=(i*2,),
-                ))
-                res.extend(l['rsprites'])
+        assert liveries
+        res = [grf.Action1(
+            feature=grf.TRAIN,
+            set_count=self._get_set_count(liveries),
+            sprite_count=8,
+        )]
+        layouts = []
+        layouts_r = []
+        rods_layouts = []
+        rods_layouts_r = []
+        i = 0
+        for l in liveries:
+            res.extend(l['sprites'])
+            layouts.append(grf.GenericSpriteLayout(
+                ent1=(i,),
+                ent2=(i,),
+            ))
+            i += 1
+            sprites_r = l.get('rsprites')
+            if sprites_r is not None:
+                res.extend(sprites_r)
                 layouts_r.append(grf.GenericSpriteLayout(
-                    ent1=(i*2+1,),
-                    ent2=(i*2+1,),
+                    ent1=(i,),
+                    ent2=(i,),
                 ))
+                i += 1
+            rods_sprites = l.get('rods_sprites')
+            if rods_sprites is not None:
+                res.extend(rods_sprites)
+                rods_layouts.append(grf.GenericSpriteLayout(
+                    ent1=(i,),
+                    ent2=(i,),
+                ))  
+                i += 1
+            rods_sprites_r = l.get('rods_sprites_r')
+            if rods_sprites_r is not None:
+                res.extend(rods_sprites_r)
+                rods_layouts_r.append(grf.GenericSpriteLayout(
+                    ent1=(i,),
+                    ent2=(i,),
+                ))
+                i += 1
 
-            if len(liveries) <= 1:
+        if len(liveries) <= 1:
+            reversed_sprites = liveries[0].get('rsprites')
+            if reversed_sprites is not None:
                 return res, grf.Switch(code='vehicle_is_flipped',
                 related_scope=False,
                 ranges={
                     0: layouts[0],
-                    1: subtype_r[0],
+                    1: layouts_r[0],
                 },
                 default=layouts[0],
-            )
+                )
+            else:
+                return res, layouts[0]
 
-            subtype_code = 'cargo_subtype'
-            if position > 0:
-                subtype_code=f'''
-                    TEMP[0x10F]=-{position}
-                    var(0x61, param=0xF2, shift=0, and=0xFF)
-                ''',
+        subtype_code = 'cargo_subtype'
+        if position > 0:
+            subtype_code=f'''
+                TEMP[0x10F]=-{position}
+                var(0x61, param=0xF2, shift=0, and=0xFF)
+            ''',
 
-            subtype = grf.Switch(
-                related_scope=False,
-                ranges=dict(enumerate(layouts)),
-                default=layouts[0],
-                code=subtype_code,
-            )
-            
+        subtype = grf.Switch(
+            related_scope=False,
+            ranges=dict(enumerate(layouts)),
+            default=layouts[0],
+            code=subtype_code,
+        )
+        
+        if layouts_r != []:
             subtype_r = grf.Switch(
                 related_scope=False,
                 ranges=dict(enumerate(layouts_r)),
                 default=layouts_r[0],
                 code=subtype_code,
             )
-            
+        
             return res, grf.Switch(code='vehicle_is_flipped',
                 related_scope=False,
                 ranges={
@@ -373,8 +417,8 @@ class Train(grf.Train):
                 },
                 default=subtype,
             )
-        except:
-            return super()._make_graphics(liveries, position)
+        else:
+            return res, subtype
 
     def _set_callbacks(self, g):
         res = super()._set_callbacks(g)
