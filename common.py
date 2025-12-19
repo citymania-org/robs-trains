@@ -81,19 +81,19 @@ def tmpl_train(func):
     
 def tmpl_train_r(func):
     return [
-        func(200, 8, 10, 44, xofs=-4,  yofs=-21),
-        func(220, 8, 42, 44, xofs=-24, yofs=-30),
-        func(270, 8, 69, 44, xofs=-34, yofs=-38),
-        func(350, 8, 42, 44, xofs=-16, yofs=-30),
-        func(  0, 8, 10, 44, xofs=-4,  yofs=-21),
-        func( 20, 8, 42, 44, xofs=-24, yofs=-30),
-        func( 70, 8, 69, 44, xofs=-34, yofs=-38),
-        func(150, 8, 42, 44, xofs=-16, yofs=-30),
+        func(200, 8, 10, 44, xofs=-4,  yofs=-23),
+        func(220, 8, 42, 44, xofs=-22, yofs=-31),
+        func(270, 8, 69, 44, xofs=-30, yofs=-38),
+        func(350, 8, 42, 44, xofs=-14, yofs=-29),
+        func(  0, 8, 10, 44, xofs=-4,  yofs=-19),
+        func( 20, 8, 42, 44, xofs=-26, yofs=-29),
+        func( 70, 8, 69, 44, xofs=-38, yofs=-38),
+        func(150, 8, 42, 44, xofs=-18, yofs=-31),
     ]
 
-Livery = lib.LiveryFactory(tmpl_train, tmpl_train)
+Livery = lib.LiveryFactory(tmpl_train, tmpl_train_r)
 paint_palette = lib.read_palette_file('compal.png')
-PSDLivery = lambda *args, **kw: lib.PSDLivery(tmpl_train, tmpl_train, paint_palette, *args, **kw)
+PSDLivery = lambda *args, **kw: lib.PSDLivery(tmpl_train, tmpl_train_r, paint_palette, *args, **kw)
 
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {

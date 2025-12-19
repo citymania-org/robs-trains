@@ -184,7 +184,9 @@ class Livery:
     def get_sprites(self):
         return self.template(self._get_sprite_func())
     
-    def get_r_sprites(self):
+    def get_r_sprites(self, length):
+        if length < 9:
+            return self.template(self._get_sprite_func())
         return self.r_template(self._get_sprite_func())
 
 
@@ -208,7 +210,7 @@ def _make_sprite_func(image_file, mask_file=None):
     return lambda *args, **kw: grf.FileSprite(image, *args, **kw, mask=mask)
 
 
-def _make_liveries(liveries, is_articulated=False):
+def _make_liveries(liveries, is_articulated=False, length=1):
     # Currently unused vox stuff
     # sprites = lib.VoxTrainFile(filename).make_sprites()
     # if DEBUG_DIR is not None:
@@ -221,7 +223,7 @@ def _make_liveries(liveries, is_articulated=False):
         data = {
             'name': f' ({name})',
             'sprites': l.get_sprites(),
-            'rsprites': l.get_r_sprites()
+            'rsprites': l.get_r_sprites(length)
         }
         res.append(data)
 
@@ -230,15 +232,11 @@ def _make_liveries(liveries, is_articulated=False):
 
 class Train(grf.Train):
     def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, misc_flags=None, mid_stats=None, end_stats=None, **kw):
-        liveries = _make_liveries(liveries)
+        liveries = _make_liveries(liveries, length=kw['length'])
         if visual_effect != None:
             if visual_effect[1] >= 24:
                 raise Exception("Train visual effect may not be outside the train")
         self.visual_effect = visual_effect
-        if misc_flags != None:
-            kw['misc_flags'] = misc_flags | grf.Train.Flags.USE_CARGO_MULT
-        else:
-            kw['misc_flags'] = grf.Train.Flags.USE_CARGO_MULT
             
         self.mid_stats = mid_stats
         self.end_stats = end_stats
@@ -276,11 +274,11 @@ class Train(grf.Train):
         
     def _add_auto_articulated_parts(self, id, mid_shorten, mid_liveries, art_shorten, art_liveries, props):
         # TODO move auto-articulated stuff to the generation phase so props can be changed after creation.
-        art_props = {}
+        art_props = {'misc_flags': self.Flags.USE_CARGO_MULT}
         flags = self._props.get('misc_flags')
         if flags is not None:
             copy_flags = self.Flags.TILT | self.Flags.MULTIPLE_UNIT | self.Flags.USE_2CC
-            art_props['misc_flags'] = flags & copy_flags
+            art_props['misc_flags'] = art_props['misc_flags'] | (flags & copy_flags)
         # Copy power for the right 2cc colour, effective power will be zero anyway.
         for k in ('track_type', 'power'):
             if k in props:
@@ -356,9 +354,8 @@ class Train(grf.Train):
             if rods_sprites_r is not None:
                 sets += 1
         return sets
-        
-    def _make_graphics(self, liveries, position):
-        assert liveries
+    
+    def _set_sprites(self, liveries):
         res = [grf.Action1(
             feature=grf.TRAIN,
             set_count=self._get_set_count(liveries),
@@ -400,6 +397,12 @@ class Train(grf.Train):
                     ent2=(i,),
                 ))
                 i += 1
+        return layouts, layouts_r, rods_layouts, rods_layouts_r, res
+        
+    def _make_graphics(self, liveries, position):
+        assert liveries
+
+        layouts, layouts_r, rods_layouts, rods_layouts_r, res = self._set_sprites(liveries)
 
         if len(liveries) <= 1:
             reversed_sprites = liveries[0].get('rsprites')
@@ -436,7 +439,27 @@ class Train(grf.Train):
                 default=layouts_r[0],
                 code=subtype_code,
             )
-        
+            if self.mid_stats != None:
+                cargo_subtype_text = self.mid_stats.get('callbacks').get('cargo_subtype_text')
+                if cargo_subtype_text != None:
+                    if len(cargo_subtype_text._ranges) > 2:
+                        return res, grf.Switch(code='vehicle_is_flipped ^ (cargo_subtype > 1)',
+                            related_scope=False,
+                            ranges={
+                                0: subtype,
+                                1: subtype_r,
+                            },
+                            default=subtype,
+                        )
+                    else:
+                        return res, grf.Switch(code='vehicle_is_flipped ^ cargo_subtype',
+                            related_scope=False,
+                            ranges={
+                                0: subtype,
+                                1: subtype_r,
+                            },
+                            default=subtype,
+                        )
             return res, grf.Switch(code='vehicle_is_flipped ^ cargo_subtype',
                 related_scope=False,
                 ranges={
@@ -464,7 +487,7 @@ class Train(grf.Train):
     class LuggageTrain():
 
         def switch_cargo_capacity(self, load_limit):
-            res = grf.Switch(code='cargo_subtype',
+            res = grf.Switch(code='cargo_subtype % 2',
                 ranges = {
                     0: 0,
                     1: Train.sw_capacity_calculaiton(load_limit)
@@ -482,8 +505,32 @@ class Train(grf.Train):
                 default=0x400,
             )
             return res
+
+    class FlipTrain():
+        def switch_subtype(self, g: grf.NewGRF):
+            res = grf.Switch(code='cargo_subtype',
+                ranges = {
+                    0: g.strings.add(' (Not Flipped)').get_global_id(),
+                    1: g.strings.add(' (Flipped)').get_global_id()
+                },
+                default=0x400,
+            )
+            return res
+        
+        def switch_subtype_luggage(self, g: grf.NewGRF):
+            res = grf.Switch(code='cargo_subtype',
+                ranges = {
+                    0: g.strings.add(' (No cargo)').get_global_id(),
+                    1: g.strings.add(' (Cargo)').get_global_id(),
+                    2: g.strings.add(' (No cargo, flipped)').get_global_id(),
+                    3: g.strings.add(' (Cargo, flipped)').get_global_id()
+                },
+                default=0x400,
+            )
+            return res
         
     Luggage = LuggageTrain()
+    Flip = FlipTrain()
 
 
 
@@ -1320,7 +1367,9 @@ class PSDLivery:
     def get_sprites(self):
         return self.template(self._get_sprite_func(False))
     
-    def get_r_sprites(self):
+    def get_r_sprites(self, lenght):
+        if lenght < 9:
+            return self.template(self._get_sprite_func(True))
         return self.r_template(self._get_sprite_func(True))
     
 class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top level contain the lowest level one this is not suported by grf-py nativly.
