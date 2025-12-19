@@ -229,7 +229,7 @@ def _make_liveries(liveries, is_articulated=False):
 
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, misc_flags=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, misc_flags=None, mid_stats=None, end_stats=None, **kw):
         liveries = _make_liveries(liveries)
         if visual_effect != None:
             if visual_effect[1] >= 24:
@@ -237,6 +237,13 @@ class Train(grf.Train):
         self.visual_effect = visual_effect
         if misc_flags != None:
             kw['misc_flags'] = misc_flags | grf.Train.Flags.USE_CARGO_MULT
+        else:
+            kw['misc_flags'] = grf.Train.Flags.USE_CARGO_MULT
+            
+        self.mid_stats = mid_stats
+        self.end_stats = end_stats
+        if kw['length'] <= 8 and (mid_stats or end_stats) != None:
+            raise Exception('length must (currently) be more than 8 for multi-capacity trains')
         
         super().__init__(
             liveries=liveries,
@@ -278,6 +285,30 @@ class Train(grf.Train):
         for k in ('track_type', 'power'):
             if k in props:
                 art_props[k] = props[k]
+        # Copy props to articulated parts
+        mid_props = {}
+        end_props = {}
+        for k, v in art_props.items():
+            mid_props[k] = v
+            end_props[k] = v
+        if self.mid_stats is not None:
+            # Get callbacks for the mid part
+            mid_callbacks = self.mid_stats.get('callbacks')
+            # Get cargoes for mid part
+            for k, v in self.mid_stats.items():
+                if k != 'callbacks':
+                    mid_props[k] = v
+        else:              
+            mid_callbacks = None
+        if self.end_stats is not None:
+            # Get callbacks for the end part
+            end_callbacks = self.end_stats.get('callbacks')
+            # Get cargoes for end part
+            for k, v in self.end_stats.items():
+                if k != 'callbacks':
+                    end_props[k] = v
+        else:              
+            end_callbacks = None     
         # Add visual effect to articulated parts if necessary
         if self.visual_effect is not None:
             if self.visual_effect[1] > (8 - art_shorten): # It is not the first part
@@ -291,13 +322,10 @@ class Train(grf.Train):
                 mid_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
                 tail_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
             
-            art_props['visual_effect_and_powered'] = mid_vis
-            self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, art_props)
-            art_props['visual_effect_and_powered'] = tail_vis
-            self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, art_props)
-        else:
-            self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, art_props)
-            self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, art_props)
+            mid_props['visual_effect_and_powered'] = mid_vis
+            end_props['visual_effect_and_powered'] = tail_vis
+        self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, mid_props, callbacks=mid_callbacks)
+        self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, end_props, callbacks=end_callbacks)
 
     def add_articulated_part(self, liveries=None, **props):
         if liveries is not None:
@@ -409,7 +437,7 @@ class Train(grf.Train):
                 code=subtype_code,
             )
         
-            return res, grf.Switch(code='vehicle_is_flipped',
+            return res, grf.Switch(code='vehicle_is_flipped ^ cargo_subtype',
                 related_scope=False,
                 ranges={
                     0: subtype,
@@ -432,76 +460,32 @@ class Train(grf.Train):
         )
         return res
 
-# class for trains with multiple capacities
-class LuggageTrain(Train):
+    # class for functions realated to trains with multiple capacities
+    class LuggageTrain():
 
-    def switch_cargo_capacity_by_load_limit(load_limit):
-        res = grf.Switch(code='cargo_subtype',
-            ranges = {
-                0: 0,
-                1: Train.sw_capacity_calculaiton(load_limit)
-            },
-            default=0,
-        )
-        return res
+        def switch_cargo_capacity(self, load_limit):
+            res = grf.Switch(code='cargo_subtype',
+                ranges = {
+                    0: 0,
+                    1: Train.sw_capacity_calculaiton(load_limit)
+                },
+                default=0,
+            )
+            return res
 
-    def switch_subtype(g: grf.NewGRF):
-        res = grf.Switch(code='cargo_subtype',
-            ranges = {
-                0: g.strings.add(' (No cargo)').get_global_id(),
-                1: g.strings.add(' (Cargo)').get_global_id()
-            },
-            default=0x400,
-        )
-        return res
-    
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, luggage_stats=None, **kw):
-        self.luggage_stats = luggage_stats
-        if kw['length'] <= 8:
-            raise Exception('length must (currently) be more than 8 for multi-capacity trains')
-        super().__init__(liveries=liveries, country=country, company=company, power_type=power_type, purchase_sprite_towed_id=purchase_sprite_towed_id, visual_effect=visual_effect, **kw)
-    
-    def _add_auto_articulated_parts(self, id, mid_shorten, mid_liveries, art_shorten, art_liveries, props):
-        # TODO move auto-articulated stuff to the generation phase so props can be changed after creation.
-        art_props = {}
-        flags = self._props.get('misc_flags')
-        if flags is not None:
-            copy_flags = self.Flags.TILT | self.Flags.MULTIPLE_UNIT | self.Flags.USE_2CC
-            art_props['misc_flags'] = flags & copy_flags
-        # Copy power for the right 2cc colour, effective power will be zero anyway.
-        for k in ('track_type', 'power'):
-            if k in props:
-                art_props[k] = props[k]
-        mid_props = {}
-        for k, v in art_props.items():
-            mid_props[k] = v
-        end_props = art_props
-        if self.luggage_stats is not None:
-            # Get callbacks for the mid part
-            luggage_callbacks = self.luggage_stats.get('callbacks')
-            # Get cargoes for mid part
-            for k, v in self.luggage_stats.items():
-                if k != 'callbacks':
-                    mid_props[k] = v
-        else:              
-            luggage_callbacks = None       
-        # Add visual effect to articulated parts if necessary
-        if self.visual_effect is not None:
-            if self.visual_effect[1] > (8 - art_shorten): # It is not the first part
-                if self.visual_effect[1] > (16 - art_shorten - mid_shorten): # It is in the last part
-                    mid_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
-                    tail_vis = self.visual_effect_and_powered(self.visual_effect[0], position=(self.visual_effect[1] - art_shorten - mid_shorten), wagon_power=False)
-                else:
-                    mid_vis = self.visual_effect_and_powered(self.visual_effect[0], position=(self.visual_effect[1] + 8 - art_shorten), wagon_power=False)
-                    tail_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
-            else:
-                mid_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
-                tail_vis = self.visual_effect_and_powered(self.VisualEffect.DISABLE, wagon_power=False)
-            
-            mid_props['visual_effect_and_powered'] = mid_vis
-            end_props['visual_effect_and_powered'] = tail_vis
-        self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, mid_props, callbacks=luggage_callbacks)
-        self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, end_props)
+        def switch_subtype(self, g: grf.NewGRF):
+            res = grf.Switch(code='cargo_subtype',
+                ranges = {
+                    0: g.strings.add(' (No cargo)').get_global_id(),
+                    1: g.strings.add(' (Cargo)').get_global_id()
+                },
+                default=0x400,
+            )
+            return res
+        
+    Luggage = LuggageTrain()
+
+
 
 # TODO write it better
 class PurchaseSprite(grf.SpriteWrapper):
