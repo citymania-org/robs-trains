@@ -359,6 +359,7 @@ COMPANY_SPRITES = {
     'sl': purchase_icon('lsl.png'),
     'taagab': purchase_icon('ltaagab.png'),
     'sj_70s': purchase_icon('lsj70s.png'),
+    'sj_90s': purchase_icon('lsj90s.png'),
     'tgojnew': purchase_icon('ltgojnew.png'),
     'maelartaag': purchase_icon('lmaelartaag.png'),
     'hectorrail': purchase_icon('lhectorrail.png'),
