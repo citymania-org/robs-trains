@@ -231,7 +231,7 @@ def _make_liveries(liveries, is_articulated=False, length=1):
 
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, misc_flags=None, mid_stats=None, end_stats=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, misc_flags=None, mid_stats=None, end_stats=None, intermediate_graphics_chain=None, **kw):
         liveries = _make_liveries(liveries, length=kw['length'])
         if visual_effect != None:
             if visual_effect[1] >= 24:
@@ -252,6 +252,7 @@ class Train(grf.Train):
         self.company = company
         self.power_type = power_type
         self.purchase_sprite_towed_id = purchase_sprite_towed_id
+        self.intermediate_graphics_chain = intermediate_graphics_chain
         
         # Add visual effect to this part if it is specified in the front. We add it to the other parts further down
         mid_shorten, art_shorten, art_liveries = self._calc_length_articulation(
@@ -327,7 +328,7 @@ class Train(grf.Train):
 
     def add_articulated_part(self, liveries=None, **props):
         if liveries is not None:
-            liveries = _make_liveries(liveries, True)
+            liveries = _make_liveries(liveries, True, length=props.get('length'))
         if 'misc_flags' in props.keys():
             props['misc_flags'] = props['misc_flags']
         elif self._props.get('misc_flags') != None: # we don't want to add this is the main definition so that it is consistent for length > 8 and < 8
@@ -439,28 +440,9 @@ class Train(grf.Train):
                 default=layouts_r[0],
                 code=subtype_code,
             )
-            if self.mid_stats != None:
-                cargo_subtype_text = self.mid_stats.get('callbacks').get('cargo_subtype_text')
-                if cargo_subtype_text != None:
-                    if len(cargo_subtype_text._ranges) > 2:
-                        return res, grf.Switch(code='vehicle_is_flipped ^ (cargo_subtype > 1)',
-                            related_scope=False,
-                            ranges={
-                                0: subtype,
-                                1: subtype_r,
-                            },
-                            default=subtype,
-                        )
-                    else:
-                        return res, grf.Switch(code='vehicle_is_flipped ^ cargo_subtype',
-                            related_scope=False,
-                            ranges={
-                                0: subtype,
-                                1: subtype_r,
-                            },
-                            default=subtype,
-                        )
-            return res, grf.Switch(code='vehicle_is_flipped ^ cargo_subtype',
+            if self.intermediate_graphics_chain != None:
+                return res, self.intermediate_graphics_chain(subtype, subtype_r)
+            return res, grf.Switch(code='vehicle_is_flipped',
                 related_scope=False,
                 ranges={
                     0: subtype,
@@ -526,6 +508,28 @@ class Train(grf.Train):
                     3: g.strings.add(' (Cargo, flipped)').get_global_id()
                 },
                 default=0x400,
+            )
+            return res
+        
+        def switch_graphics(self, sw_livery, sw_livery_r):
+            res = grf.Switch(code='cargo_subtype',
+                related_scope=False,
+                ranges={
+                    0: sw_livery,
+                    1: sw_livery_r,
+                },
+                default=sw_livery,
+            )
+            return res
+        
+        def switch_graphics_luggage(self, sw_livery, sw_livery_r):
+            res = grf.Switch(code='cargo_subtype > 1',
+                related_scope=False,
+                ranges={
+                    0: sw_livery,
+                    1: sw_livery_r,
+                },
+                default=sw_livery,
             )
             return res
         

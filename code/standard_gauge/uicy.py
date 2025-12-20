@@ -935,6 +935,15 @@ d_p_bns_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class DVT',
     }),
+    mid_stats={
+        'cargo_capacity': 1,
+        'refittable_cargo_classes': grf.CargoClass.MAIL,
+        'callbacks': {
+            'cargo_subtype_text': Train.Flip.switch_subtype(g),
+            'cargo_capacity': 0,
+        },
+    },
+    intermediate_graphics_chain=Train.Flip.switch_graphics,
 )
 
 d_p_bns_2_dsb = Train(
