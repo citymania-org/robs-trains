@@ -37,7 +37,7 @@ s_e_rc1245_1_sj = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["DBLUE"]
     ),
-    company='na',
+    company='sj_70s',
     max_speed=Train.kmhish(135),
     weight=76,
     introduction_date=date(1967, 1, 1),
@@ -58,7 +58,7 @@ s_e_rc1245_2_sj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(135),
     weight=76,
     introduction_date=date(1990, 1, 1),
@@ -79,7 +79,7 @@ s_e_rc1245_3_sj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(135),
     weight=76,
     introduction_date=date(1996, 1, 1),
@@ -122,7 +122,7 @@ s_e_rc1245_5_sj = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='taagab',
     max_speed=Train.kmhish(135),
     weight=76,
     introduction_date=date(2001, 1, 1),
@@ -164,7 +164,7 @@ s_e_rc1245_7_sj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(135),
     weight=76,
     introduction_date=date(1989, 1, 1),
@@ -271,7 +271,7 @@ s_e_rc36_1_sj = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["DBLUE"]
     ),
-    company='na',
+    company='sj_70s',
     max_speed=Train.kmhish(160),
     weight=76,
     introduction_date=date(1970, 1, 1),
@@ -292,7 +292,7 @@ s_e_rc36_2_sj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(160),
     weight=76,
     introduction_date=date(1990, 1, 1),
@@ -313,7 +313,7 @@ s_e_rc36_3_sj = Train(
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["GREY10"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(160),
     weight=76,
     introduction_date=date(2003, 1, 1),
@@ -355,7 +355,7 @@ s_e_rc36_5_sj = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(160),
     weight=76,
     introduction_date=date(2006, 1, 1),
@@ -376,7 +376,7 @@ s_e_rc36_6_sj = Train(
         cc_replace=colours["GREY4"],
         cc2_replace=colours["GREY10"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(160),
     weight=76,
     introduction_date=date(2006, 1, 1),
@@ -397,7 +397,7 @@ s_e_rc36_7_sj = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["ORANGE"]
     ),
-    company='na',
+    company='sj_70s',
     max_speed=Train.kmhish(160),
     weight=76,
     introduction_date=date(2014, 1, 1),
@@ -418,7 +418,7 @@ s_e_rc36_8_sj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(160),
     weight=76,
     introduction_date=date(1989, 1, 1),
@@ -462,7 +462,7 @@ s_e_rc7_1_sj = Train(
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["GREY10"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(180),
     weight=76,
     introduction_date=date(2001, 1, 1),
@@ -485,7 +485,7 @@ s_e_rm_1_sj = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["DBLUE"]
     ),
-    company='na',
+    company='sj_70s',
     max_speed=Train.kmhish(100),
     weight=90,
     introduction_date=date(1977, 1, 1),
@@ -506,7 +506,7 @@ s_e_rm_2_sj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='sj_90s',
     max_speed=Train.kmhish(100),
     weight=90,
     introduction_date=date(1997, 1, 1),
@@ -548,7 +548,7 @@ s_e_rm_4_sj = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
-    company='na',
+    company='taagab',
     max_speed=Train.kmhish(100),
     weight=90,
     introduction_date=date(2023, 1, 1),

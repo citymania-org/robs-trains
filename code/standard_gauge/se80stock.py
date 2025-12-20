@@ -5,7 +5,7 @@ from datetime import date
 from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 COMMON_se80stock_PROPS = dict(
-    length=10,
+    length=11,
     misc_flags=Train.Flags.USE_2CC,
     power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
@@ -24,7 +24,7 @@ COMMON_se80stock_PROPS = dict(
 # Header
 
 s_p_80s_A = Train(
-    length=10,
+    length=11,
     misc_flags=Train.Flags.USE_2CC,
     power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
@@ -40,11 +40,11 @@ s_p_80s_A = Train(
     id='s_p_80s_A',
     name='80s stock 1st class',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A1',),
+        cc_replace=colours["SEBROWN"],
+        cc2_replace=colours["SEBROWN"]
     ),
     country='sweden',
     company='na',
@@ -65,11 +65,11 @@ s_p_A7_1_sj = Train(
     id='s_p_A7_1_sj',
     name='SJ A7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A1',),
+        cc_replace=colours["SEBROWN"],
+        cc2_replace=colours["SEBROWN"]
     ),
     country='sweden',
     company='sj_70s',
@@ -89,10 +89,10 @@ s_p_A7_2_sj = Train(
     id='s_p_A7_2_sj',
     name='SJ A7/A8',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A2',),
+        cc_replace=colours["SEBROWN"],
         cc2_replace=colours["YELLOW"]
     ),
     country='sweden',
@@ -120,7 +120,7 @@ s_p_A7_3_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1988, 1, 1),
     weight=48,
     cargo_capacity=52,
@@ -144,7 +144,7 @@ s_p_A7_4_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1988, 1, 1),
     weight=48,
     cargo_capacity=52,
@@ -166,7 +166,7 @@ s_p_A7_5_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1994, 1, 1),
     weight=48,
     cargo_capacity=52,
@@ -182,14 +182,14 @@ s_p_A7_6_sj = Train(
     id='s_p_A7_6_sj',
     name='SJ A7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A6',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2006, 1, 1),
     weight=48,
     cargo_capacity=52,
@@ -206,14 +206,14 @@ s_p_A7_7_sj = Train(
     id='s_p_A7_7_sj',
     name='SJ A7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A7',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2006, 1, 1),
     weight=48,
     cargo_capacity=52,
@@ -260,7 +260,7 @@ s_p_A11_1_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2001, 1, 1),
     weight=50,
     cargo_capacity=52,
@@ -293,8 +293,8 @@ s_p_80s_AB = Train(
         'pp/dk30stock.psd',
         shading=('cr',),
         paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
+        cc_replace=colours["SEBROWN"],
+        cc2_replace=colours["SEBROWN"]
     ),
     country='sweden',
     company='na',
@@ -330,8 +330,8 @@ s_p_80s_B = Train(
         'pp/dk30stock.psd',
         shading=('cr',),
         paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
+        cc_replace=colours["SEBROWN"],
+        cc2_replace=colours["SEBROWN"]
     ),
     country='sweden',
     company='na',
@@ -355,8 +355,8 @@ s_p_B7_1_sj = Train(
         'pp/dk30stock.psd',
         shading=('cr',),
         paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
+        cc_replace=colours["SEBROWN"],
+        cc2_replace=colours["SEBROWN"]
     ),
     country='sweden',
     company='sj_70s',
@@ -377,7 +377,7 @@ s_p_B7_2_sj = Train(
         'pp/dk30stock.psd',
         shading=('cr',),
         paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
+        cc_replace=colours["SEBROWN"],
         cc2_replace=colours["YELLOW"]
     ),
     country='sweden',
@@ -405,7 +405,7 @@ s_p_B7_3_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1988, 1, 1),
     weight=46,
     cargo_capacity=80,
@@ -429,7 +429,7 @@ s_p_B7_4_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1988, 1, 1),
     weight=46,
     cargo_capacity=80,
@@ -451,7 +451,7 @@ s_p_B7_5_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1994, 1, 1),
     weight=46,
     cargo_capacity=80,
@@ -473,7 +473,7 @@ s_p_B7_6_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2006, 1, 1),
     weight=46,
     cargo_capacity=80, # other sources say 78
@@ -486,7 +486,7 @@ s_p_B7_6_sj = Train(
 s_p_B7_7_tagab = Train(
     **COMMON_se80stock_PROPS,
     id='s_p_B7_7_tagab',
-    name='Tågab B7',
+    name='TÅGAB B7',
     liveries=make_psd_cc_liveries(
         'pp/dk30stock.psd',
         shading=('cr',),
@@ -495,7 +495,7 @@ s_p_B7_7_tagab = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='taagab',
     introduction_date=date(2015, 1, 1),
     weight=46,
     cargo_capacity=76,
@@ -515,7 +515,7 @@ s_p_B4_1_sj = Train(
         'pp/dk30stock.psd',
         shading=('cr',),
         paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
+        cc_replace=colours["SEBROWN"],
         cc2_replace=colours["YELLOW"]
     ),
     country='sweden',
@@ -543,7 +543,7 @@ s_p_BF4_2_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1994, 1, 1),
     weight=48,
     cargo_capacity=46,
@@ -567,7 +567,7 @@ s_p_BF4_3_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1994, 1, 1),
     weight=48,
     cargo_capacity=46,
@@ -589,7 +589,7 @@ s_p_BF4_4_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1994, 1, 1),
     weight=48,
     cargo_capacity=46,
@@ -633,7 +633,7 @@ s_p_BF7_6_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2010, 1, 1),
     weight=48,
     cargo_capacity=46,
@@ -653,7 +653,7 @@ s_p_B2_1_sj = Train(
         'pp/dk30stock.psd',
         shading=('cr',),
         paint=('cr1_ca1_cae1',),
-        cc_replace=colours["BROWN"],
+        cc_replace=colours["SEBROWN"],
         cc2_replace=colours["YELLOW"]
     ),
     country='sweden',
@@ -681,7 +681,7 @@ s_p_B2_2_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1988, 1, 1),
     weight=48,
     cargo_capacity=69,
@@ -705,7 +705,7 @@ s_p_B2_3_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1988, 1, 1),
     weight=48,
     cargo_capacity=69,
@@ -727,7 +727,7 @@ s_p_B2_4_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1994, 1, 1),
     weight=48,
     cargo_capacity=69,
@@ -775,7 +775,7 @@ s_p_B7B_1_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1990, 1, 1),
     weight=46,
     cargo_capacity=46,
@@ -799,7 +799,7 @@ s_p_B8_2_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1990, 1, 1),
     weight=46,
     cargo_capacity=46,
@@ -823,7 +823,7 @@ s_p_B8_3_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1990, 1, 1),
     weight=46,
     cargo_capacity=46,
@@ -845,7 +845,7 @@ s_p_B8_4_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2006, 1, 1),
     weight=46,
     cargo_capacity=46,
@@ -869,7 +869,7 @@ s_p_B9_1_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(1994, 1, 1),
     weight=48,
     cargo_capacity=68,
@@ -914,7 +914,7 @@ s_p_B9_3_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2006, 1, 1),
     weight=48,
     cargo_capacity=68,
@@ -960,10 +960,10 @@ s_p_B10_1_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2001, 1, 1),
     weight=48,
-    cargo_capacity=81,
+    cargo_capacity=81+4,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class, high capacity',
@@ -983,10 +983,10 @@ s_p_B10_2_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2001, 1, 1),
     weight=48,
-    cargo_capacity=81,
+    cargo_capacity=81+4,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class, high capacity',
@@ -1006,10 +1006,10 @@ s_p_B10_3_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2006, 1, 1),
     weight=48,
-    cargo_capacity=81,
+    cargo_capacity=81+4,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class, high capacity',
@@ -1029,10 +1029,10 @@ s_p_B10_4_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2006, 1, 1),
     weight=48,
-    cargo_capacity=81,
+    cargo_capacity=81+4,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class, high capacity',
@@ -1054,7 +1054,7 @@ s_p_B11_1_sj = Train(
         cc2_replace=colours["RED"]
     ),
     country='sweden',
-    company='na',
+    company='sj_90s',
     introduction_date=date(2001, 1, 1),
     weight=49,
     cargo_capacity=78,
