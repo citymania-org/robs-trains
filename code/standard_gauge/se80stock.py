@@ -113,9 +113,9 @@ s_p_A7_3_sj = Train(
     id='s_p_A7_3_sj',
     name='SJ A7/A8',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A3',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -137,9 +137,9 @@ s_p_A7_4_sj = Train(
     id='s_p_A7_4_sj',
     name='SJ A7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A4',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -159,9 +159,9 @@ s_p_A7_5_sj = Train(
     id='s_p_A7_5_sj',
     name='SJ A7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A5',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -229,11 +229,11 @@ s_p_A7_8_ssrt = Train(
     id='s_p_A7_8_ssrt',
     name='SSRT A7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
-        cc_replace=colours["GREY7"],
-        cc2_replace=colours["GREY9"]
+        'pp/sj80stock.psd',
+        shading=('full',),
+        paint=('A8',),
+        cc_replace=colours["GREY4"],
+        cc2_replace=colours["GREY6"]
     ),
     country='sweden',
     company='na',
@@ -253,9 +253,9 @@ s_p_A11_1_sj = Train(
     id='s_p_A11_1_sj',
     name='SJ A11',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["RED"]
     ),
@@ -290,9 +290,9 @@ s_p_80s_AB = Train(
     id='s_p_80s_AB',
     name='80s stock 1st & 2nd class',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["SEBROWN"]
     ),
@@ -327,9 +327,9 @@ s_p_80s_B = Train(
     id='s_p_80s_B',
     name='80s stock 2nd class',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["SEBROWN"]
     ),
@@ -352,9 +352,9 @@ s_p_B7_1_sj = Train(
     id='s_p_B7_1_sj',
     name='SJ B7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["SEBROWN"]
     ),
@@ -374,9 +374,9 @@ s_p_B7_2_sj = Train(
     id='s_p_B7_2_sj',
     name='SJ B7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -398,9 +398,9 @@ s_p_B7_3_sj = Train(
     id='s_p_B7_3_sj',
     name='SJ B7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -422,9 +422,9 @@ s_p_B7_4_sj = Train(
     id='s_p_B7_4_sj',
     name='SJ B7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -444,9 +444,9 @@ s_p_B7_5_sj = Train(
     id='s_p_B7_5_sj',
     name='SJ B7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -466,9 +466,9 @@ s_p_B7_6_sj = Train(
     id='s_p_B7_6_sj',
     name='SJ B7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -488,9 +488,9 @@ s_p_B7_7_tagab = Train(
     id='s_p_B7_7_tagab',
     name='TÅGAB B7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["RED"]
     ),
@@ -512,9 +512,9 @@ s_p_B4_1_sj = Train(
     id='s_p_B4_1_sj',
     name='SJ B4',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -536,9 +536,9 @@ s_p_BF4_2_sj = Train(
     id='s_p_BF4_2_sj',
     name='SJ BF4',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -560,9 +560,9 @@ s_p_BF4_3_sj = Train(
     id='s_p_BF4_3_sj',
     name='SJ BF4',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -582,9 +582,9 @@ s_p_BF4_4_sj = Train(
     id='s_p_BF4_4_sj',
     name='SJ BF4',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -604,11 +604,11 @@ s_p_BF4_5_ssrt = Train(
     id='s_p_BF4_5_ssrt',
     name='SSRT BF4',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
-        cc_replace=colours["GREY5"],
-        cc2_replace=colours["GREY9"]
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
+        cc_replace=colours["GREY4"],
+        cc2_replace=colours["GREY6"]
     ),
     country='sweden',
     company='na',
@@ -626,9 +626,9 @@ s_p_BF7_6_sj = Train(
     id='s_p_BF7_6_sj',
     name='SJ BF7',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -650,9 +650,9 @@ s_p_B2_1_sj = Train(
     id='s_p_B2_1_sj',
     name='SJ B2',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('half',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -674,9 +674,9 @@ s_p_B2_2_sj = Train(
     id='s_p_B2_2_sj',
     name='SJ B2',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('half',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -698,9 +698,9 @@ s_p_B2_3_sj = Train(
     id='s_p_B2_3_sj',
     name='SJ B2',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('half',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -720,9 +720,9 @@ s_p_B2_4_sj = Train(
     id='s_p_B2_3_sj',
     name='SJ B2',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('half',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -742,11 +742,11 @@ s_p_B2_5_ssrt = Train(
     id='s_p_B2_4_ssrt',
     name='SSRT B2',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
-        cc_replace=colours["GREY5"],
-        cc2_replace=colours["GREY9"]
+        'pp/sj80stock.psd',
+        shading=('half',),
+        #paint=('cr1_ca1_cae1',),
+        cc_replace=colours["GREY4"],
+        cc2_replace=colours["GREY6"]
     ),
     country='sweden',
     company='na',
@@ -768,9 +768,9 @@ s_p_B7B_1_sj = Train(
     id='s_p_B7B_1_sj',
     name='SJ B7B',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -792,9 +792,9 @@ s_p_B8_2_sj = Train(
     id='s_p_B8_2_sj',
     name='SJ B8',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -816,9 +816,9 @@ s_p_B8_3_sj = Train(
     id='s_p_B8_3_sj',
     name='SJ B8',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -838,9 +838,9 @@ s_p_B8_4_sj = Train(
     id='s_p_B8_4_sj',
     name='SJ B8',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -862,9 +862,9 @@ s_p_B9_1_sj = Train(
     id='s_p_B9_1_sj',
     name='SJ B9',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -885,9 +885,9 @@ s_p_B9_2_tkab = Train(
     id='s_p_B9_2_tkab',
     name='TKAB B9',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -907,9 +907,9 @@ s_p_B9_3_sj = Train(
     id='s_p_B9_3_sj',
     name='SJ B9',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -929,11 +929,11 @@ s_p_B9_3_ssrt = Train(
     id='s_p_B9_3_ssrt',
     name='SSRT B9',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
-        cc_replace=colours["GREY5"],
-        cc2_replace=colours["GREY9"]
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
+        cc_replace=colours["GREY4"],
+        cc2_replace=colours["GREY6"]
     ),
     country='sweden',
     company='na',
@@ -953,9 +953,9 @@ s_p_B10_1_sj = Train(
     id='s_p_B10_1_sj',
     name='SJ B10',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('half',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -976,9 +976,9 @@ s_p_B10_2_sj = Train(
     id='s_p_B10_2_sj',
     name='SJ B10',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -999,9 +999,9 @@ s_p_B10_3_sj = Train(
     id='s_p_B10_3_sj',
     name='SJ B10',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('half',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -1022,9 +1022,9 @@ s_p_B10_4_sj = Train(
     id='s_p_B10_4_sj',
     name='SJ B10',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -1047,9 +1047,9 @@ s_p_B11_1_sj = Train(
     id='s_p_B11_1_sj',
     name='SJ B11',
     liveries=make_psd_cc_liveries(
-        'pp/dk30stock.psd',
-        shading=('cr',),
-        paint=('cr1_ca1_cae1',),
+        'pp/sj80stock.psd',
+        shading=('full',),
+        #paint=('cr1_ca1_cae1',),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["RED"]
     ),
