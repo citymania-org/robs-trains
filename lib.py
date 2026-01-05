@@ -686,7 +686,7 @@ class PurchaseSprite(grf.SpriteWrapper):
             print(f'Warning: purchase sprite for {self.train.name}(#{self.train.id}) is too wide: {im.size[0]}px (max {max_width})')
 
         if self.debug_dir:
-            fname = os.path.join(debug_dir, f'purchase_{self.train.id}.png')
+            fname = os.path.join(self.debug_dir, f'purchase_{self.train.id}.png')
             im.save(fname, 'PNG')
 
         self.w, self.h = im.size
@@ -708,7 +708,12 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
     for t in newgrf.generators:
         if not isinstance(t, Train):
             continue
-
+        
+        apids = set()
+        for apid, _, liveries, _, _ in t._articulated_parts or []:
+            apids.add(apid)
+        
+        new_effects = dict(effects)
         towed_list = t.purchase_sprite_towed_id
         if towed_list is None:
             towed_list = []
@@ -722,14 +727,16 @@ def make_purchase_sprites(*, newgrf, xofs, yofs, parts, effects=None, debug_dir=
                 print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} does not exist')
                 failed = True
                 break
-            if not isinstance(towed, (grf.FileSprite, grf.ImageSprite)):
+            if not isinstance(towed, (grf.FileSprite, grf.ImageSprite, CCReplace)):
                 print(f'No purchase sprite for {t.name}(#{t.id}): Towed vehicle with id={towed_id} has no usable graphics')
                 failed = True
                 break
+            if effects is not None and towed_id not in apids:
+                new_effects['checker'] = [t.length * 4 + 1, new_effects['crop_x'] - t.length * 4 - 1]
             towed_sprites.append(towed)
 
         try:
-            t.purchase_sprite = PurchaseSprite(xofs, yofs, parts, effects, t, towed_sprites, debug_dir)
+            t.purchase_sprite = PurchaseSprite(xofs, yofs, parts, new_effects, t, towed_sprites, debug_dir)
         except RuntimeError as e:
             print(str(e))
 

@@ -375,19 +375,7 @@ lib.make_purchase_sprites(
     yofs=-9,
     parts=[
         {
-            'offset': (0, 1),
-            'property': 'country',
-            'sprites': COUNTRY_SPRITES,
-        }, {
-            'offset': (2, 1),
-            'property': 'company',
-            'sprites': COMPANY_SPRITES,
-        }, {
-            'offset': (2, 1),
-            'property': 'power_type',
-            'sprites': POWER_TYPE_SPRITES,
-        }, {
-            'offset': (10, 10),
+            'offset': (0, 10),
             'property': 'self',
         }, {
             'offset': (-1, 10),
@@ -395,10 +383,13 @@ lib.make_purchase_sprites(
         }, {
             'offset': (-1, 10),
             'property': 'towed[1]',
+        }, {
+            'offset': (-1, 10),
+            'property': 'towed[2]',
         },
     ],
     effects={
-        'crop_x': 127,
+        'crop_x': 63,
         'checker': (-4, 4),
     },
     # debug_dir=DEBUG_DIR,
