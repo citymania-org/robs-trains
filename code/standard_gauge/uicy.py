@@ -267,7 +267,7 @@ d_p_bd_1_dsb = Train(
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'callbacks': {
-            'properties': {'cargo_capacity': Train.Luggage.switch_cargo_capacity(4)},
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(4),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
         },
     },
