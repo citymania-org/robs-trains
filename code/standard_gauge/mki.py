@@ -36,6 +36,7 @@ d_d_mki_1_dsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
+    purchase_sprite_towed_id='d_d_fk_1_dsb',
     country='denmark',
     introduction_date=date(1943, 1, 1),
     cargo_capacity=58,

@@ -56,6 +56,7 @@ d_d_mr_1_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_1_dsb',
     country='denmark',
     introduction_date=date(1978, 1, 1),
     cargo_capacity=56,
@@ -90,6 +91,7 @@ d_d_mr_2_dsb = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["RED"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_2_dsb',
     country='denmark',
     introduction_date=date(1994, 1, 1),
     cargo_capacity=56,
@@ -124,6 +126,7 @@ d_d_mr_3_dsb = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["COLBALT"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_3_dsb',
     country='denmark',
     introduction_date=date(2004, 1, 1),
     cargo_capacity=56,
@@ -158,6 +161,7 @@ d_d_mr_4_dsb = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["RED"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_4_dsb',
     country='denmark',
     introduction_date=date(2003, 1, 1),
     cargo_capacity=56,
@@ -192,6 +196,7 @@ d_d_mr_5_dsb = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["CREAM"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_5_dsb',
     country='denmark',
     introduction_date=date(2005, 1, 1),
     cargo_capacity=56,
@@ -226,6 +231,7 @@ d_d_mr_6_dsb = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["COLBALT"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_6_dsb',
     country='denmark',
     introduction_date=date(2012, 1, 1),
     cargo_capacity=56,
@@ -260,6 +266,7 @@ d_d_mr_7_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_7_dsb',
     country='denmark',
     introduction_date=date(1986, 1, 1),
     cargo_capacity=52,
@@ -294,6 +301,7 @@ d_d_mr_8_dsb = Train(
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["COLBALT"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_8_dsb',
     country='denmark',
     introduction_date=date(2019, 1, 1),
     cargo_capacity=56,
@@ -328,6 +336,7 @@ d_d_mr_9_dsb = Train(
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["GREY1"]
     ),
+    purchase_sprite_towed_id='d_d_mrd_9_dsb',
     country='denmark',
     introduction_date=date(2019, 1, 1),
     cargo_capacity=56,
@@ -362,6 +371,7 @@ dl_d_mr_1_dlj = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
+    purchase_sprite_towed_id='dl_d_mrd_1_dlj',
     country='doggerland',
     introduction_date=date(1986, 1, 1),
     cargo_capacity=56,

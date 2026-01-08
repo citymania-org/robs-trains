@@ -35,6 +35,7 @@ s_e_X1a_1_sj = Train(
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["DBLUE"]
     ),
+    purchase_sprite_towed_id='s_e_X1b_1_sj',
     country='sweden',
     company='sj_70s',
     introduction_date=date(1968, 1, 1),
@@ -71,6 +72,7 @@ s_e_X1a_2_sj = Train(
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["GREY1"]
     ),
+    purchase_sprite_towed_id='s_e_X1b_2_sj',
     country='sweden',
     company='sl',
     introduction_date=date(1988, 1, 1),
@@ -107,6 +109,7 @@ s_e_X1a_3_sj = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
+    purchase_sprite_towed_id='s_e_X1b_3_sj',
     country='sweden',
     company='sl',
     introduction_date=date(1996, 1, 1),
