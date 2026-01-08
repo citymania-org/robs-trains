@@ -231,7 +231,7 @@ def _make_liveries(liveries, is_articulated=False, length=1):
 
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, misc_flags=None, mid_stats=None, end_stats=None, intermediate_graphics_chain=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, intermediate_graphics_chain=None, **kw):
         liveries = _make_liveries(liveries, length=kw['length'])
         if visual_effect != None:
             if visual_effect[1] >= 24:
