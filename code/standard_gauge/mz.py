@@ -318,3 +318,24 @@ d_d_mz_iv_2_dbcsc = Train(
         'Trivia': 'Four locomotives bought from RSC in 2016 #1449, #1453, #1457 & #1459',
     }),
 )
+
+d_d_mz_iv_3_bs = Train(
+    **COMMON_mzl_PROPS,
+    id='d_d_mz_iv_3_bs',
+    name='BS MZ IV',
+    liveries=make_psd_cc_liveries(
+        'pp/mz4.psd',
+        shading=('mz1',),
+        paint=('bs1',),
+        overlay=('light'),
+        cc_replace=colours["GREEN"],
+        cc2_replace=colours["BLUE"]
+    ),
+    country='norway',
+    company='na',
+    introduction_date=date(2009, 1, 1),
+    weight=123,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
