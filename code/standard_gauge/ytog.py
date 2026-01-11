@@ -31,9 +31,9 @@ d_d_y1_1_dsb = Train(
     name='YM Railbus',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y1',),
-        paint=('y1dvthhj1',),
-        overlay=('y1dvtlight'),
+        shading=('rb',),
+        paint=('rbhhj1',),
+        overlay=('rblight'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -72,9 +72,9 @@ d_d_y1dvt_1_dsb = Train(
     name='HHJ YS Railbus DVT',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y1dvt',),
-        paint=('y1dvthhj1',),
-        overlay=('y1dvtlight'),
+        shading=('rbdvt',),
+        paint=('rbhhj1',),
+        overlay=('rblight'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -211,10 +211,10 @@ d_d_y4_1_dsb = Train(
     name='YM (early)',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y4',),
-        paint=('y4lj1',),
-        overlay=('y4light'),
-        r_overlay=('y5light'),
+        shading=('ym',),
+        paint=('ymlj1',),
+        overlay=('ymlight'),
+        r_overlay=('ymlightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -349,9 +349,10 @@ d_d_y8_1_dsb = Train(
     name='YS',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y8',),
-        paint=('y5lj1',),
-        overlay=('y5light'),
+        shading=('ys',),
+        paint=('yslj1',),
+        overlay=('yslight'),
+        r_overlay=('yslightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -369,9 +370,10 @@ d_d_y8_2_dsb = Train(
     name='OHJ YS',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y8',),
-        paint=('y5lj1',),
-        overlay=('y5light'),
+        shading=('ys',),
+        paint=('yslj1',),
+        overlay=('yslight'),
+        r_overlay=('yslightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -388,9 +390,10 @@ d_d_y8_3_dsb = Train(
     name='VLTJ YS',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y8',),
-        paint=('y8vltj1',),
-        overlay=('y5light'),
+        shading=('ys',),
+        paint=('ysvltj1',),
+        overlay=('yslight'),
+        r_overlay=('yslightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["CREAM"]
     ),
@@ -407,9 +410,10 @@ d_d_y8_4_dsb = Train(
     name='VLTJ YS',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y8',),
-        paint=('y8vltj2',),
-        overlay=('y5light'),
+        shading=('ys',),
+        paint=('ysvltj2',),
+        overlay=('yslight'),
+        r_overlay=('yslightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
@@ -447,8 +451,8 @@ d_d_y9_1_dsb = Train(
     name='YP',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y9',),
-        paint=('y9lj1',),
+        shading=('yp',),
+        paint=('yplj1',),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -466,8 +470,8 @@ d_d_y9_2_dsb = Train(
     name='OHJ YP',
     liveries=make_psd_cc_liveries(
         'pp/ytog.psd',
-        shading=('y9',),
-        paint=('y9lj1',),
+        shading=('yp',),
+        paint=('yplj1',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
