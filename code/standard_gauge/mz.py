@@ -213,6 +213,90 @@ d_d_mz_ii_7_stab = Train(
     }),
 )
 
+d_d_mz_ii_8_bs = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_ii_8_bs',
+    name='BS MZ II',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('bs1',),
+        overlay=('light'),
+        cc_replace=colours["GREY7"],
+        cc2_replace=colours["ORANGE"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2003, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from DSB in 2002 #1411',
+    }),
+)
+
+d_d_mz_ii_9_bs = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_ii_9_bs',
+    name='BS TMZ II',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('bs2',),
+        overlay=('light'),
+        cc_replace=colours["GREY7"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='norway',
+    company='na',
+    introduction_date=date(2004, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from Banestyrelsen in 2004 #1411',
+    }),
+)
+
+d_d_mz_ii_10_bs = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_ii_10_bs',
+    name='BS TMZ II',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('bs3',),
+        overlay=('light'),
+        cc_replace=colours["GREEN"],
+        cc2_replace=colours["BLUE"]
+    ),
+    country='norway',
+    company='na',
+    introduction_date=date(2011, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': '#1411',
+    }),
+)
+
+d_d_mz_ii_11_nrfab = Train(
+    **COMMON_mze_PROPS,
+    id='d_d_mz_ii_11_nrfab',
+    name='NRFAB TMZ II',
+    liveries=make_psd_cc_liveries(
+        'pp/mz1.psd',
+        shading=('mz2',),
+        paint=('nrfab1',),
+        overlay=('light'),
+        cc_replace=colours["GREEN"],
+        cc2_replace=colours["BLUE"]
+    ),
+    country='sweden',
+    company='na',
+    introduction_date=date(2012, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive bought from Baneservice in 2012 #1411',
+    }),
+)
+
 COMMON_mzl_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
@@ -322,7 +406,7 @@ d_d_mz_iv_2_dbcsc = Train(
 d_d_mz_iv_3_bs = Train(
     **COMMON_mzl_PROPS,
     id='d_d_mz_iv_3_bs',
-    name='BS MZ IV',
+    name='BS TMZ IV',
     liveries=make_psd_cc_liveries(
         'pp/mz4.psd',
         shading=('mz1',),

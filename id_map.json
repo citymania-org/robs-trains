@@ -2125,7 +2125,19 @@
             "d_d_y7_4_dsb": 2539,
             "__d_d_mz_iv_3_bs_aa_mid": 2540,
             "__d_d_mz_iv_3_bs_aa_tail": 2541,
-            "d_d_mz_iv_3_bs": 2542
+            "d_d_mz_iv_3_bs": 2542,
+            "__d_d_mz_ii_8_bs_aa_mid": 2543,
+            "__d_d_mz_ii_8_bs_aa_tail": 2544,
+            "d_d_mz_ii_8_bs": 2545,
+            "__d_d_mz_ii_9_bs_aa_mid": 2546,
+            "__d_d_mz_ii_9_bs_aa_tail": 2547,
+            "d_d_mz_ii_9_bs": 2548,
+            "__d_d_mz_ii_10_bs_aa_mid": 2549,
+            "__d_d_mz_ii_10_bs_aa_tail": 2550,
+            "d_d_mz_ii_10_bs": 2551,
+            "__d_d_mz_ii_11_nrfab_aa_mid": 2552,
+            "__d_d_mz_ii_11_nrfab_aa_tail": 2553,
+            "d_d_mz_ii_11_nrfab": 2554
         }
     }
 }
