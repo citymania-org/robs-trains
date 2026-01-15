@@ -22,7 +22,7 @@ COMMON_XOA4_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
+    country='SE',
 )
 
 s_e_Xoa4_1_sj = Train(
@@ -85,7 +85,7 @@ COMMON_COX4_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
+    country='SE',
 )
 
 s_e_Cox4_1_sj = Train(

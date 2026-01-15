@@ -5,7 +5,7 @@ import grf
 
 import lib
 
-from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours
+from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours, badges
 
 
 PURCHASE_ICONS_DIR = 'purchase list'
@@ -29,7 +29,7 @@ s_s_N_ii_1_sj = Train(
     },
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
-    company='na',
+    company=None,
     power_type='steam',
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
@@ -66,7 +66,7 @@ s_s_Sa_sj = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
-    company='na',
+    company='sj_70s',
     power_type='steam',
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
@@ -309,6 +309,7 @@ x15p = Train(
 
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
+# align with https://petern.github.io/grfbadges-docs/badges/#c_operator
 
 COUNTRY_SPRITES = {
     'austria': purchase_icon('fat.png'),
@@ -328,23 +329,23 @@ COUNTRY_SPRITES = {
     'poland': purchase_icon('fpl.png'),
     'srbija': purchase_icon('frs.png'),
     'russia': purchase_icon('fru.png'),
+    'SE': purchase_icon('fse.png'),
     'sweden': purchase_icon('fse.png'),
     'slovenija ': purchase_icon('fsi.png'),
     'slovakia ': purchase_icon('fsk.png'),
     'ussr': purchase_icon('fsu.png'),
     'jugoslavija': purchase_icon('fyu.png'),
-    'na': purchase_icon('blank.png'),
 }
 
 
 COMPANY_SPRITES = {
-    'na': purchase_icon('blank.png'),
     'cmetro': purchase_icon('lcmetro.png'),
     'øresundståg': purchase_icon('loeresundstaag.png'),
     'stog': purchase_icon('lstog.png'),
     'sl': purchase_icon('lsl.png'),
-    'taagab': purchase_icon('ltaagab.png'),
-    'sj_70s': purchase_icon('lsj70s.png'),
+    'taagab': (purchase_icon('ltaagab.png'), 'TÅGAB'),
+    'sj_70s': (purchase_icon('lsj70s.png'), 'SJ'),
+    'dsb': (None, 'DSB'),
     'tgojnew': purchase_icon('ltgojnew.png'),
     'maelartaag': purchase_icon('lmaelartaag.png'),
     'hectorrail': purchase_icon('lhectorrail.png'),
@@ -366,8 +367,14 @@ POWER_TYPE_SPRITES = {
     '25kv': purchase_icon('pelectric25.png'),
     'dc/15kv/25kv': purchase_icon('pelectric15001525.png'),
     'dc/dc3000/15kv/25kv': purchase_icon('pelectric150030001525.png'),
-    'na': purchase_icon('blank.png')
 }
+
+badges.add_badges(g, 'flag', COUNTRY_SPRITES, 'Country')
+badges.add_badges(g, 'operator', COMPANY_SPRITES, 'Operator')
+badges.add_badges(g, 'power', POWER_TYPE_SPRITES, 'Power')
+
+badges.add_to_trains(g)
+badges.build_badges()
 
 lib.make_purchase_sprites(
     newgrf=g,

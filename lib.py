@@ -231,7 +231,7 @@ def _make_liveries(liveries, is_articulated=False, length=1):
 
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, intermediate_graphics_chain=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, intermediate_graphics_chain=None, badges=None, **kw):
         liveries = _make_liveries(liveries, length=kw['length'])
         if visual_effect != None:
             if visual_effect[1] >= 24:
@@ -1397,3 +1397,52 @@ class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top 
             )
         self._variant_callbacks_set = True
         return self
+    
+class BadgeHandler():
+    
+    def __init__(self, g):
+        self.badges = {}
+        self.badge = g.bind(grf.Badge)
+    
+    def add_badges(self, g, badge_class, sprites, class_name):
+        self.badges[badge_class] = (g.add_badge(badge_class), None, class_name)
+        for b, f in sprites.items():
+            bs = badge_class + '/' + b
+            assert (self.badges.get(bs) == None), f'Badge {bs} already used'
+            if isinstance(f, (list, tuple)):
+                assert len(f) == 2, 'Badge prop list must contain 2 entries'
+                self.badges[bs] = (g.add_badge(bs), f[0], f[1])
+            else:
+                self.badges[bs] = (g.add_badge(bs), f, b)
+        
+    def get_badge(self, badge, badge_class=None):
+        if badge == 'na':
+            print('badge na should not be used')
+            return None
+        if badge is None:
+            return None
+        return self.badges[badge_class + '/' + badge][0]
+    
+    def _set_badges(self, badges):
+        res = []
+        for p, c in badges.items():
+            badge = self.get_badge(p, badge_class=c)
+            if badge is not None:
+                res.append(badge)
+        return res
+    
+    def add_to_trains(self, g):
+        for t in g.generators:
+            if not isinstance(t, Train):
+                continue
+            t._props['badges'] = self._set_badges({t.country: 'flag', t.company: 'operator', t.power_type: 'power'})
+    
+    def build_badges(self):
+        for l, b in self.badges.items():
+            self.badge(
+                name=b[2],
+                label=l,
+                icon=b[1]
+            )
+            
+            
