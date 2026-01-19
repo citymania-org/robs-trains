@@ -37,7 +37,7 @@ d_e_ea_1_dsb = Train(
         cc2_replace=colours["GREY10"]
     ),
     country='denmark',
-    company='dsb',
+    company='na',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -58,7 +58,7 @@ d_e_ea_2_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     country='denmark',
-    company='dsb',
+    company='na',
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -78,7 +78,7 @@ d_e_ea_3_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     country='denmark',
-    company='dsb',
+    company='na',
     introduction_date=date(2017, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',

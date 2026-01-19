@@ -65,10 +65,6 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 
 (ct_mail, ct_goods, ct_food, ct_parcels, ct_wood) = g.set_cargo_table(["MAIL", "GOOD", "FOOD", "PCL_", "WOOD"])
 
-# badge table
-
-badges = lib.BadgeHandler(g)
-
 # try to keep the order used here for now https://newgrf-specs.tt-wiki.net/wiki/CargoTypes
 
 def tmpl_train(func):
