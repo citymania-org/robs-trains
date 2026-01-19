@@ -6,6 +6,7 @@ g = grf.NewGRF(
     description='Mostly European trains made by Rob, dP, Brickblock1 and Meja. Licence: GPL v2',
     url='https://github.com/citymania-org/robs-trains',
     id_map_file='id_map.json',
+    fast_sprite_enumeration=True,
 )
 
 Train = g.bind(lib.Train)
