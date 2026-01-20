@@ -252,9 +252,11 @@ d_d_y6_1_dsb = Train(
     **COMMON_y6_PROPS,
     name='OHJ YM',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('yml',),
+        paint=('ymlj1',),
+        overlay=('ymlight'),
+        r_overlay=('ymlightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -270,9 +272,11 @@ d_d_y6_4_dsb = Train(
     **COMMON_y6_PROPS,
     name='YM',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('yml',),
+        paint=('ymlj1',),
+        overlay=('ymlight'),
+        r_overlay=('ymlightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -289,9 +293,11 @@ d_d_y6_2_dsb = Train(
     **COMMON_y6_PROPS,
     name='VLTJ YM',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('yml',),
+        paint=('ymlvltj1',),
+        overlay=('ymlight'),
+        r_overlay=('ymlightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["CREAM"]
     ),
@@ -308,9 +314,11 @@ d_d_y6_3_dsb = Train(
     **COMMON_y6_PROPS,
     name='VLTJ YM',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('yml',),
+        paint=('ymlvltj2',),
+        overlay=('ymlight'),
+        r_overlay=('ymlightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
