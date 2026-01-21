@@ -650,12 +650,12 @@ COMMON_CL_PROPS = dict(
 d_p_cl_1_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_1_dsb',
-    name='њDSB CL',
+    name='DSB CL',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('cl',),
+        paint=('cl1',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -675,12 +675,12 @@ d_p_cl_1_dsb = Train(
 d_p_cl_9_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_9_dsb',
-    name='њHFHJ C 61',
+    name='HFHJ C 61',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('cl',),
+        paint=('hfhjc611',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -700,12 +700,12 @@ d_p_cl_9_dsb = Train(
 d_p_cl_10_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_10_dsb',
-    name='њHFHJ C 61',
+    name='HFHJ C 61',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('cl',),
+        paint=('hfhjc612',),
         cc_replace=colours["RED"],
         cc2_replace=colours["CREAM"]
     ),
@@ -725,12 +725,12 @@ d_p_cl_10_dsb = Train(
 d_p_cl_11_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_11_dsb',
-    name='њHFHJ C 61',
+    name='HFHJ C 61',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('cl',),
+        paint=('hfhjc613',),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -750,12 +750,12 @@ d_p_cl_11_dsb = Train(
 d_p_cl_8_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_8_dsb',
-    name='њLJ P 76',
+    name='LJ P 76',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('cl',),
+        paint=('ljp76',),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
