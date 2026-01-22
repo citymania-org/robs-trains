@@ -775,12 +775,12 @@ d_p_cl_8_dsb = Train(
 d_p_cl_7_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_7_dsb',
-    name='њHTJ CLE 71',
+    name='HTJ CLE 71',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('clehtj',),
+        paint=('hfhjc613',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
