@@ -125,7 +125,7 @@ d_p_al_5_dsb = Train(
     weight=36,
     cargo_capacity=42,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st class',
+        'Use': '2nd class',
     }),
 )
 
