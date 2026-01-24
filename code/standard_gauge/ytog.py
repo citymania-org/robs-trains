@@ -92,7 +92,7 @@ COMMON_y2_PROPS = dict( # this is based on the LNJ YM 17
     power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
-    max_speed=Train.kmhish(60),
+    max_speed=Train.kmhish(105),
     power=360,
     vehicle_life=30,
     model_life=30,
@@ -111,11 +111,12 @@ d_d_y2_1_dsb = Train(
     **COMMON_y2_PROPS,
     name='YM Railbus',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('rbl',),
+        paint=('rbhhj1',),
+        overlay=('rblight'),
         cc_replace=colours["SCARLET"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["GREY3"]
     ),
     country='denmark',
     introduction_date=date(1968, 1, 1),
@@ -130,9 +131,10 @@ d_d_y2_2_dsb = Train(
     **COMMON_y2_PROPS,
     name='VLTJ YM Railbus "Fjorden"',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('rbl',),
+        paint=('rblvltj1',),
+        overlay=('rblight'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
@@ -151,7 +153,7 @@ COMMON_y3_PROPS = dict( # this is based on the LNJ YS 25
     power_type='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
-    max_speed=Train.kmhish(60),
+    max_speed=Train.kmhish(105),
     power=0,
     vehicle_life=30,
     model_life=30,
@@ -170,11 +172,12 @@ d_d_y3_1_dsb = Train(
     **COMMON_y3_PROPS,
     name='YS Railbus DVT',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/ytog.psd',
+        shading=('rbldvt',),
+        paint=('rbhhj1',),
+        overlay=('rblight'),
         cc_replace=colours["SCARLET"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["GREY3"]
     ),
     country='denmark',
     introduction_date=date(1968, 1, 1),
