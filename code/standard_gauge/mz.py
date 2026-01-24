@@ -216,7 +216,7 @@ d_d_mz_ii_7_stab = Train(
 d_d_mz_ii_8_bs = Train(
     **COMMON_mze_PROPS,
     id='d_d_mz_ii_8_bs',
-    name='BS MZ II',
+    name='BS MZ I/II',
     liveries=make_psd_cc_liveries(
         'pp/mz1.psd',
         shading=('mz2',),
@@ -227,10 +227,10 @@ d_d_mz_ii_8_bs = Train(
     ),
     country='denmark',
     company='na',
-    introduction_date=date(2003, 1, 1),
+    introduction_date=date(2002, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'One locomotive bought from DSB in 2002 #1411',
+        'Trivia': 'Four locomotives bought from DSB in 2002 #1403, #1408, #1411 & #1419',
     }),
 )
 
