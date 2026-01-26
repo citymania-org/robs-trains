@@ -54,7 +54,7 @@ d_d_me_ii_2_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/me.psd',
         shading=('me',),
-        paint=('dsb2/3',),
+        paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["COLBALT"]
@@ -74,7 +74,7 @@ d_d_me_ii_3_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/me.psd',
         shading=('me',),
-        paint=('dsb2/3',),
+        paint=('dsb3',),
         overlay=('light'),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["RED"]
