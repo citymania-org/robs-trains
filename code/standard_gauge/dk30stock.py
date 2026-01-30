@@ -800,12 +800,12 @@ d_p_cl_7_dsb = Train(
 d_p_cl_2_dsb = Train(
     **COMMON_CL_PROPS,
     id='d_p_cl_2_dsb',
-    name='њDSB CLE',
+    name='DSB CLE',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/dk30stock.psd',
+        shading=('cle',),
+        paint=('cle1',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -813,13 +813,22 @@ d_p_cl_2_dsb = Train(
     company='na',
     max_speed=Train.kmhish(100),
     power=0,
-    introduction_date=date(1945, 1, 1),
+    introduction_date=date(1943, 1, 1),
     weight=28,
     cargo_capacity=61,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class luggage carriage',
     }),
+    mid_stats={
+        'cargo_capacity': 1,
+        'refittable_cargo_classes': grf.CargoClass.MAIL,
+        'callbacks': {
+            'cargo_subtype_text': Train.Flip.switch_subtype(g),
+            'cargo_capacity': 0,
+        },
+    },
+    intermediate_graphics_chain=Train.Flip.switch_graphics,
 )
 
 d_p_cl_3_dsb = Train(
