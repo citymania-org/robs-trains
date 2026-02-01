@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, metro
+from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge
 
 
 COMMON_C2_PROPS = dict(
@@ -87,7 +87,7 @@ s_e_C3_1_ss = Train(
         'Operator': 'SS',
         'Use': 'Sockholm Metro trains',
         'Builder': 'ASEA, ASJ',
-        'Trivia': '''The C3 lacked proper cabs and were therefore always sandwiched  between other units''',
+        'Trivia': '''The C3 lacked proper cabs and were therefore always sandwiched  between other units though they had a small control panel it was only used for swtiching''',
     }),
 )
 
@@ -223,7 +223,7 @@ s_e_C5_1_ss = Train(
         'Operator': 'SS',
         'Use': 'Stockholm Metro trains',
         'Builder': 'Hägglund',
-        'Trivia': '''Its unusual look spawned multiple urban legends, often involving the abonded Kymlinge station''',
+        'Trivia': '''Its unusual appearance spawned multiple urban legends, often involving the abonded Kymlinge station''',
     }),
 ).add_articulated_part(
     id='s_e_C5_1_ss_car2',
@@ -239,4 +239,47 @@ s_e_C5_1_ss = Train(
     cargo_capacity=156,
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_9239_PROPS = dict(
+    length=8,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='dual',
+    engine_class=Train.EngineClass.ELECTRIC, 
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(70),
+    power=435,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=34,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    country='sweden',
+)
+
+s_e_9239_1_sl = Train(
+    **COMMON_9239_PROPS,
+    id='s_e_9239_1_sl',
+    name='SL 9239',
+    liveries=make_psd_cc_liveries(
+        'pp/Cx.psd',
+        shading=['C1', 'C1roof', '9239'],
+        paint=['9239sl'],
+        overlay=('9239lights+props',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    company='sl',
+    introduction_date=date(1977, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Works unit',
+        'Builder': 'ASEA, ASJ',
+        'Trivia': '''In 1977 a C2 was damaged in a fire and rebuilt into a battery driven works unit''',
+    }),
 )
