@@ -136,6 +136,7 @@ from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_
 from code.standard_gauge.ic2 import d_d_ic2_1_dsb, d_d_ic2_2_dsb
 from code.standard_gauge.mq2 import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb, d_d_mq2_6_dsb, d_d_mq2_7_dsb, d_d_mq2_8_dsb, d_d_mq2_9_dsb, d_d_mq2_10_dsb, d_d_mq2_11_dsb
 from code.standard_gauge.mp import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_dsb, d_d_mg_2_dsb
+from code.standard_gauge.öcj25 import s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2
 
 # emu 15
 
@@ -532,6 +533,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њRm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
     s_e_rc7_1_sj,
     # se dmu
+    grf.VariantGroup('њÖCJ 24-25 "Bilvagnar"', s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2),
     grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
     grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
     grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
