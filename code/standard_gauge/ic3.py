@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 d_d_mf_1_dsb = Train(
     id='d_d_mf_1_dsb',
-    name='њDSB MF (IC3)',
+    name='DSB MF (IC3)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -56,9 +56,10 @@ d_d_mf_1_dsb = Train(
     id='d_d_mf3_1_dsb',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading='1',
-        paint='2',
+        'pp/ic3.psd',
+        shading='mfb',
+        paint='mfbdsb1',
+        overlay=('mfblight'),
         cc_replace=colours['GREY1'],
         cc2_replace=colours['RED'],
     ),
@@ -69,7 +70,7 @@ d_d_mf_1_dsb = Train(
 
 d_d_mf_2_dsb = Train(
     id='d_d_mf_2_dsb',
-    name='њDSB MF (IC3)',
+    name='DSB MF (IC3)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -119,9 +120,10 @@ d_d_mf_2_dsb = Train(
     id='d_d_mf3_2_dsb',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading='1',
-        paint='2',
+        'pp/ic3.psd',
+        shading='mfb',
+        paint='mfbdsb2',
+        overlay=('mfblight'),
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -132,7 +134,7 @@ d_d_mf_2_dsb = Train(
 
 d_d_mf_3_dsb = Train(
     id='d_d_mf_3_dsb',
-    name='њDSB MF (IC3)',
+    name='DSB MF (IC3)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -182,9 +184,10 @@ d_d_mf_3_dsb = Train(
     id='d_d_mf3_3_dsb',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading='1',
-        paint='2',
+        'pp/ic3.psd',
+        shading='mfb',
+        paint='mfbdsb3',
+        overlay=('mfblight'),
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -195,7 +198,7 @@ d_d_mf_3_dsb = Train(
 
 d_d_mf_4_dsb = Train(
     id='d_d_mf_4_dsb',
-    name='њDSB MF (IC3)',
+    name='DSB MF (IC3)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -245,9 +248,10 @@ d_d_mf_4_dsb = Train(
     id='d_d_mf3_4_dsb',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading='1',
-        paint='2',
+        'pp/ic3.psd',
+        shading='mfb',
+        paint='mfbdsb4',
+        overlay=('mfblight'),
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY10'],
     ),
