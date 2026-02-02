@@ -262,12 +262,12 @@ d_d_mf_4_dsb = Train(
 
 s_d_mf_5_sj = Train(
     id='s_d_mf_5_sj',
-    name='њSJ Y2',
+    name='SJ Y2',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
         shading=('mfa',),
-        paint=('2',),
+        paint=('mfasj1',),
         overlay=('mfalight'),
         cc_replace=colours["RED"],
         cc2_replace=colours["COLBALT"]
@@ -301,7 +301,7 @@ s_d_mf_5_sj = Train(
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
         shading='ff',
-        paint='ffdsb1',
+        paint='ffsj1',
         cc_replace=colours['RED'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -312,9 +312,10 @@ s_d_mf_5_sj = Train(
     id='s_d_mf3_5_sj',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading='1',
-        paint='2',
+        'pp/ic3.psd',
+        shading='mfb',
+        paint='mfbsj1',
+        overlay=('mfblight'),
         cc_replace=colours['RED'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -325,12 +326,12 @@ s_d_mf_5_sj = Train(
 
 s_d_mf_6_sj = Train(
     id='s_d_mf_6_sj',
-    name='њSJ Y2',
+    name='SJ Y2',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
         shading=('mfa',),
-        paint=('2',),
+        paint=('mfasj2',),
         overlay=('mfalight'),
         cc_replace=colours["RED"],
         cc2_replace=colours["COLBALT"]
@@ -364,7 +365,7 @@ s_d_mf_6_sj = Train(
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
         shading='ff',
-        paint='ffdsb1',
+        paint='ffsj2',
         cc_replace=colours['RED'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -375,9 +376,10 @@ s_d_mf_6_sj = Train(
     id='s_d_mf3_6_sj',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading='1',
-        paint='2',
+        'pp/ic3.psd',
+        shading='mfb',
+        paint='mfbsj2',
+        overlay=('mfblight'),
         cc_replace=colours['RED'],
         cc2_replace=colours['COLBALT'],
     ),

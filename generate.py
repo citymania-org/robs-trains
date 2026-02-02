@@ -537,7 +537,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
     grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
     grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
-    grf.VariantGroup('њY2', s_d_mf_5_sj, s_d_mf_6_sj),
+    grf.VariantGroup('Y2', s_d_mf_5_sj, s_d_mf_6_sj),
     # se emu 15
     grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj),
     grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj),
