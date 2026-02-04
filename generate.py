@@ -464,7 +464,7 @@ lib.make_purchase_sprites(
     # dk emu dc 3000
     # dk emu 15
     # dk emu 25
-    grf.VariantGroup('њER (IR4)', d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb),
+    grf.VariantGroup('ER (IR4)', d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb),
     # dk emu 3rd
     # dk carriages
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),

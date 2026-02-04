@@ -6,7 +6,7 @@ from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv
 
 d_e_er_1_dsb = Train(
     id='d_e_er_1_dsb',
-    name='њDSB ER (IR4)',
+    name='DSB ER (IR4)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -17,6 +17,7 @@ d_e_er_1_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_er2_1_dsb',
     country='denmark',
     company='na',
     power_type='25kv',
@@ -43,8 +44,8 @@ d_e_er_1_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='fra',
+        paint='fradsb1',
         cc_replace=colours['GREY1'],
         cc2_replace=colours['RED'],
     ),
@@ -56,8 +57,8 @@ d_e_er_1_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='frb',
+        paint='frbdsb1',
         cc_replace=colours['GREY1'],
         cc2_replace=colours['RED'],
     ),
@@ -82,7 +83,7 @@ d_e_er_1_dsb = Train(
 
 d_e_er_2_dsb = Train(
     id='d_e_er_2_dsb',
-    name='њDSB ER (IR4)',
+    name='DSB ER (IR4)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -93,6 +94,7 @@ d_e_er_2_dsb = Train(
         cc2_replace=colours["COLBALT"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_er2_2_dsb',
     country='denmark',
     company='na',
     power_type='25kv',
@@ -119,8 +121,8 @@ d_e_er_2_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='fra',
+        paint='fradsb2',
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -132,8 +134,8 @@ d_e_er_2_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='frb',
+        paint='frbdsb2',
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -158,7 +160,7 @@ d_e_er_2_dsb = Train(
 
 d_e_er_3_dsb = Train(
     id='d_e_er_3_dsb',
-    name='њDSB ER (IR4)',
+    name='DSB ER (IR4)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -169,6 +171,7 @@ d_e_er_3_dsb = Train(
         cc2_replace=colours["COLBALT"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_er2_3_dsb',
     country='denmark',
     company='na',
     power_type='25kv',
@@ -195,8 +198,8 @@ d_e_er_3_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='fra',
+        paint='fradsb3',
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -208,8 +211,8 @@ d_e_er_3_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='frb',
+        paint='frbdsb3',
         cc_replace=colours['GREY3'],
         cc2_replace=colours['COLBALT'],
     ),
@@ -234,7 +237,7 @@ d_e_er_3_dsb = Train(
 
 d_e_er_4_dsb = Train(
     id='d_e_er_4_dsb',
-    name='њDSB ER (IR4)',
+    name='DSB ER (IR4)',
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
@@ -245,6 +248,7 @@ d_e_er_4_dsb = Train(
         cc2_replace=colours["GREY10"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_er2_4_dsb',
     country='denmark',
     company='na',
     power_type='25kv',
@@ -271,8 +275,8 @@ d_e_er_4_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='fra',
+        paint='fradsb4',
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY10'],
     ),
@@ -284,8 +288,8 @@ d_e_er_4_dsb = Train(
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/ic3.psd',
-        shading='1',
-        paint='2',
+        shading='frb',
+        paint='frbdsb4',
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY10'],
     ),
