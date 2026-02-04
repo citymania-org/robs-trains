@@ -128,7 +128,7 @@ d_d_mr_3_dsb = Train(
     ),
     purchase_sprite_towed_id='d_d_mrd_3_dsb',
     country='denmark',
-    introduction_date=date(2004, 1, 1),
+    introduction_date=date(2002, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers, up to 5 can be coupled together into a train set',
