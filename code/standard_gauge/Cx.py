@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge, standard_gauge_1500v
 
 
 COMMON_C2_PROPS = dict(
@@ -124,6 +124,7 @@ s_e_C4_1_ss = Train(
         cc_replace=colours["GREEN"],
         cc2_replace=colours["GREEN"]
     ),
+    purchase_sprite_towed_id='s_e_C4_1_ss_car2',
     company='ss',
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
@@ -160,6 +161,7 @@ s_e_C4_2_sl = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
+    purchase_sprite_towed_id='s_e_C4_1_sl_car2',
     company='sl',
     introduction_date=date(1985, 1, 1),
     additional_text=grf.fake_vehicle_info({
@@ -217,6 +219,7 @@ s_e_C5_1_ss = Train(
         cc_replace=colours["GREY5"],
         cc2_replace=colours["GREY5"]
     ),
+    purchase_sprite_towed_id='s_e_C5_1_ss_car2',
     company='ss',
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
@@ -281,5 +284,356 @@ s_e_9239_1_sl = Train(
         'Use': 'Works unit',
         'Builder': 'ASEA, ASJ',
         'Trivia': '''In 1977 a C2 was damaged in a fire and rebuilt into a battery driven works unit''',
+    }),
+)
+
+#2nd generation of Cx - new front
+
+COMMON_C6_PROPS = dict(
+    length=8,
+    misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
+    power_type='3rd',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=metro,
+    max_speed=Train.kmhish(90),
+    power=1090,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=46,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=156,
+    loading_speed=40,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    country='sweden',
+)
+
+s_e_C6_1_sl = Train(
+    **COMMON_C6_PROPS,
+    id='s_e_C6_1_sl',
+    name='SL C6',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["GREEN"],
+        cc2_replace=colours["GREEN"]
+    ),
+    purchase_sprite_towed_id='s_e_C6_1_sl_car2',
+    company='sl',
+    introduction_date=date(1970, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Stockholm Metro trains',
+        'Builder': 'ASEA, Hägglund',
+        'Trivia': '''2789-2790 were rebuilt into C16 for use on Saltsjöbanan'''
+    }),
+).add_articulated_part(
+    id='s_e_C6_1_sl_car2',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours['GREEN'],
+        cc2_replace=colours['GREEN'],
+    ),
+    cargo_capacity=156,
+    loading_speed=40,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_C6_2_sl = Train(
+    **COMMON_C6_PROPS,
+    id='s_e_C6_2_sl',
+    name='SL C6',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    purchase_sprite_towed_id='s_e_C6_2_sl_car2',
+    company='sl',
+    introduction_date=date(1972, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Stockholm Metro trains',
+        'Builder': 'ASEA, Hägglund',
+        'Trivia': '''2789-2790 were rebuilt into C16 for use on Saltsjöbanan'''
+    }),
+).add_articulated_part(
+    id='s_e_C6_2_sl_car2',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours['SLBLUE'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=156,
+    loading_speed=40,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_C6_3_sl = Train(
+    **COMMON_C6_PROPS,
+    id='s_e_C6_3_sl',
+    name='SL C6',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    purchase_sprite_towed_id='s_e_C6_3_sl_car2',
+    company='sl',
+    introduction_date=date(2009, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Stockholm Metro trains',
+        'Builder': 'ASEA, Hägglund',
+        'Trivia': '''Rebuilt in 2009 to try new seating arrangements with more standing spaces'''
+    }),
+).add_articulated_part(
+    id='s_e_C6_3_sl_car2',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours['SLBLUE'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=156,
+    loading_speed=40,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_C8_PROPS = dict(
+    length=8,
+    misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
+    power_type='3rd',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=metro,
+    max_speed=Train.kmhish(90),
+    power=946,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=46,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=158,
+    loading_speed=40,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    country='sweden',
+)
+
+s_e_C8_1_sl = Train(
+    **COMMON_C8_PROPS,
+    id='s_e_C8_1_sl',
+    name='SL C8',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    purchase_sprite_towed_id='s_e_C8_1_sl_car2',
+    company='sl',
+    introduction_date=date(1974, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Stockholm Metro trains',
+        'Builder': 'ASEA, Hägglund',
+        'Trivia': '''Units 2819 and 2821 were rebuilt into C10, units 2820 and 2822 were rebuilt into C11, both for use on Saltsjöbanan''',
+    }),
+).add_articulated_part(
+    id='s_e_C8_1_sl_car2',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours['SLBLUE'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=158,
+    loading_speed=40,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_C8_2_sl = Train(
+    **COMMON_C8_PROPS,
+    id='s_e_C8_2_sl',
+    name='SL C8',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    purchase_sprite_towed_id='s_e_C8_2_sl_car2',
+    company='sl',
+    introduction_date=date(1999, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Stockholm Metro trains',
+        'Builder': 'ASEA, Hägglund',
+    }),
+).add_articulated_part(
+    id='s_e_C8_2_sl_car2',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours['SLBLUE'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=158,
+    loading_speed=40,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_C10_PROPS = dict(
+    length=8,
+    misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
+    power_type='dc',
+    engine_class=Train.EngineClass.ELECTRIC, 
+    track_type=standard_gauge_1500v,
+    max_speed=Train.kmhish(70),
+    power=600,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=46,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=144,
+    loading_speed=30,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    country='sweden',
+)
+
+#Saltsjöbanan
+
+s_e_C10_1_sl = Train(
+    **COMMON_C10_PROPS,
+    id='s_e_C10_1_sl',
+    name='SL C10',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    purchase_sprite_towed_id='s_e_C11_1_sl_car2',
+    company='sl',
+    introduction_date=date(1975, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Local passenger',
+        'Builder': 'ASEA, Hägglund',
+    }),
+).add_articulated_part(
+    id='s_e_C11_1_sl_car2',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours['SLBLUE'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=144,
+    loading_speed=30,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+s_e_C10_2_sl = Train(
+    **COMMON_C10_PROPS,
+    id='s_e_C10_2_sl',
+    name='SL C10',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    purchase_sprite_towed_id='s_e_C11_2_sl_car2',
+    company='sl',
+    introduction_date=date(1975, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Local passenger',
+        'Builder': 'ASEA, Hägglund',
+    }),
+).add_articulated_part(
+    id='s_e_C11_2_sl_car2',
+    length=8,
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours['SLBLUE'],
+        cc2_replace=colours['GREY1'],
+    ),
+    cargo_capacity=144,
+    loading_speed=30,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_C16_PROPS = dict(
+    length=8,
+    misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
+    power_type='dc',
+    engine_class=Train.EngineClass.ELECTRIC, 
+    track_type=standard_gauge_1500v,
+    max_speed=Train.kmhish(70),
+    power=600,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=46,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=134,
+    loading_speed=30,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    country='sweden',
+)
+
+s_e_C16_1_sl = Train(
+    **COMMON_C16_PROPS,
+    id='s_e_C16_1_sl',
+    name='SL C16',
+    liveries=make_psd_cc_liveries(
+        'pp/8Template.psd',
+        shading=('1'),
+        paint=('2'),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    company='sl',
+    introduction_date=date(1987, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Operator': 'SL',
+        'Use': 'Local passenger',
+        'Builder': 'ASEA, Hägglund',
+         'Trivia': '''Rebuilt from C6 units 2789-2790'''
     }),
 )
