@@ -13,8 +13,9 @@ s_d_ÖCJ25_1_1 = Train(
         shading=('ÖCJ 25',),
         paint=('ÖCJ',),
         overlay=('öcjlights'),
+        r_overlay=('öcjlightsr'),
         cc_replace=colours["CREAM"],
-        cc2_replace=colours["DGREEN"]
+        cc2_replace=colours["MECONIUM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
@@ -87,7 +88,7 @@ s_d_ÖCJ25_1_2 = Train(
         paint='ÖCJ_2',
         overlay=['öcjlights_2'],
         cc_replace=colours['CREAM'],
-        cc2_replace=colours['DGREEN'],
+        cc2_replace=colours['MECONIUM'],
     ),
     cargo_capacity=38,
     loading_speed=10,
@@ -103,6 +104,7 @@ s_d_ÖCJ25_2_1 = Train(
         shading=('ÖCJ 25',),
         paint=('ÖCJ',),
         overlay=('öcjlights'),
+        r_overlay=('öcjlightsr'),
         cc_replace=colours["REDBROWN"],
         cc2_replace=colours["REDBROWN"]
     ),
@@ -141,8 +143,8 @@ s_d_ÖCJ25_2_2 = Train(
         shading=('ÖCJ 25',),
         paint=('ÖCJ',),
         overlay=('öcjlights'),
-        cc_replace=colours["SEBROWN"],
-        cc2_replace=colours["SEBROWN"]
+        cc_replace=colours["REDBROWN"],
+        cc2_replace=colours["REDBROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
@@ -176,8 +178,8 @@ s_d_ÖCJ25_2_2 = Train(
         shading='ÖCJ 25_2',
         paint='ÖCJ_2',
         overlay=['öcjlights_2'],
-        cc_replace=colours['SEBROWN'],
-        cc2_replace=colours['SEBROWN'],
+        cc_replace=colours['REDBROWN'],
+        cc2_replace=colours['REDBROWN'],
     ),
     cargo_capacity=45,
     loading_speed=10,

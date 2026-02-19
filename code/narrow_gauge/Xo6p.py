@@ -41,7 +41,7 @@ s_d_Xo6p_1_srj = Train(
     introduction_date=date(1957, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SRJ',
-        'Use': 'Universal',
+        'Use': 'Local passengers',
         'Builder': 'ASJ'
     }),
 )
