@@ -310,14 +310,16 @@ COMMON_C6_PROPS = dict(
     country='sweden',
 )
 
+#original destination board
 s_e_C6_1_sl = Train(
     **COMMON_C6_PROPS,
     id='s_e_C6_1_sl',
     name='SL C6',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1'),
-        paint=('2'),
+        'pp/Cx2.psd',
+        shading=('C6A'),
+        paint=('C6Ass'),
+        overlay=('C6Alights', 'destination1'),
         cc_replace=colours["GREEN"],
         cc2_replace=colours["GREEN"]
     ),
@@ -350,9 +352,10 @@ s_e_C6_2_sl = Train(
     id='s_e_C6_2_sl',
     name='SL C6',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1'),
-        paint=('2'),
+        'pp/Cx2.psd',
+        shading=('C6A'),
+        paint=('C6Asl1'),
+        overlay=('C6Alights', 'destination1'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -380,14 +383,16 @@ s_e_C6_2_sl = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
+#new destination board
 s_e_C6_3_sl = Train(
     **COMMON_C6_PROPS,
     id='s_e_C6_3_sl',
     name='SL C6',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1'),
-        paint=('2'),
+        'pp/Cx2.psd',
+        shading=('C6A'),
+        paint=('C6Asl2'),
+        overlay=('C6Alights', 'destination2'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
