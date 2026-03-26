@@ -14,7 +14,7 @@ d_d_mye_ii_1_dsb = Train(
         paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["DCREAM"]
+        cc2_replace=colours["CREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='denmark',
@@ -113,7 +113,7 @@ d_d_my_ii_1_dsb = Train(
         paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["DCREAM"]
+        cc2_replace=colours["CREAM"]
     ),
     country='denmark',
     company='na',

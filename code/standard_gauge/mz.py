@@ -36,7 +36,7 @@ d_d_mz_i_1_dsb = Train(
         paint=('dsb1',),
         overlay=('light'),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["DCREAM"]
+        cc2_replace=colours["CREAM"]
     ),
     country='denmark',
     company='na',
