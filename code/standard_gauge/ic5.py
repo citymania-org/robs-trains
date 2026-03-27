@@ -5,7 +5,7 @@ from datetime import date
 from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 COMMON_ic5_PROPS = dict(
-    length=11,
+    length=12,
     misc_flags=Train.Flags.USE_2CC,
     power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
@@ -45,7 +45,7 @@ d_p_ic5_1_dsb = Train(
     }),
 ).add_articulated_part(
     id='d_p_ic52_1_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -58,7 +58,7 @@ d_p_ic5_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic53_1_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -71,7 +71,7 @@ d_p_ic5_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic54_1_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -84,7 +84,7 @@ d_p_ic5_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic55_1_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -120,7 +120,7 @@ d_p_ic5_2_dsb = Train(
     }),
 ).add_articulated_part(
     id='d_p_ic52_2_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -133,7 +133,7 @@ d_p_ic5_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic53_2_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -146,7 +146,7 @@ d_p_ic5_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic54_2_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -159,7 +159,7 @@ d_p_ic5_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_p_ic55_2_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',

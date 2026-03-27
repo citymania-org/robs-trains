@@ -1,4 +1,5 @@
 import os
+
 from datetime import date
 
 import grf
@@ -6,7 +7,6 @@ import grf
 import lib
 
 from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours
-
 
 PURCHASE_ICONS_DIR = 'purchase list'
 DEBUG_DIR = 'debug'

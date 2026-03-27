@@ -5,7 +5,7 @@ from datetime import date
 from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv
 
 COMMON_et_PROPS = dict(
-    length=11,
+    length=12,
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
     company='na',
@@ -43,7 +43,7 @@ d_e_et_1_dsb = Train(
     }),
 ).add_articulated_part(
     id='d_e_et2_1_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -56,7 +56,7 @@ d_e_et_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_et3_1_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -88,7 +88,7 @@ d_e_et_2_dsb = Train(
     }),
 ).add_articulated_part(
     id='d_e_et2_2_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
@@ -101,7 +101,7 @@ d_e_et_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 ).add_articulated_part(
     id='d_e_et3_2_dsb',
-    length=11,
+    length=12,
     liveries=make_psd_cc_liveries(
         'pp/11Template.psd',
         shading='1',
