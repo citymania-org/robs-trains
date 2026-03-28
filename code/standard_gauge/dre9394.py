@@ -30,9 +30,9 @@ de_e_dre93_1_dr = Train(
     **COMMON_dre93_PROPS,
     name='њDR E 93',
     liveries=make_psd_cc_liveries(
-        'pp/8Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('8a',),
+        paint=('8b',),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["DGREEN"]
     ),
@@ -70,9 +70,9 @@ de_e_dre94_1_dr = Train(
     **COMMON_dre94_PROPS,
     name='њDR E 94',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["DGREEN"]
     ),

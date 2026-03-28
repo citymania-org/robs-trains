@@ -94,9 +94,9 @@ be_d_202_4_nmbs = Train(
     id='be_d_202_4_nmbs',
     name='њNMBS HLD 52/53', # modern
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -180,9 +180,9 @@ be_d_202_8_nmbs = Train(
     id='be_d_202_8_nmbs',
     name='њNMBS HLD 54', # modern
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),

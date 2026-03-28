@@ -32,9 +32,9 @@ s_e_ra_1_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY6"]
     ),
@@ -50,9 +50,9 @@ s_e_ra_2_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -70,9 +70,9 @@ s_e_ra_3_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -88,9 +88,9 @@ s_e_ra_4_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["ORANGE"]
     ),
@@ -106,9 +106,9 @@ s_e_ra_5_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/7Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),

@@ -29,9 +29,9 @@ d_d_ic2_1_dsb = Train(
     **COMMON_ic2_PROPS,
     name='њMF (IC2)',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"]
     ),
@@ -47,9 +47,9 @@ d_d_ic2_1_dsb = Train(
     id='d_d_ic22_1_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
+        'pp/Template.psd',
+        shading='10a',
+        paint='10b',
         cc_replace=colours['RED'],
         cc2_replace=colours['DBLUE'],
     ),
@@ -63,9 +63,9 @@ d_d_ic2_2_dsb = Train( # AC units on roof
     **COMMON_ic2_PROPS,
     name='њMF (IC2)',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"]
     ),
@@ -81,9 +81,9 @@ d_d_ic2_2_dsb = Train( # AC units on roof
     id='d_d_ic22_2_dsb',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading='1',
-        paint='2',
+        'pp/Template.psd',
+        shading='10a',
+        paint='10b',
         cc_replace=colours['RED'],
         cc2_replace=colours['DBLUE'],
     ),

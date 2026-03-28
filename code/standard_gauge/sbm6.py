@@ -9,9 +9,9 @@ d_d_sbm6_1_dsb = Train(
     name='SB M 6',
     length=5,
     liveries=make_psd_cc_liveries(
-        'pp/5Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('5a',),
+        paint=('5b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -45,9 +45,9 @@ d_d_sbm6_2_dsb = Train(
     name='SB M 6',
     length=5,
     liveries=make_psd_cc_liveries(
-        'pp/5Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('5a',),
+        paint=('5b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),

@@ -28,9 +28,9 @@ fr_e_pse_1_sncf = Train(
     name='њSNCF TGV PSE',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -45,9 +45,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse2_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -58,9 +58,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse3_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -71,9 +71,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse4_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -84,9 +84,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse5_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -97,9 +97,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse6_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -110,9 +110,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse7_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -123,9 +123,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse8_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -136,9 +136,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse9_1_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -149,9 +149,9 @@ fr_e_pse_1_sncf = Train(
     id='fr_e_pse10_1_sncf',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -166,9 +166,9 @@ fr_e_pse_2_sncf = Train(
     name='њSNCF TGV PSE',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -183,9 +183,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse2_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -196,9 +196,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse3_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -209,9 +209,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse4_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -222,9 +222,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse5_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -235,9 +235,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse6_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -248,9 +248,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse7_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -261,9 +261,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse8_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -274,9 +274,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse9_2_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -287,9 +287,9 @@ fr_e_pse_2_sncf = Train(
     id='fr_e_pse10_2_sncf',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["BLUE"]
     ),
@@ -304,9 +304,9 @@ fr_e_pse_3_sncf = Train(
     name='њSNCF TGV PSE',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -321,9 +321,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse2_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -334,9 +334,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse3_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -347,9 +347,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse4_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -360,9 +360,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse5_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -373,9 +373,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse6_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -386,9 +386,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse7_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -399,9 +399,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse8_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -412,9 +412,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse9_3_sncf',
     length=9,
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),
@@ -425,9 +425,9 @@ fr_e_pse_3_sncf = Train(
     id='fr_e_pse10_3_sncf',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["GREY6"],
         cc2_replace=colours["RED"]
     ),

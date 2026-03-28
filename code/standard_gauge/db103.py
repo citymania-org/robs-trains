@@ -28,9 +28,9 @@ de_e_db103_1_db = Train(
     **COMMON_db103_PROPS,
     name='њDB 103',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["DCREAM"]
     ),
@@ -48,9 +48,9 @@ de_e_db103_2_db = Train(
     **COMMON_db103_PROPS,
     name='њDB 103 Orient Red',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -68,9 +68,9 @@ de_e_db103_3_db = Train(
     **COMMON_db103_PROPS,
     name='њDB 103 Traffic Red',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -88,9 +88,9 @@ de_e_db103_4_radve = Train(
     **COMMON_db103_PROPS,
     name='њRADVE 103',
     liveries=make_psd_cc_liveries(
-        'pp/9Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
         cc_replace=colours["GREY7"],
         cc2_replace=colours["GREY1"]
     ),

@@ -29,9 +29,9 @@ d_e_eg_1_dsb = Train(
     id='d_e_eg_1_dsb',
     name='њDSB EG',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["COLBALT"]
     ),
@@ -48,9 +48,9 @@ d_e_eg_2_dsb = Train(
     id='d_e_eg_2_dsb',
     name='њRSC EG',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -68,9 +68,9 @@ d_e_eg_3_dsb = Train(
     id='d_e_eg_3_dsb',
     name='њDBCSC EG',
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
