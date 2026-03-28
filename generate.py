@@ -415,7 +415,7 @@ lib.make_purchase_sprites(
     # ch
     # ch electric 15
     grf.VariantGroup('Ae 4/7', ch_e_ae47_1, ch_e_ae47_2),
-    grf.VariantGroup('Ae 6/6', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
+    grf.VariantGroup('Ae 6/6 "Kantonslok"', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
     grf.VariantGroup('Re 4/4 II', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_4, ch_e_re44ii_5, ch_e_re44ii_7),
     grf.VariantGroup('Re 6/6', ch_e_re66_1, ch_e_re66_2, ch_e_re66_3),
     # de
