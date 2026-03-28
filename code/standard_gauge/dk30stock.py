@@ -837,9 +837,9 @@ d_p_cl_3_dsb = Train(
     name='њDSB CLS',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -863,9 +863,9 @@ d_p_cl_5_dsb = Train(
     name='њDSB Bhs',
     length=10,
     liveries=make_psd_cc_liveries(
-        'pp/10Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),

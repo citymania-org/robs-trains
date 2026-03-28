@@ -163,9 +163,9 @@ d_p_abs_1_dsb = Train(
     id='d_p_abs_1_dsb',
     name='њDSB ABs',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
         cc_replace=colours["GREY1"],
         cc2_replace=colours["COLBALT"]
     ),
@@ -187,9 +187,9 @@ d_p_abs_2_dsb = Train(
     id='d_p_abs_2_dsb',
     name='њDSB ABs',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
         cc_replace=colours["GREY1"],
         cc2_replace=colours["COLBALT"]
     ),
@@ -211,9 +211,9 @@ d_p_abs_3_dsb = Train(
     id='d_p_abs_3_dsb',
     name='њDSB ABs',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
         cc_replace=colours["GREY1"],
         cc2_replace=colours["COLBALT"]
     ),

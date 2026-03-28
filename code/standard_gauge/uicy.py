@@ -920,9 +920,9 @@ d_p_bns_1_dsb = Train(
     id='d_p_bns_1_dsb',
     name='њDSB Bns (I)',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -951,9 +951,9 @@ d_p_bns_2_dsb = Train(
     id='d_p_bns_2_dsb',
     name='њDSB ABns (I)',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -973,9 +973,9 @@ d_p_bns_3_dsb = Train(
     id='d_p_bns_3_dsb',
     name='њDSB ADns (I)',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -995,9 +995,9 @@ d_p_bns_4_dsb = Train(
     id='d_p_bns_4_dsb',
     name='њDSB ABns (I)',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["COLBALT"]
     ),
@@ -1017,9 +1017,9 @@ d_p_bns_5_dsb = Train(
     id='d_p_bns_5_dsb',
     name='њDSB ADns-e (I)',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
         cc_replace=colours["COLBALT"],
         cc2_replace=colours["COLBALT"]
     ),
@@ -1039,9 +1039,9 @@ d_p_bns_6_dsb = Train(
     id='d_p_bns_6_dsb',
     name='њOHJ Bns 270',
     liveries=make_psd_cc_liveries(
-        'pp/11Template.psd',
-        shading=('1',),
-        paint=('2',),
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
