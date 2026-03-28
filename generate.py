@@ -104,6 +104,10 @@ from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3
 
 # electric 15
 
+from code.standard_gauge.chae47 import ch_e_ae47_1, ch_e_ae47_2
+from code.standard_gauge.chae66 import ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5
+from code.standard_gauge.chre44ii import ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_4, ch_e_re44ii_5, ch_e_re44ii_7
+from code.standard_gauge.chre66 import ch_e_re66_1, ch_e_re66_2, ch_e_re66_3
 from code.standard_gauge.dre9394 import de_e_dre93_1_dr, de_e_dre94_1_dr
 from code.standard_gauge.ra import s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj
 from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj, s_e_rc36_7_sj, s_e_rc1245_1_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc36_8_sj, s_e_rc1245_8_sj, s_e_rc1245_9_sj, s_e_rc1245_10_sj, s_e_rc36_9_sj, s_e_rc1245_11_sj
@@ -408,6 +412,12 @@ lib.make_purchase_sprites(
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
+    # ch
+    # ch electric 15
+    grf.VariantGroup('Ae 4/7', ch_e_ae47_1, ch_e_ae47_2),
+    grf.VariantGroup('Ae 6/6', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
+    grf.VariantGroup('Re 4/4 II', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_4, ch_e_re44ii_5, ch_e_re44ii_7),
+    grf.VariantGroup('Re 6/6', ch_e_re66_1, ch_e_re66_2, ch_e_re66_3),
     # de
     # de diesel
     grf.VariantGroup('V 170', d_d_my_ii_18_et, d_d_my_ii_22_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_23_strabag, d_d_my_ii_25_strabag, d_d_my_ii_17_bsbs),
