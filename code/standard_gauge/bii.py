@@ -5,7 +5,7 @@ from datetime import date
 from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 COMMON_b_ii_PROPS = dict(
-    length=11,
+    length=12,
     misc_flags=Train.Flags.USE_2CC,
     power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
@@ -89,6 +89,29 @@ d_p_b_ii_3_dsb = Train(
     }),
 )
 
+d_p_b_ii_4_dsb = Train(
+    **COMMON_b_ii_PROPS,
+    id='d_p_b_ii_4_dsb',
+    name='DSB B II',
+    liveries=make_psd_cc_liveries(
+        'pp/bii.psd',
+        shading=('bii',),
+        paint=('bii4',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2026, 1, 1),
+    weight=50,
+    cargo_capacity=110,
+    loading_speed=10,
+    power=0,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class',
+    }),
+)
+
 d_p_bk_iii_1_dsb = Train(
     **COMMON_b_ii_PROPS,
     id='d_p_bk_iii_1_dsb',
@@ -149,6 +172,29 @@ d_p_bk_iii_3_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(2023, 1, 1),
+    weight=50,
+    cargo_capacity=102,
+    loading_speed=10,
+    power=0,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 2nd class with kiosk',
+    }),
+)
+
+d_p_bk_iii_4_dsb = Train(
+    **COMMON_b_ii_PROPS,
+    id='d_p_bk_iii_4_dsb',
+    name='DSB Bk III',
+    liveries=make_psd_cc_liveries(
+        'pp/bii.psd',
+        shading=('bk',),
+        paint=('bk4',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2026, 1, 1),
     weight=50,
     cargo_capacity=102,
     loading_speed=10,
@@ -220,6 +266,30 @@ d_p_abs_3_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(2023, 1, 1),
+    weight=52,
+    cargo_capacity=78,
+    loading_speed=10,
+    power=1,
+    callbacks={'properties': {'power': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local trains, 1st & 2nd class DVT',
+    }),
+)
+
+d_p_abs_4_dsb = Train(
+    **COMMON_b_ii_PROPS,
+    id='d_p_abs_4_dsb',
+    name='њDSB ABs',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(2026, 1, 1),
     weight=52,
     cargo_capacity=78,
     loading_speed=10,
