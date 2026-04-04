@@ -153,6 +153,236 @@ ch_p_ewiv_6 = Train(
     }),
 )
 
+ch_p_ewiv_10 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_10',
+    name='SBB WR', #88-73 000-003
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1983, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_11 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_11',
+    name='SBB WR', #88-73 100-116
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1988, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_12 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_12',
+    name='SBB WRm', #88-94 000-003
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["DPURPLE"],
+        cc2_replace=colours["MAGENTA"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1991, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_13 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_13',
+    name='SBB WR', #mcdo
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1992, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_14 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_14',
+    name='SBB WRm', #88-94 000-003
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["DPURPLE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1996, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_15 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_15',
+    name='SBB S', #coop
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["GREY1"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2000, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_16 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_16',
+    name='SBB WRm', #88-94.1
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2000, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_17 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_17',
+    name='SBB WRm', #88-94 000-003
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["DPURPLE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2002, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_18 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_18',
+    name='SBB WRm', #88-94.1
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2011, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
+ch_p_ewiv_19 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_19',
+    name='SRCM WRm', #srcm
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["LAVENDER"],
+        cc2_replace=colours["LAVENDER"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2014, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Restaurant carriage',
+    }),
+)
+
 COMMON_ews_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
@@ -179,7 +409,7 @@ ch_p_ewiv_7 = Train(
         'pp/Template.psd',
         shading=('12a',),
         paint=('12b',),
-        cc_replace=colours["SBB"],
+        cc_replace=colours["RED"],
         cc2_replace=colours["SBB"]
     ),
     country='switzerland',
