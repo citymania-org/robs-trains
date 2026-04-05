@@ -206,7 +206,7 @@ ch_e_re44ii_12 = Train(
 ch_e_re44ii_5 = Train(
     **COMMON_44_PROPS,
     id='ch_e_re44ii_5',
-    name='SBB Cargo Re 420 series 2',
+    name='SBBC Re 420 series 2',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('7a',),
@@ -239,6 +239,25 @@ ch_e_re44ii_9 = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Used on the Zürich S-Bahn',
+    }),
+)
+
+ch_e_re44ii_15 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_15',
+    name='MBC Re 420 series 2',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["GREEN"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2013, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
     }),
 )
 
@@ -297,5 +316,24 @@ ch_e_re44ii_7 = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Charter services',
         'Trivia': 'One given a Rheingold style livery',
+    }),
+)
+
+ch_e_re44ii_16 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_16',
+    name='UTL Re 421',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["COLBALT"],
+        cc2_replace=colours["GREY3"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2022, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
     }),
 )
