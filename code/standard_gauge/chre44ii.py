@@ -84,6 +84,25 @@ ch_e_re44ii_3 = Train(
     }),
 )
 
+ch_e_re44ii_17 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_17',
+    name='BLS Re 420.5',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["LIME"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2004, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 ch_e_re44ii_2 = Train(
     **COMMON_44_PROPS,
     id='ch_e_re44ii_2',

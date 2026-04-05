@@ -107,7 +107,7 @@ from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3
 from code.standard_gauge.chae47 import ch_e_ae47_1, ch_e_ae47_2
 from code.standard_gauge.chre44i import ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3, ch_e_re44i_4, ch_e_re44i_5, ch_e_re44i_6
 from code.standard_gauge.chae66 import ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5
-from code.standard_gauge.chre44ii import ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16
+from code.standard_gauge.chre44ii import ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16
 from code.standard_gauge.chre66 import ch_e_re66_1, ch_e_re66_2, ch_e_re66_3
 from code.standard_gauge.dre9394 import de_e_dre93_1_dr, de_e_dre94_1_dr
 from code.standard_gauge.chre44iv import ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5
@@ -421,7 +421,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Ae 4/7', ch_e_ae47_1, ch_e_ae47_2),
     grf.VariantGroup('Re 4/4 I', ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3, ch_e_re44i_4, ch_e_re44i_5, ch_e_re44i_6),
     grf.VariantGroup('Ae 6/6 "Kantonslok"', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
-    grf.VariantGroup('Re 4/4 II', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16),
+    grf.VariantGroup('Re 4/4 II', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16),
     grf.VariantGroup('Re 6/6', ch_e_re66_1, ch_e_re66_2, ch_e_re66_3),
     grf.VariantGroup('Re 4/4 IV', ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5),
     # ch carriages
