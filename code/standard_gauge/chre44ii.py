@@ -124,6 +124,26 @@ ch_e_re44ii_6 = Train(
     }),
 )
 
+ch_e_re44ii_10 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_10',
+    name='MThB Re 4/4 II series 2',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["GREY5"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1969, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as Re 420',
+    }),
+)
+
 ch_e_re44ii_4 = Train(
     **COMMON_44_PROPS,
     id='ch_e_re44ii_4',
@@ -144,6 +164,45 @@ ch_e_re44ii_4 = Train(
     }),
 )
 
+ch_e_re44ii_11 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_11',
+    name='MThB Re 4/4 II series 2',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["CREAM"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1991, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as Re 420',
+    }),
+)
+
+ch_e_re44ii_12 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_12',
+    name='RM Re 436', #colani
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1997, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 ch_e_re44ii_5 = Train(
     **COMMON_44_PROPS,
     id='ch_e_re44ii_5',
@@ -160,6 +219,64 @@ ch_e_re44ii_5 = Train(
     introduction_date=date(1999, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
+    }),
+)
+
+ch_e_re44ii_9 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_9',
+    name='SBB Re 420 series 2 "Lion"',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2011, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Used on the Zürich S-Bahn',
+    }),
+)
+
+ch_e_re44ii_13 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_13',
+    name='WRS Re 430',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2017, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+ch_e_re44ii_14 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re44ii_14',
+    name='WRS Re 430',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["TURQUOISE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2019, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
     }),
 )
 
