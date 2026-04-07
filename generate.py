@@ -111,6 +111,7 @@ from code.standard_gauge.chre44ii import ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44
 from code.standard_gauge.chre66 import ch_e_re66_1, ch_e_re66_2, ch_e_re66_3
 from code.standard_gauge.dre9394 import de_e_dre93_1_dr, de_e_dre94_1_dr
 from code.standard_gauge.chre44iv import ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5
+from code.standard_gauge.chre460 import ch_e_re460_1, ch_e_re460_2, ch_e_re460_3, no_e_el18_1, no_e_el18_2
 from code.standard_gauge.ra import s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj
 from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj, s_e_rc36_7_sj, s_e_rc1245_1_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc36_8_sj, s_e_rc1245_8_sj, s_e_rc1245_9_sj, s_e_rc1245_10_sj, s_e_rc36_9_sj, s_e_rc1245_11_sj
 from code.standard_gauge.db103 import de_e_db103_1_db, de_e_db103_2_db, de_e_db103_3_db, de_e_db103_4_radve
@@ -421,9 +422,10 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Ae 4/7', ch_e_ae47_1, ch_e_ae47_2),
     grf.VariantGroup('Re 4/4 I', ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3, ch_e_re44i_4, ch_e_re44i_5, ch_e_re44i_6),
     grf.VariantGroup('Ae 6/6 "Kantonslok"', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
-    grf.VariantGroup('Re 4/4 II', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16),
+    grf.VariantGroup('Re 4/4 II "BoBo"', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16),
     grf.VariantGroup('Re 6/6', ch_e_re66_1, ch_e_re66_2, ch_e_re66_3),
     grf.VariantGroup('Re 4/4 IV', ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5),
+    grf.VariantGroup('"Lok 2000"', ch_e_re460_1, ch_e_re460_2, ch_e_re460_3),
     # ch carriages
     grf.VariantGroup('Ew IV', ch_p_ewiv_1, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9),
     grf.VariantGroup('EuroCity stock', ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4, ch_p_ec_5, ch_p_ec_6, ch_p_ec_7, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10),
@@ -525,6 +527,8 @@ lib.make_purchase_sprites(
     # no diesel
     grf.VariantGroup('TMZ II', d_d_mz_ii_9_bs, d_d_mz_ii_10_bs),
     d_d_mz_iv_3_bs,
+    # no electric 15
+    grf.VariantGroup('"Lok 2000"', no_e_el18_1, no_e_el18_2),
     # no emu dc
     n_o_Wes_1_hkb,
     grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
