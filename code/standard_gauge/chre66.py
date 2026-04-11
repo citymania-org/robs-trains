@@ -67,7 +67,7 @@ ch_e_re66_2 = Train(
 ch_e_re66_3 = Train(
     **COMMON_66_PROPS,
     id='ch_e_re66_3',
-    name='SBB Cargo Re 620',
+    name='SBBC Re 620',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('9a',),
