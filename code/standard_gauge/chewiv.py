@@ -18,6 +18,7 @@ COMMON_ew_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cost_factor=25,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -37,7 +38,6 @@ ch_p_ewiv_1 = Train(
     introduction_date=date(1981, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
     }),
@@ -59,7 +59,6 @@ ch_p_ewiv_20 = Train(
     introduction_date=date(1985, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
         'Trivia': 'Later obtained by SBB in 2004',
@@ -82,7 +81,6 @@ ch_p_ewiv_21 = Train(
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
         'Owners': 'BT, SOB',
@@ -105,7 +103,6 @@ ch_p_ewiv_2 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
     }),
@@ -127,7 +124,6 @@ ch_p_ewiv_3 = Train(
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
     }),
@@ -149,7 +145,6 @@ ch_p_ewiv_4 = Train(
     introduction_date=date(1983, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
     }),
@@ -171,7 +166,6 @@ ch_p_ewiv_22 = Train(
     introduction_date=date(1985, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
         'Trivia': 'Later obtained by SBB in 2004',
@@ -194,7 +188,6 @@ ch_p_ewiv_23 = Train(
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
         'Owners': 'BT, SOB',
@@ -217,7 +210,6 @@ ch_p_ewiv_5 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=86,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
     }),
@@ -239,7 +231,6 @@ ch_p_ewiv_6 = Train(
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=86,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
     }),
@@ -262,7 +253,6 @@ ch_p_ewiv_10 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -285,7 +275,6 @@ ch_p_ewiv_11 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -308,7 +297,6 @@ ch_p_ewiv_12 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -331,7 +319,6 @@ ch_p_ewiv_13 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -354,7 +341,6 @@ ch_p_ewiv_14 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -377,7 +363,6 @@ ch_p_ewiv_15 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -400,7 +385,6 @@ ch_p_ewiv_16 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -423,7 +407,6 @@ ch_p_ewiv_17 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -446,7 +429,6 @@ ch_p_ewiv_18 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -469,7 +451,6 @@ ch_p_ewiv_19 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Restaurant carriage',
     }),
@@ -490,6 +471,7 @@ COMMON_ews_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cost_factor=25,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -509,7 +491,6 @@ ch_p_ewiv_7 = Train(
     introduction_date=date(1996, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),
@@ -531,7 +512,6 @@ ch_p_ewiv_8 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),
@@ -553,7 +533,6 @@ ch_p_ewiv_9 = Train(
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),

@@ -18,6 +18,7 @@ COMMON_ec_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cost_factor=25,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -37,7 +38,6 @@ ch_p_ec_1 = Train(
     introduction_date=date(1989, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
     }),
@@ -59,7 +59,6 @@ ch_p_ec_2 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
     }),
@@ -81,7 +80,6 @@ ch_p_ec_3 = Train(
     introduction_date=date(2004, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class, for the Cisalpino service',
     }),
@@ -103,7 +101,6 @@ ch_p_ec_4 = Train(
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '1st class',
     }),
@@ -125,7 +122,6 @@ ch_p_ec_5 = Train(
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
     }),
@@ -147,7 +143,6 @@ ch_p_ec_6 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
     }),
@@ -169,7 +164,6 @@ ch_p_ec_7 = Train(
     introduction_date=date(2004, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class, for the Cisalpino service',
     }),
@@ -191,7 +185,6 @@ ch_p_ec_8 = Train(
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
     }),
@@ -211,6 +204,7 @@ COMMON_pw_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cost_factor=25,
+    loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -230,7 +224,6 @@ ch_p_ec_9 = Train(
     introduction_date=date(1991, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=54,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Panoramic car, 1st class',
     }),
@@ -252,7 +245,6 @@ ch_p_ec_10 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=54,
-    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Panoramic car, 1st class',
     }),
