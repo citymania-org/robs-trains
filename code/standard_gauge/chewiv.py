@@ -43,6 +43,52 @@ ch_p_ewiv_1 = Train(
     }),
 )
 
+ch_p_ewiv_20 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_20',
+    name='BLS A', #these didnt have DVT so cc2 can be elsewhere
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["DBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1985, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=60,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st class',
+        'Trivia': 'Later obtained by SBB in 2004',
+    }),
+)
+
+ch_p_ewiv_21 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_21',
+    name='A', #these didnt have DVT so cc2 can be elsewhere
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["CREAM"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1990, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=60,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st class',
+        'Owners': 'BT, SOB',
+    }),
+)
+
 ch_p_ewiv_2 = Train(
     **COMMON_ew_PROPS,
     id='ch_p_ewiv_2',
@@ -106,6 +152,52 @@ ch_p_ewiv_4 = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class',
+    }),
+)
+
+ch_p_ewiv_22 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_22',
+    name='BLS B', #these didnt have DVT so cc2 can be elsewhere
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["DBLUE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1985, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=86,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+        'Trivia': 'Later obtained by SBB in 2004',
+    }),
+)
+
+ch_p_ewiv_23 = Train(
+    **COMMON_ew_PROPS,
+    id='ch_p_ewiv_23',
+    name='B', #these didnt have DVT so cc2 can be elsewhere
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["CREAM"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(1990, 1, 1),
+    max_speed=Train.kmhish(160),
+    cargo_capacity=86,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+        'Owners': 'BT, SOB',
     }),
 )
 
