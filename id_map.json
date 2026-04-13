@@ -2354,7 +2354,31 @@
             "ch_p_ewiv_22": 2768,
             "__ch_p_ewiv_23_aa_mid": 2769,
             "__ch_p_ewiv_23_aa_tail": 2770,
-            "ch_p_ewiv_23": 2771
+            "ch_p_ewiv_23": 2771,
+            "__dk_p_ic5a_1_aa_mid": 2772,
+            "__dk_p_ic5a_1_aa_tail": 2773,
+            "dk_p_ic5a_1": 2774,
+            "__dk_p_ic5a_2_aa_mid": 2775,
+            "__dk_p_ic5a_2_aa_tail": 2776,
+            "dk_p_ic5a_2": 2777,
+            "__dk_p_ic5a_3_aa_mid": 2778,
+            "__dk_p_ic5a_3_aa_tail": 2779,
+            "dk_p_ic5a_3": 2780,
+            "__dk_p_ic5a_4_aa_mid": 2781,
+            "__dk_p_ic5a_4_aa_tail": 2782,
+            "dk_p_ic5a_4": 2783,
+            "__dk_p_ic5a_5_aa_mid": 2784,
+            "__dk_p_ic5a_5_aa_tail": 2785,
+            "dk_p_ic5a_5": 2786,
+            "__dk_p_ic5a_6_aa_mid": 2787,
+            "__dk_p_ic5a_6_aa_tail": 2788,
+            "dk_p_ic5a_6": 2789,
+            "__dk_p_ic5b_1_aa_mid": 2790,
+            "__dk_p_ic5b_1_aa_tail": 2791,
+            "dk_p_ic5b_1": 2792,
+            "__dk_p_ic5b_2_aa_mid": 2793,
+            "__dk_p_ic5b_2_aa_tail": 2794,
+            "dk_p_ic5b_2": 2795
         }
     }
 }

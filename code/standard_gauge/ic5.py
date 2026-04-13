@@ -171,3 +171,202 @@ d_p_ic5_2_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
+
+COMMON_ic5a_PROPS = dict(
+    length=12,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='na',
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=0,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=10,
+    weight=54,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+dk_p_ic5a_1 = Train(
+    **COMMON_ic5a_PROPS,
+    id='dk_p_ic5a_1',
+    name='DSB Afm',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1981, 1, 1),
+    cargo_capacity=60,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st class',
+    }),
+)
+
+dk_p_ic5a_2 = Train(
+    **COMMON_ic5a_PROPS,
+    id='dk_p_ic5a_2',
+    name='DSB Afm',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1988, 1, 1),
+    cargo_capacity=60,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st class',
+    }),
+)
+
+dk_p_ic5a_3 = Train(
+    **COMMON_ic5a_PROPS,
+    id='dk_p_ic5a_3',
+    name='DSB Bfm',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1981, 1, 1),
+    cargo_capacity=72,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+    }),
+)
+
+dk_p_ic5a_4 = Train(
+    **COMMON_ic5a_PROPS,
+    id='dk_p_ic5a_4',
+    name='DSB Bfm',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1988, 1, 1),
+    cargo_capacity=72,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+    }),
+)
+
+dk_p_ic5a_5 = Train(
+    **COMMON_ic5a_PROPS,
+    id='dk_p_ic5a_5',
+    name='DSB Cfm',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1981, 1, 1),
+    cargo_capacity=22,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Kiosk car, 2nd class',
+    }),
+)
+
+dk_p_ic5a_6 = Train(
+    **COMMON_ic5a_PROPS,
+    id='dk_p_ic5a_6',
+    name='DSB Cfm',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1988, 1, 1),
+    cargo_capacity=22,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Kiosk car, 2nd class',
+    }),
+)
+
+COMMON_ic5b_PROPS = dict(
+    length=12,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='na',
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(160),
+    power=1,
+    callbacks={'properties': {'power': 0},},
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=10,
+    weight=54,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+dk_p_ic5b_1 = Train(
+    **COMMON_ic5b_PROPS,
+    id='dk_p_ic5b_1',
+    name='DSB Bfs',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours['RED'],
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1981, 1, 1),
+    cargo_capacity=74,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class DVT',
+    }),
+)
+
+dk_p_ic5b_2 = Train(
+    **COMMON_ic5b_PROPS,
+    id='dk_p_ic5b_2',
+    name='DSB Bfs',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('12a',),
+        paint=('12b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours['GREY1'],
+    ),
+    country='denmark',
+    company='na',
+    introduction_date=date(1988, 1, 1),
+    cargo_capacity=74,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class DVT',
+    }),
+)
