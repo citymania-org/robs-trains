@@ -2378,7 +2378,13 @@
             "dk_p_ic5b_1": 2792,
             "__dk_p_ic5b_2_aa_mid": 2793,
             "__dk_p_ic5b_2_aa_tail": 2794,
-            "dk_p_ic5b_2": 2795
+            "dk_p_ic5b_2": 2795,
+            "__ch_p_ec_11_aa_mid": 2796,
+            "__ch_p_ec_11_aa_tail": 2797,
+            "ch_p_ec_11": 2798,
+            "__ch_p_ec_12_aa_mid": 2799,
+            "__ch_p_ec_12_aa_tail": 2800,
+            "ch_p_ec_12": 2801
         }
     }
 }

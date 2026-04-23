@@ -27,11 +27,11 @@ ch_p_ec_1 = Train(
     id='ch_p_ec_1',
     name='SBB Apm 10-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ec',),
+        paint=('apm1',),
         cc_replace=colours["RED"],
-        cc2_replace=colours["GREY8"]
+        cc2_replace=colours["GREY9"]
     ),
     country='switzerland',
     company='na',
@@ -48,15 +48,15 @@ ch_p_ec_2 = Train(
     id='ch_p_ec_2',
     name='SBB Apm 10-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ec08',),
+        paint=('apm3',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
     country='switzerland',
     company='na',
-    introduction_date=date(2000, 1, 1),
+    introduction_date=date(2008, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
@@ -69,11 +69,11 @@ ch_p_ec_3 = Train(
     id='ch_p_ec_3',
     name='CIS Apm 10-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
-        cc_replace=colours["ORANGE"],
-        cc2_replace=colours["BLUE"]
+        'pp/chec.psd',
+        shading=('ec',),
+        paint=('apm2',),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY9"]
     ),
     country='switzerland',
     company='na',
@@ -85,14 +85,36 @@ ch_p_ec_3 = Train(
     }),
 )
 
+ch_p_ec_11 = Train(
+    **COMMON_ec_PROPS,
+    id='ch_p_ec_11',
+    name='SBB Apm 10-90',
+    liveries=make_psd_cc_liveries(
+        'pp/chec.psd',
+        shading=('ec',),
+        paint=('apm4',),
+        cc_replace=colours["GREY5"],
+        cc2_replace=colours["GREY9"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2009, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=60,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st class',
+        'Trivia': 'Former Cisalpino stock',
+    }),
+)
+
 ch_p_ec_4 = Train(
     **COMMON_ec_PROPS,
     id='ch_p_ec_4',
     name='SBB Apm 10-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ec08',),
+        paint=('apm5',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -111,11 +133,11 @@ ch_p_ec_5 = Train(
     id='ch_p_ec_5',
     name='SBB Bpm 20-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ec',),
+        paint=('bpm1',),
         cc_replace=colours["RED"],
-        cc2_replace=colours["GREY8"]
+        cc2_replace=colours["GREY9"]
     ),
     country='switzerland',
     company='na',
@@ -132,15 +154,15 @@ ch_p_ec_6 = Train(
     id='ch_p_ec_6',
     name='SBB Bpm 20-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ec08',),
+        paint=('bpm3',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
     country='switzerland',
     company='na',
-    introduction_date=date(2000, 1, 1),
+    introduction_date=date(2008, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
@@ -153,11 +175,11 @@ ch_p_ec_7 = Train(
     id='ch_p_ec_7',
     name='CIS Bpm 20-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
-        cc_replace=colours["ORANGE"],
-        cc2_replace=colours["BLUE"]
+        'pp/chec.psd',
+        shading=('ec',),
+        paint=('bpm2',),
+        cc_replace=colours["SLBLUE"],
+        cc2_replace=colours["GREY9"]
     ),
     country='switzerland',
     company='na',
@@ -169,14 +191,36 @@ ch_p_ec_7 = Train(
     }),
 )
 
+ch_p_ec_12 = Train(
+    **COMMON_ec_PROPS,
+    id='ch_p_ec_12',
+    name='SBB Bpm 20-90',
+    liveries=make_psd_cc_liveries(
+        'pp/chec.psd',
+        shading=('ec',),
+        paint=('bpm4',),
+        cc_replace=colours["GREY5"],
+        cc2_replace=colours["GREY9"]
+    ),
+    country='switzerland',
+    company='na',
+    introduction_date=date(2009, 1, 1),
+    max_speed=Train.kmhish(200),
+    cargo_capacity=77,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '2nd class',
+        'Trivia': 'Former Cisalpino stock',
+    }),
+)
+
 ch_p_ec_8 = Train(
     **COMMON_ec_PROPS,
     id='ch_p_ec_8',
     name='SBB Bpm 20-90',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ec08',),
+        paint=('bpm5',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -213,11 +257,11 @@ ch_p_ec_9 = Train(
     id='ch_p_ec_9',
     name='SBB Apm 19-90 "Panoramawagen"',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
+        'pp/chec.psd',
+        shading=('ec',),
         paint=('12b',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["GREY8"]
+        cc2_replace=colours["GREY9"]
     ),
     country='switzerland',
     company='na',
@@ -234,8 +278,8 @@ ch_p_ec_10 = Train(
     id='ch_p_ec_10',
     name='SBB Apm 19-90 "Panoramawagen"',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
+        'pp/chec.psd',
+        shading=('ec',),
         paint=('12b',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]

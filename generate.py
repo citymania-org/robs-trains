@@ -181,7 +181,7 @@ from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_
 from code.standard_gauge.ic5 import dk_p_ic5a_1, dk_p_ic5a_2, dk_p_ic5a_3, dk_p_ic5a_4, dk_p_ic5a_5, dk_p_ic5a_6, dk_p_ic5b_1, dk_p_ic5b_2, d_p_ic5_1_dsb, d_p_ic5_2_dsb
 from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_b_ii_4_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_bk_iii_4_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb, d_p_abs_4_dsb
 from code.standard_gauge.chewiv import ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9
-from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4, ch_p_ec_5, ch_p_ec_6, ch_p_ec_7, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10
+from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4, ch_p_ec_5, ch_p_ec_6, ch_p_ec_7, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10, ch_p_ec_11, ch_p_ec_12
 
 # wagons
 
@@ -428,7 +428,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('"Lok 2000"', ch_e_re460_1, ch_e_re460_2, ch_e_re460_3),
     # ch carriages
     grf.VariantGroup('Ew IV', ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9),
-    grf.VariantGroup('EuroCity stock', ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4, ch_p_ec_5, ch_p_ec_6, ch_p_ec_7, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10),
+    grf.VariantGroup('EuroCity stock', ch_p_ec_1, ch_p_ec_3, ch_p_ec_2, ch_p_ec_11, ch_p_ec_4, ch_p_ec_5, ch_p_ec_7, ch_p_ec_6, ch_p_ec_12, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10),
     # de
     # de diesel
     grf.VariantGroup('V 170', d_d_my_ii_18_et, d_d_my_ii_22_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_23_strabag, d_d_my_ii_25_strabag, d_d_my_ii_17_bsbs),
