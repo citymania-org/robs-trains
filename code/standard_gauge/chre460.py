@@ -26,11 +26,12 @@ ch_e_re460_1 = Train(
     id='ch_e_re460_1',
     name='SBB Re 460',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('9a',),
-        paint=('9b',),
+        'pp/chre460.psd',
+        shading=('460',),
+        paint=('sbb1',),
+        overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["GREY10"]
     ),
     country='switzerland',
     company='na',
@@ -43,14 +44,63 @@ ch_e_re460_1 = Train(
     }),
 )
 
+ch_e_re460_4 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re460_4',
+    name='SBB Re 460',
+    liveries=make_psd_cc_liveries(
+        'pp/chre460.psd',
+        shading=('460',),
+        paint=('sbb2',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='switzerland',
+    company='na',
+    max_speed=Train.kmhish(200),
+    power=8294,
+    weight=84,
+    introduction_date=date(2008, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive given the "New Look" livery',
+    }),
+)
+
+ch_e_re460_5 = Train(
+    **COMMON_44_PROPS,
+    id='ch_e_re460_5',
+    name='SBB Re 460',
+    liveries=make_psd_cc_liveries(
+        'pp/chre460.psd',
+        shading=('460',),
+        paint=('sbb3',),
+        overlay=('light'),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY10"]
+    ),
+    country='switzerland',
+    company='na',
+    max_speed=Train.kmhish(200),
+    power=8294,
+    weight=84,
+    introduction_date=date(2014, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'One locomotive given the "EasyJet" livery',
+    }),
+)
+
 ch_e_re460_2 = Train(
     **COMMON_44_PROPS,
     id='ch_e_re460_2',
     name='BLS Re 465',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('9a',),
-        paint=('9b',),
+        'pp/chre460.psd',
+        shading=('460',),
+        paint=('bls1',),
+        overlay=('light'),
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["CREAM"]
     ),
@@ -70,9 +120,10 @@ ch_e_re460_3 = Train(
     id='ch_e_re460_3',
     name='BLS Re 465',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('9a',),
-        paint=('9b',),
+        'pp/chre460.psd',
+        shading=('460',),
+        paint=('bls2',),
+        overlay=('light'),
         cc_replace=colours["LIME"],
         cc2_replace=colours["DBLUE"]
     ),
@@ -92,10 +143,11 @@ no_e_el18_1 = Train(
     id='no_e_el18_1',
     name='NSB El 18',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('9a',),
-        paint=('9b',),
-        cc_replace=colours["RED"],
+        'pp/chre460.psd',
+        shading=('460',),
+        paint=('nsb1',),
+        overlay=('light'),
+        cc_replace=colours["NSBRED"],
         cc2_replace=colours["GREY10"]
     ),
     country='norway',
@@ -114,9 +166,10 @@ no_e_el18_2 = Train(
     id='no_e_el18_2',
     name='GAN El 18',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('9a',),
-        paint=('9b',),
+        'pp/chre460.psd',
+        shading=('460',),
+        paint=('gan1',),
+        overlay=('light'),
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["GREY1"]
     ),
