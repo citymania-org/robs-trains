@@ -185,6 +185,9 @@ colours = {
 "APPLE" : palette[368: 376], # green cargo
 "MECONIUM" : palette[376: 384], # meja green
 "SBB" : palette[384: 392], # sbb green
+"NSBRED" : palette[392: 400], # nsb red like on the el 18
+"DBRED" : palette[400: 408], # db red like on the 103
+"YORANGE" : palette[408: 416], # yellow orange
 }
 
 def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_overlay=None, cc_replace, cc2_replace):
