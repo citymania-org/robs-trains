@@ -501,9 +501,10 @@ ch_p_ewiv_8 = Train(
     id='ch_p_ewiv_8',
     name='SBB Bt',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ewivs',),
+        paint=('bt2',),
+        overlay=('light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -522,9 +523,10 @@ ch_p_ewiv_9 = Train(
     id='ch_p_ewiv_9',
     name='SBB Bt',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('12a',),
-        paint=('12b',),
+        'pp/chec.psd',
+        shading=('ewivs',),
+        paint=('bt3',),
+        overlay=('light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
