@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge, dsb_my_sound
+from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
 d_d_mye_ii_1_dsb = Train(
     id='d_d_mye_ii_1_dsb',
@@ -33,7 +33,6 @@ d_d_mye_ii_1_dsb = Train(
     running_cost_factor=200,
     cargo_capacity=1,
     cost_factor=25,
-    sound_effects=dsb_my_sound,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -97,7 +96,6 @@ COMMON_my_ii_PROPS = dict(
     running_cost_factor=200,
     cargo_capacity=1,
     cost_factor=25,
-    sound_effects=dsb_my_sound,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     visual_effect=(Train.VisualEffect.DIESEL, 7),

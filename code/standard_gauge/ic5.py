@@ -20,6 +20,7 @@ COMMON_ic5_PROPS = dict(
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 d_p_ic5_1_dsb = Train(
@@ -335,6 +336,7 @@ COMMON_ic5b_PROPS = dict(
     loading_speed=10,
     weight=54,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 dk_p_ic5b_1 = Train(

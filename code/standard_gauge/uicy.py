@@ -913,6 +913,7 @@ COMMON_bns_PROPS = dict(
     running_cost_factor=200,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 d_p_bns_1_dsb = Train(

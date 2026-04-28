@@ -513,6 +513,7 @@ COMMON_ews_PROPS = dict(
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 ch_p_ewiv_7 = Train(

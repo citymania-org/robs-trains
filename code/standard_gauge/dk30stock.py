@@ -852,6 +852,7 @@ d_p_cl_3_dsb = Train(
     weight=37,
     cargo_capacity=87,
     loading_speed=20,
+    visual_effect=(Train.VisualEffect.DISABLE, 0),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 2nd class DVT',
     }),
@@ -878,6 +879,7 @@ d_p_cl_5_dsb = Train(
     weight=37,
     cargo_capacity=73,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DISABLE, 0),
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT for use with MO railcars',
     }),
