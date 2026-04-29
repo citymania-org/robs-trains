@@ -22,6 +22,7 @@ COMMON_mki_PROPS = dict(
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
 )
 
 d_d_mki_1_dsb = Train(

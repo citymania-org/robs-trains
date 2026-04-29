@@ -33,6 +33,7 @@ hu_d_m61_1_mav = Train(
     running_cost_factor=200,
     cargo_capacity=1,
     cost_factor=25,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -69,6 +70,7 @@ hu_d_m61_2_mav = Train(
     running_cost_factor=200,
     cargo_capacity=1,
     cost_factor=25,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
@@ -106,6 +108,7 @@ hu_d_m61_3_mav = Train(
     running_cost_factor=200,
     cargo_capacity=1,
     cost_factor=25,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',

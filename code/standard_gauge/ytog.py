@@ -23,6 +23,7 @@ COMMON_y1_PROPS = dict( # this is based on the HHJ YM 31
     cargo_capacity=36,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
 )
 
 d_d_y1_1_dsb = Train(
@@ -104,6 +105,7 @@ COMMON_y2_PROPS = dict( # this is based on the LNJ YM 17
     cargo_capacity=58, #43 seats, ca 15 standing = 58
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
 )
 
 d_d_y2_1_dsb = Train(

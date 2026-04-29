@@ -34,6 +34,7 @@ d_d_ml_1_dsb = Train(
     cargo_capacity=70,
     cost_factor=25,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
@@ -70,6 +71,7 @@ d_d_ml_2_dsb = Train(
     cargo_capacity=70,
     cost_factor=25,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
@@ -106,6 +108,7 @@ d_d_mq_1_dsb = Train(
     cargo_capacity=70,
     cost_factor=25,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
@@ -142,6 +145,7 @@ d_d_mp_1_dsb = Train(
     cargo_capacity=64,
     cost_factor=25,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers & light freight',
@@ -178,6 +182,7 @@ d_d_mo_ii_1_dsb = Train(
     cargo_capacity=52,
     cost_factor=25,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers & light freight',
@@ -214,6 +219,7 @@ d_d_mo_iv_1_dsb = Train(
     cargo_capacity=52,
     cost_factor=25,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers & light freight',
@@ -250,6 +256,7 @@ d_d_mo_v_1_dsb = Train(
     cargo_capacity=37,
     cost_factor=25,
     loading_speed=10,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers & light freight',

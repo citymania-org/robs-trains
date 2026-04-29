@@ -21,7 +21,7 @@ COMMON_202_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    visual_effect=(Train.VisualEffect.DIESEL, 7),
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
 )
 
 be_d_202_1_nmbs = Train(
