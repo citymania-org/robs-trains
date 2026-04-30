@@ -904,8 +904,7 @@ COMMON_bns_PROPS = dict(
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
-    power=1,
-    callbacks={'properties': {'power': 0},},
+    power=0,
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
@@ -913,7 +912,6 @@ COMMON_bns_PROPS = dict(
     running_cost_factor=200,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 d_p_bns_1_dsb = Train(

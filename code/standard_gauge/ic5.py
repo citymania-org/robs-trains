@@ -20,7 +20,6 @@ COMMON_ic5_PROPS = dict(
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 d_p_ic5_1_dsb = Train(
@@ -39,8 +38,7 @@ d_p_ic5_1_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1981, 1, 1),
-    power=1,
-    callbacks={'properties': {'power': 0},},
+    power=0,
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, basically a DVT on steroids',
@@ -117,8 +115,7 @@ d_p_ic5_2_dsb = Train(
     country='denmark',
     company='na',
     introduction_date=date(1988, 1, 1),
-    power=1,
-    callbacks={'properties': {'power': 0},},
+    power=0,
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, basically a DVT on steroids',
@@ -325,8 +322,7 @@ COMMON_ic5b_PROPS = dict(
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
-    power=1,
-    callbacks={'properties': {'power': 0},},
+    power=0,
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
@@ -336,7 +332,6 @@ COMMON_ic5b_PROPS = dict(
     loading_speed=10,
     weight=54,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 dk_p_ic5b_1 = Train(

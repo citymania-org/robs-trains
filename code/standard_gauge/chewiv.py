@@ -502,8 +502,7 @@ COMMON_ews_PROPS = dict(
     power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
-    power=1,
-    callbacks={'properties': {'power': 0},},
+    power=0,
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
@@ -513,7 +512,6 @@ COMMON_ews_PROPS = dict(
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
 )
 
 ch_p_ewiv_7 = Train(

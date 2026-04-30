@@ -221,9 +221,7 @@ d_p_abs_1_dsb = Train(
     weight=52,
     cargo_capacity=78,
     loading_speed=10,
-    power=1,
-    callbacks={'properties': {'power': 0},},
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
+    power=0,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
@@ -246,9 +244,7 @@ d_p_abs_2_dsb = Train(
     weight=52,
     cargo_capacity=78,
     loading_speed=10,
-    power=1,
-    callbacks={'properties': {'power': 0},},
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
+    power=0,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
@@ -271,9 +267,7 @@ d_p_abs_3_dsb = Train(
     weight=52,
     cargo_capacity=78,
     loading_speed=10,
-    power=1,
-    callbacks={'properties': {'power': 0},},
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
+    power=0,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
@@ -296,9 +290,7 @@ d_p_abs_4_dsb = Train(
     weight=52,
     cargo_capacity=78,
     loading_speed=10,
-    power=1,
-    callbacks={'properties': {'power': 0},},
-    visual_effect=(Train.VisualEffect.DISABLE, 0),
+    power=0,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
