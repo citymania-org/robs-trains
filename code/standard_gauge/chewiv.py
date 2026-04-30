@@ -114,7 +114,7 @@ ch_p_ewiv_2 = Train(
     liveries=make_psd_cc_liveries(
         'pp/chec.psd',
         shading=('ewiv',),
-        paint=('12b',),
+        paint=('a5',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -135,7 +135,7 @@ ch_p_ewiv_3 = Train(
     liveries=make_psd_cc_liveries(
         'pp/chec.psd',
         shading=('ewiv',),
-        paint=('12b',),
+        paint=('a6',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -241,7 +241,7 @@ ch_p_ewiv_5 = Train(
     liveries=make_psd_cc_liveries(
         'pp/chec.psd',
         shading=('ewiv',),
-        paint=('12b',),
+        paint=('b5',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -262,7 +262,7 @@ ch_p_ewiv_6 = Train(
     liveries=make_psd_cc_liveries(
         'pp/chec.psd',
         shading=('ewiv',),
-        paint=('12b',),
+        paint=('b6',),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
