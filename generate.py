@@ -455,7 +455,7 @@ lib.make_purchase_sprites(
     # dk electric 25
     grf.VariantGroup('EA', d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_3_dsb),
     grf.VariantGroup('њ"EuroSprinter"', d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb),
-    grf.VariantGroup('њ"Vectron"', d_e_eb_1_dsb, d_e_eb_2_dsb),
+    grf.VariantGroup('"Vectron"', d_e_eb_1_dsb, d_e_eb_2_dsb),
     # dk electric 3rd
     # dk dmu
     grf.VariantGroup('ML', d_d_ml_1_dsb, d_d_ml_2_dsb),
@@ -488,18 +488,11 @@ lib.make_purchase_sprites(
     # dk emu 3rd
     # dk carriages
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
-    grf.VariantGroup('30s stock 1st class', d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb),
-    grf.VariantGroup('30s stock 1st & 2nd class', d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb),
-    grf.VariantGroup('30s stock 2nd class', d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj),
+    grf.VariantGroup('30s stock', d_p_ac_i_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj, d_p_bdg_1_dsb, d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb),
     grf.VariantGroup('њ40s local stock', d_p_cl_1_dsb, d_p_cl_9_dsb, d_p_cl_10_dsb, d_p_cl_11_dsb, d_p_cl_8_dsb, d_p_cl_7_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb, d_p_cl_5_dsb),
     grf.VariantGroup('AL/BL', d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb, d_p_bl_3_dsb),
-    grf.VariantGroup('Excursion & dance carriages', d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb),
-    grf.VariantGroup('UIC-Y 1st class', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb),
-    grf.VariantGroup('UIC-Y 1st & 2nd class', d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb),
-    grf.VariantGroup('UIC-Y 2nd class', d_p_b_1_dsb, d_p_b_i_1_dsb),
-    grf.VariantGroup('UIC-Y other', d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_3_dsb),
+    grf.VariantGroup('UIC-Y', d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_3_dsb),
     grf.VariantGroup('њ70s local stock', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_6_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb,),
-    d_p_bdg_1_dsb,
     grf.VariantGroup('APO Lyntog Prototype (IC5)', dk_p_ic5a_1, dk_p_ic5a_2, dk_p_ic5a_3, dk_p_ic5a_4, dk_p_ic5a_5, dk_p_ic5a_6, dk_p_ic5b_1, dk_p_ic5b_2, d_p_ic5_1_dsb, d_p_ic5_2_dsb),
     grf.VariantGroup('њ4th gen Bombardier DD carriages', d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_b_ii_4_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_bk_iii_4_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb, d_p_abs_4_dsb),
     # dk wagons
@@ -511,10 +504,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њTGV PSE', fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf),
     grf.VariantGroup('њTGV M', fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf),
     # fr carriages
-    grf.VariantGroup('UIC-Y 1st class', fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf),
-    grf.VariantGroup('UIC-Y 1st & 2nd class', fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf),
-    grf.VariantGroup('UIC-Y 2nd class', fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf),
-    grf.VariantGroup('UIC-Y other', fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf),
+    grf.VariantGroup('UIC-Y', fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf),
     # hu
     # hu diesel
     grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav),

@@ -11,11 +11,11 @@ COMMON_eb_PROPS = dict(
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_25kv_15kv,
     max_speed=Train.kmhish(200),
-    power=8583,
+    power=8702,
     vehicle_life=30,
     model_life=30,
     climates_available=grf.ALL_CLIMATES,
-    weight=86,
+    weight=87,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cargo_capacity=1,
@@ -27,13 +27,14 @@ COMMON_eb_PROPS = dict(
 d_e_eb_1_dsb = Train(
     **COMMON_eb_PROPS,
     id='d_e_eb_1_dsb',
-    name='њDSB EB',
+    name='DSB EB',
     liveries=make_psd_cc_liveries(
         'pp/eb.psd',
-        shading=('1',),
-        paint=('2',),
+        shading=('eb',),
+        paint=('dsb1',),
+        overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
@@ -46,18 +47,20 @@ d_e_eb_1_dsb = Train(
 d_e_eb_2_dsb = Train(
     **COMMON_eb_PROPS,
     id='d_e_eb_2_dsb',
-    name='њDSB EB',
+    name='DSB EB',
     liveries=make_psd_cc_liveries(
         'pp/eb.psd',
-        shading=('1',),
-        paint=('2',),
+        shading=('eb',),
+        paint=('dsb2',),
+        overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["RED"]
     ),
     country='denmark',
     company='na',
     introduction_date=date(2021, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+        'Trivia': 'The 1000th Vectron',
     }),
 )
