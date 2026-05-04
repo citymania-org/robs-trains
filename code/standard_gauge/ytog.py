@@ -314,6 +314,27 @@ d_d_y6_2_dsb = Train(
     }),
 )
 
+d_d_y6_5_dsb = Train(
+    id='d_d_y6_5_dsb',
+    **COMMON_y6_PROPS,
+    name='DSB ML',
+    liveries=make_psd_cc_liveries(
+        'pp/ytog.psd',
+        shading=('yml',),
+        paint=('ymldsb1',),
+        overlay=('ymlight'),
+        r_overlay=('ymlightr'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    introduction_date=date(1984, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+        'Trivia': 'Typically used in the ML-FL-FL-ML format, obtained specifically for use on the Lille Nord line as it meant that DSB could use depots owned by local companies, unlike if they chose the MR, these replaced the MO units on the line',
+    }),
+)
+
 d_d_y6_3_dsb = Train(
     id='d_d_y6_3_dsb',
     **COMMON_y6_PROPS,
@@ -474,6 +495,25 @@ d_d_y9_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
         'Owners': 'HHJ, LJ',
+    }),
+)
+
+d_d_y9_3_dsb = Train(
+    id='d_d_y9_3_dsb',
+    **COMMON_y9_PROPS,
+    name='DSB FL',
+    liveries=make_psd_cc_liveries(
+        'pp/ytog.psd',
+        shading=('yp',),
+        paint=('ypdsb1',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    country='denmark',
+    introduction_date=date(1984, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Local passengers',
+        'Trivia': 'Typically used in the ML-FL-FL-ML format, obtained specifically for use on the Lille Nord line as it meant that DSB could use depots owned by local companies, unlike if they chose the MR, these replaced the MO units on the line',
     }),
 )
 
