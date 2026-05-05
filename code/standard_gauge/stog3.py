@@ -16,6 +16,7 @@ d_e_stog3_1_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_stog32_1_dsb',
     country='denmark',
     company='na',
     power_type='dc',
@@ -91,6 +92,7 @@ d_e_stog3_2_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_stog32_2_dsb',
     country='denmark',
     company='na',
     power_type='dc',
@@ -166,6 +168,7 @@ d_e_stog3_3_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_stog32_3_dsb',
     country='denmark',
     company='na',
     power_type='dc',
@@ -241,6 +244,7 @@ d_e_stog3_4_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     misc_flags=Train.Flags.USE_2CC,
+    purchase_sprite_towed_id='d_e_stog32_4_dsb',
     country='denmark',
     company='na',
     power_type='dc',

@@ -472,7 +472,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њMG (IC4)/MP (IC2)', d_d_mg_1_dsb, d_d_mg_2_dsb, d_d_mp2_1_dsb, d_d_mp2_2_dsb),
     # dk emu dc
     grf.VariantGroup('S-Tog 1 "De Brune S-Tog"', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
-    grf.VariantGroup('њS-Tog 2 "De Røde S-Tog"', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_4_dsb, d_e_stog2_3_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
+    grf.VariantGroup('S-Tog 2 "De Røde S-Tog"', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_4_dsb, d_e_stog2_3_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
     grf.VariantGroup('њS-Tog 3', d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb),
     grf.VariantGroup('њS-Tog 4 "Hamster" & "Hamsterunge"', d_e_stog4_5_dsb, d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
     # dk emu dc 3000
