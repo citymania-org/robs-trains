@@ -35,7 +35,7 @@ s_e_rc1245_1_sj = Train(
         paint=('sj1',),
         overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["DBLUE"]
+        cc2_replace=colours["TURQUOISE"]
     ),
     company='na',
     max_speed=Train.kmhish(135),
@@ -269,7 +269,7 @@ s_e_rc36_1_sj = Train(
         paint=('sj1',),
         overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["DBLUE"]
+        cc2_replace=colours["TURQUOISE"]
     ),
     company='na',
     max_speed=Train.kmhish(160),
@@ -483,7 +483,7 @@ s_e_rm_1_sj = Train(
         paint=('sj1',),
         overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["DBLUE"]
+        cc2_replace=colours["TURQUOISE"]
     ),
     company='na',
     max_speed=Train.kmhish(100),
