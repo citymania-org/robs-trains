@@ -32,9 +32,10 @@ s_e_ra_1_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('7a',),
-        paint=('7b',),
+        'pp/ra.psd',
+        shading=('ra',),
+        paint=('sj1',),
+        overlay=('light'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY6"]
     ),
@@ -50,11 +51,12 @@ s_e_ra_2_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('7a',),
-        paint=('7b',),
+        'pp/ra.psd',
+        shading=('ra',),
+        paint=('sj2',),
+        overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["TURQUOISE"]
     ),
     company='na',
     introduction_date=date(1961, 1, 1),
@@ -70,11 +72,12 @@ s_e_ra_3_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('7a',),
-        paint=('7b',),
+        'pp/ra.psd',
+        shading=('ral',),
+        paint=('sj3',),
+        overlay=('llight'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["TURQUOISE"]
     ),
     company='na',
     introduction_date=date(1983, 1, 1),
@@ -88,11 +91,12 @@ s_e_ra_4_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('7a',),
-        paint=('7b',),
+        'pp/ra.psd',
+        shading=('ral',),
+        paint=('sj4',),
+        overlay=('llight'),
         cc_replace=colours["BLUE"],
-        cc2_replace=colours["ORANGE"]
+        cc2_replace=colours["TURQUOISE"]
     ),
     company='na',
     introduction_date=date(1994, 1, 1),
@@ -106,9 +110,10 @@ s_e_ra_5_sj = Train(
     **COMMON_ra_PROPS,
     name='њSJ Ra',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('7a',),
-        paint=('7b',),
+        'pp/ra.psd',
+        shading=('ral',),
+        paint=('sj5',),
+        overlay=('llight'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
