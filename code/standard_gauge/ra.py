@@ -30,14 +30,14 @@ COMMON_ra_PROPS = dict(
 s_e_ra_1_sj = Train(
     id='s_e_ra_1_sj',
     **COMMON_ra_PROPS,
-    name='њSJ Ra',
+    name='SJ Ra',
     liveries=make_psd_cc_liveries(
         'pp/ra.psd',
         shading=('ra',),
         paint=('sj1',),
         overlay=('light'),
         cc_replace=colours["ORANGE"],
-        cc2_replace=colours["GREY6"]
+        cc2_replace=colours["GREY7"]
     ),
     company='na',
     introduction_date=date(1955, 1, 1),
@@ -49,7 +49,7 @@ s_e_ra_1_sj = Train(
 s_e_ra_2_sj = Train(
     id='s_e_ra_2_sj',
     **COMMON_ra_PROPS,
-    name='њSJ Ra',
+    name='SJ Ra',
     liveries=make_psd_cc_liveries(
         'pp/ra.psd',
         shading=('ra',),
@@ -70,7 +70,7 @@ s_e_ra_2_sj = Train(
 s_e_ra_3_sj = Train(
     id='s_e_ra_3_sj',
     **COMMON_ra_PROPS,
-    name='њSJ Ra',
+    name='SJ Ra',
     liveries=make_psd_cc_liveries(
         'pp/ra.psd',
         shading=('ral',),
@@ -89,7 +89,7 @@ s_e_ra_3_sj = Train(
 s_e_ra_4_sj = Train(
     id='s_e_ra_4_sj',
     **COMMON_ra_PROPS,
-    name='њSJ Ra',
+    name='SJ Ra',
     liveries=make_psd_cc_liveries(
         'pp/ra.psd',
         shading=('ral',),
@@ -108,7 +108,7 @@ s_e_ra_4_sj = Train(
 s_e_ra_5_sj = Train(
     id='s_e_ra_5_sj',
     **COMMON_ra_PROPS,
-    name='њSJ Ra',
+    name='SJ Ra',
     liveries=make_psd_cc_liveries(
         'pp/ra.psd',
         shading=('ral',),
