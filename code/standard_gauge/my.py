@@ -624,3 +624,307 @@ d_d_my_ii_25_strabag = Train(
         'Trivia': 'One locomotive bought from Eichholz in 2007 and later painted in the "Kansas City" design #1151',
     }),
 )
+
+hu_d_m61_1_mav = Train(
+    id='hu_d_m61_1_mav',
+    name='MÁV M61',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('mav1',),
+        overlay=('light'),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["ORANGE"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='hungary',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(105),
+    power=1650,
+    introduction_date=date(1963, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=106,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+hu_d_m61_2_mav = Train(
+    id='hu_d_m61_2_mav',
+    name='MÁV M61',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('mav2',),
+        overlay=('light'),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["ORANGE"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='hungary',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(105),
+    power=1650,
+    introduction_date=date(1963, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=106,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+
+hu_d_m61_3_mav = Train(
+    id='hu_d_m61_3_mav',
+    name='MÁV M61',
+    length=9,
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('mav3',),
+        overlay=('light'),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["GREY1"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='hungary',
+    company='na',
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(105),
+    power=1650,
+    introduction_date=date(1963, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=106,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+COMMON_202_PROPS = dict(
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    power=1750,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=108,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
+)
+
+be_d_202_1_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_1_nmbs',
+    name='NMBS HLD 202/203', # 1 stripe
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('52/53',),
+        paint=('nmbs1',),
+        overlay=('bllight'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1955, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 52/53',
+    }),
+)
+
+be_d_202_2_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_2_nmbs',
+    name='NMBS HLD 202/203', # 2 stripe
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('52/53',),
+        paint=('cfl1',),
+        overlay=('bllight'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1955, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 52/53',
+    }),
+)
+
+be_d_202_3_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_3_nmbs',
+    name='NMBS HLD 52/53', # thick stripe
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('52/53',),
+        paint=('nmbs2',),
+        overlay=('bllight'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1971, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+be_d_202_4_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_4_nmbs',
+    name='њNMBS HLD 52/53', # modern
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1979, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'New cab to improve drivability',
+    }),
+)
+
+be_d_202_5_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_5_nmbs',
+    name='NMBS HLD 204', # 1 stripe
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('nmbs1',),
+        overlay=('light'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(140),
+    introduction_date=date(1957, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 54',
+    }),
+)
+
+be_d_202_6_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_6_nmbs',
+    name='NMBS HLD 204', # 2 stripe
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('cfl1',),
+        overlay=('light'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(140),
+    introduction_date=date(1957, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as HLD 54',
+    }),
+)
+
+be_d_202_7_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_7_nmbs',
+    name='NMBS HLD 54', # thick stripe
+    liveries=make_psd_cc_liveries(
+        'pp/my.psd',
+        shading=('my',),
+        paint=('nmbs2',),
+        overlay=('light'),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(140),
+    introduction_date=date(1971, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+be_d_202_8_nmbs = Train(
+    **COMMON_202_PROPS,
+    id='be_d_202_8_nmbs',
+    name='њNMBS HLD 54', # modern
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["YELLOW"]
+    ),
+    country='belgium',
+    company='na',
+    max_speed=Train.kmhish(120),
+    introduction_date=date(1992, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'New cab to improve drivability',
+    }),
+)
