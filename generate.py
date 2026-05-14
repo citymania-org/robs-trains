@@ -157,7 +157,7 @@ from code.standard_gauge.type69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM6
 # emu 25
 
 from code.standard_gauge.ir4 import d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb
-from code.standard_gauge.øt import d_e_et_1_dsb, d_e_et_2_dsb
+from code.standard_gauge.øt import d_e_et_1_dsb, d_e_et_1_sj, d_e_et_2_sj, d_e_et_2_dsb
 
 # emu dc
 
@@ -553,7 +553,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њX11', s_e_x11_1_sj, s_e_x11_2_sj, s_e_x11_3_sj, s_e_x11_4_sj, s_e_x11_5_sj),
     grf.VariantGroup('њX12', s_e_x12_1_sj, s_e_x12_2_sj, s_e_x12_3_sj),
     grf.VariantGroup('њX14', s_e_x14_1_sj, s_e_x14_2_sj, s_e_x14_3_sj, s_e_x14_4_sj, s_e_x14_5_sj, s_e_x14_6_sj),
-    grf.VariantGroup('њX31K/ET/X32K (Øresundståg)', d_e_et_1_dsb, d_e_et_2_dsb),
+    grf.VariantGroup('њX31K/ET/X32K (Øresundståg)', d_e_et_1_dsb, d_e_et_1_sj, d_e_et_2_sj, d_e_et_2_dsb),
     s_e_x60_1_sj,
     grf.VariantGroup('њX61', s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj),
     s_e_x62_1_sj,
