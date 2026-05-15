@@ -116,7 +116,7 @@ d_d_me_ii_5_nrfab = Train(
         paint=('nrfab1',),
         overlay=('light'),
         cc_replace=colours["BLUE"],
-        cc2_replace=colours["GREEN"]
+        cc2_replace=colours["APPLE"]
     ),
     country='sweden',
     company='na',

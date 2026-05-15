@@ -263,7 +263,7 @@ d_d_mz_ii_10_bs = Train(
         shading=('mz2',),
         paint=('bs3',),
         overlay=('light'),
-        cc_replace=colours["GREEN"],
+        cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
     country='norway',
@@ -284,7 +284,7 @@ d_d_mz_ii_11_nrfab = Train(
         shading=('mz2',),
         paint=('nrfab1',),
         overlay=('light'),
-        cc_replace=colours["GREEN"],
+        cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
     country='sweden',
@@ -410,7 +410,7 @@ d_d_mz_iv_3_bs = Train(
         shading=('mz1',),
         paint=('bs1',),
         overlay=('light'),
-        cc_replace=colours["GREEN"],
+        cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
     country='norway',
