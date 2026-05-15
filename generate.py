@@ -118,6 +118,7 @@ from code.standard_gauge.tgvm import fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf
 from code.standard_gauge.semg import se_e_mg_1
 from code.standard_gauge.sef import se_e_f_1
 from code.standard_gauge.seda import se_e_da_1
+from code.standard_gauge.sema import se_e_ma_1, se_e_ma_2, se_e_ma_3, se_e_ma_4, se_e_ma_5, se_e_ma_6, se_e_ma_7, se_e_ma_8, se_e_ma_9, no_e_ma_1
 
 # electric 25
 
@@ -515,6 +516,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('TMZ II', d_d_mz_ii_9_bs, d_d_mz_ii_10_bs),
     d_d_mz_iv_3_bs,
     # no electric 15
+    no_e_ma_1,
     grf.VariantGroup('"Lok 2000"', no_e_el18_1, no_e_el18_2),
     # no emu dc
     n_o_Wes_1_hkb,
@@ -540,6 +542,7 @@ lib.make_purchase_sprites(
     se_e_f_1,
     se_e_mg_1,
     se_e_da_1,
+    grf.VariantGroup('Ma', se_e_ma_1, se_e_ma_2, se_e_ma_3, se_e_ma_4, se_e_ma_5, se_e_ma_6, se_e_ma_7, se_e_ma_8, se_e_ma_9),
     grf.VariantGroup('Ra', s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj),
     grf.VariantGroup('њRc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_8_sj, s_e_rc1245_12_sj, s_e_rc1245_11_sj, s_e_rc1245_10_sj, s_e_rc1245_9_sj),
     grf.VariantGroup('њRc3/6', s_e_rc36_1_sj, s_e_rc36_8_sj, s_e_rc36_2_sj, s_e_rc36_10_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj, s_e_rc36_9_sj),
