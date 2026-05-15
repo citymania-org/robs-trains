@@ -115,6 +115,8 @@ from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, 
 from code.standard_gauge.db103 import de_e_db103_1_db, de_e_db103_2_db, de_e_db103_3_db, de_e_db103_4_radve
 from code.standard_gauge.tgvpse import fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf
 from code.standard_gauge.tgvm import fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf
+from code.standard_gauge.semg import se_e_mg_1
+from code.standard_gauge.sef import se_e_f_1
 
 # electric 25
 
@@ -534,6 +536,8 @@ lib.make_purchase_sprites(
     grf.VariantGroup('TMZ I/II', d_d_mz_i_5_vida, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_ii_11_nrfab, d_d_mz_ii_7_stab),
     d_d_me_ii_5_nrfab,
     # se electric 15
+    se_e_f_1,
+    se_e_mg_1,
     grf.VariantGroup('Ra', s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj),
     grf.VariantGroup('њRc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_8_sj, s_e_rc1245_12_sj, s_e_rc1245_11_sj, s_e_rc1245_10_sj, s_e_rc1245_9_sj),
     grf.VariantGroup('њRc3/6', s_e_rc36_1_sj, s_e_rc36_8_sj, s_e_rc36_2_sj, s_e_rc36_10_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj, s_e_rc36_9_sj),
