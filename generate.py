@@ -117,6 +117,7 @@ from code.standard_gauge.tgvpse import fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_ps
 from code.standard_gauge.tgvm import fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf
 from code.standard_gauge.semg import se_e_mg_1
 from code.standard_gauge.sef import se_e_f_1
+from code.standard_gauge.seda import se_e_da_1
 
 # electric 25
 
@@ -538,6 +539,7 @@ lib.make_purchase_sprites(
     # se electric 15
     se_e_f_1,
     se_e_mg_1,
+    se_e_da_1,
     grf.VariantGroup('Ra', s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj),
     grf.VariantGroup('њRc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_8_sj, s_e_rc1245_12_sj, s_e_rc1245_11_sj, s_e_rc1245_10_sj, s_e_rc1245_9_sj),
     grf.VariantGroup('њRc3/6', s_e_rc36_1_sj, s_e_rc36_8_sj, s_e_rc36_2_sj, s_e_rc36_10_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj, s_e_rc36_9_sj),
