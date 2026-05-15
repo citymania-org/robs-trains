@@ -159,7 +159,7 @@ d_d_mx_ii_7_contec = Train(
         shading=('mx',),
         paint=('contec1',),
         overlay=('light'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
     country='denmark',
@@ -201,7 +201,7 @@ d_d_mx_ii_9_sb = Train(
         shading=('mx',),
         paint=('sb1',),
         overlay=('light'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
     country='denmark',

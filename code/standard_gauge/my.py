@@ -193,7 +193,7 @@ d_d_my_ii_5_contec = Train(
         shading=('my',),
         paint=('contec1',),
         overlay=('light'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
     country='denmark',
@@ -298,8 +298,8 @@ d_d_my_ii_10_dsb = Train(
         shading=('my',),
         paint=('dsb4',),
         overlay=('light'),
-        cc_replace=colours["DBLUE"],
-        cc2_replace=colours["DBLUE"]
+        cc_replace=colours["NAVY"],
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -319,7 +319,7 @@ d_d_my_ii_11_dsb = Train(
         shading=('my',),
         paint=('dsb5',),
         overlay=('light'),
-        cc_replace=colours["DBLUE"],
+        cc_replace=colours["NAVY"],
         cc2_replace=colours["YELLOW"]
     ),
     country='denmark',
@@ -340,7 +340,7 @@ d_d_my_ii_12_njj = Train(
         shading=('my',),
         paint=('njj1',),
         overlay=('light'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
     country='denmark',

@@ -269,7 +269,7 @@ ch_e_re44ii_15 = Train(
         'pp/Template.psd',
         shading=('7a',),
         paint=('7b',),
-        cc_replace=colours["GREEN"],
+        cc_replace=colours["MBC"],
         cc2_replace=colours["GREY1"]
     ),
     country='switzerland',
@@ -326,7 +326,7 @@ ch_e_re44ii_7 = Train(
         'pp/Template.psd',
         shading=('7a',),
         paint=('7b',),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["DCREAM"]
     ),
     country='switzerland',
@@ -346,7 +346,7 @@ ch_e_re44ii_16 = Train(
         'pp/Template.psd',
         shading=('7a',),
         paint=('7b',),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY3"]
     ),
     country='switzerland',

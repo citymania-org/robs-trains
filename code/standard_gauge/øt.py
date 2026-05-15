@@ -168,7 +168,7 @@ d_e_et_2_sj = Train(
         shading=('12a',),
         paint=('12b',),
         cc_replace=colours["RED"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["COBALT"]
     ),
     introduction_date=date(2002, 1, 1),
     cargo_capacity=74,
@@ -184,7 +184,7 @@ d_e_et_2_sj = Train(
         shading='12a',
         paint='12b',
         cc_replace=colours['RED'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['COBALT'],
     ),
     cargo_capacity=74,
     loading_speed=10,
@@ -197,7 +197,7 @@ d_e_et_2_sj = Train(
         shading='12a',
         paint='12b',
         cc_replace=colours['RED'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['COBALT'],
     ),
     cargo_capacity=75,
     loading_speed=10,

@@ -124,7 +124,7 @@ d_d_mr_3_dsb = Train(
         paint=('mrdsb3',),
         overlay=('mrlight'),
         cc_replace=colours["GREY3"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mrd_3_dsb',
     country='denmark',
@@ -142,7 +142,7 @@ d_d_mr_3_dsb = Train(
         paint='mrddsb3',
         overlay='mrdlight',
         cc_replace=colours['GREY3'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['NAVY'],
     ),
     cargo_capacity=56,
     loading_speed=10,
@@ -229,7 +229,7 @@ d_d_mr_6_dsb = Train(
         paint=('mrdsb4',),
         overlay=('mrlight'),
         cc_replace=colours["GREY3"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mrd_6_dsb',
     country='denmark',
@@ -247,7 +247,7 @@ d_d_mr_6_dsb = Train(
         paint='mrddsb4',
         overlay='mrdlight',
         cc_replace=colours['GREY3'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['NAVY'],
     ),
     cargo_capacity=56,
     loading_speed=10,
@@ -298,8 +298,8 @@ d_d_mr_8_dsb = Train(
         shading=('mr',),
         paint=('mrcrsa1',),
         overlay=('mrlight'),
-        cc_replace=colours["COLBALT"],
-        cc2_replace=colours["COLBALT"]
+        cc_replace=colours["NAVY"],
+        cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mrd_8_dsb',
     country='denmark',
@@ -316,8 +316,8 @@ d_d_mr_8_dsb = Train(
         shading='mrd',
         paint='mrdcrsa1',
         overlay='mrdlight',
-        cc_replace=colours['COLBALT'],
-        cc2_replace=colours['COLBALT'],
+        cc_replace=colours['NAVY'],
+        cc2_replace=colours['NAVY'],
     ),
     cargo_capacity=56,
     loading_speed=10,
@@ -333,7 +333,7 @@ d_d_mr_9_dsb = Train(
         shading=('mr',),
         paint=('mrse1',),
         overlay=('mrlight'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["NAVY"],
         cc2_replace=colours["GREY1"]
     ),
     purchase_sprite_towed_id='d_d_mrd_9_dsb',
@@ -351,7 +351,7 @@ d_d_mr_9_dsb = Train(
         shading='mrd',
         paint='mrdse1',
         overlay='mrdlight',
-        cc_replace=colours['COLBALT'],
+        cc_replace=colours['NAVY'],
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=56,

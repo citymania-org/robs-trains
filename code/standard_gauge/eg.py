@@ -32,8 +32,8 @@ d_e_eg_1_dsb = Train(
         'pp/Template.psd',
         shading=('10a',),
         paint=('10b',),
-        cc_replace=colours["COLBALT"],
-        cc2_replace=colours["COLBALT"]
+        cc_replace=colours["NAVY"],
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',

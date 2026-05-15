@@ -51,8 +51,8 @@ ch_e_re44i_2 = Train(
         'pp/Template.psd',
         shading=('7a',),
         paint=('7b',),
-        cc_replace=colours["COLBALT"],
-        cc2_replace=colours["COLBALT"]
+        cc_replace=colours["COBALT"],
+        cc2_replace=colours["COBALT"]
     ),
     country='switzerland',
     company='na',

@@ -12,7 +12,7 @@ dk_d_lm21_1 = Train(
         'pp/Template.psd', #draw as 4,5
         shading=('5a',),
         paint=('5b',),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["SLBLUE"]
     ),
     misc_flags=Train.Flags.USE_2CC,
@@ -46,7 +46,7 @@ dk_d_lm21_1 = Train(
         'pp/Template.psd', #draw as 2
         shading='3a', #should be 1
         paint='3b', #should be 1
-        cc_replace=colours['COLBALT'],
+        cc_replace=colours['COBALT'],
         cc2_replace=colours['SLBLUE'],
     ),
     cargo_capacity=50,
@@ -59,7 +59,7 @@ dk_d_lm21_1 = Train(
         'pp/Template.psd', #draw as 4,5
         shading='5a',
         paint='5b',
-        cc_replace=colours['COLBALT'],
+        cc_replace=colours['COBALT'],
         cc2_replace=colours['SLBLUE'],
     ),
     cargo_capacity=57,

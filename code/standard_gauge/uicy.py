@@ -391,8 +391,8 @@ d_p_bn_3_dsb = Train(
         'pp/uicy.psd',
         shading=('bn',),
         paint=('bn3',),
-        cc_replace=colours["COLBALT"],
-        cc2_replace=colours["COLBALT"]
+        cc_replace=colours["NAVY"],
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -997,8 +997,8 @@ d_p_bns_4_dsb = Train(
         'pp/Template.psd',
         shading=('11a',),
         paint=('11b',),
-        cc_replace=colours["COLBALT"],
-        cc2_replace=colours["COLBALT"]
+        cc_replace=colours["NAVY"],
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -1019,8 +1019,8 @@ d_p_bns_5_dsb = Train(
         'pp/Template.psd',
         shading=('11a',),
         paint=('11b',),
-        cc_replace=colours["COLBALT"],
-        cc2_replace=colours["COLBALT"]
+        cc_replace=colours["NAVY"],
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',

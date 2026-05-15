@@ -331,7 +331,7 @@ s_e_rc36_3_sj = Train(
         shading=('rc',),
         paint=('sj2',),
         overlay=('light'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY10"]
     ),
     company='na',
@@ -501,7 +501,7 @@ s_e_rc7_1_sj = Train(
         shading=('rc',),
         paint=('sj2',),
         overlay=('light'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY10"]
     ),
     company='na',

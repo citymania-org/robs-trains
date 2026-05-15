@@ -56,7 +56,7 @@ d_d_me_ii_2_dsb = Train(
         paint=('dsb2',),
         overlay=('light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -75,7 +75,7 @@ d_d_me_ii_3_dsb = Train(
         shading=('me',),
         paint=('dsb3',),
         overlay=('light'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["NAVY"],
         cc2_replace=colours["RED"]
     ),
     country='denmark',

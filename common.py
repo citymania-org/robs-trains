@@ -164,7 +164,7 @@ colours = {
 "SKY" : palette[144: 152],
 "BLUE" : palette[152: 160],
 "DBLUE" : palette[160: 168],
-"COLBALT" : palette[168: 176], # rc7 late DSB Bn
+"COBALT" : palette[168: 176], # rc7
 "MAUVE" : palette[176: 184],
 "LAVENDER" : palette[184: 192],
 "PURPLE" : palette[192: 200],
@@ -188,6 +188,10 @@ colours = {
 "NSBRED" : palette[392: 400], # nsb red like on the el 18
 "DBRED" : palette[400: 408], # db red like on the 103
 "YORANGE" : palette[408: 416], # yellow orange
+"NAVY" : palette[416: 424], # dsb blue
+"SLBLUEO" : palette[424: 432],
+"KHAKI" : palette[432: 440], # bt
+"MBC" : palette[440: 448],
 }
 
 def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_overlay=None, cc_replace, cc2_replace):

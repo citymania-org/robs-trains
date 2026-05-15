@@ -29,7 +29,7 @@ d_p_b_ii_1_dsb = Train(
         shading=('bii',),
         paint=('bii1',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -52,7 +52,7 @@ d_p_b_ii_2_dsb = Train(
         shading=('bii',),
         paint=('bii2',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -75,7 +75,7 @@ d_p_b_ii_3_dsb = Train(
         shading=('bii',),
         paint=('bii3',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -121,7 +121,7 @@ d_p_bk_iii_1_dsb = Train(
         shading=('bk',),
         paint=('bk1',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -144,7 +144,7 @@ d_p_bk_iii_2_dsb = Train(
         shading=('bk',),
         paint=('bk2',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -167,7 +167,7 @@ d_p_bk_iii_3_dsb = Train(
         shading=('bk',),
         paint=('bk3',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -213,7 +213,7 @@ d_p_abs_1_dsb = Train(
         shading=('12a',),
         paint=('12b',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -236,7 +236,7 @@ d_p_abs_2_dsb = Train(
         shading=('12a',),
         paint=('12b',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',
@@ -259,7 +259,7 @@ d_p_abs_3_dsb = Train(
         shading=('12a',),
         paint=('12b',),
         cc_replace=colours["GREY1"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     country='denmark',
     company='na',

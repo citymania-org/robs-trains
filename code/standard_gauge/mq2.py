@@ -34,7 +34,7 @@ d_d_mq2_1_dsb = Train(
         paint=('adsb1',),
         overlay=('mqalight'),
         cc_replace=colours["GREY3"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mq22_1_dsb',
     country='denmark',
@@ -51,7 +51,7 @@ d_d_mq2_1_dsb = Train(
         shading='10a',
         paint='10b',
         cc_replace=colours['GREY3'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['NAVY'],
     ),
     cargo_capacity=64,
     loading_speed=10,
@@ -68,7 +68,7 @@ d_d_mq2_2_dsb = Train(
         paint=('adsb1',),
         overlay=('mqalight'),
         cc_replace=colours["GREY3"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mq22_2_dsb',
     country='denmark',
@@ -85,7 +85,7 @@ d_d_mq2_2_dsb = Train(
         shading='10a',
         paint='10b',
         cc_replace=colours['GREY3'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['NAVY'],
     ),
     cargo_capacity=64,
     loading_speed=10,
@@ -137,7 +137,7 @@ d_d_mq2_4_dsb = Train(
         paint=('2',),
         overlay=('mqalight'),
         cc_replace=colours["GREY7"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mq22_4_dsb',
     country='denmark',
@@ -155,7 +155,7 @@ d_d_mq2_4_dsb = Train(
         shading='10a',
         paint='10b',
         cc_replace=colours['GREY7'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['NAVY'],
     ),
     cargo_capacity=64,
     loading_speed=10,
@@ -172,7 +172,7 @@ d_d_mq2_5_dsb = Train(
         paint=('2',),
         overlay=('mqalight'),
         cc_replace=colours["GREY7"],
-        cc2_replace=colours["COLBALT"]
+        cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mq22_5_dsb',
     country='denmark',
@@ -190,7 +190,7 @@ d_d_mq2_5_dsb = Train(
         shading='10a',
         paint='10b',
         cc_replace=colours['GREY7'],
-        cc2_replace=colours['COLBALT'],
+        cc2_replace=colours['NAVY'],
     ),
     cargo_capacity=64,
     loading_speed=10,
@@ -240,7 +240,7 @@ d_d_mq2_7_dsb = Train(
         shading=('mqa',),
         paint=('2',),
         overlay=('mqalight'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["YELLOW"]
     ),
     purchase_sprite_towed_id='d_d_mq22_7_dsb',
@@ -257,7 +257,7 @@ d_d_mq2_7_dsb = Train(
         'pp/Template.psd',
         shading='10a',
         paint='10b',
-        cc_replace=colours['COLBALT'],
+        cc_replace=colours['COBALT'],
         cc2_replace=colours['YELLOW'],
     ),
     cargo_capacity=64,
@@ -274,7 +274,7 @@ d_d_mq2_8_dsb = Train(
         shading=('mqa',),
         paint=('2',),
         overlay=('mqalight'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
     purchase_sprite_towed_id='d_d_mq22_8_dsb',
@@ -291,7 +291,7 @@ d_d_mq2_8_dsb = Train(
         'pp/Template.psd',
         shading='10a',
         paint='10b',
-        cc_replace=colours['COLBALT'],
+        cc_replace=colours['COBALT'],
         cc2_replace=colours['GREY1'],
     ),
     cargo_capacity=64,
@@ -308,7 +308,7 @@ d_d_mq2_9_dsb = Train(
         shading=('mqa',),
         paint=('2',),
         overlay=('mqalight'),
-        cc_replace=colours["COLBALT"],
+        cc_replace=colours["COBALT"],
         cc2_replace=colours["SKY"]
     ),
     purchase_sprite_towed_id='d_d_mq22_9_dsb',
@@ -325,7 +325,7 @@ d_d_mq2_9_dsb = Train(
         'pp/Template.psd',
         shading='10a',
         paint='10b',
-        cc_replace=colours['COLBALT'],
+        cc_replace=colours['COBALT'],
         cc2_replace=colours['SKY'],
     ),
     cargo_capacity=64,
