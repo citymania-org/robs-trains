@@ -99,6 +99,7 @@ from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_
 from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik, d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_17_stab, d_d_mx_ii_18_vida, d_d_mx_ii_19_ibab
 from code.standard_gauge.mz import d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb, d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc, d_d_mz_ii_6_stab, d_d_mz_ii_7_stab, d_d_mz_i_5_vida, d_d_mz_iv_3_bs, d_d_mz_ii_8_bs, d_d_mz_ii_9_bs, d_d_mz_ii_10_bs, d_d_mz_ii_11_nrfab
 from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_6_mav, d_d_me_ii_7_skpl
+from code.standard_gauge.be205 import be_d_205_1, lu_d_205_1, dk_d_205_1, se_d_205_1
 
 # electric 15
 
@@ -417,6 +418,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('HLD 201', be_d_201_1_nmbs, be_d_201_5_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
     grf.VariantGroup('HLD 202/203', be_d_202_1_nmbs, be_d_202_2_nmbs, be_d_202_3_nmbs, be_d_202_4_nmbs),
     grf.VariantGroup('HLD 204', be_d_202_5_nmbs, be_d_202_6_nmbs, be_d_202_7_nmbs, be_d_202_8_nmbs),
+    be_d_205_1,
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
@@ -451,6 +453,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('MZ I/II', d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_ii_8_bs, d_d_mz_ii_6_stab),
     grf.VariantGroup('MZ III/IV', d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb, d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc),
     grf.VariantGroup('ME II', d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb),
+    dk_d_205_1,
     # dk electric dc
     # dk electric dc 3000
     # dk electric 15
@@ -511,6 +514,7 @@ lib.make_purchase_sprites(
     # lu
     # lu diesel
     lu_d_1600_1_cfl,
+    lu_d_205_1,
     # no
     # no diesel
     grf.VariantGroup('TMZ II', d_d_mz_ii_9_bs, d_d_mz_ii_10_bs),
@@ -537,6 +541,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('TMX II', d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_12_bk, d_d_mx_ii_19_ibab, d_d_mx_ii_4_ttt, d_d_mx_ii_18_vida, d_d_mx_ii_17_stab),
     grf.VariantGroup('TMY II', d_d_my_ii_8_taagab, d_d_my_ii_24_bsx, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_3_ttt),
     grf.VariantGroup('TMZ I/II', d_d_mz_i_5_vida, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_ii_11_nrfab, d_d_mz_ii_7_stab),
+    se_d_205_1,
     d_d_me_ii_5_nrfab,
     # se electric 15
     se_e_f_1,
