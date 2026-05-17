@@ -142,7 +142,7 @@ from code.standard_gauge.Yo1s import s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tg
 from code.standard_gauge.ma import d_d_ma_1_dsb, d_d_ma_2_dsb, d_d_ma_3_dsb, d_d_ma_4_dsb, d_d_ma_5_dsb, d_d_ma_6_dsb, d_d_ma_7_dsb, d_d_ma_8_dsb, d_d_ma_9_dsb, d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb
 from code.standard_gauge.ytog import d_d_y1_1_dsb, d_d_y1dvt_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y6_1_dsb, d_d_y6_4_dsb, d_d_y6_2_dsb, d_d_y6_5_dsb, d_d_y6_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_3_dsb, d_d_y9_2_dsb
 from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d_mr_4_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_7_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb, dl_d_mr_1_dlj
-from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj, d_d_mf_7_dsb, d_d_mf_8_dsb
+from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj, d_d_mf_7_dsb, d_d_mf_8_dsb, dl_d_mf_1, dl_d_mf_2
 from code.standard_gauge.regiosprinter import dk_d_lm21_1, dk_d_lm21_2
 from code.standard_gauge.ic2 import d_d_ic2_1_dsb, d_d_ic2_2_dsb
 from code.standard_gauge.mq2 import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb, d_d_mq2_6_dsb, d_d_mq2_7_dsb, d_d_mq2_8_dsb, d_d_mq2_9_dsb, d_d_mq2_10_dsb, d_d_mq2_11_dsb
@@ -500,6 +500,7 @@ lib.make_purchase_sprites(
     # dl
     # dl dmu
     dl_d_mr_1_dlj,
+    grf.VariantGroup('MF (IC3)', dl_d_mf_1, dl_d_mf_2),
     # fr
     # fr emu dc
     grf.VariantGroup('њTGV PSE', fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf),
