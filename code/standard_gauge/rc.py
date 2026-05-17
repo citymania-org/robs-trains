@@ -34,6 +34,7 @@ s_e_rc1245_1_sj = Train(
         shading=('rc',),
         paint=('sj1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["TURQUOISE"]
     ),
@@ -55,6 +56,7 @@ s_e_rc1245_2_sj = Train(
         shading=('rc',),
         paint=('sj5',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -76,6 +78,7 @@ s_e_rc1245_3_sj = Train(
         shading=('rc',),
         paint=('sj6',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -97,6 +100,7 @@ s_e_rc1245_4_sj = Train(
         shading=('rc',),
         paint=('gc1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -118,6 +122,7 @@ s_e_rc1245_5_sj = Train(
         shading=('rc',),
         paint=('tågab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
@@ -139,6 +144,7 @@ s_e_rc1245_6_sj = Train(
         shading=('rc',),
         paint=('sj8',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -160,6 +166,7 @@ s_e_rc1245_7_sj = Train(
         shading=('rc',),
         paint=('sj7',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -181,6 +188,7 @@ s_e_rc1245_8_sj = Train(
         shading=('rc',),
         paint=('bv1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["LIME"],
         cc2_replace=colours["GREY4"]
     ),
@@ -202,6 +210,7 @@ s_e_rc1245_9_sj = Train(
         shading=('rc',),
         paint=('nrfab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["BLUE"]
     ),
@@ -223,6 +232,7 @@ s_e_rc1245_10_sj = Train(
         shading=('rc',),
         paint=('stab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["ORANGE"]
     ),
@@ -244,6 +254,7 @@ s_e_rc1245_11_sj = Train(
         shading=('rc',),
         paint=('gc2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -289,6 +300,7 @@ s_e_rc36_1_sj = Train(
         shading=('rc',),
         paint=('sj1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["TURQUOISE"]
     ),
@@ -310,6 +322,7 @@ s_e_rc36_2_sj = Train(
         shading=('rc',),
         paint=('sj5',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -331,6 +344,7 @@ s_e_rc36_3_sj = Train(
         shading=('rc',),
         paint=('sj2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY10"]
     ),
@@ -352,6 +366,7 @@ s_e_rc36_4_sj = Train(
         shading=('rc',),
         paint=('ssrt1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY4"],
         cc2_replace=colours["GREY6"]
     ),
@@ -373,6 +388,7 @@ s_e_rc36_5_sj = Train(
         shading=('rc',),
         paint=('sj3',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
@@ -394,6 +410,7 @@ s_e_rc36_6_sj = Train(
         shading=('rc',),
         paint=('sj4',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY4"],
         cc2_replace=colours["GREY10"]
     ),
@@ -415,6 +432,7 @@ s_e_rc36_7_sj = Train(
         shading=('rc',),
         paint=('hctor1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY7"],
         cc2_replace=colours["ORANGE"]
     ),
@@ -436,6 +454,7 @@ s_e_rc36_8_sj = Train(
         shading=('rc',),
         paint=('sj7',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -457,6 +476,7 @@ s_e_rc36_9_sj = Train(
         shading=('rc',),
         paint=('vida1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY1"],
         cc2_replace=colours["RED"]
     ),
@@ -478,6 +498,7 @@ s_e_rc36_10_sj = Train(
         shading=('rc',),
         paint=('sj6',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -500,7 +521,8 @@ s_e_rc7_1_sj = Train(
         'pp/rc.psd',
         shading=('rc',),
         paint=('sj2',),
-        overlay=('light'),
+        overlay=('lightz'),
+        r_overlay=('lightrz'),
         cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY10"]
     ),
@@ -524,6 +546,7 @@ s_e_rm_1_sj = Train(
         shading=('rc',),
         paint=('sj1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["TURQUOISE"]
     ),
@@ -545,6 +568,7 @@ s_e_rm_2_sj = Train(
         shading=('rc',),
         paint=('sj5',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -566,6 +590,7 @@ s_e_rm_3_sj = Train(
         shading=('rc',),
         paint=('gc1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -587,6 +612,7 @@ s_e_rm_4_sj = Train(
         shading=('rc',),
         paint=('tågab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
