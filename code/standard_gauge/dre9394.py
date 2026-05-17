@@ -108,7 +108,7 @@ de_e_dre94_2_dr = Train(
 de_e_dre94_3_dr = Train(
     id='de_e_dre94_3_dr',
     **COMMON_dre94_PROPS,
-    name='DB 194',
+    name='DB 194.5',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('9a',),
@@ -128,7 +128,7 @@ de_e_dre94_3_dr = Train(
 de_e_dre94_4_dr = Train(
     id='de_e_dre94_4_dr',
     **COMMON_dre94_PROPS,
-    name='DB 194', #red wheels
+    name='DB 194.5', #red wheels
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('9a',),
@@ -157,8 +157,8 @@ de_e_dre94_5_dr = Train(
         cc2_replace=colours["CREAM"]
     ),
     company='na',
-    max_speed=Train.kmhish(100),
-    power=6363,
+    max_speed=Train.kmhish(90),
+    power=4487,
     introduction_date=date(1974, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
