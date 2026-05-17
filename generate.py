@@ -108,7 +108,7 @@ from code.standard_gauge.chre44i import ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3
 from code.standard_gauge.chae66 import ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5
 from code.standard_gauge.chre44ii import ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16
 from code.standard_gauge.chre66 import ch_e_re66_1, ch_e_re66_2, ch_e_re66_3
-from code.standard_gauge.dre9394 import de_e_dre93_1_dr, de_e_dre94_1_dr
+from code.standard_gauge.dre9394 import de_e_dre93_1_dr, de_e_dre94_1_dr, de_e_dre94_2_dr, de_e_dre94_3_dr, de_e_dre94_4_dr, de_e_dre94_5_dr
 from code.standard_gauge.chre44iv import ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5
 from code.standard_gauge.chre460 import ch_e_re460_1, ch_e_re460_4, ch_e_re460_5, ch_e_re460_2, ch_e_re460_3, no_e_el18_1, no_e_el18_2
 from code.standard_gauge.ra import s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj
@@ -439,7 +439,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('V 170', d_d_my_ii_18_et, d_d_my_ii_22_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_23_strabag, d_d_my_ii_25_strabag, d_d_my_ii_17_bsbs),
     # de electric 15
     de_e_dre93_1_dr,
-    de_e_dre94_1_dr,
+    grf.VariantGroup('"Deutsches Krokodil"', de_e_dre94_1_dr, de_e_dre94_2_dr, de_e_dre94_3_dr, de_e_dre94_4_dr, de_e_dre94_5_dr),
     grf.VariantGroup('њ103', de_e_db103_1_db, de_e_db103_2_db, de_e_db103_3_db, de_e_db103_4_radve),
     # dk
     # dk steam

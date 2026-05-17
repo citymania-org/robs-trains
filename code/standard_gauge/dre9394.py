@@ -21,20 +21,20 @@ COMMON_dre93_PROPS = dict(
     callbacks={'properties': {'cargo_capacity': 0},},
     country='germany',
     max_speed=Train.kmhish(70),
-    power=3355,
-    weight=118,
+    power=3399,
+    weight=117,
 )
 
 de_e_dre93_1_dr = Train(
     id='de_e_dre93_1_dr',
     **COMMON_dre93_PROPS,
-    name='њDR E 93',
+    name='DR E 93',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
         paint=('8b',),
-        cc_replace=colours["DGREEN"],
-        cc2_replace=colours["DGREEN"]
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
     ),
     company='na',
     introduction_date=date(1933, 1, 1),
@@ -60,26 +60,107 @@ COMMON_dre94_PROPS = dict(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     country='germany',
-    max_speed=Train.kmhish(100),
-    power=4020,
     weight=119,
 )
 
 de_e_dre94_1_dr = Train(
     id='de_e_dre94_1_dr',
     **COMMON_dre94_PROPS,
-    name='њDR E 94',
+    name='DR E 94',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('9a',),
         paint=('9b',),
-        cc_replace=colours["DGREEN"],
-        cc2_replace=colours["DGREEN"]
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
     ),
     company='na',
+    max_speed=Train.kmhish(90),
+    power=4487,
     introduction_date=date(1940, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
         'Trivia': 'Later classed as DB 194 & DR 254',
+    }),
+)
+
+de_e_dre94_2_dr = Train(
+    id='de_e_dre94_2_dr',
+    **COMMON_dre94_PROPS,
+    name='DR E 94', #red wheels
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(90),
+    power=4487,
+    introduction_date=date(1940, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Freight',
+        'Trivia': 'Later classed as DB 194 & DR 254',
+    }),
+)
+
+de_e_dre94_3_dr = Train(
+    id='de_e_dre94_3_dr',
+    **COMMON_dre94_PROPS,
+    name='DB 194',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=6363,
+    introduction_date=date(1970, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Freight',
+    }),
+)
+
+de_e_dre94_4_dr = Train(
+    id='de_e_dre94_4_dr',
+    **COMMON_dre94_PROPS,
+    name='DB 194', #red wheels
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=6363,
+    introduction_date=date(1970, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Freight',
+    }),
+)
+
+de_e_dre94_5_dr = Train(
+    id='de_e_dre94_5_dr',
+    **COMMON_dre94_PROPS,
+    name='DB 194',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["DTURQUOISE"],
+        cc2_replace=colours["CREAM"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(100),
+    power=6363,
+    introduction_date=date(1974, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Freight',
     }),
 )
