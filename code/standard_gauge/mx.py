@@ -265,7 +265,7 @@ d_d_mx_ii_12_bk = Train(
         paint=('bk1',),
         overlay=('light'),
         cc_replace=colours["SLBLUE"],
-        cc2_replace=colours["GREY1"]
+        cc2_replace=colours["BLUE"]
     ),
     country='sweden',
     company='na',
