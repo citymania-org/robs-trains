@@ -113,7 +113,7 @@ from code.standard_gauge.chre44iv import ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44
 from code.standard_gauge.chre460 import ch_e_re460_1, ch_e_re460_4, ch_e_re460_5, ch_e_re460_2, ch_e_re460_3, no_e_el18_1, no_e_el18_2
 from code.standard_gauge.ra import s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj
 from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj, s_e_rc36_7_sj, s_e_rc1245_1_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc36_8_sj, s_e_rc1245_8_sj, s_e_rc1245_9_sj, s_e_rc1245_10_sj, s_e_rc36_9_sj, s_e_rc1245_11_sj, s_e_rc36_10_sj, s_e_rc1245_12_sj
-from code.standard_gauge.db103 import de_e_db103_1_db, de_e_db103_2_db, de_e_db103_3_db, de_e_db103_4_radve
+from code.standard_gauge.de103 import de_e_103_1, de_e_103_2, de_e_103_3, de_e_103_4, de_e_103_5, de_e_103_6, de_e_103_7, de_e_103_8, de_e_103_9
 from code.standard_gauge.tgvpse import fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf
 from code.standard_gauge.tgvm import fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf
 from code.standard_gauge.semg import se_e_mg_1
@@ -440,7 +440,7 @@ lib.make_purchase_sprites(
     # de electric 15
     de_e_dre93_1_dr,
     grf.VariantGroup('"Deutsches Krokodil"', de_e_dre94_1_dr, de_e_dre94_2_dr, de_e_dre94_3_dr, de_e_dre94_4_dr, de_e_dre94_5_dr),
-    grf.VariantGroup('њ103', de_e_db103_1_db, de_e_db103_2_db, de_e_db103_3_db, de_e_db103_4_radve),
+    grf.VariantGroup('103', de_e_103_1, de_e_103_2, de_e_103_3, de_e_103_4, de_e_103_5, de_e_103_6, de_e_103_7, de_e_103_8, de_e_103_9),
     # dk
     # dk steam
     # dk diesel
