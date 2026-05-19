@@ -772,7 +772,7 @@ be_d_202_1_nmbs = Train(
     country='belgium',
     company='na',
     max_speed=Train.kmhish(120),
-    introduction_date=date(1955, 1, 1),
+    introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Later classed as HLD 52/53',
@@ -786,7 +786,7 @@ be_d_202_2_nmbs = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('52/53',),
-        paint=('cfl1',),
+        paint=('nmbs3',),
         overlay=('bllight'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
@@ -816,7 +816,7 @@ be_d_202_3_nmbs = Train(
     country='belgium',
     company='na',
     max_speed=Train.kmhish(120),
-    introduction_date=date(1971, 1, 1),
+    introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
@@ -858,7 +858,7 @@ be_d_202_5_nmbs = Train(
     country='belgium',
     company='na',
     max_speed=Train.kmhish(140),
-    introduction_date=date(1957, 1, 1),
+    introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Later classed as HLD 54',
@@ -872,7 +872,7 @@ be_d_202_6_nmbs = Train(
     liveries=make_psd_cc_liveries(
         'pp/my.psd',
         shading=('my',),
-        paint=('cfl1',),
+        paint=('nmbs3',),
         overlay=('light'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
@@ -902,7 +902,7 @@ be_d_202_7_nmbs = Train(
     country='belgium',
     company='na',
     max_speed=Train.kmhish(140),
-    introduction_date=date(1971, 1, 1),
+    introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
