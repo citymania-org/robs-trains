@@ -34,11 +34,12 @@ be_d_201_1_nmbs = Train(
         shading=('201',),
         paint=('nmbs1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
     company='na',
-    introduction_date=date(1954, 1, 1),
+    introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Later classed as HLD 59',
@@ -54,6 +55,7 @@ be_d_201_2_nmbs = Train(
         shading=('201',),
         paint=('nmbs2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -74,11 +76,12 @@ be_d_201_3_nmbs = Train(
         shading=('201',),
         paint=('nmbs3',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
     company='na',
-    introduction_date=date(1954, 1, 1),
+    introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Later classed as HLD 59',
@@ -88,20 +91,20 @@ be_d_201_3_nmbs = Train(
 be_d_201_4_nmbs = Train(
     **COMMON_201_PROPS,
     id='be_d_201_4_nmbs',
-    name='NMBS HLD 201', #yellow 5
+    name='NMBS HLD 59', #yellow 5
     liveries=make_psd_cc_liveries(
         'pp/201.psd',
         shading=('201',),
         paint=('nmbs4',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
     company='na',
-    introduction_date=date(1954, 1, 1),
+    introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Trivia': 'Later classed as HLD 59',
     }),
 )
 
@@ -114,11 +117,12 @@ be_d_201_5_nmbs = Train(
         shading=('201',),
         paint=('nmbs5',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
     company='na',
-    introduction_date=date(1954, 1, 1),
+    introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Later classed as HLD 59',
