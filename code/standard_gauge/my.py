@@ -922,7 +922,7 @@ be_d_202_8_nmbs = Train(
     country='belgium',
     company='na',
     max_speed=Train.kmhish(120),
-    introduction_date=date(1992, 1, 1),
+    introduction_date=date(1979, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'New cab to improve drivability',
