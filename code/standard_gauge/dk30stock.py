@@ -149,6 +149,29 @@ d_p_ac_i_1_dsb = Train(
     }),
 )
 
+d_p_ac_iie_1_dsb = Train(
+    **COMMON_dk30stock_PROPS,
+    id='d_p_ac_iie_1_dsb',
+    name='DSB AC II',
+    liveries=make_psd_cc_liveries(
+        'pp/dk30stock.psd',
+        shading=('acii',),
+        paint=('cc1',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    country='denmark',
+    company='na',
+    max_speed=Train.kmhish(140),
+    introduction_date=date(1949, 1, 1),
+    weight=37,
+    cargo_capacity=42,
+    loading_speed=10,
+    additional_text=grf.fake_vehicle_info({
+        'Use': '1st class',
+    }),
+)
+
 d_p_ac_ii_1_dsb = Train(
     **COMMON_dk30stock_PROPS,
     id='d_p_ac_ii_1_dsb',
@@ -163,7 +186,7 @@ d_p_ac_ii_1_dsb = Train(
     country='denmark',
     company='na',
     max_speed=Train.kmhish(140),
-    introduction_date=date(1949, 1, 1),
+    introduction_date=date(1960, 1, 1),
     weight=37,
     cargo_capacity=42,
     loading_speed=10,
@@ -280,7 +303,7 @@ d_p_av_1_dsb = Train(
     country='denmark',
     company='na',
     max_speed=Train.kmhish(140),
-    introduction_date=date(1961, 1, 1),
+    introduction_date=date(1957, 1, 1),
     weight=31,
     cargo_capacity=58,
     loading_speed=10,
