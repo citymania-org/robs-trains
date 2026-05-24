@@ -179,6 +179,7 @@ from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4
 
 # carriages
 
+from code.standard_gauge.dkcc import dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6
 from code.standard_gauge.dkcf import dk_p_cf_1, dk_p_cf_2, dk_p_cf_3
 from code.standard_gauge.dkbc import dk_p_bc_1, dk_p_bc_2, dk_p_bc_3
 from code.standard_gauge.dkskovvogn import dk_p_skovvogn_1, dk_p_skovvogn_2, dk_p_skovvogn_3, dk_p_skovvogn_4
@@ -496,7 +497,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('SJS double decker stock', dk_p_701_1, dk_p_701_2, dk_p_701_3, dk_p_701_4, dk_p_701_5, dk_p_701_6),
     grf.VariantGroup('Skovvogn', dk_p_skovvogn_1, dk_p_skovvogn_2, dk_p_skovvogn_3, dk_p_skovvogn_4),
     grf.VariantGroup('10s local stock', dk_p_cf_1, dk_p_cf_2, dk_p_cf_3),
-    grf.VariantGroup('BC II/III', dk_p_bc_1, dk_p_bc_2, dk_p_bc_3),
+    grf.VariantGroup('Teak open platform stock', dk_p_bc_1, dk_p_bc_2, dk_p_bc_3, dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6),
     grf.VariantGroup('20s local stock', dk_p_ff_1, dk_p_ff_2, dk_p_ff_3, dk_p_ff_4, dk_p_ff_5, dk_p_ff_6),
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
     grf.VariantGroup('30s stock', d_p_ac_i_1_dsb, d_p_ac_iie_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj, d_p_bdg_1_dsb, d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb),
