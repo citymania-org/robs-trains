@@ -41,6 +41,7 @@ d_p_al_1_dsb = Train(
     weight=35,
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -62,6 +63,7 @@ d_p_al_2_dsb = Train(
     weight=37,
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -83,6 +85,7 @@ d_p_al_3_dsb = Train(
     weight=37,
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -104,6 +107,7 @@ d_p_al_4_dsb = Train(
     weight=36,
     cargo_capacity=42,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -125,6 +129,7 @@ d_p_al_5_dsb = Train(
     weight=36,
     cargo_capacity=42,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -148,6 +153,7 @@ d_p_bl_1_dsb = Train(
     weight=34,
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -169,6 +175,7 @@ d_p_bl_2_dsb = Train(
     weight=34,
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -190,6 +197,7 @@ d_p_bl_3_dsb = Train(
     weight=34,
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )

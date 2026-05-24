@@ -35,6 +35,7 @@ d_e_stog4_5_dsb = Train(
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '40',
         'Use': 'Short distance local passengers',
         'Class': 'SA',
     }),
@@ -162,6 +163,7 @@ d_e_stog4_1_dsb = Train(
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '40',
         'Use': 'Short distance local passengers',
         'Class': 'SA',
     }),
@@ -289,6 +291,7 @@ d_e_stog4_2_dsb = Train(
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '40',
         'Use': 'Short distance local passengers',
         'Class': 'SA',
     }),
@@ -416,6 +419,7 @@ d_e_stog4_3_dsb = Train(
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '40',
         'Use': 'Short distance local passengers',
         'Class': 'SE',
     }),
@@ -491,6 +495,7 @@ d_e_stog4_4_dsb = Train(
     loading_speed=40,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '40',
         'Use': 'Short distance local passengers',
         'Class': 'SE',
     }),

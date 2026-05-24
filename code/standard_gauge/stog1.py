@@ -37,6 +37,7 @@ d_e_stog1_1_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers, two of these make a "whole train"',
         'Info': 'These sets are no longer standard after 1936 but saw some use into the early 1950s',
         'Class': 'MM-FM-MM',
@@ -103,6 +104,7 @@ d_e_stog1_2_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers, "quarter train" combine with each other or "half train" to make a "whole train"',
         'Class': 'MM-FS',
     }),
@@ -155,6 +157,7 @@ d_e_stog1_3_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers, "half train" combine with each other or "quarter train" to make a "whole train"',
         'Info': 'These sets are no longer standard after 1968 and "half train" became mostly made up of two permanently tied "quarter train"',
         'Class': 'MM-FM-FM-MM',
@@ -236,6 +239,7 @@ d_e_stog1_4_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers, "quarter train" combine with each other or "half train" to make a "whole train"',
         'Class': 'MM-FS',
     }),
@@ -288,6 +292,7 @@ d_e_stog1_5_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers, "half train" combine with each other or "quarter train" to make a "whole train"',
         'Info': 'These sets are no longer standard after 1968 and "half train" became mostly made up of two permanently tied "quarter train"',
         'Class': 'MM-FM-FM-MM',

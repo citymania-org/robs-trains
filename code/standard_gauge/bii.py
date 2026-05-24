@@ -39,6 +39,7 @@ d_p_b_ii_1_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -62,6 +63,7 @@ d_p_b_ii_2_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -85,6 +87,7 @@ d_p_b_ii_3_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -108,6 +111,7 @@ d_p_b_ii_4_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -131,6 +135,7 @@ d_p_bk_iii_1_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class with kiosk',
     }),
 )
@@ -154,6 +159,7 @@ d_p_bk_iii_2_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class with kiosk',
     }),
 )
@@ -177,6 +183,7 @@ d_p_bk_iii_3_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class with kiosk',
     }),
 )
@@ -200,6 +207,7 @@ d_p_bk_iii_4_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 2nd class with kiosk',
     }),
 )
@@ -223,6 +231,7 @@ d_p_abs_1_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )
@@ -246,6 +255,7 @@ d_p_abs_2_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )
@@ -269,6 +279,7 @@ d_p_abs_3_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )
@@ -292,6 +303,7 @@ d_p_abs_4_dsb = Train(
     loading_speed=10,
     power=0,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )

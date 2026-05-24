@@ -36,6 +36,7 @@ d_e_stog3_1_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Short distance local passengers',
         'Class': 'FC-MC-MC-FC',
     }),
@@ -112,6 +113,7 @@ d_e_stog3_2_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Short distance local passengers',
         'Class': 'FC-MC-MC-FC',
     }),
@@ -188,6 +190,7 @@ d_e_stog3_3_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Class': 'FC-MC-MC-FC',
     }),
@@ -264,6 +267,7 @@ d_e_stog3_4_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Class': 'FC-MC-MC-FC',
     }),

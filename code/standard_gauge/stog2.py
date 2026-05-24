@@ -37,6 +37,7 @@ d_e_stog2_1_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Class': 'MM-FS',
     }),
@@ -89,6 +90,7 @@ d_e_stog2_2_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers with 1st class carriage',
         'Trivia': '7 of these sets existed for use on the Holte – Hillerød line because the local mayors could not imagine their poor citizens having to use a 2nd class carriage on their short distance commute',
         'Class': 'MM-AS',
@@ -144,6 +146,7 @@ d_e_stog2_9_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Class': 'MM-FS',
     }),
@@ -196,6 +199,7 @@ d_e_stog2_4_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Class': 'MM-FU-MU-FS',
     }),
@@ -277,6 +281,7 @@ d_e_stog2_3_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Class': 'MM-FS',
     }),
@@ -329,6 +334,7 @@ d_e_stog2_10_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Class': 'MM-FU-MU-FS',
     }),
@@ -410,6 +416,7 @@ d_e_stog2_11_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
         'Class': 'MM-FS',
@@ -463,6 +470,7 @@ d_e_stog2_12_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
         'Class': 'MM-FU-MU-FS',
@@ -545,6 +553,7 @@ d_e_stog2_5_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers with bike space',
         'Class': 'MM-FS',
     }),
@@ -597,6 +606,7 @@ d_e_stog2_6_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers with bike space',
         'Class': 'MM-FU-MU-FS',
     }),
@@ -678,6 +688,7 @@ d_e_stog2_7_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
         'Class': 'MM-FS',
@@ -731,6 +742,7 @@ d_e_stog2_8_dsb = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
         'Class': 'MM-FU-MU-FS',
