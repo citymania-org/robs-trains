@@ -953,7 +953,7 @@ COMMON_bns_PROPS = dict(
 d_p_bns_1_dsb = Train(
     **COMMON_bns_PROPS,
     id='d_p_bns_1_dsb',
-    name='њDSB Bns (I)',
+    name='њDSB Bns I',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
@@ -985,7 +985,7 @@ d_p_bns_1_dsb = Train(
 d_p_bns_2_dsb = Train(
     **COMMON_bns_PROPS,
     id='d_p_bns_2_dsb',
-    name='њDSB ABns (I)',
+    name='њDSB ABns I',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
@@ -1008,7 +1008,7 @@ d_p_bns_2_dsb = Train(
 d_p_bns_3_dsb = Train(
     **COMMON_bns_PROPS,
     id='d_p_bns_3_dsb',
-    name='њDSB ADns (I)',
+    name='њDSB ADns I',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
@@ -1031,7 +1031,7 @@ d_p_bns_3_dsb = Train(
 d_p_bns_4_dsb = Train(
     **COMMON_bns_PROPS,
     id='d_p_bns_4_dsb',
-    name='њDSB ABns (I)',
+    name='њDSB ABns I',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
@@ -1054,7 +1054,7 @@ d_p_bns_4_dsb = Train(
 d_p_bns_5_dsb = Train(
     **COMMON_bns_PROPS,
     id='d_p_bns_5_dsb',
-    name='њDSB ADns-e (I)',
+    name='њDSB ADns-e I',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
