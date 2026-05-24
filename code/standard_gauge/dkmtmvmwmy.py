@@ -1,0 +1,183 @@
+import grf, lib
+
+from datetime import date
+
+from common import Train, colours, make_psd_cc_liveries, standard_gauge
+
+dk_d_myf_1 = Train(
+    id='dk_d_myf_1',
+    name='DSB MY I',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["CREAM"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    track_type=standard_gauge,
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    length=9,
+    max_speed=Train.kmhish(120),
+    power=1700,
+    weight=102,
+    country='denmark',
+    company='na',
+    introduction_date=date(1957, 1, 1),
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Frichs built 2, in 1957/60, both scrapped in 1971',
+    }),
+)
+
+dk_d_mt27_1 = Train(
+    id='dk_d_mt27_1',
+    name='DSB M',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('6a',),
+        paint=('6b',),
+        cc_replace=colours["BROWN"],
+        cc2_replace=colours["BROWN"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    track_type=standard_gauge,
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    length=6,
+    max_speed=Train.kmhish(70),
+    power=250,
+    weight=44,
+    country='denmark',
+    company='na',
+    introduction_date=date(1927, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as MT I',
+    }),
+)
+
+dk_d_mv29_1 = Train(
+    id='dk_d_mv29_1',
+    name='DSB MV I',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('5a',),
+        paint=('5b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    track_type=standard_gauge,
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    length=5,
+    max_speed=Train.kmhish(80),
+    power=420,
+    weight=56,
+    country='denmark',
+    company='na',
+    introduction_date=date(1929, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+dk_d_mv29_2 = Train(
+    id='dk_d_mv29_2',
+    name='DSB MV I',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('5a',),
+        paint=('5b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    track_type=standard_gauge,
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    length=5,
+    max_speed=Train.kmhish(80),
+    power=500,
+    weight=56,
+    country='denmark',
+    company='na',
+    introduction_date=date(1947, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
+dk_d_mw29_1 = Train(
+    id='dk_d_mw29_1',
+    name='DSB MW',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('6a',),
+        paint=('6b',),
+        cc_replace=colours["BROWN"],
+        cc2_replace=colours["BROWN"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    track_type=standard_gauge,
+    power_type='diesel',
+    engine_class=Train.EngineClass.DIESEL,
+    length=6,
+    max_speed=Train.kmhish(80),
+    power=450,
+    weight=60,
+    country='denmark',
+    company='na',
+    introduction_date=date(1929, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
