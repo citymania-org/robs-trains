@@ -179,6 +179,7 @@ from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4
 
 # carriages
 
+from code.standard_gauge.dkcf import dk_p_cf_1, dk_p_cf_2, dk_p_cf_3
 from code.standard_gauge.dkbc import dk_p_bc_1, dk_p_bc_2, dk_p_bc_3
 from code.standard_gauge.dkskovvogn import dk_p_skovvogn_1, dk_p_skovvogn_2, dk_p_skovvogn_3, dk_p_skovvogn_4
 from code.standard_gauge.dksjs701 import dk_p_701_1, dk_p_701_2, dk_p_701_3, dk_p_701_4, dk_p_701_5, dk_p_701_6
@@ -494,6 +495,7 @@ lib.make_purchase_sprites(
     # dk carriages
     grf.VariantGroup('SJS double decker stock', dk_p_701_1, dk_p_701_2, dk_p_701_3, dk_p_701_4, dk_p_701_5, dk_p_701_6),
     grf.VariantGroup('Skovvogn', dk_p_skovvogn_1, dk_p_skovvogn_2, dk_p_skovvogn_3, dk_p_skovvogn_4),
+    grf.VariantGroup('10s local stock', dk_p_cf_1, dk_p_cf_2, dk_p_cf_3),
     grf.VariantGroup('BC II/III', dk_p_bc_1, dk_p_bc_2, dk_p_bc_3),
     grf.VariantGroup('20s local stock', dk_p_ff_1, dk_p_ff_2, dk_p_ff_3, dk_p_ff_4, dk_p_ff_5, dk_p_ff_6),
     grf.VariantGroup('CR', d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb),
