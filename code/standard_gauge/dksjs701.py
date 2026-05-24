@@ -18,7 +18,7 @@ COMMON_701_PROPS = dict(
     running_cost_factor=200,
     cost_factor=25,
     loading_speed=5,
-    max_speed=Train.kmhish(80),
+    max_speed=Train.kmhish(60),
     cargo_capacity=100,
     weight=12,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -39,6 +39,7 @@ dk_p_701_1 = Train(
     company='na',
     introduction_date=date(1868, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '5',
         'Use': 'Local trains, 3rd class',
         'Trivia': 'Later classed as Db, 1 built, nicknamed "Bismarck"',
     }),
@@ -59,6 +60,7 @@ dk_p_701_2 = Train(
     company='na',
     introduction_date=date(1893, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '5',
         'Use': 'Local trains, 3rd class',
         'Trivia': 'Lost in the crash at Gentofte in 1897',
     }),
@@ -78,7 +80,7 @@ COMMON_da_PROPS = dict(
     running_cost_factor=200,
     cost_factor=25,
     loading_speed=5,
-    max_speed=Train.kmhish(80),
+    max_speed=Train.kmhish(60),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -99,6 +101,7 @@ dk_p_701_3 = Train(
     weight=13,
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '5',
         'Use': 'Local trains, 2nd & 3rd class',
         'Trivia': 'Later classed as Da I',
     }),
@@ -121,6 +124,7 @@ dk_p_701_4 = Train(
     weight=13,
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '5',
         'Use': 'Local trains, 2nd & 3rd class',
         'Trivia': 'Later classed as CO I',
     }),
@@ -143,6 +147,7 @@ dk_p_701_5 = Train(
     weight=11,
     cargo_capacity=94,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '5',
         'Use': 'Local trains, 2nd & 3rd class',
     }),
 )
@@ -164,6 +169,7 @@ dk_p_701_6 = Train(
     weight=12,
     cargo_capacity=94,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '5',
         'Use': 'Local trains, 2nd & 3rd class',
         'Trivia': 'Later classed as CO II',
     }),

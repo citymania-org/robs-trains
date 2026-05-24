@@ -39,6 +39,7 @@ d_p_b_1_dsb = Train(
     cargo_capacity=80,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -61,6 +62,7 @@ d_p_b_i_1_dsb = Train(
     cargo_capacity=80,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
     'Use': '2nd class',
     }),
 )
@@ -83,6 +85,7 @@ d_p_bk_i_1_dsb = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Kiosk car, 2nd class',
     }),
 )
@@ -105,6 +108,7 @@ d_p_bk_i_2_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Kiosk car, 2nd class',
     }),
 )
@@ -127,6 +131,7 @@ d_p_ab_1_dsb = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st & 2nd class',
     }),
 )
@@ -149,6 +154,7 @@ d_p_ab_2_dsb = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st & 2nd class',
     }),
 )
@@ -171,6 +177,7 @@ d_p_ab_3_dsb = Train(
     cargo_capacity=54,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -193,7 +200,8 @@ d_p_a_1_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': '1st class',
+        'Loading speed': '10',
+        'Use': '1st class',
     }),
 )
 
@@ -215,6 +223,7 @@ d_p_a_2_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -237,6 +246,7 @@ d_p_a_3_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -259,7 +269,8 @@ d_p_bd_1_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'Luggage carriage, 2nd class',
+        'Loading speed': '10',
+        'Use': 'Luggage carriage, 2nd class',
     }),
     mid_stats={
         'cargo_capacity': 4,
@@ -291,7 +302,8 @@ d_p_bd_2_dsb = Train(
     cargo_capacity=48,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'Luggage carriage, 2nd class',
+        'Loading speed': '10',
+        'Use': 'Luggage carriage, 2nd class',
     }),
     mid_stats={
         'cargo_capacity': 4,
@@ -323,7 +335,8 @@ d_p_bd_3_dsb = Train(
     cargo_capacity=18,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-    'Use': 'Luggage carriage with kiosk, 2nd class',
+        'Loading speed': '10',
+        'Use': 'Luggage carriage with kiosk, 2nd class',
     }),
     mid_stats={
         'cargo_capacity': 4,
@@ -355,6 +368,7 @@ d_p_bn_1_dsb = Train(
     cargo_capacity=80,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
         'Trivia': 'Bn & variants used on Sjælland until early 2010s by then many were scrapped or sold',
     }),
@@ -378,6 +392,7 @@ d_p_bn_2_dsb = Train(
     cargo_capacity=80,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
         'Trivia': 'Used in Stockholm when SL lacked rolling stock - 1 or 2 of these can also be sandwiched between 2 MO railbusses',
     }),
@@ -401,6 +416,7 @@ d_p_bn_3_dsb = Train(
     cargo_capacity=80,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -423,6 +439,7 @@ d_p_bn_4_dsb = Train(
     cargo_capacity=48,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class, bike storage',
     }),
 )
@@ -445,6 +462,7 @@ d_p_bn_5_dsb = Train(
     cargo_capacity=48,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': '''Local trains, 2nd class, children's carriage''',
         'Trivia': 'Features a ball pit, DSB staff act as child carers',
     }),
@@ -468,6 +486,7 @@ d_p_bn_6_dsb = Train(
     cargo_capacity=80,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
         'Trivia': 'Four carriages bought from DSB in 1992 and 1993',
     }),
@@ -491,6 +510,7 @@ d_p_an_1_dsb = Train(
     cargo_capacity=64,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 1st class',
     }),
 )
@@ -513,6 +533,7 @@ d_p_an_2_dsb = Train(
     cargo_capacity=64,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -535,6 +556,7 @@ d_p_an_3_dsb = Train(
     cargo_capacity=48,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class, bike storage',
     }),
 )
@@ -557,6 +579,7 @@ fr_p_a_1_sncf = Train(
     cargo_capacity=54,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -579,6 +602,7 @@ fr_p_a_2_sncf = Train(
     cargo_capacity=54,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -601,6 +625,7 @@ fr_p_a_3_sncf = Train(
     cargo_capacity=54,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -623,6 +648,7 @@ fr_p_ab_1_sncf = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st & 2nd class',
     }),
 )
@@ -645,6 +671,7 @@ fr_p_ab_2_sncf = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st & 2nd class',
     }),
 )
@@ -667,6 +694,7 @@ fr_p_ab_3_sncf = Train(
     cargo_capacity=64,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st & 2nd class',
     }),
 )
@@ -689,6 +717,7 @@ fr_p_b_1_sncf = Train(
     cargo_capacity=80,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -711,6 +740,7 @@ fr_p_b_2_sncf = Train(
     cargo_capacity=80,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -733,6 +763,7 @@ fr_p_b_3_sncf = Train(
     cargo_capacity=80,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -755,6 +786,7 @@ fr_p_ad_1_sncf = Train(
     cargo_capacity=42,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Luggage carriage, 1st class',
     }),
     mid_stats={
@@ -787,6 +819,7 @@ fr_p_ad_2_sncf = Train(
     cargo_capacity=42,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Luggage carriage, 1st class',
     }),
     mid_stats={
@@ -819,6 +852,7 @@ fr_p_ad_3_sncf = Train(
     cargo_capacity=56,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Luggage carriage, 2nd class',
     }),
     mid_stats={
@@ -851,6 +885,7 @@ fr_p_bd_1_sncf = Train(
     cargo_capacity=40,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Luggage carriage, 2nd class',
     }),
     mid_stats={
@@ -883,6 +918,7 @@ fr_p_bd_2_sncf = Train(
     cargo_capacity=40,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Luggage carriage, 2nd class',
     }),
     mid_stats={
@@ -932,6 +968,7 @@ d_p_bns_1_dsb = Train(
     cargo_capacity=72,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class DVT',
     }),
     mid_stats={
@@ -963,6 +1000,7 @@ d_p_bns_2_dsb = Train(
     cargo_capacity=40,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )
@@ -985,6 +1023,7 @@ d_p_bns_3_dsb = Train(
     cargo_capacity=41,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )
@@ -1007,6 +1046,7 @@ d_p_bns_4_dsb = Train(
     cargo_capacity=40,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )
@@ -1029,6 +1069,7 @@ d_p_bns_5_dsb = Train(
     cargo_capacity=41,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 1st & 2nd class DVT',
     }),
 )
@@ -1051,6 +1092,7 @@ d_p_bns_6_dsb = Train(
     cargo_capacity=72,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class DVT',
     }),
 )

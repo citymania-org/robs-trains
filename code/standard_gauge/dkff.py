@@ -39,6 +39,7 @@ dk_p_ff_1 = Train(
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 3rd class',
     }),
 )
@@ -61,6 +62,7 @@ dk_p_ff_2 = Train(
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -78,11 +80,12 @@ dk_p_ff_3 = Train(
     ),
     country='denmark',
     company='na',
-    introduction_date=date(1955, 1, 1),
+    introduction_date=date(1951, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -100,11 +103,12 @@ dk_p_ff_4 = Train(
     ),
     country='denmark',
     company='na',
-    introduction_date=date(1955, 1, 1),
+    introduction_date=date(1951, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class',
     }),
 )
@@ -127,6 +131,7 @@ dk_p_ff_5 = Train(
     cargo_capacity=78,
     weight=33,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class DVT',
     }),
 )
@@ -144,11 +149,12 @@ dk_p_ff_6 = Train(
     ),
     country='denmark',
     company='na',
-    introduction_date=date(1955, 1, 1),
+    introduction_date=date(1951, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=33,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Local trains, 2nd class DVT',
     }),
 )
