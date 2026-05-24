@@ -130,6 +130,10 @@ from code.standard_gauge.eb import d_e_eb_1_dsb, d_e_eb_2_dsb
 
 # electric dc
 
+# electric dc 3000
+
+from code.standard_gauge.ite444 import it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3
+
 # electric 3rd
 
 # dmu
@@ -500,7 +504,7 @@ lib.make_purchase_sprites(
     # dk emu 3rd
     # dk carriages
     grf.VariantGroup('SJS double decker stock', dk_p_701_1, dk_p_701_2, dk_p_701_3, dk_p_701_4, dk_p_701_5, dk_p_701_6),
-    grf.VariantGroup('Skovvogn', dk_p_skovvogn_1, dk_p_skovvogn_2, dk_p_skovvogn_3, dk_p_skovvogn_4),
+    grf.VariantGroup('"Skovvogn"', dk_p_skovvogn_1, dk_p_skovvogn_2, dk_p_skovvogn_3, dk_p_skovvogn_4),
     grf.VariantGroup('10s local stock', dk_p_cf_1, dk_p_cf_2, dk_p_cf_3),
     grf.VariantGroup('Teak open platform stock', dk_p_bc_1, dk_p_bc_2, dk_p_bc_3, dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6),
     grf.VariantGroup('20s local stock', dk_p_ff_1, dk_p_ff_2, dk_p_ff_3, dk_p_ff_4, dk_p_ff_5, dk_p_ff_6),
@@ -528,6 +532,9 @@ lib.make_purchase_sprites(
     grf.VariantGroup('M61', hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav),
     d_d_my_ii_21_mav,
     d_d_me_ii_6_mav,
+    # it
+    # it electric dc 3000
+    grf.VariantGroup('E.444 "Tartarughe"', it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3),
     # lu
     # lu diesel
     lu_d_1600_1_cfl,
