@@ -102,6 +102,14 @@ from code.standard_gauge.mz import d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_ds
 from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_6_mav, d_d_me_ii_7_skpl
 from code.standard_gauge.be205 import be_d_205_1, lu_d_205_1, dk_d_205_1, se_d_205_1
 
+# electric dc
+
+from code.standard_gauge.frbb26000 import fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7
+
+# electric dc 3000
+
+from code.standard_gauge.ite444 import it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3
+
 # electric 15
 
 from code.standard_gauge.chae47 import ch_e_ae47_1, ch_e_ae47_2
@@ -127,12 +135,6 @@ from code.standard_gauge.sema import se_e_ma_1, se_e_ma_2, se_e_ma_3, se_e_ma_4,
 from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
 from code.standard_gauge.eg import d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb
 from code.standard_gauge.eb import d_e_eb_1_dsb, d_e_eb_2_dsb
-
-# electric dc
-
-# electric dc 3000
-
-from code.standard_gauge.ite444 import it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3
 
 # electric 3rd
 
@@ -385,12 +387,13 @@ POWER_TYPE_SPRITES = {
     'steam': purchase_icon('psteam.png'),
     'multi': purchase_icon('pelectricdv.png'), # replece these sprites
     'dc': purchase_icon('pelectricdc1500.png'),
+    'dc/25kv': purchase_icon('pelectric150025.png'),
+    'dc/15kv/25kv': purchase_icon('pelectric15001525.png'),
+    'dc/dc3000/15kv/25kv': purchase_icon('pelectric150030001525.png'),
     'dc3000': purchase_icon('pelectricdc3000.png'),
     '15kv': purchase_icon('pelectric15.png'),
     '15kv/25kv': purchase_icon('pelectric1525.png'),
     '25kv': purchase_icon('pelectric25.png'),
-    'dc/15kv/25kv': purchase_icon('pelectric15001525.png'),
-    'dc/dc3000/15kv/25kv': purchase_icon('pelectric150030001525.png'),
     'na': purchase_icon('blank.png')
 }
 
@@ -522,6 +525,8 @@ lib.make_purchase_sprites(
     dl_d_mr_1_dlj,
     grf.VariantGroup('MF (IC3)', dl_d_mf_1, dl_d_mf_2),
     # fr
+    # fr electric dc
+    grf.VariantGroup('BB 26000 "Sybic"', fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7),
     # fr emu dc
     grf.VariantGroup('њTGV PSE', fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf),
     grf.VariantGroup('њTGV M', fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf),
