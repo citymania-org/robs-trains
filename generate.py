@@ -105,6 +105,7 @@ from code.standard_gauge.be205 import be_d_205_1, lu_d_205_1, dk_d_205_1, se_d_2
 # electric dc
 
 from code.standard_gauge.frbb26000 import fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7
+from code.standard_gauge.frbb36000 import fr_e_bb36000_1, fr_e_bb36000_2
 
 # electric dc 3000
 
@@ -388,6 +389,7 @@ POWER_TYPE_SPRITES = {
     'multi': purchase_icon('pelectricdv.png'), # replece these sprites
     'dc': purchase_icon('pelectricdc1500.png'),
     'dc/25kv': purchase_icon('pelectric150025.png'),
+    'dc/dc3000/25kv': purchase_icon('pelectric1500300025.png'),
     'dc/15kv/25kv': purchase_icon('pelectric15001525.png'),
     'dc/dc3000/15kv/25kv': purchase_icon('pelectric150030001525.png'),
     'dc3000': purchase_icon('pelectricdc3000.png'),
@@ -527,6 +529,7 @@ lib.make_purchase_sprites(
     # fr
     # fr electric dc
     grf.VariantGroup('BB 26000 "Sybic"', fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7),
+    grf.VariantGroup('BB 36000 "Astride"', fr_e_bb36000_1, fr_e_bb36000_2),
     # fr emu dc
     grf.VariantGroup('њTGV PSE', fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf),
     grf.VariantGroup('њTGV M', fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf),
