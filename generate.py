@@ -13,11 +13,7 @@ DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
-# cargo
-
 g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
-
-# steam
 
 s_s_N_ii_1_sj = Train(
     id='s_s_N_ii_1_sj',
@@ -89,8 +85,6 @@ s_s_Sa_sj = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-# diesel
-
 from code.standard_gauge.dkmtmvmwmy import dk_d_myf_1, dk_d_mt27_1, dk_d_mv29_1, dk_d_mv29_2, dk_d_mw29_1
 from code.standard_gauge.mxe import d_d_mx_i_1_dsb
 from code.standard_gauge.mbrød import dk_d_mbrød_467_1, dk_d_mbrød_467_2, dk_d_mbrød_467_3, dk_d_mbrød_468_1, dk_d_mbrød_469_1, dk_d_mbrød_469_2, dk_d_mbrød_471_1, dk_d_mbrød_471_2, dk_d_mbrød_471_3, dk_d_mbrød_472_2, dk_d_mbrød_472_3, dk_d_mbrød_472_4, dk_d_mbrød_473_1, dk_d_mbrød_473_2, dk_d_mbrød_474_1, dk_d_mbrød_474_2, dk_d_mbrød_474_3, dk_d_mbrød_475_1, dk_d_mbrød_475_2, dk_d_mbrød_475_3, dk_d_mbrød_475_4
@@ -101,18 +95,9 @@ from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8
 from code.standard_gauge.mz import d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb, d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc, d_d_mz_ii_6_stab, d_d_mz_ii_7_stab, d_d_mz_i_5_vida, d_d_mz_iv_3_bs, d_d_mz_ii_8_bs, d_d_mz_ii_9_bs, d_d_mz_ii_10_bs, d_d_mz_ii_11_nrfab
 from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_6_mav, d_d_me_ii_7_skpl
 from code.standard_gauge.be205 import be_d_205_1, lu_d_205_1, dk_d_205_1, se_d_205_1
-
-# electric dc
-
 from code.standard_gauge.frbb26000 import fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7
 from code.standard_gauge.frbb36000 import fr_e_bb36000_1, fr_e_bb36000_2
-
-# electric dc 3000
-
 from code.standard_gauge.ite444 import it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3
-
-# electric 15
-
 from code.standard_gauge.chae47 import ch_e_ae47_1, ch_e_ae47_2
 from code.standard_gauge.chre44i import ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3, ch_e_re44i_4, ch_e_re44i_5, ch_e_re44i_6
 from code.standard_gauge.chae66 import ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5
@@ -130,17 +115,9 @@ from code.standard_gauge.semg import se_e_mg_1
 from code.standard_gauge.sef import se_e_f_1
 from code.standard_gauge.seda import se_e_da_1, se_e_da_2, se_e_da_3, se_e_da_4
 from code.standard_gauge.sema import se_e_ma_1, se_e_ma_2, se_e_ma_3, se_e_ma_4, se_e_ma_5, se_e_ma_6, se_e_ma_7, se_e_ma_8, se_e_ma_9, no_e_ma_1
-
-# electric 25
-
 from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
 from code.standard_gauge.eg import d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb
 from code.standard_gauge.eb import d_e_eb_1_dsb, d_e_eb_2_dsb
-
-# electric 3rd
-
-# dmu
-
 from code.standard_gauge.mq import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
 from code.standard_gauge.ms import d_d_ms_1_dsb, d_d_mb_1_dsb
 from code.standard_gauge.mki import d_d_mki_1_dsb
@@ -156,9 +133,6 @@ from code.standard_gauge.ic2 import d_d_ic2_1_dsb, d_d_ic2_2_dsb
 from code.standard_gauge.mq2 import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb, d_d_mq2_6_dsb, d_d_mq2_7_dsb, d_d_mq2_8_dsb, d_d_mq2_9_dsb, d_d_mq2_10_dsb, d_d_mq2_11_dsb
 from code.standard_gauge.mp import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_dsb, d_d_mg_2_dsb
 from code.standard_gauge.öcj25 import s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2
-
-# emu 15
-
 from code.standard_gauge.type64 import n_e_type64_1_nsb
 from code.standard_gauge.Xoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
 from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
@@ -166,27 +140,15 @@ from code.standard_gauge.X1 import s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj
 from code.standard_gauge.x10111214 import s_e_x10_1_sj, s_e_x10_2_sj, s_e_x10_3_sj, s_e_x10_4_sj, s_e_x10_5_sj, s_e_x10_6_sj, s_e_x10_7_sj, s_e_x11_1_sj, s_e_x11_2_sj, s_e_x11_3_sj, s_e_x11_4_sj, s_e_x11_5_sj, s_e_x12_1_sj, s_e_x12_2_sj, s_e_x12_3_sj, s_e_x14_1_sj, s_e_x14_2_sj, s_e_x14_3_sj, s_e_x14_4_sj, s_e_x14_5_sj, s_e_x14_6_sj
 from code.standard_gauge.x606162 import s_e_x60_1_sj, s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj, s_e_x62_1_sj
 from code.standard_gauge.type69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb
-
-# emu 25
-
 from code.standard_gauge.ir4 import d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb
 from code.standard_gauge.øt import d_e_et_1_dsb, d_e_et_1_sj, d_e_et_2_sj, d_e_et_2_dsb
-
-# emu dc
-
 from code.standard_gauge.HKB_Wes_1 import n_o_Wes_1_hkb
 from code.standard_gauge.stog1 import d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb
 from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
 from code.standard_gauge.stog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb
 from code.standard_gauge.stog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
 from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
-
-# emu 3rd
-
 from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C8_1_sl, s_e_C8_2_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C16_1_sl
-
-# carriages
-
 from code.standard_gauge.dkcc import dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6
 from code.standard_gauge.dkcf import dk_p_cf_1, dk_p_cf_2, dk_p_cf_3
 from code.standard_gauge.dkbc import dk_p_bc_1, dk_p_bc_2, dk_p_bc_3
@@ -201,8 +163,13 @@ from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_d
 from code.standard_gauge.chewiv import ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_24, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_25, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9
 from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4, ch_p_ec_5, ch_p_ec_6, ch_p_ec_7, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10, ch_p_ec_11, ch_p_ec_12
 from code.standard_gauge.denwagen import de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12
-
-# wagons
+from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl
+from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
+from code.narrow_gauge.MÖJ_2to5 import s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj
+from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
+from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
+from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
+from code.standard_gauge.frbb67000 import fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -275,15 +242,6 @@ s_w_Hbis_sj = Train(
     }
 )
 
-# 891mm narrow gauge
-
-from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl
-from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
-from code.narrow_gauge.MÖJ_2to5 import s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj
-from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
-from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
-from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
-
 '''
 
 x15p = Train(
@@ -333,8 +291,6 @@ x15p = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 '''
-
-# end
 
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
@@ -427,9 +383,8 @@ lib.make_purchase_sprites(
 )
 
 # chronological order within the categories
-# standard gauge -> narrow gauge
+# standard gauge -> narrow gauge -> broad gauge
 (g.add(lib.SetPurchaseOrder(
-    # start
     # be
     # be diesel
     grf.VariantGroup('HLD 201', be_d_201_2_nmbs, be_d_201_5_nmbs, be_d_201_1_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
@@ -530,6 +485,8 @@ lib.make_purchase_sprites(
     dl_d_mr_1_dlj,
     grf.VariantGroup('MF (IC3)', dl_d_mf_1, dl_d_mf_2),
     # fr
+    # fr diesel
+    grf.VariantGroup('BB 67000', fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7),
     # fr electric dc
     grf.VariantGroup('BB 26000 "Sybic"', fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7),
     grf.VariantGroup('BB 36000 "Astride"', fr_e_bb36000_1, fr_e_bb36000_2),
