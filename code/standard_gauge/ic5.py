@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB
 
 COMMON_ic5_PROPS = dict(
     length=12,
@@ -20,6 +20,7 @@ COMMON_ic5_PROPS = dict(
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
 )
 
 d_p_ic5_1_dsb = Train(
@@ -193,6 +194,7 @@ COMMON_ic5a_PROPS = dict(
     loading_speed=10,
     weight=54,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
 )
 
 dk_p_ic5a_1 = Train(

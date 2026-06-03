@@ -185,9 +185,7 @@ class Livery:
         return self.template(self._get_sprite_func())
     
     def get_r_sprites(self, length):
-        if length < 9:
-            return self.template(self._get_sprite_func())
-        return self.r_template(self._get_sprite_func())
+        return self.template(self._get_sprite_func())
 
 
 class LiveryFactory:
@@ -280,6 +278,10 @@ class Train(grf.Train):
         if flags is not None:
             copy_flags = self.Flags.TILT | self.Flags.MULTIPLE_UNIT | self.Flags.USE_2CC
             art_props['misc_flags'] = art_props['misc_flags'] | (flags & copy_flags)
+        extra_flags = self._props.get('extra_flags')
+        if extra_flags is not None:
+            copy_flags = 0x10
+            art_props['extra_flags'] = (extra_flags & copy_flags)
         # Copy power for the right 2cc colour, effective power will be zero anyway.
         for k in ('track_type', 'power'):
             if k in props:
@@ -399,6 +401,35 @@ class Train(grf.Train):
                 ))
                 i += 1
         return layouts, layouts_r, rods_layouts, rods_layouts_r, res
+    
+    def _direction_switch(self, forward, reverse):
+
+        sw_forward = grf.Switch(code='train_is_driving_backwards',
+                related_scope=True,
+                ranges={
+                    0: forward,
+                    1: reverse,
+                },
+                default=forward,
+        )
+
+        sw_reverse = grf.Switch(code='train_is_driving_backwards',
+                related_scope=True,
+                ranges={
+                    0: reverse,
+                    1: forward,
+                },
+                default=reverse,
+        )
+
+        return grf.Switch(code='vehicle_is_flipped',
+                related_scope=False,
+                ranges={
+                    0: sw_forward,
+                    1: sw_reverse,
+                },
+                default=sw_forward,
+                )
         
     def _make_graphics(self, liveries, position):
         assert liveries
@@ -408,14 +439,7 @@ class Train(grf.Train):
         if len(liveries) <= 1:
             reversed_sprites = liveries[0].get('rsprites')
             if reversed_sprites is not None:
-                return res, grf.Switch(code='vehicle_is_flipped',
-                related_scope=False,
-                ranges={
-                    0: layouts[0],
-                    1: layouts_r[0],
-                },
-                default=layouts[0],
-                )
+                return res, self._direction_switch(layouts[0], layouts_r[0])
             else:
                 return res, layouts[0]
 
@@ -442,14 +466,7 @@ class Train(grf.Train):
             )
             if self.intermediate_graphics_chain != None:
                 return res, self.intermediate_graphics_chain(subtype, subtype_r)
-            return res, grf.Switch(code='vehicle_is_flipped',
-                related_scope=False,
-                ranges={
-                    0: subtype,
-                    1: subtype_r,
-                },
-                default=subtype,
-            )
+            return res, self._direction_switch(subtype, subtype_r)
         else:
             return res, subtype
 
@@ -1379,9 +1396,7 @@ class PSDLivery:
         return self.template(self._get_sprite_func(False))
     
     def get_r_sprites(self, lenght):
-        if lenght < 9:
-            return self.template(self._get_sprite_func(True))
-        return self.r_template(self._get_sprite_func(True))
+         return self.template(self._get_sprite_func(True))
     
 class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top level contain the lowest level one this is not suported by grf-py nativly.
 

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB
 
 COMMON_ew_PROPS = dict(
     length=12,
@@ -531,6 +531,7 @@ ch_p_ewiv_7 = Train(
     introduction_date=date(1996, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),
@@ -553,6 +554,7 @@ ch_p_ewiv_8 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),
@@ -575,6 +577,7 @@ ch_p_ewiv_9 = Train(
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),

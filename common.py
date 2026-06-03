@@ -1,5 +1,10 @@
 import grf, lib
 
+# Add support for new driving backwards spec
+
+grf.va2vars.VA2_VARS[grf.TRAIN]['train_is_driving_backwards'] = {'var': 0xFE, 'start': 11, 'size':  1}
+VEHICLE_FLAG_TRAIN_HAS_CAB = 0x10
+
 g = grf.NewGRF(
     grfid=b'KSTA',
     name='The International Train Set - TITS',
