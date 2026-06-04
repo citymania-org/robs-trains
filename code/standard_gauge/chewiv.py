@@ -511,6 +511,7 @@ COMMON_ews_PROPS = dict(
     running_cost_factor=200,
     cost_factor=25,
     loading_speed=10,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -523,6 +524,7 @@ ch_p_ewiv_7 = Train(
         shading=('ewivs',),
         paint=('bt1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["SBB"]
     ),
@@ -531,7 +533,6 @@ ch_p_ewiv_7 = Train(
     introduction_date=date(1996, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
-    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),
@@ -546,6 +547,7 @@ ch_p_ewiv_8 = Train(
         shading=('ewivs',),
         paint=('bt2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -554,7 +556,6 @@ ch_p_ewiv_8 = Train(
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
-    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),
@@ -569,6 +570,7 @@ ch_p_ewiv_9 = Train(
         shading=('ewivs',),
         paint=('bt3',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -577,7 +579,6 @@ ch_p_ewiv_9 = Train(
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
-    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Use': '2nd class DVT',
     }),

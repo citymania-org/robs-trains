@@ -19,8 +19,8 @@ COMMON_ic5_PROPS = dict(
     running_cost_factor=200,
     cost_factor=25,
     loading_speed=10,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 d_p_ic5_1_dsb = Train(
@@ -31,7 +31,8 @@ d_p_ic5_1_dsb = Train(
         'pp/ic5.psd',
         shading=('bfsr',),
         paint=('bfs1r',),
-        overlay=('lightr'),
+        overlay=('2lightr'),
+        r_overlay=('2light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -91,7 +92,8 @@ d_p_ic5_1_dsb = Train(
         'pp/ic5.psd',
         shading='bfs',
         paint='bfs1',
-        overlay='light',
+        overlay='1light',
+        r_overlay='1lightr',
         cc_replace=colours['RED'],
         cc2_replace=colours['RED'],
     ),
@@ -108,7 +110,8 @@ d_p_ic5_2_dsb = Train(
         'pp/ic5.psd',
         shading=('bfsr',),
         paint=('bfs1r',),
-        overlay=('lightr'),
+        overlay=('2lightr'),
+        r_overlay=('2light'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -168,7 +171,8 @@ d_p_ic5_2_dsb = Train(
         'pp/ic5.psd',
         shading='bfs',
         paint='bfs1',
-        overlay='light',
+        overlay='1light',
+        r_overlay='1lightr',
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
@@ -194,7 +198,6 @@ COMMON_ic5a_PROPS = dict(
     loading_speed=10,
     weight=54,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
 )
 
 dk_p_ic5a_1 = Train(
@@ -333,6 +336,7 @@ COMMON_ic5b_PROPS = dict(
     cost_factor=25,
     loading_speed=10,
     weight=54,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -344,7 +348,8 @@ dk_p_ic5b_1 = Train(
         'pp/ic5.psd',
         shading=('bfs',),
         paint=('bfs1',),
-        overlay=('light'),
+        overlay=('1light'),
+        r_overlay=('1lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours['RED'],
     ),
@@ -365,7 +370,8 @@ dk_p_ic5b_2 = Train(
         'pp/ic5.psd',
         shading=('bfs',),
         paint=('bfs1',),
-        overlay=('light'),
+        overlay=('1light'),
+        r_overlay=('1lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours['GREY1'],
     ),
