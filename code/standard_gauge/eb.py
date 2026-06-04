@@ -33,6 +33,7 @@ d_e_eb_1_dsb = Train(
         shading=('eb',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -53,6 +54,7 @@ d_e_eb_2_dsb = Train(
         shading=('eb',),
         paint=('dsb2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),

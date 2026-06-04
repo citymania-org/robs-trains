@@ -34,6 +34,7 @@ d_d_mx_ii_1_dsb = Train(
         shading=('mx',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["CREAM"]
     ),
@@ -55,6 +56,7 @@ d_d_mx_ii_2_dsb = Train(
         shading=('mx',),
         paint=('dsb2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -75,6 +77,7 @@ d_d_mx_ii_3_vltj = Train(
         shading=('mx',),
         paint=('vltj1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
@@ -96,6 +99,7 @@ d_d_mx_ii_4_ttt = Train(
         shading=('mx',),
         paint=('ttt1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -117,6 +121,7 @@ d_d_mx_ii_5_lb = Train(
         shading=('mx',),
         paint=('lb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -138,6 +143,7 @@ d_d_mx_ii_6_lt = Train(
         shading=('mx',),
         paint=('lt1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -159,6 +165,7 @@ d_d_mx_ii_7_contec = Train(
         shading=('mx',),
         paint=('contec1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
@@ -180,6 +187,7 @@ d_d_mx_ii_8_ohj = Train(
         shading=('mx',),
         paint=('ohj1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -201,6 +209,7 @@ d_d_mx_ii_9_sb = Train(
         shading=('mx',),
         paint=('sb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
@@ -222,6 +231,7 @@ d_d_mx_ii_10_cflcd = Train(
         shading=('mx',),
         paint=('cflcd1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -243,6 +253,7 @@ d_d_mx_ii_11_vik = Train(
         shading=('mx',),
         paint=('cflcd1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -264,6 +275,7 @@ d_d_mx_ii_12_bk = Train(
         shading=('mx',),
         paint=('bk1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["BLUE"]
     ),
@@ -285,6 +297,7 @@ d_d_mx_ii_13_lj = Train(
         shading=('mx',),
         paint=('lj1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -306,6 +319,7 @@ d_d_mx_ii_14_bsx = Train(
         shading=('mx',),
         paint=('bsx1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -327,6 +341,7 @@ d_d_mx_ii_15_bsx = Train(
         shading=('mx',),
         paint=('bsx2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -348,6 +363,7 @@ d_d_mx_ii_16_bsm = Train(
         shading=('mx',),
         paint=('bsm1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -369,6 +385,7 @@ d_d_mx_ii_17_stab = Train(
         shading=('mx',),
         paint=('stab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY10"],
         cc2_replace=colours["ORANGE"]
     ),
@@ -390,6 +407,7 @@ d_d_mx_ii_18_vida = Train(
         shading=('mx',),
         paint=('vida1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY1"],
         cc2_replace=colours["RED"]
     ),
@@ -411,6 +429,7 @@ d_d_mx_ii_19_ibab = Train(
         shading=('mx',),
         paint=('ibab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["YELLOW"]
     ),

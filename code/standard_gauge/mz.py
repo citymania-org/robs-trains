@@ -34,6 +34,7 @@ d_d_mz_i_1_dsb = Train(
         shading=('mz1',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["CREAM"]
     ),
@@ -55,6 +56,7 @@ d_d_mz_i_2_dsb = Train(
         shading=('mz1',),
         paint=('dsb2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -75,6 +77,7 @@ d_d_mz_i_3_dsb = Train(
         shading=('mz2',),
         paint=('dsb2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -95,6 +98,7 @@ d_d_mz_i_4_ttt = Train(
         shading=('mz2',),
         paint=('ttt1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
@@ -116,6 +120,7 @@ d_d_mz_i_5_vida = Train(
         shading=('mz2',),
         paint=('vida1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY1"],
         cc2_replace=colours["RED"]
     ),
@@ -137,6 +142,7 @@ d_d_mz_ii_4_taagab = Train(
         shading=('mz2',),
         paint=('tågab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY3"],
         cc2_replace=colours["RED"]
     ),
@@ -158,6 +164,7 @@ d_d_mz_ii_5_ibab = Train(
         shading=('mz2',),
         paint=('ibab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
@@ -179,6 +186,7 @@ d_d_mz_ii_6_stab = Train(
         shading=('mz2',),
         paint=('stab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -200,6 +208,7 @@ d_d_mz_ii_7_stab = Train(
         shading=('mz2',),
         paint=('stab2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY9"],
         cc2_replace=colours["GREY3"]
     ),
@@ -221,6 +230,7 @@ d_d_mz_ii_8_bs = Train(
         shading=('mz2',),
         paint=('bs1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY7"],
         cc2_replace=colours["ORANGE"]
     ),
@@ -242,6 +252,7 @@ d_d_mz_ii_9_bs = Train(
         shading=('mz2',),
         paint=('bs2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["GREY7"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -263,6 +274,7 @@ d_d_mz_ii_10_bs = Train(
         shading=('mz2',),
         paint=('bs3',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
@@ -284,6 +296,7 @@ d_d_mz_ii_11_nrfab = Train(
         shading=('mz2',),
         paint=('nrfab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
@@ -325,6 +338,7 @@ d_d_mz_iii_1_dsb = Train(
         shading=('mz1',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -346,6 +360,7 @@ d_d_mz_iii_2_dsb = Train(
         shading=('mz2',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -367,6 +382,7 @@ d_d_mz_iv_1_dsb = Train(
         shading=('mz1',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -388,6 +404,7 @@ d_d_mz_iv_2_dbcsc = Train(
         shading=('mz1',),
         paint=('dbcsc1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -410,6 +427,7 @@ d_d_mz_iv_3_bs = Train(
         shading=('mz1',),
         paint=('bs1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),

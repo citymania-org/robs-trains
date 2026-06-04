@@ -34,6 +34,7 @@ d_d_me_ii_1_dsb = Train(
         shading=('me',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -55,6 +56,7 @@ d_d_me_ii_2_dsb = Train(
         shading=('me',),
         paint=('dsb2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["NAVY"]
     ),
@@ -75,6 +77,7 @@ d_d_me_ii_3_dsb = Train(
         shading=('me',),
         paint=('dsb3',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["NAVY"],
         cc2_replace=colours["RED"]
     ),
@@ -95,6 +98,7 @@ d_d_me_ii_4_dsb = Train(
         shading=('me',),
         paint=('dsb4',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -115,6 +119,7 @@ d_d_me_ii_5_nrfab = Train(
         shading=('me',),
         paint=('nrfab1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["APPLE"]
     ),
@@ -136,6 +141,7 @@ d_d_me_ii_6_mav = Train(
         shading=('me',),
         paint=('mav1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["SKY"]
     ),
@@ -157,6 +163,7 @@ d_d_me_ii_7_skpl = Train(
         shading=('me',),
         paint=('skpl1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY7"]
     ),

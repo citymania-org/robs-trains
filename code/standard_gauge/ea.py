@@ -33,6 +33,7 @@ d_e_ea_1_dsb = Train(
         shading=('ea',),
         paint=('dsb1',),
         overlay=('light', 'leccy'),
+        r_overlay=('lightr', 'leccy'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -54,6 +55,7 @@ d_e_ea_2_dsb = Train(
         shading=('ea',),
         paint=('dsb2',),
         overlay=('light', 'leccy'),
+        r_overlay=('lightr', 'leccy'),
         cc_replace=colours["NAVY"],
         cc2_replace=colours["RED"]
     ),
@@ -74,6 +76,7 @@ d_e_ea_3_dsb = Train(
         shading=('ea',),
         paint=('dsb3',),
         overlay=('light', 'leccy'),
+        r_overlay=('lightr', 'leccy'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
@@ -94,6 +97,7 @@ d_e_ea_4_bulmarket = Train(
         shading=('ea',),
         paint=('bulmarket1',),
         overlay=('light', 'leccy'),
+        r_overlay=('lightr', 'leccy'),
         cc_replace=colours["RED"],
         cc2_replace=colours["BLUE"]
     ),
@@ -115,6 +119,7 @@ d_e_ea_5_db = Train(
         shading=('ea',),
         paint=('db1',),
         overlay=('light', 'leccy'),
+        r_overlay=('lightr', 'leccy'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
