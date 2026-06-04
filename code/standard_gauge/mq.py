@@ -13,6 +13,7 @@ d_d_ml_1_dsb = Train(
         shading=('ml',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
@@ -50,6 +51,7 @@ d_d_ml_2_dsb = Train(
         shading=('ml',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
@@ -87,6 +89,7 @@ d_d_mq_1_dsb = Train(
         shading=('mq',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -124,6 +127,7 @@ d_d_mp_1_dsb = Train(
         shading=('mp',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -161,6 +165,7 @@ d_d_mo_ii_1_dsb = Train(
         shading=('mo2',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -198,6 +203,7 @@ d_d_mo_iv_1_dsb = Train(
         shading=('mo4',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -235,6 +241,7 @@ d_d_mo_v_1_dsb = Train(
         shading=('mo5',),
         paint=('dsb2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),

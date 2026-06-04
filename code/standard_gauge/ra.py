@@ -36,6 +36,7 @@ s_e_ra_1_sj = Train(
         shading=('ra',),
         paint=('sj1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY7"]
     ),
@@ -55,6 +56,7 @@ s_e_ra_2_sj = Train(
         shading=('ra',),
         paint=('sj2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["TURQUOISE"]
     ),
@@ -76,6 +78,7 @@ s_e_ra_3_sj = Train(
         shading=('ral',),
         paint=('sj3',),
         overlay=('llight'),
+        r_overlay=('llightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["TURQUOISE"]
     ),
@@ -95,6 +98,7 @@ s_e_ra_4_sj = Train(
         shading=('ral',),
         paint=('sj4',),
         overlay=('llight'),
+        r_overlay=('llightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["TURQUOISE"]
     ),
@@ -114,6 +118,7 @@ s_e_ra_5_sj = Train(
         shading=('ral',),
         paint=('sj5',),
         overlay=('llight'),
+        r_overlay=('llightr'),
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),

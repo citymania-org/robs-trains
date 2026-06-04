@@ -30,6 +30,7 @@ ch_e_re460_1 = Train(
         shading=('460',),
         paint=('sbb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -53,6 +54,7 @@ ch_e_re460_4 = Train(
         shading=('460',),
         paint=('sbb2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -77,6 +79,7 @@ ch_e_re460_5 = Train(
         shading=('460',),
         paint=('sbb3',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY10"]
     ),
@@ -101,6 +104,7 @@ ch_e_re460_2 = Train(
         shading=('460',),
         paint=('bls1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["CREAM"]
     ),
@@ -124,6 +128,7 @@ ch_e_re460_3 = Train(
         shading=('460',),
         paint=('bls2',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["LIME"],
         cc2_replace=colours["DBLUE"]
     ),
@@ -147,6 +152,7 @@ no_e_el18_1 = Train(
         shading=('460',),
         paint=('nsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["NSBRED"],
         cc2_replace=colours["GREY10"]
     ),
@@ -170,6 +176,7 @@ no_e_el18_2 = Train(
         shading=('460',),
         paint=('gan1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["GREY1"]
     ),
