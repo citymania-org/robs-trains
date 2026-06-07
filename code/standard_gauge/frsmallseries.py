@@ -19,6 +19,7 @@ COMMON_65000_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     max_speed=Train.kmhish(130),
     power=1849,
     weight=112,
@@ -47,6 +48,7 @@ fr_d_65000_1 = Train(
 fr_d_65000_2 = Train(
     **COMMON_65000_PROPS,
     id='fr_d_65000_2',
+    name='SNCF CC 65000',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('9a',),
@@ -56,6 +58,7 @@ fr_d_65000_2 = Train(
     ),
     country='france',
     company='na',
+    introduction_date=date(1962, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
@@ -76,6 +79,7 @@ COMMON_69000_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     max_speed=Train.kmhish(140),
     power=4133,
     weight=84,
@@ -136,6 +140,7 @@ COMMON_70000_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
+    visual_effect=(Train.VisualEffect.DIESEL, 6),
     max_speed=Train.kmhish(140),
     power=4802,
     weight=117,
