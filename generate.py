@@ -86,14 +86,14 @@ s_s_Sa_sj = Train(
 )
 
 from code.standard_gauge.dkmtmvmwmy import dk_d_myf_1, dk_d_mt27_1, dk_d_mv29_1, dk_d_mv29_2, dk_d_mw29_1
-from code.standard_gauge.mxe import d_d_mx_i_1_dsb
-from code.standard_gauge.mbrød import dk_d_mbrød_467_1, dk_d_mbrød_467_2, dk_d_mbrød_467_3, dk_d_mbrød_468_1, dk_d_mbrød_469_1, dk_d_mbrød_469_2, dk_d_mbrød_471_1, dk_d_mbrød_471_2, dk_d_mbrød_471_3, dk_d_mbrød_472_2, dk_d_mbrød_472_3, dk_d_mbrød_472_4, dk_d_mbrød_473_1, dk_d_mbrød_473_2, dk_d_mbrød_474_1, dk_d_mbrød_474_2, dk_d_mbrød_474_3, dk_d_mbrød_475_1, dk_d_mbrød_475_2, dk_d_mbrød_475_3, dk_d_mbrød_475_4
-from code.standard_gauge.sbm6 import d_d_sbm6_1_dsb, d_d_sbm6_2_dsb
+from code.standard_gauge.dkmxe import d_d_mx_i_1_dsb
+from code.standard_gauge.dkmbrød import dk_d_mbrød_467_1, dk_d_mbrød_467_2, dk_d_mbrød_467_3, dk_d_mbrød_468_1, dk_d_mbrød_469_1, dk_d_mbrød_469_2, dk_d_mbrød_471_1, dk_d_mbrød_471_2, dk_d_mbrød_471_3, dk_d_mbrød_472_2, dk_d_mbrød_472_3, dk_d_mbrød_472_4, dk_d_mbrød_473_1, dk_d_mbrød_473_2, dk_d_mbrød_474_1, dk_d_mbrød_474_2, dk_d_mbrød_474_3, dk_d_mbrød_475_1, dk_d_mbrød_475_2, dk_d_mbrød_475_3, dk_d_mbrød_475_4
+from code.standard_gauge.dksbm6 import d_d_sbm6_1_dsb, d_d_sbm6_2_dsb
 from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs, be_d_201_5_nmbs
-from code.standard_gauge.my import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik, d_d_my_ii_17_bsbs, d_d_my_ii_18_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_21_mav, d_d_my_ii_22_et, d_d_my_ii_23_strabag, d_d_my_ii_24_bsx, d_d_my_ii_25_strabag, lu_d_1600_1_cfl, hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, be_d_202_1_nmbs, be_d_202_2_nmbs, be_d_202_3_nmbs, be_d_202_4_nmbs, be_d_202_5_nmbs, be_d_202_6_nmbs, be_d_202_7_nmbs, be_d_202_8_nmbs
-from code.standard_gauge.mx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik, d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_17_stab, d_d_mx_ii_18_vida, d_d_mx_ii_19_ibab
-from code.standard_gauge.mz import d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb, d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc, d_d_mz_ii_6_stab, d_d_mz_ii_7_stab, d_d_mz_i_5_vida, d_d_mz_iv_3_bs, d_d_mz_ii_8_bs, d_d_mz_ii_9_bs, d_d_mz_ii_10_bs, d_d_mz_ii_11_nrfab
-from code.standard_gauge.me import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_6_mav, d_d_me_ii_7_skpl
+from code.standard_gauge.dkmy import d_d_mye_ii_1_dsb, d_d_my_ii_1_dsb, d_d_my_ii_2_dsb, d_d_my_ii_8_taagab, d_d_my_ii_7_dsb, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_16_lj, d_d_my_ii_12_njj, d_d_my_ii_11_dsb, d_d_my_ii_10_dsb, d_d_my_ii_5_contec, d_d_my_ii_3_ttt, d_d_my_ii_13_cflcd, d_d_my_ii_6_mjbad, d_d_my_ii_4_lt, d_d_my_ii_14_vik, d_d_my_ii_17_bsbs, d_d_my_ii_18_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_21_mav, d_d_my_ii_22_et, d_d_my_ii_23_strabag, d_d_my_ii_24_bsx, d_d_my_ii_25_strabag, lu_d_1600_1_cfl, hu_d_m61_1_mav, hu_d_m61_2_mav, hu_d_m61_3_mav, be_d_202_1_nmbs, be_d_202_2_nmbs, be_d_202_3_nmbs, be_d_202_4_nmbs, be_d_202_5_nmbs, be_d_202_6_nmbs, be_d_202_7_nmbs, be_d_202_8_nmbs
+from code.standard_gauge.dkmx import d_d_mx_ii_1_dsb, d_d_mx_ii_2_dsb, d_d_mx_ii_8_ohj, d_d_mx_ii_13_lj, d_d_mx_ii_3_vltj, d_d_mx_ii_9_sb, d_d_mx_ii_12_bk, d_d_mx_ii_10_cflcd, d_d_mx_ii_7_contec, d_d_mx_ii_5_lb, d_d_mx_ii_4_ttt, d_d_mx_ii_6_lt, d_d_mx_ii_11_vik, d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_17_stab, d_d_mx_ii_18_vida, d_d_mx_ii_19_ibab
+from code.standard_gauge.dkmz import d_d_mz_i_1_dsb, d_d_mz_i_2_dsb, d_d_mz_i_3_dsb, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_iii_1_dsb, d_d_mz_iii_2_dsb, d_d_mz_iv_1_dsb, d_d_mz_iv_2_dbcsc, d_d_mz_ii_6_stab, d_d_mz_ii_7_stab, d_d_mz_i_5_vida, d_d_mz_iv_3_bs, d_d_mz_ii_8_bs, d_d_mz_ii_9_bs, d_d_mz_ii_10_bs, d_d_mz_ii_11_nrfab
+from code.standard_gauge.dkme import d_d_me_ii_1_dsb, d_d_me_ii_2_dsb, d_d_me_ii_3_dsb, d_d_me_ii_4_dsb, d_d_me_ii_5_nrfab, d_d_me_ii_6_mav, d_d_me_ii_7_skpl
 from code.standard_gauge.be205 import be_d_205_1, lu_d_205_1, dk_d_205_1, se_d_205_1
 from code.standard_gauge.frbb26000 import fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7
 from code.standard_gauge.frbb36000 import fr_e_bb36000_1, fr_e_bb36000_2
@@ -103,51 +103,51 @@ from code.standard_gauge.chre44i import ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3
 from code.standard_gauge.chae66 import ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5
 from code.standard_gauge.chre44ii import ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16
 from code.standard_gauge.chre66 import ch_e_re66_1, ch_e_re66_2, ch_e_re66_3
-from code.standard_gauge.dre9394 import de_e_dre93_1_dr, de_e_dre94_1_dr, de_e_dre94_2_dr, de_e_dre94_3_dr, de_e_dre94_4_dr, de_e_dre94_5_dr
+from code.standard_gauge.de9394 import de_e_dre93_1_dr, de_e_dre94_1_dr, de_e_dre94_2_dr, de_e_dre94_3_dr, de_e_dre94_4_dr, de_e_dre94_5_dr
 from code.standard_gauge.chre44iv import ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5
 from code.standard_gauge.chre460 import ch_e_re460_1, ch_e_re460_4, ch_e_re460_5, ch_e_re460_2, ch_e_re460_3, no_e_el18_1, no_e_el18_2
-from code.standard_gauge.ra import s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj
-from code.standard_gauge.rc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj, s_e_rc36_7_sj, s_e_rc1245_1_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc36_8_sj, s_e_rc1245_8_sj, s_e_rc1245_9_sj, s_e_rc1245_10_sj, s_e_rc36_9_sj, s_e_rc1245_11_sj, s_e_rc36_10_sj, s_e_rc1245_12_sj
+from code.standard_gauge.sera import s_e_ra_1_sj, s_e_ra_2_sj, s_e_ra_3_sj, s_e_ra_4_sj, s_e_ra_5_sj
+from code.standard_gauge.serc import s_e_rc36_1_sj, s_e_rc36_2_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc7_1_sj, s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj, s_e_rc36_7_sj, s_e_rc1245_1_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc36_8_sj, s_e_rc1245_8_sj, s_e_rc1245_9_sj, s_e_rc1245_10_sj, s_e_rc36_9_sj, s_e_rc1245_11_sj, s_e_rc36_10_sj, s_e_rc1245_12_sj
 from code.standard_gauge.de103 import de_e_103_1, de_e_103_2, de_e_103_3, de_e_103_4, de_e_103_5, de_e_103_6, de_e_103_7, de_e_103_8, de_e_103_9
-from code.standard_gauge.tgvpse import fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf
-from code.standard_gauge.tgvm import fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf
+from code.standard_gauge.frtgvpse import fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf
+from code.standard_gauge.frtgvm import fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf
 from code.standard_gauge.semg import se_e_mg_1
 from code.standard_gauge.sef import se_e_f_1
 from code.standard_gauge.seda import se_e_da_1, se_e_da_2, se_e_da_3, se_e_da_4
 from code.standard_gauge.sema import se_e_ma_1, se_e_ma_2, se_e_ma_3, se_e_ma_4, se_e_ma_5, se_e_ma_6, se_e_ma_7, se_e_ma_8, se_e_ma_9, no_e_ma_1
-from code.standard_gauge.ea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
-from code.standard_gauge.eg import d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb
-from code.standard_gauge.eb import d_e_eb_1_dsb, d_e_eb_2_dsb
-from code.standard_gauge.mq import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
-from code.standard_gauge.ms import d_d_ms_1_dsb, d_d_mb_1_dsb
-from code.standard_gauge.mki import d_d_mki_1_dsb
-from code.standard_gauge.Yd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
-from code.standard_gauge.Yo import s_d_Yo_1_sj, s_d_Yo_2_hnj
-from code.standard_gauge.Yo1s import s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj
-from code.standard_gauge.ma import d_d_ma_1_dsb, d_d_ma_2_dsb, d_d_ma_3_dsb, d_d_ma_4_dsb, d_d_ma_5_dsb, d_d_ma_6_dsb, d_d_ma_7_dsb, d_d_ma_8_dsb, d_d_ma_9_dsb, d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb
-from code.standard_gauge.ytog import d_d_y1_1_dsb, d_d_y1dvt_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y6_1_dsb, d_d_y6_4_dsb, d_d_y6_2_dsb, d_d_y6_5_dsb, d_d_y6_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_3_dsb, d_d_y9_2_dsb
-from code.standard_gauge.mr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d_mr_4_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_7_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb, dl_d_mr_1_dlj
-from code.standard_gauge.ic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj, d_d_mf_7_dsb, d_d_mf_8_dsb, dl_d_mf_1, dl_d_mf_2
-from code.standard_gauge.regiosprinter import dk_d_lm21_1, dk_d_lm21_2
-from code.standard_gauge.ic2 import d_d_ic2_1_dsb, d_d_ic2_2_dsb
-from code.standard_gauge.mq2 import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb, d_d_mq2_6_dsb, d_d_mq2_7_dsb, d_d_mq2_8_dsb, d_d_mq2_9_dsb, d_d_mq2_10_dsb, d_d_mq2_11_dsb
-from code.standard_gauge.mp import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_dsb, d_d_mg_2_dsb
+from code.standard_gauge.dkea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
+from code.standard_gauge.dkeg import d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb
+from code.standard_gauge.dkeb import d_e_eb_1_dsb, d_e_eb_2_dsb
+from code.standard_gauge.dkml import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
+from code.standard_gauge.dkms import d_d_ms_1_dsb, d_d_mb_1_dsb
+from code.standard_gauge.dkmki import d_d_mki_1_dsb
+from code.standard_gauge.seyd import s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj
+from code.standard_gauge.seyo import s_d_Yo_1_sj, s_d_Yo_2_hnj
+from code.standard_gauge.seyo1s import s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj
+from code.standard_gauge.dkma import d_d_ma_1_dsb, d_d_ma_2_dsb, d_d_ma_3_dsb, d_d_ma_4_dsb, d_d_ma_5_dsb, d_d_ma_6_dsb, d_d_ma_7_dsb, d_d_ma_8_dsb, d_d_ma_9_dsb, d_d_ma_10_dsb, d_d_ma_11_dsb, d_d_ma_12_dsb
+from code.standard_gauge.dkytog import d_d_y1_1_dsb, d_d_y1dvt_1_dsb, d_d_y2_1_dsb, d_d_y2_2_dsb, d_d_y3_1_dsb, d_d_y4_1_dsb, d_d_y6_1_dsb, d_d_y6_4_dsb, d_d_y6_2_dsb, d_d_y6_5_dsb, d_d_y6_3_dsb, d_d_y8_1_dsb, d_d_y8_2_dsb, d_d_y8_3_dsb, d_d_y8_4_dsb, d_d_y9_1_dsb, d_d_y9_3_dsb, d_d_y9_2_dsb
+from code.standard_gauge.dkmr import d_d_mr_1_dsb, d_d_mr_2_dsb, d_d_mr_3_dsb, d_d_mr_4_dsb, d_d_mr_5_dsb, d_d_mr_6_dsb, d_d_mr_7_dsb, d_d_mr_8_dsb, d_d_mr_9_dsb, dl_d_mr_1_dlj
+from code.standard_gauge.dkic3 import d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb, s_d_mf_5_sj, s_d_mf_6_sj, d_d_mf_7_dsb, d_d_mf_8_dsb, dl_d_mf_1, dl_d_mf_2
+from code.standard_gauge.dkregiosprinter import dk_d_lm21_1, dk_d_lm21_2
+from code.standard_gauge.dkic2 import d_d_ic2_1_dsb, d_d_ic2_2_dsb
+from code.standard_gauge.dkmq import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb, d_d_mq2_6_dsb, d_d_mq2_7_dsb, d_d_mq2_8_dsb, d_d_mq2_9_dsb, d_d_mq2_10_dsb, d_d_mq2_11_dsb
+from code.standard_gauge.dkmpmg import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_dsb, d_d_mg_2_dsb
 from code.standard_gauge.öcj25 import s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2
-from code.standard_gauge.type64 import n_e_type64_1_nsb
-from code.standard_gauge.Xoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
-from code.standard_gauge.Xoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
-from code.standard_gauge.X1 import s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj
-from code.standard_gauge.x10111214 import s_e_x10_1_sj, s_e_x10_2_sj, s_e_x10_3_sj, s_e_x10_4_sj, s_e_x10_5_sj, s_e_x10_6_sj, s_e_x10_7_sj, s_e_x11_1_sj, s_e_x11_2_sj, s_e_x11_3_sj, s_e_x11_4_sj, s_e_x11_5_sj, s_e_x12_1_sj, s_e_x12_2_sj, s_e_x12_3_sj, s_e_x14_1_sj, s_e_x14_2_sj, s_e_x14_3_sj, s_e_x14_4_sj, s_e_x14_5_sj, s_e_x14_6_sj
-from code.standard_gauge.x606162 import s_e_x60_1_sj, s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj, s_e_x62_1_sj
-from code.standard_gauge.type69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb
-from code.standard_gauge.ir4 import d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb
-from code.standard_gauge.øt import d_e_et_1_dsb, d_e_et_1_sj, d_e_et_2_sj, d_e_et_2_dsb
+from code.standard_gauge.notype64 import n_e_type64_1_nsb
+from code.standard_gauge.sexoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
+from code.standard_gauge.sexoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
+from code.standard_gauge.sex1 import s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj
+from code.standard_gauge.sex10111214 import s_e_x10_1_sj, s_e_x10_2_sj, s_e_x10_3_sj, s_e_x10_4_sj, s_e_x10_5_sj, s_e_x10_6_sj, s_e_x10_7_sj, s_e_x11_1_sj, s_e_x11_2_sj, s_e_x11_3_sj, s_e_x11_4_sj, s_e_x11_5_sj, s_e_x12_1_sj, s_e_x12_2_sj, s_e_x12_3_sj, s_e_x14_1_sj, s_e_x14_2_sj, s_e_x14_3_sj, s_e_x14_4_sj, s_e_x14_5_sj, s_e_x14_6_sj
+from code.standard_gauge.sex606162 import s_e_x60_1_sj, s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj, s_e_x62_1_sj
+from code.standard_gauge.notype69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb
+from code.standard_gauge.dkir4 import d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb
+from code.standard_gauge.seøt import d_e_et_1_dsb, d_e_et_1_sj, d_e_et_2_sj, d_e_et_2_dsb
 from code.standard_gauge.HKB_Wes_1 import n_o_Wes_1_hkb
-from code.standard_gauge.stog1 import d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb
+from code.standard_gauge.dkstog1 import d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb
 from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
-from code.standard_gauge.stog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb
-from code.standard_gauge.stog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
-from code.standard_gauge.stog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
+from code.standard_gauge.dkstog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb
+from code.standard_gauge.dkstog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
+from code.standard_gauge.dkstog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
 from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C3_1_ss, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C8_1_sl, s_e_C8_2_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C16_1_sl
 from code.standard_gauge.dkcc import dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6
 from code.standard_gauge.dkcf import dk_p_cf_1, dk_p_cf_2, dk_p_cf_3
@@ -156,10 +156,10 @@ from code.standard_gauge.dkskovvogn import dk_p_skovvogn_1, dk_p_skovvogn_2, dk_
 from code.standard_gauge.dksjs701 import dk_p_701_1, dk_p_701_2, dk_p_701_3, dk_p_701_4, dk_p_701_5, dk_p_701_6
 from code.standard_gauge.dkff import dk_p_ff_1, dk_p_ff_2, dk_p_ff_3, dk_p_ff_4, dk_p_ff_5, dk_p_ff_6
 from code.standard_gauge.dk30stock import d_p_cr_1_dsb, d_p_ca_1_dsb, d_p_car_1_dsb, d_p_cae_1_dsb, d_p_ac_i_1_dsb, d_p_ac_iie_1_dsb, d_p_ac_ii_1_dsb, d_p_ag_1_dsb, d_p_ag_2_dsb, d_p_au_1_dsb, d_p_aul_1_dsb, d_p_av_1_dsb, d_p_abv_1_dsb, d_p_abg_1_dsb, d_p_bv_1_dsb, d_p_crl_1_dsb, d_p_cb_1_dsb, d_p_cc_1_dsb, d_p_bg_1_dsb, d_p_bg_2_dsb, d_p_b_1_lj, d_p_b_2_lj, d_p_cl_1_dsb, d_p_cl_2_dsb, d_p_cl_3_dsb, d_p_cl_5_dsb, d_p_cl_7_dsb, d_p_cl_8_dsb, d_p_cl_9_dsb, d_p_cl_10_dsb, d_p_cl_11_dsb, d_p_bu_1_dsb, d_p_bu_2_dsb, d_p_bu_3_dsb, d_p_bdg_1_dsb
-from code.standard_gauge.albl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb, d_p_al_5_dsb, d_p_bl_3_dsb
-from code.standard_gauge.uicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb, d_p_bns_6_dsb, d_p_bd_3_dsb
-from code.standard_gauge.ic5 import dk_p_ic5a_1, dk_p_ic5a_2, dk_p_ic5a_3, dk_p_ic5a_4, dk_p_ic5a_5, dk_p_ic5a_6, dk_p_ic5b_1, dk_p_ic5b_2, d_p_ic5_1_dsb, d_p_ic5_2_dsb
-from code.standard_gauge.bii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_b_ii_4_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_bk_iii_4_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb, d_p_abs_4_dsb
+from code.standard_gauge.dkalbl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb, d_p_al_4_dsb, d_p_bl_1_dsb, d_p_bl_2_dsb, d_p_al_5_dsb, d_p_bl_3_dsb
+from code.standard_gauge.dkuicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb, d_p_bns_6_dsb, d_p_bd_3_dsb
+from code.standard_gauge.dkic5 import dk_p_ic5a_1, dk_p_ic5a_2, dk_p_ic5a_3, dk_p_ic5a_4, dk_p_ic5a_5, dk_p_ic5a_6, dk_p_ic5b_1, dk_p_ic5b_2, d_p_ic5_1_dsb, d_p_ic5_2_dsb
+from code.standard_gauge.dkbii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_b_ii_4_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_bk_iii_4_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb, d_p_abs_4_dsb
 from code.standard_gauge.chewiv import ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_24, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_25, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9
 from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4, ch_p_ec_5, ch_p_ec_6, ch_p_ec_7, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10, ch_p_ec_11, ch_p_ec_12
 from code.standard_gauge.denwagen import de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12
