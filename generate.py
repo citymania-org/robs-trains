@@ -172,6 +172,7 @@ from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
 from code.standard_gauge.frbb67000 import fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7
 from code.standard_gauge.frcc72000 import fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6
 from code.standard_gauge.fra1aa1a68000 import fr_d_68000_1, fr_d_68000_2, fr_d_68000_3
+from code.standard_gauge.frsmallseries import fr_d_69000_1, fr_d_69000_2, fr_d_70000_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -490,6 +491,8 @@ lib.make_purchase_sprites(
     # fr diesel
     grf.VariantGroup('BB 67000', fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7),
     grf.VariantGroup('A1A-A1A 68000', fr_d_68000_1, fr_d_68000_2, fr_d_68000_3),
+    grf.VariantGroup('BB 69000', fr_d_69000_1, fr_d_69000_2),
+    fr_d_70000_1,
     grf.VariantGroup('CC 72000', fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6),
     # fr electric dc
     grf.VariantGroup('BB 26000 "Sybic"', fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7),
