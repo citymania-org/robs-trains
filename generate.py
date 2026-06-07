@@ -170,8 +170,8 @@ from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
 from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
 from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
 from code.standard_gauge.frbb67000 import fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7
-from code.standard_gauge.frbb72000 import fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6
-from code.standard_gauge.frbb68000 import fr_d_68000_1, fr_d_68000_2, fr_d_68000_3
+from code.standard_gauge.frcc72000 import fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6
+from code.standard_gauge.fra1aa1a68000 import fr_d_68000_1, fr_d_68000_2, fr_d_68000_3
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
