@@ -173,6 +173,7 @@ from code.standard_gauge.frbb67000 import fr_d_67000_1, fr_d_67000_2, fr_d_67300
 from code.standard_gauge.frcc72000 import fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6
 from code.standard_gauge.fra1aa1a68000 import fr_d_68000_1, fr_d_68000_2, fr_d_68000_3
 from code.standard_gauge.frsmallseries import fr_d_65000_1, fr_d_65000_2, fr_d_69000_1, fr_d_69000_2, fr_d_70000_1
+from code.standard_gauge.ite636646656 import it_e_636_1, it_e_636_2, it_e_636_3, it_e_646_1, it_e_646_2, it_e_646_3, it_e_646_4, it_e_646_5, it_e_646_6, it_e_646_7, it_e_656_1, it_e_656_2
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -510,7 +511,10 @@ lib.make_purchase_sprites(
     d_d_me_ii_6_mav,
     # it
     # it electric dc 3000
+    grf.VariantGroup('E.636', it_e_636_1, it_e_636_2, it_e_636_3),
+    grf.VariantGroup('E.646 "Camaleonte"', it_e_646_1, it_e_646_2, it_e_646_3, it_e_646_4, it_e_646_5, it_e_646_6, it_e_646_7),
     grf.VariantGroup('E.444 "Tartarughe"', it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3),
+    grf.VariantGroup('E.656 "Caimano"', it_e_656_1, it_e_656_2),
     # lu
     # lu diesel
     lu_d_1600_1_cfl,
