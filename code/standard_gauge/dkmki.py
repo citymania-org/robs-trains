@@ -34,6 +34,7 @@ d_d_mki_1_dsb = Train(
         shading=('mki',),
         paint=('mkidsb1',),
         overlay=('mkilight'),
+        r_overlay=('mkilightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
@@ -52,6 +53,7 @@ d_d_mki_1_dsb = Train(
         shading='fk',
         paint='fkdsb1',
         overlay='fklight',
+        r_overlay=('fklightr'),
         cc_replace=colours['MAROON'],
         cc2_replace=colours['MAROON'],
     ),

@@ -32,6 +32,7 @@ s_e_X1a_1_sj = Train(
         shading=('x1a',),
         paint=('x1asj1',),
         overlay=('x1alight'),
+        r_overlay=('x1alightr'),
         cc_replace=colours["SLBLUEO"],
         cc2_replace=colours["SLBLUEO"]
     ),
@@ -52,6 +53,7 @@ s_e_X1a_1_sj = Train(
         shading='x1b',
         paint='x1bsj1',
         overlay='x1blight',
+        r_overlay=('x1blightr'),
         cc_replace=colours['SLBLUEO'],
         cc2_replace=colours['SLBLUEO'],
     ),
@@ -69,6 +71,7 @@ s_e_X1a_2_sj = Train(
         shading=('x1ab',),
         paint=('x1asl1',),
         overlay=('x1alight'),
+        r_overlay=('x1alightr'),
         cc_replace=colours["SLBLUEO"],
         cc2_replace=colours["GREY1"]
     ),
@@ -89,6 +92,7 @@ s_e_X1a_2_sj = Train(
         shading='x1b',
         paint='x1bsl1',
         overlay='x1blight',
+        r_overlay=('x1blightr'),
         cc_replace=colours['SLBLUEO'],
         cc2_replace=colours['GREY1'],
     ),
@@ -106,6 +110,7 @@ s_e_X1a_3_sj = Train(
         shading=('x1ab',),
         paint=('x1asl2',),
         overlay=('x1alight'),
+        r_overlay=('x1alightr'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -126,6 +131,7 @@ s_e_X1a_3_sj = Train(
         shading='x1b',
         paint='x1bsl2',
         overlay='x1blight',
+        r_overlay=('x1blightr'),
         cc_replace=colours['SLBLUE'],
         cc2_replace=colours['GREY1'],
     ),

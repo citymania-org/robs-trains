@@ -13,6 +13,7 @@ d_d_mx_i_1_dsb = Train(
         shading=('mxe',),
         paint=('dsb1',),
         overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
