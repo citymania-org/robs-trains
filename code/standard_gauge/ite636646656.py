@@ -81,6 +81,7 @@ it_e_636_2 = Train(
     max_speed=Train.kmhish(120),
     power=2855,
     weight=101,
+    introduction_date=date(1987, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
