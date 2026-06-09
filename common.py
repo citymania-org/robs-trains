@@ -199,31 +199,54 @@ colours = {
 "MBC" : palette[440: 448],
 }
 
-def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_overlay=None, cc_replace, cc2_replace):
+def pink(layout):
+    return grf.Switch(code='motion_counter % 2', ranges={
+        0: layout['sprites'],
+        1: layout['goofyah']
+    },
+    default=layout['sprites'],
+    )
+
+def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_overlay=None, intermediate_graphics_chain=None, cc_replace, cc2_replace):
     return {
-        'Default': PSDLivery(
-            psd_file,
-            shading=shading,
-            paint=paint,
-            overlay=overlay,
-            r_overlay=r_overlay,
-            cc_replace=cc_replace,
-            cc2_replace=cc2_replace,
-        ),
-        '2CC': PSDLivery(
-            psd_file,
-            shading=shading,
-            paint=paint,
-            overlay=overlay,
-            r_overlay=r_overlay,
-            auto_cc=lib.CC_DEFAULT,
-        ),
-        '2CC alt': PSDLivery(
-            psd_file,
-            shading=shading,
-            paint=paint,
-            overlay=overlay,
-            r_overlay=r_overlay,
-            auto_cc=lib.CC_SWAPPED,
-        ),
+        'Default': {
+            'livery_sprites': {
+                'sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    cc_replace=cc_replace,
+                    cc2_replace=cc2_replace,
+                ),
+            },
+            'intermediate_graphics_chain': intermediate_graphics_chain,
+        },
+        '2CC': {
+            'livery_sprites': {
+                'sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    auto_cc=lib.CC_DEFAULT,
+                ),
+            },
+            'intermediate_graphics_chain': intermediate_graphics_chain
+        },
+        '2CC alt': {
+            'livery_sprites': {
+                'sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    auto_cc=lib.CC_SWAPPED,
+                ),
+            },
+            'intermediate_graphics_chain': intermediate_graphics_chain
+        },
     }

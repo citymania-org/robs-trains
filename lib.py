@@ -184,7 +184,7 @@ class Livery:
     def get_sprites(self):
         return self.template(self._get_sprite_func())
     
-    def get_r_sprites(self, length):
+    def get_r_sprites(self):
         return self.template(self._get_sprite_func())
 
 
@@ -207,8 +207,14 @@ def _make_sprite_func(image_file, mask_file=None):
     image = _get_image_file(image_file)
     return lambda *args, **kw: grf.FileSprite(image, *args, **kw, mask=mask)
 
+class LiverySprites():
+    def __init__(self, name: str, livery: Livery):
+        self.name = name
 
-def _make_liveries(liveries, is_articulated=False, length=1):
+        self.sprites = (livery.get_sprites(), livery.get_r_sprites())
+        
+
+def _make_liveries(liveries, is_articulated=False):
     # Currently unused vox stuff
     # sprites = lib.VoxTrainFile(filename).make_sprites()
     # if DEBUG_DIR is not None:
@@ -216,13 +222,24 @@ def _make_liveries(liveries, is_articulated=False, length=1):
     #     lib.make_debug_sprite_sheet(debug_fname, sprites, scale=5)
 
     res = []
-    for name, l in liveries.items():
-        l :Livery
-        data = {
-            'name': f' ({name})',
-            'sprites': l.get_sprites(),
-            'rsprites': l.get_r_sprites(length)
-        }
+    for name, p in liveries.items():
+        p :dict
+        if isinstance(p, dict):
+            data = {
+                'name': f' ({name})',
+                'sprites': list(p['livery_sprites'].values())[0].get_sprites(),
+                'livery_sprites': [],
+                'intermediate_graphics_chain': p.get('intermediate_graphics_chain')
+            }
+            data['livery_sprites'].extend(LiverySprites(n, l) for n, l in p['livery_sprites'].items())
+        # Old vehicles using the Livery type
+        else:
+            data = {
+                'name': f' ({name})',
+                'sprites': p.get_sprites(),
+                'livery_sprites': [LiverySprites('sprites', p)],
+                'intermediate_graphics_chain': None
+            }
         res.append(data)
 
     return res
@@ -230,7 +247,7 @@ def _make_liveries(liveries, is_articulated=False, length=1):
 
 class Train(grf.Train):
     def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, intermediate_graphics_chain=None, **kw):
-        liveries = _make_liveries(liveries, length=kw['length'])
+        liveries = _make_liveries(liveries)
         if visual_effect != None:
             if visual_effect[1] >= 24:
                 raise Exception("Train visual effect may not be outside the train")
@@ -330,7 +347,7 @@ class Train(grf.Train):
 
     def add_articulated_part(self, liveries=None, **props):
         if liveries is not None:
-            liveries = _make_liveries(liveries, True, length=props.get('length'))
+            liveries = _make_liveries(liveries, True)
         if 'misc_flags' in props.keys():
             props['misc_flags'] = props['misc_flags']
         elif self._props.get('misc_flags') != None: # we don't want to add this is the main definition so that it is consistent for length > 8 and < 8
@@ -344,18 +361,13 @@ class Train(grf.Train):
     def _get_set_count(self, liveries):
         sets = 0
         for l in liveries:
-            sprites = l.get('sprites')
-            if sprites is not None:
-                sets += 1
-            sprites_r = l.get('rsprites')
-            if sprites_r is not None:
-                sets += 1
-            rods_sprites = l.get('rods_sprites')
-            if rods_sprites is not None:
-                sets += 1
-            rods_sprites_r = l.get('rods_rsprites')
-            if rods_sprites_r is not None:
-                sets += 1
+            if l.get('livery_sprites') is None:
+                sprites = l.get('sprites')
+                if sprites is not None:
+                    sets += 1
+            else:
+                for ls in l['livery_sprites']:
+                    sets += len(ls.sprites)
         return sets
     
     def _set_sprites(self, liveries):
@@ -364,43 +376,34 @@ class Train(grf.Train):
             set_count=self._get_set_count(liveries),
             sprite_count=8,
         )]
+        
         layouts = []
-        layouts_r = []
-        rods_layouts = []
-        rods_layouts_r = []
+
         i = 0
         for l in liveries:
-            res.extend(l['sprites'])
-            layouts.append(grf.GenericSpriteLayout(
-                ent1=(i,),
-                ent2=(i,),
-            ))
-            i += 1
-            sprites_r = l.get('rsprites')
-            if sprites_r is not None:
-                res.extend(sprites_r)
-                layouts_r.append(grf.GenericSpriteLayout(
+            liv = {}
+            if l.get('livery_sprites') is None:
+                res.extend(l['sprites'])
+                liv['empty'] = grf.GenericSpriteLayout(
                     ent1=(i,),
                     ent2=(i,),
-                ))
+                )
                 i += 1
-            rods_sprites = l.get('rods_sprites')
-            if rods_sprites is not None:
-                res.extend(rods_sprites)
-                rods_layouts.append(grf.GenericSpriteLayout(
-                    ent1=(i,),
-                    ent2=(i,),
-                ))  
-                i += 1
-            rods_sprites_r = l.get('rods_sprites_r')
-            if rods_sprites_r is not None:
-                res.extend(rods_sprites_r)
-                rods_layouts_r.append(grf.GenericSpriteLayout(
-                    ent1=(i,),
-                    ent2=(i,),
-                ))
-                i += 1
-        return layouts, layouts_r, rods_layouts, rods_layouts_r, res
+            else:
+                for ls in l['livery_sprites']:
+                    if len(ls.sprites) != 2:
+                        raise ValueError('Too many sets of sprites were passed, should be only 2')
+                    spritelayouts = list()
+                    for s in ls.sprites:
+                        res.extend(s)
+                        spritelayouts.append(grf.GenericSpriteLayout(
+                            ent1=(i,),
+                            ent2=(i,),
+                        ))
+                        i += 1
+                    liv[ls.name] = self._direction_switch(spritelayouts[0], spritelayouts[1])
+            layouts.append(liv)
+        return layouts, res
     
     def _direction_switch(self, forward, reverse):
 
@@ -434,14 +437,22 @@ class Train(grf.Train):
     def _make_graphics(self, liveries, position):
         assert liveries
 
-        layouts, layouts_r, rods_layouts, rods_layouts_r, res = self._set_sprites(liveries)
+        layouts, res = self._set_sprites(liveries)
+        
+        #deal with mapping liveries to subtypes 
+        
+        pre_subtype_switches = []
+        for i, livery in enumerate(liveries):
+            if livery.get('intermediate_graphics_chain') is not None:
+                pre_subtype_switches.append(livery['intermediate_graphics_chain'](layouts[i]))
+            else:
+                if layouts[i].get('sprites'):
+                    pre_subtype_switches.append(layouts[i].get('sprites'))
+                else:
+                    pre_subtype_switches.append(list(layouts[i].values())[0])
 
         if len(liveries) <= 1:
-            reversed_sprites = liveries[0].get('rsprites')
-            if reversed_sprites is not None:
-                return res, self._direction_switch(layouts[0], layouts_r[0])
-            else:
-                return res, layouts[0]
+            return res, pre_subtype_switches[0]
 
         subtype_code = 'cargo_subtype'
         if position > 0:
@@ -452,23 +463,12 @@ class Train(grf.Train):
 
         subtype = grf.Switch(
             related_scope=False,
-            ranges=dict(enumerate(layouts)),
-            default=layouts[0],
+            ranges=dict(enumerate(pre_subtype_switches)),
+            default=pre_subtype_switches[0],
             code=subtype_code,
         )
         
-        if layouts_r != []:
-            subtype_r = grf.Switch(
-                related_scope=False,
-                ranges=dict(enumerate(layouts_r)),
-                default=layouts_r[0],
-                code=subtype_code,
-            )
-            if self.intermediate_graphics_chain != None:
-                return res, self.intermediate_graphics_chain(subtype, subtype_r)
-            return res, self._direction_switch(subtype, subtype_r)
-        else:
-            return res, subtype
+        return res, subtype
 
     def _set_callbacks(self, g):
         res = super()._set_callbacks(g)
@@ -1395,8 +1395,8 @@ class PSDLivery:
     def get_sprites(self):
         return self.template(self._get_sprite_func(False))
     
-    def get_r_sprites(self, lenght):
-         return self.template(self._get_sprite_func(True))
+    def get_r_sprites(self):
+        return self.template(self._get_sprite_func(True))
     
 class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top level contain the lowest level one this is not suported by grf-py nativly.
 
