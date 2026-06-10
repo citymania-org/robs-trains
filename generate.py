@@ -176,6 +176,7 @@ from code.standard_gauge.frsmallseries import fr_d_65000_1, fr_d_65000_2, fr_d_6
 from code.standard_gauge.ite636646656 import it_e_636_1, it_e_636_2, it_e_636_3, it_e_646_1, it_e_646_2, it_e_646_3, it_e_646_4, it_e_646_5, it_e_646_6, it_e_646_7, it_e_656_1, it_e_656_2
 from code.standard_gauge.dksii import dk_s_sii_1, dk_s_sii_2
 from code.standard_gauge.dkpii import dk_s_pii_1
+from code.standard_gauge.sefå import se_s_f_1, se_s_f_2, se_s_f_3
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -425,6 +426,7 @@ lib.make_purchase_sprites(
     # dk steam
     dk_s_pii_1,
     grf.VariantGroup('S II', dk_s_sii_1, dk_s_sii_2),
+    grf.VariantGroup('E', se_s_f_2, se_s_f_3),
     # dk diesel
     dk_d_mt27_1,
     grf.VariantGroup('MV I', dk_d_mv29_1, dk_d_mv29_2),
@@ -545,6 +547,7 @@ lib.make_purchase_sprites(
     # se steam
     s_s_N_ii_1_sj,
     s_s_Sa_sj,
+    se_s_f_1,
     # se diesel
     grf.VariantGroup('TMX II', d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_12_bk, d_d_mx_ii_19_ibab, d_d_mx_ii_4_ttt, d_d_mx_ii_18_vida, d_d_mx_ii_17_stab),
     grf.VariantGroup('TMY II', d_d_my_ii_8_taagab, d_d_my_ii_24_bsx, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_3_ttt),
