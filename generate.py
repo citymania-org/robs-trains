@@ -177,6 +177,7 @@ from code.standard_gauge.ite636646656 import it_e_636_1, it_e_636_2, it_e_636_3,
 from code.standard_gauge.dksii import dk_s_sii_1, dk_s_sii_2
 from code.standard_gauge.dkpii import dk_s_pii_1
 from code.standard_gauge.sefå import se_s_f_1, se_s_f_2, se_s_f_3
+from code.standard_gauge.de50 import de_s_50_1, de_s_50_2, de_s_50_3, de_s_50_4
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -414,6 +415,8 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Ew IV', ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_24, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_25, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9),
     grf.VariantGroup('EuroCity stock', ch_p_ec_1, ch_p_ec_3, ch_p_ec_2, ch_p_ec_11, ch_p_ec_4, ch_p_ec_5, ch_p_ec_7, ch_p_ec_6, ch_p_ec_12, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10),
     # de
+    # de steam
+    grf.VariantGroup('50', de_s_50_1, de_s_50_2),
     # de diesel
     grf.VariantGroup('V 170', d_d_my_ii_18_et, d_d_my_ii_22_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_23_strabag, d_d_my_ii_25_strabag, d_d_my_ii_17_bsbs),
     # de electric 15
@@ -427,6 +430,7 @@ lib.make_purchase_sprites(
     dk_s_pii_1,
     grf.VariantGroup('S II', dk_s_sii_1, dk_s_sii_2),
     grf.VariantGroup('E', se_s_f_2, se_s_f_3),
+    grf.VariantGroup('N III', de_s_50_3, de_s_50_4),
     # dk diesel
     dk_d_mt27_1,
     grf.VariantGroup('MV I', dk_d_mv29_1, dk_d_mv29_2),
