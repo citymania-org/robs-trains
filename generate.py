@@ -179,6 +179,7 @@ from code.standard_gauge.dkpii import dk_s_pii_1
 from code.standard_gauge.sefå import se_s_f_1, se_s_f_2, se_s_f_3
 from code.standard_gauge.de50 import de_s_50_1, de_s_50_2, de_s_50_3, de_s_50_4
 from code.standard_gauge.de52 import de_s_52_1, de_s_52_2, de_s_52_3
+from code.standard_gauge.de42 import de_s_42_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -419,6 +420,7 @@ lib.make_purchase_sprites(
     # de steam
     grf.VariantGroup('50', de_s_50_1, de_s_50_2),
     grf.VariantGroup('52', de_s_52_1, de_s_52_2),
+    de_s_42_1,
     # de diesel
     grf.VariantGroup('V 170', d_d_my_ii_18_et, d_d_my_ii_22_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_23_strabag, d_d_my_ii_25_strabag, d_d_my_ii_17_bsbs),
     # de electric 15
