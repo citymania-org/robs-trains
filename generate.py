@@ -178,6 +178,7 @@ from code.standard_gauge.dksii import dk_s_sii_1, dk_s_sii_2
 from code.standard_gauge.dkpii import dk_s_pii_1
 from code.standard_gauge.sefå import se_s_f_1, se_s_f_2, se_s_f_3
 from code.standard_gauge.de50 import de_s_50_1, de_s_50_2, de_s_50_3, de_s_50_4
+from code.standard_gauge.de52 import de_s_52_1, de_s_52_2, de_s_52_3
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -417,6 +418,7 @@ lib.make_purchase_sprites(
     # de
     # de steam
     grf.VariantGroup('50', de_s_50_1, de_s_50_2),
+    grf.VariantGroup('52', de_s_52_1, de_s_52_2),
     # de diesel
     grf.VariantGroup('V 170', d_d_my_ii_18_et, d_d_my_ii_22_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_23_strabag, d_d_my_ii_25_strabag, d_d_my_ii_17_bsbs),
     # de electric 15
@@ -530,6 +532,8 @@ lib.make_purchase_sprites(
     lu_d_1600_1_cfl,
     lu_d_205_1,
     # no
+    # no steam
+    de_s_52_3,
     # no diesel
     grf.VariantGroup('TMZ II', d_d_mz_ii_9_bs, d_d_mz_ii_10_bs),
     d_d_mz_iv_3_bs,
