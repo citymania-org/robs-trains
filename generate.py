@@ -409,8 +409,8 @@ lib.make_purchase_sprites(
     # ch electric 15
     grf.VariantGroup('Ae 4/7', ch_e_ae47_1, ch_e_ae47_2),
     grf.VariantGroup('Re 4/4 I', ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3, ch_e_re44i_4, ch_e_re44i_5, ch_e_re44i_6),
-    grf.VariantGroup('Ae 6/6 "Kantonslok"', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
-    grf.VariantGroup('Re 4/4 II "BoBo"', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16),
+    grf.VariantGroup('"Kantonslok"', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
+    grf.VariantGroup('"BoBo"', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16),
     grf.VariantGroup('Re 6/6', ch_e_re66_1, ch_e_re66_2, ch_e_re66_3),
     grf.VariantGroup('Re 4/4 IV', ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5),
     grf.VariantGroup('"Lok 2000"', ch_e_re460_1, ch_e_re460_4, ch_e_re460_5, ch_e_re460_2, ch_e_re460_3),
@@ -419,7 +419,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('EuroCity stock', ch_p_ec_1, ch_p_ec_3, ch_p_ec_2, ch_p_ec_11, ch_p_ec_4, ch_p_ec_5, ch_p_ec_7, ch_p_ec_6, ch_p_ec_12, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10),
     # de
     # de steam
-    grf.VariantGroup('44', de_s_44_1, de_s_44_2, de_s_44_3, de_s_44_4),
+    grf.VariantGroup('"Jumbo"', de_s_44_1, de_s_44_2, de_s_44_3, de_s_44_4),
     grf.VariantGroup('50', de_s_50_1, de_s_50_2),
     grf.VariantGroup('52', de_s_52_1, de_s_52_2),
     de_s_42_1,
@@ -476,10 +476,10 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њ"Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
     grf.VariantGroup('њMG (IC4)/MP (IC2)', d_d_mg_1_dsb, d_d_mg_2_dsb, d_d_mp2_1_dsb, d_d_mp2_2_dsb),
     # dk emu dc
-    grf.VariantGroup('S-Tog 1 "De Brune S-Tog"', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
-    grf.VariantGroup('S-Tog 2 "De Røde S-Tog"', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_4_dsb, d_e_stog2_3_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
+    grf.VariantGroup('"De Brune S-Tog"', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
+    grf.VariantGroup('"De Røde S-Tog"', d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_4_dsb, d_e_stog2_3_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb),
     grf.VariantGroup('њS-Tog 3', d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb),
-    grf.VariantGroup('њS-Tog 4 "Hamster" & "Hamsterunge"', d_e_stog4_5_dsb, d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
+    grf.VariantGroup('њ"Hamster" & "Hamsterunge"', d_e_stog4_5_dsb, d_e_stog4_1_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_2_dsb),
     # dk emu dc 3000
     # dk emu 15
     # dk emu 25
@@ -506,15 +506,15 @@ lib.make_purchase_sprites(
     grf.VariantGroup('MF (IC3)', dl_d_mf_1, dl_d_mf_2),
     # fr
     # fr diesel
-    grf.VariantGroup('060 DB "Sous-marin"', fr_d_65000_1, fr_d_65000_2),
+    grf.VariantGroup('"Sous-marin"', fr_d_65000_1, fr_d_65000_2),
     grf.VariantGroup('BB 67000', fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7),
     grf.VariantGroup('A1A-A1A 68000', fr_d_68000_1, fr_d_68000_2, fr_d_68000_3),
     grf.VariantGroup('BB 69000', fr_d_69000_1, fr_d_69000_2),
     fr_d_70000_1,
     grf.VariantGroup('CC 72000', fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6),
     # fr electric dc
-    grf.VariantGroup('BB 26000 "Sybic"', fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7),
-    grf.VariantGroup('BB 36000 "Astride"', fr_e_bb36000_1, fr_e_bb36000_2),
+    grf.VariantGroup('"Sybic"', fr_e_bb26000_1, fr_e_bb26000_2, fr_e_bb26000_3, fr_e_bb26000_4, fr_e_bb26000_5, fr_e_bb26000_6, fr_e_bb26000_7),
+    grf.VariantGroup('"Astride"', fr_e_bb36000_1, fr_e_bb36000_2),
     # fr emu dc
     grf.VariantGroup('њTGV PSE', fr_e_pse_1_sncf, fr_e_pse_2_sncf, fr_e_pse_3_sncf),
     grf.VariantGroup('њTGV M', fr_e_m_1_sncf, fr_e_m_2_sncf, fr_e_m_3_sncf),
@@ -528,9 +528,9 @@ lib.make_purchase_sprites(
     # it
     # it electric dc 3000
     grf.VariantGroup('E.636', it_e_636_1, it_e_636_2, it_e_636_3),
-    grf.VariantGroup('E.646 "Camaleonte"', it_e_646_1, it_e_646_2, it_e_646_3, it_e_646_4, it_e_646_5, it_e_646_6, it_e_646_7),
-    grf.VariantGroup('E.444 "Tartarughe"', it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3),
-    grf.VariantGroup('E.656 "Caimano"', it_e_656_1, it_e_656_2),
+    grf.VariantGroup('"Camaleonte"', it_e_646_1, it_e_646_2, it_e_646_3, it_e_646_4, it_e_646_5, it_e_646_6, it_e_646_7),
+    grf.VariantGroup('"Tartarughe"', it_e_444_1, it_e_444_2, it_e_444r_1, it_e_444r_2, it_e_444r_3),
+    grf.VariantGroup('"Caimano"', it_e_656_1, it_e_656_2),
     # lu
     # lu diesel
     lu_d_1600_1_cfl,
