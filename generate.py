@@ -175,7 +175,7 @@ from code.standard_gauge.fra1aa1a68000 import fr_d_68000_1, fr_d_68000_2, fr_d_6
 from code.standard_gauge.frsmallseries import fr_d_65000_1, fr_d_65000_2, fr_d_69000_1, fr_d_69000_2, fr_d_70000_1
 from code.standard_gauge.ite636646656 import it_e_636_1, it_e_636_2, it_e_636_3, it_e_646_1, it_e_646_2, it_e_646_3, it_e_646_4, it_e_646_5, it_e_646_6, it_e_646_7, it_e_656_1, it_e_656_2
 from code.standard_gauge.dksii import dk_s_sii_1, dk_s_sii_2
-from code.standard_gauge.dkhpr import dk_s_pii_1
+from code.standard_gauge.dkhpr import dk_s_pii_1, dk_s_hi_1, dk_s_hii_1, dk_s_hii_2, dk_s_pr_1, dk_s_ri_1, dk_s_ri_2, dk_s_rii_1, dk_s_rii_2
 from code.standard_gauge.sefå import se_s_f_1, se_s_f_2, se_s_f_3
 from code.standard_gauge.de50 import de_s_50_1, de_s_50_2, de_s_50_3, de_s_50_4
 from code.standard_gauge.de52 import de_s_52_1, de_s_52_2, de_s_52_3
@@ -438,8 +438,11 @@ lib.make_purchase_sprites(
     # dk
     # dk steam
     dk_s_pii_1,
+    grf.VariantGroup('R I/II', dk_s_ri_1, dk_s_ri_2, dk_s_rii_1, dk_s_rii_2),
+    grf.VariantGroup('H I/II', dk_s_hi_1, dk_s_hii_1, dk_s_hii_2),
     grf.VariantGroup('S II', dk_s_sii_1, dk_s_sii_2),
     grf.VariantGroup('E', se_s_f_2, se_s_f_3),
+    dk_s_pr_1,
     grf.VariantGroup('N III', de_s_50_3, de_s_50_4),
     # dk diesel
     dk_d_mt27_1,
