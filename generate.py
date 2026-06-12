@@ -185,6 +185,7 @@ from code.standard_gauge.de01 import de_s_01_1, de_s_01_2, de_s_01_3, de_s_01_4
 from code.standard_gauge.de03 import de_s_03_1, de_s_03_2
 from code.standard_gauge.dkfii import dk_s_fii_1
 from code.standard_gauge.dkkdc import dk_s_di_1, dk_s_di_2, dk_s_k_1, dk_s_k_2, dk_s_cii_1
+from code.standard_gauge.dko import dk_s_o_1, dk_s_o_2
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -440,6 +441,7 @@ lib.make_purchase_sprites(
     # dk
     # dk steam
     grf.VariantGroup('K', dk_s_k_1, dk_s_k_2),
+    grf.VariantGroup('O', dk_s_o_1, dk_s_o_2),
     dk_s_fii_1,
     grf.VariantGroup('D I-IV', dk_s_di_1, dk_s_di_2),
     dk_s_cii_1,
