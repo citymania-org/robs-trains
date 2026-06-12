@@ -181,6 +181,7 @@ from code.standard_gauge.de50 import de_s_50_1, de_s_50_2, de_s_50_3, de_s_50_4
 from code.standard_gauge.de52 import de_s_52_1, de_s_52_2, de_s_52_3
 from code.standard_gauge.de42 import de_s_42_1
 from code.standard_gauge.de44 import de_s_44_1, de_s_44_2, de_s_44_3, de_s_44_4
+from code.standard_gauge.de01 import de_s_01_1, de_s_01_2, de_s_01_3, de_s_01_4
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -419,6 +420,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('EuroCity stock', ch_p_ec_1, ch_p_ec_3, ch_p_ec_2, ch_p_ec_11, ch_p_ec_4, ch_p_ec_5, ch_p_ec_7, ch_p_ec_6, ch_p_ec_12, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10),
     # de
     # de steam
+    grf.VariantGroup('01', de_s_01_1, de_s_01_2, de_s_01_3, de_s_01_4),
     grf.VariantGroup('"Jumbo"', de_s_44_1, de_s_44_2, de_s_44_3, de_s_44_4),
     grf.VariantGroup('50', de_s_50_1, de_s_50_2),
     grf.VariantGroup('52', de_s_52_1, de_s_52_2),
