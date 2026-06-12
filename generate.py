@@ -175,7 +175,7 @@ from code.standard_gauge.fra1aa1a68000 import fr_d_68000_1, fr_d_68000_2, fr_d_6
 from code.standard_gauge.frsmallseries import fr_d_65000_1, fr_d_65000_2, fr_d_69000_1, fr_d_69000_2, fr_d_70000_1
 from code.standard_gauge.ite636646656 import it_e_636_1, it_e_636_2, it_e_636_3, it_e_646_1, it_e_646_2, it_e_646_3, it_e_646_4, it_e_646_5, it_e_646_6, it_e_646_7, it_e_656_1, it_e_656_2
 from code.standard_gauge.dksii import dk_s_sii_1, dk_s_sii_2
-from code.standard_gauge.dkpii import dk_s_pii_1
+from code.standard_gauge.dkhpr import dk_s_pii_1
 from code.standard_gauge.sefå import se_s_f_1, se_s_f_2, se_s_f_3
 from code.standard_gauge.de50 import de_s_50_1, de_s_50_2, de_s_50_3, de_s_50_4
 from code.standard_gauge.de52 import de_s_52_1, de_s_52_2, de_s_52_3
