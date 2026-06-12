@@ -186,6 +186,7 @@ from code.standard_gauge.de03 import de_s_03_1, de_s_03_2
 from code.standard_gauge.dkfii import dk_s_fii_1
 from code.standard_gauge.dkkdc import dk_s_di_1, dk_s_di_2, dk_s_k_1, dk_s_k_2, dk_s_cii_1
 from code.standard_gauge.dko import dk_s_o_1, dk_s_o_2
+from code.standard_gauge.dklint41 import dk_d_lint41_1, dk_d_lint41_2, dk_d_lint41_3, dk_d_lint41_4, dk_d_lint41_5, dk_d_lint41_6
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -489,6 +490,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('"RegioSprinter"', dk_d_lm21_1, dk_d_lm21_2),
     grf.VariantGroup('њMF (IC2)', d_d_ic2_1_dsb, d_d_ic2_2_dsb),
     grf.VariantGroup('њ"Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
+    grf.VariantGroup('"Coradia LINT 41"', dk_d_lint41_1, dk_d_lint41_2, dk_d_lint41_3, dk_d_lint41_4, dk_d_lint41_5, dk_d_lint41_6),
     grf.VariantGroup('њMG (IC4)/MP (IC2)', d_d_mg_1_dsb, d_d_mg_2_dsb, d_d_mp2_1_dsb, d_d_mp2_2_dsb),
     # dk emu dc
     grf.VariantGroup('"De Brune S-Tog"', d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb),
