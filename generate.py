@@ -183,6 +183,7 @@ from code.standard_gauge.de42 import de_s_42_1
 from code.standard_gauge.de44 import de_s_44_1, de_s_44_2, de_s_44_3, de_s_44_4
 from code.standard_gauge.de01 import de_s_01_1, de_s_01_2, de_s_01_3, de_s_01_4
 from code.standard_gauge.de03 import de_s_03_1, de_s_03_2
+from code.standard_gauge.dkfii import dk_s_fii_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -437,6 +438,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('n-Wagen "Silberlinge"', de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12),
     # dk
     # dk steam
+    dk_s_fii_1,
     dk_s_pii_1,
     grf.VariantGroup('R I/II', dk_s_ri_1, dk_s_ri_2, dk_s_rii_1, dk_s_rii_2),
     grf.VariantGroup('H I/II', dk_s_hi_1, dk_s_hii_1, dk_s_hii_2),
