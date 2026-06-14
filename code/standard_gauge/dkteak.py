@@ -251,6 +251,29 @@ dk_p_teak_10 = Train(
     }),
 )
 
+dk_p_teak_13 = Train(
+    **COMMON_teak_PROPS,
+    id='dk_p_teak_13',
+    name='DSB CM II', #wood
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    length=9,
+    cargo_capacity=72,
+    weight=34,
+    country='denmark',
+    company='na',
+    introduction_date=date(1951, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+        'Use': '2nd class',
+    }),
+)
+
 dk_p_teak_11 = Train(
     **COMMON_teak_PROPS,
     id='dk_p_teak_11',
@@ -274,6 +297,29 @@ dk_p_teak_11 = Train(
     }),
 )
 
+dk_p_teak_14 = Train(
+    **COMMON_teak_PROPS,
+    id='dk_p_teak_14',
+    name='DSB CO I', #wood
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    length=9,
+    cargo_capacity=82,
+    weight=30,
+    country='denmark',
+    company='na',
+    introduction_date=date(1951, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+        'Use': '2nd class',
+    }),
+)
+
 dk_p_teak_12 = Train(
     **COMMON_teak_PROPS,
     id='dk_p_teak_12',
@@ -294,5 +340,28 @@ dk_p_teak_12 = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
         'Use': '3rd class',
+    }),
+)
+
+dk_p_teak_15 = Train(
+    **COMMON_teak_PROPS,
+    id='dk_p_teak_15',
+    name='DSB CP VIII', #wood
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('8a',),
+        paint=('8b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    length=8,
+    cargo_capacity=67,
+    weight=33,
+    country='denmark',
+    company='na',
+    introduction_date=date(1951, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+        'Use': '2nd class',
     }),
 )
