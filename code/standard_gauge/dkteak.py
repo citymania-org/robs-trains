@@ -90,9 +90,9 @@ dk_p_teak_3 = Train(
     }),
 )
 
-dk_p_teak_16 = Train(
+dk_p_teak_4 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_16',
+    id='dk_p_teak_4',
     name='DSB AF III', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -113,9 +113,9 @@ dk_p_teak_16 = Train(
     }),
 )
 
-dk_p_teak_4 = Train(
+dk_p_teak_5 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_4',
+    id='dk_p_teak_5',
     name='DSB AR I', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -136,9 +136,9 @@ dk_p_teak_4 = Train(
     }),
 )
 
-dk_p_teak_17 = Train(
+dk_p_teak_6 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_17',
+    id='dk_p_teak_6',
     name='DSB AR I', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -159,9 +159,9 @@ dk_p_teak_17 = Train(
     }),
 )
 
-dk_p_teak_5 = Train(
+dk_p_teak_7 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_5',
+    id='dk_p_teak_7',
     name='DSB BL III', #metal
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -182,9 +182,9 @@ dk_p_teak_5 = Train(
     }),
 )
 
-dk_p_teak_6 = Train(
+dk_p_teak_8 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_6',
+    id='dk_p_teak_8',
     name='DSB BM III', #metal
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -205,9 +205,9 @@ dk_p_teak_6 = Train(
     }),
 )
 
-dk_p_teak_7 = Train(
+dk_p_teak_9 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_7',
+    id='dk_p_teak_9',
     name='DSB BP I', #metal
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -228,9 +228,9 @@ dk_p_teak_7 = Train(
     }),
 )
 
-dk_p_teak_8 = Train(
+dk_p_teak_10 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_8',
+    id='dk_p_teak_10',
     name='DSB CM VI', #metal
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -251,9 +251,9 @@ dk_p_teak_8 = Train(
     }),
 )
 
-dk_p_teak_9 = Train(
+dk_p_teak_11 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_9',
+    id='dk_p_teak_11',
     name='DSB CM I', #metal
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -274,9 +274,9 @@ dk_p_teak_9 = Train(
     }),
 )
 
-dk_p_teak_10 = Train(
+dk_p_teak_12 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_10',
+    id='dk_p_teak_12',
     name='DSB CM II', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -320,9 +320,9 @@ dk_p_teak_13 = Train(
     }),
 )
 
-dk_p_teak_11 = Train(
+dk_p_teak_14 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_11',
+    id='dk_p_teak_14',
     name='DSB CL IV', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -343,9 +343,9 @@ dk_p_teak_11 = Train(
     }),
 )
 
-dk_p_teak_14 = Train(
+dk_p_teak_15 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_14',
+    id='dk_p_teak_15',
     name='DSB CO I', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -366,9 +366,9 @@ dk_p_teak_14 = Train(
     }),
 )
 
-dk_p_teak_12 = Train(
+dk_p_teak_16 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_12',
+    id='dk_p_teak_16',
     name='DSB CX XIV', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -389,9 +389,9 @@ dk_p_teak_12 = Train(
     }),
 )
 
-dk_p_teak_15 = Train(
+dk_p_teak_17 = Train(
     **COMMON_teak_PROPS,
-    id='dk_p_teak_15',
+    id='dk_p_teak_17',
     name='DSB CP VIII', #wood
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
