@@ -188,6 +188,7 @@ from code.standard_gauge.dkkdc import dk_s_di_1, dk_s_di_2, dk_s_k_1, dk_s_k_2, 
 from code.standard_gauge.dko import dk_s_o_1, dk_s_o_2
 from code.standard_gauge.dklint41 import dk_d_lint41_1, dk_d_lint41_2, dk_d_lint41_3, dk_d_lint41_4, dk_d_lint41_5, dk_d_lint41_6
 from code.standard_gauge.dkteak import dk_p_teak_1, dk_p_teak_2, dk_p_teak_3, dk_p_teak_4, dk_p_teak_5, dk_p_teak_6, dk_p_teak_7, dk_p_teak_8, dk_p_teak_9, dk_p_teak_10, dk_p_teak_11, dk_p_teak_12, dk_p_teak_13, dk_p_teak_14, dk_p_teak_15, dk_p_teak_16, dk_p_teak_17
+from code.standard_gauge.seiore import se_e_iore_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -594,6 +595,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Rc1/2/4/5', s_e_rc1245_1_sj, s_e_rc1245_6_sj, s_e_rc1245_7_sj, s_e_rc1245_2_sj, s_e_rc1245_3_sj, s_e_rc1245_4_sj, s_e_rc1245_5_sj, s_e_rc1245_8_sj, s_e_rc1245_12_sj, s_e_rc1245_11_sj, s_e_rc1245_10_sj, s_e_rc1245_9_sj),
     grf.VariantGroup('Rc3/6', s_e_rc36_1_sj, s_e_rc36_8_sj, s_e_rc36_2_sj, s_e_rc36_10_sj, s_e_rc36_3_sj, s_e_rc36_4_sj, s_e_rc36_5_sj, s_e_rc36_6_sj, s_e_rc36_7_sj, s_e_rc36_9_sj),
     grf.VariantGroup('Rm', s_e_rm_1_sj, s_e_rm_2_sj, s_e_rm_3_sj, s_e_rm_4_sj),
+    se_e_iore_1,
     s_e_rc7_1_sj,
     # se dmu
     grf.VariantGroup('њÖCJ 24-25 "Bilvagnar"', s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2),
