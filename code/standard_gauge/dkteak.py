@@ -90,6 +90,29 @@ dk_p_teak_3 = Train(
     }),
 )
 
+dk_p_teak_16 = Train(
+    **COMMON_teak_PROPS,
+    id='dk_p_teak_16',
+    name='DSB AF III', #wood
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('8a',),
+        paint=('8b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    length=8,
+    cargo_capacity=36,
+    weight=35,
+    country='denmark',
+    company='na',
+    introduction_date=date(1951, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+        'Use': '1st class',
+    }),
+)
+
 dk_p_teak_4 = Train(
     **COMMON_teak_PROPS,
     id='dk_p_teak_4',
@@ -107,6 +130,29 @@ dk_p_teak_4 = Train(
     country='denmark',
     company='na',
     introduction_date=date(1939, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+        'Use': '1st & 2nd class',
+    }),
+)
+
+dk_p_teak_17 = Train(
+    **COMMON_teak_PROPS,
+    id='dk_p_teak_17',
+    name='DSB AR I', #wood
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["MAROON"],
+        cc2_replace=colours["MAROON"]
+    ),
+    length=9,
+    cargo_capacity=58,
+    weight=39,
+    country='denmark',
+    company='na',
+    introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
         'Use': '1st & 2nd class',
