@@ -189,6 +189,7 @@ from code.standard_gauge.dko import dk_s_o_1, dk_s_o_2
 from code.standard_gauge.dklint41 import dk_d_lint41_1, dk_d_lint41_2, dk_d_lint41_3, dk_d_lint41_4, dk_d_lint41_5, dk_d_lint41_6
 from code.standard_gauge.dkteak import dk_p_teak_1, dk_p_teak_2, dk_p_teak_3, dk_p_teak_4, dk_p_teak_5, dk_p_teak_6, dk_p_teak_7, dk_p_teak_8, dk_p_teak_9, dk_p_teak_10, dk_p_teak_11, dk_p_teak_12, dk_p_teak_13, dk_p_teak_14, dk_p_teak_15, dk_p_teak_16, dk_p_teak_17
 from code.standard_gauge.seiore import se_e_iore_1
+from code.standard_gauge.dkcompl import dk_p_compl_1, dk_p_compl_2, dk_p_compl_3, dk_p_compl_4, dk_p_compl_5
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -507,6 +508,7 @@ lib.make_purchase_sprites(
     # dk carriages
     grf.VariantGroup('SJS double decker stock', dk_p_701_1, dk_p_701_2, dk_p_701_3, dk_p_701_4, dk_p_701_5, dk_p_701_6),
     grf.VariantGroup('"Skovvogn"', dk_p_skovvogn_1, dk_p_skovvogn_2, dk_p_skovvogn_3, dk_p_skovvogn_4),
+    grf.VariantGroup('Long compartment stock', dk_p_compl_1, dk_p_compl_2, dk_p_compl_3, dk_p_compl_4, dk_p_compl_5),
     grf.VariantGroup('Teak closed platform stock', dk_p_teak_1, dk_p_teak_2, dk_p_teak_3, dk_p_teak_4, dk_p_teak_5, dk_p_teak_6, dk_p_teak_7, dk_p_teak_8, dk_p_teak_9, dk_p_teak_10, dk_p_teak_11, dk_p_teak_12, dk_p_teak_13, dk_p_teak_14, dk_p_teak_15, dk_p_teak_16, dk_p_teak_17),
     grf.VariantGroup('10s local stock', dk_p_cf_1, dk_p_cf_2, dk_p_cf_3),
     grf.VariantGroup('Teak open platform stock', dk_p_bc_1, dk_p_bc_2, dk_p_bc_3, dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6),

@@ -2893,7 +2893,12 @@
             "se_e_iore2_1": 3307,
             "__se_e_iore2_1_aa_mid": 3308,
             "__se_e_iore2_1_aa_tail": 3309,
-            "se_e_iore_1": 3310
+            "se_e_iore_1": 3310,
+            "dk_p_compl_1": 3311,
+            "dk_p_compl_2": 3312,
+            "dk_p_compl_3": 3313,
+            "dk_p_compl_4": 3314,
+            "dk_p_compl_5": 3315
         }
     }
 }
