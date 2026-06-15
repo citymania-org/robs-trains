@@ -117,7 +117,7 @@ from code.standard_gauge.seda import se_e_da_1, se_e_da_2, se_e_da_3, se_e_da_4
 from code.standard_gauge.sema import se_e_ma_1, se_e_ma_2, se_e_ma_3, se_e_ma_4, se_e_ma_5, se_e_ma_6, se_e_ma_7, se_e_ma_8, se_e_ma_9, no_e_ma_1
 from code.standard_gauge.dkea import d_e_ea_1_dsb, d_e_ea_2_dsb, d_e_ea_4_bulmarket, d_e_ea_5_db, d_e_ea_3_dsb
 from code.standard_gauge.dkeg import d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb
-from code.standard_gauge.dkeb import d_e_eb_1_dsb, d_e_eb_2_dsb
+from code.standard_gauge.dkeb import d_e_eb_1_dsb, d_e_eb_2_dsb, at_e_vectron_1
 from code.standard_gauge.dkml import d_d_ml_1_dsb, d_d_ml_2_dsb, d_d_mq_1_dsb, d_d_mp_1_dsb, d_d_mo_ii_1_dsb, d_d_mo_iv_1_dsb, d_d_mo_v_1_dsb
 from code.standard_gauge.dkms import d_d_ms_1_dsb, d_d_mb_1_dsb
 from code.standard_gauge.dkmki import d_d_mki_1_dsb
@@ -405,6 +405,9 @@ lib.make_purchase_sprites(
 # chronological order within the categories
 # standard gauge -> narrow gauge -> broad gauge
 (g.add(lib.SetPurchaseOrder(
+    # at
+    # at electric 15
+    at_e_vectron_1,
     # be
     # be diesel
     grf.VariantGroup('HLD 201', be_d_201_2_nmbs, be_d_201_5_nmbs, be_d_201_1_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs),
