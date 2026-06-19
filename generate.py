@@ -190,6 +190,7 @@ from code.standard_gauge.dklint41 import dk_d_lint41_1, dk_d_lint41_2, dk_d_lint
 from code.standard_gauge.dkteak import dk_p_teak_1, dk_p_teak_2, dk_p_teak_3, dk_p_teak_4, dk_p_teak_5, dk_p_teak_6, dk_p_teak_7, dk_p_teak_8, dk_p_teak_9, dk_p_teak_10, dk_p_teak_11, dk_p_teak_12, dk_p_teak_13, dk_p_teak_14, dk_p_teak_15, dk_p_teak_16, dk_p_teak_17
 from code.standard_gauge.seiore import se_e_iore_1
 from code.standard_gauge.dkcompl import dk_p_compl_1, dk_p_compl_2, dk_p_compl_3, dk_p_compl_4, dk_p_compl_5
+from code.standard_gauge.chae814 import ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3, ch_e_ae814_4, ch_e_ae814_5, ch_e_ae814_6, ch_e_ae814_7
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -420,6 +421,7 @@ lib.make_purchase_sprites(
     # ch
     # ch electric 15
     grf.VariantGroup('Ae 4/7', ch_e_ae47_1, ch_e_ae47_2),
+    grf.VariantGroup('Ae 8/14', ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3, ch_e_ae814_4, ch_e_ae814_5, ch_e_ae814_6, ch_e_ae814_7),
     grf.VariantGroup('Re 4/4 I', ch_e_re44i_1, ch_e_re44i_2, ch_e_re44i_3, ch_e_re44i_4, ch_e_re44i_5, ch_e_re44i_6),
     grf.VariantGroup('"Kantonslok"', ch_e_ae66_1, ch_e_ae66_3, ch_e_ae66_2, ch_e_ae66_4, ch_e_ae66_5),
     grf.VariantGroup('"BoBo"', ch_e_re44ii_1, ch_e_re44ii_8, ch_e_re44ii_3, ch_e_re44ii_17, ch_e_re44ii_2, ch_e_re44ii_6, ch_e_re44ii_10, ch_e_re44ii_4, ch_e_re44ii_11, ch_e_re44ii_12, ch_e_re44ii_5, ch_e_re44ii_9, ch_e_re44ii_15, ch_e_re44ii_13, ch_e_re44ii_14, ch_e_re44ii_7, ch_e_re44ii_16),
