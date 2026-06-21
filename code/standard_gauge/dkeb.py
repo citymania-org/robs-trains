@@ -75,9 +75,11 @@ at_e_vectron_1 = Train(
     id='at_e_vectron_1',
     name='ÖBB 1293',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('9a',),
-        paint=('9b',),
+        'pp/eb.psd',
+        shading=('eb',),
+        paint=('öbb1',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
