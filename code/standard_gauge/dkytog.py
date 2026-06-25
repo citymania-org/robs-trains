@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB
 
 COMMON_y1_PROPS = dict( # this is based on the HHJ YM 31
     length=9,
@@ -35,6 +35,7 @@ d_d_y1_1_dsb = Train(
         shading=('rb',),
         paint=('rbhhj1',),
         overlay=('rblight'),
+        r_overlay=('rblightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -64,6 +65,7 @@ COMMON_y1dvt_PROPS = dict( # this is based on the HHJ YS 41
     cost_factor=25,
     cargo_capacity=58,
     loading_speed=10,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -76,6 +78,7 @@ d_d_y1dvt_1_dsb = Train(
         shading=('rbdvt',),
         paint=('rbhhj1',),
         overlay=('rblight'),
+        r_overlay=('rblightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
@@ -117,6 +120,7 @@ d_d_y2_1_dsb = Train(
         shading=('rbl',),
         paint=('rbhhj1',),
         overlay=('rblight'),
+        r_overlay=('rblightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY3"]
     ),
@@ -137,6 +141,7 @@ d_d_y2_2_dsb = Train(
         shading=('rbl',),
         paint=('rblvltj1',),
         overlay=('rblight'),
+        r_overlay=('rblightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
@@ -166,6 +171,7 @@ COMMON_y3_PROPS = dict( # this is based on the LNJ YS 25
     cost_factor=25,
     cargo_capacity=67, #52 seats, ca 15 standing = 67
     loading_speed=30,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
@@ -178,6 +184,7 @@ d_d_y3_1_dsb = Train(
         shading=('rbldvt',),
         paint=('rbhhj1',),
         overlay=('rblight'),
+        r_overlay=('rblightr'),
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY3"]
     ),
@@ -374,6 +381,7 @@ COMMON_y8_PROPS = dict( # this is based on the LJ YS 80
     cost_factor=25,
     cargo_capacity=56,
     loading_speed=10,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
