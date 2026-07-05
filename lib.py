@@ -475,6 +475,7 @@ class Train(grf.Train):
         self._gen_livery_callback(g, self.callbacks, self.liveries)
         return res
     
+    # todo change so that it returns instead of the range bs
     def sw_capacity_calculaiton(load_limit):
         res = grf.Switch(code=f'cargo_unit_weight',
             ranges={i: int(load_limit * 16 / i) for i in range(1, 17)},
