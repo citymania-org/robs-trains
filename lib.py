@@ -599,12 +599,11 @@ class Train(grf.Train):
             )
             return res
 
-        @staticmethod
-        def switch_cargo_capacity(load_limit, g):
+        def switch_cargo_capacity(self, load_limit, g):
             res = grf.Switch(code=f'cargo_subtype % 2',
                 ranges = {
                     0: 0,
-                    1: Train.sw_capacity_calculaiton_lug(load_limit)
+                    1: self.sw_capacity_calculaiton_lug(load_limit, g)
                 },
                 default=0,
             )

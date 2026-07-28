@@ -277,6 +277,7 @@ d_p_bd_1_dsb = Train(
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
         'callbacks': {
             'cargo_capacity': Train.Luggage.switch_cargo_capacity(4, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
@@ -310,6 +311,7 @@ d_p_bd_2_dsb = Train(
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
         'callbacks': {
             'cargo_capacity': Train.Luggage.switch_cargo_capacity(4, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
@@ -343,6 +345,7 @@ d_p_bd_3_dsb = Train(
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
         'callbacks': {
             'cargo_capacity': Train.Luggage.switch_cargo_capacity(4, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
