@@ -72,6 +72,7 @@ n_o_BM69A_2_nsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
+    purchase_sprite_towed_id='n_o_BS69A_2_nsb',
     company='na',
     introduction_date=date(1985, 1, 1),
     additional_text=grf.fake_vehicle_info({

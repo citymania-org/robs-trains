@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB
+from common import Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, g
 
 COMMON_ic5_PROPS = dict(
     length=12,
@@ -34,7 +34,7 @@ d_p_ic5_1_dsb = Train(
         overlay=('2lightr'),
         r_overlay=('2light'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["RED"]
+        cc2_replace=colours["RED"],
     ),
     purchase_sprite_towed_id='d_p_ic52_1_dsb',
     country='denmark',
@@ -338,13 +338,21 @@ COMMON_ic5b_PROPS = dict(
     weight=54,
     extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    mid_stats={
+        'cargo_capacity': 1,
+        'refittable_cargo_classes': grf.CargoClass.MAIL,
+        'callbacks': {
+            'cargo_subtype_text': Train.Flip.switch_subtype(g),
+            'cargo_capacity': 0,
+        },
+    },
 )
 
 dk_p_ic5b_1 = Train(
     **COMMON_ic5b_PROPS,
     id='dk_p_ic5b_1',
     name='DSB Bfs',
-    liveries=make_psd_cc_liveries(
+    liveries=make_psd_cc_liveries_flippable(
         'pp/ic5.psd',
         shading=('bfs',),
         paint=('bfs1',),
@@ -352,6 +360,7 @@ dk_p_ic5b_1 = Train(
         r_overlay=('1lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours['RED'],
+        intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     country='denmark',
     company='na',
@@ -366,7 +375,7 @@ dk_p_ic5b_2 = Train(
     **COMMON_ic5b_PROPS,
     id='dk_p_ic5b_2',
     name='DSB Bfs',
-    liveries=make_psd_cc_liveries(
+    liveries=make_psd_cc_liveries_flippable(
         'pp/ic5.psd',
         shading=('bfs',),
         paint=('bfs1',),
@@ -374,6 +383,7 @@ dk_p_ic5b_2 = Train(
         r_overlay=('1lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours['GREY1'],
+        intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     country='denmark',
     company='na',

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB
+from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, g
 
 COMMON_ew_PROPS = dict(
     length=12,
@@ -513,20 +513,29 @@ COMMON_ews_PROPS = dict(
     loading_speed=10,
     extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    mid_stats={
+        'cargo_capacity': 1,
+        'refittable_cargo_classes': grf.CargoClass.MAIL,
+        'callbacks': {
+            'cargo_subtype_text': Train.Flip.switch_subtype(g),
+            'cargo_capacity': 0,
+        },
+    },
 )
 
 ch_p_ewiv_7 = Train(
     **COMMON_ews_PROPS,
     id='ch_p_ewiv_7',
     name='SBB Bt',
-    liveries=make_psd_cc_liveries(
+    liveries=make_psd_cc_liveries_flippable(
         'pp/chec.psd',
         shading=('ewivs',),
         paint=('bt1',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["SBB"]
+        cc2_replace=colours["SBB"],
+        intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     country='switzerland',
     company='na',
@@ -542,14 +551,15 @@ ch_p_ewiv_8 = Train(
     **COMMON_ews_PROPS,
     id='ch_p_ewiv_8',
     name='SBB Bt',
-    liveries=make_psd_cc_liveries(
+    liveries=make_psd_cc_liveries_flippable(
         'pp/chec.psd',
         shading=('ewivs',),
         paint=('bt2',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["GREY10"]
+        cc2_replace=colours["GREY10"],
+        intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     country='switzerland',
     company='na',
@@ -565,14 +575,15 @@ ch_p_ewiv_9 = Train(
     **COMMON_ews_PROPS,
     id='ch_p_ewiv_9',
     name='SBB Bt',
-    liveries=make_psd_cc_liveries(
+    liveries=make_psd_cc_liveries_flippable(
         'pp/chec.psd',
         shading=('ewivs',),
         paint=('bt3',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["RED"],
-        cc2_replace=colours["GREY10"]
+        cc2_replace=colours["GREY10"],
+        intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     country='switzerland',
     company='na',

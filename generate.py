@@ -223,7 +223,7 @@ s_w_Gblssy_2_gc = Train(
         'Use': 'Dedicated mail trains',
     }),
     callbacks={
-        'cargo_capacity': Train.sw_capacity_calculaiton(22.4)
+        'cargo_capacity': Train.sw_capacity_calculaiton(22.4, g)
     }
 )
 
@@ -259,7 +259,7 @@ s_w_Hbis_sj = Train(
         'Use': 'Freight',
     }),
     callbacks={
-        'cargo_capacity': Train.sw_capacity_calculaiton(25)
+        'cargo_capacity': Train.sw_capacity_calculaiton(25, g)
     }
 )
 

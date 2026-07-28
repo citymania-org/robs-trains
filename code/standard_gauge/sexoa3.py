@@ -37,6 +37,7 @@ s_e_Xoa3_1_bj = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["CREAM"]
     ),
+    purchase_sprite_towed_id='s_e_Xoa3_1_bj_car2',
     company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
@@ -72,6 +73,7 @@ s_e_Xoa3_2_sj = Train(
         cc_replace=colours["REDBROWN"],
         cc2_replace=colours["REDBROWN"]
     ),
+    purchase_sprite_towed_id='s_e_Xoa3_2_sj_car2',
     company='na',
     introduction_date=date(1948, 1, 1),
     additional_text=grf.fake_vehicle_info({

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge, g
+from common import Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, g
 
 COMMON_dk30stock_PROPS = dict(
     length=10,
@@ -122,7 +122,7 @@ d_p_cae_1_dsb = Train(
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3),
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
         },
     },
@@ -596,7 +596,7 @@ d_p_bdg_1_dsb = Train(
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3),
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
         },
     },
@@ -854,12 +854,14 @@ d_p_cl_2_dsb = Train(
     id='d_p_cl_2_dsb',
     name='DSB CLE',
     length=9,
-    liveries=make_psd_cc_liveries(
+    liveries=make_psd_cc_liveries_flippable(
         'pp/dk30stock.psd',
         shading=('cle',),
         paint=('cle1',),
         cc_replace=colours["MAROON"],
-        cc2_replace=colours["MAROON"]
+        cc2_replace=colours["MAROON"],
+        intermediate_graphics_chain=Train.Flip.switch_graphics_luggage,
+        odd=True
     ),
     country='denmark',
     company='na',
@@ -874,14 +876,15 @@ d_p_cl_2_dsb = Train(
         'Loading speed': '20',
     }),
     mid_stats={
-        'cargo_capacity': 1,
-        'refittable_cargo_classes': grf.CargoClass.MAIL,
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'callbacks': {
-            'cargo_subtype_text': Train.Flip.switch_subtype(g),
-            'cargo_capacity': 0,
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(4, g),
+            'cargo_subtype_text': Train.Flip.switch_subtype_luggage(g),
         },
     },
-    intermediate_graphics_chain=Train.Flip.switch_graphics,
 )
 
 d_p_cl_3_dsb = Train(

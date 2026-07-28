@@ -135,9 +135,8 @@ class CCReplacingFileSprite(grf.FileSprite):
 
 
 class Livery:
-    def __init__(self, template, r_template, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+    def __init__(self, template, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
         self.template = template
-        self.r_template = r_template
         self.image = image
         self.mask = mask
         self.auto_cc = auto_cc
@@ -189,12 +188,11 @@ class Livery:
 
 
 class LiveryFactory:
-    def __init__(self, template, r_template):
+    def __init__(self, template):
         self.template = template
-        self.r_template = r_template
 
     def __call__(self, image, *, mask=None, auto_cc=None, cc_replace=None, cc2_replace=None):
-        return Livery(self.template, self.r_template, image, mask=mask, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
+        return Livery(self.template, image, mask=mask, auto_cc=auto_cc, cc_replace=cc_replace, cc2_replace=cc2_replace)
 
 
 def _make_sprite_func(image_file, mask_file=None):
@@ -353,11 +351,10 @@ class NewGRF(grf.NewGRF):
                 'railtype_table': list(self._railtype_table.keys())
             }
         ))
-        
         return res
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, track_type=None, intermediate_graphics_chain=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, track_type=None, **kw):
         liveries = _make_liveries(liveries)
         if visual_effect != None:
             if visual_effect[1] >= 24:
@@ -368,6 +365,10 @@ class Train(grf.Train):
         self.end_stats = end_stats
         if kw['length'] <= 8 and (mid_stats or end_stats) != None:
             raise Exception('length must (currently) be more than 8 for multi-capacity trains')
+
+        if kw.get('intermediate_graphics_chain') is not None:
+            del kw['intermediate_graphics_chain']
+            print(kw['name'])
 
         if track_type is not None:
             if isinstance(track_type, (tuple, list)):
@@ -388,7 +389,6 @@ class Train(grf.Train):
         self.company = company
         self.power_type = power_type
         self.purchase_sprite_towed_id = purchase_sprite_towed_id
-        self.intermediate_graphics_chain = intermediate_graphics_chain
         
         # Add visual effect to this part if it is specified in the front. We add it to the other parts further down
         mid_shorten, art_shorten, art_liveries = self._calc_length_articulation(
@@ -579,11 +579,11 @@ class Train(grf.Train):
         res = super()._set_callbacks(g)
         self._gen_livery_callback(g, self.callbacks, self.liveries)
         return res
-    
-    # todo change so that it returns instead of the range bs
-    def sw_capacity_calculaiton(load_limit):
-        res = grf.Switch(code=f'cargo_unit_weight',
-            ranges={i: int(load_limit * 16 / i) for i in range(1, 17)},
+
+    @staticmethod
+    def sw_capacity_calculaiton(load_limit, g: grf.NewGRF):
+        res = grf.Switch(code=f'{int(load_limit)} * 16 / cargo_unit_weight',
+            ranges={},
             default=0
         )
         return res
@@ -591,17 +591,27 @@ class Train(grf.Train):
     # class for functions realated to trains with multiple capacities
     class LuggageTrain():
 
-        def switch_cargo_capacity(self, load_limit):
-            res = grf.Switch(code='cargo_subtype % 2',
+        @staticmethod
+        def sw_capacity_calculaiton_lug(load_limit, g: grf.NewGRF):
+            res = grf.Switch(code=f'{int(load_limit)} * var(0x7F, param={g.get_parameter_id('luggage-capacity')}, shift=0, and=0xFF) * 16 / cargo_unit_weight',
+                ranges={},
+                default=0
+            )
+            return res
+
+        @staticmethod
+        def switch_cargo_capacity(load_limit, g):
+            res = grf.Switch(code=f'cargo_subtype % 2',
                 ranges = {
                     0: 0,
-                    1: Train.sw_capacity_calculaiton(load_limit)
+                    1: Train.sw_capacity_calculaiton_lug(load_limit)
                 },
                 default=0,
             )
             return res
 
-        def switch_subtype(self, g: grf.NewGRF):
+        @staticmethod
+        def switch_subtype(g: grf.NewGRF):
             res = grf.Switch(code='cargo_subtype',
                 ranges = {
                     0: g.strings.add(' (No cargo)').get_global_id(),
@@ -612,7 +622,9 @@ class Train(grf.Train):
             return res
 
     class FlipTrain():
-        def switch_subtype(self, g: grf.NewGRF):
+
+        @staticmethod
+        def switch_subtype(g: grf.NewGRF):
             res = grf.Switch(code='cargo_subtype',
                 ranges = {
                     0: g.strings.add(' (Not Flipped)').get_global_id(),
@@ -621,8 +633,9 @@ class Train(grf.Train):
                 default=0x400,
             )
             return res
-        
-        def switch_subtype_luggage(self, g: grf.NewGRF):
+
+        @staticmethod
+        def switch_subtype_luggage(g: grf.NewGRF):
             res = grf.Switch(code='cargo_subtype',
                 ranges = {
                     0: g.strings.add(' (No cargo)').get_global_id(),
@@ -633,28 +646,26 @@ class Train(grf.Train):
                 default=0x400,
             )
             return res
-        
-        def switch_graphics(self, sw_livery, sw_livery_r):
-            res = grf.Switch(code='cargo_subtype',
+
+        @staticmethod
+        def switch_graphics(layouts):
+            return grf.Switch(code='cargo_subtype',
                 related_scope=False,
                 ranges={
-                    0: sw_livery,
-                    1: sw_livery_r,
+                    0: layouts['sprites'],
+                    1: layouts['flip_sprites'],
                 },
-                default=sw_livery,
+                default=layouts['sprites'],
             )
-            return res
-        
-        def switch_graphics_luggage(self, sw_livery, sw_livery_r):
-            res = grf.Switch(code='cargo_subtype > 1',
-                related_scope=False,
-                ranges={
-                    0: sw_livery,
-                    1: sw_livery_r,
-                },
-                default=sw_livery,
+
+        @staticmethod
+        def switch_graphics_luggage(layouts):
+            return grf.Switch(code='cargo_subtype > 1', ranges={
+                0: layouts['sprites'],
+                1: layouts['flip_sprites']
+            },
+            default=layouts['sprites']
             )
-            return res
         
     Luggage = LuggageTrain()
     Flip = FlipTrain()
@@ -1419,11 +1430,13 @@ class PSDLivery:
             )
 
 
-    def __init__(self, template, r_template, paint_palette, path, *, shading=None, paint=None, overlay=None, r_overlay=None, auto_cc=None, cc_replace=None, cc2_replace=None):
+    def __init__(self, paint_palette, path, *, shading=None, paint=None, overlay=None, r_overlay=None, auto_cc=None, cc_replace=None, cc2_replace=None, template=None):
+        if template is None:
+            raise ValueError('Sprite must use a template')
+
         if shading is None and overlay is None:
             raise ValueError('Sprite must use shading or overlay')
         self.template = template
-        self.r_template = r_template
 
         if len(paint_palette) % 8 != 0:
             raise ValueError('Paint palette must have exactly 8 shades for each colour')

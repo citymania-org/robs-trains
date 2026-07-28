@@ -31,6 +31,17 @@ g.add_int_parameter(
     },
 )
 
+g.add_int_parameter(
+    key='luggage-capacity',
+    name='Luggage capacity multiplier',
+    description='Multiplies the capacity of luggage carriages carrying mail, goods and food by this number',
+    default=1,
+    enum={
+    0: '0 None',
+    1: '1 Default',
+    },
+)
+
 Train = g.bind(lib.Train)
 
 g.add(grf.SetGlobalTrainDepotYOffset(2))
@@ -95,6 +106,18 @@ def tmpl_train(func):
     
 def tmpl_train_r(func):
     return [
+        func(200, 8, 10, 44, xofs=-4,  yofs=-21),
+        func(220, 8, 42, 44, xofs=-24, yofs=-30),
+        func(270, 8, 69, 44, xofs=-34, yofs=-38),
+        func(350, 8, 42, 44, xofs=-16, yofs=-30),
+        func(  0, 8, 10, 44, xofs=-4,  yofs=-21),
+        func( 20, 8, 42, 44, xofs=-24, yofs=-30),
+        func( 70, 8, 69, 44, xofs=-34, yofs=-38),
+        func(150, 8, 42, 44, xofs=-16, yofs=-30),
+    ]
+
+def tmpl_train_r_odd(func):
+    return [
         func(200, 8, 10, 44, xofs=-4,  yofs=-23),
         func(220, 8, 42, 44, xofs=-22, yofs=-31),
         func(270, 8, 69, 44, xofs=-30, yofs=-38),
@@ -105,9 +128,9 @@ def tmpl_train_r(func):
         func(150, 8, 42, 44, xofs=-18, yofs=-31),
     ]
 
-Livery = lib.LiveryFactory(tmpl_train, tmpl_train_r)
+Livery = lib.LiveryFactory(tmpl_train)
 paint_palette = lib.read_palette_file('compal.png')
-PSDLivery = lambda *args, **kw: lib.PSDLivery(tmpl_train, tmpl_train_r, paint_palette, *args, **kw)
+PSDLivery = lambda *args, **kw: lib.PSDLivery(paint_palette, *args, **kw)
 
 # Using sound files from RUKTS: https://github.com/StarRaid/Representitive-UK-Trainset
 modern_diesel_sound = {
@@ -227,6 +250,7 @@ def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_
                     r_overlay=r_overlay,
                     cc_replace=cc_replace,
                     cc2_replace=cc2_replace,
+                    template=tmpl_train,
                 ),
             },
             'intermediate_graphics_chain': intermediate_graphics_chain,
@@ -240,6 +264,7 @@ def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_
                     overlay=overlay,
                     r_overlay=r_overlay,
                     auto_cc=lib.CC_DEFAULT,
+                    template=tmpl_train,
                 ),
             },
             'intermediate_graphics_chain': intermediate_graphics_chain
@@ -253,6 +278,90 @@ def make_psd_cc_liveries(psd_file, *, shading=None, paint=None, overlay=None, r_
                     overlay=overlay,
                     r_overlay=r_overlay,
                     auto_cc=lib.CC_SWAPPED,
+                    template=tmpl_train,
+                ),
+            },
+            'intermediate_graphics_chain': intermediate_graphics_chain
+        },
+    }
+
+def make_psd_cc_liveries_flippable(psd_file, *, shading=None, paint=None, overlay=None, r_overlay=None, intermediate_graphics_chain=None, odd=False, cc_replace, cc2_replace,):
+
+    if intermediate_graphics_chain is None:
+        raise ValueError('Flippable livery needs an intermediate_graphics_chain')
+
+    template_r = tmpl_train_r
+    if odd == True:
+        template_r = tmpl_train_r_odd
+
+    return {
+        'Default': {
+            'livery_sprites': {
+                'sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    cc_replace=cc_replace,
+                    cc2_replace=cc2_replace,
+                    template=tmpl_train,
+                ),
+                'flip_sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    cc_replace=cc_replace,
+                    cc2_replace=cc2_replace,
+                    template=template_r,
+                ),
+            },
+            'intermediate_graphics_chain': intermediate_graphics_chain,
+        },
+        '2CC': {
+            'livery_sprites': {
+                'sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    auto_cc=lib.CC_DEFAULT,
+                    template=tmpl_train,
+                ),
+                'flip_sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    auto_cc=lib.CC_DEFAULT,
+                    template=template_r,
+                ),
+            },
+            'intermediate_graphics_chain': intermediate_graphics_chain
+        },
+        '2CC alt': {
+            'livery_sprites': {
+                'sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    auto_cc=lib.CC_SWAPPED,
+                    template=tmpl_train,
+                ),
+                'flip_sprites': PSDLivery(
+                    psd_file,
+                    shading=shading,
+                    paint=paint,
+                    overlay=overlay,
+                    r_overlay=r_overlay,
+                    auto_cc=lib.CC_SWAPPED,
+                    template=template_r,
                 ),
             },
             'intermediate_graphics_chain': intermediate_graphics_chain
