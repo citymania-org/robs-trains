@@ -244,9 +244,120 @@ def _make_liveries(liveries, is_articulated=False):
 
     return res
 
+# Needed for more complex railtype handling to allow for multiple voltages 
+
+class NewGRF(grf.NewGRF):
+
+    def add_railtype(self, *railtype_list):
+        if self._railtype_table is None:
+            self._railtype_table = {}
+        
+        if railtype_list and isinstance(railtype_list[0], (tuple, list)):
+            railtype_list = railtype_list[0]
+
+        rt_id = len(self._railtype_table)
+
+        if isinstance(railtype_list, (list, tuple)):
+            if isinstance(railtype_list[0], tuple):
+                rtb = grf.to_bytes(railtype_list[0][0])
+            else:
+                rtb = grf.to_bytes(railtype_list[0])
+            railtypes = []
+            for rt in railtype_list:
+                if isinstance(rt,tuple):
+                    railtypes.append(tuple(map(grf.to_bytes, rt)))
+                else:
+                    railtypes.append(grf.to_bytes(rt))
+                
+            self._railtype_table[rtb] = (rt_id, tuple(railtypes))
+        else:
+            rtb = grf.to_bytes(railtype_list)
+            self._railtype_table[rtb] = (rt_id, None)
+
+        return rt_id
+
+    def _generate_railtype_table(self):
+        if self._railtype_table is None:
+            return []
+
+        res = []
+
+        mods = []
+        for i, rtlist in self._railtype_table.values():
+            if rtlist is None or len(rtlist) == 1:
+                continue
+
+            param = 0x7f - len(mods)
+            for j, rt in enumerate(rtlist):
+                # [param] = rt
+                res.append(grf.ComputeParameters(
+                    target=param,
+                    operation=0,
+                    if_undefined=False,
+                    source1=255,
+                    source2=255,
+                    value=rt if isinstance(rt, bytes) else rt[0],
+                ))
+
+                # if rt is defined skip the rest (unless it's the last rt)
+                skip = 2 * (len(rtlist) - j - 1) - 1
+                if skip > 0:
+                    skip = 250
+                    if isinstance(rt, tuple):
+                        for k, r in enumerate(rt):
+                            res.append(grf.If(
+                                is_static=True,
+                                variable=0,
+                                condition=0xe,
+                                value=r,
+                                skip=skip,
+                            ))
+                            if k == 0:
+                                res.append(grf.If(
+                                    is_static=True,
+                                    variable=self.get_parameter_id('fallback-mode'),
+                                    varsize=1,
+                                    condition=0x02, # same as
+                                    value=0,
+                                    skip=len(rt) - 1,
+                                ))
+                    else:
+                        res.append(grf.If(
+                            is_static=True,
+                            variable=0,
+                            condition=0xe,
+                            value=rt,
+                            skip=skip,
+                        ))
+                        if rt == b'SAAd' or b'SAAa':
+                            res.append(grf.If(
+                                is_static=True,
+                                variable=self.get_parameter_id('fallback-mode'),
+                                varsize=1,
+                                condition=0x02,
+                                value=2,
+                                skip=1,
+                            ))
+            res.append(grf.Label(250))
+
+            mods.append({'num': param, 'size': 4, 'offset': 8 + i * 4})
+
+        if mods:
+            res.append(grf.ModifySprites(mods))
+
+        res.append(grf.DefineMultiple(
+            feature=grf.GLOBAL_VAR,
+            first_id=0,
+            count=len(self._railtype_table),
+            props={
+                'railtype_table': list(self._railtype_table.keys())
+            }
+        ))
+        
+        return res
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, intermediate_graphics_chain=None, **kw):
+    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, track_type=None, intermediate_graphics_chain=None, **kw):
         liveries = _make_liveries(liveries)
         if visual_effect != None:
             if visual_effect[1] >= 24:
@@ -257,6 +368,16 @@ class Train(grf.Train):
         self.end_stats = end_stats
         if kw['length'] <= 8 and (mid_stats or end_stats) != None:
             raise Exception('length must (currently) be more than 8 for multi-capacity trains')
+
+        if track_type is not None:
+            if isinstance(track_type, (tuple, list)):
+                track_type = tuple(track_type)
+                if len(track_type) == 1:
+                    kw['track_type'] = track_type[0]
+                else:
+                    kw['track_types'] = track_type
+            else:
+                kw['track_type'] = track_type
         
         super().__init__(
             liveries=liveries,
@@ -407,31 +528,15 @@ class Train(grf.Train):
     
     def _direction_switch(self, forward, reverse):
 
-        sw_forward = grf.Switch(code='train_is_driving_backwards',
-                related_scope=True,
+        # Spec says scope has to be related but works without so yolo
+
+        return grf.Switch(code='vehicle_is_flipped != train_is_driving_backwards',
+                related_scope=False,
                 ranges={
                     0: forward,
                     1: reverse,
                 },
                 default=forward,
-        )
-
-        sw_reverse = grf.Switch(code='train_is_driving_backwards',
-                related_scope=True,
-                ranges={
-                    0: reverse,
-                    1: forward,
-                },
-                default=reverse,
-        )
-
-        return grf.Switch(code='vehicle_is_flipped',
-                related_scope=False,
-                ranges={
-                    0: sw_forward,
-                    1: sw_reverse,
-                },
-                default=sw_forward,
                 )
         
     def _make_graphics(self, liveries, position):

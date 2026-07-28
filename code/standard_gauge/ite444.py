@@ -2,14 +2,14 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_guage_3kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_3kv
 
 COMMON_444_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
     power_type='dc3000',
     engine_class=Train.EngineClass.ELECTRIC, 
-    track_type=standard_guage_3kv,
+    track_type=standard_gauge_3kv,
     max_speed=Train.kmhish(200),
     power=5808,
     vehicle_life=30,
@@ -67,7 +67,7 @@ COMMON_444r_PROPS = dict(
     misc_flags=Train.Flags.USE_2CC,
     power_type='dc3000',
     engine_class=Train.EngineClass.ELECTRIC, 
-    track_type=standard_guage_3kv,
+    track_type=standard_gauge_3kv,
     max_speed=Train.kmhish(200),
     power=5808,
     vehicle_life=30,

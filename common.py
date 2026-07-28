@@ -5,13 +5,30 @@ import grf, lib
 grf.va2vars.VA2_VARS[grf.TRAIN]['train_is_driving_backwards'] = {'var': 0xFE, 'start': 11, 'size':  1}
 VEHICLE_FLAG_TRAIN_HAS_CAB = 0x10
 
-g = grf.NewGRF(
+# Add support for multiple railtypes per train
+
+grf.actions.ACTION0_PROP_DICT[grf.TRAIN]['track_types'] = (int(0x34), grf.actions.ByteListProperty())
+
+g = lib.NewGRF(
     grfid=b'KSTA',
     name='The International Train Set - TITS',
     description='Mostly European trains made by Rob, dP, Brickblock1 and Meja. Licence: GPL v2',
     url='https://github.com/citymania-org/robs-trains',
     id_map_file='id_map.json',
     fast_sprite_enumeration=True,
+)
+
+g.add_int_parameter(
+    key='fallback-mode',
+    name='Railtype fallback mode',
+    description='Generous makes sure all engines are always avaliable.{}Same current prevents trains form falling back to standard generic electrification if one of the specific ones exist, but 15kv will be aviliable on 25kv tracks. Suitable for JP+ tracks{}Exact match does the same as same current but does not allow 15kv trains to show up on 25kv tracks. Suitable for SETS',
+    default=0,
+    limits=(0,2),
+    enum={
+    0: 'Generous',
+    1: 'Same current',
+    2: 'Exact match'
+    },
 )
 
 Train = g.bind(lib.Train)
@@ -24,19 +41,9 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
 (
     standard_gauge,
     standard_gauge_1500v,  # Stog and Saltsjöbanan
-    standard_guage_3kv,
+    standard_gauge_3kv,
     standard_gauge_15kv,  # Sweden and Norway
     standard_gauge_25kv,  # Denmark
-    standard_gauge_25kv_15kv,  # border crossing trains
-    standard_gauge_3kv_1500v,
-    standard_gauge_25kv_3kv,
-    standard_gauge_25kv_1500v,
-    standard_gauge_15kv_3kv,
-    standard_gauge_15kv_1500v,
-    standard_gauge_25kv_15kv_3kv,
-    standard_gauge_25kv_15kv_1500v,
-    standard_gauge_25kv_3kv_1500v,
-    standard_gauge_15kv_3kv_1500v,
     standard_gauge_all_voltages,
     metro,  # Metro
     extra_narrow_gauge,  # Swedish 3 foot gauge
@@ -44,20 +51,10 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
     extra_narrow_gauge_15kv,  # NKlJ
 ) = g.set_railtype_table([
     ('SAAN', 'RAIL'),  # Standard gauge track
-    ('SAAd', 'SAAD', 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog dc
-    ('SAAD', 'SAAE', 'ELRL'),  # Standard gauge 3kv dc
-    ('SAAa', 'SAAA', 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
-    ('SAAA', 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
-    ('SAA$', 'NORD', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 25kv ac (will show up on all most of the time)
-    ('SAA=', 'SAAE', 'ELRL'),  # Standard gauge 1500v and 3kv dc (will show up on all most of the time)
-    ('SAA)', 'SAAE', 'ELRL'),  # Standard gauge 25kv and 3kv dc (will show up on all most of the time)
-    ('SAA(', 'SAAE', 'ELRL'),  # Standard gauge 25kv and 1500kv ac/dc (will show up on all most of the time)
-    ('SAA]', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 3kv ac/dc (will show up on all most of the time)
-    ('SAA[', 'SAAE', 'ELRL'),  # Standard gauge 15kv and 1500v ac/dc (will show up on all most of the time)
-    ("SAA'", 'SAAE', 'ELRL'),  # Standard gauge 25kv, 15kv and 3kv ac/dc (will show up on all most of the time)
-    ('SAA^', 'SAAE', 'ELRL'),  # Standard gauge 25kv, 15kv and 1500v ac/dc (will show up on all most of the time)
-    ('SAA_', 'SAAE', 'ELRL'),  # Standard gauge 25kv, 3kv and 1500v ac/dc (will show up on all most of the time)
-    ('SAA,', 'SAAE', 'ELRL'),  # Standard gauge 15kv, 3kv adn 1500v ac/dc (will show up on all most of the time)
+    ('SAAd', ('SAAD', 'SAAd', 'SAAA', 'SAAa'), 'SAAE', 'ELRL'),  # Standard gauge 1,5kv and stog dc
+    (('SAAD', 'SAAd', 'SAAA', 'SAAa'), 'SAAE', 'ELRL'),  # Standard gauge 3kv dc
+    ('SAAa', ('SAAA', 'SAAa', 'SAAD', 'SAAd'), 'SAAE', 'ELRL'),  # Standard gauge 15kv ac
+    (('SAAA', 'SAAa', 'SAAD', 'SAAd'), 'SAAE', 'ELRL'),  # Standard gauge 25kv ac
     ('SAA*', 'SAAE', 'ELRL'),  # Standard gauge all voltages ac/dc
     ('MTRO', 'SAA4', 'SAA3'),  # Standard gauge Metro (MTRO is first be because it is better definded as metro)
     ('nAAN', 'NAAN', 'NGRL'),  # Narrow gauge track
@@ -65,7 +62,18 @@ g.add(grf.SetGlobalTrainMiscFlag(grf.GlobalTrainMiscFlag.DEPOT_FULL_TRAIN_WIDTH)
     ('nAAa', 'nAAA', 'nAAE', 'NAAa', 'NAAA', 'NAAE', 'ELNG'),  # Narrow gauge 15kv ac
 ])
 
-# Add SAAZ? for Oslo metro won't be purfect (could work with sets)
+standard_gauge_25kv_15kv = [standard_gauge_25kv, standard_gauge_15kv] # border crossing trains
+standard_gauge_3kv_1500v = [standard_gauge_3kv, standard_gauge_1500v]
+standard_gauge_25kv_3kv = [standard_gauge_25kv, standard_gauge_3kv]
+standard_gauge_25kv_1500v = [standard_gauge_25kv, standard_gauge_1500v]
+standard_gauge_15kv_3kv = [standard_gauge_15kv, standard_gauge_3kv]
+standard_gauge_15kv_1500v = [standard_gauge_15kv, standard_gauge_1500v]
+standard_gauge_25kv_15kv_3kv = [standard_gauge_25kv, standard_gauge_15kv, standard_gauge_3kv]
+standard_gauge_25kv_15kv_1500v = [standard_gauge_25kv, standard_gauge_15kv, standard_gauge_1500v]
+standard_gauge_25kv_3kv_1500v = [standard_gauge_25kv, standard_gauge_3kv, standard_gauge_1500v]
+standard_gauge_15kv_3kv_1500v = [standard_gauge_15kv, standard_gauge_3kv, standard_gauge_1500v]
+
+# Add SAAZ? for Oslo metro won't be perfect (could work with sets)
 
 # cargo table
 
