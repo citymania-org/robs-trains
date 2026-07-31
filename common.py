@@ -35,10 +35,10 @@ g.add_int_parameter(
     key='luggage-capacity',
     name='Luggage capacity multiplier',
     description='Multiplies the capacity of luggage carriages carrying mail, goods and food by this number',
-    default=1,
+    default=3,
     enum={
     0: '0 None',
-    1: '1 Default',
+    3: '3 Default',
     },
 )
 
