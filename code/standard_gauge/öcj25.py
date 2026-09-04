@@ -55,6 +55,7 @@ s_d_ÖCJ25_1_2 = Train(
         cc_replace=colours["CREAM"],
         cc2_replace=colours["MECONIUM"]
     ),
+    purchase_sprite_towed_id='s_d_ÖCJ25_1_2_car2',
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
     company='na',
@@ -146,6 +147,7 @@ s_d_ÖCJ25_2_2 = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["SEBROWN"]
     ),
+    purchase_sprite_towed_id='s_d_ÖCJ25_2_2_car2',
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
     company='na',
