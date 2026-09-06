@@ -40,7 +40,7 @@ d_d_ic2_1_dsb = Train(
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'GDS, LJ, OHJ, VL, RTOG',
+        'Operators': 'GDS, LJ, OHJ, VL, RTOG',
         'Trivia': 'All thirteen locomotives obtained by RTOG in 2009',
     }),
 ).add_articulated_part(
@@ -74,7 +74,7 @@ d_d_ic2_2_dsb = Train( # AC units on roof
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'RTOG, LT',
+        'Operators': 'RTOG, LT',
         'Trivia': 'All thirteen locomotives obtained by LT in 2015',
     }),
 ).add_articulated_part(

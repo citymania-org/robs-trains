@@ -43,7 +43,7 @@ d_d_y1_1_dsb = Train(
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'HHGB, HHJ',
+        'Operators': 'HHGB, HHJ',
     }),
 )
 
@@ -128,7 +128,7 @@ d_d_y2_1_dsb = Train(
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Short distance local passengers',
-        'Owners': 'LNJ',
+        'Operators': 'LNJ',
     }),
 )
 
@@ -192,7 +192,7 @@ d_d_y3_1_dsb = Train(
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Short distance local passengers',
-        'Owners': 'LNJ',
+        'Operators': 'LNJ',
     }),
 )
 
@@ -234,7 +234,7 @@ d_d_y4_1_dsb = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'HHGB, HHJ, LJ',
+        'Operators': 'HHGB, HHJ, LJ',
     }),
 )
 
@@ -296,7 +296,7 @@ d_d_y6_4_dsb = Train(
     introduction_date=date(1983, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'HHGB, HHJ',
+        'Operators': 'HHGB, HHJ',
     }),
 )
 
@@ -402,7 +402,7 @@ d_d_y8_1_dsb = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'HHGB, HHJ, LJ',
+        'Operators': 'HHGB, HHJ, LJ',
     }),
 )
 
@@ -502,7 +502,7 @@ d_d_y9_1_dsb = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Owners': 'HHJ, LJ',
+        'Operators': 'HHJ, LJ',
     }),
 )
 

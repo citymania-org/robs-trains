@@ -27,7 +27,7 @@ COMMON_et_PROPS = dict(
 d_e_et_1_dsb = Train(
     id='d_e_et_1_dsb',
     **COMMON_et_PROPS,
-    name='SJ X31K/DSB ET (Øresundståg)',
+    name='X31K/ET (Øresundståg)',
     liveries=make_psd_cc_liveries(
         'pp/øt.psd',
         shading=('a',),
@@ -43,6 +43,7 @@ d_e_et_1_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
+        'Operators': 'SJ, DSB',
     }),
 ).add_articulated_part(
     id='d_e_et2_1_dsb',
@@ -79,7 +80,7 @@ d_e_et_1_dsb = Train(
 d_e_et_2_dsb = Train(
     id='d_e_et_2_dsb',
     **COMMON_et_PROPS,
-    name='SJ X31K/DSB ET (Øresundståg)',
+    name='X31K/X32K/ET (Øresundståg)',
     liveries=make_psd_cc_liveries(
         'pp/øt.psd',
         shading=('a',),
@@ -95,6 +96,7 @@ d_e_et_2_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
+        'Operators': 'Öresundståg AB, DSB',
     }),
 ).add_articulated_part(
     id='d_e_et2_2_dsb',
@@ -131,7 +133,7 @@ d_e_et_2_dsb = Train(
 d_e_et_1_sj = Train(
     id='d_e_et_1_sj',
     **COMMON_et_PROPS,
-    name='SJ X31K (Øresundståg)',
+    name='X31K (Øresundståg)',
     liveries=make_psd_cc_liveries(
         'pp/øt.psd',
         shading=('a',),
@@ -139,7 +141,7 @@ d_e_et_1_sj = Train(
         overlay=('alight'),
         r_overlay=('alightr'),
         cc_replace=colours["GREY3"],
-        cc2_replace=colours["GREY8"]
+        cc2_replace=colours["GREY9"]
     ),
     purchase_sprite_towed_id='d_e_et2_1_sj',
     introduction_date=date(2001, 1, 1),
@@ -147,6 +149,7 @@ d_e_et_1_sj = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
+        'Operators': 'SJ',
     }),
 ).add_articulated_part(
     id='d_e_et2_1_sj',
@@ -158,7 +161,7 @@ d_e_et_1_sj = Train(
         overlay=('bl'),
         r_overlay=('blr'),
         cc_replace=colours['GREY3'],
-        cc2_replace=colours['GREY8'],
+        cc2_replace=colours['GREY9'],
     ),
     cargo_capacity=74,
     loading_speed=10,
@@ -173,7 +176,7 @@ d_e_et_1_sj = Train(
         overlay=('clight'),
         r_overlay=('clightr'),
         cc_replace=colours['GREY3'],
-        cc2_replace=colours['GREY8'],
+        cc2_replace=colours['GREY9'],
     ),
     cargo_capacity=75,
     loading_speed=10,
@@ -183,7 +186,7 @@ d_e_et_1_sj = Train(
 d_e_et_2_sj = Train(
     id='d_e_et_2_sj',
     **COMMON_et_PROPS,
-    name='SJ X32K (Øresundståg)',
+    name='X32K (Øresundståg)',
     liveries=make_psd_cc_liveries(
         'pp/øt.psd',
         shading=('a',),
@@ -199,6 +202,7 @@ d_e_et_2_sj = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
+        'Operators': 'SJ',
     }),
 ).add_articulated_part(
     id='d_e_et2_2_sj',
