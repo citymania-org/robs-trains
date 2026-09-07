@@ -89,7 +89,7 @@ s_d_ÖCJ25_1_2 = Train(
         paint='ÖCJ_2',
         overlay=['öcjlights_2'],
         cc_replace=colours['CREAM'],
-        cc2_replace=colours['DGREEN'],
+        cc2_replace=colours['MECONIUM'],
     ),
     cargo_capacity=38,
     loading_speed=10,
