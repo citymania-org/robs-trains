@@ -167,7 +167,7 @@ from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4,
 from code.standard_gauge.denwagen import de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12
 from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl
 from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
-from code.narrow_gauge.MÖJ_2to5 import s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj
+from code.narrow_gauge.MÖJ import s_d_Dx1_1_möj, s_d_Dx2_1_möj, s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_X1_1_vsbj, s_d_MÖJ4_1_möj, s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj
 from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
 from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
 from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
@@ -632,15 +632,17 @@ lib.make_purchase_sprites(
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
     # narrow gauge
+    s_d_Dx1_1_möj, s_d_Dx2_1_möj,
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
     grf.VariantGroup('MÖJ 2-5', s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj),
     grf.VariantGroup('NKlJ AEG', s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj),
+    s_d_X1_1_vsbj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_MÖJ4_1_möj,
     s_d_Xo6p_1_srj,
+    s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj,
     grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
     s_p_Co_1,
     s_p_UBp_ii_1,
-    
 ).set_variant_callbacks(g)))
 
 grf.main(g, 'The_International_Train_Set.grf')
