@@ -406,7 +406,7 @@ lib.make_purchase_sprites(
 )
 
 # chronological order within the categories
-# standard gauge -> narrow gauge -> broad gauge
+# country -> broad -> standard -> narrow -> power
 (g.add(lib.SetPurchaseOrder(
     # at
     # at electric 15
@@ -631,7 +631,8 @@ lib.make_purchase_sprites(
     # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
-    # narrow gauge
+    # se narrow gauge
+    #
     s_d_Dx1_1_möj, s_d_Dx2_1_möj,
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
