@@ -40,7 +40,7 @@ d_e_stog2_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
-        'Class': 'MM-FS',
+        'Formation': 'MM-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_1_dsb',
@@ -96,7 +96,7 @@ d_e_stog2_2_dsb = Train(
         'Loading speed': '30',
         'Use': 'Short distance local passengers with 1st class carriage',
         'Trivia': '7 of these sets existed for use on the Holte – Hillerød line because the local mayors could not imagine their poor citizens having to use a 2nd class carriage on their short distance commute',
-        'Class': 'MM-AS',
+        'Formation': 'MM-AS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_2_dsb',
@@ -153,7 +153,7 @@ d_e_stog2_9_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
-        'Class': 'MM-FS',
+        'Formation': 'MM-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_9_dsb',
@@ -208,7 +208,7 @@ d_e_stog2_4_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
-        'Class': 'MM-FU-MU-FS',
+        'Formation': 'MM-FU-MU-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_4_dsb',
@@ -293,7 +293,7 @@ d_e_stog2_3_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
-        'Class': 'MM-FS',
+        'Formation': 'MM-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_3_dsb',
@@ -348,7 +348,7 @@ d_e_stog2_10_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
-        'Class': 'MM-FU-MU-FS',
+        'Formation': 'MM-FU-MU-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_10_dsb',
@@ -434,7 +434,7 @@ d_e_stog2_11_dsb = Train(
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
-        'Class': 'MM-FS',
+        'Formation': 'MM-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_11_dsb',
@@ -490,7 +490,7 @@ d_e_stog2_12_dsb = Train(
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
-        'Class': 'MM-FU-MU-FS',
+        'Formation': 'MM-FU-MU-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_12_dsb',
@@ -575,7 +575,7 @@ d_e_stog2_5_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
         'Use': 'Short distance local passengers with bike space',
-        'Class': 'MM-FS',
+        'Formation': 'MM-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_5_dsb',
@@ -630,7 +630,7 @@ d_e_stog2_6_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
         'Use': 'Short distance local passengers with bike space',
-        'Class': 'MM-FU-MU-FS',
+        'Formation': 'MM-FU-MU-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_6_dsb',
@@ -716,7 +716,7 @@ d_e_stog2_7_dsb = Train(
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
-        'Class': 'MM-FS',
+        'Formation': 'MM-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_7_dsb',
@@ -772,7 +772,7 @@ d_e_stog2_8_dsb = Train(
         'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'One painted in this livery',
-        'Class': 'MM-FU-MU-FS',
+        'Formation': 'MM-FU-MU-FS',
     }),
 ).add_articulated_part(
     id='d_e_stog22_8_dsb',

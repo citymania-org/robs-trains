@@ -43,7 +43,7 @@ d_d_mz_i_1_dsb = Train(
     introduction_date=date(1967, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Note': 'MZ II introduced in 1970',
+        'Trivia': 'MZ II introduced in 1970',
     }),
 )
 

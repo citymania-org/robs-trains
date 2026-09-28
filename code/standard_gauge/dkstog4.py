@@ -37,7 +37,7 @@ d_e_stog4_5_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '40',
         'Use': 'Short distance local passengers',
-        'Class': 'SA',
+        'Formation': 'SA',
     }),
 ).add_articulated_part(
     id='d_e_stog42_5_dsb',
@@ -165,7 +165,7 @@ d_e_stog4_1_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '40',
         'Use': 'Short distance local passengers',
-        'Class': 'SA',
+        'Formation': 'SA',
     }),
 ).add_articulated_part(
     id='d_e_stog42_1_dsb',
@@ -293,7 +293,7 @@ d_e_stog4_2_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '40',
         'Use': 'Short distance local passengers',
-        'Class': 'SA',
+        'Formation': 'SA',
     }),
 ).add_articulated_part(
     id='d_e_stog42_2_dsb',
@@ -421,7 +421,7 @@ d_e_stog4_3_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '40',
         'Use': 'Short distance local passengers',
-        'Class': 'SE',
+        'Formation': 'SE',
     }),
 ).add_articulated_part(
     id='d_e_stog42_3_dsb',
@@ -497,7 +497,7 @@ d_e_stog4_4_dsb = Train(
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '40',
         'Use': 'Short distance local passengers',
-        'Class': 'SE',
+        'Formation': 'SE',
     }),
 ).add_articulated_part(
     id='d_e_stog42_4_dsb',
