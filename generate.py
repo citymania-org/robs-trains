@@ -149,6 +149,14 @@ from code.standard_gauge.dkstog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_st
 from code.standard_gauge.dkstog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
 from code.standard_gauge.secx import s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl
 from code.standard_gauge.C30 import s_e_C30_1_sl
+from code.standard_gauge.se80stock import s_p_80s
+from code.standard_gauge.se80stock import s_p_80s_A, s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_6_sj, s_p_A7_7_sj, s_p_A7_8_ssrt, s_p_A11_1_sj
+from code.standard_gauge.se80stock import s_p_AB9_1_sj, s_p_AB9_2_sj, s_p_AB7_1_sj
+from code.standard_gauge.se80stock import s_p_80s_B, s_p_B7_1_sj, s_p_B7_2_sj, s_p_B7_3_sj, s_p_B7_4_sj, s_p_B7_5_sj, s_p_B7_6_sj, s_p_B7_7_tagab, s_p_B4_1_sj, s_p_BF4_2_sj, s_p_BF4_3_sj, s_p_BF4_3_sj, s_p_BF4_4_sj, s_p_BF4_5_ssrt, s_p_BF7_6_sj, s_p_B2_1_sj, s_p_B2_2_sj, s_p_B2_3_sj, s_p_B2_4_sj, s_p_B2_5_ssrt, s_p_B7B_1_sj, s_p_B8_2_sj, s_p_B8_3_sj, s_p_B8_4_sj, s_p_B9_1_sj, s_p_B9_2_tkab, s_p_B9_3_sj, s_p_B9_3_ssrt, s_p_B10_1_sj, s_p_B10_2_sj, s_p_B10_3_sj, s_p_B10_4_sj, s_p_B11_1_sj, s_p_BF8_1_sj
+from code.standard_gauge.se80stock import s_p_80s_R, s_p_R4_1_sj, s_p_R4_2_sj, s_p_R4_3_sj, s_p_R4_4_sj, s_p_S12_1_sj, s_p_S12_2_sj, s_p_S12_3_sj, s_p_BFS9_1_sj, s_p_BFS9_2_tkab, s_p_BFS9_3_ssrt, s_p_BFS9_4_sj, s_p_BFS9_5_sj, s_p_RB11_1_sj, s_p_RB11_2_sj, s_p_RB7_1_sj
+from code.standard_gauge.se80stock import s_p_BC4_1_sj, s_p_BC4_2_sj, s_p_BC4_3_sj, s_p_BC4_4_ssrt, s_p_BC4_5_sj, s_p_WL4_1_sj, s_p_WL4_2_sj, s_p_WL4_3_ssrt, s_p_WL4_4_sj, s_p_WL6_1_sj, s_p_WL6_2_sj, s_p_WL6_3_ssrt,s_p_WL6_4_sj
+from code.standard_gauge.se80stock import s_p_AFM7_1_sj, s_p_AFM7_2_sj, s_p_AFM7_3_sj, s_p_AFM7_4_sj, s_p_S4_1_asea, s_p_S4_2_abb, s_p_S4_3_sj
+from code.standard_gauge.se80stock import s_p_80s_S, s_p_S1_1_sj, s_p_S1_2_sj, s_p_S1_3_sj, s_p_S1_4_sj, s_p_S1_5_sj
 from code.standard_gauge.dkcc import dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6
 from code.standard_gauge.dkcf import dk_p_cf_1, dk_p_cf_2, dk_p_cf_3
 from code.standard_gauge.dkbc import dk_p_bc_1, dk_p_bc_2, dk_p_bc_3
@@ -742,13 +750,15 @@ lib.make_purchase_sprites(
     # se carriages
     grf.VariantGroup('OKB "Hechtwagen"', se_p_BCo_1, se_p_BCort_1, se_p_BCo6b_1, se_p_Ro2b_1),
     # se carriages
+    grf.VariantGroup('80s stock', s_p_80s,
     grf.VariantGroup('80s stock 1st class', s_p_80s_A, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj), s_p_A11_1_sj),
-    #grf.VariantGroup('80s stock 1st & 2nd class', s_p_80s_AB, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
-    grf.VariantGroup('80s stock 2nd class', s_p_80s_B, grf.VariantGroup('B7', s_p_B7_1_sj, s_p_B7_2_sj, s_p_B7_3_sj, s_p_B7_4_sj, s_p_B7_5_sj, s_p_B7_6_sj, s_p_B7_7_tagab), grf.VariantGroup('B4/BF4/BF7', s_p_B4_1_sj, s_p_BF4_2_sj, s_p_BF4_3_sj, s_p_BF4_4_sj, s_p_BF4_5_ssrt, s_p_BF7_6_sj), grf.VariantGroup('B2', s_p_B2_1_sj, s_p_B2_2_sj, s_p_B2_3_sj, s_p_B2_4_sj, s_p_B2_5_ssrt), grf.VariantGroup('B7B/B8', s_p_B7B_1_sj, s_p_B8_2_sj, s_p_B8_3_sj, s_p_B8_4_sj), grf.VariantGroup('B9', s_p_B9_1_sj, s_p_B9_2_tkab, s_p_B9_3_sj, s_p_B9_3_ssrt), grf.VariantGroup('B10', s_p_B10_1_sj, s_p_B10_2_sj, s_p_B10_3_sj, s_p_B10_4_sj), s_p_B11_1_sj),
-    #grf.VariantGroup('80s stock Coachette', s_p_80s_AC, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
-    #grf.VariantGroup('80s stock Sleeper', s_p_80s_WL, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
-    #grf.VariantGroup('80s stock Resturant/kiosk', s_p_80s_R, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
-    #grf.VariantGroup('80s stock Special', s_p_80s_S, grf.VariantGroup('A7', s_p_A7_1_sj, s_p_A7_2_sj, s_p_A7_3_sj, s_p_A7_4_sj, s_p_A7_5_sj, s_p_A7_8_ssrt, s_p_A7_6_sj, s_p_A7_7_sj)),#, grf.VariantGroup('1st & 2nd class', ), grf.VariantGroup('2nd class', ))
+    grf.VariantGroup('80s stock 1st & 2nd class (AB9/AB7)', s_p_AB9_1_sj, s_p_AB9_2_sj, s_p_AB7_1_sj),
+    grf.VariantGroup('80s stock 2nd class', s_p_80s_B, grf.VariantGroup('B7', s_p_B7_1_sj, s_p_B7_2_sj, s_p_B7_3_sj, s_p_B7_4_sj, s_p_B7_5_sj, s_p_B7_6_sj, s_p_B7_7_tagab), grf.VariantGroup('B4/BF4/BF7', s_p_B4_1_sj, s_p_BF4_2_sj, s_p_BF4_3_sj, s_p_BF4_4_sj, s_p_BF4_5_ssrt, s_p_BF7_6_sj), grf.VariantGroup('B2', s_p_B2_1_sj, s_p_B2_2_sj, s_p_B2_3_sj, s_p_B2_4_sj, s_p_B2_5_ssrt), grf.VariantGroup('B7B/B8', s_p_B7B_1_sj, s_p_B8_2_sj, s_p_B8_3_sj, s_p_B8_4_sj), grf.VariantGroup('B9', s_p_B9_1_sj, s_p_B9_2_tkab, s_p_B9_3_sj, s_p_B9_3_ssrt), grf.VariantGroup('B10', s_p_B10_1_sj, s_p_B10_2_sj, s_p_B10_3_sj, s_p_B10_4_sj), s_p_B11_1_sj, s_p_BF8_1_sj),
+    grf.VariantGroup('80s stock Resturant / kiosk', s_p_80s_R, grf.VariantGroup('R4', s_p_R4_1_sj, s_p_R4_2_sj, s_p_R4_3_sj, s_p_R4_4_sj), grf.VariantGroup('S12', s_p_S12_1_sj, s_p_S12_2_sj, s_p_S12_3_sj), grf.VariantGroup('BFS9', s_p_BFS9_1_sj, s_p_BFS9_2_tkab, s_p_BFS9_3_ssrt, s_p_BFS9_4_sj, s_p_BFS9_5_sj), s_p_RB11_1_sj, s_p_RB11_2_sj, s_p_RB7_1_sj),
+    grf.VariantGroup('80s stock Coachette / sleeper', s_p_BC4_1_sj, grf.VariantGroup('BC4', s_p_BC4_2_sj, s_p_BC4_3_sj, s_p_BC4_4_ssrt, s_p_BC4_5_sj), grf.VariantGroup('WL4', s_p_WL4_1_sj, s_p_WL4_2_sj, s_p_WL4_3_ssrt, s_p_WL4_4_sj), grf.VariantGroup('WL6', s_p_WL6_1_sj, s_p_WL6_2_sj, s_p_WL6_3_ssrt, s_p_WL6_4_sj)),
+    grf.VariantGroup('80s stock Driving (UA7/AF7X/AFM7)', s_p_AFM7_1_sj, s_p_AFM7_2_sj, s_p_AFM7_3_sj, s_p_AFM7_4_sj),
+    grf.VariantGroup('80s stock Special', s_p_80s_S, grf.VariantGroup('S1', s_p_S1_1_sj, s_p_S1_2_sj, s_p_S1_3_sj, s_p_S1_4_sj, s_p_S1_5_sj), grf.VariantGroup('S4', s_p_S4_1_asea, s_p_S4_2_abb, s_p_S4_3_sj)),
+    ),
     # se wagons
     se_w_121to122_1 ,
     se_w_F3_1,
