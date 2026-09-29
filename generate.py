@@ -171,6 +171,7 @@ from code.narrow_gauge.MÖJ import s_d_Dx1_1_möj, s_d_Dx2_1_möj, s_e_MÖJ_2to5
 from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
 from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
 from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
+from code.narrow_gauge.nothamshavnsbanen import no_e_st1to3_1, no_e_st7to8_1, no_e_st5to6_1, no_e_st1_1, no_e_st1_2, no_e_st4_1, no_e_st5to6_2, no_p_ACo_1
 from code.standard_gauge.frbb67000 import fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7
 from code.standard_gauge.frcc72000 import fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6
 from code.standard_gauge.fra1aa1a68000 import fr_d_68000_1, fr_d_68000_2, fr_d_68000_3
@@ -193,6 +194,9 @@ from code.standard_gauge.dkteak import dk_p_teak_1, dk_p_teak_2, dk_p_teak_3, dk
 from code.standard_gauge.seiore import se_e_iore_1
 from code.standard_gauge.dkcompl import dk_p_compl_1, dk_p_compl_2, dk_p_compl_3, dk_p_compl_4, dk_p_compl_5
 from code.standard_gauge.chae814 import ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3, ch_e_ae814_4, ch_e_ae814_5, ch_e_ae814_6, ch_e_ae814_7
+from code.standard_gauge.seugjdmu import se_d_201to202_1, se_d_Xo6_1
+from code.standard_gauge.nohkb import no_e_500_1, no_e_500_2, no_e_500_3, no_e_500_4, no_e_500_5
+from code.standard_gauge.seokbstock import se_p_BCo_1, se_p_BCo6b_1, se_p_BCort_1, se_p_Ro2b_1, se_w_121to122_1, se_w_F3_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -575,6 +579,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('"Lok 2000"', no_e_el18_1, no_e_el18_2),
     # no emu dc
     n_o_Wes_1_hkb,
+    grf.VariantGroup('500-typer', no_e_500_1, no_e_500_2, no_e_500_3, no_e_500_4, no_e_500_5),
     grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
     # no emu 15
     n_e_type64_1_nsb,
@@ -608,6 +613,7 @@ lib.make_purchase_sprites(
     s_e_rc7_1_sj,
     # se dmu
     grf.VariantGroup('њÖCJ 24-25 "Bilvagnar"', s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2),
+    grf.VariantGroup('UGJ 201-202', se_d_201to202_1, se_d_Xo6_1),
     grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
     grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
     grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
@@ -628,22 +634,53 @@ lib.make_purchase_sprites(
     # se emu 3rd
     grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C8_1_sl, s_e_C8_2_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl),
     s_e_C30_1_sl, 
+    # se carriages
+    grf.VariantGroup('OKB "Hechtwagen"',se_p_BCo_1, se_p_BCo6b_1, se_p_BCort_1, se_p_Ro2b_1),
+    # se luggage carriages
+    se_w_121to122_1,
+    se_w_F3_1,
     # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
-    # se narrow gauge
-    #
-    s_d_Dx1_1_möj, s_d_Dx2_1_möj,
+
+    # narrow gauge
+    # no ng 15kv
+    no_e_st1to3_1,
+    no_e_st7to8_1,
+    no_e_st5to6_1,
+    no_e_st1_1,
+    no_e_st1_2,
+    # no ng emu 15kv
+    no_e_st4_1,
+    no_e_st5to6_2,
+    # no ng carriages
+    no_p_ACo_1,
+    # no ng wagons
+    # se ng steam
+    # se ng diesel
+    s_d_Dx1_1_möj, 
+    s_d_Dx2_1_möj,
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
+    # se ng 1500v
+    # se ng 15kv
     grf.VariantGroup('MÖJ 2-5', s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj),
     grf.VariantGroup('NKlJ AEG', s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj),
-    s_d_X1_1_vsbj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_MÖJ4_1_möj,
+    # se ng dmu
+    s_d_X1_1_vsbj, 
+    s_d_X1_1_vb, 
+    s_d_X2_1_vb, s_d_X3_1_vb, 
+    s_d_MÖJ4_1_möj,
     s_d_Xo6p_1_srj,
-    s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj,
+    # se ng emu 1500v
     grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
+    # se ng emu 15kv
+    s_e_MÖJ1_1_möj, 
+    s_e_MÖJ6_1_möj,
+    # se ng carriages
     s_p_Co_1,
     s_p_UBp_ii_1,
+    # se ng wagons
 ).set_variant_callbacks(g)))
 
 grf.main(g, 'The_International_Train_Set.grf')
