@@ -37,8 +37,8 @@ g.add_int_parameter(
     description='Multiplies the capacity of luggage carriages carrying mail, goods and food by this number',
     default=3,
     enum={
-    0: '0 None',
-    3: '3 Default',
+    0: '0 (None)',
+    3: '3 (Default)',
     },
 )
 
