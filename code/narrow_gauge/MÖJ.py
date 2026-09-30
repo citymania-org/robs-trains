@@ -39,7 +39,7 @@ s_d_Dx1_1_möj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Universal',
     }),
 )
@@ -75,9 +75,9 @@ s_d_Dx2_1_möj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Universal',
-        'Trivia': 'Two were built for MÖJ but for unknown reasons the second one was rebuilt for metre-guage and sent to work in Tunisia'
+        'Trivia': 'Two were built for MÖJ but for unknown reasons the second one was rebuilt for metre-gauge and sent to work in Tunisia'
     }),
 )
 
@@ -119,7 +119,7 @@ s_e_MÖJ_2to5_1_möj = Train( #Add reversing graphics
     company='na',
     introduction_date=date(1915, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Universal',
     }),
 )
@@ -160,7 +160,7 @@ s_e_MÖJ_2to5_2_möj = Train(
     company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Operator': 'MÖJ',
         'Use': 'Local passenger',
     }),
@@ -199,7 +199,7 @@ s_d_X1_1_vb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Local passengers',
         'Trivia': 'In the early 1940s it was rebuilt into a regular carriage'
     }),
@@ -237,7 +237,7 @@ s_d_X2_1_vb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Local passengers',
     }),
 )
@@ -274,7 +274,7 @@ s_d_X3_1_vb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Local passengers',
     }),
 )
@@ -310,7 +310,7 @@ s_d_X1_1_vsbj = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Local passengers',
         'Trivia': 'In 1944 it was rebuilt into a regular carriage'
     }),
@@ -319,13 +319,13 @@ s_d_X1_1_vsbj = Train(
 s_d_MÖJ4_1_möj = Train(
     id='s_d_MÖJ4_1_möj',
     name='ЉњMÖJ 4', 
-    length=5,  #Љ Length needs to be researched
+    length=6,  #Љ Length needs to be researched
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
-        shading=('5a',),
-        paint=('5b',),
-        cc_replace=colours["BROWN"],
-        cc2_replace=colours["BROWN"]
+        shading=('6a',),
+        paint=('6b',),
+        cc_replace=colours["SEBROWN"],    #Colour needs to be researched
+        cc2_replace=colours["SEBROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
     country='sweden',
@@ -342,12 +342,12 @@ s_d_MÖJ4_1_möj = Train(
     weight=27,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=20,  #ЉCapacity needs to be researched
+    cargo_capacity=40,  #ЉApproximation
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Local passengers',
         'Trivia': 'Notoriusly unreliable'
     }),
@@ -386,7 +386,7 @@ s_e_MÖJ1_1_möj = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Universal',
         'Trivia': 'It initially had two axles but a third unpowered axle was quickly added to reduce the axle load'
     }),
@@ -423,7 +423,9 @@ s_e_MÖJ6_1_möj = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Guage': '891mm',
+        'Gauge': '891mm',
         'Use': 'Local passengers',
     }),
 )
+
+#Carriages

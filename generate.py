@@ -581,6 +581,11 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Type 69A', n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb,),
     # no carriages
     d_p_al_5_dsb,
+    # no narrow gauge
+    # no ng electric 15
+    # no ng emu 15
+    # no ng carriages
+    # no ng wagons
     # pl
     # pl diesel
     d_d_me_ii_7_skpl,
@@ -627,23 +632,38 @@ lib.make_purchase_sprites(
     s_e_x62_1_sj,
     # se emu 3rd
     grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C8_1_sl, s_e_C8_2_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl),
-    s_e_C30_1_sl, 
+    s_e_C30_1_sl,
+    # se carriages
     # se wagons
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
     # se narrow gauge
-    #
-    s_d_Dx1_1_möj, s_d_Dx2_1_möj,
+    # se ng steam
+    # se ng diesel
+    s_d_Dx1_1_möj,
+    s_d_Dx2_1_möj,
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
+    # se ng electric dc
+    # se ng electric 15
     grf.VariantGroup('MÖJ 2-5', s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj),
     grf.VariantGroup('NKlJ AEG', s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj),
-    s_d_X1_1_vsbj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_MÖJ4_1_möj,
+    # se ng dmu
+    s_d_X1_1_vsbj,
+    s_d_X1_1_vb,
+    s_d_X2_1_vb,
+    s_d_X3_1_vb,
+    s_d_MÖJ4_1_möj,
     s_d_Xo6p_1_srj,
-    s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj,
+    # se ng emu dc
     grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
+    # se ng emu 15
+    s_e_MÖJ1_1_möj,
+    s_e_MÖJ6_1_möj,
+    # se ng carriages
     s_p_Co_1,
     s_p_UBp_ii_1,
+    # se ng wagons
 ).set_variant_callbacks(g)))
 
 grf.main(g, 'The_International_Train_Set.grf')
