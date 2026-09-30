@@ -34,7 +34,7 @@ n_e_type64_1_nsb = Train(
         shading=['type64', 'type64roof'],
         paint='type64nsb',
         overlay=('type64light',),
-        cc_replace=colours["NSBRED"],
+        cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),
     company='na',
