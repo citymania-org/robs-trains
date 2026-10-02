@@ -486,6 +486,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њ"EuroSprinter"', d_e_eg_1_dsb, d_e_eg_2_dsb, d_e_eg_3_dsb),
     grf.VariantGroup('"Vectron"', d_e_eb_1_dsb, d_e_eb_2_dsb),
     # dk electric 3rd
+    # dk smu
     # dk dmu
     grf.VariantGroup('ML', d_d_ml_1_dsb, d_d_ml_2_dsb),
     d_d_mq_1_dsb,
@@ -528,6 +529,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('70s local stock', d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, d_p_bn_4_dsb, d_p_bn_3_dsb, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_6_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb,),
     grf.VariantGroup('APO Lyntog Prototype (IC5)', dk_p_ic5a_1, dk_p_ic5a_2, dk_p_ic5a_3, dk_p_ic5a_4, dk_p_ic5a_5, dk_p_ic5a_6, dk_p_ic5b_1, dk_p_ic5b_2, d_p_ic5_1_dsb, d_p_ic5_2_dsb),
     grf.VariantGroup('4th gen Bombardier DD carriages', d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_b_ii_4_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_bk_iii_4_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb, d_p_abs_4_dsb),
+    # dk mail wagons
     # dk wagons
     # dl
     # dl dmu
@@ -645,9 +647,13 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њZ4p', s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl,),
     s_d_Tp_1_sj,
     # se ng electric dc
+    # se ng electric 3000
     # se ng electric 15
     grf.VariantGroup('MÖJ 2-5', s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj),
     grf.VariantGroup('NKlJ AEG', s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj),
+    # se ng electric 25
+    # se ng electric 3rd
+    # se ng smu
     # se ng dmu
     s_d_X1_1_vsbj,
     s_d_X1_1_vb,
@@ -657,12 +663,16 @@ lib.make_purchase_sprites(
     s_d_Xo6p_1_srj,
     # se ng emu dc
     grf.VariantGroup('њX10p', s_e_X10p_1_sl, s_e_X10p_2_sl),
+    # se ng emu 3000
     # se ng emu 15
     s_e_MÖJ1_1_möj,
     s_e_MÖJ6_1_möj,
+    # se ng emu 25
+    # se ng emu 3rd
     # se ng carriages
     s_p_Co_1,
     s_p_UBp_ii_1,
+    # se ng mail wagons
     # se ng wagons
 ).set_variant_callbacks(g)))
 
