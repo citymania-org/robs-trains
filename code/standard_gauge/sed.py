@@ -39,7 +39,7 @@ se_e_d_1 = Train(
     company='na',
     introduction_date=date(1925, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Express passengers',
     }),
 )
 
@@ -60,7 +60,7 @@ se_e_d_2 = Train(
     company='na',
     introduction_date=date(1925, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Freight',
     }),
 )
 
@@ -81,7 +81,7 @@ se_e_d_3 = Train(
     company='na',
     introduction_date=date(1933, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Express passengers',
     }),
 )
 
@@ -102,7 +102,7 @@ se_e_d_4 = Train(
     company='na',
     introduction_date=date(1933, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Freight',
     }),
 )
 
@@ -123,7 +123,7 @@ se_e_d_5 = Train(
     company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Express passengers',
     }),
 )
 
@@ -144,7 +144,7 @@ se_e_d_6 = Train(
     company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Express passengers',
     }),
 )
 
@@ -165,7 +165,7 @@ se_e_d_7 = Train(
     company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Freight',
     }),
 )
 
@@ -186,7 +186,7 @@ se_e_d_8 = Train(
     company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+        'Use': 'Freight',
     }),
 )
 
