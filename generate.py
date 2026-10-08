@@ -193,6 +193,7 @@ from code.standard_gauge.dkteak import dk_p_teak_1, dk_p_teak_2, dk_p_teak_3, dk
 from code.standard_gauge.seiore import se_e_iore_1
 from code.standard_gauge.dkcompl import dk_p_compl_1, dk_p_compl_2, dk_p_compl_3, dk_p_compl_4, dk_p_compl_5
 from code.standard_gauge.chae814 import ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3, ch_e_ae814_4, ch_e_ae814_5, ch_e_ae814_6, ch_e_ae814_7
+from code.standard_gauge.sed import se_e_d_1, se_e_d_2, se_e_d_3, se_e_d_4, se_e_d_5, se_e_d_6, se_e_d_7, se_e_d_8, se_e_d_9, se_e_d_10
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -603,6 +604,7 @@ lib.make_purchase_sprites(
     se_d_205_1,
     d_d_me_ii_5_nrfab,
     # se electric 15
+    grf.VariantGroup('D', se_e_d_1, se_e_d_2, se_e_d_3, se_e_d_4, se_e_d_5, se_e_d_6, se_e_d_7, se_e_d_8, se_e_d_9, se_e_d_10),
     se_e_f_1,
     se_e_mg_1,
     grf.VariantGroup('Da', se_e_da_1, se_e_da_2, se_e_da_3, se_e_da_4),
