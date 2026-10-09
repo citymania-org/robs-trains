@@ -211,6 +211,8 @@ class LiverySprites():
 
         self.sprites = (livery.get_sprites(), livery.get_r_sprites())
         
+    def __repr__(self):
+        return self.name
 
 def _make_liveries(liveries, is_articulated=False):
     # Currently unused vox stuff
@@ -368,7 +370,7 @@ class Train(grf.Train):
 
         if kw.get('intermediate_graphics_chain') is not None:
             del kw['intermediate_graphics_chain']
-            print(kw['name'])
+            print(kw['name'], 'weird code???????')
 
         if track_type is not None:
             if isinstance(track_type, (tuple, list)):
@@ -408,7 +410,7 @@ class Train(grf.Train):
             default=0x400,
             code='cargo_subtype',
         )
-        
+
     def _add_auto_articulated_parts(self, id, mid_shorten, mid_liveries, art_shorten, art_liveries, props):
         # TODO move auto-articulated stuff to the generation phase so props can be changed after creation.
         art_props = {'misc_flags': self.Flags.USE_CARGO_MULT}
