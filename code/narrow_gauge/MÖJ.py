@@ -113,6 +113,7 @@ s_e_MÖJ_2to5_1_möj = Train( #Add reversing graphics
         shading='MÖJ 2-5',
         paint=['möj', 'Wood'],
         overlay=('möjlights'),
+        r_overlay=('möjlightsr'),
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
@@ -154,6 +155,7 @@ s_e_MÖJ_2to5_2_möj = Train(
         shading=['MÖJ 2-5', 'Wood', 'möj1936'],
         paint='möj',
         overlay=('möjlights'),
+        r_overlay=('möjlightsr'),
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
@@ -429,3 +431,38 @@ s_e_MÖJ6_1_möj = Train(
 )
 
 #Carriages
+
+se_p_BCo_2 = Train(
+    id='se_p_BCo_2',
+    name='ЉњMÖJ BCo',
+    length=7,
+    liveries=make_psd_cc_liveries(
+            'pp/7TemplateNG.psd',
+            shading=('1',),
+            paint=('2',),
+            cc_replace=colours["SEBROWN"],
+            cc2_replace=colours["SEBROWN"]
+        ),
+    engine_class=Train.EngineClass.DIESEL,
+    track_type=extra_narrow_gauge,
+    country='sweden',
+    company='na',
+    power_type='na',
+    max_speed=Train.kmhish(40), #Љ: Estimate
+    power=0,
+    introduction_date=date(1897, 1, 1),
+    vehicle_life=8,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=Train.ton(int(17)),
+    tractive_effort_coefficient=79,
+    running_cost_factor=222,
+    cargo_capacity=36,
+    loading_speed=10,
+    cost_factor=24,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Guage': '891mm',
+        'Use': 'Local passengers',
+    }),
+)

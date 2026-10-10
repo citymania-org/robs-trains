@@ -29,12 +29,13 @@ COMMON_C2_PROPS = dict(
 s_e_C2_1_ss = Train(
     **COMMON_C2_PROPS,
     id='s_e_C2_1_ss',
-    name='SS C2',
+    name='њSS C2',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
         shading=['C1', 'C1roof'],
         paint=['C1ss'],
         overlay=('C1lights',),
+        r_overlay=('C1lightsr'),
         cc_replace=colours["GREEN"],
         cc2_replace=colours["GREEN"]
     ),
@@ -51,12 +52,13 @@ s_e_C2_1_ss = Train(
 s_e_C2_2_sl = Train(
     **COMMON_C2_PROPS,
     id='s_e_C2_2_sl',
-    name='SL C2',
+    name='њSL C2',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
         shading=['C1', 'C1roof'],
         paint=['C1sl'],
         overlay=('C1lights',),
+        r_overlay=('C1lightsr'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -94,12 +96,13 @@ COMMON_C3_PROPS = dict(
 s_e_C3_1_ss = Train(
     **COMMON_C3_PROPS,
     id='s_e_C3_1_ss',
-    name='SS C3',
+    name='њSS C3',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C3', 'C1roof'],
+        shading=['C1', 'C3', 'C1roof'],
         paint=['C1ss'],
         overlay=('C3lights',),
+        r_overlay=('C3lightsr'),
         cc_replace=colours["GREEN"],
         cc2_replace=colours["GREEN"]
     ),
@@ -116,12 +119,13 @@ s_e_C3_1_ss = Train(
 s_e_C3_2_sl = Train(
     **COMMON_C3_PROPS,
     id='s_e_C3_2_sl',
-    name='SL C3',
+    name='њSL C3',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C3', 'C1roof'],
+        shading=['C1', 'C3', 'C1roof'],
         paint=['C1sl'],
         overlay=('C3lights',),
+        r_overlay=('C3lightsr'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -159,12 +163,13 @@ COMMON_C4_PROPS = dict(
 s_e_C4_1_ss = Train(
     **COMMON_C4_PROPS,
     id='s_e_C4_1_ss',
-    name='SS C4',
+    name='њSS C4',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C4A', 'C4Aroof'],
+        shading=['C1', 'C4A', 'C4Aroof'],
         paint='C4Ass',
         overlay=('C4Alights',),
+        r_overlay=('C4Blights'),
         cc_replace=colours["GREEN"],
         cc2_replace=colours["GREEN"]
     ),
@@ -182,9 +187,10 @@ s_e_C4_1_ss = Train(
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C4B', 'C4Broof'],
+        shading=['C1', 'C4B', 'C4Broof'],
         paint='C4Bss',
         overlay=['C4Blights'],
+        r_overlay=('C4Alights'),
         cc_replace=colours['GREEN'],
         cc2_replace=colours['GREEN'],
     ),
@@ -196,12 +202,13 @@ s_e_C4_1_ss = Train(
 s_e_C4_2_sl = Train(
     **COMMON_C4_PROPS,
     id='s_e_C4_2_sl',
-    name='SL C4',
+    name='њSL C4',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C4A', 'C4Aroof'],
+        shading=['C1', 'C4A', 'C4Aroof'],
         paint='C4Asl',
         overlay=('C4Alights',),
+        r_overlay=('C4Blights'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -219,9 +226,10 @@ s_e_C4_2_sl = Train(
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C4B', 'C4Broof'],
+        shading=['C1', 'C4B', 'C4Broof'],
         paint='C4Bsl',
         overlay=['C4Blights'],
+        r_overlay=('C4Alights'),
         cc_replace=colours['SLBLUE'],
         cc2_replace=colours['GREY1'],
     ),
@@ -254,12 +262,13 @@ COMMON_C5_PROPS = dict(
 s_e_C5_1_ss = Train(
     **COMMON_C5_PROPS,
     id='s_e_C5_1_ss',
-    name='SS C5',
+    name='њSS C5',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C4A', 'C4Aroof'],
+        shading=['C1', 'C4A', 'C4Aroof'],
         paint='C4Asl',
         overlay=('C4Alights',),
+        r_overlay=('C4Blights'),
         cc_replace=colours["GREY5"],
         cc2_replace=colours["GREY5"]
     ),
@@ -277,9 +286,10 @@ s_e_C5_1_ss = Train(
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
-        shading=['C4B', 'C4Broof'],
+        shading=['C1', 'C4B', 'C4Broof'],
         paint='C4Bsl',
         overlay=['C4Blights'],
+        r_overlay=('C4Alights'),
         cc_replace=colours['GREY5'],
         cc2_replace=colours['GREY5'],
     ),
@@ -312,7 +322,7 @@ COMMON_9239_PROPS = dict(
 s_e_9239_1_sl = Train(
     **COMMON_9239_PROPS,
     id='s_e_9239_1_sl',
-    name='SL 9239',
+    name='њSL 9239',
     liveries=make_psd_cc_liveries(
         'pp/Cx.psd',
         shading=['C1', 'C1roof', '9239'],
@@ -503,96 +513,6 @@ s_e_C6_4_sl = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
-COMMON_C8_PROPS = dict(
-    length=8,
-    misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='3rd',
-    engine_class=Train.EngineClass.ELECTRIC,
-    track_type=metro,
-    max_speed=Train.kmhish(90),
-    power=946,
-    vehicle_life=30,
-    model_life=30,
-    climates_available=grf.ALL_CLIMATES,
-    weight=46,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=158,
-    loading_speed=40,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
-)
-
-s_e_C8_1_sl = Train(
-    **COMMON_C8_PROPS,
-    id='s_e_C8_1_sl',
-    name='њSL C8',
-    liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a'),
-        paint=('8b'),
-        cc_replace=colours["SLBLUE"],
-        cc2_replace=colours["GREY1"]
-    ),
-    purchase_sprite_towed_id='s_e_C8_1_sl_car2',
-    company='sl',
-    introduction_date=date(1974, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Operator': 'SL',
-        'Use': 'Stockholm Metro',
-        'Builder': 'ASEA, Hägglund',
-        'Trivia': '''Units 2819 and 2821 were rebuilt into C10, units 2820 and 2822 were rebuilt into C11, both for use on Saltsjöbanan''',
-    }),
-).add_articulated_part(
-    id='s_e_C8_1_sl_car2',
-    length=8,
-    liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a'),
-        paint=('8b'),
-        cc_replace=colours['SLBLUE'],
-        cc2_replace=colours['GREY1'],
-    ),
-    cargo_capacity=158,
-    loading_speed=40,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-
-s_e_C8_2_sl = Train(
-    **COMMON_C8_PROPS,
-    id='s_e_C8_2_sl',
-    name='њSL C8',
-    liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a'),
-        paint=('8b'),
-        cc_replace=colours["SLBLUE"],
-        cc2_replace=colours["GREY1"]
-    ),
-    purchase_sprite_towed_id='s_e_C8_2_sl_car2',
-    company='sl',
-    introduction_date=date(1999, 1, 1),
-    additional_text=grf.fake_vehicle_info({
-        'Operator': 'SL',
-        'Use': 'Stockholm Metro',
-        'Builder': 'ASEA, Hägglund',
-    }),
-).add_articulated_part(
-    id='s_e_C8_2_sl_car2',
-    length=8,
-    liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a'),
-        paint=('8b'),
-        cc_replace=colours['SLBLUE'],
-        cc2_replace=colours['GREY1'],
-    ),
-    cargo_capacity=158,
-    loading_speed=40,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-
 COMMON_C13_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
@@ -615,7 +535,7 @@ COMMON_C13_PROPS = dict(
 )
 
 s_e_C13_1_sl = Train(
-    **COMMON_C8_PROPS,
+    **COMMON_C13_PROPS,
     id='s_e_C13_1_sl',
     name='њSL C13',
     liveries=make_psd_cc_liveries(

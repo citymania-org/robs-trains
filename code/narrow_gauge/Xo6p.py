@@ -33,6 +33,7 @@ s_d_Xo6p_1_srj = Train(
         shading=['Xo6p', 'srjroof'], 
         paint='srj', 
         overlay='srjlights', 
+        r_overlay='srjlightsr',
         cc_replace=colours["DCREAM"], 
         cc2_replace=colours["SEBROWN"],
     ),

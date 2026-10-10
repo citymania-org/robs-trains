@@ -149,7 +149,7 @@ from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
 from code.standard_gauge.dkstog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb
 from code.standard_gauge.dkstog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
 from code.standard_gauge.dkstog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
-from code.standard_gauge.Cx import s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl ,s_e_C8_1_sl, s_e_C8_2_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl
+from code.standard_gauge.secx import s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl
 from code.standard_gauge.C30 import s_e_C30_1_sl
 from code.standard_gauge.dkcc import dk_p_cc_1, dk_p_cc_2, dk_p_cc_3, dk_p_cc_4, dk_p_cc_5, dk_p_cc_6
 from code.standard_gauge.dkcf import dk_p_cf_1, dk_p_cf_2, dk_p_cf_3
@@ -167,10 +167,11 @@ from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4,
 from code.standard_gauge.denwagen import de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12
 from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl
 from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
-from code.narrow_gauge.MÖJ import s_d_Dx1_1_möj, s_d_Dx2_1_möj, s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_X1_1_vsbj, s_d_MÖJ4_1_möj, s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj
+from code.narrow_gauge.MÖJ import s_d_Dx1_1_möj, s_d_Dx2_1_möj, s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_X1_1_vsbj, s_d_MÖJ4_1_möj, s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj, se_p_BCo_2
 from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
 from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
 from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
+from code.narrow_gauge.nothamshavnsbanen import no_e_st1to3_1, no_e_st7to8_1, no_e_st5to6_1, no_e_st1_1, no_e_st1_2, no_e_st4_1, no_e_st5to6_2, no_p_ACo_1
 from code.standard_gauge.frbb67000 import fr_d_67000_1, fr_d_67000_2, fr_d_67300_1, fr_d_67300_2, fr_d_67300_3, fr_d_67300_4, fr_d_67400_1, fr_d_67400_2, fr_d_67400_3, fr_d_67400_4, fr_d_67400_5, fr_d_67400_6, fr_d_67400_7
 from code.standard_gauge.frcc72000 import fr_d_72000_1, fr_d_72000_2, fr_d_72000_3, fr_d_72000_4, fr_d_72000_5, fr_d_72000_6
 from code.standard_gauge.fra1aa1a68000 import fr_d_68000_1, fr_d_68000_2, fr_d_68000_3
@@ -194,6 +195,7 @@ from code.standard_gauge.seiore import se_e_iore_1
 from code.standard_gauge.dkcompl import dk_p_compl_1, dk_p_compl_2, dk_p_compl_3, dk_p_compl_4, dk_p_compl_5
 from code.standard_gauge.chae814 import ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3, ch_e_ae814_4, ch_e_ae814_5, ch_e_ae814_6, ch_e_ae814_7
 from code.standard_gauge.sed import se_e_d_1, se_e_d_2, se_e_d_3, se_e_d_4, se_e_d_5, se_e_d_6, se_e_d_7, se_e_d_8, se_e_d_9, se_e_d_10
+from code.standard_gauge.seokbstock import se_p_BCo_1, se_p_BCo6b_1, se_p_BCort_1, se_p_Ro2b_1, se_w_121to122_1 ,se_w_F3_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -586,8 +588,15 @@ lib.make_purchase_sprites(
     d_p_al_5_dsb,
     # no narrow gauge
     # no ng electric 15
+    no_e_st1to3_1,
+    no_e_st7to8_1,
+    no_e_st5to6_1, 
+    grf.VariantGroup('S&T "Sommerloket"',  no_e_st1_1, no_e_st1_2), 
     # no ng emu 15
+    no_e_st4_1,
+    no_e_st5to6_2,
     # no ng carriages
+    no_p_ACo_1,
     # no ng wagons
     # pl
     # pl diesel
@@ -635,10 +644,13 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њX61', s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj),
     s_e_x62_1_sj,
     # se emu 3rd
-    grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C8_1_sl, s_e_C8_2_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl),
+    grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl),
     s_e_C30_1_sl,
     # se carriages
+    grf.VariantGroup('OKB "Hechtwagen"', se_p_BCo_1, se_p_BCort_1, se_p_BCo6b_1, se_p_Ro2b_1),
     # se wagons
+    se_w_121to122_1 ,
+    se_w_F3_1,
     s_w_Hbis_sj,
     s_w_Gblssy_2_gc,
     # se narrow gauge
@@ -672,6 +684,7 @@ lib.make_purchase_sprites(
     # se ng emu 25
     # se ng emu 3rd
     # se ng carriages
+    se_p_BCo_2,
     s_p_Co_1,
     s_p_UBp_ii_1,
     # se ng mail wagons

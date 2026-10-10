@@ -2963,7 +2963,32 @@
             "se_e_d_7": 3377,
             "se_e_d_8": 3378,
             "se_e_d_9": 3379,
-            "se_e_d_10": 3380
+            "se_e_d_10": 3380,
+            "no_e_st1to3_1": 3381,
+            "no_e_st7to8_1": 3382,
+            "no_e_st5to6_1": 3383,
+            "no_e_st1_1": 3384,
+            "no_e_st1_2": 3385,
+            "no_e_st4_1": 3386,
+            "no_e_st5to6_2": 3387,
+            "no_p_ACo_1": 3388,
+            "__se_p_BCo_1_aa_mid": 3389,
+            "__se_p_BCo_1_aa_tail": 3390,
+            "se_p_BCo_1": 3391,
+            "__se_p_BCo6b_1_aa_mid": 3392,
+            "__se_p_BCo6b_1_aa_tail": 3393,
+            "se_p_BCo6b_1": 3394,
+            "__se_p_BCort_1_aa_mid": 3395,
+            "__se_p_BCort_1_aa_tail": 3396,
+            "se_p_BCort_1": 3397,
+            "__se_p_Ro2b_1_aa_mid": 3398,
+            "__se_p_Ro2b_1_aa_tail": 3399,
+            "se_p_Ro2b_1": 3400,
+            "__se_w_121to122_1_aa_mid": 3401,
+            "__se_w_121to122_1_aa_tail": 3402,
+            "se_w_121to122_1": 3403,
+            "se_w_F3_1": 3404,
+            "se_p_BCo_2": 3405
         }
     }
 }

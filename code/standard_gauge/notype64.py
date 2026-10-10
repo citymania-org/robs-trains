@@ -18,7 +18,7 @@ COMMON_type64_PROPS = dict(
     weight=35,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=158,
+    cargo_capacity=38,
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -34,6 +34,7 @@ n_e_type64_1_nsb = Train(
         shading=['type64', 'type64roof'],
         paint='type64nsb',
         overlay=('type64light',),
+        r_overlay=('type64lightr'),
         cc_replace=colours["NSBRED"],
         cc2_replace=colours["YELLOW"]
     ),
