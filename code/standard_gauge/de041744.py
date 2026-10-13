@@ -102,3 +102,80 @@ de_e_e17_1 = Train(
         'Trivia': 'Later classed as DB 117',
     }),
 )
+
+COMMON_e44_PROPS = dict(
+    length=7,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='15kv',
+    engine_class=Train.EngineClass.ELECTRIC, 
+    track_type=standard_gauge_15kv,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    country='germany',
+    max_speed=Train.kmhish(90),
+    power=2991,
+    weight=78,
+)
+
+de_e_e44_1 = Train(
+    **COMMON_e44_PROPS,
+    id='de_e_e44_1',
+    name='DR E 44',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    company='na',
+    introduction_date=date(1932, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as DB 144 & DR 244',
+    }),
+)
+
+de_e_e44_2 = Train(
+    **COMMON_e44_PROPS,
+    id='de_e_e44_2',
+    name='DR E 44', #red wheels
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    company='na',
+    introduction_date=date(1932, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+        'Trivia': 'Later classed as DB 144 & DR 244',
+    }),
+)
+
+de_e_e44_3 = Train(
+    **COMMON_e44_PROPS,
+    id='de_e_e44_3',
+    name='DB 144',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["DTURQUOISE"],
+        cc2_replace=colours["CREAM"]
+    ),
+    company='na',
+    introduction_date=date(1974, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
