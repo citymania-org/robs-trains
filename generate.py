@@ -196,6 +196,7 @@ from code.standard_gauge.dkcompl import dk_p_compl_1, dk_p_compl_2, dk_p_compl_3
 from code.standard_gauge.chae814 import ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3, ch_e_ae814_4, ch_e_ae814_5, ch_e_ae814_6, ch_e_ae814_7
 from code.standard_gauge.sed import se_e_d_1, se_e_d_2, se_e_d_3, se_e_d_4, se_e_d_5, se_e_d_6, se_e_d_7, se_e_d_8, se_e_d_9, se_e_d_10
 from code.standard_gauge.seokbstock import se_p_BCo_1, se_p_BCo6b_1, se_p_BCort_1, se_p_Ro2b_1, se_w_121to122_1 ,se_w_F3_1
+from code.standard_gauge.de041744 import de_e_e04_1, de_e_e04_2, de_e_e17_1, de_e_e44_1, de_e_e44_2, de_e_e44_3
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -447,6 +448,9 @@ lib.make_purchase_sprites(
     # de diesel
     grf.VariantGroup('V 170', d_d_my_ii_18_et, d_d_my_ii_22_et, d_d_my_ii_19_er, d_d_my_ii_20_strabag, d_d_my_ii_23_strabag, d_d_my_ii_25_strabag, d_d_my_ii_17_bsbs),
     # de electric 15
+    de_e_e17_1,
+    grf.VariantGroup('E 04', de_e_e04_1, de_e_e04_2),
+    grf.VariantGroup('E 44', de_e_e44_1, de_e_e44_2, de_e_e44_3),
     de_e_dre93_1_dr,
     grf.VariantGroup('"Deutsches Krokodil"', de_e_dre94_1_dr, de_e_dre94_2_dr, de_e_dre94_3_dr, de_e_dre94_4_dr, de_e_dre94_5_dr),
     grf.VariantGroup('103', de_e_103_1, de_e_103_2, de_e_103_3, de_e_103_4, de_e_103_5, de_e_103_6, de_e_103_7, de_e_103_8, de_e_103_9),
