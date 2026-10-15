@@ -167,7 +167,7 @@ from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4,
 from code.standard_gauge.denwagen import de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12
 from code.narrow_gauge.Z4p import s_d_Z4p_1_srj, s_d_Z4p_2, s_d_Z4p_3_nklj, s_d_Z4p_4, s_d_Z4p_5_donj, s_d_Z4p_6_sl, s_d_Z4p_7_sl
 from code.narrow_gauge.other import s_d_Tp_1_sj, s_p_Co_1
-from code.narrow_gauge.MÖJ import s_d_Dx1_1_möj, s_d_Dx2_1_möj, s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_X1_1_vsbj, s_d_MÖJ4_1_möj, s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj, se_p_BCo_2
+from code.narrow_gauge.semöj import s_d_Dx1_1_möj, s_d_Dx2_1_möj, s_e_MÖJ_2to5_1_möj, s_e_MÖJ_2to5_2_möj, s_d_X1_1_vb, s_d_X2_1_vb, s_d_X3_1_vb, s_d_X1_1_vsbj, s_d_MÖJ4_1_möj, s_e_MÖJ1_1_möj, s_e_MÖJ6_1_möj, se_e_Yo3a_1, se_e_Yoa1p_1, se_p_BCo_2
 from code.narrow_gauge.NKlJ import s_e_NKlJ_AEG_1_nklj, s_e_NKlJ_AEG_2_nklj
 from code.narrow_gauge.Xo6p import s_d_Xo6p_1_srj
 from code.narrow_gauge.X10p import s_p_UBp_ii_1, s_e_X10p_1_sl, s_e_X10p_2_sl
@@ -197,6 +197,11 @@ from code.standard_gauge.chae814 import ch_e_ae814_1, ch_e_ae814_2, ch_e_ae814_3
 from code.standard_gauge.sed import se_e_d_1, se_e_d_2, se_e_d_3, se_e_d_4, se_e_d_5, se_e_d_6, se_e_d_7, se_e_d_8, se_e_d_9, se_e_d_10
 from code.standard_gauge.seokbstock import se_p_BCo_1, se_p_BCo6b_1, se_p_BCort_1, se_p_Ro2b_1, se_w_121to122_1 ,se_w_F3_1
 from code.standard_gauge.de041744 import de_e_e04_1, de_e_e04_2, de_e_e17_1, de_e_e44_1, de_e_e44_2, de_e_e44_3
+from code.standard_gauge.sehrrj import se_e_hrrj1to2_1, se_e_hrrj1to5_1, se_w_hrrj21to22_1, se_w_hrrj23to24_1
+from code.standard_gauge.seblhj import se_e_blhj6_1, se_e_blhj7_1
+from code.standard_gauge.sesnj import se_d_SNJ1to2_1, se_d_SNJ3_1, se_d_LyJ10_1, se_d_MCo_2, se_d_Xod4_1, se_d_MCo_3, se_d_XCo_1, se_d_Xod6_1
+from code.standard_gauge.sevbhj import se_d_MCo_1
+from code.standard_gauge.nohkb import no_e_500_1, no_e_500_2, no_e_500_3, no_e_500_4, no_e_500_5
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -584,6 +589,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('"Lok 2000"', no_e_el18_1, no_e_el18_2),
     # no emu dc
     n_o_Wes_1_hkb,
+    grf.VariantGroup('HKB 500', no_e_500_1, no_e_500_2, no_e_500_3, no_e_500_4, no_e_500_5),
     grf.VariantGroup('њOS T', n_o_T_1_os, n_o_T_2_os,),
     # no emu 15
     n_e_type64_1_nsb,
@@ -611,6 +617,8 @@ lib.make_purchase_sprites(
     s_s_Sa_sj,
     se_s_f_1,
     # se diesel
+    # se electric dc
+    se_e_hrrj1to2_1,
     grf.VariantGroup('TMX II', d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_12_bk, d_d_mx_ii_19_ibab, d_d_mx_ii_4_ttt, d_d_mx_ii_18_vida, d_d_mx_ii_17_stab),
     grf.VariantGroup('TMY II', d_d_my_ii_8_taagab, d_d_my_ii_24_bsx, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_3_ttt),
     grf.VariantGroup('TMZ I/II', d_d_mz_i_5_vida, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_ii_11_nrfab, d_d_mz_ii_7_stab),
@@ -630,12 +638,25 @@ lib.make_purchase_sprites(
     s_e_rc7_1_sj,
     # se dmu
     grf.VariantGroup('њÖCJ 24-25 "Bilvagnar"', s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2),
+    se_d_SNJ1to2_1,
+    se_d_MCo_1,
+    se_d_SNJ3_1,
+    se_d_LyJ10_1,
     grf.VariantGroup('њYd', s_d_Yd_1_sj, s_d_Yd_2_hnj, s_d_Yd_3_msj),
-    grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
-    grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
+    se_d_MCo_2,
+    se_d_Xod4_1,
+    se_d_MCo_3,
+    se_d_XCo_1,
     grf.VariantGroup('њYo2', s_d_Yo2_1_MSJ, s_d_Yo2_2_BJ, s_d_Yo2_3_SJ, s_p_YCDFo_1_TRJ, s_p_UBFo9_1_SJ),
+    grf.VariantGroup('њYo', s_d_Yo_1_sj, s_d_Yo_2_hnj),
+    se_d_Xod6_1,
+    grf.VariantGroup('њYo1s', s_d_Yo1s_1_sj, s_d_Yo1s_2_bj, s_d_Yo1s_3_tgoj),
     grf.VariantGroup('Y2', s_d_mf_5_sj, s_d_mf_6_sj),
+    # se emu dc
+    grf.VariantGroup('HRRJ 1-5', se_e_hrrj1to5_1, se_w_hrrj21to22_1, se_w_hrrj23to24_1),
     # se emu 15
+    se_e_blhj6_1,
+    se_e_blhj7_1,
     grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj),
     grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj),
     grf.VariantGroup('X1', s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj),
@@ -685,6 +706,7 @@ lib.make_purchase_sprites(
     # se ng emu 15
     s_e_MÖJ1_1_möj,
     s_e_MÖJ6_1_möj,
+    grf.VariantGroup('MÖJ Yo3a', se_e_Yo3a_1, se_e_Yoa1p_1),
     # se ng emu 25
     # se ng emu 3rd
     # se ng carriages

@@ -11,7 +11,7 @@ from datetime import date
 from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge_1500v
 
 COMMON_500_PROPS = dict(
-    length=8,
+    length=6,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
     power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC, 
@@ -34,7 +34,7 @@ COMMON_500_PROPS = dict(
 no_e_500_1 = Train(
     **COMMON_500_PROPS,
     id='no_e_500_1',
-    name='њHKB 500-serien',
+    name='њHKB 500',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading='6a',
@@ -67,7 +67,7 @@ no_e_500_1 = Train(
 no_e_500_2 = Train(
     **COMMON_500_PROPS,
     id='no_e_500_2',
-    name='њHKB 500-serien',
+    name='њHKB 500',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading='6a',
@@ -100,7 +100,7 @@ no_e_500_2 = Train(
 no_e_500_3 = Train(
     **COMMON_500_PROPS,
     id='no_e_500_3',
-    name='њOS 500-serien',
+    name='њOS 500',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading='6a',
@@ -133,7 +133,7 @@ no_e_500_3 = Train(
 no_e_500_4 = Train(
     **COMMON_500_PROPS,
     id='no_e_500_4',
-    name='њOS 500-serien',
+    name='њOS 500',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading='6a',
@@ -166,7 +166,7 @@ no_e_500_4 = Train(
 no_e_500_5 = Train(
     **COMMON_500_PROPS,
     id='no_e_500_5',
-    name='њOS 500-serien',
+    name='њOS 500',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading='6a',

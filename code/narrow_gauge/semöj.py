@@ -299,7 +299,7 @@ s_d_X1_1_vsbj = Train(
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(40), #Top speed: 65 km/h
-    power=188,  #Power needs to be researched/approximated
+    power=188,  #Љ - Power needs to be researched/approximated
     introduction_date=date(1916, 1, 1),
     vehicle_life=30,
     model_life=144,
@@ -321,12 +321,12 @@ s_d_X1_1_vsbj = Train(
 s_d_MÖJ4_1_möj = Train(
     id='s_d_MÖJ4_1_möj',
     name='ЉњMÖJ 4', 
-    length=6,  #Љ Length needs to be researched
+    length=6,  #Љ - Length needs to be researched
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('6a',),
         paint=('6b',),
-        cc_replace=colours["SEBROWN"],    #Colour needs to be researched
+        cc_replace=colours["SEBROWN"],    #Љ - Colour needs to be researched
         cc2_replace=colours["SEBROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
@@ -344,7 +344,7 @@ s_d_MÖJ4_1_möj = Train(
     weight=27,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=40,  #ЉApproximation
+    cargo_capacity=40,  #Љ - Estimate
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -430,6 +430,78 @@ s_e_MÖJ6_1_möj = Train(
     }),
 )
 
+se_e_Yo3a_1 = Train(
+    id='se_e_Yo3a_1',
+    name='њMÖJ Yo3a',
+    length=7,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["BLUE"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='15kv',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=extra_narrow_gauge_15kv,
+    max_speed=Train.kmhish(80),
+    power=150,
+    introduction_date=date(1949, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=13,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=46,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Gauge': '891mm',
+        'Use': 'Local passengers',
+    }),
+)
+
+se_e_Yoa1p_1 = Train(
+    id='se_e_Yoa1p_1',
+    name='њSJ Yoa1p',
+    length=7,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["DCREAM"],
+        cc2_replace=colours["DGREEN"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    country='sweden',
+    company='na',
+    power_type='15kv',
+    engine_class=Train.EngineClass.ELECTRIC,
+    track_type=extra_narrow_gauge_15kv,
+    max_speed=Train.kmhish(80),
+    power=150,
+    introduction_date=date(1952, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=13,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=46,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+        'Gauge': '891mm',
+        'Use': 'Local passengers',
+    }),
+)
+
 #Carriages
 
 se_p_BCo_2 = Train(
@@ -448,7 +520,7 @@ se_p_BCo_2 = Train(
     country='sweden',
     company='na',
     power_type='na',
-    max_speed=Train.kmhish(40), #Љ: Estimate
+    max_speed=Train.kmhish(70),
     power=0,
     introduction_date=date(1897, 1, 1),
     vehicle_life=8,

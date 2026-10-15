@@ -86,7 +86,7 @@ s_d_Yo2_3_SJ = Train(
 
 s_p_YCDFo_1_TRJ = Train(
     id='s_p_YCDFo_1_TRJ',
-    name='њTRJ YCDFo',
+    name='ЉњTRJ YCDFo',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -109,7 +109,7 @@ s_p_YCDFo_1_TRJ = Train(
     weight=14,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=55,
+    cargo_capacity=55,  #Љ - Post: 1t, Resgods: 2t
     cost_factor=18,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
@@ -120,7 +120,7 @@ s_p_YCDFo_1_TRJ = Train(
 
 s_p_UBFo9_1_SJ = Train(
     id='s_p_UBFo9_1_SJ',
-    name='њSJ UBFo9',
+    name='ЉњSJ UBFo9',
     length=8,
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -143,7 +143,7 @@ s_p_UBFo9_1_SJ = Train(
     weight=14,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=55,
+    cargo_capacity=55,  #Љ - Resgods: 2t
     cost_factor=18,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
