@@ -50,9 +50,10 @@ se_e_blhj7_1 = Train(
     name='њBLHJ 7',
     length=5,
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('5a',),
-        paint=('5b',),
+        'pp/blhj7.psd',
+        shading=('Xa4',),
+        paint=('blhj',),
+        overlay=('7lights'),
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),

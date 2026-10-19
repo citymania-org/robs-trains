@@ -617,13 +617,13 @@ lib.make_purchase_sprites(
     s_s_Sa_sj,
     se_s_f_1,
     # se diesel
-    # se electric dc
-    se_e_hrrj1to2_1,
     grf.VariantGroup('TMX II', d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_12_bk, d_d_mx_ii_19_ibab, d_d_mx_ii_4_ttt, d_d_mx_ii_18_vida, d_d_mx_ii_17_stab),
     grf.VariantGroup('TMY II', d_d_my_ii_8_taagab, d_d_my_ii_24_bsx, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_3_ttt),
     grf.VariantGroup('TMZ I/II', d_d_mz_i_5_vida, d_d_mz_i_4_ttt, d_d_mz_ii_4_taagab, d_d_mz_ii_5_ibab, d_d_mz_ii_11_nrfab, d_d_mz_ii_7_stab),
     se_d_205_1,
     d_d_me_ii_5_nrfab,
+    # se electric dc
+    se_e_hrrj1to2_1,    
     # se electric 15
     grf.VariantGroup('D', se_e_d_1, se_e_d_2, se_e_d_3, se_e_d_4, se_e_d_5, se_e_d_6, se_e_d_7, se_e_d_8, se_e_d_9, se_e_d_10),
     se_e_f_1,
