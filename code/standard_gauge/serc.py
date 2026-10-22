@@ -624,3 +624,42 @@ s_e_rm_4_sj = Train(
         'Use': 'Freight',
     }),
 )
+
+COMMON_rb_PROPS = dict(
+    length=7,
+    misc_flags=Train.Flags.USE_2CC,
+    power_type='15kv',
+    engine_class=Train.EngineClass.ELECTRIC, 
+    track_type=standard_gauge_15kv,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    country='sweden',
+    max_speed=Train.kmhish(120),
+    power=4487,
+    weight=74,
+)
+
+se_e_rb_1 = Train(
+    **COMMON_rb_PROPS,
+    id='se_e_rb_1',
+    name='SJ Rb',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('7a',),
+        paint=('7b',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["TURQUOISE"]
+    ),
+    company='na',
+    introduction_date=date(1962, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
