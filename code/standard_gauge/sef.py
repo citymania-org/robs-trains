@@ -26,9 +26,11 @@ se_e_f_1 = Train(
     id='se_e_f_1',
     name='SJ F',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('7a',),
-        paint=('7b',),
+        'pp/sef.psd',
+        shading=('f',),
+        paint=('sj1',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["SEBROWN"]
     ),
