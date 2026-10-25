@@ -25,6 +25,28 @@ COMMON_rc_PROPS = dict(
 
 # early
 
+s_e_rc1245_1e_sj = Train(
+    id='s_e_rc1245_1e_sj',
+    **COMMON_rc_PROPS,
+    name='SJ Rc1/2',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj1e',),
+        overlay=('light'),
+        r_overlay=('lightr'),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["TURQUOISE"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(135),
+    weight=76,
+    introduction_date=date(1967, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 s_e_rc1245_1_sj = Train(
     id='s_e_rc1245_1_sj',
     **COMMON_rc_PROPS,
@@ -41,7 +63,7 @@ s_e_rc1245_1_sj = Train(
     company='na',
     max_speed=Train.kmhish(135),
     weight=76,
-    introduction_date=date(1967, 1, 1),
+    introduction_date=date(1973, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
@@ -291,6 +313,28 @@ s_e_rc1245_12_sj = Train(
 
 # late
 
+s_e_rc36_1e_sj = Train(
+    id='s_e_rc36_1e_sj',
+    **COMMON_rc_PROPS,
+    name='SJ Rc3',
+    liveries=make_psd_cc_liveries(
+        'pp/rc.psd',
+        shading=('rc',),
+        paint=('sj1e',),
+        overlay=('light'),
+        r_overlay=('lightr'),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["TURQUOISE"]
+    ),
+    company='na',
+    max_speed=Train.kmhish(160),
+    weight=76,
+    introduction_date=date(1970, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 s_e_rc36_1_sj = Train(
     id='s_e_rc36_1_sj',
     **COMMON_rc_PROPS,
@@ -307,7 +351,7 @@ s_e_rc36_1_sj = Train(
     company='na',
     max_speed=Train.kmhish(160),
     weight=76,
-    introduction_date=date(1970, 1, 1),
+    introduction_date=date(1973, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
     }),
@@ -651,9 +695,11 @@ se_e_rb_1 = Train(
     id='se_e_rb_1',
     name='SJ Rb',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('7a',),
-        paint=('7b',),
+        'pp/rc.psd',
+        shading=('rb',),
+        paint=('sj1e',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["TURQUOISE"]
     ),
