@@ -15,9 +15,9 @@ os.makedirs(DEBUG_DIR, exist_ok=True)
 
 g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
 
-s_s_N_ii_1_sj = Train(
-    id='s_s_N_ii_1_sj',
-    name='љњSJ N II',
+se_s_n_1 = Train(
+    id='se_s_n_1',
+    name='њSJ N (II)',
     length=5,
     liveries={
         'Default': Livery('1900_SE_N_II_1.png', cc_replace=colours["GREY10"], cc2_replace=colours["GREY10"]),
@@ -30,7 +30,7 @@ s_s_N_ii_1_sj = Train(
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
     max_speed=Train.kmhish(45),
-    power=500, # come up with value
+    power=560,
     introduction_date=date(1900, 1, 1),
     vehicle_life=30,
     model_life=144,
@@ -43,14 +43,13 @@ s_s_N_ii_1_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Shunting',
-        'Builder': 'Multiple',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-s_s_Sa_sj = Train(
-    id='s_s_Sa_sj',
-    name='љњSJ Sa',
+se_s_s_1 = Train(
+    id='se_s_s_1',
+    name='њSJ S',
     length=6,
     liveries=make_psd_cc_liveries(
         'pp/1908_SE_Sa.psd',
@@ -66,8 +65,8 @@ s_s_Sa_sj = Train(
     power_type='steam',
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
-    max_speed=Train.kmhish(45),
-    power=750, # come up with value
+    max_speed=Train.kmhish(80),
+    power=785,
     introduction_date=date(1908, 1, 1),
     vehicle_life=30,
     model_life=144,
@@ -80,7 +79,6 @@ s_s_Sa_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
-        'Builder': 'Multiple',
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -203,6 +201,14 @@ from code.standard_gauge.sesnj import se_d_SNJ1to2_1, se_d_SNJ3_1, se_d_LyJ10_1,
 from code.standard_gauge.sevbhj import se_d_MCo_1
 from code.standard_gauge.nohkb import no_e_500_1, no_e_500_2, no_e_500_3, no_e_500_4, no_e_500_5
 from code.standard_gauge.de1819 import de_e_e18_1, de_e_e18_2, de_e_e18_3, de_e_e18_4, de_e_e18_5, de_e_e19_1, de_e_e19_2, de_e_e19_3
+from code.standard_gauge.sebå2 import se_s_b_2
+from code.standard_gauge.seh3så import se_s_h3s_1, se_s_a8_1
+from code.standard_gauge.see10å import se_s_e10_1
+from code.standard_gauge.sejå import se_s_j_1
+from code.standard_gauge.seaå2 import se_s_a_2
+from code.standard_gauge.sem3så import se_s_m3s_1
+from code.standard_gauge.serå import se_s_r_1
+from code.standard_gauge.seeå import se_s_e_1, se_s_e2_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -616,9 +622,17 @@ lib.make_purchase_sprites(
     d_d_me_ii_7_skpl,
     # se
     # se steam
-    s_s_N_ii_1_sj,
-    s_s_Sa_sj,
+    se_s_n_1,
+    se_s_a_2,
+    grf.VariantGroup('E/E2', se_s_e_1, se_s_e2_1),
+    se_s_s_1,
+    se_s_r_1,
+    se_s_b_2,
     se_s_f_1,
+    se_s_j_1,
+    grf.VariantGroup('H3s', se_s_h3s_1, se_s_a8_1),
+    se_s_m3s_1,
+    se_s_e10_1,
     # se diesel
     grf.VariantGroup('TMX II', d_d_mx_ii_14_bsx, d_d_mx_ii_15_bsx, d_d_mx_ii_16_bsm, d_d_mx_ii_12_bk, d_d_mx_ii_19_ibab, d_d_mx_ii_4_ttt, d_d_mx_ii_18_vida, d_d_mx_ii_17_stab),
     grf.VariantGroup('TMY II', d_d_my_ii_8_taagab, d_d_my_ii_24_bsx, d_d_my_ii_9_taagab, d_d_my_ii_15_bk, d_d_my_ii_3_ttt),
