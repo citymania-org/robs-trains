@@ -209,6 +209,8 @@ from code.standard_gauge.seaå2 import se_s_a_2
 from code.standard_gauge.sem3så import se_s_m3s_1
 from code.standard_gauge.serå import se_s_r_1
 from code.standard_gauge.seeå import se_s_e_1, se_s_e2_1
+from code.standard_gauge.seh3å import se_s_h3_1, se_s_h3_2
+from code.standard_gauge.seccå import se_s_cc_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -622,12 +624,14 @@ lib.make_purchase_sprites(
     d_d_me_ii_7_skpl,
     # se
     # se steam
+    se_s_cc_1,
     se_s_n_1,
     se_s_a_2,
     grf.VariantGroup('E/E2', se_s_e_1, se_s_e2_1),
     se_s_s_1,
     se_s_r_1,
     se_s_b_2,
+    grf.VariantGroup('H3', se_s_h3_1, se_s_h3_2),
     se_s_f_1,
     se_s_j_1,
     grf.VariantGroup('H3s', se_s_h3s_1, se_s_a8_1),
