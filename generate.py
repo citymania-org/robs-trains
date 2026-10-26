@@ -17,7 +17,7 @@ g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
 
 se_s_n_1 = Train(
     id='se_s_n_1',
-    name='њSJ N (II)',
+    name='њSJ N II',
     length=5,
     liveries={
         'Default': Livery('1900_SE_N_II_1.png', cc_replace=colours["GREY10"], cc2_replace=colours["GREY10"]),

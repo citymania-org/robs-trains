@@ -27,7 +27,7 @@ se_s_a_2 = Train(
     **COMMON_A_PROPS,
     id='se_s_a_2',
     purchase_sprite_towed_id='se_s_a2_2',
-    name='њSJ A (II)',
+    name='њSJ A II',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('5a',),
