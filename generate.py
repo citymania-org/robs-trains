@@ -15,8 +15,8 @@ os.makedirs(DEBUG_DIR, exist_ok=True)
 
 g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
 
-se_s_n_1 = Train(
-    id='se_s_n_1',
+s_s_N_ii_1_sj = Train(
+    id='s_s_N_ii_1_sj',
     name='њSJ N II',
     length=5,
     liveries={
@@ -47,8 +47,8 @@ se_s_n_1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
 )
 
-se_s_s_1 = Train(
-    id='se_s_s_1',
+s_s_Sa_sj = Train(
+    id='s_s_Sa_sj',
     name='њSJ S',
     length=6,
     liveries=make_psd_cc_liveries(
@@ -625,10 +625,10 @@ lib.make_purchase_sprites(
     # se
     # se steam
     se_s_cc_1,
-    se_s_n_1,
+    s_s_N_ii_1_sj,
     se_s_a_2,
     grf.VariantGroup('E/E2', se_s_e_1, se_s_e2_1),
-    se_s_s_1,
+    s_s_Sa_sj,
     se_s_r_1,
     se_s_b_2,
     grf.VariantGroup('H3', se_s_h3_1, se_s_h3_2),
