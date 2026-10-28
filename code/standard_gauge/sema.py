@@ -27,7 +27,7 @@ COMMON_ma_PROPS = dict(
 se_e_ma_1 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_1',
-    name='SJ Ma', #https://www.svenska-lok.se/Fotos/MotorSJ/SJ_Ma_962_2019.jpg
+    name='SJ Ma', #https://www.svenska-lok.se/Fotos/MotorSJ/SJ_Ma_962_2019.jpg OD---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -46,7 +46,7 @@ se_e_ma_1 = Train(
 se_e_ma_2 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_2',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1966.jpg
+    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1966.jpg OD---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -65,7 +65,7 @@ se_e_ma_2 = Train(
 se_e_ma_3 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_3',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1987.jpg
+    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1987.jpg OD---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -84,7 +84,7 @@ se_e_ma_3 = Train(
 se_e_ma_4 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_4',
-    name='SJ Ma', #https://www.svenska-lok.se/Fotos/MotorSJ/SJ_Ma_880_1987.jpg
+    name='SJ Ma', #https://www.svenska-lok.se/Fotos/MotorSJ/SJ_Ma_880_1987.jpg ND---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -100,10 +100,29 @@ se_e_ma_4 = Train(
     }),
 )
 
+se_e_ma_3l = Train(
+    **COMMON_ma_PROPS,
+    id='se_e_ma_3l',
+    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1987.jpg ND---------
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('8a',),
+        paint=('8b',),
+        cc_replace=colours["ORANGE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    company='na',
+    introduction_date=date(1977, 1, 1),
+    country='sweden',
+    additional_text=grf.fake_vehicle_info({
+        'Use': 'Universal',
+    }),
+)
+
 se_e_ma_5 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_5',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_401_1998.jpg
+    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_401_1998.jpg ND---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -122,7 +141,7 @@ se_e_ma_5 = Train(
 se_e_ma_6 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_6',
-    name='BK Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/BK/BK_Ma_825_1999.jpg
+    name='BK Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/BK/BK_Ma_825_1999.jpg ND---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -141,7 +160,7 @@ se_e_ma_6 = Train(
 se_e_ma_7 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_7',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma2_966_2001.jpg
+    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma2_966_2001.jpg ND---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -160,7 +179,7 @@ se_e_ma_7 = Train(
 se_e_ma_8 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_8',
-    name='NR Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/NR/NR_Ma_827_2011.jpg
+    name='NR Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/NR/NR_Ma_827_2011.jpg ND---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -179,7 +198,7 @@ se_e_ma_8 = Train(
 se_e_ma_9 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_9',
-    name='BJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_403_2019.jpg
+    name='BJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_403_2019.jpg ND---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -198,7 +217,7 @@ se_e_ma_9 = Train(
 no_e_ma_1 = Train(
     **COMMON_ma_PROPS,
     id='no_e_ma_1',
-    name='GR Ma', #https://www.jarnvag.net/images/bild/lokguide/Ma_404_Oslo2014BGK.jpg
+    name='NTA Ma', #https://www.jarnvag.net/images/bild/lokguide/Ma_404_Oslo2014BGK.jpg ND---------
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('8a',),
@@ -207,7 +226,7 @@ no_e_ma_1 = Train(
         cc2_replace=colours["GREY1"]
     ),
     company='na',
-    introduction_date=date(2005, 1, 1),
+    introduction_date=date(2014, 1, 1),
     country='norway',
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
