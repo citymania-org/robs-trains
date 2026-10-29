@@ -57,9 +57,9 @@ se_d_MCo_1 = Train(
 
 # VBHJ Bco 56
 
-se_p_BCo_1 = Train( #Do not push until the capacity has been established
+se_p_BCo_1 = Train( #ЉDo not add to generate.py until the capacity has been established
     id='se_p_BCo_1',
-    name='њVBHJ BCo', 
+    name='ЉњVBHJ BCo', 
     length=9,
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -83,7 +83,7 @@ se_p_BCo_1 = Train( #Do not push until the capacity has been established
     weight=Train.ton(int(30)),
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=68,  #Estimate
+    cargo_capacity=68,  #ЉEstimate
     cost_factor=25,
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,

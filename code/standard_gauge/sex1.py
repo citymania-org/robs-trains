@@ -121,7 +121,7 @@ s_e_X1a_3_sj = Train(
     cargo_capacity=148,
     additional_text=grf.fake_vehicle_info({
         'Use': 'Local passengers',
-        'Trivia': 'Two sets given the same livery as contemporary stock',
+        'Trivia': 'Two sets given the same livery as the contemporary metro stock in Stockholm',
     }),
 ).add_articulated_part(
     id='s_e_X1b_3_sj',
