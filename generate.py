@@ -213,6 +213,7 @@ from code.standard_gauge.seh3å import se_s_h3_1, se_s_h3_2
 from code.standard_gauge.seccå import se_s_cc_1
 from code.standard_gauge.notype62 import no_e_type62_1
 from code.standard_gauge.nocmb17a import no_d_cmb17_1
+from code.standard_gauge.nocmb14a import no_d_cmb14a_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -601,6 +602,7 @@ lib.make_purchase_sprites(
     no_e_ma_1,
     grf.VariantGroup('"Lok 2000"', no_e_el18_1, no_e_el18_2),
     # no dmu
+    no_d_cmb14a_1,
     no_d_cmb17_1,
     # no emu dc
     n_o_Wes_1_hkb,
