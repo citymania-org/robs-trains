@@ -4,6 +4,8 @@ from datetime import date
 
 from common import Train, colours, make_psd_cc_liveries, standard_gauge
 
+#Љ Do not add this train to generate.py until the addition of Template.psd layer "2a" and "2b" or when this loco gets its .psd
+
 COMMON_B_PROPS = dict(
     length=4,
     misc_flags=Train.Flags.USE_2CC,

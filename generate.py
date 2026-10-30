@@ -214,6 +214,9 @@ from code.standard_gauge.seccå import se_s_cc_1
 from code.standard_gauge.notype62 import no_e_type62_1
 from code.standard_gauge.nocmb17a import no_d_cmb17_1
 from code.standard_gauge.nocmb14a import no_d_cmb14a_1
+from code.standard_gauge.notype49å import no_s_49_1
+from code.standard_gauge.sessnj import se_e_xf_1
+from code.standard_gauge.sec20 import se_e_C20_1, se_e_C20u_1
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -594,6 +597,7 @@ lib.make_purchase_sprites(
     lu_d_205_1,
     # no
     # no steam
+    no_s_49_1,
     de_s_52_3,
     # no diesel
     grf.VariantGroup('TMZ II', d_d_mz_ii_9_bs, d_d_mz_ii_10_bs),
@@ -651,7 +655,7 @@ lib.make_purchase_sprites(
     se_d_205_1,
     d_d_me_ii_5_nrfab,
     # se electric dc
-    se_e_hrrj1to2_1,    
+    se_e_hrrj1to2_1,
     # se electric 15
     grf.VariantGroup('D', se_e_d_1, se_e_d_2, se_e_d_3, se_e_d_4, se_e_d_5, se_e_d_6, se_e_d_7, se_e_d_8, se_e_d_9, se_e_d_10),
     se_e_f_1,
@@ -683,6 +687,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Y2', s_d_mf_5_sj, s_d_mf_6_sj),
     # se emu dc
     grf.VariantGroup('HRRJ 1-5', se_e_hrrj1to5_1, se_w_hrrj21to22_1, se_w_hrrj23to24_1),
+    se_e_xf_1,
     # se emu 15
     se_e_blhj6_1,
     se_e_blhj7_1,
@@ -698,7 +703,8 @@ lib.make_purchase_sprites(
     grf.VariantGroup('њX61', s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj),
     s_e_x62_1_sj,
     # se emu 3rd
-    grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss, s_e_9239_1_sl, s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl),
+    grf.VariantGroup('Cx', s_e_C2_1_ss, s_e_C2_2_sl, s_e_C3_1_ss, s_e_C3_2_sl, s_e_C4_1_ss, s_e_C4_2_sl, s_e_C5_1_ss,  s_e_C6_1_sl, s_e_C6_2_sl, s_e_C6_3_sl, s_e_C6_4_sl, s_e_C10_1_sl, s_e_C10_2_sl, s_e_C13_1_sl, s_e_C16_1_sl, s_e_9239_1_sl,),
+    grf.VariantGroup ('C20', se_e_C20_1, se_e_C20u_1),
     s_e_C30_1_sl,
     # se carriages
     grf.VariantGroup('OKB "Hechtwagen"', se_p_BCo_1, se_p_BCort_1, se_p_BCo6b_1, se_p_Ro2b_1),
