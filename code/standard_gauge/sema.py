@@ -27,13 +27,15 @@ COMMON_ma_PROPS = dict(
 se_e_ma_1 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_1',
-    name='SJ Ma', #https://www.svenska-lok.se/Fotos/MotorSJ/SJ_Ma_962_2019.jpg OD---------
+    name='SJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('ma',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["SEBROWN"],
-        cc2_replace=colours["SEBROWN"]
+        cc2_replace=colours["GREY10"]
     ),
     company='na',
     introduction_date=date(1953, 1, 1),
@@ -46,11 +48,13 @@ se_e_ma_1 = Train(
 se_e_ma_2 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_2',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1966.jpg OD---------
+    name='TGOJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('ma',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["MECONIUM"],
         cc2_replace=colours["YELLOW"]
     ),
@@ -65,11 +69,13 @@ se_e_ma_2 = Train(
 se_e_ma_3 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_3',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1987.jpg OD---------
+    name='TGOJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('ma',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -84,13 +90,15 @@ se_e_ma_3 = Train(
 se_e_ma_4 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_4',
-    name='SJ Ma', #https://www.svenska-lok.se/Fotos/MotorSJ/SJ_Ma_880_1987.jpg ND---------
+    name='SJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["SEBROWN"],
-        cc2_replace=colours["SEBROWN"]
+        cc2_replace=colours["DBLUE"]
     ),
     company='na',
     introduction_date=date(1970, 1, 1),
@@ -103,11 +111,13 @@ se_e_ma_4 = Train(
 se_e_ma_3l = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_3l',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_409_1987.jpg ND---------
+    name='TGOJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
@@ -122,11 +132,13 @@ se_e_ma_3l = Train(
 se_e_ma_5 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_5',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_401_1998.jpg ND---------
+    name='TGOJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
@@ -141,11 +153,13 @@ se_e_ma_5 = Train(
 se_e_ma_6 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_6',
-    name='BK Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/BK/BK_Ma_825_1999.jpg ND---------
+    name='BK Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["BLUE"]
     ),
@@ -160,11 +174,13 @@ se_e_ma_6 = Train(
 se_e_ma_7 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_7',
-    name='TGOJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma2_966_2001.jpg ND---------
+    name='TGOJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
@@ -179,11 +195,13 @@ se_e_ma_7 = Train(
 se_e_ma_8 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_8',
-    name='NR Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/NR/NR_Ma_827_2011.jpg ND---------
+    name='NR Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["NAVY"],
         cc2_replace=colours["GREY1"]
     ),
@@ -198,11 +216,13 @@ se_e_ma_8 = Train(
 se_e_ma_9 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_9',
-    name='BJ Ma', #https://www.svenska-lok.se/Fotos/PbaneSJ/TGOJ/TGOJ_Ma_403_2019.jpg ND---------
+    name='BJ Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["RED"],
         cc2_replace=colours["ORANGE"]
     ),
@@ -217,11 +237,13 @@ se_e_ma_9 = Train(
 no_e_ma_1 = Train(
     **COMMON_ma_PROPS,
     id='no_e_ma_1',
-    name='NTA Ma', #https://www.jarnvag.net/images/bild/lokguide/Ma_404_Oslo2014BGK.jpg ND---------
+    name='NTA Ma',
     liveries=make_psd_cc_liveries(
-        'pp/Template.psd',
-        shading=('8a',),
         paint=('8b',),
+        'pp/sema.psd',
+        shading=('mal',),
+        overlay=('light'),
+        r_overlay=('lightr'),
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["GREY1"]
     ),
