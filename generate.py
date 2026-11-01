@@ -529,7 +529,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('MF (IC3)', d_d_mf_1_dsb, d_d_mf_2_dsb, d_d_mf_7_dsb, d_d_mf_8_dsb, d_d_mf_3_dsb, d_d_mf_4_dsb),
     grf.VariantGroup('"RegioSprinter"', dk_d_lm21_1, dk_d_lm21_2),
     grf.VariantGroup('њMF (IC2)', d_d_ic2_1_dsb, d_d_ic2_2_dsb),
-    grf.VariantGroup('њ"Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
+    grf.VariantGroup('"Desiro Classic"', d_d_mq2_6_dsb, d_d_mq2_1_dsb, d_d_mq2_7_dsb, d_d_mq2_2_dsb, d_d_mq2_8_dsb, d_d_mq2_10_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_11_dsb, d_d_mq2_9_dsb, d_d_mq2_5_dsb),
     grf.VariantGroup('"Coradia LINT 41"', dk_d_lint41_1, dk_d_lint41_2, dk_d_lint41_3, dk_d_lint41_4, dk_d_lint41_5, dk_d_lint41_6),
     grf.VariantGroup('њMG (IC4)/MP (IC2)', d_d_mg_1_dsb, d_d_mg_2_dsb, d_d_mp2_1_dsb, d_d_mp2_2_dsb),
     # dk emu dc
