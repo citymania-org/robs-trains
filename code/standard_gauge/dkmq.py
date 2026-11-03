@@ -219,7 +219,7 @@ d_d_mq2_6_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/mq2.psd',
         shading=('mqa',),
-        paint=('2',),
+        paint=('ahhgb1',),
         overlay=('mqalight'),
         r_overlay=('mqalightr'),
         cc_replace=colours["RED"],
@@ -238,7 +238,7 @@ d_d_mq2_6_dsb = Train(
     liveries=make_psd_cc_liveries(
         'pp/mq2.psd',
         shading='mqb',
-        paint='2',
+        paint='bhhgb1',
         overlay=('mqblight'),
         r_overlay=('mqblightr'),
         cc_replace=colours['RED'],
