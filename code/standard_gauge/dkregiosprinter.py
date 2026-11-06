@@ -36,6 +36,7 @@ dk_d_lm21_1 = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'Used on Nærumbanen',
     }),
@@ -99,6 +100,7 @@ dk_d_lm21_2 = Train(
     loading_speed=30,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'Used on Nærumbanen',
     }),

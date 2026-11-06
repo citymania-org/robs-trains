@@ -40,6 +40,7 @@ dk_d_lint41_1 = Train(
     company='na',
     introduction_date=date(2003, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers',
         'Trivia': 'All passed to GCR',
     }),
@@ -75,6 +76,7 @@ dk_d_lint41_2 = Train(
     company='na',
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers',
         'Trivia': 'All passed to LT',
     }),
@@ -110,6 +112,7 @@ dk_d_lint41_3 = Train(
     company='na',
     introduction_date=date(2007, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers',
         'Trivia': 'All passed to RTOG and then LT',
     }),
@@ -145,6 +148,7 @@ dk_d_lint41_4 = Train(
     company='na',
     introduction_date=date(2016, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers',
     }),
 ).add_articulated_part(
@@ -179,6 +183,7 @@ dk_d_lint41_5 = Train(
     company='na',
     introduction_date=date(2021, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers',
     }),
 ).add_articulated_part(
@@ -213,6 +218,7 @@ dk_d_lint41_6 = Train(
     company='na',
     introduction_date=date(2024, 1, 1),
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers',
     }),
 ).add_articulated_part(

@@ -39,6 +39,7 @@ ch_p_ec_1 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -60,6 +61,7 @@ ch_p_ec_2 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -81,6 +83,7 @@ ch_p_ec_3 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class, for the Cisalpino service',
     }),
 )
@@ -102,6 +105,7 @@ ch_p_ec_11 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
         'Trivia': 'Former Cisalpino stock',
     }),
@@ -124,6 +128,7 @@ ch_p_ec_4 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -145,6 +150,7 @@ ch_p_ec_5 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -166,6 +172,7 @@ ch_p_ec_6 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -187,6 +194,7 @@ ch_p_ec_7 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class, for the Cisalpino service',
     }),
 )
@@ -208,6 +216,7 @@ ch_p_ec_12 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
         'Trivia': 'Former Cisalpino stock',
     }),
@@ -230,6 +239,7 @@ ch_p_ec_8 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -269,6 +279,7 @@ ch_p_ec_9 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=54,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Panoramic car, 1st class',
     }),
 )
@@ -290,6 +301,7 @@ ch_p_ec_10 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=54,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Panoramic car, 1st class',
     }),
 )

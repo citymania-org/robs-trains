@@ -39,6 +39,7 @@ ch_p_ewiv_1 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -60,6 +61,7 @@ ch_p_ewiv_20 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
         'Trivia': 'Later obtained by SBB in 2004',
     }),
@@ -82,6 +84,7 @@ ch_p_ewiv_21 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -103,6 +106,7 @@ ch_p_ewiv_24 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -124,6 +128,7 @@ ch_p_ewiv_2 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -145,6 +150,7 @@ ch_p_ewiv_3 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -166,6 +172,7 @@ ch_p_ewiv_4 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -187,6 +194,7 @@ ch_p_ewiv_22 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
         'Trivia': 'Later obtained by SBB in 2004',
     }),
@@ -209,6 +217,7 @@ ch_p_ewiv_23 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -230,6 +239,7 @@ ch_p_ewiv_25 = Train(
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -251,6 +261,7 @@ ch_p_ewiv_5 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -272,6 +283,7 @@ ch_p_ewiv_6 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -543,6 +555,7 @@ ch_p_ewiv_7 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class DVT',
     }),
 )
@@ -567,6 +580,7 @@ ch_p_ewiv_8 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class DVT',
     }),
 )
@@ -591,6 +605,7 @@ ch_p_ewiv_9 = Train(
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class DVT',
     }),
 )

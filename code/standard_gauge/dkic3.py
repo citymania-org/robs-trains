@@ -38,6 +38,7 @@ d_d_mf_1_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -104,6 +105,7 @@ d_d_mf_2_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -170,6 +172,7 @@ d_d_mf_3_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -236,6 +239,7 @@ d_d_mf_4_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -302,6 +306,7 @@ s_d_mf_5_sj = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers',
     }),
 ).add_articulated_part(
@@ -368,6 +373,7 @@ s_d_mf_6_sj = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers',
     }),
 ).add_articulated_part(
@@ -434,6 +440,7 @@ d_d_mf_7_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -500,6 +507,7 @@ d_d_mf_8_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -566,6 +574,7 @@ dl_d_mf_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -632,6 +641,7 @@ dl_d_mf_2 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(

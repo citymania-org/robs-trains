@@ -38,6 +38,7 @@ d_e_er_1_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -119,6 +120,7 @@ d_e_er_2_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -200,6 +202,7 @@ d_e_er_3_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -281,6 +284,7 @@ d_e_er_4_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
 ).add_articulated_part(

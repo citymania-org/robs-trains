@@ -39,6 +39,7 @@ d_d_mp2_1_dsb = Train(
     introduction_date=date(2011, 1, 1),
     cargo_capacity=57,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2004, all retired by 2016',
     }),
@@ -72,6 +73,7 @@ d_d_mp2_2_dsb = Train(
     introduction_date=date(2012, 1, 1),
     cargo_capacity=57,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2004, all retired by 2016',
     }),
@@ -125,6 +127,7 @@ d_d_mg_1_dsb = Train(
     introduction_date=date(2007, 1, 1),
     cargo_capacity=51,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2003',
     }),
@@ -184,6 +187,7 @@ d_d_mg_2_dsb = Train(
     introduction_date=date(2012, 1, 1),
     cargo_capacity=51,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2003',
     }),

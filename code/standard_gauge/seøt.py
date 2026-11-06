@@ -42,6 +42,7 @@ d_e_et_1_dsb = Train(
     cargo_capacity=74,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
         'Operators': 'SJ, DSB',
     }),
@@ -95,6 +96,7 @@ d_e_et_2_dsb = Train(
     cargo_capacity=74,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
         'Operators': 'Öresundståg AB, DSB',
     }),
@@ -148,6 +150,7 @@ d_e_et_1_sj = Train(
     cargo_capacity=74,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
         'Operators': 'SJ',
     }),
@@ -201,6 +204,7 @@ d_e_et_2_sj = Train(
     cargo_capacity=74,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
         'Operators': 'SJ',
     }),

@@ -35,6 +35,7 @@ d_d_ms_1_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers',
     }),
 ).add_articulated_part(
@@ -96,6 +97,7 @@ d_d_mb_1_dsb = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers',
     }),
 ).add_articulated_part(

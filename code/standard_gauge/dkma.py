@@ -39,6 +39,7 @@ d_d_ma_1_dsb = Train(
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BR-BS',
     }),
@@ -99,6 +100,7 @@ d_d_ma_2_dsb = Train(
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BR-BS',
     }),
@@ -159,6 +161,7 @@ d_d_ma_3_dsb = Train(
     weight=132,
     cargo_capacity=31,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BMK-BS',
     }),
@@ -219,6 +222,7 @@ d_d_ma_4_dsb = Train(
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BM-BS',
     }),
@@ -279,6 +283,7 @@ d_d_ma_5_dsb = Train(
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BM-BS',
     }),
@@ -339,6 +344,7 @@ d_d_ma_6_dsb = Train(
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BM-BS',
     }),
@@ -399,6 +405,7 @@ d_d_ma_7_dsb = Train(
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'BS-BR-AM-MA',
     }),
@@ -459,6 +466,7 @@ d_d_ma_8_dsb = Train(
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'BS-BR-AM-MA',
     }),
@@ -519,6 +527,7 @@ d_d_ma_9_dsb = Train(
     weight=132,
     cargo_capacity=31,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'BS-BMK-AM-MA',
     }),
@@ -579,6 +588,7 @@ d_d_ma_10_dsb = Train(
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'BS-BM-AM-MA',
     }),
@@ -639,6 +649,7 @@ d_d_ma_11_dsb = Train(
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'BS-BM-AM-MA',
     }),
@@ -699,6 +710,7 @@ d_d_ma_12_dsb = Train(
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
         'Formation': 'BS-BM-AM-MA',
     }),

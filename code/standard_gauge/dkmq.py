@@ -42,6 +42,7 @@ d_d_mq2_1_dsb = Train(
     introduction_date=date(2002, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -79,6 +80,7 @@ d_d_mq2_2_dsb = Train(
     introduction_date=date(2012, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -116,6 +118,7 @@ d_d_mq2_3_dsb = Train(
     introduction_date=date(2020, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'Four sets bought from DSB in 2020 #4111, #4112, #4113 & #4114',
     }),
@@ -154,6 +157,7 @@ d_d_mq2_4_dsb = Train(
     introduction_date=date(2020, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'Sixteen sets bought from DSB in 2020 #4115 - #4130',
     }),
@@ -192,6 +196,7 @@ d_d_mq2_5_dsb = Train(
     introduction_date=date(2024, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'Sixteen sets bought from Arriva in 2024',
     }),
@@ -230,6 +235,7 @@ d_d_mq2_6_dsb = Train(
     introduction_date=date(2000, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -267,6 +273,7 @@ d_d_mq2_7_dsb = Train(
     introduction_date=date(2004, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -304,6 +311,7 @@ d_d_mq2_8_dsb = Train(
     introduction_date=date(2016, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -341,6 +349,7 @@ d_d_mq2_9_dsb = Train(
     introduction_date=date(2023, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -378,6 +387,7 @@ d_d_mq2_10_dsb = Train(
     introduction_date=date(2017, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'One painted in this livery',
     }),
@@ -416,6 +426,7 @@ d_d_mq2_11_dsb = Train(
     introduction_date=date(2021, 1, 1),
     cargo_capacity=64,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Local passengers, up to 3 can be coupled together into a train set',
         'Trivia': 'Three sets rented from NJJ in 2021 #503, #504 & #507',
     }),

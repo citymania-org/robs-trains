@@ -38,6 +38,7 @@ d_d_ml_1_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers',
     }),
 )
@@ -76,6 +77,7 @@ d_d_ml_2_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers',
     }),
 )
@@ -114,6 +116,7 @@ d_d_mq_1_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers',
     }),
 )
@@ -152,6 +155,7 @@ d_d_mp_1_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers & light freight',
     }),
 )
@@ -190,6 +194,7 @@ d_d_mo_ii_1_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers & light freight',
     }),
 )
@@ -228,6 +233,7 @@ d_d_mo_iv_1_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers & light freight',
     }),
 )
@@ -266,6 +272,7 @@ d_d_mo_v_1_dsb = Train(
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers & light freight',
     }),
 )
