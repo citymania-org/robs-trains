@@ -43,6 +43,7 @@ d_p_ic5_1_dsb = Train(
     power=0,
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, basically a DVT on steroids',
         'Trivia': 'This is a prototype set, two were built, it was designed specifically to go on ferries between Danish islands but it was too long and too heavy. The findings from this experiment led to the much more successful IC3 and IR4',
     }),
@@ -122,6 +123,7 @@ d_p_ic5_2_dsb = Train(
     power=0,
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Intercity passengers, basically a DVT on steroids',
         'Trivia': 'This is a prototype set, two were built, it was designed specifically to go on ferries between Danish islands but it was too long and too heavy. The findings from this experiment led to the much more successful IC3 and IR4',
     }),
@@ -216,6 +218,7 @@ dk_p_ic5a_1 = Train(
     introduction_date=date(1981, 1, 1),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -236,6 +239,7 @@ dk_p_ic5a_2 = Train(
     introduction_date=date(1988, 1, 1),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '1st class',
     }),
 )
@@ -256,6 +260,7 @@ dk_p_ic5a_3 = Train(
     introduction_date=date(1981, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -276,6 +281,7 @@ dk_p_ic5a_4 = Train(
     introduction_date=date(1988, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class',
     }),
 )
@@ -296,6 +302,7 @@ dk_p_ic5a_5 = Train(
     introduction_date=date(1981, 1, 1),
     cargo_capacity=22,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Kiosk car, 2nd class',
     }),
 )
@@ -316,6 +323,7 @@ dk_p_ic5a_6 = Train(
     introduction_date=date(1988, 1, 1),
     cargo_capacity=22,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Kiosk car, 2nd class',
     }),
 )
@@ -367,6 +375,7 @@ dk_p_ic5b_1 = Train(
     introduction_date=date(1981, 1, 1),
     cargo_capacity=74,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class DVT',
     }),
 )
@@ -390,6 +399,7 @@ dk_p_ic5b_2 = Train(
     introduction_date=date(1988, 1, 1),
     cargo_capacity=74,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': '2nd class DVT',
     }),
 )

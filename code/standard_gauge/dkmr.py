@@ -61,6 +61,7 @@ d_d_mr_1_dsb = Train(
     introduction_date=date(1978, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -96,6 +97,7 @@ d_d_mr_2_dsb = Train(
     introduction_date=date(1994, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -131,6 +133,7 @@ d_d_mr_3_dsb = Train(
     introduction_date=date(2002, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -166,6 +169,7 @@ d_d_mr_4_dsb = Train(
     introduction_date=date(2003, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -201,6 +205,7 @@ d_d_mr_5_dsb = Train(
     introduction_date=date(2005, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -236,6 +241,7 @@ d_d_mr_6_dsb = Train(
     introduction_date=date(2012, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -271,6 +277,7 @@ d_d_mr_7_dsb = Train(
     introduction_date=date(1986, 1, 1),
     cargo_capacity=52,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers with 1st class carriage, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
@@ -306,6 +313,7 @@ d_d_mr_8_dsb = Train(
     introduction_date=date(2019, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Trivia': '''Used to service & maintain Denmark's railways''',
     }),
 ).add_articulated_part(
@@ -341,6 +349,7 @@ d_d_mr_9_dsb = Train(
     introduction_date=date(2019, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Trivia': 'A static restaurant train that can be found in Randers, Denmark',
     }),
 ).add_articulated_part(
@@ -376,6 +385,7 @@ dl_d_mr_1_dlj = Train(
     introduction_date=date(1986, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Passengers, up to 5 can be coupled together into a train set',
     }),
 ).add_articulated_part(
