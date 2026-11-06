@@ -134,7 +134,7 @@ from code.standard_gauge.dkmpmg import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_ds
 from code.standard_gauge.öcj25 import s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2
 from code.standard_gauge.notype64 import n_e_type64_1_nsb
 from code.standard_gauge.sexoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
-from code.standard_gauge.sexoa4 import s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj
+from code.standard_gauge.sexoa4 import se_e_Xa_1, s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj, se_p_XmCDFo_1, se_p_XmCDFo_2
 from code.standard_gauge.sex1 import s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj
 from code.standard_gauge.sex10111214 import s_e_x10_1_sj, s_e_x10_2_sj, s_e_x10_3_sj, s_e_x10_4_sj, s_e_x10_5_sj, s_e_x10_6_sj, s_e_x10_7_sj, s_e_x11_1_sj, s_e_x11_2_sj, s_e_x11_3_sj, s_e_x11_4_sj, s_e_x11_5_sj, s_e_x12_1_sj, s_e_x12_2_sj, s_e_x12_3_sj, s_e_x14_1_sj, s_e_x14_2_sj, s_e_x14_3_sj, s_e_x14_4_sj, s_e_x14_5_sj, s_e_x14_6_sj
 from code.standard_gauge.sex606162 import s_e_x60_1_sj, s_e_x61_1_sj, s_e_x61_2_sj, s_e_x61_3_sj, s_e_x61_4_sj, s_e_x62_1_sj
@@ -692,7 +692,7 @@ lib.make_purchase_sprites(
     se_e_blhj6_1,
     se_e_blhj7_1,
     grf.VariantGroup('њXoa3', s_e_Xoa3_1_bj, s_e_Xoa3_2_sj),
-    grf.VariantGroup('њXoa4', s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj),
+    grf.VariantGroup('њXoa4', se_e_Xa_1, s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj, se_p_XmCDFo_1, se_p_XmCDFo_2),
     grf.VariantGroup('X1', s_e_X1a_1_sj, s_e_X1a_2_sj, s_e_X1a_3_sj),
     grf.VariantGroup('њX10', s_e_x10_1_sj, s_e_x10_2_sj, s_e_x10_3_sj, s_e_x10_4_sj, s_e_x10_5_sj, s_e_x10_6_sj, s_e_x10_7_sj),
     grf.VariantGroup('њX11', s_e_x11_1_sj, s_e_x11_2_sj, s_e_x11_3_sj, s_e_x11_4_sj, s_e_x11_5_sj),

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge_15kv
 
 COMMON_XOA3_A_PROPS = dict(
     length=10,
@@ -18,17 +18,28 @@ COMMON_XOA3_A_PROPS = dict(
     weight=80,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=50, # and 2t luggage
+    cargo_capacity=50,
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     country='sweden',
+    mid_stats={
+        'cargo_capacity': 2,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 10,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(4, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
 )
 
 s_e_Xoa3_1_bj = Train(
     **COMMON_XOA3_A_PROPS,
     id='s_e_Xoa3_1_bj',
-    name='њBJ Xoa3',
+    name='њBJ Xa/Xm',
     liveries=make_psd_cc_liveries(
         'pp/1939_SE_Xoa3-A.psd',
         shading='Xoa3-A',
