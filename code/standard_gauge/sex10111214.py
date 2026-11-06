@@ -39,6 +39,7 @@ s_e_x10_1_sj = Train(
     introduction_date=date(1982, 1, 1),
     cargo_capacity=138,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Meatball transport',
         'Trivia': 'Used in Norway on Flåmsbana in the 90s',
     }),
@@ -71,6 +72,7 @@ s_e_x10_2_sj = Train(
     introduction_date=date(1983, 1, 1),
     cargo_capacity=138,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -102,6 +104,7 @@ s_e_x10_3_sj = Train(
     introduction_date=date(1985, 1, 1),
     cargo_capacity=138,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -133,6 +136,7 @@ s_e_x10_4_sj = Train(
     introduction_date=date(1996, 1, 1),
     cargo_capacity=138,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -164,6 +168,7 @@ s_e_x10_5_sj = Train(
     introduction_date=date(1999, 1, 1),
     cargo_capacity=138,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -195,6 +200,7 @@ s_e_x10_6_sj = Train(
     introduction_date=date(2017, 1, 1),
     cargo_capacity=138,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -226,6 +232,7 @@ s_e_x10_7_sj = Train(
     introduction_date=date(2017, 1, 1),
     cargo_capacity=138,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -278,6 +285,7 @@ s_e_x11_1_sj = Train(
     introduction_date=date(1994, 1, 1),
     cargo_capacity=84,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -309,6 +317,7 @@ s_e_x11_2_sj = Train(
     introduction_date=date(1994, 1, 1),
     cargo_capacity=84,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -340,6 +349,7 @@ s_e_x11_3_sj = Train(
     introduction_date=date(2004, 1, 1),
     cargo_capacity=84,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -371,6 +381,7 @@ s_e_x11_4_sj = Train(
     introduction_date=date(2011, 1, 1),
     cargo_capacity=84,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -402,6 +413,7 @@ s_e_x11_5_sj = Train(
     introduction_date=date(2011, 1, 1),
     cargo_capacity=84,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -454,6 +466,7 @@ s_e_x12_1_sj = Train(
     introduction_date=date(1991, 1, 1),
     cargo_capacity=58,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -485,6 +498,7 @@ s_e_x12_2_sj = Train(
     introduction_date=date(2008, 1, 1),
     cargo_capacity=58,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -516,6 +530,7 @@ s_e_x12_3_sj = Train(
     introduction_date=date(2012, 1, 1),
     cargo_capacity=58,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -568,6 +583,7 @@ s_e_x14_1_sj = Train(
     introduction_date=date(1994, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -599,6 +615,7 @@ s_e_x14_2_sj = Train(
     introduction_date=date(1994, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -630,6 +647,7 @@ s_e_x14_3_sj = Train(
     introduction_date=date(1994, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -661,6 +679,7 @@ s_e_x14_4_sj = Train(
     introduction_date=date(2003, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -692,6 +711,7 @@ s_e_x14_5_sj = Train(
     introduction_date=date(2010, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(
@@ -723,6 +743,7 @@ s_e_x14_6_sj = Train(
     introduction_date=date(2015, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
         'Use': 'Meatball transport',
     }),
 ).add_articulated_part(

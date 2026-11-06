@@ -42,6 +42,7 @@ s_e_X1a_1_sj = Train(
     introduction_date=date(1968, 1, 1),
     cargo_capacity=148,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'Built by ASEA and developed from the X6 this train was used on the Stockholm Commuter Rail with 5 allowed to couple together to make a 10 car train set. One unit was modified for tilting and high speed research',
     }),
@@ -81,6 +82,7 @@ s_e_X1a_2_sj = Train(
     introduction_date=date(1988, 1, 1),
     cargo_capacity=148,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'This rebuild took place in 1988 to increase reliability in cold weather',
     }),
@@ -120,6 +122,7 @@ s_e_X1a_3_sj = Train(
     introduction_date=date(1996, 1, 1),
     cargo_capacity=148,
     additional_text=grf.fake_vehicle_info({
+        'Loading speed': '30',
         'Use': 'Short distance local passengers',
         'Trivia': 'Two sets given the same livery as the contemporary metro stock in Stockholm',
     }),
