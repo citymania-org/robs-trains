@@ -132,11 +132,11 @@ se_e_ma_3l = Train(
 se_e_ma_5 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_5',
-    name='TGOJ Ma',
+    name='TGOJ Ma', #øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
     liveries=make_psd_cc_liveries(
-        paint=('8b',),
         'pp/sema.psd',
         shading=('mal',),
+        paint=('sj1',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
@@ -153,11 +153,11 @@ se_e_ma_5 = Train(
 se_e_ma_6 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_6',
-    name='BK Ma',
+    name='BK Ma', #øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
     liveries=make_psd_cc_liveries(
-        paint=('8b',),
         'pp/sema.psd',
         shading=('mal',),
+        paint=('sj1',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["SLBLUE"],
@@ -174,11 +174,11 @@ se_e_ma_6 = Train(
 se_e_ma_7 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_7',
-    name='TGOJ Ma',
+    name='TGOJ Ma', #øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
     liveries=make_psd_cc_liveries(
-        paint=('8b',),
         'pp/sema.psd',
         shading=('mal',),
+        paint=('sj1',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["APPLE"],
@@ -195,11 +195,11 @@ se_e_ma_7 = Train(
 se_e_ma_8 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_8',
-    name='NR Ma',
+    name='NR Ma', #øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
     liveries=make_psd_cc_liveries(
-        paint=('8b',),
         'pp/sema.psd',
         shading=('mal',),
+        paint=('sj1',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["NAVY"],
@@ -216,11 +216,11 @@ se_e_ma_8 = Train(
 se_e_ma_9 = Train(
     **COMMON_ma_PROPS,
     id='se_e_ma_9',
-    name='BJ Ma',
+    name='BJ Ma', #øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
     liveries=make_psd_cc_liveries(
-        paint=('8b',),
         'pp/sema.psd',
         shading=('mal',),
+        paint=('sj1',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["RED"],
@@ -237,11 +237,11 @@ se_e_ma_9 = Train(
 no_e_ma_1 = Train(
     **COMMON_ma_PROPS,
     id='no_e_ma_1',
-    name='NTA Ma',
+    name='NTA Ma', #øøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøøø
     liveries=make_psd_cc_liveries(
-        paint=('8b',),
         'pp/sema.psd',
         shading=('mal',),
+        paint=('sj1',),
         overlay=('light'),
         r_overlay=('lightr'),
         cc_replace=colours["SEBROWN"],
