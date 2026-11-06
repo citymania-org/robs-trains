@@ -39,7 +39,7 @@ d_d_ic2_1_dsb = Train(
     introduction_date=date(1997, 1, 1),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Passengers',
         'Operators': 'GDS, LJ, OHJ, VL, RTOG',
         'Trivia': 'All thirteen locomotives obtained by RTOG in 2009',
     }),
@@ -73,7 +73,7 @@ d_d_ic2_2_dsb = Train( # AC units on roof
     introduction_date=date(2013, 1, 1),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+        'Use': 'Passengers',
         'Operators': 'RTOG, LT',
         'Trivia': 'All thirteen locomotives obtained by LT in 2015',
     }),
