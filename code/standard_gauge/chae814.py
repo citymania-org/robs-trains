@@ -190,7 +190,6 @@ ch_e_ae814_5 = Train(
     weight=236,
     introduction_date=date(1938, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Upon construction it was the most powerful locomotive in the world',
     }),
     badges=badges.set_train_badges({

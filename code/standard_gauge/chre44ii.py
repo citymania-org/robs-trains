@@ -277,7 +277,6 @@ ch_e_re44ii_5 = Train(
     ),
     introduction_date=date(1999, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
