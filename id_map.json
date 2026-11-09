@@ -3235,7 +3235,8 @@
             "operator/DK/dsb/stog": 428,
             "operator/SE/oetraf": 429,
             "flag/doggerland": 430,
-            "operator/doggerland/dsj": 431
+            "operator/doggerland/dsj": 431,
+            "power/electric/ac/25kv": 432
         }
     }
 }

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv, badges
 
 d_e_er_1_dsb = Train(
     id='d_e_er_1_dsb',
@@ -19,9 +19,6 @@ d_e_er_1_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_er2_1_dsb',
-    country='denmark',
-    company='na',
-    power_type='25kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_25kv,
     max_speed=Train.kmhish(180),
@@ -39,7 +36,14 @@ d_e_er_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_er2_1_dsb',
@@ -101,9 +105,6 @@ d_e_er_2_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_er2_2_dsb',
-    country='denmark',
-    company='na',
-    power_type='25kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_25kv,
     max_speed=Train.kmhish(180),
@@ -121,7 +122,14 @@ d_e_er_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_er2_2_dsb',
@@ -183,9 +191,6 @@ d_e_er_3_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_er2_3_dsb',
-    country='denmark',
-    company='na',
-    power_type='25kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_25kv,
     max_speed=Train.kmhish(180),
@@ -203,7 +208,14 @@ d_e_er_3_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_er2_3_dsb',
@@ -265,9 +277,6 @@ d_e_er_4_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_er2_4_dsb',
-    country='denmark',
-    company='na',
-    power_type='25kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_25kv,
     max_speed=Train.kmhish(180),
@@ -285,7 +294,14 @@ d_e_er_4_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Regional passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_er2_4_dsb',
