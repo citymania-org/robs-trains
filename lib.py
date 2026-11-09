@@ -9,6 +9,7 @@ from psd_tools import PSDImage
 from nml.grfstrings import NewGRFString, default_lang
 
 import grf
+import badge
 
 CC_DEFAULT, CC_SWAPPED = 1, 2
 
@@ -245,7 +246,11 @@ def _make_liveries(liveries, is_articulated=False):
 # Needed for more complex railtype handling to allow for multiple voltages 
 
 class NewGRF(grf.NewGRF):
-
+    
+    def __init__(self, *, grfid, name, description, version=None, min_compatible_version=None, format_version=8, url=None, strings=None, id_map_file=None, sprite_cache_path='.cache', preferred_blitter=None, fast_sprite_enumeration=False):
+        super().__init__(grfid=grfid, name=name, description=description, version=version, min_compatible_version=min_compatible_version, format_version=format_version, url=url, strings=strings, id_map_file=id_map_file, sprite_cache_path=sprite_cache_path, preferred_blitter=preferred_blitter, fast_sprite_enumeration=fast_sprite_enumeration)
+        self._badge_table = None
+    
     def add_railtype(self, *railtype_list):
         if self._railtype_table is None:
             self._railtype_table = {}
@@ -352,6 +357,52 @@ class NewGRF(grf.NewGRF):
             }
         ))
         return res
+
+    def _encode_string(self, value):
+        if isinstance(value, str):
+            return grf.to_bytes(value) + bytes([0x00])
+
+    def add_badge(self, badge):
+        if self._badge_table is None:
+            self._badge_table = {}
+
+        b_id = len(self._badge_table)
+
+        bb = self._encode_string(badge)
+        self._badge_table[bb] = b_id
+
+        return b_id
+
+    def set_badge_table(self, badge_list):
+        self._badge_table = {}
+        for i, b in enumerate(badge_list):
+            self._badge_table[self._encode_string(b)] = i
+        return tuple(range(len(badge_list)))
+
+    def get_badge_id(self, badge):
+        if self._badge_table is None:
+            self._badge_table = {}
+        
+        res = self._badge_table.get(self._encode_string(badge))
+        if res is None:
+            res = self.add_badge(badge)
+        return res
+    
+    def generate_sprites(self):
+        
+        res = []
+
+        if self._badge_table is not None:
+            res.append(grf.DefineMultiple(
+                feature=grf.GLOBAL_VAR,
+                first_id=0,
+                count=len(self._badge_table),
+                props={
+                    'badge_table': list(self._badge_table.keys())
+                }
+            ))
+
+        return super().generate_sprites() + res
 
 class Train(grf.Train):
     def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, track_type=None, **kw):
@@ -1530,3 +1581,51 @@ class SetPurchaseOrder(grf.SetPurchaseOrder): # we want to have the name of top 
             )
         self._variant_callbacks_set = True
         return self
+
+class Badges(grf.SpriteGenerator):
+    
+    def __init__(self, g):
+        self.grf = g
+        self.classes = {}
+        self.badges = {}
+    
+    def set_train_badges(self, badges):
+        res = []
+        for c, blist in badges.items():
+            self.classes[c] = None
+            self.grf.get_badge_id(c)
+            for badge_label in blist:
+                if c == 'role':
+                    if badge_label not in ('heavy_freight', 'freight', 'light_freight', 'shunting', 'international', 'express_passenger', 'regional_passenger', 'suburban_passenger', 'metro', 'utility', 'luggage', 'mail', 'bike', 'driving_cab', 'restaurant_car', '1st_class', '2nd_class', '3rd_class', 'sleeper', 'panoramic'):
+                        raise ValueError('Unallowed badge: role/', badge_label)
+                self.badges[c+'/'+badge_label] = [None, None, None]
+                res.append(self.grf.get_badge_id(c+'/'+badge_label))
+        return res
+    
+    def find_missing(self, check_sprite=False):
+        for k, v in self.classes.items():
+            if k == 'flag':
+                continue
+            if v is None:
+                print(f'Badge class {k} is missing a name')
+        for k, v in self.badges.items():
+            if k.startswith('flag'):
+                continue
+            if v[0] is None:
+                print(f'Badge {k} is missing a name')
+            if check_sprite and v[1] is None:
+                print(f'Badge {k} is missing a sprite')
+                
+    def set_class_name(self, c, name):
+        self.classes[c] = name
+                
+    def set_badge_info(self, c, name, action1, action2):
+        self.badges[c] = [name, action1, action2]
+        
+    def get_sprites(self, g):
+        res = []
+        for c, v in self.classes.items():
+            res += badge.Badge(c, name=v).get_sprites(g)
+        for b, v in self.badges.items():
+            res += badge.Badge(b, name=v[0], icon=(v[1], v[2])).get_sprites(g)
+        return res

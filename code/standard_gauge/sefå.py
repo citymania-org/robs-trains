@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_f_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -38,12 +37,17 @@ se_s_f_1 = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["GREY10"]
     ),
-    country='sweden',
-    company='na',
     max_speed=Train.kmhish(90),
     introduction_date=date(1914, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['steam'],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_s_f2_1',
@@ -69,12 +73,17 @@ se_s_f_2 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(110),
     introduction_date=date(1937, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_s_f2_2',
@@ -100,12 +109,17 @@ se_s_f_3 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(110),
     introduction_date=date(1942, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_s_f2_3',

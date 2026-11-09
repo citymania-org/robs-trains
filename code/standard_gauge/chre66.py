@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_66_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(140),
@@ -35,12 +34,16 @@ ch_e_re66_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["GREY5"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as Re 620',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
     }),
 )
 
@@ -55,12 +58,16 @@ ch_e_re66_2 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY5"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as Re 620',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
     }),
 )
 
@@ -75,10 +82,14 @@ ch_e_re66_3 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["BLUE"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1999, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb/sbbc'],
+        'manufacturer': [],
     }),
 )

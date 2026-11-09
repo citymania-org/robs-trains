@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_XOA3_A_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(90),
@@ -22,7 +21,6 @@ COMMON_XOA3_A_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
     mid_stats={
         'cargo_capacity': 2,
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
@@ -49,12 +47,16 @@ s_e_Xoa3_1_bj = Train(
         cc2_replace=colours["CREAM"]
     ),
     purchase_sprite_towed_id='s_e_Xoa3_1_bj_car2',
-    company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'BJ',
-        'Use': 'Local trains, 3rd class',
-        'Builder': 'ASEA'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/bj'],
+        'manufacturer': ['SE/asea'],
     }),
 ).add_articulated_part(
     id='s_e_Xoa3_1_bj_car2',
@@ -89,8 +91,13 @@ s_e_Xoa3_2_sj = Train(
     introduction_date=date(1948, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Operator': 'SJ',
-        'Use': 'Local trains, 3rd class',
-        'Builder': 'ASEA'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 ).add_articulated_part(
     id='s_e_Xoa3_2_sj_car2',

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v, badges
 
 d_e_stog3_1_dsb = Train(
     id='d_e_stog3_1_dsb',
@@ -17,9 +17,6 @@ d_e_stog3_1_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_stog32_1_dsb',
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(120),
@@ -37,8 +34,15 @@ d_e_stog3_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Short distance local passengers',
         'Formation': 'FC-MC-MC-FC',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': [],
+        'attribute': ['concept'],
     }),
 ).add_articulated_part(
     id='d_e_stog32_1_dsb',
@@ -94,9 +98,6 @@ d_e_stog3_2_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_stog32_2_dsb',
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(120),
@@ -114,8 +115,15 @@ d_e_stog3_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Short distance local passengers',
         'Formation': 'FC-MC-MC-FC',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': [],
+        'attribute': ['concept'],
     }),
 ).add_articulated_part(
     id='d_e_stog32_2_dsb',
@@ -171,9 +179,6 @@ d_e_stog3_3_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_stog32_3_dsb',
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(100),
@@ -191,8 +196,14 @@ d_e_stog3_3_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers',
         'Formation': 'FC-MC-MC-FC',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_stog32_3_dsb',
@@ -248,9 +259,6 @@ d_e_stog3_4_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_e_stog32_4_dsb',
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(100),
@@ -268,8 +276,14 @@ d_e_stog3_4_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers',
         'Formation': 'FC-MC-MC-FC',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_stog32_4_dsb',

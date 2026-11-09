@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import  g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge
+from common import  g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, badges
 
 se_p_BCo_1 = Train(
     id='se_p_BCo_1',
@@ -16,9 +16,6 @@ se_p_BCo_1 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(130),
@@ -35,7 +32,13 @@ se_p_BCo_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['SE/okb'],
+        'manufacturer': [''],
     }),
 )
 
@@ -51,9 +54,6 @@ se_p_BCo6b_1 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(130),
@@ -70,7 +70,13 @@ se_p_BCo6b_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['SE/okb'],
+        'manufacturer': [''],
     }),
 )
 
@@ -86,9 +92,6 @@ se_p_BCort_1 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(130),
@@ -105,7 +108,13 @@ se_p_BCort_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['SE/okb'],
+        'manufacturer': [''],
     }),
 )
 
@@ -121,9 +130,6 @@ se_p_Ro2b_1 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(130),
@@ -140,7 +146,13 @@ se_p_Ro2b_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['SE/okb'],
+        'manufacturer': [''],
     }),
 )
 
@@ -156,9 +168,6 @@ se_w_121to122_1 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(130),
@@ -178,7 +187,13 @@ se_w_121to122_1 = Train(
                 'cargo_capacity': Train.Luggage.switch_cargo_capacity(10, g),
             },
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Luggage carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['luggage'],
+        'power': [],
+        'operator': ['SE/okb'],
+        'manufacturer': [''],
     }),
 )
 
@@ -194,9 +209,6 @@ se_w_F3_1 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(100),
@@ -216,6 +228,12 @@ se_w_F3_1 = Train(
                     'cargo_capacity': Train.Luggage.switch_cargo_capacity(10, g),
                 },
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Luggage carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['luggage'],
+        'power': [],
+        'operator': ['SE/okb'],
+        'manufacturer': [''],
     }),
 )

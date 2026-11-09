@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_iore_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -36,12 +35,17 @@ se_e_iore_1 = Train(
         cc_replace=colours["COBALT"],
         cc2_replace=colours["SCARLET"]
     ),
-    company='na',
     introduction_date=date(2000, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
         'Toilet': 'Yes',
-        'Use': 'Iron ore trains in northern Sweden',
+        'Trivia': 'Used on iron ore trains in northern Sweden',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['heavy_freight', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/mtab'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_e_iore2_1',

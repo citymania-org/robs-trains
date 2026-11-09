@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 #Contains the DMUs of SNJ and their previous iterations. Some vehicles do not have a separate entry for SNJ, since their SJ livery was pretty much identical. SNJ is the common denonimator for these units and are therefore bunched together in this .py file.
 
@@ -19,9 +19,6 @@ se_d_SNJ1to2_1 = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(80),
@@ -38,7 +35,13 @@ se_d_SNJ1to2_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class'],
+        'power': ['diesel'],
+        'operator': ['SE/snj'],
+        'manufacturer': [],
     }),
 )
 
@@ -55,9 +58,6 @@ se_d_SNJ3_1 = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -75,7 +75,13 @@ se_d_SNJ3_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class, luggage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class', 'luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/snj'],
+        'manufacturer': [],
     }),
     mid_stats={
         'cargo_capacity': 2,    #Increase to 3?
@@ -108,9 +114,6 @@ se_d_LyJ10_1 = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -128,7 +131,13 @@ se_d_LyJ10_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class, luggage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class', 'luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/lyj'],
+        'manufacturer': [],
     }),
     mid_stats={
         'cargo_capacity': 1,
@@ -157,9 +166,6 @@ se_d_MCo_2 = Train(
         cc2_replace=colours["DCREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -177,7 +183,13 @@ se_d_MCo_2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class, luggage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class', 'luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/vbhj'],
+        'manufacturer': [],
     }),
     mid_stats={
         'cargo_capacity': 2,
@@ -206,9 +218,6 @@ se_d_Xod4_1 = Train(
         cc2_replace=colours["DGREEN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -225,7 +234,13 @@ se_d_Xod4_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class'],
+        'power': ['diesel'],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
 )
 
@@ -243,9 +258,6 @@ se_d_MCo_3 = Train(
         cc2_replace=colours["DCREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(110),
@@ -263,7 +275,13 @@ se_d_MCo_3 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class, Luggage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class', 'luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/vbhj'],
+        'manufacturer': [],
     }),
     mid_stats={
         'cargo_capacity': 2,
@@ -292,9 +310,6 @@ se_d_XCo_1 = Train(
         cc2_replace=colours["DCREAM"]   #Antingen gräddvit eller ljusgul
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -312,7 +327,13 @@ se_d_XCo_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class, luggage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class', 'luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/myj'],
+        'manufacturer': [],
     }),
     mid_stats={
         'cargo_capacity': 1,
@@ -339,9 +360,6 @@ se_d_Xod6_1 = Train(
         cc2_replace=colours["SEBROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -359,7 +377,13 @@ se_d_Xod6_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class, luggage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class', 'luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
     mid_stats={
         'cargo_capacity': 1,

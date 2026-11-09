@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge, standard_gauge_1500v
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, standard_gauge_1500v, badges
 
 COMMON_HRRJ1_PROPS = dict(
     length=5,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(30),
@@ -35,19 +34,23 @@ se_e_hrrj1to2_1 = Train(
         cc_replace=colours["NAVY"],
         cc2_replace=colours["YORANGE"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1907, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Use': 'Freight',
-        'Trivia': '''Denmark's first electric locomotive''',
+        'Trivia': '''Denmark's first electric locomotive''', # what????
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['SE/hrrj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
 COMMON_HRRJ2_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(70),
@@ -62,7 +65,6 @@ COMMON_HRRJ2_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
 )
 
 se_e_hrrj1to5_1 = Train(
@@ -76,10 +78,15 @@ se_e_hrrj1to5_1 = Train(
         cc_replace=colours["SKY"],
         cc2_replace=colours["CREAM"]
     ),
-    company='na',
     introduction_date=date(1906, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['SE/hrrj'],
+        'manufacturer': [],
     }),
 )
 
@@ -88,7 +95,6 @@ se_e_hrrj1to5_1 = Train(
 COMMON_HRRJ3_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -115,12 +121,16 @@ se_w_hrrj21to22_1 = Train(
         cc_replace=colours["SKY"],
         cc2_replace=colours["CREAM"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1906, 1, 1),
     cargo_capacity=80,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['SE/hrrj'],
+        'manufacturer': [],
     }),
 )
 
@@ -154,11 +164,15 @@ se_w_hrrj23to24_1 = Train(
         cc_replace=colours["SKY"],
         cc2_replace=colours["CREAM"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1906, 1, 1),
     cargo_capacity=70,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['SE/hrrj'],
+        'manufacturer': [],
     }),
 )

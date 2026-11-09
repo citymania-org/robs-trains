@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, g
+from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, g, badges
 
 COMMON_ew_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -33,14 +32,18 @@ ch_p_ewiv_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1981, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -55,15 +58,19 @@ ch_p_ewiv_20 = Train(
         cc_replace=colours["CREAM"],
         cc2_replace=colours["DBLUE"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1985, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
         'Trivia': 'Later obtained by SBB in 2004',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/bls'],
+        'manufacturer': []
     }),
 )
 
@@ -78,14 +85,18 @@ ch_p_ewiv_21 = Train(
         cc_replace=colours["CREAM"],
         cc2_replace=colours["DGREEN"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/bt'],
+        'manufacturer': []
     }),
 )
 
@@ -100,14 +111,18 @@ ch_p_ewiv_24 = Train(
         cc_replace=colours["CREAM"],
         cc2_replace=colours["DGREEN"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sob'],
+        'manufacturer': []
     }),
 )
 
@@ -122,14 +137,18 @@ ch_p_ewiv_2 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -144,14 +163,18 @@ ch_p_ewiv_3 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -166,14 +189,18 @@ ch_p_ewiv_4 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1983, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -188,15 +215,19 @@ ch_p_ewiv_22 = Train(
         cc_replace=colours["CREAM"],
         cc2_replace=colours["DBLUE"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1985, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
         'Trivia': 'Later obtained by SBB in 2004',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/bls'],
+        'manufacturer': []
     }),
 )
 
@@ -211,14 +242,18 @@ ch_p_ewiv_23 = Train(
         cc_replace=colours["CREAM"],
         cc2_replace=colours["DGREEN"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/bt'],
+        'manufacturer': []
     }),
 )
 
@@ -233,14 +268,18 @@ ch_p_ewiv_25 = Train(
         cc_replace=colours["CREAM"],
         cc2_replace=colours["DGREEN"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sob'],
+        'manufacturer': []
     }),
 )
 
@@ -255,14 +294,18 @@ ch_p_ewiv_5 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -277,14 +320,18 @@ ch_p_ewiv_6 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=86,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -299,14 +346,18 @@ ch_p_ewiv_10 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1983, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -321,14 +372,18 @@ ch_p_ewiv_11 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1988, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -343,14 +398,18 @@ ch_p_ewiv_12 = Train(
         cc_replace=colours["DPURPLE"],
         cc2_replace=colours["MAGENTA"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1991, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -365,14 +424,18 @@ ch_p_ewiv_13 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1992, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb', 'US/mc_donalds'],
+        'manufacturer': []
     }),
 )
 
@@ -387,14 +450,18 @@ ch_p_ewiv_14 = Train(
         cc_replace=colours["DPURPLE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1996, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -409,14 +476,18 @@ ch_p_ewiv_15 = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(160),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb', 'europe/coop'],
+        'manufacturer': []
     }),
 )
 
@@ -431,14 +502,18 @@ ch_p_ewiv_16 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -453,14 +528,18 @@ ch_p_ewiv_17 = Train(
         cc_replace=colours["DPURPLE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2002, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -475,14 +554,18 @@ ch_p_ewiv_18 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2011, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -497,21 +580,24 @@ ch_p_ewiv_19 = Train(
         cc_replace=colours["LAVENDER"],
         cc2_replace=colours["LAVENDER"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2014, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=1,
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Restaurant carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
 COMMON_ews_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -549,14 +635,19 @@ ch_p_ewiv_7 = Train(
         cc2_replace=colours["SBB"],
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1996, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class', 'driving_cab'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -574,14 +665,19 @@ ch_p_ewiv_8 = Train(
         cc2_replace=colours["GREY10"],
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class', 'driving_cab'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -599,13 +695,18 @@ ch_p_ewiv_9 = Train(
         cc2_replace=colours["GREY10"],
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class', 'driving_cab'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )

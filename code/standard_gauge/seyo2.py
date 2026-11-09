@@ -2,13 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_Yo2_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(80),
@@ -36,11 +34,15 @@ s_d_Yo2_1_MSJ = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["CREAM"]
     ),
-    country='sweden',
     introduction_date=date(1938, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'MSJ',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/msj'],
+        'manufacturer': [],
     }),
 )
 
@@ -55,11 +57,15 @@ s_d_Yo2_2_BJ = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["CREAM"]
     ),
-    country='sweden',
     introduction_date=date(1938, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'BJ',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/bj'],
+        'manufacturer': [],
     }),
 )
 
@@ -74,11 +80,15 @@ s_d_Yo2_3_SJ = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='sweden',
     introduction_date=date(1943, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'BJ',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/bj'],
+        'manufacturer': [],
     }),
 )
 
@@ -96,8 +106,6 @@ s_p_YCDFo_1_TRJ = Train(
         cc2_replace=colours["CREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(70),
@@ -114,7 +122,13 @@ s_p_YCDFo_1_TRJ = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'luggage'],
+        'power': [],
+        'operator': ['SE/trj'],
+        'manufacturer': [],
     }),
 )
 
@@ -130,8 +144,6 @@ s_p_UBFo9_1_SJ = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(110),
@@ -148,6 +160,12 @@ s_p_UBFo9_1_SJ = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
 )

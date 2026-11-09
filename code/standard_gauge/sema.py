@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_ma_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -37,11 +36,15 @@ se_e_ma_1 = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["GREY10"]
     ),
-    company='na',
     introduction_date=date(1953, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -58,11 +61,15 @@ se_e_ma_2 = Train(
         cc_replace=colours["MECONIUM"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
     introduction_date=date(1953, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/tgoj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -79,11 +86,15 @@ se_e_ma_3 = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     introduction_date=date(1968, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/tgoj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -100,11 +111,15 @@ se_e_ma_4 = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["DBLUE"]
     ),
-    company='na',
     introduction_date=date(1970, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -121,11 +136,15 @@ se_e_ma_3l = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     introduction_date=date(1977, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/tgoj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -142,11 +161,15 @@ se_e_ma_5 = Train(
         cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
-    company='na',
     introduction_date=date(1996, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/tgoj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -163,11 +186,15 @@ se_e_ma_6 = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["BLUE"]
     ),
-    company='na',
     introduction_date=date(1999, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/Bk'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -184,11 +211,15 @@ se_e_ma_7 = Train(
         cc_replace=colours["APPLE"],
         cc2_replace=colours["BLUE"]
     ),
-    company='na',
     introduction_date=date(2001, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/tgoj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -205,11 +236,15 @@ se_e_ma_8 = Train(
         cc_replace=colours["NAVY"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     introduction_date=date(2011, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/NR'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -226,11 +261,15 @@ se_e_ma_9 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["ORANGE"]
     ),
-    company='na',
     introduction_date=date(2019, 1, 1),
-    country='sweden',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/bjs'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -247,10 +286,14 @@ no_e_ma_1 = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     introduction_date=date(2014, 1, 1),
-    country='norway',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/nta'],
+        'manufacturer': ['SE/asea'],
     }),
 )

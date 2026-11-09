@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge_15kv, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge_15kv, standard_gauge, badges
 
 COMMON_XOA4_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     power=500,
@@ -21,7 +20,6 @@ COMMON_XOA4_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
     mid_stats={
         'cargo_capacity': 1,
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
@@ -47,12 +45,17 @@ se_e_Xa_1 = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["CREAM"]
     ),
-    company='na',
     max_speed=Train.kmhish(120),
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 3rd class',
         'Trivia': '''Was geared for higher speeds to gain experience for the acquisition of BJ's GDG-Expressen; BJ XoA, later SJ Xoa8'''
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/dj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -68,12 +71,17 @@ s_e_Xoa4_1_sj = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["CREAM"]
     ),
-    company='na',
     max_speed=Train.kmhish(90),
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 3rd class',
         'Trivia': 'Cox4 and Co6 were usually sanwhiched between the multiple units'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -93,14 +101,19 @@ s_e_Xoa4_2_sj = Train(
     max_speed=Train.kmhish(90),
     introduction_date=date(1944, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
 COMMON_COX4_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -115,7 +128,6 @@ COMMON_COX4_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
 )
 
 s_e_Cox4_1_sj = Train(
@@ -130,10 +142,15 @@ s_e_Cox4_1_sj = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["CREAM"]
     ),
-    company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -152,14 +169,19 @@ s_e_Cox4_2_sj = Train(
     company='na',
     introduction_date=date(1944, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
 COMMON_XmCDFo_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(90),
@@ -174,7 +196,6 @@ COMMON_XmCDFo_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
     mid_stats={
         'cargo_capacity': 2,
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
@@ -200,10 +221,15 @@ se_p_XmCDFo_1 = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["CREAM"]
     ),
-    company='na',
     introduction_date=date(1944, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'power': [],
+        'operator': ['SE/dj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -218,9 +244,14 @@ se_p_XmCDFo_2 = Train(
         cc_replace=colours["REDBROWN"],
         cc2_replace=colours["REDBROWN"]
     ),
-    company='na',
     introduction_date=date(1948, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )

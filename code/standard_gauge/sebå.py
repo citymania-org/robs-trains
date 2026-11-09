@@ -2,14 +2,13 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 #Љ Do not add this train to generate.py until the addition of Template.psd layer "2a" and "2b" or when this loco gets its .psd
 
 COMMON_B_PROPS = dict(
     length=4,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -37,12 +36,16 @@ se_s_b_1 = Train(
         cc_replace=colours["SBB"], #ЉCheck
         cc2_replace=colours["RED"] #ЉCheck
     ),
-    country='sweden',
-    company='na',
     max_speed=Train.kmhish(60),
     introduction_date=date(1856, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['steam'],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_s_b_2',

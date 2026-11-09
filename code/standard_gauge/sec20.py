@@ -2,13 +2,12 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, metro, badges
 
 
 COMMON_C20_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='3rd',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=metro,
     max_speed=Train.kmhish(90),
@@ -23,7 +22,6 @@ COMMON_C20_PROPS = dict(
     loading_speed=40,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
 )
 
 se_e_C20_1 = Train(
@@ -37,10 +35,15 @@ se_e_C20_1 = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY10"]
     ),
-    company='sl',
     introduction_date=date(1997, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Stockholm Metro trains',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['metro'],
+        'power': ['third_rail', 'metro'],
+        'operator': ['SE/sl'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_e_C20_1_car2',
@@ -73,7 +76,6 @@ se_e_C20_1 = Train(
 COMMON_C20U_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='3rd',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=metro,
     max_speed=Train.kmhish(90),
@@ -88,7 +90,6 @@ COMMON_C20U_PROPS = dict(
     loading_speed=40,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
 )
 
 se_e_C20u_1 = Train(
@@ -102,11 +103,16 @@ se_e_C20u_1 = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY10"]
     ),
-    company='sl',
     introduction_date=date(2021, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Stockholm Metro trains',
         'Trivia': '''C20 half-life refurbishment''',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['metro'],
+        'power': ['third_rail', 'metro'],
+        'operator': ['SE/sl'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_e_C20u_1_car2',

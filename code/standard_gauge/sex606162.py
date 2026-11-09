@@ -2,14 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_x60_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(160),
@@ -40,7 +37,13 @@ s_e_x60_1_sj = Train(
     cargo_capacity=154,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Meatball transport',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['suburban_passenger',],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sl'],
+        'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
     id='s_e_x602_1_sj',
@@ -112,9 +115,6 @@ s_e_x60_1_sj = Train(
 COMMON_x61_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(160),
@@ -145,7 +145,13 @@ s_e_x61_1_sj = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Meatball transport',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/skane'],
+        'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
     id='s_e_x612_1_sj',
@@ -204,7 +210,13 @@ s_e_x61_2_sj = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Meatball transport',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/oetraf'],
+        'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
     id='s_e_x612_2_sj',
@@ -263,7 +275,13 @@ s_e_x61_3_sj = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '15',
-        'Use': 'Meatball transport',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/vtab'],
+        'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
     id='s_e_x612_3_sj',
@@ -322,7 +340,13 @@ s_e_x61_4_sj = Train(
     loading_speed=15,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '15',
-        'Use': 'Meatball transport',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/vtab'],
+        'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
     id='s_e_x612_4_sj',
@@ -368,9 +392,6 @@ s_e_x61_4_sj = Train(
 COMMON_x62_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(180),
@@ -401,7 +422,13 @@ s_e_x62_1_sj = Train(
     cargo_capacity=49,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Meatball transport',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/norrtaag'],
+        'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
     id='s_e_x622_1_sj',

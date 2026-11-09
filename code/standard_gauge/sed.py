@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_d_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -19,7 +18,6 @@ COMMON_d_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='sweden',
 )
 
 se_e_d_1 = Train(
@@ -36,10 +34,15 @@ se_e_d_1 = Train(
     max_speed=Train.kmhish(90),
     power=1659,
     weight=80,
-    company='na',
     introduction_date=date(1925, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -57,10 +60,15 @@ se_e_d_2 = Train(
     max_speed=Train.kmhish(70),
     power=1659,
     weight=80,
-    company='na',
     introduction_date=date(1925, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -78,10 +86,15 @@ se_e_d_3 = Train(
     max_speed=Train.kmhish(90),
     power=1659,
     weight=80,
-    company='na',
     introduction_date=date(1933, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -99,10 +112,15 @@ se_e_d_4 = Train(
     max_speed=Train.kmhish(70),
     power=1659,
     weight=80,
-    company='na',
     introduction_date=date(1933, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -120,10 +138,15 @@ se_e_d_5 = Train(
     max_speed=Train.kmhish(100),
     power=1999,
     weight=80,
-    company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -141,10 +164,15 @@ se_e_d_6 = Train(
     max_speed=Train.kmhish(100),
     power=1999,
     weight=80,
-    company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -162,10 +190,15 @@ se_e_d_7 = Train(
     max_speed=Train.kmhish(75),
     power=1659,
     weight=80,
-    company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -183,10 +216,15 @@ se_e_d_8 = Train(
     max_speed=Train.kmhish(75),
     power=1659,
     weight=80,
-    company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -204,10 +242,15 @@ se_e_d_9 = Train(
     max_speed=Train.kmhish(100),
     power=2502,
     weight=80,
-    company='na',
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -225,9 +268,14 @@ se_e_d_10 = Train(
     max_speed=Train.kmhish(100),
     power=2502,
     weight=80,
-    company='na',
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )

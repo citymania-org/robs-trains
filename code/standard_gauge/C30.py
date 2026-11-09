@@ -2,13 +2,12 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge, badges
 
 
 COMMON_C30_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='3rd',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=metro,
     max_speed=Train.kmhish(90),
@@ -23,7 +22,6 @@ COMMON_C30_PROPS = dict(
     loading_speed=40,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
 )
 
 s_e_C30_1_sl = Train(
@@ -38,13 +36,16 @@ s_e_C30_1_sl = Train(
         cc2_replace=colours["SLBLUE"]
     ),
     purchase_sprite_towed_id='s_e_C30_1_sl_car2',
-    company='sl',
     introduction_date=date(2018, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'SL',
-        'Use': 'Stockholm Metro',
-        'Builder': 'Bombardier',
         'Trivia': '''Replaced the last Cx units. Certain units bear names connected to culture such as "Siw Malmkvist", "Noice" and "Ebba Grön"''',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['metro'],
+        'power': ['third_rail', 'metro'],
+        'operator': ['SE/sl'],
+        'manufacturer': ['SE/bombardier']
     }),
 ).add_articulated_part(
     id='s_e_C30_1_sl_car2',

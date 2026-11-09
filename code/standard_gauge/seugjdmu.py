@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import  g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge
+from common import  g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, badges
 
 se_d_201to202_1 = Train(
     id='se_d_201to202_1',
@@ -16,9 +16,6 @@ se_d_201to202_1 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(75),
@@ -35,7 +32,13 @@ se_d_201to202_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['local'],
+        'power': ['diesel'],
+        'operator': ['SE/ugj'],
+        'manufacturer': [],
     }),
 )
 
@@ -51,9 +54,6 @@ se_d_Xo6_1 = Train(
         cc2_replace=colours["SEBROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(75),
@@ -70,6 +70,12 @@ se_d_Xo6_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['local'],
+        'power': ['diesel'],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
 )

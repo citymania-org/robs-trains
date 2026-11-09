@@ -1,4 +1,6 @@
-import grf, lib
+import grf, lib, struct
+
+from badge import BADGES
 
 # Add support for new driving backwards spec
 
@@ -8,6 +10,33 @@ VEHICLE_FLAG_TRAIN_HAS_CAB = 0x10
 # Add support for multiple railtypes per train
 
 grf.actions.ACTION0_PROP_DICT[grf.TRAIN]['track_types'] = (int(0x34), grf.actions.ByteListProperty())
+
+# Add support for badges
+
+class WordListProperty(grf.actions.Property):
+    
+    def encode(cls, value):
+        res = struct.pack('<H', len(value))
+        for i in value:
+            res += struct.pack('<H', i)
+        return res
+    
+class StringProperty(grf.actions.Property):
+
+    def encode(cls, string):
+        if isinstance(string, str):
+            return grf.to_bytes(string) + bytes([0x00])
+        assert isinstance(string, bytes), (type(string), string)
+        return string
+
+grf.actions.ACTION0_PROP_DICT[BADGES] = dict()
+grf.actions.ACTION0_PROP_DICT[BADGES]['label'] = (int(0x08), StringProperty())
+grf.actions.ACTION0_PROP_DICT[BADGES]['flags'] = (int(0x09), 'D')
+grf.lib.callback.PROPERTIES[BADGES] = {}
+grf.lib.callback.CALLBACKS[BADGES] = {}
+
+grf.actions.ACTION0_PROP_DICT[grf.TRAIN]['badges'] = (int(0x33), WordListProperty())
+grf.actions.ACTION0_PROP_DICT[grf.GLOBAL_VAR]['badge_table'] = (int(0x18), StringProperty())
 
 g = lib.NewGRF(
     grfid=b'KSTA',
@@ -43,6 +72,8 @@ g.add_int_parameter(
 )
 
 Train = g.bind(lib.Train)
+
+badges = lib.Badges(g)
 
 g.add(grf.SetGlobalTrainDepotYOffset(2))
 

@@ -2,14 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv, badges
 
 COMMON_et_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv/25kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_25kv_15kv,
     max_speed=Train.kmhish(180),
@@ -43,8 +40,14 @@ d_e_et_1_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
-        'Operators': 'SJ, DSB',
+        'Info': 'Up to 5 Øresundståg can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE', 'DK'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac'],
+        'operator': ['SE/sj', 'DK/dsb'],
+        'manufacturer': ['SE/adtranz'],
     }),
 ).add_articulated_part(
     id='d_e_et2_1_dsb',
@@ -97,8 +100,14 @@ d_e_et_2_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
-        'Operators': 'Öresundståg AB, DSB',
+        'Info': 'Up to 5 Øresundståg can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE', 'DK'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac'],
+        'operator': ['SE/oeresundstaag', 'DK/dsb'],
+        'manufacturer': ['SE/adtranz'],
     }),
 ).add_articulated_part(
     id='d_e_et2_2_dsb',
@@ -151,8 +160,14 @@ d_e_et_1_sj = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
-        'Operators': 'SJ',
+        'Info': 'Up to 5 Øresundståg can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac'],
+        'operator': ['SE/sj_ab'],
+        'manufacturer': ['SE/adtranz'],
     }),
 ).add_articulated_part(
     id='d_e_et2_1_sj',
@@ -205,8 +220,14 @@ d_e_et_2_sj = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 Øresundståg can be coupled together into a train set',
-        'Operators': 'SJ',
+        'Info': 'Up to 5 Øresundståg can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['electric/ac'],
+        'operator': ['SE/sj_ab'],
+        'manufacturer': ['SE/adtranz'],
     }),
 ).add_articulated_part(
     id='d_e_et2_2_sj',

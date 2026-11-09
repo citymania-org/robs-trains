@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_44_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(160),
@@ -35,12 +34,16 @@ ch_e_re44iv_1 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1982, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as Re 446',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
     }),
 )
 
@@ -55,12 +58,16 @@ ch_e_re44iv_2 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1982, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as Re 446',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
     }),
 )
 
@@ -75,12 +82,16 @@ ch_e_re44iv_3 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1982, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as Re 446',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
     }),
 )
 
@@ -95,12 +106,16 @@ ch_e_re44iv_4 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1982, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as Re 446',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
     }),
 )
 
@@ -115,11 +130,15 @@ ch_e_re44iv_5 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1986, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as Re 446',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': [],
     }),
 )

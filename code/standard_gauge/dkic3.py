@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 d_d_mf_1_dsb = Train(
     id='d_d_mf_1_dsb',
@@ -19,9 +19,6 @@ d_d_mf_1_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_d_mf2_1_dsb',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -39,7 +36,14 @@ d_d_mf_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_d_mf2_1_dsb',
@@ -86,9 +90,6 @@ d_d_mf_2_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_d_mf2_2_dsb',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -106,7 +107,14 @@ d_d_mf_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_d_mf2_2_dsb',
@@ -153,9 +161,6 @@ d_d_mf_3_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_d_mf2_3_dsb',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -173,7 +178,14 @@ d_d_mf_3_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_d_mf2_3_dsb',
@@ -220,9 +232,6 @@ d_d_mf_4_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_d_mf2_4_dsb',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -240,7 +249,14 @@ d_d_mf_4_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_d_mf2_4_dsb',
@@ -287,9 +303,6 @@ s_d_mf_5_sj = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='s_d_mf2_5_sj',
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -307,7 +320,14 @@ s_d_mf_5_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/sj'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='s_d_mf2_5_sj',
@@ -354,9 +374,6 @@ s_d_mf_6_sj = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='s_d_mf2_6_sj',
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -374,7 +391,14 @@ s_d_mf_6_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/sj'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='s_d_mf2_6_sj',
@@ -421,9 +445,6 @@ d_d_mf_7_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_d_mf2_7_dsb',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -441,7 +462,14 @@ d_d_mf_7_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_d_mf2_7_dsb',
@@ -488,9 +516,6 @@ d_d_mf_8_dsb = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='d_d_mf2_8_dsb',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -508,7 +533,14 @@ d_d_mf_8_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_d_mf2_8_dsb',
@@ -555,9 +587,6 @@ dl_d_mf_1 = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='dl_d_mf2_1',
-    country='doggerland',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -575,7 +604,14 @@ dl_d_mf_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['doggerland'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['doggerland/dsj'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='dl_d_mf2_1',
@@ -622,9 +658,6 @@ dl_d_mf_2 = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='dl_d_mf2_2',
-    country='doggerland',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(180),
@@ -642,7 +675,14 @@ dl_d_mf_2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 5 IC3 or IR4 can be coupled together into a train set',
+        'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['doggerland'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['doggerland/dsj'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='dl_d_mf2_2',

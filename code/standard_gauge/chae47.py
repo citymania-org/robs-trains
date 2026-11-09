@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_47_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(100),
@@ -35,11 +34,15 @@ ch_e_ae47_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1927, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -54,10 +57,14 @@ ch_e_ae47_2 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1930, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_1500v, badges
 
 d_e_stog1_1_dsb = Train(
     id='d_e_stog1_1_dsb',
@@ -19,9 +19,6 @@ d_e_stog1_1_dsb = Train(
     ),
     purchase_sprite_towed_id='d_e_stog12_1_dsb',
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(90),
@@ -39,9 +36,16 @@ d_e_stog1_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers, two of these make a "whole train"',
+        'Info': 'Two of these make a "whole train"',
         'Trivia': 'These sets are no longer standard after 1936 but saw some use into the early 1950s',
         'Formation': 'MM-FM-MM',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger',],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_stog12_1_dsb',
@@ -88,9 +92,6 @@ d_e_stog1_2_dsb = Train(
     ),
     purchase_sprite_towed_id='d_e_stog12_2_dsb',
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(90),
@@ -108,8 +109,15 @@ d_e_stog1_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers, "quarter train" combine with each other or "half train" to make a "whole train"',
+        'Info': '"Quarter train" combine with each other or "half train" to make a "whole train"',
         'Formation': 'MM-FS',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger',],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_stog12_2_dsb',
@@ -143,9 +151,6 @@ d_e_stog1_3_dsb = Train(
     ),
     purchase_sprite_towed_id='d_e_stog12_3_dsb',
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(90),
@@ -163,9 +168,16 @@ d_e_stog1_3_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers, "half train" combine with each other or "quarter train" to make a "whole train"',
+        'Info': '"Half train" combine with each other or "quarter train" to make a "whole train"',
         'Trivia': 'These sets are no longer standard after 1968 and "half train" became mostly made up of two permanently tied "quarter train"',
         'Formation': 'MM-FM-FM-MM',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger',],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_stog12_3_dsb',
@@ -227,9 +239,6 @@ d_e_stog1_4_dsb = Train(
     ),
     purchase_sprite_towed_id='d_e_stog12_4_dsb',
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(90),
@@ -247,8 +256,15 @@ d_e_stog1_4_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers, "quarter train" combine with each other or "half train" to make a "whole train"',
+        'Info': '"Quarter train" combine with each other or "half train" to make a "whole train"',
         'Formation': 'MM-FS',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger',],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_stog12_4_dsb',
@@ -302,9 +318,16 @@ d_e_stog1_5_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers, "half train" combine with each other or "quarter train" to make a "whole train"',
+        'Info': '"Half train" combine with each other or "quarter train" to make a "whole train"',
         'Trivia': 'These sets are no longer standard after 1968 and "half train" became mostly made up of two permanently tied "quarter train"',
         'Formation': 'MM-FM-FM-MM',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger',],
+        'power': ['electric/dc/1500v'],
+        'operator': ['DK/dsb', 'DK/dsb/stog'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='d_e_stog12_5_dsb',

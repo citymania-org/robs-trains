@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_201_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -19,7 +18,6 @@ COMMON_201_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='belgium',
     max_speed=Train.kmhish(120),
     power=1717,
     weight=87,
@@ -41,8 +39,13 @@ be_d_201_1_nmbs = Train(
     company='na',
     introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as HLD 59',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['BE/nmbs'],
     }),
 )
 
@@ -62,8 +65,13 @@ be_d_201_2_nmbs = Train(
     company='na',
     introduction_date=date(1954, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as HLD 59',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['BE/nmbs'],
     }),
 )
 
@@ -83,8 +91,13 @@ be_d_201_3_nmbs = Train(
     company='na',
     introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as HLD 59',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['BE/nmbs'],
     }),
 )
 
@@ -104,7 +117,12 @@ be_d_201_4_nmbs = Train(
     company='na',
     introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['BE/nmbs'],
     }),
 )
 
@@ -124,7 +142,12 @@ be_d_201_5_nmbs = Train(
     company='na',
     introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as HLD 59',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['BE/nmbs'],
     }),
 )

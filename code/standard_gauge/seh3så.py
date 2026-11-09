@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_H3s_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -35,13 +34,17 @@ se_s_h3s_1 = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["GREY10"]
     ),
-    country='sweden',
-    company='na',
     max_speed=Train.kmhish(100),
     introduction_date=date(1927, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Highest top speed of any steam locomotive in Sweden',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['steam'],
+        'operator': ['SE/bj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_s_h3s_2',
@@ -67,13 +70,17 @@ se_s_a8_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='sweden',
-    company='na',
     max_speed=Train.kmhish(100),
     introduction_date=date(1948, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': '''After BJ's nationalisation in 1948 these ex-H3s locomotives were quickly proven redundant since the former BJ mainline was electrified and their high axle-load made them incompatible with many other parts of the network''',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['steam'],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='se_s_a8_2',

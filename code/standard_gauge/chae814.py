@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_814_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -36,12 +35,16 @@ ch_e_ae814_1 = Train(
     max_speed=Train.kmhish(100),
     power=7497,
     weight=240,
-    company='na',
     introduction_date=date(1931, 1, 1),
-    country='switzerland',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Visually and technically similar to the Ae 4/7',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_ae8142_1',
@@ -70,12 +73,16 @@ ch_e_ae814_2 = Train(
     max_speed=Train.kmhish(100),
     power=7497,
     weight=240,
-    company='na',
     introduction_date=date(1955, 1, 1),
-    country='switzerland',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Painted like this from 1955 to 1961',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_ae8142_2',
@@ -104,12 +111,16 @@ ch_e_ae814_3 = Train(
     max_speed=Train.kmhish(100),
     power=8797,
     weight=246,
-    company='na',
     introduction_date=date(1932, 1, 1),
-    country='switzerland',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'More technically advanced than 11801',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_ae8142_3',
@@ -138,12 +149,16 @@ ch_e_ae814_4 = Train(
     max_speed=Train.kmhish(100),
     power=8797,
     weight=246,
-    company='na',
     introduction_date=date(1953, 1, 1),
-    country='switzerland',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Painted like this from 1953 to 1961',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_ae8142_4',
@@ -173,12 +188,17 @@ ch_e_ae814_5 = Train(
     max_speed=Train.kmhish(110),
     power=11097,
     weight=236,
-    company='na',
     introduction_date=date(1938, 1, 1),
-    country='switzerland',
     additional_text=grf.fake_vehicle_info({
         'Use': 'Universal',
         'Trivia': 'Upon construction it was the most powerful locomotive in the world',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_ae8142_5',
@@ -207,12 +227,16 @@ ch_e_ae814_6 = Train(
     max_speed=Train.kmhish(110),
     power=11097,
     weight=236,
-    company='na',
     introduction_date=date(1964, 1, 1),
-    country='switzerland',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Painted like this from 1964 to 1971',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_ae8142_6',
@@ -241,12 +265,16 @@ ch_e_ae814_7 = Train(
     max_speed=Train.kmhish(100),
     power=8247,
     weight=244,
-    company='na',
     introduction_date=date(1961, 1, 1),
-    country='switzerland',
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'A rebuild with cabs like the Ae 6/6',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_ae8142_7',

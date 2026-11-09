@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 se_e_blhj6_1 = Train(
     id='se_e_blhj6_1',
@@ -16,9 +16,6 @@ se_e_blhj6_1 = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC + Train.Flags.USE_CARGO_MULT,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(70),
@@ -40,8 +37,14 @@ se_e_blhj6_1 = Train(
         'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(2, g),
         },
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal, luggage',
         'Trivia': 'Its angled cab windows gave it the nickname "Vindögde Per" (Cross-eyed Per)'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight', 'luggage'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/blhj'],
+        'manufacturer': [],
     }),
 )
 
@@ -58,9 +61,6 @@ se_e_blhj7_1 = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(70),
@@ -77,7 +77,13 @@ se_e_blhj7_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/blhj'],
+        'manufacturer': [],
     }),
 )
 

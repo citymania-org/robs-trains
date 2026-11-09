@@ -4,9 +4,9 @@ from datetime import date
 
 import grf
 
-import lib
+import lib, badge
 
-from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours
+from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours, badges
 
 PURCHASE_ICONS_DIR = 'purchase list'
 DEBUG_DIR = 'debug'
@@ -339,6 +339,18 @@ x15p = Train(
 )
 '''
 
+def purchase_icons(sprites):
+    action1 = [grf.Action1(badge.BADGES, len(COUNTRY_SPRITES), 1)]
+    action2s = dict()
+    i = 0
+    for name, sprite in sprites.items():
+        action1.append(sprite)
+        action2s[name] = grf.GenericSpriteLayout(ent1=(i,), ent2=(i,))
+        i += 1
+        
+    return action1, action2s
+    
+
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
@@ -377,10 +389,14 @@ COMPANY_SPRITES = {
     'sl': purchase_icon('lsl.png'),
     'taagab': purchase_icon('ltaagab.png'),
     'sj_70s': purchase_icon('lsj70s.png'),
+    'sj_90s': purchase_icon('lsj90s.png'),
     'tgojnew': purchase_icon('ltgojnew.png'),
     'maelartaag': purchase_icon('lmaelartaag.png'),
     'hectorrail': purchase_icon('lhectorrail.png'),
     'ss': purchase_icon('lss.png'),
+    'oetraf': purchase_icon('loetraf.png'),
+    'tgojold': purchase_icon('ltgojold.png'),
+    'gc': purchase_icon('lgc.png'),
 }
 
 
@@ -751,5 +767,78 @@ lib.make_purchase_sprites(
     # se ng mail wagons
     # se ng wagons
 ).set_variant_callbacks(g)))
+
+badges.set_class_name('operator', 'Operator')
+badges.set_class_name('role', 'Use')
+badges.set_class_name('manufacturer', 'Builder')
+
+badges.set_badge_info('manufacturer/SE/asea', 'Allmäna Svenska Elektriska AB', None, None)
+
+# Freight
+#badges.set_badge_info('role/heavy_freight', 'Heavy freight', None, None) # may be used in conjunction with role/freight if provided by other set
+badges.set_badge_info('role/freight', 'Freight', None, None)
+badges.set_badge_info('role/light_freight', 'Light freight', None, None) # not to be used but we don't want two light freight if it is defines by some other set
+badges.set_badge_info('role/shunting', 'Shunting', None, None)
+
+# Passengers
+                      #role/international                                # international used in dutch may be used in conjunction with role/express_passenger if provided by other set
+badges.set_badge_info('role/express_passenger', 'Intercity', None, None) # establised badge dutch set uses this
+badges.set_badge_info('role/regional_passenger', 'Regional', None, None) # 2CC in NML 
+badges.set_badge_info('role/suburban_passenger', 'Suburban', None, None) # completely new :(
+badges.set_badge_info('role/metro', 'Metro', None, None) # establised
+
+# Banverket etc
+badges.set_badge_info('role/utility', 'Works unit', None, None)
+
+#badges.set_badge_info('role/1st_class', '1st class', None, None)
+#badges.set_badge_info('role/2nd_class', '2nd class', None, None)
+#badges.set_badge_info('role/3rd_class', '3rd class', None, None)
+
+badges.set_badge_info('role/luggage', 'Luggage', None, None)
+badges.set_badge_info('role/restaurant_car', 'Resturant', None, None)
+badges.set_badge_info('role/driving_cab', 'Driving trailer', None, None)
+badges.set_badge_info('role/bike', 'Bike space', None, None)
+
+# probably shouldn't be badges
+#badges.set_badge_info('role/charter', 'Charter services', None, None)
+#badges.set_badge_info('role/CH/cisalpino', 'for the Cisalpino service', None, None)
+
+sprites, operator_sets = purchase_icons(COMPANY_SPRITES)
+
+badges.set_badge_info('operator/CH/sbb', 'Swiss Federal Railways', sprites, None)
+badges.set_badge_info('operator/CH/sbb/sbbc', 'SBB Cargo', None, None)
+
+
+badges.set_badge_info('operator/DK/dsb', 'Danske Statsbaner', None, None)
+badges.set_badge_info('operator/DK/dsb/stog', None, None, operator_sets['stog'])
+
+badges.set_badge_info('operator/NO/nsb', 'Norske Statsbaner', None, None)
+
+sw = grf.Switch('intro_date', ranges=[
+        grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['sj_70s'])
+    ], default=operator_sets['sj_90s'])
+
+badges.set_badge_info('operator/SE/sj', 'Statens Järnvägar', None, sw)
+
+sw = grf.Switch('intro_date', ranges=[
+        grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['tgojold'])
+    ], default=operator_sets['tgojnew'])
+
+badges.set_badge_info('operator/SE/tgoj', 'Trafikaktiebolaget Grängesberg–Oxelösuns Järnvägar', None, sw)
+badges.set_badge_info('operator/SE/bj', 'Bergslagernas Järnvägar', None, None)
+badges.set_badge_info('operator/SE/sj_ab', 'SJ AB', None, operator_sets['sj_90s'])
+badges.set_badge_info('operator/SE/gc', 'Green Cargo', None, operator_sets['gc'])
+badges.set_badge_info('operator/SE/taagab', 'Tågåkeriet i bergslagen', None, operator_sets['taagab'])
+badges.set_badge_info('operator/SE/sl', 'Storstockholms lokaltrafik', None, operator_sets['sl'])
+badges.set_badge_info('operator/SE/ss', 'Stockholms spårvägar', None, operator_sets['ss'])
+badges.set_badge_info('operator/SE/oeresundstaag', 'Öresundståg AB', None, operator_sets['øresundståg'])
+badges.set_badge_info('operator/SE/oetraf', 'Östgötatrafiken', None, operator_sets['oetraf'])
+badges.set_badge_info('operator/SE/mtab', 'Malmtrafik AB', None, None)
+badges.set_badge_info('operator/SE/hctor', 'Hector rail', None, operator_sets['hectorrail'])
+
+badges.find_missing()
+
+g.add(badges)
+
 
 grf.main(g, 'The_International_Train_Set.grf')

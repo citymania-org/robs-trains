@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 #DMU (Vehicles that ended up at SNJ can be found in 'sesnj.py')
 
@@ -18,9 +18,6 @@ se_d_MCo_1 = Train(
         cc2_replace=colours["DCREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(80),
@@ -38,7 +35,13 @@ se_d_MCo_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class, luggage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['3rd_class', 'luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/vbhj'],
+        'manufacturer': [],
     }),
     mid_stats={
         'cargo_capacity': 2,

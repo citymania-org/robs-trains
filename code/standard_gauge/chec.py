@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_ec_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -33,14 +32,18 @@ ch_p_ec_1 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY9"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1989, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -55,14 +58,18 @@ ch_p_ec_2 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2008, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -77,14 +84,18 @@ ch_p_ec_3 = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY9"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2004, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class, for the Cisalpino service',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],#, 'CH/cisalpino'],
+        'power': [],
+        'operator': ['CH/cis'],
+        'manufacturer': []
     }),
 )
 
@@ -99,15 +110,19 @@ ch_p_ec_11 = Train(
         cc_replace=colours["GREY5"],
         cc2_replace=colours["GREY9"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2009, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
         'Trivia': 'Former Cisalpino stock',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -122,14 +137,18 @@ ch_p_ec_4 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -144,14 +163,18 @@ ch_p_ec_5 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY9"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1990, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -166,14 +189,18 @@ ch_p_ec_6 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2008, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -195,7 +222,13 @@ ch_p_ec_7 = Train(
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class, for the Cisalpino service',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],#, 'CH/cisalpino'],
+        'power': [],
+        'operator': ['CH/cis'],
+        'manufacturer': []
     }),
 )
 
@@ -217,8 +250,14 @@ ch_p_ec_12 = Train(
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
         'Trivia': 'Former Cisalpino stock',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -240,7 +279,13 @@ ch_p_ec_8 = Train(
     cargo_capacity=77,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['2nd_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -273,14 +318,18 @@ ch_p_ec_9 = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY9"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1991, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=54,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Panoramic car, 1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['panoramic', '1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -302,6 +351,12 @@ ch_p_ec_10 = Train(
     cargo_capacity=54,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Panoramic car, 1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['panoramic', '1st_class'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )

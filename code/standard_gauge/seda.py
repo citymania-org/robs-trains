@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_da_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -19,7 +18,6 @@ COMMON_da_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='sweden',
     max_speed=Train.kmhish(100),
     power=2502,
     weight=75,
@@ -36,10 +34,15 @@ se_e_da_1 = Train(
         cc_replace=colours["SEBROWN"],
         cc2_replace=colours["SEBROWN"]
     ),
-    company='na',
     introduction_date=date(1952, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -54,10 +57,15 @@ se_e_da_2 = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["BLUE"]
     ),
-    company='na',
     introduction_date=date(1998, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -72,10 +80,15 @@ se_e_da_3 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     introduction_date=date(2005, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -90,9 +103,14 @@ se_e_da_4 = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["DGREEN"]
     ),
-    company='na',
     introduction_date=date(2015, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['SE/asea'],
     }),
 )

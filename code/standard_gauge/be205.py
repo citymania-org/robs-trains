@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_205_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,12 +35,15 @@ be_d_205_1 = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='belgium',
-    company='na',
     introduction_date=date(1961, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as HLD 55',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['BE/nmbs'],
     }),
 )
 
@@ -56,12 +58,15 @@ lu_d_205_1 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='luxembourg',
-    company='na',
     introduction_date=date(1963, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Used in Denmark from at least the mid 00s and Sweden from 2013',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['LU'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['LU/cfl'],
     }),
 )
 
@@ -76,12 +81,15 @@ dk_d_205_1 = Train(
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2023, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Several locomotives bought in 2023/5',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/vik'],
     }),
 )
 
@@ -96,11 +104,14 @@ se_d_205_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["ORANGE"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(2018, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought in 2013 #1802',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/stab'],
     }),
 )

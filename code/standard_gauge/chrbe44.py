@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_44_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(125),
@@ -35,13 +34,17 @@ ch_e_rbe44_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1959, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
         'Trivia': 'Later classed as RBe 540',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['passengers'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -56,13 +59,17 @@ ch_e_rbe44_2 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["SBB"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
         'Trivia': 'Later classed as RBe 540',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['passengers'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
@@ -77,19 +84,22 @@ ch_e_rbe44_3 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['passengers'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 )
 
 COMMON_1212_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(125),
@@ -117,13 +127,18 @@ ch_e_rabde1212_1 = Train(
         cc_replace=colours["NSBRED"],
         cc2_replace=colours["NSBRED"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Short distance local passengers, up to 4 can be coupled together into a train set',
+        'Info': 'Up to 4 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 510',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['suburban'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_rabde12122_1',
@@ -164,13 +179,18 @@ ch_e_rabde1212_2 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Short distance local passengers, up to 4 can be coupled together into a train set',
+        'Info': 'Up to 4 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 510',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['suburban'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='ch_e_rabde12122_2',
