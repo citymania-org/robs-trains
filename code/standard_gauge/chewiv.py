@@ -40,7 +40,7 @@ ch_p_ewiv_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -67,7 +67,7 @@ ch_p_ewiv_20 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/bls'],
         'manufacturer': []
@@ -93,7 +93,7 @@ ch_p_ewiv_21 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/bt'],
         'manufacturer': []
@@ -119,7 +119,7 @@ ch_p_ewiv_24 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sob'],
         'manufacturer': []
@@ -145,7 +145,7 @@ ch_p_ewiv_2 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -171,7 +171,7 @@ ch_p_ewiv_3 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -197,7 +197,7 @@ ch_p_ewiv_4 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -224,7 +224,7 @@ ch_p_ewiv_22 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/bls'],
         'manufacturer': []
@@ -250,7 +250,7 @@ ch_p_ewiv_23 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/bt'],
         'manufacturer': []
@@ -276,7 +276,7 @@ ch_p_ewiv_25 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sob'],
         'manufacturer': []
@@ -302,7 +302,7 @@ ch_p_ewiv_5 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -328,7 +328,7 @@ ch_p_ewiv_6 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['regional_passenger', 'express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -643,7 +643,7 @@ ch_p_ewiv_7 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class', 'driving_cab'],
+        'role': ['regional_passenger', 'express_passenger', 'driving_cab'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': [],
@@ -673,7 +673,7 @@ ch_p_ewiv_8 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class', 'driving_cab'],
+        'role': ['regional_passenger', 'express_passenger', 'driving_cab'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': [],
@@ -703,7 +703,7 @@ ch_p_ewiv_9 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class', 'driving_cab'],
+        'role': ['regional_passenger', 'express_passenger', 'driving_cab'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': [],

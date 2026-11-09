@@ -40,7 +40,7 @@ ch_p_ec_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -66,7 +66,7 @@ ch_p_ec_2 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -92,7 +92,7 @@ ch_p_ec_3 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],#, 'CH/cisalpino'],
+        'role': ['express_passenger'],#, 'CH/cisalpino'],
         'power': [],
         'operator': ['CH/cis'],
         'manufacturer': []
@@ -119,7 +119,7 @@ ch_p_ec_11 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -145,7 +145,7 @@ ch_p_ec_4 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['1st_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -171,7 +171,7 @@ ch_p_ec_5 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -197,7 +197,7 @@ ch_p_ec_6 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -225,7 +225,7 @@ ch_p_ec_7 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],#, 'CH/cisalpino'],
+        'role': ['express_passenger'],#, 'CH/cisalpino'],
         'power': [],
         'operator': ['CH/cis'],
         'manufacturer': []
@@ -254,7 +254,7 @@ ch_p_ec_12 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -282,7 +282,7 @@ ch_p_ec_8 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['2nd_class'],
+        'role': ['express_passenger'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
