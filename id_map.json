@@ -3236,7 +3236,13 @@
             "operator/SE/oetraf": 429,
             "flag/doggerland": 430,
             "operator/doggerland/dsj": 431,
-            "power/electric/ac/25kv": 432
+            "power/electric/ac/25kv": 432,
+            "operator/DK/hfhj": 433,
+            "operator/DK/lj": 434,
+            "operator/DK/htj": 435,
+            "operator/DK/ohj": 436,
+            "flag/FR": 437,
+            "operator/FR/sncf": 438
         }
     }
 }

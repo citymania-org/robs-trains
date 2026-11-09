@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, g
+from common import Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, g, badges
 
 COMMON_dk30stock_PROPS = dict(
     length=10,
@@ -683,7 +683,6 @@ d_p_bu_3_dsb = Train(
 
 COMMON_CL_PROPS = dict(
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -707,8 +706,6 @@ d_p_cl_1_dsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(110),
     power=0,
     introduction_date=date(1943, 1, 1),
@@ -717,7 +714,13 @@ d_p_cl_1_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 )
 
@@ -733,8 +736,6 @@ d_p_cl_9_dsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1949, 1, 1),
@@ -743,7 +744,13 @@ d_p_cl_9_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/hfhj'],
+        'manufacturer': []
     }),
 )
 
@@ -759,8 +766,6 @@ d_p_cl_10_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["CREAM"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1958, 1, 1),
@@ -769,7 +774,13 @@ d_p_cl_10_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/hfhj'],
+        'manufacturer': []
     }),
 )
 
@@ -785,8 +796,6 @@ d_p_cl_11_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1975, 1, 1),
@@ -795,7 +804,13 @@ d_p_cl_11_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/hfhj'],
+        'manufacturer': []
     }),
 )
 
@@ -811,8 +826,6 @@ d_p_cl_8_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1975, 1, 1),
@@ -821,7 +834,13 @@ d_p_cl_8_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/lj'],
+        'manufacturer': []
     }),
 )
 
@@ -837,8 +856,6 @@ d_p_cl_7_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1981, 1, 1),
@@ -847,7 +864,13 @@ d_p_cl_7_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class luggage carriage',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'luggage'],
+        'power': [],
+        'operator': ['DK/htj'],
+        'manufacturer': []
     }),
 )
 
@@ -865,8 +888,6 @@ d_p_cl_2_dsb = Train(
         intermediate_graphics_chain=Train.Flip.switch_graphics_luggage,
         odd=True
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1943, 1, 1),
@@ -874,8 +895,14 @@ d_p_cl_2_dsb = Train(
     cargo_capacity=61,
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local trains, 2nd class luggage carriage',
         'Loading speed': '20',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'luggage'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
     mid_stats={
         'cargo_capacity': 4,
@@ -902,8 +929,6 @@ d_p_cl_3_dsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(120),
     power=0,
     introduction_date=date(1960, 1, 1),
@@ -912,7 +937,14 @@ d_p_cl_3_dsb = Train(
     loading_speed=20,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -928,8 +960,6 @@ d_p_cl_5_dsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     max_speed=Train.kmhish(100),
     power=0,
     introduction_date=date(1968, 1, 1),
@@ -938,6 +968,14 @@ d_p_cl_5_dsb = Train(
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class DVT for use with MO railcars',
+        'Info': 'For use with MO railcars',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
