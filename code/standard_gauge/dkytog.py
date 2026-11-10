@@ -392,7 +392,7 @@ d_d_y6_3_dsb = Train(
     ),
     introduction_date=date(1999, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Trivia': 'One more locomotive was bought from NJ in 2005 #16, named Heden',
+        'Trivia': 'One more locomotive was bought from NJJ in 2005 #16, named Heden',
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
