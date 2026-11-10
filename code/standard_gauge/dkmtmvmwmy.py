@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 dk_d_myf_1 = Train(
     id='dk_d_myf_1',
@@ -25,19 +25,22 @@ dk_d_myf_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     track_type=standard_gauge,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     length=9,
     max_speed=Train.kmhish(133),
     power=1700,
     weight=102,
-    country='denmark',
-    company='na',
     introduction_date=date(1957, 1, 1),
     visual_effect=(Train.VisualEffect.DIESEL, 6),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Frichs built 2, in 1957/60, both scrapped in 1971',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -62,18 +65,21 @@ dk_d_mt27_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     track_type=standard_gauge,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     length=6,
     max_speed=Train.kmhish(70),
     power=250,
     weight=44,
-    country='denmark',
-    company='na',
     introduction_date=date(1927, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as MT I',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -98,17 +104,20 @@ dk_d_mv29_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     track_type=standard_gauge,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     length=5,
     max_speed=Train.kmhish(80),
     power=420,
     weight=56,
-    country='denmark',
-    company='na',
     introduction_date=date(1929, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -133,17 +142,20 @@ dk_d_mv29_2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     track_type=standard_gauge,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     length=5,
     max_speed=Train.kmhish(80),
     power=500,
     weight=56,
-    country='denmark',
-    company='na',
     introduction_date=date(1947, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -168,16 +180,19 @@ dk_d_mw29_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
     track_type=standard_gauge,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     length=6,
     max_speed=Train.kmhish(80),
     power=450,
     weight=60,
-    country='denmark',
-    company='na',
     introduction_date=date(1929, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )

@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_65000_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,12 +35,16 @@ fr_d_65000_1 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["BLUE"]
     ),
-    country='france',
-    company='na',
     introduction_date=date(1956, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as CC 65000',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['FR/sncf'],
+        'manufacturer': [],
     }),
 )
 
@@ -56,18 +59,21 @@ fr_d_65000_2 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["NAVY"]
     ),
-    country='france',
-    company='na',
     introduction_date=date(1962, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['FR/sncf'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_69000_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -96,12 +102,16 @@ fr_d_69000_1 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["NAVY"]
     ),
-    country='france',
-    company='na',
     introduction_date=date(1964, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two of this class built',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['FR/sncf'],
+        'manufacturer': [],
     }),
 )
 
@@ -116,19 +126,22 @@ fr_d_69000_2 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["NAVY"]
     ),
-    country='france',
-    company='na',
     introduction_date=date(1964, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two of this class built',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['FR/sncf'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_70000_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -157,11 +170,15 @@ fr_d_70000_1 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["NAVY"]
     ),
-    country='france',
-    company='na',
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two of this class built',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['FR/sncf'],
+        'manufacturer': [],
     }),
 )
