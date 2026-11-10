@@ -3295,7 +3295,30 @@
             "operator/DK/hhgb": 488,
             "operator/DK/hhj": 489,
             "operator/DK/sjs": 490,
-            "operator/DK/jfj": 491
+            "operator/DK/jfj": 491,
+            "manufacturer/SE/abb": 492,
+            "role/mail": 493,
+            "operator/SE/posten": 494,
+            "flag/europe": 495,
+            "power/electric/ac/15kv_25kv": 496,
+            "power/electric/acdc/1500v_25kv": 497,
+            "power/electric/acdc/3kv_25kv": 498,
+            "power/electric/acdc/1500v_15kv_25kv": 499,
+            "power/electric/acdc/1500v_3kv_15kv_25kv": 500,
+            "operator/SE/vasttr": 501,
+            "operator/SE/paaga": 502,
+            "operator/SE/maelartaag": 503,
+            "operator/SE/upptaaget": 504,
+            "operator/SE/x_taaget": 505,
+            "power/electric/acdc/1500v_3kv_25kv": 506,
+            "flag/CZ": 507,
+            "flag/HR": 508,
+            "flag/RS": 509,
+            "flag/RU": 510,
+            "flag/SI ": 511,
+            "flag/SK ": 512,
+            "flag/soviet_union": 513,
+            "flag/yugoslavia": 514
         }
     }
 }

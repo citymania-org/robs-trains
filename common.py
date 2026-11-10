@@ -71,6 +71,9 @@ g.add_int_parameter(
     },
 )
 
+g.strings.prefix = 'STR_'
+g.strings.import_lang_dir('lang')
+
 Train = g.bind(lib.Train)
 
 badges = lib.Badges(g)

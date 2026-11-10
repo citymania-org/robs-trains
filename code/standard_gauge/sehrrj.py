@@ -36,8 +36,6 @@ se_e_hrrj1to2_1 = Train(
     ),
     introduction_date=date(1907, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
-        'Trivia': '''Denmark's first electric locomotive''', # what????
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
@@ -137,7 +135,6 @@ se_w_hrrj21to22_1 = Train(
 COMMON_HRRJ3_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -171,7 +168,7 @@ se_w_hrrj23to24_1 = Train(
     badges=badges.set_train_badges({
         'flag': ['SE'],
         'role': ['regional_passenger'],
-        'power': ['electric/dc/1500v'],
+        'power': [],
         'operator': ['SE/hrrj'],
         'manufacturer': [],
     }),

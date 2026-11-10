@@ -42,7 +42,7 @@ d_e_eb_1_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'power': ['electric/ac/15kv_25kv', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['DK/dsb'],
         'manufacturer': ['siemens'],
     }),
@@ -70,7 +70,7 @@ d_e_eb_2_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'power': ['electric/ac/15kv_25kv', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['DK/dsb'],
         'manufacturer': ['siemens'],
     }),
@@ -97,7 +97,7 @@ at_e_vectron_1 = Train(
     badges=badges.set_train_badges({
         'flag': ['AT'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/15kv', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_3kv_15kv_25kv', 'electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['AT/obb'],
         'manufacturer': ['siemens'],
     }),

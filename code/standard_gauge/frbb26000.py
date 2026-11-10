@@ -40,7 +40,7 @@ fr_e_bb26000_1 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_25kv', 'electric/dc/1500v', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),
@@ -63,7 +63,7 @@ fr_e_bb26000_2 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_25kv', 'electric/dc/1500v', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),
@@ -86,7 +86,7 @@ fr_e_bb26000_3 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_25kv', 'electric/dc/1500v', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),
@@ -109,7 +109,7 @@ fr_e_bb26000_4 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_25kv', 'electric/dc/1500v', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),
@@ -155,7 +155,7 @@ fr_e_bb26000_6 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_25kv', 'electric/dc/1500v', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),
@@ -178,7 +178,7 @@ fr_e_bb26000_7 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_25kv', 'electric/dc/1500v', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),

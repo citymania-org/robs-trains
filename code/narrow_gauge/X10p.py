@@ -2,20 +2,18 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, Livery, extra_narrow_gauge, extra_narrow_gauge_1500v
+from common import Train, Livery, extra_narrow_gauge, extra_narrow_gauge_1500v, badges
 
 s_p_UBp_ii_1 = Train(
     id='s_p_UBp_ii_1',
     name='њSL UBp II',
     length=9,
     liveries={
-        'SL': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
+        'Default': Livery('xxxx_SE_X10p_UBp_1_xxxx.png'),
+        '2CC': Livery('xxxx_SE_X10p_UBp_2_xxxx.png', auto_cc=lib.CC_DEFAULT),
     },
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge,
-    country='sweden',
-    company='na',
-    power_type='na',
     max_speed=Train.kmhish(80),
     power=0,
     introduction_date=date(1988, 1, 1),
@@ -29,17 +27,19 @@ s_p_UBp_ii_1 = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Passenger',
         'Trivia': 'The middle part of the new emus were ordered to arive first so that they could be used earlier replacing the oldest rolling stock',
-        'Builder': 'ABB railcar',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['suburban_passenger'],
+        'power': [],
+        'operator': ['SE/sl'],
+        'manufacturer': ['SE/abb'],
     }),
 )
 
 COMMON_X10p_PROPS = dict(
     length=9,
-    country='sweden',
-    company='na',
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=extra_narrow_gauge_1500v,
     max_speed=Train.kmhish(80),
@@ -55,9 +55,14 @@ COMMON_X10p_PROPS = dict(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Passenger emu', 
         'Trivia': 'Technically modular but always used in sets of one railcar with an unpowered trailer and a driving trailer in tow.',
-        'Builder': 'ABB railcar',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['SE/sl'],
+        'manufacturer': ['SE/abb'],
     }),
 )
 

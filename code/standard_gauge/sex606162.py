@@ -150,7 +150,7 @@ s_e_x61_1_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/skane'],
+        'operator': ['SE/paaga'],
         'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
@@ -280,7 +280,7 @@ s_e_x61_3_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/vtab'],
+        'operator': ['SE/vasttr'],
         'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(
@@ -345,7 +345,7 @@ s_e_x61_4_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/vtab'],
+        'operator': ['SE/vasttr'],
         'manufacturer': ['FR/alstom'],
     }),
 ).add_articulated_part(

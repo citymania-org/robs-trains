@@ -24,9 +24,6 @@ s_s_N_ii_1_sj = Train(
         '2CC': Livery('1900_SE_N_II_1.png', auto_cc=lib.CC_DEFAULT),
     },
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
     max_speed=Train.kmhish(45),
@@ -42,7 +39,13 @@ s_s_N_ii_1_sj = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Shunting',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['shunting'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -60,9 +63,6 @@ s_s_Sa_sj = Train(
         cc2_replace=colours["GREY10"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM,
     track_type=standard_gauge,
     max_speed=Train.kmhish(80),
@@ -78,7 +78,13 @@ s_s_Sa_sj = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
@@ -227,9 +233,6 @@ s_w_Gblssy_2_gc = Train(
         '2CC': Livery('2000_SE_Gblssy_2_2000.png', mask='2000_SE_Gblssy_2_2000_MASK.png'),
     },
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -246,7 +249,13 @@ s_w_Gblssy_2_gc = Train(
     refittable_cargo_classes=grf.CargoClass.MAIL,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Dedicated mail trains',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['mail',],
+        'power': [],
+        'operator': ['SE/posten', 'SE/gc'],
+        'manufacturer': [],
     }),
     callbacks={
         'cargo_capacity': Train.sw_capacity_calculaiton(22.4, g)
@@ -263,9 +272,6 @@ s_w_Hbis_sj = Train(
         '2CC alt': Livery('1972_SE_Hbis_1972.png', auto_cc=lib.CC_SWAPPED),
     },
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(100),
@@ -282,65 +288,21 @@ s_w_Hbis_sj = Train(
     refittable_cargo_classes=grf.CargoClass.PIECE_GOODS + grf.CargoClass.EXPRESS,
     loading_speed=10,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE', 'europe'],
+        'role': ['freight',],
+        'power': [],
+        'operator': [],
+        'manufacturer': [],
     }),
     callbacks={
         'cargo_capacity': Train.sw_capacity_calculaiton(25, g)
     }
 )
 
-'''
-
-x15p = Train(
-    id='x15p',
-    name='љњX15p',
-    length=9,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_X10p_X10p_1_xxxx.png',
-    }),
-    country='sweden', 
-    company='sl',
-    power_type='dc',
-    purchase_sprite_towed_id='x15p_car2',
-    engine_class=Train.EngineClass.ELECTRIC, 
-    sound_effects=modern_diesel_sound,
-    track_type=p_gauge_dc,
-    max_speed=Train.kmhish(120),
-    power=536,
-    introduction_date=date(1990, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=Train.ton(int(27.7+15.8+16.6)),
-    tractive_effort_coefficient=79,
-    running_cost_factor=222,
-    cargo_capacity=72,
-    cost_factor=24,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-        'Info': 'Needs stats',
-    }),
-).add_articulated_part(
-    id='x15p_car2',
-    length=9,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_X10p_UBp_1_xxxx.png',
-    }),
-    cargo_capacity=80,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-).add_articulated_part(
-    id='x15p_car3',
-    length=9,
-    liveries=make_liveries({
-        'Original': 'xxxx_SE_X10p_UBxp_1_xxxx.png',
-    }),
-    cargo_capacity=76,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-)
-'''
-
 def purchase_icons(sprites):
-    action1 = [grf.Action1(badge.BADGES, len(COUNTRY_SPRITES), 1)]
+    action1 = [grf.Action1(badge.BADGES, len(sprites), 1)]
     action2s = dict()
     i = 0
     for name, sprite in sprites.items():
@@ -354,35 +316,36 @@ def purchase_icons(sprites):
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
 
 
-COUNTRY_SPRITES = {
-    'austria': purchase_icon('fat.png'),
-    'belgium': purchase_icon('fbe.png'),
-    'bulgaria': purchase_icon('fbg.png'),
-    'switzerland': purchase_icon('fch.png'),
-    'czechrepublic': purchase_icon('fcz.png'),
-    'germany': purchase_icon('fde.png'),
-    'denmark': purchase_icon('fdk.png'),
-    'doggerland': purchase_icon('fdl.png'),
-    'france': purchase_icon('ffr.png'),
-    'hrvatska': purchase_icon('fhr.png'),
-    'hungary': purchase_icon('fhu.png'),
-    'italy': purchase_icon('fit.png'),
-    'luxembourg': purchase_icon('flu.png'),
-    'norway': purchase_icon('fno.png'),
-    'poland': purchase_icon('fpl.png'),
-    'srbija': purchase_icon('frs.png'),
-    'russia': purchase_icon('fru.png'),
-    'sweden': purchase_icon('fse.png'),
-    'slovenija ': purchase_icon('fsi.png'),
-    'slovakia ': purchase_icon('fsk.png'),
-    'ussr': purchase_icon('fsu.png'),
-    'jugoslavija': purchase_icon('fyu.png'),
-    'na': purchase_icon('blank.png'),
+COUNTRIES = {
+    'AT': ('Austria', purchase_icon('fat.png')),
+    'BE': ('Belgium', purchase_icon('fbe.png')),
+    'BG': ('Bulgaria', purchase_icon('fbg.png')),
+    'CH': ('Switzerland', purchase_icon('fch.png')),
+    'CZ': ('Czechia', purchase_icon('fcz.png')),
+    'DE': ('Germany', purchase_icon('fde.png')),
+    'DK': ('Denmark', purchase_icon('fdk.png')),
+    'doggerland': ('Doggerland', purchase_icon('fdl.png')),
+    'FR': ('France', purchase_icon('ffr.png')),
+    'HR': ('Croatia', purchase_icon('fhr.png')),
+    'HU': ('Hungary', purchase_icon('fhu.png')),
+    'IT': ('Italy', purchase_icon('fit.png')),
+    'LU': ('Luxembourg', purchase_icon('flu.png')),
+    'NO': ('Norway', purchase_icon('fno.png')),
+    'PL': ('Poland', purchase_icon('fpl.png')),
+    'RS': ('Serbia', purchase_icon('frs.png')),
+    'RU': ('Russia', purchase_icon('fru.png')),
+    'SE': ('Sweden', purchase_icon('fse.png')),
+    'SI ': ('Slovenia', purchase_icon('fsi.png')),
+    'SK ': ('Slovakia', purchase_icon('fsk.png')),
+    'soviet_union': ('Soviet Union', purchase_icon('fsu.png')),
+    'yugoslavia': ('Yogoslavia', purchase_icon('fyu.png')),
+    'europe': ('Europe', purchase_icon('fyu.png')),
 }
+
+badges.set_badges_info('flag', 'Country', COUNTRIES)
 
 
 COMPANY_SPRITES = {
-    'na': purchase_icon('blank.png'),
     'cmetro': purchase_icon('lcmetro.png'),
     'øresundståg': purchase_icon('loeresundstaag.png'),
     'stog': purchase_icon('lstog.png'),
@@ -391,33 +354,60 @@ COMPANY_SPRITES = {
     'sj_70s': purchase_icon('lsj70s.png'),
     'sj_90s': purchase_icon('lsj90s.png'),
     'tgojnew': purchase_icon('ltgojnew.png'),
-    'maelartaag': purchase_icon('lmaelartaag.png'),
-    'hectorrail': purchase_icon('lhectorrail.png'),
     'ss': purchase_icon('lss.png'),
     'oetraf': purchase_icon('loetraf.png'),
     'tgojold': purchase_icon('ltgojold.png'),
     'gc': purchase_icon('lgc.png'),
 }
 
-
-POWER_TYPE_SPRITES = {
-    'diesel': purchase_icon('pdiesel.png'),
-    '3rd': purchase_icon('pelectric3.png'),
-    'dual': purchase_icon('pelectricdv.png'),
-    'metro': purchase_icon('pelectric3.png'),
-    'steam': purchase_icon('psteam.png'),
-    'multi': purchase_icon('pelectricdv.png'), # replece these sprites
-    'dc': purchase_icon('pelectricdc1500.png'),
-    'dc/25kv': purchase_icon('pelectric150025.png'),
-    'dc/dc3000/25kv': purchase_icon('pelectric1500300025.png'),
-    'dc/15kv/25kv': purchase_icon('pelectric15001525.png'),
-    'dc/dc3000/15kv/25kv': purchase_icon('pelectric150030001525.png'),
-    'dc3000': purchase_icon('pelectricdc3000.png'),
-    '15kv': purchase_icon('pelectric15.png'),
-    '15kv/25kv': purchase_icon('pelectric1525.png'),
-    '25kv': purchase_icon('pelectric25.png'),
-    'na': purchase_icon('blank.png')
+OPERATORS = {
+    'BE/nmbs': (g.strings['SNCB_NAME'], None),
+    'CH/bls': ('Bern-Lötschberg-Simplon-Bahn', None),
+    'CH/sbb': (g.strings['SBB_NAME'], purchase_icon('lsbb.png')),
+    'CH/sbb/sbbc': ('SBB Cargo', None),
+    'LU/cfl': ('Société Nationale des Chemins de Fer Luxembourgeois', None),
+    'DK/dsb': ('Danske Statsbaner', None),
+    'FR/sncf': ('Société Nationale des Chemins de fer Français', None),
+    'SE/swb': ('Stockholm Westerås Bergslagens Järnväg', None),
+    'SE/banverket': ('Banverket produktion', purchase_icon('lbanverket.png')),
+    'SE/stab': ('Svensk tågkraft', None),
+    'SE/bk': ('BK tåg', None),
+    'SE/ibab': ('Inlandsbanan AB', None),
+    'SE/saga': ('Saga rail', None),
+    'SE/hctor': ('Hector rail', purchase_icon('lhectorrail.png')),
+    'SE/vasttr': ('Västtågen', None),
+    'SE/kroesa': ('Krösatågen', None),
+    'SE/paaga': ('Pågatågen', None),
+    'SE/norrtaag': ('Norrtåg', None),
+    'SE/maelartaag': ('Mälartåg', purchase_icon('lmaelartaag.png')),
+    'SE/upptaaget': ('Upptåget', None),
+    'SE/x_taaget': ('X-tåget', None),
 }
+
+badges.set_badges_info('operator', 'Operator', OPERATORS)
+
+
+POWER_TYPES = {
+    'steam': ('Steam', purchase_icon('psteam.png')),
+    'diesel': ('Diesel', purchase_icon('pdiesel.png')),
+    #'dual': purchase_icon('pelectricdv.png'),
+    'electric/dc/750v': ('750v DC electric', None),
+    'electric/dc/1500v': ('1500v DC electric', purchase_icon('pelectricdc1500.png')),
+    'electric/dc/3kv': ('3kv DC electric', purchase_icon('pelectricdc3000.png')),
+    'electric/ac/15kv': ('15kv AC electric', purchase_icon('pelectric15.png')),
+    'electric/ac/25kv': ('25kv AC electric', purchase_icon('pelectric25.png')),
+    'electric/ac/15kv_25kv': (None, purchase_icon('pelectric1525.png')),
+    'electric/acdc/1500v_25kv': (None, purchase_icon('pelectric150025.png')),
+    'electric/acdc/3kv_25kv': (None, purchase_icon('pelectric1500300025.png')),
+    'electric/acdc/1500v_3kv_25kv': (None, purchase_icon('pelectric1500300025.png')),
+    'electric/acdc/1500v_15kv_25kv': (None, purchase_icon('pelectric15001525.png')),
+    'electric/acdc/1500v_3kv_15kv_25kv': (None, purchase_icon('pelectric150030001525.png')),
+    'third_rail': ('Third rail', purchase_icon('pelectric3.png')),
+    'metro': ('Metro', purchase_icon('pelectric3.png')),
+    'battery': ('battery', None),
+}
+
+badges.set_badges_info('power', 'Propulsion', POWER_TYPES)
 
 lib.make_purchase_sprites(
     newgrf=g,
@@ -768,9 +758,8 @@ lib.make_purchase_sprites(
     # se ng wagons
 ).set_variant_callbacks(g)))
 
-badges.set_class_name('operator', 'Operator')
-badges.set_class_name('role', 'Use')
-badges.set_class_name('manufacturer', 'Builder')
+badges.set_badge_info('role', 'Use', None, None)
+badges.set_badge_info('manufacturer', 'Builder', None, None)
 
 badges.set_badge_info('manufacturer/SE/asea', 'Allmäna Svenska Elektriska AB', None, None)
 
@@ -805,12 +794,7 @@ badges.set_badge_info('role/bike', 'Bike space', None, None)
 
 sprites, operator_sets = purchase_icons(COMPANY_SPRITES)
 
-badges.set_badge_info('operator/CH/sbb', 'Swiss Federal Railways', sprites, None)
-badges.set_badge_info('operator/CH/sbb/sbbc', 'SBB Cargo', None, None)
-
-
-badges.set_badge_info('operator/DK/dsb', 'Danske Statsbaner', None, None)
-badges.set_badge_info('operator/DK/dsb/stog', None, None, operator_sets['stog'])
+badges.set_badge_info('operator/DK/dsb/stog', None, sprites, operator_sets['stog'])
 
 badges.set_badge_info('operator/NO/nsb', 'Norske Statsbaner', None, None)
 
@@ -831,10 +815,9 @@ badges.set_badge_info('operator/SE/gc', 'Green Cargo', None, operator_sets['gc']
 badges.set_badge_info('operator/SE/taagab', 'Tågåkeriet i bergslagen', None, operator_sets['taagab'])
 badges.set_badge_info('operator/SE/sl', 'Storstockholms lokaltrafik', None, operator_sets['sl'])
 badges.set_badge_info('operator/SE/ss', 'Stockholms spårvägar', None, operator_sets['ss'])
-badges.set_badge_info('operator/SE/oeresundstaag', 'Öresundståg AB', None, operator_sets['øresundståg'])
+badges.set_badge_info('operator/SE/oeresundstaag', 'Öresundståg', None, operator_sets['øresundståg'])
 badges.set_badge_info('operator/SE/oetraf', 'Östgötatrafiken', None, operator_sets['oetraf'])
 badges.set_badge_info('operator/SE/mtab', 'Malmtrafik AB', None, None)
-badges.set_badge_info('operator/SE/hctor', 'Hector rail', None, operator_sets['hectorrail'])
 
 badges.find_missing()
 

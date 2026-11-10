@@ -193,7 +193,7 @@ se_e_ma_6 = Train(
         'flag': ['SE'],
         'role': ['express_passenger', 'regional_passenger', 'freight'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/Bk'],
+        'operator': ['SE/bk'],
         'manufacturer': ['SE/asea'],
     }),
 )

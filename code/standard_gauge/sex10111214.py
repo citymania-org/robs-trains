@@ -81,7 +81,7 @@ s_e_x10_2_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/lm'],
+        'operator': ['SE/paaga'],
         'manufacturer': ['SE/asea'],
     }),
 ).add_articulated_part(
@@ -327,7 +327,7 @@ s_e_x11_1_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/lm'],
+        'operator': ['SE/paaga'],
         'manufacturer': ['SE/asea'],
     }),
 ).add_articulated_part(
@@ -403,7 +403,7 @@ s_e_x11_3_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/vtab'],
+        'operator': ['SE/vasttr'],
         'manufacturer': ['SE/asea'],
     }),
 ).add_articulated_part(
@@ -573,7 +573,7 @@ s_e_x12_2_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/vtab'],
+        'operator': ['SE/vasttr'],
         'manufacturer': ['SE/asea'],
     }),
 ).add_articulated_part(
@@ -819,7 +819,7 @@ s_e_x14_5_sj = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
-        'operator': ['SE/vtab'],
+        'operator': ['SE/vasttr'],
         'manufacturer': ['SE/asea'],
     }),
 ).add_articulated_part(

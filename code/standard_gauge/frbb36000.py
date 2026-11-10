@@ -40,7 +40,7 @@ fr_e_bb36000_1 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight'],
-        'power': ['electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_3kv_25kv', 'electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),
@@ -63,7 +63,7 @@ fr_e_bb36000_2 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight'],
-        'power': ['electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_3kv_25kv', 'electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),

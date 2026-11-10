@@ -40,7 +40,7 @@ d_e_eg_1_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['freight'],
-        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'power': ['electric/ac/15kv_25kv', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['DK/dsb'],
         'manufacturer': [],
     }),
@@ -64,7 +64,7 @@ d_e_eg_2_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['freight'],
-        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'power': ['electric/ac/15kv_25kv', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['DK/rsc'],
         'manufacturer': [],
     }),
@@ -88,7 +88,7 @@ d_e_eg_3_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['freight'],
-        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'power': ['electric/ac/15kv_25kv', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['DK/dbcsc'],
         'manufacturer': [],
     }),

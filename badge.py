@@ -21,7 +21,7 @@ class Badge(grf.SpriteGenerator):
 
     def _gen_name_sprites(self, g, bid):
         if isinstance(self.name, grf.StringRef):
-            return self.name.get_actions(self.feature, bid)
+            return self.name.get_actions(BADGES, bid)
         else:
             return g.strings.add(self.name).get_actions(BADGES, bid)
 

@@ -1586,19 +1586,19 @@ class Badges(grf.SpriteGenerator):
     
     def __init__(self, g):
         self.grf = g
-        self.classes = {}
+        self.classes = dict()
         self.badges = {}
+        self.used_badges = set()
     
     def set_train_badges(self, badges):
         res = []
         for c, blist in badges.items():
-            self.classes[c] = None
             self.grf.get_badge_id(c)
             for badge_label in blist:
                 if c == 'role':
                     if badge_label not in ('heavy_freight', 'freight', 'light_freight', 'shunting', 'international', 'express_passenger', 'regional_passenger', 'suburban_passenger', 'metro', 'utility', 'luggage', 'mail', 'bike', 'driving_cab', 'restaurant_car', '1st_class', '2nd_class', '3rd_class', 'sleeper', 'panoramic'):
                         raise ValueError('Unallowed badge: role/', badge_label)
-                self.badges[c+'/'+badge_label] = [None, None, None]
+                self.used_badges.add(f'{c}/{badge_label}')
                 res.append(self.grf.get_badge_id(c+'/'+badge_label))
         return res
     
@@ -1608,24 +1608,42 @@ class Badges(grf.SpriteGenerator):
                 continue
             if v is None:
                 print(f'Badge class {k} is missing a name')
-        for k, v in self.badges.items():
-            if k.startswith('flag'):
+        for b in list(self.used_badges):
+            if b.startswith('flag'):
                 continue
-            if v[0] is None:
-                print(f'Badge {k} is missing a name')
-            if check_sprite and v[1] is None:
-                print(f'Badge {k} is missing a sprite')
+            if b not in self.badges:
+                print(f'Badge: {b} not defined in this grf')
                 
-    def set_class_name(self, c, name):
-        self.classes[c] = name
-                
-    def set_badge_info(self, c, name, action1, action2):
-        self.badges[c] = [name, action1, action2]
+    def set_badge_info(self, b, name,  action1, action2):
+        self.badges[b] = [name, action1, action2]
+
+    def set_badges_info(self, badge_class, badge_class_name, badge_info):
+        action1 = []
+        i = 0
+        self.set_badge_info(badge_class, badge_class_name, None, None)
+        for bl, info in badge_info.items():
+            action2 = None
+            if info[1] is not None:
+                action1.append(info[1])
+                action2 = grf.GenericSpriteLayout(ent1=(i,), ent2=(i,))
+                i += 1
+            self.set_badge_info(f'{badge_class}/{bl}', info[0], badge_class, action2)
+        action1.insert(0, grf.Action1(badge.BADGES, i, 1))
+        self.classes[badge_class] = action1
         
     def get_sprites(self, g):
         res = []
-        for c, v in self.classes.items():
-            res += badge.Badge(c, name=v).get_sprites(g)
+        used_classes = set()
         for b, v in self.badges.items():
-            res += badge.Badge(b, name=v[0], icon=(v[1], v[2])).get_sprites(g)
+            if not isinstance(v[1], list):
+                if v[1] in self.classes:
+                    if v[1] in used_classes:
+                        res += badge.Badge(b, name=v[0], icon=(None, v[2])).get_sprites(g)
+                    else:
+                        res += badge.Badge(b, name=v[0], icon=(self.classes[v[1]], v[2])).get_sprites(g)
+                        used_classes.add(v[1])
+                else:
+                    res += badge.Badge(b, name=v[0], icon=(v[1], v[2])).get_sprites(g)
+            else:
+                res += badge.Badge(b, name=v[0], icon=(v[1], v[2])).get_sprites(g)
         return res
