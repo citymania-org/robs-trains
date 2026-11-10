@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_lint41_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,13 +35,17 @@ dk_d_lint41_1 = Train(
         cc2_replace=colours["CREAM"]
     ),
     max_speed=Train.kmhish(120),
-    country='denmark',
-    company='na',
     introduction_date=date(2003, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Local passengers',
         'Trivia': 'All passed to GCR',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/arriva'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lint412_1',
@@ -72,13 +75,17 @@ dk_d_lint41_2 = Train(
         cc2_replace=colours["GREY7"]
     ),
     max_speed=Train.kmhish(120),
-    country='denmark',
-    company='na',
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Local passengers',
         'Trivia': 'All passed to LT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/lb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lint412_2',
@@ -108,13 +115,17 @@ dk_d_lint41_3 = Train(
         cc2_replace=colours["DBLUE"]
     ),
     max_speed=Train.kmhish(120),
-    country='denmark',
-    company='na',
     introduction_date=date(2007, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Local passengers',
         'Trivia': 'All passed to RTOG and then LT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/vl'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lint412_3',
@@ -144,12 +155,16 @@ dk_d_lint41_4 = Train(
         cc2_replace=colours["GREY1"]
     ),
     max_speed=Train.kmhish(140),
-    country='denmark',
-    company='na',
     introduction_date=date(2016, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/njj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lint412_4',
@@ -179,12 +194,16 @@ dk_d_lint41_5 = Train(
         cc2_replace=colours["SKY"]
     ),
     max_speed=Train.kmhish(140),
-    country='denmark',
-    company='na',
     introduction_date=date(2021, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/njj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lint412_5',
@@ -214,12 +233,16 @@ dk_d_lint41_6 = Train(
         cc2_replace=colours["YELLOW"]
     ),
     max_speed=Train.kmhish(120),
-    country='denmark',
-    company='na',
     introduction_date=date(2024, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/gcr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lint412_6',

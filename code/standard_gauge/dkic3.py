@@ -610,7 +610,7 @@ dl_d_mf_1 = Train(
         'flag': ['doggerland'],
         'role': ['regional_passenger', 'express_passenger'],
         'power': ['diesel'],
-        'operator': ['doggerland/dsj'],
+        'operator': ['DL/dlj'],
         'manufacturer': []
     }),
 ).add_articulated_part(
@@ -681,7 +681,7 @@ dl_d_mf_2 = Train(
         'flag': ['doggerland'],
         'role': ['regional_passenger', 'express_passenger'],
         'power': ['diesel'],
-        'operator': ['doggerland/dsj'],
+        'operator': ['DL/dlj'],
         'manufacturer': []
     }),
 ).add_articulated_part(

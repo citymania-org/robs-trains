@@ -2,13 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_mr_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(130),
@@ -27,8 +25,6 @@ COMMON_mr_PROPS = dict(
 COMMON_mrred_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -57,12 +53,18 @@ d_d_mr_1_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     purchase_sprite_towed_id='d_d_mrd_1_dsb',
-    country='denmark',
     introduction_date=date(1978, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers, up to 5 can be coupled together into a train set',
+        'Info': 'Up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_1_dsb',
@@ -93,12 +95,18 @@ d_d_mr_2_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     purchase_sprite_towed_id='d_d_mrd_2_dsb',
-    country='denmark',
     introduction_date=date(1994, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers, up to 5 can be coupled together into a train set',
+        'Info': 'Up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_2_dsb',
@@ -129,12 +137,18 @@ d_d_mr_3_dsb = Train(
         cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mrd_3_dsb',
-    country='denmark',
     introduction_date=date(2002, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers, up to 5 can be coupled together into a train set',
+        'Info': 'Up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_3_dsb',
@@ -165,12 +179,18 @@ d_d_mr_4_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     purchase_sprite_towed_id='d_d_mrd_4_dsb',
-    country='denmark',
     introduction_date=date(2003, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers, up to 5 can be coupled together into a train set',
+        'Info': 'Up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/arriva'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_4_dsb',
@@ -201,12 +221,18 @@ d_d_mr_5_dsb = Train(
         cc2_replace=colours["CREAM"]
     ),
     purchase_sprite_towed_id='d_d_mrd_5_dsb',
-    country='denmark',
     introduction_date=date(2005, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers, up to 5 can be coupled together into a train set',
+        'Info': 'Up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/arriva'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_5_dsb',
@@ -237,12 +263,18 @@ d_d_mr_6_dsb = Train(
         cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mrd_6_dsb',
-    country='denmark',
     introduction_date=date(2012, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers, up to 5 can be coupled together into a train set',
+        'Info': 'Up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_6_dsb',
@@ -273,12 +305,18 @@ d_d_mr_7_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     purchase_sprite_towed_id='d_d_mrd_7_dsb',
-    country='denmark',
     introduction_date=date(1986, 1, 1),
     cargo_capacity=52,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers with 1st class carriage, up to 5 can be coupled together into a train set',
+        'Info': 'With 1st class carriage, up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_7_dsb',
@@ -309,12 +347,18 @@ d_d_mr_8_dsb = Train(
         cc2_replace=colours["NAVY"]
     ),
     purchase_sprite_towed_id='d_d_mrd_8_dsb',
-    country='denmark',
     introduction_date=date(2019, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
         'Trivia': '''Used to service & maintain Denmark's railways''',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/crsa'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_8_dsb',
@@ -345,12 +389,18 @@ d_d_mr_9_dsb = Train(
         cc2_replace=colours["GREY1"]
     ),
     purchase_sprite_towed_id='d_d_mrd_9_dsb',
-    country='denmark',
     introduction_date=date(2019, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
         'Trivia': 'A static restaurant train that can be found in Randers, Denmark',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/scandia_ekspressen'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mrd_9_dsb',
@@ -381,12 +431,18 @@ dl_d_mr_1_dlj = Train(
         cc2_replace=colours["RED"]
     ),
     purchase_sprite_towed_id='dl_d_mrd_1_dlj',
-    country='doggerland',
     introduction_date=date(1986, 1, 1),
     cargo_capacity=56,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers, up to 5 can be coupled together into a train set',
+        'Info': 'Up to 5 can be coupled together into a train set',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DL'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DL/dlj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dl_d_mrd_1_dlj',
