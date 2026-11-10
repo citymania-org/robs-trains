@@ -2,13 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, badges
 
 COMMON_y1_PROPS = dict( # this is based on the HHJ YM 31
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -39,19 +37,21 @@ d_d_y1_1_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
-        'Operators': 'HHGB, HHJ',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/hhgb', 'DK/hhj'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_y1dvt_PROPS = dict( # this is based on the HHJ YS 41
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -82,18 +82,22 @@ d_d_y1dvt_1_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/hhj'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
 COMMON_y2_PROPS = dict( # this is based on the LNJ YM 17
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -124,11 +128,15 @@ d_d_y2_1_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY3"]
     ),
-    country='denmark',
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Short distance local passengers',
-        'Operators': 'LNJ',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/lnj'],
+        'manufacturer': [],
     }),
 )
 
@@ -145,19 +153,22 @@ d_d_y2_2_dsb = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
     introduction_date=date(2000, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Short distance local passengers',
         'Trivia': 'One locomotive bought from LNJ in 1999 #15, named Fjorden',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/vltj'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_y3_PROPS = dict( # this is based on the LNJ YS 25
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -188,19 +199,22 @@ d_d_y3_1_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY3"]
     ),
-    country='denmark',
     introduction_date=date(1968, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Short distance local passengers',
-        'Operators': 'LNJ',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/lnj'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
 COMMON_y4_PROPS = dict( # this is based on the LJ YM 60
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -230,19 +244,21 @@ d_d_y4_1_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
-        'Operators': 'HHGB, HHJ, LJ',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/hhgb', 'DK/hhj', 'DK/lj'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_y6_PROPS = dict( # this is based on the OHJ YM 51
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -272,10 +288,15 @@ d_d_y6_1_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1975, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/ohj'],
+        'manufacturer': [],
     }),
 )
 
@@ -292,11 +313,15 @@ d_d_y6_4_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1983, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
-        'Operators': 'HHGB, HHJ',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/hhgb', 'DK/hhj'],
+        'manufacturer': [],
     }),
 )
 
@@ -313,11 +338,16 @@ d_d_y6_2_dsb = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["CREAM"]
     ),
-    country='denmark',
     introduction_date=date(1983, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
         'Trivia': 'Three locomotives bought in 1983 #12, #13, #14, named Storåen, Vigen and Tangen',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/vltj'],
+        'manufacturer': [],
     }),
 )
 
@@ -334,11 +364,16 @@ d_d_y6_5_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
         'Trivia': 'Typically used in the ML-FL-FL-ML format, obtained specifically for use on the Lille Nord line as it meant that DSB could use depots owned by local companies, unlike if they chose the MR, these replaced the MO units on the line',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -355,19 +390,22 @@ d_d_y6_3_dsb = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
     introduction_date=date(1999, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
         'Trivia': 'One more locomotive was bought from NJ in 2005 #16, named Heden',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/vltj'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_y8_PROPS = dict( # this is based on the LJ YS 80
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -398,11 +436,16 @@ d_d_y8_1_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
-        'Operators': 'HHGB, HHJ, LJ',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/hhgb', 'DK/hhj', 'DK/lj'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -419,10 +462,16 @@ d_d_y8_2_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1975, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/ohj'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -439,10 +488,16 @@ d_d_y8_3_dsb = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["CREAM"]
     ),
-    country='denmark',
     introduction_date=date(1983, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/vltj'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -459,18 +514,22 @@ d_d_y8_4_dsb = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
     introduction_date=date(1999, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/vltj'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
 COMMON_y9_PROPS = dict( # this is based on the LJ YP 70
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(105),
@@ -498,11 +557,15 @@ d_d_y9_1_dsb = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
-        'Operators': 'HHJ, LJ',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/hhj', 'DK/lj'],
+        'manufacturer': [],
     }),
 )
 
@@ -517,11 +580,16 @@ d_d_y9_3_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
         'Trivia': 'Typically used in the ML-FL-FL-ML format, obtained specifically for use on the Lille Nord line as it meant that DSB could use depots owned by local companies, unlike if they chose the MR, these replaced the MO units on the line',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -536,9 +604,14 @@ d_d_y9_2_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/ohj'],
+        'manufacturer': [],
     }),
 )
