@@ -40,7 +40,6 @@ se_s_f_1 = Train(
     max_speed=Train.kmhish(90),
     introduction_date=date(1914, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
@@ -76,7 +75,6 @@ se_s_f_2 = Train(
     max_speed=Train.kmhish(110),
     introduction_date=date(1937, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
@@ -112,7 +110,6 @@ se_s_f_3 = Train(
     max_speed=Train.kmhish(110),
     introduction_date=date(1942, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
