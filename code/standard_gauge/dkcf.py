@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_cf_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -33,15 +32,19 @@ dk_p_cf_1 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     cargo_capacity=66,
     weight=14,
     introduction_date=date(1912, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
         'Trivia': 'Later classed as CX',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -56,15 +59,19 @@ dk_p_cf_2 = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    country='denmark',
-    company='na',
     cargo_capacity=64,
     weight=17,
     introduction_date=date(1923, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
         'Trivia': 'Later classed as CFM then CXM',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -79,14 +86,18 @@ dk_p_cf_3 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     cargo_capacity=60,
     weight=16,
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
         'Trivia': 'Vehicles in this class could also appear like the CF II',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )

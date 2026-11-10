@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_compl_PROPS = dict(
     misc_flags=Train.Flags.USE_2CC,

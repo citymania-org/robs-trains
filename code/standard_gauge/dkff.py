@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_ff_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -32,15 +31,19 @@ dk_p_ff_1 = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1928, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -55,15 +58,19 @@ dk_p_ff_2 = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1945, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -78,15 +85,19 @@ dk_p_ff_3 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -101,15 +112,19 @@ dk_p_ff_4 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -124,15 +139,20 @@ dk_p_ff_5 = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1950, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=33,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -147,14 +167,19 @@ dk_p_ff_6 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     max_speed=Train.kmhish(100),
     cargo_capacity=78,
     weight=33,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': 'Local trains, 2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )

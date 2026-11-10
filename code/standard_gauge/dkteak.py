@@ -2,11 +2,10 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_teak_PROPS = dict(
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -35,12 +34,16 @@ dk_p_teak_1 = Train(
     length=9,
     cargo_capacity=36,
     weight=39,
-    country='denmark',
-    company='na',
     introduction_date=date(1903, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -58,12 +61,16 @@ dk_p_teak_2 = Train(
     length=8,
     cargo_capacity=32,
     weight=31,
-    country='denmark',
-    company='na',
     introduction_date=date(1908, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -81,12 +88,16 @@ dk_p_teak_3 = Train(
     length=8,
     cargo_capacity=32,
     weight=35,
-    country='denmark',
-    company='na',
     introduction_date=date(1922, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -104,12 +115,16 @@ dk_p_teak_4 = Train(
     length=8,
     cargo_capacity=36,
     weight=35,
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -127,12 +142,16 @@ dk_p_teak_5 = Train(
     length=9,
     cargo_capacity=58,
     weight=39,
-    country='denmark',
-    company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -150,12 +169,16 @@ dk_p_teak_6 = Train(
     length=9,
     cargo_capacity=58,
     weight=39,
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -173,12 +196,16 @@ dk_p_teak_7 = Train(
     length=9,
     cargo_capacity=70,
     weight=28,
-    country='denmark',
-    company='na',
     introduction_date=date(1902, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -196,12 +223,16 @@ dk_p_teak_8 = Train(
     length=8,
     cargo_capacity=36,
     weight=30,
-    country='denmark',
-    company='na',
     introduction_date=date(1910, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -219,12 +250,16 @@ dk_p_teak_9 = Train(
     length=9,
     cargo_capacity=58,
     weight=38,
-    country='denmark',
-    company='na',
     introduction_date=date(1910, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd & 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -242,12 +277,16 @@ dk_p_teak_10 = Train(
     length=9,
     cargo_capacity=72,
     weight=29,
-    country='denmark',
-    company='na',
     introduction_date=date(1896, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -265,12 +304,16 @@ dk_p_teak_11 = Train(
     length=9,
     cargo_capacity=72,
     weight=35,
-    country='denmark',
-    company='na',
     introduction_date=date(1909, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -288,12 +331,16 @@ dk_p_teak_12 = Train(
     length=9,
     cargo_capacity=72,
     weight=34,
-    country='denmark',
-    company='na',
     introduction_date=date(1914, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -311,12 +358,16 @@ dk_p_teak_13 = Train(
     length=9,
     cargo_capacity=72,
     weight=34,
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -334,12 +385,16 @@ dk_p_teak_14 = Train(
     length=9,
     cargo_capacity=82,
     weight=30,
-    country='denmark',
-    company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -357,12 +412,16 @@ dk_p_teak_15 = Train(
     length=9,
     cargo_capacity=82,
     weight=30,
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -380,12 +439,16 @@ dk_p_teak_16 = Train(
     length=8,
     cargo_capacity=67,
     weight=33,
-    country='denmark',
-    company='na',
     introduction_date=date(1937, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -403,11 +466,15 @@ dk_p_teak_17 = Train(
     length=8,
     cargo_capacity=67,
     weight=33,
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
