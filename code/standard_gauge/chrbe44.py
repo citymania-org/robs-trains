@@ -76,7 +76,7 @@ ch_e_rbe44_2 = Train(
 ch_e_rbe44_3 = Train(
     **COMMON_44_PROPS,
     id='ch_e_rbe44_3',
-    name='SBB RBe 540',
+    name='SBB RBe 4/4',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
@@ -87,6 +87,7 @@ ch_e_rbe44_3 = Train(
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
+        'Trivia': 'Later classed as RBe 540',
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],

@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_mx_ii_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(133),
@@ -38,12 +37,16 @@ d_d_mx_ii_1_dsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["CREAM"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1960, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Designed to be used on branch lines where a lighter locomotive is needed, like the MY it is still used today across Europe by private operators, often in pairs with other loco types such as the MZ & CFL 1800',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -60,11 +63,15 @@ d_d_mx_ii_2_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1972, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -81,12 +88,16 @@ d_d_mx_ii_3_vltj = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1994, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from DSB in 1993 #1025, named Tørfisken'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/vltj'],
+        'manufacturer': [],
     }),
 )
 
@@ -103,12 +114,16 @@ d_d_mx_ii_4_ttt = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["RED"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(2012, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from RCT in 2012 #1015'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/ttt'],
+        'manufacturer': [],
     }),
 )
 
@@ -125,12 +140,16 @@ d_d_mx_ii_5_lb = Train(
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from HFHJ in 2002 #1045'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/lb'],
+        'manufacturer': [],
     }),
 )
 
@@ -147,12 +166,16 @@ d_d_mx_ii_6_lt = Train(
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2017, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from RTOG in 2015 #1043'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/lt'],
+        'manufacturer': [],
     }),
 )
 
@@ -169,12 +192,16 @@ d_d_mx_ii_7_contec = Train(
         cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from CFLCD in 2009 #1008'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/contec'],
+        'manufacturer': [],
     }),
 )
 
@@ -191,12 +218,16 @@ d_d_mx_ii_8_ohj = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1987, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Three locomotives bought from DSB in 1987 #1008, #1009, #1010 & a fourth also from DSB in 1988 #1029'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/ohj'],
+        'manufacturer': [],
     }),
 )
 
@@ -213,12 +244,16 @@ d_d_mx_ii_9_sb = Train(
         cc_replace=colours["COBALT"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1994, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two locomotives bought from DSB in 1993 #1041 & from OHJ in 1994 #1038, both sold to NJJ in 2001'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/sb'],
+        'manufacturer': [],
     }),
 )
 
@@ -235,12 +270,16 @@ d_d_mx_ii_10_cflcd = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2009, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two locomotives bought from ØSJS & DJ in 2007 #1023 & #1029'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/cflcd'],
+        'manufacturer': [],
     }),
 )
 
@@ -257,12 +296,16 @@ d_d_mx_ii_11_vik = Train(
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2023, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from CFLCD in 2023 #1029'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/vik'],
+        'manufacturer': [],
     }),
 )
 
@@ -279,12 +322,16 @@ d_d_mx_ii_12_bk = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["BLUE"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(2000, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two locomotives bought from BSM in 2000 #1024 & #1042'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/bk'],
+        'manufacturer': [],
     }),
 )
 
@@ -301,12 +348,16 @@ d_d_mx_ii_13_lj = Train(
         cc_replace=colours["SCARLET"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1990, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two locomotives bought from DSB in 1988 #1031 & #1033'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/lj'],
+        'manufacturer': [],
     }),
 )
 
@@ -323,12 +374,16 @@ d_d_mx_ii_14_bsx = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1994, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from DSB in 1994 #1012'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/bsx'],
+        'manufacturer': [],
     }),
 )
 
@@ -345,12 +400,16 @@ d_d_mx_ii_15_bsx = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1994, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two locomotives bought from DSB in 1994 #1024 & #1042'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/bsx'],
+        'manufacturer': [],
     }),
 )
 
@@ -367,12 +426,16 @@ d_d_mx_ii_16_bsm = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1997, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from BSX in 1997 #1012'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/bsm'],
+        'manufacturer': [],
     }),
 )
 
@@ -389,12 +452,16 @@ d_d_mx_ii_17_stab = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["ORANGE"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(2022, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive bought from RCT in 2022 #1021'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/stab'],
+        'manufacturer': [],
     }),
 )
 
@@ -411,12 +478,16 @@ d_d_mx_ii_18_vida = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["RED"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(2019, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'One locomotive rented from NRFAB in 2019 #1024'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/vida'],
+        'manufacturer': [],
     }),
 )
 
@@ -433,11 +504,15 @@ d_d_mx_ii_19_ibab = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["YELLOW"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Two locomotives bought from DSB in 1994 #1013 & #1016'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/ibab'],
+        'manufacturer': [],
     }),
 )

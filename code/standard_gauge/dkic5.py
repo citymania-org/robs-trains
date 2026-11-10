@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, g
+from common import Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, g, badges
 
 COMMON_ic5_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -37,15 +36,20 @@ d_p_ic5_1_dsb = Train(
         cc2_replace=colours["RED"],
     ),
     purchase_sprite_towed_id='d_p_ic52_1_dsb',
-    country='denmark',
-    company='na',
     introduction_date=date(1981, 1, 1),
     power=0,
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, basically a DVT on steroids',
+        'Info': 'Basically a DVT on steroids',
         'Trivia': 'This is a prototype set, two were built, it was designed specifically to go on ferries between Danish islands but it was too long and too heavy. The findings from this experiment led to the much more successful IC3 and IR4',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'driving_cab', 'restaurant_car'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_p_ic52_1_dsb',
@@ -117,15 +121,20 @@ d_p_ic5_2_dsb = Train(
         cc2_replace=colours["GREY1"]
     ),
     purchase_sprite_towed_id='d_p_ic52_2_dsb',
-    country='denmark',
-    company='na',
     introduction_date=date(1988, 1, 1),
     power=0,
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, basically a DVT on steroids',
+        'Info': 'Basically a DVT on steroids',
         'Trivia': 'This is a prototype set, two were built, it was designed specifically to go on ferries between Danish islands but it was too long and too heavy. The findings from this experiment led to the much more successful IC3 and IR4',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'driving_cab', 'restaurant_car'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_p_ic52_2_dsb',
@@ -186,7 +195,6 @@ d_p_ic5_2_dsb = Train(
 COMMON_ic5a_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -213,13 +221,17 @@ dk_p_ic5a_1 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1981, 1, 1),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -234,13 +246,17 @@ dk_p_ic5a_2 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1988, 1, 1),
     cargo_capacity=60,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '1st class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -255,13 +271,17 @@ dk_p_ic5a_3 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1981, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -276,13 +296,17 @@ dk_p_ic5a_4 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1988, 1, 1),
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -297,13 +321,17 @@ dk_p_ic5a_5 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1981, 1, 1),
     cargo_capacity=22,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Kiosk car, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -318,20 +346,23 @@ dk_p_ic5a_6 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1988, 1, 1),
     cargo_capacity=22,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Kiosk car, 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_ic5b_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -370,13 +401,18 @@ dk_p_ic5b_1 = Train(
         cc2_replace=colours['RED'],
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1981, 1, 1),
     cargo_capacity=74,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -394,12 +430,17 @@ dk_p_ic5b_2 = Train(
         cc2_replace=colours['GREY1'],
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1988, 1, 1),
     cargo_capacity=74,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 )

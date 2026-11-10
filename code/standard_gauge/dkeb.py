@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv, standard_gauge_all_voltages
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv, standard_gauge_all_voltages, badges
 
 COMMON_vectron_PROPS = dict(
     length=9,
@@ -35,13 +35,16 @@ d_e_eb_1_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     track_type=standard_gauge_25kv_15kv,
-    power_type='15kv/25kv',
     weight=87,
-    country='denmark',
-    company='na',
     introduction_date=date(2020, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': ['siemens'],
     }),
 )
 
@@ -59,14 +62,17 @@ d_e_eb_2_dsb = Train(
         cc2_replace=colours["RED"]
     ),
     track_type=standard_gauge_25kv_15kv,
-    power_type='15kv/25kv',
     weight=87,
-    country='denmark',
-    company='na',
     introduction_date=date(2021, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'The 1000th Vectron',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': ['siemens'],
     }),
 )
 
@@ -84,12 +90,15 @@ at_e_vectron_1 = Train(
         cc2_replace=colours["RED"]
     ),
     track_type=standard_gauge_all_voltages,
-    power_type='dc/dc3000/15kv/25kv',
     weight=90,
-    country='austria',
-    company='na',
     introduction_date=date(2018, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['AT'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/15kv', 'electric/ac/25kv'],
+        'operator': ['AT/obb'],
+        'manufacturer': ['siemens'],
     }),
 )

@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_me_ii_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(175),
@@ -38,12 +37,16 @@ d_d_me_ii_1_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1981, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': '''Denmark's final diesel locomotive''',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -60,11 +63,15 @@ d_d_me_ii_2_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["NAVY"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2000, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -81,11 +88,15 @@ d_d_me_ii_3_dsb = Train(
         cc_replace=colours["NAVY"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2002, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -102,11 +113,15 @@ d_d_me_ii_4_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2016, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -123,12 +138,16 @@ d_d_me_ii_5_nrfab = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["APPLE"]
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(2020, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Eight locomotives bought from DSB in 2020 #1509, #1513 & #1527 & in 2021 #1504, #1518, #1523, #1525 & #1529',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/nrfab'],
+        'manufacturer': [],
     }),
 )
 
@@ -145,12 +164,16 @@ d_d_me_ii_6_mav = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["SKY"]
     ),
-    country='hungary',
-    company='na',
     introduction_date=date(2024, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Fifteen locomotives leased from NRFAB in 2024',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['HU'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['HU/mav'],
+        'manufacturer': [],
     }),
 )
 
@@ -167,11 +190,15 @@ d_d_me_ii_7_skpl = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY7"]
     ),
-    country='poland',
-    company='na',
     introduction_date=date(2022, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Six locomotives leased from NRFAB in 2022',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['PL'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['PL/skpl'],
+        'manufacturer': [],
     }),
 )

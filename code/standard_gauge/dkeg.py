@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv_15kv, badges
 
 COMMON_eg_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv/25kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_25kv_15kv,
     max_speed=Train.kmhish(140),
@@ -35,11 +34,15 @@ d_e_eg_1_dsb = Train(
         cc_replace=colours["NAVY"],
         cc2_replace=colours["NAVY"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1999, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -54,12 +57,16 @@ d_e_eg_2_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'All thirteen locomotives bought from RDK in 2009',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'operator': ['DK/rsc'],
+        'manufacturer': [],
     }),
 )
 
@@ -74,11 +81,15 @@ d_e_eg_3_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2019, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'All thirteen locomotives bought from RSC in 2016',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
+        'operator': ['DK/dbcsc'],
+        'manufacturer': [],
     }),
 )

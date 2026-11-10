@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_103_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -19,7 +18,6 @@ COMMON_103_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='germany',
     max_speed=Train.kmhish(200),
 )
 
@@ -34,13 +32,18 @@ de_e_103_1 = Train(
         cc_replace=colours["DBRED"],
         cc2_replace=colours["DCREAM"]
     ),
-    company='na',
     power=8729,
     weight=112,
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
         'Trivia': 'Later classed as 103',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -55,12 +58,17 @@ de_e_103_2 = Train(
         cc_replace=colours["DBRED"],
         cc2_replace=colours["DCREAM"]
     ),
-    company='na',
     power=10578,
     weight=114,
     introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -75,12 +83,17 @@ de_e_103_3 = Train(
         cc_replace=colours["NSBRED"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     power=10578,
     weight=114,
     introduction_date=date(1987, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -95,12 +108,17 @@ de_e_103_4 = Train(
         cc_replace=colours["YELLOW"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     power=10578,
     weight=114,
     introduction_date=date(1991, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -115,12 +133,17 @@ de_e_103_5 = Train(
         cc_replace=colours["DBLUE"],
         cc2_replace=colours["SKY"]
     ),
-    company='na',
     power=10578,
     weight=114,
     introduction_date=date(1995, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -135,12 +158,17 @@ de_e_103_6 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     power=10578,
     weight=114,
     introduction_date=date(2000, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -155,12 +183,17 @@ de_e_103_7 = Train(
         cc_replace=colours["COBALT"],
         cc2_replace=colours["DCREAM"]
     ),
-    company='na',
     power=8729,
     weight=112,
     introduction_date=date(2014, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -175,12 +208,17 @@ de_e_103_8 = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["GREY1"]
     ),
-    company='na',
     power=10578,
     weight=114,
     introduction_date=date(2015, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/radve'],
+        'manufacturer': [],
     }),
 )
 
@@ -195,11 +233,16 @@ de_e_103_9 = Train(
         cc_replace=colours["DTURQUOISE"],
         cc2_replace=colours["DCREAM"]
     ),
-    company='na',
     power=10578,
     weight=114,
     introduction_date=date(2025, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )

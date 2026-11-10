@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_3kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_3kv, badges
 
 COMMON_444_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='dc3000',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_3kv,
     max_speed=Train.kmhish(200),
@@ -35,11 +34,15 @@ it_e_444_1 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY2"]
     ),
-    country='italy',
-    company='na',
     introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['IT'],
+        'role': ['express_passenger'],
+        'power': ['electric/dc/3kv'],
+        'operator': ['IT/fs'],
+        'manufacturer': [],
     }),
 )
 
@@ -54,18 +57,21 @@ it_e_444_2 = Train(
         cc_replace=colours["BLUE"],
         cc2_replace=colours["GREY2"]
     ),
-    country='italy',
-    company='na',
     introduction_date=date(1973, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['IT'],
+        'role': ['express_passenger'],
+        'power': ['electric/dc/3kv'],
+        'operator': ['IT/fs'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_444r_PROPS = dict(
     length=8,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='dc3000',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_3kv,
     max_speed=Train.kmhish(200),
@@ -93,11 +99,15 @@ it_e_444r_1 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY2"]
     ),
-    country='italy',
-    company='na',
     introduction_date=date(1989, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['IT'],
+        'role': ['express_passenger'],
+        'power': ['electric/dc/3kv'],
+        'operator': ['IT/fs'],
+        'manufacturer': [],
     }),
 )
 
@@ -112,11 +122,15 @@ it_e_444r_2 = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["GREY2"]
     ),
-    country='italy',
-    company='na',
     introduction_date=date(1995, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['IT'],
+        'role': ['express_passenger'],
+        'power': ['electric/dc/3kv'],
+        'operator': ['IT/fs'],
+        'manufacturer': [],
     }),
 )
 
@@ -131,10 +145,14 @@ it_e_444r_3 = Train(
         cc_replace=colours["GREY4"],
         cc2_replace=colours["GREY2"]
     ),
-    country='italy',
-    company='na',
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['IT'],
+        'role': ['express_passenger'],
+        'power': ['electric/dc/3kv'],
+        'operator': ['IT/fs'],
+        'manufacturer': [],
     }),
 )

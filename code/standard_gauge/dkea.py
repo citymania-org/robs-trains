@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_25kv, badges
 
 COMMON_ea_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='25kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_25kv,
     max_speed=Train.kmhish(175),
@@ -37,12 +36,16 @@ d_e_ea_1_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': '''Denmark's first electric locomotive''',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -59,11 +62,15 @@ d_e_ea_2_dsb = Train(
         cc_replace=colours["NAVY"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2006, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -80,11 +87,15 @@ d_e_ea_3_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(2017, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -101,12 +112,16 @@ d_e_ea_4_bulmarket = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["BLUE"]
     ),
-    country='bulgaria',
-    company='na',
     introduction_date=date(2007, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'Some locos sold to Bulmarket in 2007 for liquified gas trains',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BG'],
+        'role': ['freight'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['BG/bulmarket'],
+        'manufacturer': [],
     }),
 )
 
@@ -123,11 +138,15 @@ d_e_ea_5_db = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='bulgaria',
-    company='na',
     introduction_date=date(2010, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'Some locos sold to DB Schenker Bulgaria in 2010',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BG'],
+        'role': ['freight'],
+        'power': ['electric/ac/25kv'],
+        'operator': ['BG/db_schenker'],
+        'manufacturer': [],
     }),
 )

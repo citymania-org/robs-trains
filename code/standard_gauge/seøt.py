@@ -45,7 +45,7 @@ d_e_et_1_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['SE', 'DK'],
         'role': ['regional_passenger'],
-        'power': ['electric/ac'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['SE/sj', 'DK/dsb'],
         'manufacturer': ['SE/adtranz'],
     }),
@@ -105,7 +105,7 @@ d_e_et_2_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['SE', 'DK'],
         'role': ['regional_passenger'],
-        'power': ['electric/ac'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['SE/oeresundstaag', 'DK/dsb'],
         'manufacturer': ['SE/adtranz'],
     }),
@@ -165,7 +165,7 @@ d_e_et_1_sj = Train(
     badges=badges.set_train_badges({
         'flag': ['SE'],
         'role': ['regional_passenger'],
-        'power': ['electric/ac'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['SE/sj_ab'],
         'manufacturer': ['SE/adtranz'],
     }),
@@ -225,7 +225,7 @@ d_e_et_2_sj = Train(
     badges=badges.set_train_badges({
         'flag': ['SE'],
         'role': ['regional_passenger', 'express_passenger'],
-        'power': ['electric/ac'],
+        'power': ['electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['SE/sj_ab'],
         'manufacturer': ['SE/adtranz'],
     }),

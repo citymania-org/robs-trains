@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 d_d_mx_i_1_dsb = Train(
     id='d_d_mx_i_1_dsb',
@@ -18,9 +18,6 @@ d_d_mx_i_1_dsb = Train(
         cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(110),
@@ -36,8 +33,14 @@ d_d_mx_i_1_dsb = Train(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Operated on Jylland, only 2 made, #131 was scrapped in 1960 & #132 is preserved at Marselv as of 2024',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
     callbacks={'properties': {'cargo_capacity': 0},},
 )
