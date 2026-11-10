@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_hpr_PROPS = dict(
     length=5,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,11 +35,15 @@ dk_s_pii_1 = Train(
     max_speed=Train.kmhish(120),
     power=1250,
     weight=117,
-    country='denmark',
-    company='na',
     introduction_date=date(1907, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_pii2_1',
@@ -69,11 +72,15 @@ dk_s_hi_1 = Train(
     max_speed=Train.kmhish(70),
     power=1185,
     weight=129,
-    country='denmark',
-    company='na',
     introduction_date=date(1923, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_hi2_1',
@@ -102,11 +109,15 @@ dk_s_hii_1 = Train(
     max_speed=Train.kmhish(80),
     power=1185,
     weight=138,
-    country='denmark',
-    company='na',
     introduction_date=date(1941, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_hii2_1',
@@ -135,11 +146,15 @@ dk_s_hii_2 = Train(
     max_speed=Train.kmhish(80),
     power=1185,
     weight=138,
-    country='denmark',
-    company='na',
     introduction_date=date(1950, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_hii2_2',
@@ -168,11 +183,15 @@ dk_s_pr_1 = Train(
     max_speed=Train.kmhish(100),
     power=1500,
     weight=131,
-    country='denmark',
-    company='na',
     introduction_date=date(1943, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_pr2_1',
@@ -201,11 +220,15 @@ dk_s_ri_1 = Train(
     max_speed=Train.kmhish(100),
     power=1160,
     weight=118,
-    country='denmark',
-    company='na',
     introduction_date=date(1912, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_ri2_1',
@@ -234,11 +257,15 @@ dk_s_ri_2 = Train(
     max_speed=Train.kmhish(100),
     power=1160,
     weight=118,
-    country='denmark',
-    company='na',
     introduction_date=date(1933, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_ri2_2',
@@ -267,11 +294,15 @@ dk_s_rii_1 = Train(
     max_speed=Train.kmhish(100),
     power=1150,
     weight=122,
-    country='denmark',
-    company='na',
     introduction_date=date(1921, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_rii2_1',
@@ -300,11 +331,15 @@ dk_s_rii_2 = Train(
     max_speed=Train.kmhish(100),
     power=1150,
     weight=122,
-    country='denmark',
-    company='na',
     introduction_date=date(1933, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_s_rii2_2',

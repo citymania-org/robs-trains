@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_sii_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -35,11 +34,15 @@ dk_s_sii_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1924, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -54,10 +57,14 @@ dk_s_sii_2 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1935, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )

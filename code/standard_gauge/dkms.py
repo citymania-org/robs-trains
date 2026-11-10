@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 d_d_ms_1_dsb = Train(
     id='d_d_ms_1_dsb',
@@ -16,9 +16,6 @@ d_d_ms_1_dsb = Train(
         cc2_replace=colours["GREY1"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -36,7 +33,13 @@ d_d_ms_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_ms2_1_dsb',
@@ -78,9 +81,6 @@ d_d_mb_1_dsb = Train(
         cc2_replace=colours["GREY1"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -98,7 +98,13 @@ d_d_mb_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mb2_1_dsb',

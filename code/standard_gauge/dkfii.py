@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_fii_PROPS = dict(
     length=4,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -35,11 +34,15 @@ dk_s_fii_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1898, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Shunting',
         'Trivia': 'Bought until 1949',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['shunting'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )

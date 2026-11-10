@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 d_d_ml_1_dsb = Train(
     id='d_d_ml_1_dsb',
@@ -18,9 +18,6 @@ d_d_ml_1_dsb = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(75),
@@ -39,7 +36,13 @@ d_d_ml_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -57,9 +60,6 @@ d_d_ml_2_dsb = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(75),
@@ -78,7 +78,13 @@ d_d_ml_2_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -96,9 +102,6 @@ d_d_mq_1_dsb = Train(
         cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(100),
@@ -117,7 +120,13 @@ d_d_mq_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -135,9 +144,6 @@ d_d_mp_1_dsb = Train(
         cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -156,7 +162,13 @@ d_d_mp_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers & light freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['light_freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -174,9 +186,6 @@ d_d_mo_ii_1_dsb = Train(
         cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -195,7 +204,13 @@ d_d_mo_ii_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers & light freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['light_freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -213,9 +228,6 @@ d_d_mo_iv_1_dsb = Train(
         cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -234,7 +246,13 @@ d_d_mo_iv_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers & light freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['light_freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -252,9 +270,6 @@ d_d_mo_v_1_dsb = Train(
         cc2_replace=colours["MAROON"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -273,6 +288,12 @@ d_d_mo_v_1_dsb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers & light freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['light_freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )

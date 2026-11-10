@@ -2,13 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_ma_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(160),
@@ -26,6 +24,13 @@ COMMON_ma_PROPS = dict(
 d_d_ma_1_dsb = Train(
     id='d_d_ma_1_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 1)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -34,13 +39,12 @@ d_d_ma_1_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1963, 1, 1),
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BR-BS',
     }),
 ).add_articulated_part(
@@ -87,6 +91,13 @@ d_d_ma_1_dsb = Train(
 d_d_ma_2_dsb = Train(
     id='d_d_ma_2_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 1)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -95,13 +106,12 @@ d_d_ma_2_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1972, 1, 1),
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BR-BS',
     }),
 ).add_articulated_part(
@@ -148,6 +158,13 @@ d_d_ma_2_dsb = Train(
 d_d_ma_3_dsb = Train(
     id='d_d_ma_3_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 1)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -156,13 +173,12 @@ d_d_ma_3_dsb = Train(
         cc_replace=colours['GREY4'],
         cc2_replace=colours['GREY4'],
     ),
-    country='denmark',
     introduction_date=date(1983, 1, 1),
     weight=132,
     cargo_capacity=31,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BMK-BS',
     }),
 ).add_articulated_part(
@@ -209,6 +225,13 @@ d_d_ma_3_dsb = Train(
 d_d_ma_4_dsb = Train(
     id='d_d_ma_4_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 2)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -217,13 +240,12 @@ d_d_ma_4_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1963, 1, 1),
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BM-BS',
     }),
 ).add_articulated_part(
@@ -270,6 +292,13 @@ d_d_ma_4_dsb = Train(
 d_d_ma_5_dsb = Train(
     id='d_d_ma_5_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 2)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -278,13 +307,12 @@ d_d_ma_5_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1972, 1, 1),
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BM-BS',
     }),
 ).add_articulated_part(
@@ -331,6 +359,13 @@ d_d_ma_5_dsb = Train(
 d_d_ma_6_dsb = Train(
     id='d_d_ma_6_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 2)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -339,13 +374,12 @@ d_d_ma_6_dsb = Train(
         cc_replace=colours['GREY4'],
         cc2_replace=colours['GREY4'],
     ),
-    country='denmark',
     introduction_date=date(1983, 1, 1),
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'MA-AM-BM-BS',
     }),
 ).add_articulated_part(
@@ -392,6 +426,13 @@ d_d_ma_6_dsb = Train(
 d_d_ma_7_dsb = Train(
     id='d_d_ma_7_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 1 reversed)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -400,13 +441,12 @@ d_d_ma_7_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1963, 1, 1),
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'BS-BR-AM-MA',
     }),
 ).add_articulated_part(
@@ -453,6 +493,13 @@ d_d_ma_7_dsb = Train(
 d_d_ma_8_dsb = Train(
     id='d_d_ma_8_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 1 reversed)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -461,13 +508,12 @@ d_d_ma_8_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1972, 1, 1),
     weight=132,
     cargo_capacity=26,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'BS-BR-AM-MA',
     }),
 ).add_articulated_part(
@@ -514,6 +560,13 @@ d_d_ma_8_dsb = Train(
 d_d_ma_9_dsb = Train(
     id='d_d_ma_9_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 1 reversed)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -522,13 +575,12 @@ d_d_ma_9_dsb = Train(
         cc_replace=colours['GREY4'],
         cc2_replace=colours['GREY4'],
     ),
-    country='denmark',
     introduction_date=date(1983, 1, 1),
     weight=132,
     cargo_capacity=31,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'BS-BMK-AM-MA',
     }),
 ).add_articulated_part(
@@ -575,6 +627,13 @@ d_d_ma_9_dsb = Train(
 d_d_ma_10_dsb = Train(
     id='d_d_ma_10_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 2 reversed)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -583,13 +642,12 @@ d_d_ma_10_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1963, 1, 1),
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'BS-BM-AM-MA',
     }),
 ).add_articulated_part(
@@ -636,6 +694,13 @@ d_d_ma_10_dsb = Train(
 d_d_ma_11_dsb = Train(
     id='d_d_ma_11_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 2 reversed)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -644,13 +709,12 @@ d_d_ma_11_dsb = Train(
         cc_replace=colours['RED'],
         cc2_replace=colours['GREY1'],
     ),
-    country='denmark',
     introduction_date=date(1972, 1, 1),
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'BS-BM-AM-MA',
     }),
 ).add_articulated_part(
@@ -697,6 +761,13 @@ d_d_ma_11_dsb = Train(
 d_d_ma_12_dsb = Train(
     id='d_d_ma_12_dsb',
     **COMMON_ma_PROPS,
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
+    }),
     name='њDSB MA (Part 2 reversed)',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -705,13 +776,12 @@ d_d_ma_12_dsb = Train(
         cc_replace=colours['GREY4'],
         cc2_replace=colours['GREY4'],
     ),
-    country='denmark',
     introduction_date=date(1983, 1, 1),
     weight=134,
     cargo_capacity=34,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, typically both parts are coupled together into a train set',
+        'Info': 'Typically both parts are coupled together into a train set',
         'Formation': 'BS-BM-AM-MA',
     }),
 ).add_articulated_part(
