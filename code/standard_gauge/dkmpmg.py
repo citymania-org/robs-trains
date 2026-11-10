@@ -2,13 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_mp_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(200),
@@ -35,13 +33,19 @@ d_d_mp2_1_dsb = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["NAVY"]
     ),
-    country='denmark',
     introduction_date=date(2011, 1, 1),
     cargo_capacity=57,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
+        'Info': 'Up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2004, all retired by 2016',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mp22_1_dsb',
@@ -69,13 +73,19 @@ d_d_mp2_2_dsb = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["NAVY"]
     ),
-    country='denmark',
     introduction_date=date(2012, 1, 1),
     cargo_capacity=57,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
+        'Info': 'Up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2004, all retired by 2016',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mp22_2_dsb',
@@ -95,8 +105,6 @@ d_d_mp2_2_dsb = Train(
 COMMON_mg_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(200),
@@ -123,13 +131,19 @@ d_d_mg_1_dsb = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["NAVY"]
     ),
-    country='denmark',
     introduction_date=date(2007, 1, 1),
     cargo_capacity=51,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
+        'Info': 'Up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2003',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mg2_1_dsb',
@@ -183,13 +197,19 @@ d_d_mg_2_dsb = Train(
         cc_replace=colours["GREY7"],
         cc2_replace=colours["NAVY"]
     ),
-    country='denmark',
     introduction_date=date(2012, 1, 1),
     cargo_capacity=51,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Intercity passengers, up to 4 IC2 or IC4 can be coupled together into a train set',
+        'Info': 'Up to 4 IC2 or IC4 can be coupled together into a train set',
         'Trivia': 'Meant to be delivered from 2003',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_mg2_2_dsb',

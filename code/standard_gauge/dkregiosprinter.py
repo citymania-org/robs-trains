@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 dk_d_lm21_1 = Train(
     id='dk_d_lm21_1',
@@ -17,9 +17,6 @@ dk_d_lm21_1 = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='dk_d_lm212_1',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -37,8 +34,14 @@ dk_d_lm21_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers',
         'Trivia': 'Used on Nærumbanen',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/lnj'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lm212_1',
@@ -81,9 +84,6 @@ dk_d_lm21_2 = Train(
     ),
     misc_flags=Train.Flags.USE_2CC,
     purchase_sprite_towed_id='dk_d_lm212_2',
-    country='denmark',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(120),
@@ -101,8 +101,14 @@ dk_d_lm21_2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '30',
-        'Use': 'Short distance local passengers',
         'Trivia': 'Used on Nærumbanen',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['suburban_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/lb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='dk_d_lm212_2',

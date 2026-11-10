@@ -2,13 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_ic2_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(140),
@@ -35,14 +33,18 @@ d_d_ic2_1_dsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"]
     ),
-    country='denmark',
     introduction_date=date(1997, 1, 1),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
-        'Operators': 'GDS, LJ, OHJ, VL, RTOG',
         'Trivia': 'All thirteen locomotives obtained by RTOG in 2009',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/gds', 'DK/lj', 'DK/ohj', 'DK/vl', 'DK/rtog'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_ic22_1_dsb',
@@ -70,14 +72,18 @@ d_d_ic2_2_dsb = Train( # AC units on roof
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"]
     ),
-    country='denmark',
     introduction_date=date(2013, 1, 1),
     cargo_capacity=62,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': 'Passengers',
-        'Operators': 'RTOG, LT',
         'Trivia': 'All thirteen locomotives obtained by LT in 2015',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['DK/rtog', 'DK/lt'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='d_d_ic22_2_dsb',
