@@ -6,7 +6,6 @@ from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badg
 
 COMMON_compl_PROPS = dict(
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -35,13 +34,17 @@ dk_p_compl_1 = Train(
     length=7,
     cargo_capacity=38,
     weight=27,
-    country='denmark',
-    company='na',
     introduction_date=date(1892, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': '1st & 2nd class',
         'Trivia': 'Later classed as DSB AA I',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/sjs', 'DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -59,12 +62,16 @@ dk_p_compl_2 = Train(
     length=7,
     cargo_capacity=38,
     weight=25,
-    country='denmark',
-    company='na',
     introduction_date=date(1894, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -82,13 +89,17 @@ dk_p_compl_3 = Train(
     length=8,
     cargo_capacity=80,
     weight=21,
-    country='denmark',
-    company='na',
     introduction_date=date(1891, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': '1st, 2nd & 3rd class',
         'Trivia': 'Later classed as DSB BA',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/jfj', 'DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -106,12 +117,16 @@ dk_p_compl_4 = Train(
     length=7,
     cargo_capacity=56,
     weight=25,
-    country='denmark',
-    company='na',
     introduction_date=date(1897, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': '2nd & 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
 
@@ -129,11 +144,15 @@ dk_p_compl_5 = Train(
     length=8,
     cargo_capacity=86,
     weight=25,
-    country='denmark',
-    company='na',
     introduction_date=date(1894, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 )
