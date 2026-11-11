@@ -322,7 +322,7 @@ COUNTRIES = {
     'CZ': ('Czechia', purchase_icon('fcz.png')),
     'DE': ('Germany', purchase_icon('fde.png')),
     'DK': ('Denmark', purchase_icon('fdk.png')),
-    'doggerland': ('Doggerland', purchase_icon('fdl.png')),
+    'DL': ('Doggerland', purchase_icon('fdl.png')),
     'FR': ('France', purchase_icon('ffr.png')),
     'HR': ('Croatia', purchase_icon('fhr.png')),
     'HU': ('Hungary', purchase_icon('fhu.png')),

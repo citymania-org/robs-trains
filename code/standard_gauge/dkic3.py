@@ -607,7 +607,7 @@ dl_d_mf_1 = Train(
         'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
     badges=badges.set_train_badges({
-        'flag': ['doggerland'],
+        'flag': ['DL'],
         'role': ['regional_passenger', 'express_passenger'],
         'power': ['diesel'],
         'operator': ['DL/dlj'],
@@ -678,7 +678,7 @@ dl_d_mf_2 = Train(
         'Info': 'Up to 5 IC3 or IR4 can be coupled together into a train set',
     }),
     badges=badges.set_train_badges({
-        'flag': ['doggerland'],
+        'flag': ['DL'],
         'role': ['regional_passenger', 'express_passenger'],
         'power': ['diesel'],
         'operator': ['DL/dlj'],
