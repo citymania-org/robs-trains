@@ -311,10 +311,8 @@ def purchase_icons(sprites):
         i += 1
         
     return action1, action2s
-    
 
 purchase_icon = lambda fname: grf.FileSprite(grf.ImageFile(os.path.join(PURCHASE_ICONS_DIR, fname)), 0, 0, None, None)
-
 
 COUNTRIES = {
     'AT': ('Austria', purchase_icon('fat.png')),
@@ -338,12 +336,11 @@ COUNTRIES = {
     'SI ': ('Slovenia', purchase_icon('fsi.png')),
     'SK ': ('Slovakia', purchase_icon('fsk.png')),
     'soviet_union': ('Soviet Union', purchase_icon('fsu.png')),
-    'yugoslavia': ('Yogoslavia', purchase_icon('fyu.png')),
+    'yugoslavia': ('Yugoslavia', purchase_icon('fyu.png')),
     'europe': ('Europe', purchase_icon('fyu.png')),
 }
 
 badges.set_badges_info('flag', 'Country', COUNTRIES)
-
 
 COMPANY_SPRITES = {
     'cmetro': purchase_icon('lcmetro.png'),
@@ -385,7 +382,6 @@ OPERATORS = {
 }
 
 badges.set_badges_info('operator', 'Operator', OPERATORS)
-
 
 POWER_TYPES = {
     'steam': ('Steam', purchase_icon('psteam.png')),
@@ -822,6 +818,5 @@ badges.set_badge_info('operator/SE/mtab', 'Malmtrafik AB', None, None)
 badges.find_missing()
 
 g.add(badges)
-
 
 grf.main(g, 'The_International_Train_Set.grf')
