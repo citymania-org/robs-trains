@@ -132,7 +132,7 @@ fr_e_bb26000_5 = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
-        'power': ['electric/dc/1500v', 'electric/ac/25kv'],
+        'power': ['electric/acdc/1500v_25kv', 'electric/dc/1500v', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': [],
     }),
