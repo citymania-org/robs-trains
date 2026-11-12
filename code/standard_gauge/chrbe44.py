@@ -41,7 +41,7 @@ ch_e_rbe44_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['passengers'],
+        'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -66,7 +66,7 @@ ch_e_rbe44_2 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['passengers'],
+        'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -91,7 +91,7 @@ ch_e_rbe44_3 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['passengers'],
+        'role': ['regional_passenger'],
         'power': ['electric/ac/15kv'],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -136,7 +136,7 @@ ch_e_rabde1212_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['suburban'],
+        'role': ['suburban_passenger', 'regional_passenger'],
         'power': ['electric/ac/15kv'],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -188,7 +188,7 @@ ch_e_rabde1212_2 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['suburban'],
+        'role': ['suburban_passenger', 'regional_passenger'],
         'power': ['electric/ac/15kv'],
         'operator': ['CH/sbb'],
         'manufacturer': []

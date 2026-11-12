@@ -166,6 +166,7 @@ from code.standard_gauge.dkalbl import d_p_al_1_dsb, d_p_al_2_dsb, d_p_al_3_dsb,
 from code.standard_gauge.dkuicy import d_p_a_1_dsb, d_p_a_2_dsb, d_p_a_3_dsb, d_p_ab_1_dsb, d_p_ab_2_dsb, d_p_ab_3_dsb, d_p_b_1_dsb, d_p_b_i_1_dsb, d_p_bk_i_1_dsb, d_p_bk_i_2_dsb, d_p_bd_1_dsb, d_p_bd_2_dsb, d_p_an_1_dsb, d_p_an_2_dsb, d_p_an_3_dsb, d_p_bn_1_dsb, d_p_bn_2_dsb, d_p_bn_3_dsb, d_p_bn_4_dsb, d_p_bn_5_dsb, d_p_bn_6_dsb, fr_p_a_1_sncf, fr_p_a_2_sncf, fr_p_a_3_sncf, fr_p_ab_1_sncf, fr_p_ab_2_sncf, fr_p_ab_3_sncf, fr_p_b_1_sncf, fr_p_b_2_sncf, fr_p_b_3_sncf, fr_p_ad_1_sncf, fr_p_ad_2_sncf, fr_p_ad_3_sncf, fr_p_bd_1_sncf, fr_p_bd_2_sncf, d_p_bns_1_dsb, d_p_bns_2_dsb, d_p_bns_3_dsb, d_p_bns_4_dsb, d_p_bns_5_dsb, d_p_bns_6_dsb, d_p_bd_3_dsb
 from code.standard_gauge.dkic5 import dk_p_ic5a_1, dk_p_ic5a_2, dk_p_ic5a_3, dk_p_ic5a_4, dk_p_ic5a_5, dk_p_ic5a_6, dk_p_ic5b_1, dk_p_ic5b_2, d_p_ic5_1_dsb, d_p_ic5_2_dsb
 from code.standard_gauge.dkbii import d_p_b_ii_1_dsb, d_p_b_ii_2_dsb, d_p_b_ii_3_dsb, d_p_b_ii_4_dsb, d_p_bk_iii_1_dsb, d_p_bk_iii_2_dsb, d_p_bk_iii_3_dsb, d_p_bk_iii_4_dsb, d_p_abs_1_dsb, d_p_abs_2_dsb, d_p_abs_3_dsb, d_p_abs_4_dsb
+from code.standard_gauge.chewi import ch_p_ewi_1, ch_p_ewi_2, ch_p_ewi_3, ch_p_ewi_4, ch_p_ewi_5, ch_p_ewi_6, ch_p_ewi_7, ch_p_ewi_8, ch_p_ewi_9, ch_p_ewi_10, ch_p_ewi_11, ch_p_ewi_26, ch_p_ewi_27, ch_p_ewi_28, ch_p_ewi_29, ch_p_ewi_30, ch_p_ewi_31, ch_p_ewi_22, ch_p_ewi_23, ch_p_ewi_24, ch_p_ewi_25, ch_p_ewi_12, ch_p_ewi_13, ch_p_ewi_14, ch_p_ewi_15, ch_p_ewi_16, ch_p_ewi_17, ch_p_ewi_18, ch_p_ewi_19, ch_p_ewi_20, ch_p_ewi_21
 from code.standard_gauge.chewiv import ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_24, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_25, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9
 from code.standard_gauge.chec import ch_p_ec_1, ch_p_ec_2, ch_p_ec_3, ch_p_ec_4, ch_p_ec_5, ch_p_ec_6, ch_p_ec_7, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10, ch_p_ec_11, ch_p_ec_12
 from code.standard_gauge.denwagen import de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12
@@ -223,6 +224,7 @@ from code.standard_gauge.nocmb14a import no_d_cmb14a_1
 from code.standard_gauge.notype49å import no_s_49_1
 from code.standard_gauge.sessnj import se_e_xf_1
 from code.standard_gauge.sec20 import se_e_C20_1, se_e_C20u_1
+from code.standard_gauge.chrbe44 import ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3, ch_e_rabde1212_1, ch_e_rabde1212_2
 
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
@@ -456,7 +458,11 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Re 6/6', ch_e_re66_1, ch_e_re66_2, ch_e_re66_3),
     grf.VariantGroup('Re 4/4 IV', ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5),
     grf.VariantGroup('"Lok 2000"', ch_e_re460_1, ch_e_re460_4, ch_e_re460_5, ch_e_re460_2, ch_e_re460_3),
+    # ch emu 15
+    grf.VariantGroup('"Schüttelbecher"', ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3),
+    grf.VariantGroup('"Mirage"', ch_e_rabde1212_1, ch_e_rabde1212_2),
     # ch carriages
+    grf.VariantGroup('Ew I/II', ch_p_ewi_1, ch_p_ewi_2, ch_p_ewi_3, ch_p_ewi_4, ch_p_ewi_5, ch_p_ewi_6, ch_p_ewi_7, ch_p_ewi_8, ch_p_ewi_9, ch_p_ewi_10, ch_p_ewi_11, ch_p_ewi_26, ch_p_ewi_27, ch_p_ewi_28, ch_p_ewi_29, ch_p_ewi_30, ch_p_ewi_31, ch_p_ewi_22, ch_p_ewi_23, ch_p_ewi_24, ch_p_ewi_25, ch_p_ewi_12, ch_p_ewi_13, ch_p_ewi_14, ch_p_ewi_15, ch_p_ewi_16, ch_p_ewi_17, ch_p_ewi_18, ch_p_ewi_19, ch_p_ewi_20, ch_p_ewi_21),
     grf.VariantGroup('Ew IV', ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_24, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_25, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9),
     grf.VariantGroup('EuroCity stock', ch_p_ec_1, ch_p_ec_3, ch_p_ec_2, ch_p_ec_11, ch_p_ec_4, ch_p_ec_5, ch_p_ec_7, ch_p_ec_6, ch_p_ec_12, ch_p_ec_8, ch_p_ec_9, ch_p_ec_10),
     # de

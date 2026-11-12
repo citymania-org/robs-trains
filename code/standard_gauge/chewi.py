@@ -654,14 +654,6 @@ COMMON_ews_PROPS = dict(
     loading_speed=10,
     extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    mid_stats={
-        'cargo_capacity': 1,
-        'refittable_cargo_classes': grf.CargoClass.MAIL,
-        'callbacks': {
-            'cargo_subtype_text': Train.Flip.switch_subtype(g),
-            'cargo_capacity': 0,
-        },
-    },
 )
 
 ch_p_ewi_12 = Train(
