@@ -297,6 +297,180 @@ ch_p_ewi_11 = Train(
     }),
 )
 
+COMMON_ewr_PROPS = dict(
+    length=11,
+    misc_flags=Train.Flags.USE_2CC,
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    power=0,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    max_speed=Train.kmhish(140),
+    weight=39,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+ch_p_ewi_26 = Train(
+    **COMMON_ewr_PROPS,
+    id='ch_p_ewi_26',
+    name='SBB WR',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    introduction_date=date(1956, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_27 = Train(
+    **COMMON_ewr_PROPS,
+    id='ch_p_ewi_27',
+    name='SBB WR',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["RED"]
+    ),
+    introduction_date=date(1975, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_28 = Train(
+    **COMMON_ewr_PROPS,
+    id='ch_p_ewi_28',
+    name='SBB WR', #cheese1
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    introduction_date=date(1989, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_29 = Train(
+    **COMMON_ewr_PROPS,
+    id='ch_p_ewi_29',
+    name='SBB WR',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["DPURPLE"],
+        cc2_replace=colours["MAGENTA"]
+    ),
+    introduction_date=date(1991, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_30 = Train(
+    **COMMON_ewr_PROPS,
+    id='ch_p_ewi_30',
+    name='SBB WR',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["DPURPLE"],
+        cc2_replace=colours["GREY1"]
+    ),
+    introduction_date=date(1996, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_31 = Train(
+    **COMMON_ewr_PROPS,
+    id='ch_p_ewi_31',
+    name='SBB WR', #cheese2
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    introduction_date=date(1996, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
 COMMON_ewp_PROPS = dict(
     length=9,
     misc_flags=Train.Flags.USE_2CC,
