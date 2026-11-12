@@ -297,6 +297,172 @@ ch_p_ewi_11 = Train(
     }),
 )
 
+COMMON_ewp_PROPS = dict(
+    length=9,
+    misc_flags=Train.Flags.USE_2CC,
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    power=0,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    max_speed=Train.kmhish(140),
+    weight=24,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=10,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+ch_p_ewi_22 = Train(
+    **COMMON_ewp_PROPS,
+    id='ch_p_ewi_22',
+    name='SBB D',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    introduction_date=date(1965, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    mid_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_23 = Train(
+    **COMMON_ewp_PROPS,
+    id='ch_p_ewi_23',
+    name='SBB D',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    introduction_date=date(1981, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    mid_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_24 = Train(
+    **COMMON_ewp_PROPS,
+    id='ch_p_ewi_24',
+    name='SBB D',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["SBB"],
+        cc2_replace=colours["SBB"]
+    ),
+    introduction_date=date(1981, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    mid_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
+ch_p_ewi_25 = Train(
+    **COMMON_ewp_PROPS,
+    id='ch_p_ewi_25',
+    name='SBB D',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('9a',),
+        paint=('9b',),
+        cc_replace=colours["BLUE"],
+        cc2_replace=colours["TURQUOISE"]
+    ),
+    introduction_date=date(1996, 1, 1),
+    cargo_capacity=1,
+    callbacks={'properties': {'cargo_capacity': 0},},
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '10',
+    }),
+    mid_stats={
+        'cargo_capacity': 4,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'power': [],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+)
+
 COMMON_ews_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
@@ -397,7 +563,7 @@ ch_p_ewi_14 = Train(
         'Loading speed': '10',
     }),
     mid_stats={
-        'cargo_capacity': 8,
+        'cargo_capacity': 4,
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
@@ -436,7 +602,7 @@ ch_p_ewi_15 = Train(
         'Loading speed': '10',
     }),
     mid_stats={
-        'cargo_capacity': 8,
+        'cargo_capacity': 4,
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
@@ -551,7 +717,7 @@ ch_p_ewi_18 = Train(
         'Loading speed': '10',
     }),
     mid_stats={
-        'cargo_capacity': 8,
+        'cargo_capacity': 4,
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
@@ -590,7 +756,7 @@ ch_p_ewi_19 = Train(
         'Loading speed': '10',
     }),
     mid_stats={
-        'cargo_capacity': 8,
+        'cargo_capacity': 4,
         'refittable_cargo_classes': (grf.CargoClass.MAIL),
         'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
