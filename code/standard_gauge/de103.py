@@ -85,7 +85,7 @@ de_e_103_3 = Train(
     ),
     power=10578,
     weight=114,
-    introduction_date=date(1987, 1, 1),
+    introduction_date=date(1986, 1, 1),
     additional_text=grf.fake_vehicle_info({
     }),
     badges=badges.set_train_badges({
@@ -160,7 +160,7 @@ de_e_103_6 = Train(
     ),
     power=10578,
     weight=114,
-    introduction_date=date(2000, 1, 1),
+    introduction_date=date(1997, 1, 1),
     additional_text=grf.fake_vehicle_info({
     }),
     badges=badges.set_train_badges({
