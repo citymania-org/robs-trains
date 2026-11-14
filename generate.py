@@ -8,87 +8,6 @@ import lib, badge
 
 from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours, badges
 
-PURCHASE_ICONS_DIR = 'purchase list'
-DEBUG_DIR = 'debug'
-
-os.makedirs(DEBUG_DIR, exist_ok=True)
-
-g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
-
-s_s_N_ii_1_sj = Train(
-    id='s_s_N_ii_1_sj',
-    name='њSJ N II',
-    length=5,
-    liveries={
-        'Default': Livery('1900_SE_N_II_1.png', cc_replace=colours["GREY10"], cc2_replace=colours["GREY10"]),
-        '2CC': Livery('1900_SE_N_II_1.png', auto_cc=lib.CC_DEFAULT),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    engine_class=Train.EngineClass.STEAM,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(45),
-    power=560,
-    introduction_date=date(1900, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=55,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-    }),
-    badges=badges.set_train_badges({
-        'flag': ['SE'],
-        'role': ['shunting'],
-        'power': [],
-        'operator': ['SE/sj'],
-        'manufacturer': [],
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},},
-)
-
-s_s_Sa_sj = Train(
-    id='s_s_Sa_sj',
-    name='њSJ S',
-    length=6,
-    liveries=make_psd_cc_liveries(
-        'pp/1908_SE_Sa.psd',
-        shading='Sa',
-        paint='SJ',
-        overlay=('Lights'),
-        cc_replace=colours["GREY10"],
-        cc2_replace=colours["GREY10"]
-    ),
-    misc_flags=Train.Flags.USE_2CC,
-    engine_class=Train.EngineClass.STEAM,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(80),
-    power=785,
-    introduction_date=date(1908, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=60,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-    }),
-    badges=badges.set_train_badges({
-        'flag': ['SE'],
-        'role': ['express_passenger', 'regional_passenger', 'freight'],
-        'power': [],
-        'operator': ['SE/sj'],
-        'manufacturer': [],
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},},
-)
-
 from code.standard_gauge.dkmtmvmwmy import dk_d_myf_1, dk_d_mt27_1, dk_d_mv29_1, dk_d_mv29_2, dk_d_mw29_1
 from code.standard_gauge.dkmxe import d_d_mx_i_1_dsb
 from code.standard_gauge.dkmbrød import dk_d_mbrød_467_1, dk_d_mbrød_467_2, dk_d_mbrød_467_3, dk_d_mbrød_468_1, dk_d_mbrød_469_1, dk_d_mbrød_469_2, dk_d_mbrød_471_1, dk_d_mbrød_471_2, dk_d_mbrød_471_3, dk_d_mbrød_472_2, dk_d_mbrød_472_3, dk_d_mbrød_472_4, dk_d_mbrød_473_1, dk_d_mbrød_473_2, dk_d_mbrød_474_1, dk_d_mbrød_474_2, dk_d_mbrød_474_3, dk_d_mbrød_475_1, dk_d_mbrød_475_2, dk_d_mbrød_475_3, dk_d_mbrød_475_4
@@ -226,6 +145,80 @@ from code.standard_gauge.sessnj import se_e_xf_1
 from code.standard_gauge.sec20 import se_e_C20_1, se_e_C20u_1
 from code.standard_gauge.chrbe44 import ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3, ch_e_rabde1212_1, ch_e_rabde1212_2
 
+s_s_N_ii_1_sj = Train(
+    id='s_s_N_ii_1_sj',
+    name='њSJ N II',
+    length=5,
+    liveries={
+        'Default': Livery('1900_SE_N_II_1.png', cc_replace=colours["GREY10"], cc2_replace=colours["GREY10"]),
+        '2CC': Livery('1900_SE_N_II_1.png', auto_cc=lib.CC_DEFAULT),
+    },
+    misc_flags=Train.Flags.USE_2CC,
+    engine_class=Train.EngineClass.STEAM,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(45),
+    power=560,
+    introduction_date=date(1900, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=55,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['shunting'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
+s_s_Sa_sj = Train(
+    id='s_s_Sa_sj',
+    name='њSJ S',
+    length=6,
+    liveries=make_psd_cc_liveries(
+        'pp/1908_SE_Sa.psd',
+        shading='Sa',
+        paint='SJ',
+        overlay=('Lights'),
+        cc_replace=colours["GREY10"],
+        cc2_replace=colours["GREY10"]
+    ),
+    misc_flags=Train.Flags.USE_2CC,
+    engine_class=Train.EngineClass.STEAM,
+    track_type=standard_gauge,
+    max_speed=Train.kmhish(80),
+    power=785,
+    introduction_date=date(1908, 1, 1),
+    vehicle_life=30,
+    model_life=144,
+    climates_available=grf.ALL_CLIMATES,
+    weight=60,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=1,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    additional_text=grf.fake_vehicle_info({
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'power': [],
+        'operator': ['SE/sj'],
+        'manufacturer': [],
+    }),
+    callbacks={'properties': {'cargo_capacity': 0},},
+)
+
 s_w_Gblssy_2_gc = Train(
     id='s_w_Gblssy_2_gc',
     name='љњGC Gblss-y',
@@ -302,6 +295,13 @@ s_w_Hbis_sj = Train(
         'cargo_capacity': Train.sw_capacity_calculaiton(25, g)
     }
 )
+
+PURCHASE_ICONS_DIR = 'purchase list'
+DEBUG_DIR = 'debug'
+
+os.makedirs(DEBUG_DIR, exist_ok=True)
+
+g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
 
 def purchase_icons(sprites):
     action1 = [grf.Action1(badge.BADGES, len(sprites), 1)]
@@ -404,6 +404,71 @@ POWER_TYPES = {
     'metro': ('Metro', purchase_icon('pelectric3.png')),
     'battery': ('battery', None),
 }
+
+badges.set_badge_info('role', 'Use', None, None)
+badges.set_badge_info('manufacturer', 'Builder', None, None)
+
+badges.set_badge_info('manufacturer/SE/asea', 'Allmäna Svenska Elektriska AB', None, None)
+
+# Freight
+#badges.set_badge_info('role/heavy_freight', 'Heavy freight', None, None) # may be used in conjunction with role/freight if provided by other set
+badges.set_badge_info('role/freight', 'Freight', None, None)
+badges.set_badge_info('role/light_freight', 'Light freight', None, None) # not to be used but we don't want two light freight if it is defines by some other set
+badges.set_badge_info('role/shunting', 'Shunting', None, None)
+
+# Passengers
+                      #role/international                                # international used in dutch may be used in conjunction with role/express_passenger if provided by other set
+badges.set_badge_info('role/express_passenger', 'Intercity', None, None) # establised badge dutch set uses this
+badges.set_badge_info('role/regional_passenger', 'Regional', None, None) # 2CC in NML 
+badges.set_badge_info('role/suburban_passenger', 'Suburban', None, None) # completely new :(
+badges.set_badge_info('role/metro', 'Metro', None, None) # establised
+
+# Banverket etc
+badges.set_badge_info('role/utility', 'Works unit', None, None)
+
+#badges.set_badge_info('role/1st_class', '1st class', None, None)
+#badges.set_badge_info('role/2nd_class', '2nd class', None, None)
+#badges.set_badge_info('role/3rd_class', '3rd class', None, None)
+
+badges.set_badge_info('role/luggage', 'Luggage', None, None)
+badges.set_badge_info('role/restaurant_car', 'Resturant', None, None)
+badges.set_badge_info('role/driving_cab', 'Driving trailer', None, None)
+badges.set_badge_info('role/bike', 'Bike space', None, None)
+
+# probably shouldn't be badges
+#badges.set_badge_info('role/charter', 'Charter services', None, None)
+#badges.set_badge_info('role/CH/cisalpino', 'for the Cisalpino service', None, None)
+
+sprites, operator_sets = purchase_icons(COMPANY_SPRITES)
+
+badges.set_badge_info('operator/DK/dsb/stog', None, sprites, operator_sets['stog'])
+
+badges.set_badge_info('operator/NO/nsb', 'Norske Statsbaner', None, None)
+
+sw = grf.Switch('intro_date', ranges=[
+        grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['sj_70s'])
+    ], default=operator_sets['sj_90s'])
+
+badges.set_badge_info('operator/SE/sj', 'Statens Järnvägar', None, sw)
+
+sw = grf.Switch('intro_date', ranges=[
+        grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['tgojold'])
+    ], default=operator_sets['tgojnew'])
+
+badges.set_badge_info('operator/SE/tgoj', 'Trafikaktiebolaget Grängesberg–Oxelösuns Järnvägar', None, sw)
+badges.set_badge_info('operator/SE/bj', 'Bergslagernas Järnvägar', None, None)
+badges.set_badge_info('operator/SE/sj_ab', 'SJ AB', None, operator_sets['sj_90s'])
+badges.set_badge_info('operator/SE/gc', 'Green Cargo', None, operator_sets['gc'])
+badges.set_badge_info('operator/SE/taagab', 'Tågåkeriet i bergslagen', None, operator_sets['taagab'])
+badges.set_badge_info('operator/SE/sl', 'Storstockholms lokaltrafik', None, operator_sets['sl'])
+badges.set_badge_info('operator/SE/ss', 'Stockholms spårvägar', None, operator_sets['ss'])
+badges.set_badge_info('operator/SE/oeresundstaag', 'Öresundståg', None, operator_sets['øresundståg'])
+badges.set_badge_info('operator/SE/oetraf', 'Östgötatrafiken', None, operator_sets['oetraf'])
+badges.set_badge_info('operator/SE/mtab', 'Malmtrafik AB', None, None)
+
+badges.find_missing()
+
+g.add(badges)
 
 badges.set_badges_info('power', 'Propulsion', POWER_TYPES)
 
@@ -759,70 +824,5 @@ lib.make_purchase_sprites(
     # se ng mail wagons
     # se ng wagons
 ).set_variant_callbacks(g)))
-
-badges.set_badge_info('role', 'Use', None, None)
-badges.set_badge_info('manufacturer', 'Builder', None, None)
-
-badges.set_badge_info('manufacturer/SE/asea', 'Allmäna Svenska Elektriska AB', None, None)
-
-# Freight
-#badges.set_badge_info('role/heavy_freight', 'Heavy freight', None, None) # may be used in conjunction with role/freight if provided by other set
-badges.set_badge_info('role/freight', 'Freight', None, None)
-badges.set_badge_info('role/light_freight', 'Light freight', None, None) # not to be used but we don't want two light freight if it is defines by some other set
-badges.set_badge_info('role/shunting', 'Shunting', None, None)
-
-# Passengers
-                      #role/international                                # international used in dutch may be used in conjunction with role/express_passenger if provided by other set
-badges.set_badge_info('role/express_passenger', 'Intercity', None, None) # establised badge dutch set uses this
-badges.set_badge_info('role/regional_passenger', 'Regional', None, None) # 2CC in NML 
-badges.set_badge_info('role/suburban_passenger', 'Suburban', None, None) # completely new :(
-badges.set_badge_info('role/metro', 'Metro', None, None) # establised
-
-# Banverket etc
-badges.set_badge_info('role/utility', 'Works unit', None, None)
-
-#badges.set_badge_info('role/1st_class', '1st class', None, None)
-#badges.set_badge_info('role/2nd_class', '2nd class', None, None)
-#badges.set_badge_info('role/3rd_class', '3rd class', None, None)
-
-badges.set_badge_info('role/luggage', 'Luggage', None, None)
-badges.set_badge_info('role/restaurant_car', 'Resturant', None, None)
-badges.set_badge_info('role/driving_cab', 'Driving trailer', None, None)
-badges.set_badge_info('role/bike', 'Bike space', None, None)
-
-# probably shouldn't be badges
-#badges.set_badge_info('role/charter', 'Charter services', None, None)
-#badges.set_badge_info('role/CH/cisalpino', 'for the Cisalpino service', None, None)
-
-sprites, operator_sets = purchase_icons(COMPANY_SPRITES)
-
-badges.set_badge_info('operator/DK/dsb/stog', None, sprites, operator_sets['stog'])
-
-badges.set_badge_info('operator/NO/nsb', 'Norske Statsbaner', None, None)
-
-sw = grf.Switch('intro_date', ranges=[
-        grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['sj_70s'])
-    ], default=operator_sets['sj_90s'])
-
-badges.set_badge_info('operator/SE/sj', 'Statens Järnvägar', None, sw)
-
-sw = grf.Switch('intro_date', ranges=[
-        grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['tgojold'])
-    ], default=operator_sets['tgojnew'])
-
-badges.set_badge_info('operator/SE/tgoj', 'Trafikaktiebolaget Grängesberg–Oxelösuns Järnvägar', None, sw)
-badges.set_badge_info('operator/SE/bj', 'Bergslagernas Järnvägar', None, None)
-badges.set_badge_info('operator/SE/sj_ab', 'SJ AB', None, operator_sets['sj_90s'])
-badges.set_badge_info('operator/SE/gc', 'Green Cargo', None, operator_sets['gc'])
-badges.set_badge_info('operator/SE/taagab', 'Tågåkeriet i bergslagen', None, operator_sets['taagab'])
-badges.set_badge_info('operator/SE/sl', 'Storstockholms lokaltrafik', None, operator_sets['sl'])
-badges.set_badge_info('operator/SE/ss', 'Stockholms spårvägar', None, operator_sets['ss'])
-badges.set_badge_info('operator/SE/oeresundstaag', 'Öresundståg', None, operator_sets['øresundståg'])
-badges.set_badge_info('operator/SE/oetraf', 'Östgötatrafiken', None, operator_sets['oetraf'])
-badges.set_badge_info('operator/SE/mtab', 'Malmtrafik AB', None, None)
-
-badges.find_missing()
-
-g.add(badges)
 
 grf.main(g, 'The_International_Train_Set.grf')
