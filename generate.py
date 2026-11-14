@@ -8,6 +8,7 @@ import lib, badge
 
 from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours, badges
 
+from code.standard_gauge.de120101 import de_e_120_1, de_e_120_2, de_e_120_3, de_e_101_1, de_e_101_2, de_e_101_3, de_e_101_4, de_e_101_5
 from code.standard_gauge.dkmtmvmwmy import dk_d_myf_1, dk_d_mt27_1, dk_d_mv29_1, dk_d_mv29_2, dk_d_mw29_1
 from code.standard_gauge.dkmxe import d_d_mx_i_1_dsb
 from code.standard_gauge.dkmbrød import dk_d_mbrød_467_1, dk_d_mbrød_467_2, dk_d_mbrød_467_3, dk_d_mbrød_468_1, dk_d_mbrød_469_1, dk_d_mbrød_469_2, dk_d_mbrød_471_1, dk_d_mbrød_471_2, dk_d_mbrød_471_3, dk_d_mbrød_472_2, dk_d_mbrød_472_3, dk_d_mbrød_472_4, dk_d_mbrød_473_1, dk_d_mbrød_473_2, dk_d_mbrød_474_1, dk_d_mbrød_474_2, dk_d_mbrød_474_3, dk_d_mbrød_475_1, dk_d_mbrød_475_2, dk_d_mbrød_475_3, dk_d_mbrød_475_4
@@ -548,7 +549,9 @@ lib.make_purchase_sprites(
     grf.VariantGroup('E 18', de_e_e18_1, de_e_e18_2, de_e_e18_3, de_e_e18_4, de_e_e18_5),
     grf.VariantGroup('E 19', de_e_e19_1, de_e_e19_2, de_e_e19_3),
     grf.VariantGroup('"Deutsches Krokodil"', de_e_dre94_1_dr, de_e_dre94_2_dr, de_e_dre94_3_dr, de_e_dre94_4_dr, de_e_dre94_5_dr),
-    grf.VariantGroup('103', de_e_103_1, de_e_103_2, de_e_103_3, de_e_103_4, de_e_103_5, de_e_103_6, de_e_103_7, de_e_103_8, de_e_103_9),
+    grf.VariantGroup('"Osterei"', de_e_103_1, de_e_103_2, de_e_103_3, de_e_103_4, de_e_103_5, de_e_103_6, de_e_103_7, de_e_103_8, de_e_103_9),
+    grf.VariantGroup('120', de_e_120_1, de_e_120_2, de_e_120_3),
+    grf.VariantGroup('101', de_e_101_1, de_e_101_2, de_e_101_3, de_e_101_4, de_e_101_5),
     # de carriages
     grf.VariantGroup('n-Wagen "Silberlinge"', de_p_nwagen_a1, de_p_nwagen_a2, de_p_nwagen_a3, de_p_nwagen_a4, de_p_nwagen_a5, de_p_nwagen_a6, de_p_nwagen_a7, de_p_nwagen_b1, de_p_nwagen_b2, de_p_nwagen_b3, de_p_nwagen_b4, de_p_nwagen_b5, de_p_nwagen_b6, de_p_nwagen_s1, de_p_nwagen_s2, de_p_nwagen_s3, de_p_nwagen_s4, de_p_nwagen_s5, de_p_nwagen_s6, de_p_nwagen_s7, de_p_nwagen_s8, de_p_nwagen_s9, de_p_nwagen_s10, de_p_nwagen_s11, de_p_nwagen_s12),
     # dk
