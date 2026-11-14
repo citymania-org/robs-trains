@@ -8,6 +8,7 @@ import lib, badge
 
 from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours, badges
 
+from code.standard_gauge.behle131718 import be_e_13_1, be_e_17_1, be_e_18_1
 from code.standard_gauge.de120101 import de_e_120_1, de_e_120_2, de_e_120_3, de_e_101_1, de_e_101_2, de_e_101_3, de_e_101_4, de_e_101_5
 from code.standard_gauge.dkmtmvmwmy import dk_d_myf_1, dk_d_mt27_1, dk_d_mv29_1, dk_d_mv29_2, dk_d_mw29_1
 from code.standard_gauge.dkmxe import d_d_mx_i_1_dsb
@@ -511,6 +512,10 @@ lib.make_purchase_sprites(
     grf.VariantGroup('HLD 202/203', be_d_202_2_nmbs, be_d_202_1_nmbs, be_d_202_3_nmbs, be_d_202_4_nmbs),
     grf.VariantGroup('HLD 204', be_d_202_6_nmbs, be_d_202_5_nmbs, be_d_202_7_nmbs, be_d_202_8_nmbs),
     be_d_205_1,
+    # be electric dc 3000
+    be_e_13_1,
+    be_e_18_1,
+    be_e_17_1,
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
