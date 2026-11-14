@@ -150,7 +150,7 @@ ch_e_re44ii_6 = Train(
         'pp/Template.psd',
         shading=('7a',),
         paint=('7b',),
-        cc_replace=colours["MAROON"],
+        cc_replace=colours["DBRED"],
         cc2_replace=colours["DCREAM"]
     ),
     country='switzerland',
