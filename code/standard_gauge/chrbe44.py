@@ -120,6 +120,7 @@ COMMON_1212_PROPS = dict(
 ch_e_rabde1212_1 = Train(
     **COMMON_1212_PROPS,
     id='ch_e_rabde1212_1',
+    purchase_sprite_towed_id='ch_e_rabde12122_1',
     name='SBB RABDe 12/12',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
@@ -172,6 +173,7 @@ ch_e_rabde1212_1 = Train(
 ch_e_rabde1212_2 = Train(
     **COMMON_1212_PROPS,
     id='ch_e_rabde1212_2',
+    purchase_sprite_towed_id='ch_e_rabde12122_2',
     name='SBB RABDe 12/12',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
