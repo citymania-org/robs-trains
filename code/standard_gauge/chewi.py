@@ -485,8 +485,14 @@ COMMON_ewp_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cost_factor=25,
-    loading_speed=10,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    cargo_capacity=4,
+    refittable_cargo_classes=(grf.CargoClass.MAIL),
+    non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+    loading_speed=20,
+    callbacks={'properties': {
+            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
+    },},
 )
 
 ch_p_ewi_22 = Train(
@@ -501,22 +507,9 @@ ch_p_ewi_22 = Train(
         cc2_replace=colours["SBB"]
     ),
     introduction_date=date(1965, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'luggage'],
@@ -538,22 +531,9 @@ ch_p_ewi_23 = Train(
         cc2_replace=colours["SBB"]
     ),
     introduction_date=date(1981, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'luggage'],
@@ -575,22 +555,9 @@ ch_p_ewi_24 = Train(
         cc2_replace=colours["SBB"]
     ),
     introduction_date=date(1981, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'luggage'],
@@ -612,22 +579,9 @@ ch_p_ewi_25 = Train(
         cc2_replace=colours["TURQUOISE"]
     ),
     introduction_date=date(1996, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'luggage'],
@@ -651,9 +605,7 @@ COMMON_ews_PROPS = dict(
     tractive_effort_coefficient=80,
     running_cost_factor=200,
     cost_factor=25,
-    loading_speed=10,
     extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
 
 ch_p_ewi_12 = Train(
@@ -670,6 +622,8 @@ ch_p_ewi_12 = Train(
     ),
     introduction_date=date(1956, 1, 1),
     cargo_capacity=54,
+    refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
+    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
     }),
@@ -697,6 +651,8 @@ ch_p_ewi_13 = Train(
     ),
     introduction_date=date(1984, 1, 1),
     cargo_capacity=54,
+    refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
+    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
     }),
@@ -723,22 +679,17 @@ ch_p_ewi_14 = Train(
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     introduction_date=date(1956, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
+    cargo_capacity=4,
+    refittable_cargo_classes=(grf.CargoClass.MAIL),
+    non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+    loading_speed=20,
+    callbacks={'properties': {
+            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
+    },},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'driving_cab'],
@@ -762,22 +713,17 @@ ch_p_ewi_15 = Train(
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     introduction_date=date(1984, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
+    cargo_capacity=4,
+    refittable_cargo_classes=(grf.CargoClass.MAIL),
+    non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+    loading_speed=20,
+    callbacks={'properties': {
+            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
+    },},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'driving_cab'],
@@ -802,6 +748,8 @@ ch_p_ewi_16 = Train(
     ),
     introduction_date=date(1965, 1, 1),
     cargo_capacity=48,
+    refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
+    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
     }),
@@ -812,7 +760,7 @@ ch_p_ewi_16 = Train(
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'loading_speed': 20,
         'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(2, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
         },
     },
@@ -840,6 +788,8 @@ ch_p_ewi_17 = Train(
     ),
     introduction_date=date(1984, 1, 1),
     cargo_capacity=48,
+    refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
+    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
     }),
@@ -850,7 +800,7 @@ ch_p_ewi_17 = Train(
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'loading_speed': 20,
         'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(2, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
         },
     },
@@ -877,22 +827,17 @@ ch_p_ewi_18 = Train(
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     introduction_date=date(1965, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
+    cargo_capacity=4,
+    refittable_cargo_classes=(grf.CargoClass.MAIL),
+    non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+    loading_speed=20,
+    callbacks={'properties': {
+            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
+    },},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'driving_cab'],
@@ -916,22 +861,17 @@ ch_p_ewi_19 = Train(
         intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     introduction_date=date(1984, 1, 1),
-    cargo_capacity=1,
-    callbacks={'properties': {'cargo_capacity': 0},},
+    cargo_capacity=4,
+    refittable_cargo_classes=(grf.CargoClass.MAIL),
+    non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+    loading_speed=20,
+    callbacks={'properties': {
+            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
+    },},
     additional_text=grf.fake_vehicle_info({
-        'Loading speed': '10',
+        'Loading speed': '20',
     }),
-    mid_stats={
-        'cargo_capacity': 4,
-        'refittable_cargo_classes': (grf.CargoClass.MAIL),
-        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
-        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
-        'loading_speed': 20,
-        'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
-            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
-        },
-    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['regional_passenger', 'express_passenger', 'driving_cab'],
@@ -956,6 +896,8 @@ ch_p_ewi_20 = Train(
     ),
     introduction_date=date(1984, 1, 1),
     cargo_capacity=48,
+    refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
+    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
     }),
@@ -966,7 +908,7 @@ ch_p_ewi_20 = Train(
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'loading_speed': 20,
         'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(2, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
         },
     },
@@ -994,6 +936,8 @@ ch_p_ewi_21 = Train(
     ),
     introduction_date=date(1984, 1, 1),
     cargo_capacity=48,
+    refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
+    loading_speed=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
     }),
@@ -1004,7 +948,7 @@ ch_p_ewi_21 = Train(
         'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
         'loading_speed': 20,
         'callbacks': {
-            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(2, g),
             'cargo_subtype_text': Train.Luggage.switch_subtype(g),
         },
     },

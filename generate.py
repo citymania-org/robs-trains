@@ -407,6 +407,8 @@ POWER_TYPES = {
     'battery': ('battery', None),
 }
 
+badges.set_badges_info('power', 'Propulsion', POWER_TYPES)
+
 badges.set_badge_info('role', 'Use', None, None)
 badges.set_badge_info('manufacturer', 'Builder', None, None)
 
@@ -471,8 +473,6 @@ badges.set_badge_info('operator/SE/mtab', 'Malmtrafik AB', None, None)
 badges.find_missing()
 
 g.add(badges)
-
-badges.set_badges_info('power', 'Propulsion', POWER_TYPES)
 
 lib.make_purchase_sprites(
     newgrf=g,
