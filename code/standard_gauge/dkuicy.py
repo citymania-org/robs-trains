@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, badges
+from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, badges
 
 COMMON_b_PROPS = dict(
     length=11,
@@ -1101,19 +1101,19 @@ COMMON_bns_PROPS = dict(
     running_cost_factor=200,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
 )
 
 d_p_bns_1_dsb = Train(
     **COMMON_bns_PROPS,
     id='d_p_bns_1_dsb',
     name='њDSB Bns I',
-    liveries=make_psd_cc_liveries_flippable(
+    liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
         paint=('11b',),
         cc_replace=colours["RED"],
-        cc2_replace=colours["RED"],
-        intermediate_graphics_chain=Train.Flip.switch_graphics
+        cc2_replace=colours["RED"]
     ),
     introduction_date=date(1972, 1, 1),
     weight=40,
@@ -1130,14 +1130,6 @@ d_p_bns_1_dsb = Train(
         'manufacturer': [],
         'attribute': ['push_pull'],
     }),
-    mid_stats={
-        'cargo_capacity': 1,
-        'refittable_cargo_classes': grf.CargoClass.MAIL,
-        'callbacks': {
-            'cargo_subtype_text': Train.Flip.switch_subtype(g),
-            'cargo_capacity': 0,
-        },
-    },
 )
 
 d_p_bns_2_dsb = Train(

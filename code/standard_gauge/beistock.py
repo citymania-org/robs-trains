@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, g, badges
+from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, badges
 
 COMMON_i6_PROPS = dict(
     length=12,
@@ -363,13 +363,12 @@ be_p_i11_5 = Train(
     **COMMON_i11s_PROPS,
     id='be_p_i11_5',
     name='NMBS BDx',
-    liveries=make_psd_cc_liveries_flippable(
+    liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('12a',),
         paint=('12b',),
         cc_replace=colours["COBALT"],
         cc2_replace=colours["RED"],
-        intermediate_graphics_chain=Train.Flip.switch_graphics
     ),
     introduction_date=date(1995, 1, 1),
     cargo_capacity=58,

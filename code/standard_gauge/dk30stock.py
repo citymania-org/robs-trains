@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, g, badges
+from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, badges
 
 COMMON_dk30stock_PROPS = dict(
     length=10,
@@ -1042,6 +1042,7 @@ d_p_cl_3_dsb = Train(
     weight=37,
     cargo_capacity=87,
     loading_speed=20,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
     }),
@@ -1073,6 +1074,7 @@ d_p_cl_5_dsb = Train(
     weight=37,
     cargo_capacity=73,
     loading_speed=10,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
         'Info': 'For use with MO railcars',
