@@ -8,6 +8,7 @@ import lib, badge
 
 from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours, badges
 
+from code.standard_gauge.bemstock import be_p_m4_1, be_p_m4_2, be_p_m4_3, be_p_m4_4, be_p_m4_5, be_p_m4_6, be_p_m4_7, be_p_m4_8, be_p_m4_9, be_p_m4_10, be_p_m5_1, be_p_m5_2, be_p_m5_3, be_p_m5_4, be_p_m5_5, be_p_m5_6, be_p_m6_1, be_p_m6_2, be_p_m6_3, be_p_m6_4, be_p_m6_5, be_p_m7_1, be_p_m7_2, be_p_m7_3, be_p_m7_4
 from code.standard_gauge.beistock import be_p_i6_1, be_p_i6_2, be_p_i6_3, be_p_i6_4, be_p_i6_5, be_p_i6_6, be_p_i6_7, be_p_i6_8, be_p_i10_1, be_p_i10_2, be_p_i10_3, be_p_i10_4, be_p_i10_5, be_p_i11_1, be_p_i11_2, be_p_i11_3, be_p_i11_4, be_p_i11_5
 from code.standard_gauge.behle131718 import be_e_13_1, be_e_17_1, be_e_18_1
 from code.standard_gauge.de120101 import de_e_120_1, de_e_120_2, de_e_120_3, de_e_101_1, de_e_101_2, de_e_101_3, de_e_101_4, de_e_101_5
@@ -519,8 +520,12 @@ lib.make_purchase_sprites(
     be_e_17_1,
     # be carriages
     grf.VariantGroup('I6', be_p_i6_1, be_p_i6_2, be_p_i6_3, be_p_i6_4, be_p_i6_5, be_p_i6_6, be_p_i6_7, be_p_i6_8),
+    grf.VariantGroup('M4', be_p_m4_1, be_p_m4_2, be_p_m4_3, be_p_m4_4, be_p_m4_5, be_p_m4_6, be_p_m4_7, be_p_m4_8, be_p_m4_9, be_p_m4_10),
+    grf.VariantGroup('M5', be_p_m5_1, be_p_m5_2, be_p_m5_3, be_p_m5_4, be_p_m5_5, be_p_m5_6),
     grf.VariantGroup('I10', be_p_i10_1, be_p_i10_2, be_p_i10_3, be_p_i10_4, be_p_i10_5),
     grf.VariantGroup('I11', be_p_i11_1, be_p_i11_2, be_p_i11_3, be_p_i11_4, be_p_i11_5),
+    grf.VariantGroup('M6', be_p_m6_1, be_p_m6_2, be_p_m6_3, be_p_m6_4, be_p_m6_5),
+    grf.VariantGroup('M7', be_p_m7_1, be_p_m7_2, be_p_m7_3, be_p_m7_4),
     # bg
     # bg electric 25
     grf.VariantGroup('EA', d_e_ea_4_bulmarket, d_e_ea_5_db),
