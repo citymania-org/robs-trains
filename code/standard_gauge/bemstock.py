@@ -224,7 +224,7 @@ be_p_m2_2 = Train(
 be_p_m2_3 = Train(
     id='be_p_m2_3',
     **COMMON_m2_PROPS,
-    name='NMBS AB,
+    name='NMBS AB',
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('11a',),
