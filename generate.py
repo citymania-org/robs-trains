@@ -147,7 +147,7 @@ from code.standard_gauge.nocmb14a import no_d_cmb14a_1
 from code.standard_gauge.notype49å import no_s_49_1
 from code.standard_gauge.sessnj import se_e_xf_1
 from code.standard_gauge.sec20 import se_e_C20_1, se_e_C20u_1
-from code.standard_gauge.chrbe44 import ch_e_cfe44_1, ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3, ch_e_rabde1212_1, ch_e_rabde1212_2
+from code.standard_gauge.chrbe44 import ch_e_cfe44_1, ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3, ch_e_rabde1212_1, ch_e_rabde1212_2, ch_e_rabde816_1, ch_e_rabde816_2
 
 s_s_N_ii_1_sj = Train(
     id='s_s_N_ii_1_sj',
@@ -545,6 +545,7 @@ lib.make_purchase_sprites(
     ch_e_cfe44_1,
     grf.VariantGroup('"Schüttelbecher"', ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3),
     grf.VariantGroup('"Mirage"', ch_e_rabde1212_1, ch_e_rabde1212_2),
+    grf.VariantGroup('"Chiquita"', ch_e_rabde816_1, ch_e_rabde816_2),
     # ch carriages
     grf.VariantGroup('Ew I/II', ch_p_ewi_1, ch_p_ewi_2, ch_p_ewi_3, ch_p_ewi_4, ch_p_ewi_5, ch_p_ewi_6, ch_p_ewi_7, ch_p_ewi_8, ch_p_ewi_9, ch_p_ewi_10, ch_p_ewi_11, ch_p_ewi_26, ch_p_ewi_27, ch_p_ewi_28, ch_p_ewi_29, ch_p_ewi_30, ch_p_ewi_31, ch_p_ewi_22, ch_p_ewi_23, ch_p_ewi_24, ch_p_ewi_25, ch_p_ewi_12, ch_p_ewi_13, ch_p_ewi_14, ch_p_ewi_15, ch_p_ewi_16, ch_p_ewi_17, ch_p_ewi_18, ch_p_ewi_19, ch_p_ewi_20, ch_p_ewi_21),
     grf.VariantGroup('Ew IV', ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_24, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_25, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9),

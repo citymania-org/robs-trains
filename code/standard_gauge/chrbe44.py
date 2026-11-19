@@ -187,7 +187,7 @@ ch_e_rabde1212_1 = Train(
     introduction_date=date(1965, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Info': 'Up to 4 can be coupled together into a train set',
+        'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 510',
     }),
     badges=badges.set_train_badges({
@@ -240,7 +240,7 @@ ch_e_rabde1212_2 = Train(
     introduction_date=date(1984, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
-        'Info': 'Up to 4 can be coupled together into a train set',
+        'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 510',
     }),
     badges=badges.set_train_badges({
@@ -274,6 +274,157 @@ ch_e_rabde1212_2 = Train(
         cc2_replace=colours['DBLUE'],
     ),
     cargo_capacity=120,
+    loading_speed=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+COMMON_816_PROPS = dict(
+    length=11,
+    misc_flags=Train.Flags.USE_2CC,
+    engine_class=Train.EngineClass.ELECTRIC, 
+    track_type=standard_gauge_15kv,
+    max_speed=Train.kmhish(125),
+    power=3059,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    weight=149,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cargo_capacity=107, #278 seats, 0 collapsible seats, ca 150 standing = 428
+    loading_speed=20,
+    cost_factor=25,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+ch_e_rabde816_1 = Train(
+    **COMMON_816_PROPS,
+    id='ch_e_rabde816_1',
+    purchase_sprite_towed_id='ch_e_rabde8162_1',
+    name='SBB RABDe 8/16',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["YELLOW"],
+        cc2_replace=colours["LAVENDER"]
+    ),
+    introduction_date=date(1976, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
+        'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
+        'Trivia': 'Later classed as RABDe 511',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['suburban_passenger', 'regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+).add_articulated_part(
+    id='ch_e_rabde8162_1',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading='11a',
+        paint='11b',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['LAVENDER'],
+    ),
+    cargo_capacity=107,
+    loading_speed=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='ch_e_rabde8163_1',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading='11a',
+        paint='11b',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['LAVENDER'],
+    ),
+    cargo_capacity=107,
+    loading_speed=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='ch_e_rabde8164_1',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading='11a',
+        paint='11b',
+        cc_replace=colours['YELLOW'],
+        cc2_replace=colours['LAVENDER'],
+    ),
+    cargo_capacity=107,
+    loading_speed=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+ch_e_rabde816_2 = Train(
+    **COMMON_816_PROPS,
+    id='ch_e_rabde816_2',
+    purchase_sprite_towed_id='ch_e_rabde8162_2',
+    name='SBB RABDe 8/16',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('11a',),
+        paint=('11b',),
+        cc_replace=colours["RED"],
+        cc2_replace=colours["DBLUE"]
+    ),
+    introduction_date=date(1984, 1, 1),
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
+        'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
+        'Trivia': 'Later classed as RABDe 511',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['CH'],
+        'role': ['suburban_passenger', 'regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['CH/sbb'],
+        'manufacturer': []
+    }),
+).add_articulated_part(
+    id='ch_e_rabde8162_2',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading='11a',
+        paint='11b',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['DBLUE'],
+    ),
+    cargo_capacity=107,
+    loading_speed=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='ch_e_rabde8163_2',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading='11a',
+        paint='11b',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['DBLUE'],
+    ),
+    cargo_capacity=107,
+    loading_speed=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+).add_articulated_part(
+    id='ch_e_rabde8164_2',
+    length=11,
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading='11a',
+        paint='11b',
+        cc_replace=colours['RED'],
+        cc2_replace=colours['DBLUE'],
+    ),
+    cargo_capacity=107,
     loading_speed=20,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
 )
