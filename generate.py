@@ -147,7 +147,7 @@ from code.standard_gauge.nocmb14a import no_d_cmb14a_1
 from code.standard_gauge.notype49å import no_s_49_1
 from code.standard_gauge.sessnj import se_e_xf_1
 from code.standard_gauge.sec20 import se_e_C20_1, se_e_C20u_1
-from code.standard_gauge.chrbe44 import ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3, ch_e_rabde1212_1, ch_e_rabde1212_2
+from code.standard_gauge.chrbe44 import ch_e_cfe44_1, ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3, ch_e_rabde1212_1, ch_e_rabde1212_2
 
 s_s_N_ii_1_sj = Train(
     id='s_s_N_ii_1_sj',
@@ -542,6 +542,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('Re 4/4 IV', ch_e_re44iv_1, ch_e_re44iv_2, ch_e_re44iv_3, ch_e_re44iv_4, ch_e_re44iv_5),
     grf.VariantGroup('"Lok 2000"', ch_e_re460_1, ch_e_re460_4, ch_e_re460_5, ch_e_re460_2, ch_e_re460_3),
     # ch emu 15
+    ch_e_cfe44_1,
     grf.VariantGroup('"Schüttelbecher"', ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3),
     grf.VariantGroup('"Mirage"', ch_e_rabde1212_1, ch_e_rabde1212_2),
     # ch carriages
