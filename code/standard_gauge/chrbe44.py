@@ -190,6 +190,17 @@ ch_e_rabde1212_1 = Train(
         'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 510',
     }),
+    mid_stats={
+        'cargo_capacity': 3,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['suburban_passenger', 'regional_passenger'],
@@ -243,6 +254,17 @@ ch_e_rabde1212_2 = Train(
         'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 510',
     }),
+    mid_stats={
+        'cargo_capacity': 3,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['suburban_passenger', 'regional_passenger'],
@@ -315,6 +337,17 @@ ch_e_rabde816_1 = Train(
         'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 511',
     }),
+    mid_stats={
+        'cargo_capacity': 2,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(2, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['suburban_passenger', 'regional_passenger'],
@@ -381,6 +414,17 @@ ch_e_rabde816_2 = Train(
         'Info': 'Up to 4 RABDe 12/12 or RABDe 8/16 can be coupled together into a train set',
         'Trivia': 'Later classed as RABDe 511',
     }),
+    mid_stats={
+        'cargo_capacity': 2,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(2, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
     badges=badges.set_train_badges({
         'flag': ['CH'],
         'role': ['suburban_passenger', 'regional_passenger'],
