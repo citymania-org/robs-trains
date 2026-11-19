@@ -8,6 +8,7 @@ import lib, badge
 
 from common import g, Livery, Train, modern_diesel_sound, standard_gauge, standard_gauge_15kv, standard_gauge_25kv, standard_gauge_1500v, standard_gauge_25kv_15kv, metro, extra_narrow_gauge, make_psd_cc_liveries, colours, badges
 
+from code.standard_gauge.chdd5xx import ch_e_rabe514_1
 from code.standard_gauge.bemstock import be_p_m1_1, be_p_m1_2, be_p_m1_3, be_p_m1_4, be_p_m2_1, be_p_m2_2, be_p_m2_3, be_p_m2_4, be_p_m2_5, be_p_m2_6, be_p_m2_7, be_p_m2_8, be_p_m2_9, be_p_m2_10, be_p_m2_11, be_p_m2_12, be_p_m4_1, be_p_m4_2, be_p_m4_3, be_p_m4_4, be_p_m4_5, be_p_m4_6, be_p_m4_7, be_p_m4_8, be_p_m4_9, be_p_m4_10, be_p_m5_1, be_p_m5_2, be_p_m5_3, be_p_m5_4, be_p_m5_5, be_p_m5_6, be_p_m6_1, be_p_m6_2, be_p_m6_3, be_p_m6_4, be_p_m6_5, be_p_m7_1, be_p_m7_2, be_p_m7_3, be_p_m7_4
 from code.standard_gauge.beistock import be_p_i6_1, be_p_i6_2, be_p_i6_3, be_p_i6_4, be_p_i6_5, be_p_i6_6, be_p_i6_7, be_p_i6_8, be_p_i10_1, be_p_i10_2, be_p_i10_3, be_p_i10_4, be_p_i10_5, be_p_i11_1, be_p_i11_2, be_p_i11_3, be_p_i11_4, be_p_i11_5
 from code.standard_gauge.behle131718 import be_e_13_1, be_e_17_1, be_e_18_1
@@ -546,6 +547,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('"Schüttelbecher"', ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3),
     grf.VariantGroup('"Mirage"', ch_e_rabde1212_1, ch_e_rabde1212_2),
     grf.VariantGroup('"Chiquita"', ch_e_rabde816_1, ch_e_rabde816_2),
+    ch_e_rabe514_1,
     # ch carriages
     grf.VariantGroup('Ew I/II', ch_p_ewi_1, ch_p_ewi_2, ch_p_ewi_3, ch_p_ewi_4, ch_p_ewi_5, ch_p_ewi_6, ch_p_ewi_7, ch_p_ewi_8, ch_p_ewi_9, ch_p_ewi_10, ch_p_ewi_11, ch_p_ewi_26, ch_p_ewi_27, ch_p_ewi_28, ch_p_ewi_29, ch_p_ewi_30, ch_p_ewi_31, ch_p_ewi_22, ch_p_ewi_23, ch_p_ewi_24, ch_p_ewi_25, ch_p_ewi_12, ch_p_ewi_13, ch_p_ewi_14, ch_p_ewi_15, ch_p_ewi_16, ch_p_ewi_17, ch_p_ewi_18, ch_p_ewi_19, ch_p_ewi_20, ch_p_ewi_21),
     grf.VariantGroup('Ew IV', ch_p_ewiv_1, ch_p_ewiv_20, ch_p_ewiv_21, ch_p_ewiv_24, ch_p_ewiv_2, ch_p_ewiv_3, ch_p_ewiv_4, ch_p_ewiv_22, ch_p_ewiv_23, ch_p_ewiv_25, ch_p_ewiv_5, ch_p_ewiv_6, ch_p_ewiv_10, ch_p_ewiv_11, ch_p_ewiv_12, ch_p_ewiv_13, ch_p_ewiv_14, ch_p_ewiv_15, ch_p_ewiv_16, ch_p_ewiv_17, ch_p_ewiv_18, ch_p_ewiv_19, ch_p_ewiv_7, ch_p_ewiv_8, ch_p_ewiv_9),
