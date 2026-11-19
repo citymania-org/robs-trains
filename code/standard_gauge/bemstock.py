@@ -4,6 +4,155 @@ from datetime import date
 
 from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries_flippable, standard_gauge, VEHICLE_FLAG_TRAIN_HAS_CAB, badges
 
+COMMON_m1_PROPS = dict(
+    length=10,
+    misc_flags=Train.Flags.USE_2CC,
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    power=0,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    max_speed=Train.kmhish(120),
+    weight=42,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=20,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+be_p_m1_1 = Train(
+    id='be_p_m1_1',
+    **COMMON_m1_PROPS,
+    name='NMBS AB',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["DGREEN"]
+    ),
+    introduction_date=date(1935, 1, 1),
+    cargo_capacity=74,
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['BE/nmbs'],
+        'manufacturer': []
+    }),
+)
+
+be_p_m1_2 = Train(
+    id='be_p_m1_2',
+    **COMMON_m1_PROPS,
+    name='NMBS B',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["DGREEN"]
+    ),
+    introduction_date=date(1935, 1, 1),
+    cargo_capacity=94,
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['BE/nmbs'],
+        'manufacturer': []
+    }),
+)
+
+be_p_m1_3 = Train(
+    id='be_p_m1_3',
+    **COMMON_m1_PROPS,
+    name='NMBS BD',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["DGREEN"]
+    ),
+    introduction_date=date(1935, 1, 1),
+    cargo_capacity=77,
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
+    }),
+    mid_stats={
+        'cargo_capacity': 3,
+        'refittable_cargo_classes': (grf.CargoClass.MAIL),
+        'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+        'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+        'loading_speed': 20,
+        'callbacks': {
+            'cargo_capacity': Train.Luggage.switch_cargo_capacity(3, g),
+            'cargo_subtype_text': Train.Luggage.switch_subtype(g),
+        },
+    },
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['BE/nmbs'],
+        'manufacturer': []
+    }),
+)
+
+COMMON_m1s_PROPS = dict(
+    length=10,
+    misc_flags=Train.Flags.USE_2CC,
+    engine_class=Train.EngineClass.DIESEL, 
+    track_type=standard_gauge,
+    power=0,
+    vehicle_life=30,
+    model_life=30,
+    climates_available=grf.ALL_CLIMATES,
+    max_speed=Train.kmhish(120),
+    weight=42,
+    tractive_effort_coefficient=80,
+    running_cost_factor=200,
+    cost_factor=25,
+    loading_speed=20,
+    extra_flags=VEHICLE_FLAG_TRAIN_HAS_CAB,
+    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
+)
+
+be_p_m1_4 = Train(
+    id='be_p_m1_4',
+    **COMMON_m1s_PROPS,
+    name='NMBS BDx',
+    liveries=make_psd_cc_liveries(
+        'pp/Template.psd',
+        shading=('10a',),
+        paint=('10b',),
+        cc_replace=colours["DGREEN"],
+        cc2_replace=colours["DGREEN"],
+    ),
+    introduction_date=date(1966, 1, 1),
+    cargo_capacity=77,
+    additional_text=grf.fake_vehicle_info({
+        'Loading speed': '20',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['BE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'power': [],
+        'operator': ['BE/nmbs'],
+        'manufacturer': [],
+        'attribute': ['push_pull'],
+    }),
+)
+
 COMMON_m2_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.USE_2CC,
@@ -274,7 +423,7 @@ be_p_m2_9 = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["DGREEN"],
     ),
-    introduction_date=date(1958, 1, 1),
+    introduction_date=date(1978, 1, 1),
     cargo_capacity=74,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
@@ -326,7 +475,7 @@ be_p_m2_11 = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["DGREEN"],
     ),
-    introduction_date=date(1958, 1, 1),
+    introduction_date=date(1979, 1, 1),
     cargo_capacity=74,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
