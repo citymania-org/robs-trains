@@ -36,7 +36,6 @@ be_d_201_1_nmbs = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
     introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Trivia': 'Later classed as HLD 59',
@@ -62,7 +61,6 @@ be_d_201_2_nmbs = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
     introduction_date=date(1954, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Trivia': 'Later classed as HLD 59',
@@ -88,7 +86,6 @@ be_d_201_3_nmbs = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
     introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Trivia': 'Later classed as HLD 59',
@@ -114,7 +111,6 @@ be_d_201_4_nmbs = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
     introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
     }),
@@ -139,7 +135,6 @@ be_d_201_5_nmbs = Train(
         cc_replace=colours["DGREEN"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
     introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Trivia': 'Later classed as HLD 59',

@@ -70,8 +70,6 @@ se_s_e2_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='sweden',
-    company='na',
     max_speed=Train.kmhish(70),
     introduction_date=date(1935, 1, 1),
     weight=91,

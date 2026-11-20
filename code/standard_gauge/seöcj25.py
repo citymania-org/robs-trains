@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 s_d_ÖCJ25_1_1 = Train(
     id='s_d_ÖCJ25_1_1',
@@ -18,9 +18,6 @@ s_d_ÖCJ25_1_1 = Train(
         cc2_replace=colours["MECONIUM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(40),
@@ -37,9 +34,13 @@ s_d_ÖCJ25_1_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'ÖCJ',
-        'Use': 'Local passengers',
-        'Builder': 'WUMAG',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/oecj'],
+        'manufacturer': ['SE/wumag'],
     }),
 )
 
@@ -57,9 +58,6 @@ s_d_ÖCJ25_1_2 = Train(
     ),
     purchase_sprite_towed_id='s_d_ÖCJ25_1_2_car2',
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(40),
@@ -76,9 +74,13 @@ s_d_ÖCJ25_1_2 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'ÖCJ',
-        'Use': 'Local passengers',
-        'Builder': 'WUMAG',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/oecj'],
+        'manufacturer': ['SE/wumag'],
     }),
 ).add_articulated_part(
     id='s_d_ÖCJ25_1_2_car2',
@@ -110,9 +112,6 @@ s_d_ÖCJ25_2_1 = Train(
         cc2_replace=colours["REDBROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(60),
@@ -129,9 +128,13 @@ s_d_ÖCJ25_2_1 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'ÖCJ',
-        'Use': 'Local passengers',
-        'Builder': 'WUMAG',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/oecj'],
+        'manufacturer': ['SE/wumag'],
     }),
 )
 
@@ -149,9 +152,6 @@ s_d_ÖCJ25_2_2 = Train(
     ),
     purchase_sprite_towed_id='s_d_ÖCJ25_2_2_car2',
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(60),
@@ -168,9 +168,13 @@ s_d_ÖCJ25_2_2 = Train(
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'ÖCJ',
-        'Use': 'Local passengers',
-        'Builder': 'WUMAG',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/oecj'],
+        'manufacturer': ['SE/wumag'],
     }),
 ).add_articulated_part(
     id='s_d_ÖCJ25_2_2_car2',

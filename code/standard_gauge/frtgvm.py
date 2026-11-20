@@ -2,12 +2,10 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_all_voltages
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_all_voltages, badges
 
 COMMON_m_PROPS = dict(
     misc_flags=Train.Flags.USE_2CC,
-    company='na',
-    power_type='dc/dc3000/15kv/25kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=standard_gauge_all_voltages,
     power=10500,
@@ -33,13 +31,18 @@ fr_e_m_1_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    country='france',
     introduction_date=date(2026, 1, 1),
     max_speed=Train.kmhish(320),
     weight=360,
     cargo_capacity=72,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'High speed passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['very_high_speed', 'express_passenger'],
+        'power': ['electric/acdc/1500v_3kv_15kv_25kv'],
+        'operator': ['FR/sncf'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='fr_e_m2_1_sncf',
@@ -159,13 +162,18 @@ fr_e_m_2_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    country='france',
     introduction_date=date(2026, 1, 1),
     max_speed=Train.kmhish(320),
     weight=380,
     cargo_capacity=67,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'High speed passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['very_high_speed', 'express_passenger'],
+        'power': ['electric/acdc/1500v_3kv_15kv_25kv'],
+        'operator': ['FR/sncf'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='fr_e_m2_2_sncf',
@@ -298,13 +306,18 @@ fr_e_m_3_sncf = Train(
         cc_replace=colours["GREY1"],
         cc2_replace=colours["GREY1"]
     ),
-    country='france',
     introduction_date=date(2026, 1, 1),
     max_speed=Train.kmhish(320),
     weight=400,
     cargo_capacity=70,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'High speed passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['FR'],
+        'role': ['very_high_speed', 'express_passenger'],
+        'power': ['electric/acdc/1500v_3kv_15kv_25kv'],
+        'operator': ['FR/sncf'],
+        'manufacturer': []
     }),
 ).add_articulated_part(
     id='fr_e_m2_3_sncf',

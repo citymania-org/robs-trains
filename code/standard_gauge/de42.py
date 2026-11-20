@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_42_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,12 +35,16 @@ de_s_42_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1943, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'Later classed as DB 42',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_422_1',

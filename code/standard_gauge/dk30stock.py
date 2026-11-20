@@ -7,7 +7,6 @@ from common import g, Train, colours, make_psd_cc_liveries, make_psd_cc_liveries
 COMMON_dk30stock_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,

@@ -405,7 +405,7 @@ class NewGRF(grf.NewGRF):
         return super().generate_sprites() + res
 
 class Train(grf.Train):
-    def __init__(self, *, liveries, country=None, company=None, power_type=None, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, track_type=None, **kw):
+    def __init__(self, *, liveries, purchase_sprite_towed_id=None, visual_effect=None, mid_stats=None, end_stats=None, track_type=None, **kw):
         liveries = _make_liveries(liveries)
         if visual_effect != None:
             if visual_effect[1] >= 24:
@@ -436,9 +436,6 @@ class Train(grf.Train):
             default_cargo_type=grf.DEFAULT_CARGO_FIRST_REFITTABLE,
             **kw
         )
-        self.country = country
-        self.company = company
-        self.power_type = power_type
         self.purchase_sprite_towed_id = purchase_sprite_towed_id
         
         # Add visual effect to this part if it is specified in the front. We add it to the other parts further down
@@ -517,7 +514,11 @@ class Train(grf.Train):
         self._do_add_articulated_part(f'__{id}_aa_mid', mid_shorten, mid_liveries, mid_liveries, mid_props, callbacks=mid_callbacks)
         self._do_add_articulated_part(f'__{id}_aa_tail', art_shorten, art_liveries, mid_liveries, end_props, callbacks=end_callbacks)
 
-    def add_articulated_part(self, liveries=None, **props):
+    def add_articulated_part(self, liveries=None, mid_stats=None, end_stats=None, **props):
+        # add these again so that it doesn't propagate down the train.
+        self.mid_stats = mid_stats
+        self.end_stats = end_stats
+        
         if liveries is not None:
             liveries = _make_liveries(liveries, True)
         if 'misc_flags' in props.keys():
@@ -653,8 +654,7 @@ class Train(grf.Train):
         def switch_cargo_capacity(self, load_limit, g):
             res = grf.Switch(code=f'cargo_subtype % 2',
                 ranges = {
-                    0: 0,
-                    1: self.sw_capacity_calculaiton_lug(load_limit, g)
+                    0: self.sw_capacity_calculaiton_lug(load_limit, g)
                 },
                 default=0,
             )
@@ -664,8 +664,8 @@ class Train(grf.Train):
         def switch_subtype(g: grf.NewGRF):
             res = grf.Switch(code='cargo_subtype',
                 ranges = {
-                    0: g.strings.add(' (No cargo)').get_global_id(),
-                    1: g.strings.add(' (Cargo)').get_global_id()
+                    0: g.strings.add(' (Cargo)').get_global_id(),
+                    1: g.strings.add(' (No Cargo)').get_global_id()
                 },
                 default=0x400,
             )
@@ -688,10 +688,10 @@ class Train(grf.Train):
         def switch_subtype_luggage(g: grf.NewGRF):
             res = grf.Switch(code='cargo_subtype',
                 ranges = {
-                    0: g.strings.add(' (No cargo)').get_global_id(),
-                    1: g.strings.add(' (Cargo)').get_global_id(),
-                    2: g.strings.add(' (No cargo, flipped)').get_global_id(),
-                    3: g.strings.add(' (Cargo, flipped)').get_global_id()
+                    0: g.strings.add(' (Cargo)').get_global_id(),
+                    1: g.strings.add(' (No cargo)').get_global_id(),
+                    2: g.strings.add(' (Cargo, flipped)').get_global_id(),
+                    3: g.strings.add(' (No cargo, flipped)').get_global_id()
                 },
                 default=0x400,
             )
@@ -1596,7 +1596,7 @@ class Badges(grf.SpriteGenerator):
             self.grf.get_badge_id(c)
             for badge_label in blist:
                 if c == 'role':
-                    if badge_label not in ('heavy_freight', 'freight', 'light_freight', 'shunting', 'international', 'express_passenger', 'regional_passenger', 'suburban_passenger', 'metro', 'utility', 'luggage', 'mail', 'bike', 'driving_cab', 'restaurant_car', '1st_class', '2nd_class', '3rd_class', 'sleeper', 'panoramic'):
+                    if badge_label not in ('heavy_freight', 'freight', 'light_freight', 'shunting', 'international', 'express_passenger', 'regional_passenger', 'suburban_passenger', 'metro', 'utility', 'very_high_speed', 'mail', 'luggage', 'bike', 'driving_cab', 'restaurant_car', '1st_class', '2nd_class', '3rd_class', 'sleeper', 'panoramic'):
                         raise ValueError('Unallowed badge: role/', badge_label)
                 self.used_badges.add(f'{c}/{badge_label}')
                 res.append(self.grf.get_badge_id(c+'/'+badge_label))

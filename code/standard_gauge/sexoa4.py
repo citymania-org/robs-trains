@@ -97,7 +97,6 @@ s_e_Xoa4_2_sj = Train(
         cc_replace=colours["REDBROWN"],
         cc2_replace=colours["REDBROWN"]
     ),
-    company='na',
     max_speed=Train.kmhish(90),
     introduction_date=date(1944, 1, 1),
     additional_text=grf.fake_vehicle_info({
@@ -166,7 +165,6 @@ s_e_Cox4_2_sj = Train(
         cc_replace=colours["REDBROWN"],
         cc2_replace=colours["REDBROWN"]
     ),
-    company='na',
     introduction_date=date(1944, 1, 1),
     additional_text=grf.fake_vehicle_info({
     }),

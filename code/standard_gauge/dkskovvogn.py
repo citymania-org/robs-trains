@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_skovvogn_PROPS = dict(
     length=5,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -33,14 +32,18 @@ dk_p_skovvogn_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1880, 1, 1),
     cargo_capacity=40,
     weight=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/sjs'],
+        'manufacturer': []
     }),
 )
 
@@ -55,14 +58,18 @@ dk_p_skovvogn_2 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["MAROON"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1893, 1, 1),
     cargo_capacity=40,
     weight=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/dsb'],
+        'manufacturer': []
     }),
 )
 
@@ -77,14 +84,18 @@ dk_p_skovvogn_3 = Train(
         cc_replace=colours["APPLE"],
         cc2_replace=colours["APPLE"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1905, 1, 1),
     cargo_capacity=50,
     weight=9,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/ksb'],
+        'manufacturer': []
     }),
 )
 
@@ -99,13 +110,17 @@ dk_p_skovvogn_4 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["RED"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1907, 1, 1),
     cargo_capacity=50,
     weight=10,
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '10',
-        'Use': '3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DK/ab'],
+        'manufacturer': []
     }),
 )

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, Livery, extra_narrow_gauge, modern_diesel_sound
+from common import Train, Livery, extra_narrow_gauge, modern_diesel_sound, badges
 
 s_p_Co_1 = Train(
     id='s_p_Co_1',
@@ -13,9 +13,6 @@ s_p_Co_1 = Train(
     },
     engine_class=Train.EngineClass.STEAM,
     track_type=extra_narrow_gauge,
-    country='sweden',
-    company='na',
-    power_type='na',
     max_speed=Train.kmhish(75),
     power=0,
     introduction_date=date(1914, 1, 1),
@@ -30,9 +27,14 @@ s_p_Co_1 = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Longer distance passenger',
         'Trivia': 'Class was originally Co at SRJ later becoming Bop at SJ and finally Bp at SLJ',
-        'Builder': 'ASEA',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['express_passenger'],
+        'power': [],
+        'operator': ['SE/srj', 'SE/sj', 'SE/sl'],
+        'manufacturer': ['SE/asea'],
     }),
 )
 
@@ -43,9 +45,6 @@ s_d_Tp_1_sj = Train(
     liveries={
         'Default': Livery('SE_Tp_1.png'),
     },
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     sound_effects=modern_diesel_sound,
     track_type=extra_narrow_gauge,
@@ -62,9 +61,14 @@ s_d_Tp_1_sj = Train(
     cost_factor=24,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS, # can't be NONE 
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': "SJ's larger narrow gauge loco",
-        'Builder': 'Maschinenbau GmbH and ASJ Falun',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/sj'],
+        'manufacturer': ['DE/mak', 'SE/asj'],
     }),
     callbacks={'properties': {'cargo_capacity': 0},}
 )

@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, extra_narrow_gauge, extra_narrow_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, extra_narrow_gauge, extra_narrow_gauge_15kv, badges
 
 #This .py-file is intended for the vehicles of Thamshavnsbanen
 
@@ -20,9 +20,6 @@ no_e_st1to3_1 = Train(
         cc2_replace=colours["BLUE"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='norway',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(40),
@@ -40,7 +37,14 @@ no_e_st1to3_1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '1000mm',
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['freight', 'regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 )
 
@@ -56,9 +60,6 @@ no_e_st7to8_1 = Train(
         cc2_replace=colours["BLUE"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='norway',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(50),
@@ -76,7 +77,14 @@ no_e_st7to8_1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '1000mm',
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['freight'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 )
 
@@ -92,9 +100,6 @@ no_e_st5to6_1= Train(
         cc2_replace=colours["BLUE"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='norway',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(60),
@@ -112,7 +117,14 @@ no_e_st5to6_1= Train(
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '1000mm',
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['freight'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 )
 
@@ -128,9 +140,6 @@ no_e_st1_1 = Train(
         cc2_replace=colours["BLUE"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='norway',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(60),
@@ -148,8 +157,15 @@ no_e_st1_1 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '1000mm',
-        'Use': 'Freight',
         'Trivia': 'Was nicknamed "sommerloket" (the summer loco) due to its terrible performance during winters',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['freight'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 )
 
@@ -165,9 +181,6 @@ no_e_st1_2 = Train(
         cc2_replace=colours["MBC"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='norway',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(60),
@@ -185,8 +198,15 @@ no_e_st1_2 = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '1000mm',
-        'Use': 'Freight',
         'Trivia': 'Was nicknamed "sommerloket" (the summer loco) due to its terrible performance during winters',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['freight'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 )
 
@@ -204,9 +224,6 @@ no_e_st4_1 = Train(
         cc2_replace=colours["CREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='norway',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(50),
@@ -224,7 +241,14 @@ no_e_st4_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '1000mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 ) 
 
@@ -240,9 +264,6 @@ no_e_st5to6_2 = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='norway',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(50),
@@ -260,8 +281,15 @@ no_e_st5to6_2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '1000mm',
-        'Use': 'Local passengers',
         'Trivia': 'Both units were destroyed by sabotage during WWII'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 ) 
 
@@ -280,9 +308,6 @@ no_p_ACo_1 = Train(
         ),
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
-    country='norway',
-    company='na',
-    power_type='na',
     max_speed=Train.kmhish(60),
     power=0,
     introduction_date=date(1908, 1, 1),
@@ -298,6 +323,13 @@ no_p_ACo_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Guage': '1000mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['NO/sot'],
+        'manufacturer': [],
     }),
 )

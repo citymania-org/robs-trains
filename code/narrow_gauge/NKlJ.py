@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, extra_narrow_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, extra_narrow_gauge_15kv, badges
 
 COMMON_AEG_PROPS = dict(
     length=4,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(60),
@@ -22,7 +21,6 @@ COMMON_AEG_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='sweden',
 )
 
 s_e_NKlJ_AEG_1_nklj = Train(
@@ -37,12 +35,16 @@ s_e_NKlJ_AEG_1_nklj = Train(
         cc_replace=colours["REDBROWN"],
         cc2_replace=colours["REDBROWN"]
     ),
-    company='na',
     introduction_date=date(1920, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'NKlJ',
-        'Use': 'Universal',
-        'Builder': 'AEG'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/nklj'],
+        'manufacturer': ['DE/aeg'],
     }),
 )
 
@@ -58,11 +60,15 @@ s_e_NKlJ_AEG_2_nklj = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["CREAM"]
     ),
-    company='na',
     introduction_date=date(1920, 1, 1), # needs further investigation
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'NKlJ',
-        'Use': 'Universal',
-        'Builder': 'AEG'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/nklj'],
+        'manufacturer': ['DE/aeg'],
     }),
 )

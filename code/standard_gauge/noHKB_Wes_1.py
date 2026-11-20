@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge_1500v
+from common import Train, colours, make_psd_cc_liveries, metro, standard_gauge_1500v, badges
 
 COMMON_HKBw_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='dc',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_1500v,
     max_speed=Train.kmhish(35),
@@ -22,7 +21,6 @@ COMMON_HKBw_PROPS = dict(
     loading_speed=20,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='norway',
 )
 
 n_o_Wes_1_hkb = Train(
@@ -37,12 +35,15 @@ n_o_Wes_1_hkb = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    company='na',
     introduction_date=date(1910, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'HKB',
-        'Use': 'Holmenkollbanen',
-        'Builder': 'Skabo',
         'Trivia': '''First heavy train stock for HKB. Previously they only used trams.''',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/dc/1500v'],
+        'operator': ['NO/hkb'],
+        'manufacturer': ['NO/skabo'],
     }),
 )

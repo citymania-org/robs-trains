@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_03_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,12 +35,16 @@ de_s_03_1 = Train(
     max_speed=Train.kmhish(130),
     power=1980,
     weight=174,
-    country='germany',
-    company='na',
     introduction_date=date(1930, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
         'Trivia': 'Later classed as DB 03',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['steam'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_032_1',
@@ -70,12 +73,16 @@ de_s_03_2 = Train(
     max_speed=Train.kmhish(140),
     power=1791,
     weight=182,
-    country='germany',
-    company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
         'Trivia': 'Later classed as DB 03.10',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['steam'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_032_2',

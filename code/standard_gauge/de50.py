@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_50_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,12 +35,16 @@ de_s_50_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'Later classed as DB 50',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_502_1',
@@ -67,12 +70,16 @@ de_s_50_2 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1939, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'Later classed as DB 50',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_502_2',
@@ -98,11 +105,15 @@ de_s_50_3 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_502_3',
@@ -128,11 +139,15 @@ de_s_50_4 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='denmark',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DK'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DK/dsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_502_4',

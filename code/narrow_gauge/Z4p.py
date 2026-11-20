@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, Livery, extra_narrow_gauge, colours, make_psd_cc_liveries
+from common import Train, Livery, extra_narrow_gauge, colours, make_psd_cc_liveries, badges
 
 COMMON_Z4p_PROPS = dict(
     length=3,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge, 
     max_speed=Train.kmhish(40),
@@ -31,13 +30,15 @@ s_d_Z4p_1_srj = Train(
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='1_srj', overlay='light', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"],
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1947, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'SRJ, GJ, SJ, SL, and others (probably)',
-        'Use': 'Universal',
-        'Builder': 'Kalmar Verkstad'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/srj', 'SE/gj', 'SE/sj', 'SE/sl'],
+        'manufacturer': ['SE/kalmar_verkstad'],
     }),
 )
 
@@ -48,13 +49,15 @@ s_d_Z4p_2 = Train(
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='2', overlay='light', cc_replace=colours["DGREEN"], cc2_replace=colours["DGREEN"],
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1948, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'Munkfors Bruk',
-        'Use': 'Shunting',
-        'Builder': 'Kalmar Verkstad'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['shunting'],
+        'power': ['diesel'],
+        'operator': ['SE/munkfors_bruk'],
+        'manufacturer': ['SE/kalmar_verkstad'],
     }),
 )
 
@@ -65,13 +68,15 @@ s_d_Z4p_3_nklj = Train(
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='3_nklj', overlay='light',  cc_replace=colours["MAROON"], cc2_replace=colours["CREAM"],
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'NKlJ',
-        'Use': 'Universal',
-        'Builder': 'Kalmar Verkstad'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/nklj'],
+        'manufacturer': ['SE/kalmar_verkstad'],
     }),
 )
 
@@ -82,13 +87,15 @@ s_d_Z4p_4 = Train(
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='4', overlay='light', cc_replace=colours["ORANGE"], cc2_replace=colours["DGREEN"],
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1951, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'Böksholms Bruk',
-        'Use': 'Shunting',
-        'Builder': 'Kalmar Verkstad'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['shunting'],
+        'power': ['diesel'],
+        'operator': ['SE/boeksholms_bruk'],
+        'manufacturer': ['SE/kalmar_verkstad'],
     }),
 )
 
@@ -99,13 +106,15 @@ s_d_Z4p_5_donj = Train(
     liveries=make_psd_cc_liveries(
         'pp/Z4p.psd', shading='base', paint='5_donj', overlay='light', cc_replace=colours["ORANGE"], cc2_replace=colours["DTURQUOISE"],
     ),
-    country='sweden',
-    company='na',
     introduction_date=date(1966, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'DONJ',
-        'Use': 'Universal',
-        'Builder': 'Kalmar Verkstad'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['shunting'],
+        'power': ['diesel'],
+        'operator': ['SE/donj'],
+        'manufacturer': ['SE/kalmar_verkstad'],
     }),
 )
 
@@ -117,13 +126,15 @@ s_d_Z4p_6_sl = Train(
         'pp/Z4p.psd', shading='base', paint='6_sl', overlay='light', cc_replace=colours["YELLOW"], cc2_replace=colours["GREY3"],
     ),
     #    'SL Grey and yellow': '1947_SE_Z4p_4_xxxx.png',
-    country='sweden',
-    company='na',
     introduction_date=date(1991, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'SL',
-        'Use': 'Universal',
-        'Builder': 'Kalmar Verkstad'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['utility'],
+        'power': ['diesel'],
+        'operator': ['SE/sl'],
+        'manufacturer': ['SE/kalmar_verkstad'],
     }),
 )
 
@@ -135,12 +146,14 @@ s_d_Z4p_7_sl = Train(
         'pp/Z4p.psd', shading='base', paint='7_sl', overlay='light', cc_replace=colours["RED"], cc2_replace=colours["RED"],
     ),
     #    'SL Red': '1947_SE_Z4p_5_xxxx.png',
-    country='sweden',
-    company='na',
     introduction_date=date(2008, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'SL',
-        'Use': 'Universal',
-        'Builder': 'Kalmar Verkstad'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['utility'],
+        'power': ['diesel'],
+        'operator': ['SE/sl'],
+        'manufacturer': ['SE/kalmar_verkstad'],
     }),
 )

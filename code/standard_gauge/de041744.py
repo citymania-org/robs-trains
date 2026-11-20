@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_e04_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -19,7 +18,6 @@ COMMON_e04_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='germany',
     max_speed=Train.kmhish(130),
     power=2978,
     weight=92,
@@ -36,11 +34,16 @@ de_e_e04_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    company='na',
     introduction_date=date(1932, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
         'Trivia': 'Later classed as DB 104 & DR 204',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 )
 
@@ -55,18 +58,22 @@ de_e_e04_2 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    company='na',
     introduction_date=date(1932, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
         'Trivia': 'Later classed as DB 104 & DR 204',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_e17_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -78,7 +85,6 @@ COMMON_e17_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='germany',
     max_speed=Train.kmhish(120),
     power=3807,
     weight=112,
@@ -95,18 +101,22 @@ de_e_e17_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    company='na',
     introduction_date=date(1928, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
         'Trivia': 'Later classed as DB 117',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_e44_PROPS = dict(
     length=7,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     vehicle_life=30,
@@ -118,7 +128,6 @@ COMMON_e44_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='germany',
     max_speed=Train.kmhish(90),
     power=2991,
     weight=78,
@@ -135,11 +144,16 @@ de_e_e44_1 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    company='na',
     introduction_date=date(1932, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as DB 144 & DR 244',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 )
 
@@ -154,11 +168,16 @@ de_e_e44_2 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"]
     ),
-    company='na',
     introduction_date=date(1932, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
         'Trivia': 'Later classed as DB 144 & DR 244',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 )
 
@@ -173,9 +192,14 @@ de_e_e44_3 = Train(
         cc_replace=colours["DTURQUOISE"],
         cc2_replace=colours["CREAM"]
     ),
-    company='na',
     introduction_date=date(1974, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight', 'regional_passenger', 'express_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 )

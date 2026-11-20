@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_cmb14a_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     max_speed=Train.kmhish(70),
@@ -22,7 +21,6 @@ COMMON_cmb14a_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='sweden',
 )
 
 no_d_cmb14a_1 = Train(
@@ -36,9 +34,14 @@ no_d_cmb14a_1 = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
     introduction_date=date(1931, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['NO/nsb'],
+        'manufacturer': [],
     }),
 )

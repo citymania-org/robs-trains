@@ -87,10 +87,8 @@ s_e_Xoa3_2_sj = Train(
         cc2_replace=colours["REDBROWN"]
     ),
     purchase_sprite_towed_id='s_e_Xoa3_2_sj_car2',
-    company='na',
     introduction_date=date(1948, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'SJ',
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],

@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_type69_PROPS = dict(
     length=11,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(130),
@@ -22,7 +21,6 @@ COMMON_type69_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='norway',
 )
 
 n_o_BM69A_1_nsb = Train(
@@ -37,12 +35,16 @@ n_o_BM69A_1_nsb = Train(
         cc_replace=colours["MAROON"],
         cc2_replace=colours["YELLOW"]
     ),
-    company='na',
+    purchase_sprite_towed_id='n_o_BS69A_1_nsb',
     introduction_date=date(1970, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'NSB',
-        'Use': 'Commuter trains',
-        'Builder': 'Strømmen',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/nsb'],
+        'manufacturer': ['NO/stroemmen'],
     }),
 ).add_articulated_part(
     id='n_o_BS69A_1_nsb',
@@ -73,12 +75,15 @@ n_o_BM69A_2_nsb = Train(
         cc2_replace=colours["GREY10"]
     ),
     purchase_sprite_towed_id='n_o_BS69A_2_nsb',
-    company='na',
     introduction_date=date(1985, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'NSB',
-        'Use': 'Commuter trains',
-        'Builder': 'Strømmen',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/nsb'],
+        'manufacturer': ['NO/stroemmen'],
     }),
 ).add_articulated_part(
     id='n_o_BS69A_2_nsb',
@@ -108,12 +113,16 @@ n_o_BM69A_3_nsb = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY5"]
     ),
-    company='na',
+    purchase_sprite_towed_id='n_o_BS69A_3_nsb',
     introduction_date=date(2005, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Operator': 'NSB',
-        'Use': 'Commuter trains',
-        'Builder': 'Strømmen',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['suburban_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/nsb'],
+        'manufacturer': ['NO/stroemmen'],
     }),
 ).add_articulated_part(
     id='n_o_BS69A_3_nsb',

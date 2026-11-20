@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_44_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -36,12 +35,16 @@ de_s_44_1 = Train(
         cc2_replace=colours["GREY10"]
     ),
     power=1910,
-    country='germany',
-    company='na',
     introduction_date=date(1926, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'Later classed as DB 44',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_442_1',
@@ -68,12 +71,16 @@ de_s_44_2 = Train(
         cc2_replace=colours["GREY10"]
     ),
     power=1910,
-    country='germany',
-    company='na',
     introduction_date=date(1926, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
         'Trivia': 'Later classed as DB 44',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DE/dr'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_442_2',
@@ -100,11 +107,15 @@ de_s_44_3 = Train(
         cc2_replace=colours["GREY10"]
     ),
     power=2101,
-    country='germany',
-    company='na',
     introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_442_3',
@@ -131,11 +142,15 @@ de_s_44_4 = Train(
         cc2_replace=colours["GREY10"]
     ),
     power=2101,
-    country='germany',
-    company='na',
     introduction_date=date(1958, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Freight',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['freight'],
+        'power': ['steam'],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='de_s_442_4',

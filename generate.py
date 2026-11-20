@@ -61,7 +61,7 @@ from code.standard_gauge.dkregiosprinter import dk_d_lm21_1, dk_d_lm21_2
 from code.standard_gauge.dkic2 import d_d_ic2_1_dsb, d_d_ic2_2_dsb
 from code.standard_gauge.dkmq import d_d_mq2_1_dsb, d_d_mq2_2_dsb, d_d_mq2_3_dsb, d_d_mq2_4_dsb, d_d_mq2_5_dsb, d_d_mq2_6_dsb, d_d_mq2_7_dsb, d_d_mq2_8_dsb, d_d_mq2_9_dsb, d_d_mq2_10_dsb, d_d_mq2_11_dsb
 from code.standard_gauge.dkmpmg import d_d_mp2_1_dsb, d_d_mp2_2_dsb, d_d_mg_1_dsb, d_d_mg_2_dsb
-from code.standard_gauge.öcj25 import s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2
+from code.standard_gauge.seöcj25 import s_d_ÖCJ25_1_1, s_d_ÖCJ25_1_2, s_d_ÖCJ25_2_1, s_d_ÖCJ25_2_2
 from code.standard_gauge.notype64 import n_e_type64_1_nsb
 from code.standard_gauge.sexoa3 import s_e_Xoa3_1_bj, s_e_Xoa3_2_sj
 from code.standard_gauge.sexoa4 import se_e_Xa_1, s_e_Xoa4_1_sj, s_e_Xoa4_2_sj, s_e_Cox4_1_sj, s_e_Cox4_2_sj, se_p_XmCDFo_1, se_p_XmCDFo_2
@@ -71,9 +71,9 @@ from code.standard_gauge.sex606162 import s_e_x60_1_sj, s_e_x61_1_sj, s_e_x61_2_
 from code.standard_gauge.notype69 import n_o_BM69A_1_nsb, n_o_BM69A_2_nsb, n_o_BM69A_3_nsb
 from code.standard_gauge.dkir4 import d_e_er_1_dsb, d_e_er_2_dsb, d_e_er_3_dsb, d_e_er_4_dsb
 from code.standard_gauge.seøt import d_e_et_1_dsb, d_e_et_1_sj, d_e_et_2_sj, d_e_et_2_dsb
-from code.standard_gauge.HKB_Wes_1 import n_o_Wes_1_hkb
+from code.standard_gauge.noHKB_Wes_1 import n_o_Wes_1_hkb
 from code.standard_gauge.dkstog1 import d_e_stog1_1_dsb, d_e_stog1_2_dsb, d_e_stog1_3_dsb, d_e_stog1_4_dsb, d_e_stog1_5_dsb
-from code.standard_gauge.OS_T import n_o_T_1_os, n_o_T_2_os
+from code.standard_gauge.noOS_T import n_o_T_1_os, n_o_T_2_os
 from code.standard_gauge.dkstog2 import d_e_stog2_1_dsb, d_e_stog2_2_dsb, d_e_stog2_9_dsb, d_e_stog2_3_dsb, d_e_stog2_4_dsb, d_e_stog2_5_dsb, d_e_stog2_6_dsb, d_e_stog2_7_dsb, d_e_stog2_8_dsb, d_e_stog2_10_dsb, d_e_stog2_11_dsb, d_e_stog2_12_dsb
 from code.standard_gauge.dkstog3 import d_e_stog3_1_dsb, d_e_stog3_2_dsb, d_e_stog3_3_dsb, d_e_stog3_4_dsb
 from code.standard_gauge.dkstog4 import d_e_stog4_1_dsb, d_e_stog4_2_dsb, d_e_stog4_3_dsb, d_e_stog4_4_dsb, d_e_stog4_5_dsb
@@ -148,165 +148,17 @@ from code.standard_gauge.nocmb14a import no_d_cmb14a_1
 from code.standard_gauge.notype49å import no_s_49_1
 from code.standard_gauge.sessnj import se_e_xf_1
 from code.standard_gauge.sec20 import se_e_C20_1, se_e_C20u_1
+from code.standard_gauge.se_other import s_s_N_ii_1_sj, s_s_Sa_sj, s_w_Hbis_sj, s_w_Gblssy_2_gc
 from code.standard_gauge.chrbe44 import ch_e_cfe44_1, ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3, ch_e_rabde1212_1, ch_e_rabde1212_2, ch_e_rabde816_1, ch_e_rabde816_2
 
-s_s_N_ii_1_sj = Train(
-    id='s_s_N_ii_1_sj',
-    name='њSJ N II',
-    length=5,
-    liveries={
-        'Default': Livery('1900_SE_N_II_1.png', cc_replace=colours["GREY10"], cc2_replace=colours["GREY10"]),
-        '2CC': Livery('1900_SE_N_II_1.png', auto_cc=lib.CC_DEFAULT),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    engine_class=Train.EngineClass.STEAM,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(45),
-    power=560,
-    introduction_date=date(1900, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=55,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-    }),
-    badges=badges.set_train_badges({
-        'flag': ['SE'],
-        'role': ['shunting'],
-        'power': [],
-        'operator': ['SE/sj'],
-        'manufacturer': [],
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},},
-)
-
-s_s_Sa_sj = Train(
-    id='s_s_Sa_sj',
-    name='њSJ S',
-    length=6,
-    liveries=make_psd_cc_liveries(
-        'pp/1908_SE_Sa.psd',
-        shading='Sa',
-        paint='SJ',
-        overlay=('Lights'),
-        cc_replace=colours["GREY10"],
-        cc2_replace=colours["GREY10"]
-    ),
-    misc_flags=Train.Flags.USE_2CC,
-    engine_class=Train.EngineClass.STEAM,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(80),
-    power=785,
-    introduction_date=date(1908, 1, 1),
-    vehicle_life=30,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=60,
-    tractive_effort_coefficient=80,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=25,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    additional_text=grf.fake_vehicle_info({
-    }),
-    badges=badges.set_train_badges({
-        'flag': ['SE'],
-        'role': ['express_passenger', 'regional_passenger', 'freight'],
-        'power': [],
-        'operator': ['SE/sj'],
-        'manufacturer': [],
-    }),
-    callbacks={'properties': {'cargo_capacity': 0},},
-)
-
-s_w_Gblssy_2_gc = Train(
-    id='s_w_Gblssy_2_gc',
-    name='љњGC Gblss-y',
-    length=7,
-    liveries={
-        'Default': Livery('2000_SE_Gblssy_2_2000.png'),
-        '2CC': Livery('2000_SE_Gblssy_2_2000.png', mask='2000_SE_Gblssy_2_2000_MASK.png'),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(160),
-    power=0,
-    introduction_date=date(2000, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=17,
-    tractive_effort_coefficient=79,
-    running_cost_factor=200,
-    cargo_capacity=1,
-    cost_factor=200,
-    refittable_cargo_classes=grf.CargoClass.MAIL,
-    loading_speed=10,
-    additional_text=grf.fake_vehicle_info({
-    }),
-    badges=badges.set_train_badges({
-        'flag': ['SE'],
-        'role': ['mail',],
-        'power': [],
-        'operator': ['SE/posten', 'SE/gc'],
-        'manufacturer': [],
-    }),
-    callbacks={
-        'cargo_capacity': Train.sw_capacity_calculaiton(22.4, g)
-    }
-)
-
-s_w_Hbis_sj = Train(
-    id='s_w_Hbis_sj',
-    name='љњSJ Hbis',
-    length=7,
-    liveries={
-        'Default': Livery('1972_SE_Hbis_1972.png', cc_replace=colours["REDBROWN"], cc2_replace=colours["REDBROWN"]),
-        '2CC': Livery('1972_SE_Hbis_1972.png', auto_cc=lib.CC_DEFAULT),
-        '2CC alt': Livery('1972_SE_Hbis_1972.png', auto_cc=lib.CC_SWAPPED),
-    },
-    misc_flags=Train.Flags.USE_2CC,
-    engine_class=Train.EngineClass.DIESEL,
-    track_type=standard_gauge,
-    max_speed=Train.kmhish(100),
-    power=0,
-    introduction_date=date(1972, 1, 1),
-    vehicle_life=8,
-    model_life=144,
-    climates_available=grf.ALL_CLIMATES,
-    weight=17,
-    tractive_effort_coefficient=79,
-    running_cost_factor=200,
-    cargo_capacity=1, 
-    cost_factor=200,
-    refittable_cargo_classes=grf.CargoClass.PIECE_GOODS + grf.CargoClass.EXPRESS,
-    loading_speed=10,
-    additional_text=grf.fake_vehicle_info({
-    }),
-    badges=badges.set_train_badges({
-        'flag': ['SE', 'europe'],
-        'role': ['freight',],
-        'power': [],
-        'operator': [],
-        'manufacturer': [],
-    }),
-    callbacks={
-        'cargo_capacity': Train.sw_capacity_calculaiton(25, g)
-    }
-)
 
 PURCHASE_ICONS_DIR = 'purchase list'
 DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
-g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 2}))
+# Makes "mail" lighter and take up less space DO NOT REMOVE!!!
+g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 1, 'capacity_multiplier': 0x800}))
 
 def purchase_icons(sprites):
     action1 = [grf.Action1(badge.BADGES, len(sprites), 1)]

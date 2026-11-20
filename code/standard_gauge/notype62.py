@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, standard_gauge_15kv, badges
 
 COMMON_type62_PROPS = dict(
     length=10,
     misc_flags=Train.Flags.MULTIPLE_UNIT + Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=standard_gauge_15kv,
     max_speed=Train.kmhish(70),
@@ -22,7 +21,6 @@ COMMON_type62_PROPS = dict(
     loading_speed=10,
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    country='norway',
 )
 
 no_e_type62_1 = Train(
@@ -36,9 +34,14 @@ no_e_type62_1 = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    company='na',
     introduction_date=date(1931, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['NO/nsb'],
+        'manufacturer': [],
     }),
 )

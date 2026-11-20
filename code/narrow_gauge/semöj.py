@@ -2,7 +2,7 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, extra_narrow_gauge, extra_narrow_gauge_15kv
+from common import Train, colours, make_psd_cc_liveries, extra_narrow_gauge, extra_narrow_gauge_15kv, badges, g
 
 #This .py-file is intended for MÖJ (Mellersta Östergötlands Järnvägar) vehicles and related
 
@@ -20,9 +20,6 @@ s_d_Dx1_1_möj = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(40),
@@ -40,7 +37,13 @@ s_d_Dx1_1_möj = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -56,9 +59,6 @@ s_d_Dx2_1_möj = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(30),
@@ -76,8 +76,14 @@ s_d_Dx2_1_möj = Train(
     callbacks={'properties': {'cargo_capacity': 0},},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Universal',
         'Trivia': 'Two were built for MÖJ but for unknown reasons the second one was rebuilt for metre-gauge and sent to work in Tunisia'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -86,7 +92,6 @@ s_d_Dx2_1_möj = Train(
 COMMON_MÖJ1_PROPS = dict(
     length=5,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(40),
@@ -101,7 +106,6 @@ COMMON_MÖJ1_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='sweden',
 )
 
 s_e_MÖJ_2to5_1_möj = Train( #Add reversing graphics
@@ -117,18 +121,22 @@ s_e_MÖJ_2to5_1_möj = Train( #Add reversing graphics
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    company='na',
     introduction_date=date(1915, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Universal',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['freight', 'regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_MÖJ2_PROPS = dict(
     length=5,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC, 
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(70),
@@ -143,7 +151,6 @@ COMMON_MÖJ2_PROPS = dict(
     cost_factor=25,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     callbacks={'properties': {'cargo_capacity': 0},},
-    country='sweden',
 )
 
 s_e_MÖJ_2to5_2_möj = Train(
@@ -159,12 +166,16 @@ s_e_MÖJ_2to5_2_möj = Train(
         cc_replace=colours["BROWN"],
         cc2_replace=colours["BROWN"]
     ),
-    company='na',
     introduction_date=date(1936, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Operator': 'MÖJ',
-        'Use': 'Local passenger',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -182,9 +193,6 @@ s_d_X1_1_vb = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(60),
@@ -202,8 +210,14 @@ s_d_X1_1_vb = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
         'Trivia': 'In the early 1940s it was rebuilt into a regular carriage'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': ['diesel'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -219,9 +233,6 @@ s_d_X2_1_vb = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(60),
@@ -233,14 +244,25 @@ s_d_X2_1_vb = Train(
     weight=27,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=0,  #Resgods: 5t (irl stats)
     cost_factor=25,
-    loading_speed=10,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    callbacks={'properties': {'cargo_capacity': 0},},
+    cargo_capacity=5,  #Resgods: 5t (irl stats)
+    refittable_cargo_classes=(grf.CargoClass.MAIL),
+    non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+    loading_speed=20,
+    callbacks={'properties': {
+            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(5, g),
+    },},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'amenity': ['luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -256,9 +278,6 @@ s_d_X3_1_vb = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(60),
@@ -270,14 +289,35 @@ s_d_X3_1_vb = Train(
     weight=27,
     tractive_effort_coefficient=80,
     running_cost_factor=200,
-    cargo_capacity=0,  #Resgods: 3t, mail: 2t (irl stats)
     cost_factor=25,
-    loading_speed=10,
-    refittable_cargo_classes=grf.CargoClass.PASSENGERS,
-    callbacks={'properties': {'cargo_capacity': 0},},
+    loading_speed=20,
+    cargo_capacity=2,  #Resgods: 3t, mail: 2t (irl stats)
+    refittable_cargo_classes=(grf.CargoClass.MAIL),
+    non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    cargo_allow_refit=[g.get_cargo_id("MAIL")],
+    callbacks={'properties': {
+            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(2, g),
+    },},
+    #mid_stats={
+    #    'cargo_capacity': 3,
+    #    'refittable_cargo_classes': (grf.CargoClass.MAIL),
+    #    'non_refittable_cargo_classes': (grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
+    #    'cargo_allow_refit': [g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
+    #    'loading_speed': 20,
+    #    'callbacks': {
+    #        'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(3, g),
+    #    },
+    #},
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'mail'],
+        'amenity': ['luggage'],
+        'power': ['diesel'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -293,9 +333,6 @@ s_d_X1_1_vsbj = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(40), #Top speed: 65 km/h
@@ -313,8 +350,15 @@ s_d_X1_1_vsbj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
         'Trivia': 'In 1944 it was rebuilt into a regular carriage'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': ['diesel'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -330,9 +374,6 @@ s_d_MÖJ4_1_möj = Train(
         cc2_replace=colours["SEBROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
     max_speed=Train.kmhish(60), #Top speed: 75 km/h
@@ -350,8 +391,15 @@ s_d_MÖJ4_1_möj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
         'Trivia': 'Notoriusly unreliable'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': ['diesel'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -369,9 +417,6 @@ s_e_MÖJ1_1_möj = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(35),
@@ -389,8 +434,15 @@ s_e_MÖJ1_1_möj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Universal',
         'Trivia': 'It initially had two axles but a third unpowered axle was quickly added to reduce the axle load'
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger', 'freight'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -406,9 +458,6 @@ s_e_MÖJ6_1_möj = Train(
         cc2_replace=colours["BROWN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(70),
@@ -426,7 +475,14 @@ s_e_MÖJ6_1_möj = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -442,9 +498,6 @@ se_e_Yo3a_1 = Train(
         cc2_replace=colours["BLUE"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(80),
@@ -462,7 +515,14 @@ se_e_Yo3a_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -478,9 +538,6 @@ se_e_Yoa1p_1 = Train(
         cc2_replace=colours["DGREEN"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='15kv',
     engine_class=Train.EngineClass.ELECTRIC,
     track_type=extra_narrow_gauge_15kv,
     max_speed=Train.kmhish(80),
@@ -498,7 +555,14 @@ se_e_Yoa1p_1 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Gauge': '891mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': ['electric/ac/15kv'],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )
 
@@ -517,9 +581,6 @@ se_p_BCo_2 = Train(
         ),
     engine_class=Train.EngineClass.DIESEL,
     track_type=extra_narrow_gauge,
-    country='sweden',
-    company='na',
-    power_type='na',
     max_speed=Train.kmhish(70),
     power=0,
     introduction_date=date(1897, 1, 1),
@@ -535,6 +596,13 @@ se_p_BCo_2 = Train(
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
         'Guage': '891mm',
-        'Use': 'Local passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['SE/moej'],
+        'manufacturer': [],
     }),
 )

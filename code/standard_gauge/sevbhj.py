@@ -38,7 +38,8 @@ se_d_MCo_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['3rd_class', 'luggage'],
+        'role': ['regional_passenger'],
+        'amenity': ['luggage'],
         'power': ['diesel'],
         'operator': ['SE/vbhj'],
         'manufacturer': [],
@@ -72,9 +73,6 @@ se_p_BCo_1 = Train( #ЉDo not add to generate.py until the capacity has been est
         cc2_replace=colours["DCREAM"]
     ),
     misc_flags=Train.Flags.USE_2CC,
-    country='sweden',
-    company='na',
-    power_type='diesel',
     engine_class=Train.EngineClass.DIESEL,
     track_type=standard_gauge,
     max_speed=Train.kmhish(100),
@@ -91,6 +89,12 @@ se_p_BCo_1 = Train( #ЉDo not add to generate.py until the capacity has been est
     loading_speed=10,
     refittable_cargo_classes=grf.CargoClass.PASSENGERS,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class, 3rd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['SE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['SE/vbhj'],
+        'manufacturer': [],
     }),
 )

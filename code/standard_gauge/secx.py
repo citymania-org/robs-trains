@@ -222,7 +222,6 @@ s_e_C4_2_sl = Train(
         cc2_replace=colours["GREY1"]
     ),
     purchase_sprite_towed_id='s_e_C4_1_sl_car2',
-    company='sl',
     introduction_date=date(1985, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Trivia': '''200 were built between 1960 and 1967. They were lighter than their predecessors''',
@@ -512,7 +511,6 @@ s_e_C6_4_sl = Train(
         cc2_replace=colours["GREY1"]
     ),
     purchase_sprite_towed_id='s_e_C6_4_sl_car2',
-    company='sl',
     introduction_date=date(2009, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Trivia': '''Rebuilt in 2009 to try new seating arrangements with more standing spaces'''

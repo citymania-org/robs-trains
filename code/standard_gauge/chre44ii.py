@@ -153,8 +153,6 @@ ch_e_re44ii_6 = Train(
         cc_replace=colours["DBRED"],
         cc2_replace=colours["DCREAM"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(1969, 1, 1),
     additional_text=grf.fake_vehicle_info({
         'Trivia': 'Used on the TEE',

@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import g, Train, colours, make_psd_cc_liveries, standard_gauge
+from common import g, Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_nwagen_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -34,12 +33,16 @@ de_p_nwagen_a1 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["GREY3"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1959, 1, 1),
     cargo_capacity=78,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -54,12 +57,16 @@ de_p_nwagen_a2 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["COBALT"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1975, 1, 1),
     cargo_capacity=78,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -74,12 +81,16 @@ de_p_nwagen_a3 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["GREY3"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1978, 1, 1),
     cargo_capacity=78,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -94,12 +105,17 @@ de_p_nwagen_a4 = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1984, 1, 1),
     cargo_capacity=78,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st & 2nd class with café',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': ['cafe'],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -114,12 +130,17 @@ de_p_nwagen_a5 = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1984, 1, 1),
     cargo_capacity=78,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -134,12 +155,17 @@ de_p_nwagen_a6 = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1987, 1, 1),
     cargo_capacity=78,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -154,12 +180,17 @@ de_p_nwagen_a7 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1996, 1, 1),
     cargo_capacity=78,
     additional_text=grf.fake_vehicle_info({
-        'Use': '1st & 2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -174,12 +205,17 @@ de_p_nwagen_b1 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["GREY3"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1959, 1, 1),
     cargo_capacity=96,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -194,12 +230,17 @@ de_p_nwagen_b2 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["COBALT"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1975, 1, 1),
     cargo_capacity=96,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -214,12 +255,17 @@ de_p_nwagen_b3 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["GREY3"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1978, 1, 1),
     cargo_capacity=96,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -234,12 +280,17 @@ de_p_nwagen_b4 = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1984, 1, 1),
     cargo_capacity=96,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -254,12 +305,17 @@ de_p_nwagen_b5 = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1987, 1, 1),
     cargo_capacity=96,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
@@ -274,19 +330,23 @@ de_p_nwagen_b6 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1996, 1, 1),
     cargo_capacity=96,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
     }),
 )
 
 COMMON_nwagens_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -313,12 +373,18 @@ de_p_nwagen_s1 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["GREY3"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1959, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -333,12 +399,18 @@ de_p_nwagen_s2 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["COBALT"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1975, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -353,12 +425,18 @@ de_p_nwagen_s3 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["GREY3"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1971, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -373,12 +451,18 @@ de_p_nwagen_s4 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["GREY3"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1971, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -393,12 +477,18 @@ de_p_nwagen_s5 = Train(
         cc_replace=colours["GREY3"],
         cc2_replace=colours["COBALT"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1975, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -413,12 +503,18 @@ de_p_nwagen_s6 = Train(
         cc_replace=colours["ORANGE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1984, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -433,12 +529,18 @@ de_p_nwagen_s7 = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1987, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -453,12 +555,18 @@ de_p_nwagen_s8 = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1987, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -473,12 +581,18 @@ de_p_nwagen_s9 = Train(
         cc_replace=colours["TURQUOISE"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1994, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -493,12 +607,18 @@ de_p_nwagen_s10 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1996, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -513,12 +633,18 @@ de_p_nwagen_s11 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1996, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )
 
@@ -533,11 +659,17 @@ de_p_nwagen_s12 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY1"]
     ),
-    country='germany',
-    company='na',
     introduction_date=date(1996, 1, 1),
     cargo_capacity=66,
     additional_text=grf.fake_vehicle_info({
-        'Use': '2nd class DVT',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['DE'],
+        'role': ['regional_passenger', 'driving_cab'],
+        'amenity': [],
+        'power': [],
+        'operator': ['DE/db'],
+        'manufacturer': [],
+        'attribute': ['push-pull'],
     }),
 )

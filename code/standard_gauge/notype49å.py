@@ -2,12 +2,11 @@ import grf, lib
 
 from datetime import date
 
-from common import Train, colours, make_psd_cc_liveries, standard_gauge
+from common import Train, colours, make_psd_cc_liveries, standard_gauge, badges
 
 COMMON_49_PROPS = dict(
     length=6,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='steam',
     engine_class=Train.EngineClass.STEAM, 
     track_type=standard_gauge,
     vehicle_life=30,
@@ -35,12 +34,16 @@ no_s_49_1 = Train(
         cc_replace=colours["GREY10"],
         cc2_replace=colours["GREY10"]
     ),
-    country='norway',
-    company='na',
     max_speed=Train.kmhish(90),
     introduction_date=date(1935, 1, 1),
     additional_text=grf.fake_vehicle_info({
-        'Use': 'Express passengers',
+    }),
+    badges=badges.set_train_badges({
+        'flag': ['NO'],
+        'role': ['express_passenger'],
+        'power': ['steam'],
+        'operator': ['NO/nsb'],
+        'manufacturer': [],
     }),
 ).add_articulated_part(
     id='no_s_49_2',

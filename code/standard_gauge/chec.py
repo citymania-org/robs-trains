@@ -215,8 +215,6 @@ ch_p_ec_7 = Train(
         cc_replace=colours["SLBLUE"],
         cc2_replace=colours["GREY9"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2004, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
@@ -243,8 +241,6 @@ ch_p_ec_12 = Train(
         cc_replace=colours["GREY5"],
         cc2_replace=colours["GREY9"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2009, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
@@ -272,8 +268,6 @@ ch_p_ec_8 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2021, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=77,
@@ -292,7 +286,6 @@ ch_p_ec_8 = Train(
 COMMON_pw_PROPS = dict(
     length=12,
     misc_flags=Train.Flags.USE_2CC,
-    power_type='na',
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -344,8 +337,6 @@ ch_p_ec_10 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["GREY10"]
     ),
-    country='switzerland',
-    company='na',
     introduction_date=date(2000, 1, 1),
     max_speed=Train.kmhish(200),
     cargo_capacity=54,
