@@ -599,7 +599,8 @@ d_e_stog2_5_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['suburban_passenger', 'bike'],
+        'role': ['suburban_passenger'],
+        'amenity': ['bike'],'amenity': ['luggage'],
         'power': ['electric/dc/1500v'],
         'operator': ['DK/dsb', 'DK/dsb/stog'],
         'manufacturer': []
@@ -657,7 +658,8 @@ d_e_stog2_6_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['suburban_passenger', 'bike'],
+        'role': ['suburban_passenger'],
+        'amenity': ['bike'],
         'power': ['electric/dc/1500v'],
         'operator': ['DK/dsb', 'DK/dsb/stog'],
         'manufacturer': []

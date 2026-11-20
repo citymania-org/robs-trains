@@ -334,7 +334,8 @@ ch_p_ewi_26 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -360,7 +361,8 @@ ch_p_ewi_27 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -386,7 +388,8 @@ ch_p_ewi_28 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -412,7 +415,8 @@ ch_p_ewi_29 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -438,7 +442,8 @@ ch_p_ewi_30 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -464,7 +469,8 @@ ch_p_ewi_31 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -512,7 +518,8 @@ ch_p_ewi_22 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -536,7 +543,8 @@ ch_p_ewi_23 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -560,7 +568,8 @@ ch_p_ewi_24 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -584,7 +593,8 @@ ch_p_ewi_25 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []

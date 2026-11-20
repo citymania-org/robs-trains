@@ -52,7 +52,8 @@ se_e_Xa_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'role': ['regional_passenger', '3rd_class'],
+        'amenity': ['luggage'],
         'power': ['electric/ac/15kv'],
         'operator': ['SE/dj'],
         'manufacturer': ['SE/asea'],
@@ -78,7 +79,8 @@ s_e_Xoa4_1_sj = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'role': ['regional_passenger', '3rd_class'],
+        'amenity': ['luggage'],
         'power': ['electric/ac/15kv'],
         'operator': ['SE/sj'],
         'manufacturer': ['SE/asea'],
@@ -103,7 +105,8 @@ s_e_Xoa4_2_sj = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'role': ['regional_passenger', '3rd_class'],
+        'amenity': ['luggage'],
         'power': ['electric/ac/15kv'],
         'operator': ['SE/sj'],
         'manufacturer': ['SE/asea'],
@@ -146,7 +149,8 @@ s_e_Cox4_1_sj = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'role': ['regional_passenger', '3rd_class'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['SE/sj'],
         'manufacturer': ['SE/asea'],
@@ -170,7 +174,8 @@ s_e_Cox4_2_sj = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'role': ['regional_passenger', '3rd_class'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['SE/sj'],
         'manufacturer': ['SE/asea'],
@@ -224,7 +229,8 @@ se_p_XmCDFo_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'role': ['regional_passenger', '3rd_class'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['SE/dj'],
         'manufacturer': ['SE/asea'],
@@ -247,7 +253,8 @@ se_p_XmCDFo_2 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', '3rd_class', 'luggage'],
+        'role': ['regional_passenger', '3rd_class'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['SE/sj'],
         'manufacturer': ['SE/asea'],

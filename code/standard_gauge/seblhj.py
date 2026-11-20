@@ -41,7 +41,8 @@ se_e_blhj6_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['express_passenger', 'regional_passenger', 'freight', 'luggage'],
+        'role': ['express_passenger', 'regional_passenger', 'freight'],
+        'amenity': ['luggage'],
         'power': ['electric/ac/15kv'],
         'operator': ['SE/blhj'],
         'manufacturer': [],

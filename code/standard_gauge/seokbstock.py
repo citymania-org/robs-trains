@@ -111,7 +111,8 @@ se_p_BCort_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['restaurant_car'],
+        'role': ['express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['SE/okb'],
         'manufacturer': [''],
@@ -149,7 +150,8 @@ se_p_Ro2b_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['restaurant_car'],
+        'role': ['express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['SE/okb'],
         'manufacturer': [''],
@@ -190,7 +192,8 @@ se_w_121to122_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['luggage'],
+        'role': ['regional_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['SE/okb'],
         'manufacturer': [''],
@@ -231,7 +234,8 @@ se_w_F3_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['luggage'],
+        'role': ['regional_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['SE/okb'],
         'manufacturer': [''],
