@@ -3789,7 +3789,14 @@
             "flag/SI ": 511,
             "flag/SK ": 512,
             "flag/soviet_union": 513,
-            "flag/yugoslavia": 514
+            "flag/yugoslavia": 514,
+            "amenity": 515,
+            "amenity/luggage": 516,
+            "amenity/bike": 517,
+            "amenity/restaurant": 518,
+            "amenity/cafe": 519,
+            "amenity/sleeper": 520,
+            "amenity/panoramic": 521
         }
     }
 }

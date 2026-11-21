@@ -112,7 +112,7 @@ de_p_nwagen_a4 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': ['cafe'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
