@@ -98,7 +98,8 @@ d_p_car_1_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'restaurant_car'],
+        'role': ['express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': [],
@@ -137,7 +138,8 @@ d_p_cae_1_dsb = Train(
     },
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': [],
@@ -688,7 +690,8 @@ d_p_bdg_1_dsb = Train(
     },
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': [],
@@ -973,7 +976,8 @@ d_p_cl_7_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['regional_passenger', 'luggage'],
+        'role': ['regional_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['DK/htj'],
         'manufacturer': []
@@ -1005,7 +1009,8 @@ d_p_cl_2_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['regional_passenger', 'luggage'],
+        'role': ['regional_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []

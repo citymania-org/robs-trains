@@ -125,7 +125,8 @@ s_p_YCDFo_1_TRJ = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', 'luggage'],
+        'role': ['regional_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['SE/trj'],
         'manufacturer': [],

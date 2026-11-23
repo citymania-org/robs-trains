@@ -319,7 +319,8 @@ ch_p_ec_9 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['panoramic', '1st_class'],
+        'role': ['express_passenger'],
+        'amenity': ['panoramic'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -345,7 +346,8 @@ ch_p_ec_10 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['panoramic', '1st_class'],
+        'role': ['express_passenger'],
+        'amenity': ['panoramic'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []

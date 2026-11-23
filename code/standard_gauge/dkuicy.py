@@ -94,7 +94,8 @@ d_p_bk_i_1_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'restaurant_car'],
+        'role': ['express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []
@@ -121,7 +122,8 @@ d_p_bk_i_2_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'restaurant_car'],
+        'role': ['express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []
@@ -310,7 +312,8 @@ d_p_bd_1_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []
@@ -348,7 +351,8 @@ d_p_bd_2_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []
@@ -386,7 +390,8 @@ d_p_bd_3_dsb = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['DK'],
-        'role': ['express_passenger', 'luggage', 'restaurant_car'],
+        'role': ['express_passenger'],
+        'amenity': ['restaurant_car', 'luggage'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []
@@ -917,7 +922,8 @@ fr_p_ad_1_sncf = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['FR'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['FR/sncf'],
         'manufacturer': []
@@ -955,7 +961,8 @@ fr_p_ad_2_sncf = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['FR'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['FR/sncf'],
         'manufacturer': []
@@ -993,7 +1000,8 @@ fr_p_ad_3_sncf = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['FR'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['FR/sncf'],
         'manufacturer': []
@@ -1031,7 +1039,8 @@ fr_p_bd_1_sncf = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['FR'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['FR/sncf'],
         'manufacturer': []
@@ -1069,7 +1078,8 @@ fr_p_bd_2_sncf = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['FR'],
-        'role': ['express_passenger', 'luggage'],
+        'role': ['express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['FR/sncf'],
         'manufacturer': []

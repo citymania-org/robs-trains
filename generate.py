@@ -264,6 +264,17 @@ POWER_TYPES = {
 
 badges.set_badges_info('power', 'Propulsion', POWER_TYPES)
 
+AMENITIES = {
+    'luggage': ('Luggage', None),
+    'bike': ('Bike space', None),
+    'restaurant': ('Resturant', None),
+    'cafe': ('Café', None),
+    'sleeper': ('Sleeper', None),
+    'panoramic': ('Panoramic windows', None),
+}
+
+badges.set_badges_info_text_only('amenity', 'Amenity', AMENITIES)
+
 badges.set_badge_info('role', 'Use', None, None)
 badges.set_badge_info('manufacturer', 'Builder', None, None)
 
@@ -285,18 +296,7 @@ badges.set_badge_info('role/metro', 'Metro', None, None) # establised
 # Banverket etc
 badges.set_badge_info('role/utility', 'Works unit', None, None)
 
-#badges.set_badge_info('role/1st_class', '1st class', None, None)
-#badges.set_badge_info('role/2nd_class', '2nd class', None, None)
-#badges.set_badge_info('role/3rd_class', '3rd class', None, None)
-
-badges.set_badge_info('role/luggage', 'Luggage', None, None)
-badges.set_badge_info('role/restaurant_car', 'Resturant', None, None)
 badges.set_badge_info('role/driving_cab', 'Driving trailer', None, None)
-badges.set_badge_info('role/bike', 'Bike space', None, None)
-
-# probably shouldn't be badges
-#badges.set_badge_info('role/charter', 'Charter services', None, None)
-#badges.set_badge_info('role/CH/cisalpino', 'for the Cisalpino service', None, None)
 
 sprites, operator_sets = purchase_icons(COMPANY_SPRITES)
 

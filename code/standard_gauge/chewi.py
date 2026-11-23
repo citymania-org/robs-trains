@@ -334,7 +334,8 @@ ch_p_ewi_26 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -360,7 +361,8 @@ ch_p_ewi_27 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -386,7 +388,8 @@ ch_p_ewi_28 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -412,7 +415,8 @@ ch_p_ewi_29 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -438,7 +442,8 @@ ch_p_ewi_30 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -464,7 +469,8 @@ ch_p_ewi_31 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'restaurant_car'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['restaurant_car'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -473,7 +479,7 @@ ch_p_ewi_31 = Train(
 
 COMMON_ewp_PROPS = dict(
     length=9,
-    misc_flags=Train.Flags.USE_2CC,
+    misc_flags=Train.Flags.USE_2CC + Train.Flags.USE_CARGO_MULT,
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -512,7 +518,8 @@ ch_p_ewi_22 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -536,7 +543,8 @@ ch_p_ewi_23 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -560,7 +568,8 @@ ch_p_ewi_24 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -584,7 +593,8 @@ ch_p_ewi_25 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['CH'],
-        'role': ['regional_passenger', 'express_passenger', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger'],
+        'amenity': ['luggage'],
         'power': [],
         'operator': ['CH/sbb'],
         'manufacturer': []
@@ -593,7 +603,6 @@ ch_p_ewi_25 = Train(
 
 COMMON_ews_PROPS = dict(
     length=11,
-    misc_flags=Train.Flags.USE_2CC,
     engine_class=Train.EngineClass.DIESEL, 
     track_type=standard_gauge,
     power=0,
@@ -619,6 +628,7 @@ ch_p_ewi_12 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC,
     introduction_date=date(1956, 1, 1),
     cargo_capacity=54,
     refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
@@ -647,6 +657,7 @@ ch_p_ewi_13 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC,
     introduction_date=date(1984, 1, 1),
     cargo_capacity=54,
     refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
@@ -675,6 +686,7 @@ ch_p_ewi_14 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC + Train.Flags.USE_CARGO_MULT,
     introduction_date=date(1956, 1, 1),
     cargo_capacity=4,
     refittable_cargo_classes=(grf.CargoClass.MAIL),
@@ -708,6 +720,7 @@ ch_p_ewi_15 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC + Train.Flags.USE_CARGO_MULT,
     introduction_date=date(1984, 1, 1),
     cargo_capacity=4,
     refittable_cargo_classes=(grf.CargoClass.MAIL),
@@ -741,6 +754,7 @@ ch_p_ewi_16 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC,
     introduction_date=date(1965, 1, 1),
     cargo_capacity=48,
     refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
@@ -780,6 +794,7 @@ ch_p_ewi_17 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC,
     introduction_date=date(1984, 1, 1),
     cargo_capacity=48,
     refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
@@ -819,15 +834,16 @@ ch_p_ewi_18 = Train(
         cc_replace=colours["SBB"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC + Train.Flags.USE_CARGO_MULT,
     introduction_date=date(1965, 1, 1),
     cargo_capacity=4,
     refittable_cargo_classes=(grf.CargoClass.MAIL),
     non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
     cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
     loading_speed=20,
-    callbacks={'properties': {
-            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
-    },},
+    callbacks={
+        'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
+    },
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
     }),
@@ -852,15 +868,16 @@ ch_p_ewi_19 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["SBB"],
     ),
+    misc_flags=Train.Flags.USE_2CC + Train.Flags.USE_CARGO_MULT,
     introduction_date=date(1984, 1, 1),
     cargo_capacity=4,
     refittable_cargo_classes=(grf.CargoClass.MAIL),
     non_refittable_cargo_classes=(grf.CargoClass.HAZARDOUS + grf.CargoClass.PASSENGERS),
     cargo_allow_refit=[g.get_cargo_id("MAIL"), g.get_cargo_id("FOOD"), g.get_cargo_id("GOOD")],
     loading_speed=20,
-    callbacks={'properties': {
-            'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
-    },},
+    callbacks={
+        'cargo_capacity': Train.Luggage.sw_capacity_calculaiton_lug(4, g),
+    },
     additional_text=grf.fake_vehicle_info({
         'Loading speed': '20',
     }),
@@ -885,6 +902,7 @@ ch_p_ewi_20 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"],
     ),
+    misc_flags=Train.Flags.USE_2CC,
     introduction_date=date(1984, 1, 1),
     cargo_capacity=48,
     refittable_cargo_classes=(grf.CargoClass.PASSENGERS),
@@ -924,6 +942,7 @@ ch_p_ewi_21 = Train(
         cc_replace=colours["RED"],
         cc2_replace=colours["DBLUE"],
     ),
+    misc_flags=Train.Flags.USE_2CC,
     introduction_date=date(1984, 1, 1),
     cargo_capacity=48,
     refittable_cargo_classes=(grf.CargoClass.PASSENGERS),

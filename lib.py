@@ -1596,7 +1596,7 @@ class Badges(grf.SpriteGenerator):
             self.grf.get_badge_id(c)
             for badge_label in blist:
                 if c == 'role':
-                    if badge_label not in ('heavy_freight', 'freight', 'light_freight', 'shunting', 'international', 'express_passenger', 'regional_passenger', 'suburban_passenger', 'metro', 'utility', 'very_high_speed', 'mail', 'luggage', 'bike', 'driving_cab', 'restaurant_car', '1st_class', '2nd_class', '3rd_class', 'sleeper', 'panoramic'):
+                    if badge_label not in ('heavy_freight', 'freight', 'light_freight', 'shunting', 'international', 'express_passenger', 'regional_passenger', 'suburban_passenger', 'metro', 'utility', 'very_high_speed', 'mail', 'driving_cab', '1st_class', '2nd_class', '3rd_class'):
                         raise ValueError('Unallowed badge: role/', badge_label)
                 self.used_badges.add(f'{c}/{badge_label}')
                 res.append(self.grf.get_badge_id(c+'/'+badge_label))
@@ -1616,6 +1616,11 @@ class Badges(grf.SpriteGenerator):
                 
     def set_badge_info(self, b, name,  action1, action2):
         self.badges[b] = [name, action1, action2]
+
+    def set_badges_info_text_only(self, badge_class, badge_class_name, badge_info):
+        self.set_badge_info(badge_class, badge_class_name, None, None)
+        for bl, info in badge_info.items():
+            self.set_badge_info(f'{badge_class}/{bl}', info[0], None, None)
 
     def set_badges_info(self, badge_class, badge_class_name, badge_info):
         action1 = []

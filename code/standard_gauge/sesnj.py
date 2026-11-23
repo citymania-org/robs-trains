@@ -78,7 +78,8 @@ se_d_SNJ3_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['3rd_class', 'luggage'],
+        'role': ['3rd_class'],
+        'amenity': ['luggage'],
         'power': ['diesel'],
         'operator': ['SE/snj'],
         'manufacturer': [],
@@ -134,7 +135,8 @@ se_d_LyJ10_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['3rd_class', 'luggage'],
+        'role': ['3rd_class'],
+        'amenity': ['luggage'],
         'power': ['diesel'],
         'operator': ['SE/lyj'],
         'manufacturer': [],
@@ -186,7 +188,8 @@ se_d_MCo_2 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['3rd_class', 'luggage'],
+        'role': ['3rd_class'],
+        'amenity': ['luggage'],
         'power': ['diesel'],
         'operator': ['SE/vbhj'],
         'manufacturer': [],
@@ -278,7 +281,8 @@ se_d_MCo_3 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['3rd_class', 'luggage'],
+        'role': ['3rd_class'],
+        'amenity': ['luggage'],
         'power': ['diesel'],
         'operator': ['SE/vbhj'],
         'manufacturer': [],
@@ -330,7 +334,8 @@ se_d_XCo_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['3rd_class', 'luggage'],
+        'role': ['3rd_class'],
+        'amenity': ['luggage'],
         'power': ['diesel'],
         'operator': ['SE/myj'],
         'manufacturer': [],
@@ -380,7 +385,8 @@ se_d_Xod6_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['3rd_class', 'luggage'],
+        'role': ['3rd_class'],
+        'amenity': ['luggage'],
         'power': ['diesel'],
         'operator': ['SE/sj'],
         'manufacturer': [],

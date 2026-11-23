@@ -44,7 +44,8 @@ se_e_xf_1 = Train(
     }),
     badges=badges.set_train_badges({
         'flag': ['SE'],
-        'role': ['regional_passenger', 'express_passenger', 'freight', 'luggage'],
+        'role': ['regional_passenger', 'express_passenger', 'freight'],
+        'amenity': ['luggage'],
         'power': ['electric/dc/1500v'],
         'operator': ['SE/ssnj'],
         'manufacturer': [],
