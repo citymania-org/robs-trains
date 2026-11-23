@@ -157,8 +157,9 @@ DEBUG_DIR = 'debug'
 
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
-# Makes "mail" lighter and take up less space DO NOT REMOVE!!!
-g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 1, 'capacity_multiplier': 0x800}))
+# Makes "mail" lighter DO NOT REMOVE!!!
+# we can't change the capacity multiplier else we risk breaking other sets (which are possibly slightly broken to begin with)
+g.add(grf.Define(feature=grf.CARGO, id=2, props={'weight': 1}))
 
 def purchase_icons(sprites):
     action1 = [grf.Action1(badge.BADGES, len(sprites), 1)]
