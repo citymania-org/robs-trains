@@ -87,7 +87,7 @@ s_d_Yo2_3_SJ = Train(
         'flag': ['SE'],
         'role': ['regional_passenger'],
         'power': ['diesel'],
-        'operator': ['SE/bj'],
+        'operator': ['SE/sj'],
         'manufacturer': [],
     }),
 )

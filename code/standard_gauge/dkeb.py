@@ -98,7 +98,7 @@ at_e_vectron_1 = Train(
         'flag': ['AT'],
         'role': ['freight', 'regional_passenger', 'express_passenger'],
         'power': ['electric/acdc/1500v_3kv_15kv_25kv', 'electric/dc/1500v', 'electric/dc/3kv', 'electric/ac/15kv', 'electric/ac/25kv'],
-        'operator': ['AT/obb'],
+        'operator': ['AT/oebb'],
         'manufacturer': ['siemens'],
     }),
 )

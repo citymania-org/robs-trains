@@ -3796,7 +3796,9 @@
             "amenity/restaurant": 518,
             "amenity/cafe": 519,
             "amenity/sleeper": 520,
-            "amenity/panoramic": 521
+            "amenity/panoramic": 521,
+            "operator/DE/dr": 522,
+            "operator/AT/oebb": 523
         }
     }
 }

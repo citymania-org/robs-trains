@@ -202,27 +202,23 @@ COUNTRIES = {
 badges.set_badges_info('flag', 'Country', COUNTRIES)
 
 COMPANY_SPRITES = {
-    'cmetro': purchase_icon('lcmetro.png'),
-    'øresundståg': purchase_icon('loeresundstaag.png'),
-    'stog': purchase_icon('lstog.png'),
-    'sl': purchase_icon('lsl.png'),
-    'taagab': purchase_icon('ltaagab.png'),
     'sj_70s': purchase_icon('lsj70s.png'),
     'sj_90s': purchase_icon('lsj90s.png'),
     'tgojnew': purchase_icon('ltgojnew.png'),
-    'ss': purchase_icon('lss.png'),
-    'oetraf': purchase_icon('loetraf.png'),
     'tgojold': purchase_icon('ltgojold.png'),
-    'gc': purchase_icon('lgc.png'),
 }
 
 OPERATORS = {
+    'AT/oebb': (g.strings['OEBB_NAME'], None), 
     'BE/nmbs': (g.strings['SNCB_NAME'], None),
     'CH/bls': ('Bern-Lötschberg-Simplon-Bahn', None),
     'CH/sbb': (g.strings['SBB_NAME'], purchase_icon('lsbb.png')),
     'CH/sbb/sbbc': ('SBB Cargo', None),
-    'LU/cfl': ('Société Nationale des Chemins de Fer Luxembourgeois', None),
     'DK/dsb': ('Danske Statsbaner', None),
+    'DK/dsb/stog': (None, purchase_icon('lstog.png')),
+    'DE/db': (g.strings['DB_NAME'], None),
+    'DE/dr': (g.strings['DR_NAME'], None),
+    'LU/cfl': ('Société Nationale des Chemins de Fer Luxembourgeois', None),
     'FR/sncf': ('Société Nationale des Chemins de fer Français', None),
     'SE/swb': ('Stockholm Westerås Bergslagens Järnväg', None),
     'SE/banverket': ('Banverket produktion', purchase_icon('lbanverket.png')),
@@ -238,6 +234,16 @@ OPERATORS = {
     'SE/maelartaag': ('Mälartåg', purchase_icon('lmaelartaag.png')),
     'SE/upptaaget': ('Upptåget', None),
     'SE/x_taaget': ('X-tåget', None),
+    'NO/nsb': ('Norske Statsbaner',  None),
+    'SE/bj': ('Bergslagernas Järnvägar',  None),
+    'SE/sj_ab': ('SJ AB',  purchase_icon('lsj90s.png')),
+    'SE/gc': ('Green Cargo',  purchase_icon('lgc.png')),
+    'SE/taagab': ('Tågåkeriet i bergslagen',  purchase_icon('ltaagab.png')),
+    'SE/sl': ('Storstockholms lokaltrafik',  purchase_icon('lsl.png')),
+    'SE/ss': ('Stockholms spårvägar',  purchase_icon('lss.png')),
+    'SE/oeresundstaag': ('Öresundståg',  purchase_icon('loeresundstaag.png')),
+    'SE/oetraf': ('Östgötatrafiken',  purchase_icon('loetraf.png')),
+    'SE/mtab': ('Malmtrafik AB',  None),
 }
 
 badges.set_badges_info('operator', 'Operator', OPERATORS)
@@ -285,6 +291,7 @@ badges.set_badge_info('manufacturer/SE/asea', 'Allmäna Svenska Elektriska AB', 
 badges.set_badge_info('role/freight', 'Freight', None, None)
 badges.set_badge_info('role/light_freight', 'Light freight', None, None) # not to be used but we don't want two light freight if it is defines by some other set
 badges.set_badge_info('role/shunting', 'Shunting', None, None)
+badges.set_badge_info('role/mail', 'Mail', None, None)
 
 # Passengers
                       #role/international                                # international used in dutch may be used in conjunction with role/express_passenger if provided by other set
@@ -300,30 +307,17 @@ badges.set_badge_info('role/driving_cab', 'Driving trailer', None, None)
 
 sprites, operator_sets = purchase_icons(COMPANY_SPRITES)
 
-badges.set_badge_info('operator/DK/dsb/stog', None, sprites, operator_sets['stog'])
-
-badges.set_badge_info('operator/NO/nsb', 'Norske Statsbaner', None, None)
-
 sw = grf.Switch('intro_date', ranges=[
         grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['sj_70s'])
     ], default=operator_sets['sj_90s'])
 
-badges.set_badge_info('operator/SE/sj', 'Statens Järnvägar', None, sw)
+badges.set_badge_info('operator/SE/sj', 'Statens Järnvägar', sprites, sw)
 
 sw = grf.Switch('intro_date', ranges=[
         grf.Range(0, grf.date_to_days(date(1990, 1, 1)), operator_sets['tgojold'])
     ], default=operator_sets['tgojnew'])
 
 badges.set_badge_info('operator/SE/tgoj', 'Trafikaktiebolaget Grängesberg–Oxelösuns Järnvägar', None, sw)
-badges.set_badge_info('operator/SE/bj', 'Bergslagernas Järnvägar', None, None)
-badges.set_badge_info('operator/SE/sj_ab', 'SJ AB', None, operator_sets['sj_90s'])
-badges.set_badge_info('operator/SE/gc', 'Green Cargo', None, operator_sets['gc'])
-badges.set_badge_info('operator/SE/taagab', 'Tågåkeriet i bergslagen', None, operator_sets['taagab'])
-badges.set_badge_info('operator/SE/sl', 'Storstockholms lokaltrafik', None, operator_sets['sl'])
-badges.set_badge_info('operator/SE/ss', 'Stockholms spårvägar', None, operator_sets['ss'])
-badges.set_badge_info('operator/SE/oeresundstaag', 'Öresundståg', None, operator_sets['øresundståg'])
-badges.set_badge_info('operator/SE/oetraf', 'Östgötatrafiken', None, operator_sets['oetraf'])
-badges.set_badge_info('operator/SE/mtab', 'Malmtrafik AB', None, None)
 
 badges.find_missing()
 

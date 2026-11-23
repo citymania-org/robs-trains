@@ -1,4 +1,8 @@
 ##grflangid 0x02
 
+
+STR_DB_NAME                 :Deutsche Bundesbahn
+STR_DR_NAME                 :Deutsche Reichsbahn
 STR_SBB_NAME                :Schweizerische Bundesbahnen
 STR_SNCB_NAME               :Nationale Gesellschaft der Belgischen Eisenbahnen
+STR_OEBB_NAME               :Österreichische Bundesbahnen
