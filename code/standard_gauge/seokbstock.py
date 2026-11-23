@@ -112,7 +112,7 @@ se_p_BCort_1 = Train(
     badges=badges.set_train_badges({
         'flag': ['SE'],
         'role': ['express_passenger'],
-        'amenity': ['restaurant_car'],
+        'amenity': ['restaurant'],
         'power': [],
         'operator': ['SE/okb'],
         'manufacturer': [''],
@@ -151,7 +151,7 @@ se_p_Ro2b_1 = Train(
     badges=badges.set_train_badges({
         'flag': ['SE'],
         'role': ['express_passenger'],
-        'amenity': ['restaurant_car'],
+        'amenity': ['restaurant'],
         'power': [],
         'operator': ['SE/okb'],
         'manufacturer': [''],

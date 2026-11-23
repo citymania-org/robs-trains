@@ -95,7 +95,7 @@ d_p_bk_i_1_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['express_passenger'],
-        'amenity': ['restaurant_car'],
+        'amenity': ['restaurant'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []
@@ -123,7 +123,7 @@ d_p_bk_i_2_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['express_passenger'],
-        'amenity': ['restaurant_car'],
+        'amenity': ['restaurant'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []
@@ -391,7 +391,7 @@ d_p_bd_3_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['express_passenger'],
-        'amenity': ['restaurant_car', 'luggage'],
+        'amenity': ['restaurant', 'luggage'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': []

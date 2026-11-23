@@ -99,7 +99,7 @@ d_p_car_1_dsb = Train(
     badges=badges.set_train_badges({
         'flag': ['DK'],
         'role': ['express_passenger'],
-        'amenity': ['restaurant_car'],
+        'amenity': ['restaurant'],
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': [],

@@ -1598,6 +1598,7 @@ class Badges(grf.SpriteGenerator):
                 if c == 'role':
                     if badge_label not in ('heavy_freight', 'freight', 'light_freight', 'shunting', 'international', 'express_passenger', 'regional_passenger', 'suburban_passenger', 'metro', 'utility', 'very_high_speed', 'mail', 'driving_cab', '1st_class', '2nd_class', '3rd_class'):
                         raise ValueError('Unallowed badge: role/', badge_label)
+                assert badge_label != 'restaurant_car'
                 self.used_badges.add(f'{c}/{badge_label}')
                 res.append(self.grf.get_badge_id(c+'/'+badge_label))
         return res
