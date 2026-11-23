@@ -75,7 +75,7 @@ se_p_BCo6b_1 = Train(
         'flag': ['SE'],
         'role': ['express_passenger'],
         'power': [],
-        'operator': ['SE/okb'],
+        'operator': ['SE/sj'],
         'manufacturer': [''],
     }),
 )
@@ -153,7 +153,7 @@ se_p_Ro2b_1 = Train(
         'role': ['express_passenger'],
         'amenity': ['restaurant'],
         'power': [],
-        'operator': ['SE/okb'],
+        'operator': ['SE/sj'],
         'manufacturer': [''],
     }),
 )
