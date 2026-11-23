@@ -51,6 +51,7 @@ d_p_ic5_1_dsb = Train(
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 ).add_articulated_part(
     id='d_p_ic52_1_dsb',
@@ -137,6 +138,7 @@ d_p_ic5_2_dsb = Train(
         'power': [],
         'operator': ['DK/dsb'],
         'manufacturer': [],
+        'attribute': ['push_pull'],
     }),
 ).add_articulated_part(
     id='d_p_ic52_2_dsb',

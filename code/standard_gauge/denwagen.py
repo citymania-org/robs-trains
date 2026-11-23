@@ -373,7 +373,7 @@ de_p_nwagen_s1 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -398,7 +398,7 @@ de_p_nwagen_s2 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -423,7 +423,7 @@ de_p_nwagen_s3 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -448,7 +448,7 @@ de_p_nwagen_s4 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -473,7 +473,7 @@ de_p_nwagen_s5 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -498,7 +498,7 @@ de_p_nwagen_s6 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -523,7 +523,7 @@ de_p_nwagen_s7 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -548,7 +548,7 @@ de_p_nwagen_s8 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -573,7 +573,7 @@ de_p_nwagen_s9 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -598,7 +598,7 @@ de_p_nwagen_s10 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -623,7 +623,7 @@ de_p_nwagen_s11 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )
 
@@ -648,6 +648,6 @@ de_p_nwagen_s12 = Train(
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
-        'attribute': ['push-pull'],
+        'attribute': ['push_pull'],
     }),
 )

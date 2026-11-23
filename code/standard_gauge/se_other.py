@@ -33,7 +33,7 @@ s_s_N_ii_1_sj = Train(
     badges=badges.set_train_badges({
         'flag': ['SE'],
         'role': ['shunting'],
-        'power': [],
+        'power': ['steam'],
         'operator': ['SE/sj'],
         'manufacturer': [],
     }),
@@ -72,7 +72,7 @@ s_s_Sa_sj = Train(
     badges=badges.set_train_badges({
         'flag': ['SE'],
         'role': ['express_passenger', 'regional_passenger', 'freight'],
-        'power': [],
+        'power': ['steam'],
         'operator': ['SE/sj'],
         'manufacturer': [],
     }),
