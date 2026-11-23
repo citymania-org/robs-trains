@@ -40,7 +40,7 @@ fr_e_pse_1_sncf = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['very_high_speed', 'express_passenger'],
-        'power': ['electric/acdc/1500v_15kv_25kv'],
+        'power': ['electric/acdc/1500v_15kv_25kv', 'electric/dc/1500v', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': []
     }),
@@ -183,7 +183,7 @@ fr_e_pse_2_sncf = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['very_high_speed', 'express_passenger'],
-        'power': ['electric/acdc/1500v_15kv_25kv'],
+        'power': ['electric/acdc/1500v_15kv_25kv', 'electric/dc/1500v', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': []
     }),
@@ -326,7 +326,7 @@ fr_e_pse_3_sncf = Train(
     badges=badges.set_train_badges({
         'flag': ['FR'],
         'role': ['very_high_speed', 'express_passenger'],
-        'power': ['electric/acdc/1500v_15kv_25kv'],
+        'power': ['electric/acdc/1500v_15kv_25kv', 'electric/dc/1500v', 'electric/ac/15kv', 'electric/ac/25kv'],
         'operator': ['FR/sncf'],
         'manufacturer': []
     }),

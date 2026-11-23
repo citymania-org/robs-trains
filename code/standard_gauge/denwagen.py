@@ -112,7 +112,6 @@ de_p_nwagen_a4 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': ['cafe'],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -137,7 +136,6 @@ de_p_nwagen_a5 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -162,7 +160,6 @@ de_p_nwagen_a6 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -187,7 +184,6 @@ de_p_nwagen_a7 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -212,7 +208,6 @@ de_p_nwagen_b1 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -237,7 +232,6 @@ de_p_nwagen_b2 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -262,7 +256,6 @@ de_p_nwagen_b3 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -287,7 +280,6 @@ de_p_nwagen_b4 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -312,7 +304,6 @@ de_p_nwagen_b5 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -337,7 +328,6 @@ de_p_nwagen_b6 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -380,7 +370,6 @@ de_p_nwagen_s1 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -406,7 +395,6 @@ de_p_nwagen_s2 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -432,7 +420,6 @@ de_p_nwagen_s3 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -458,7 +445,6 @@ de_p_nwagen_s4 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -484,7 +470,6 @@ de_p_nwagen_s5 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -510,7 +495,6 @@ de_p_nwagen_s6 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -536,7 +520,6 @@ de_p_nwagen_s7 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -562,7 +545,6 @@ de_p_nwagen_s8 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -588,7 +570,6 @@ de_p_nwagen_s9 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -614,7 +595,6 @@ de_p_nwagen_s10 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -640,7 +620,6 @@ de_p_nwagen_s11 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],
@@ -666,7 +645,6 @@ de_p_nwagen_s12 = Train(
     badges=badges.set_train_badges({
         'flag': ['DE'],
         'role': ['regional_passenger', 'driving_cab'],
-        'amenity': [],
         'power': [],
         'operator': ['DE/db'],
         'manufacturer': [],

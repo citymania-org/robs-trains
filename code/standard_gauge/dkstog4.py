@@ -41,7 +41,6 @@ d_e_stog4_5_dsb = Train(
         'power': ['electric/dc/1500v'],
         'operator': ['DK/dsb', 'DK/dsb/stog'],
         'manufacturer': [],
-        'attribute': ['concept'],
     }),
 ).add_articulated_part(
     id='d_e_stog42_5_dsb',
