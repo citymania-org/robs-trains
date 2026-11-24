@@ -14,8 +14,7 @@ from code.standard_gauge.bemstock import be_p_m1_1, be_p_m1_2, be_p_m1_3, be_p_m
 from code.standard_gauge.beistock import be_p_i6_1, be_p_i6_2, be_p_i6_3, be_p_i6_4, be_p_i6_5, be_p_i6_6, be_p_i6_7, be_p_i6_8, be_p_i10_1, be_p_i10_2, be_p_i10_3, be_p_i10_4, be_p_i10_5, be_p_i11_1, be_p_i11_2, be_p_i11_3, be_p_i11_4, be_p_i11_5
 from code.standard_gauge.behle131718 import be_e_13_1, be_e_17_1, be_e_18_1
 from code.standard_gauge.de120101 import de_e_120_1, de_e_120_2, de_e_120_3, de_e_101_1, de_e_101_2, de_e_101_3, de_e_101_4, de_e_101_5
-from code.standard_gauge.dkmtmvmwmy import dk_d_myf_1, dk_d_mt27_1, dk_d_mv29_1, dk_d_mv29_2, dk_d_mw29_1
-from code.standard_gauge.dkmxe import d_d_mx_i_1_dsb
+from code.standard_gauge.dkmtmvmwmxmy import d_d_mx_i_1_dsb, dk_d_myf_1, dk_d_mt27_1, dk_d_mv29_1, dk_d_mv29_2, dk_d_mw29_1
 from code.standard_gauge.dkmbrød import dk_d_mbrød_467_1, dk_d_mbrød_467_2, dk_d_mbrød_467_3, dk_d_mbrød_468_1, dk_d_mbrød_469_1, dk_d_mbrød_469_2, dk_d_mbrød_471_1, dk_d_mbrød_471_2, dk_d_mbrød_471_3, dk_d_mbrød_472_2, dk_d_mbrød_472_3, dk_d_mbrød_472_4, dk_d_mbrød_473_1, dk_d_mbrød_473_2, dk_d_mbrød_474_1, dk_d_mbrød_474_2, dk_d_mbrød_474_3, dk_d_mbrød_475_1, dk_d_mbrød_475_2, dk_d_mbrød_475_3, dk_d_mbrød_475_4
 from code.standard_gauge.dksbm6 import d_d_sbm6_1_dsb, d_d_sbm6_2_dsb
 from code.standard_gauge.be201 import be_d_201_1_nmbs, be_d_201_2_nmbs, be_d_201_3_nmbs, be_d_201_4_nmbs, be_d_201_5_nmbs
@@ -194,10 +193,10 @@ COUNTRIES = {
     'RS': ('Serbia', purchase_icon('frs.png')),
     'RU': ('Russia', purchase_icon('fru.png')),
     'SE': ('Sweden', purchase_icon('fse.png')),
-    'SI ': ('Slovenia', purchase_icon('fsi.png')),
-    'SK ': ('Slovakia', purchase_icon('fsk.png')),
-    'soviet_union': ('Soviet Union', purchase_icon('fsu.png')),
-    'yugoslavia': ('Yugoslavia', purchase_icon('fyu.png')),
+    'SI': ('Slovenia', purchase_icon('fsi.png')),
+    'SK': ('Slovakia', purchase_icon('fsk.png')),
+    'SU': ('Soviet Union', purchase_icon('fsu.png')),
+    'YU': ('Yugoslavia', purchase_icon('fyu.png')),
     'europe': ('Europe', purchase_icon('fyu.png')),
 }
 

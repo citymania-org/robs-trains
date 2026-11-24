@@ -3838,7 +3838,11 @@
             "amenity/sleeper": 520,
             "amenity/panoramic": 521,
             "operator/DE/dr": 522,
-            "operator/AT/oebb": 523
+            "operator/AT/oebb": 523,
+            "flag/SI": 524,
+            "flag/SK": 525,
+            "flag/SU": 526,
+            "flag/YU": 527
         }
     }
 }
