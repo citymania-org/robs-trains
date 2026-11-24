@@ -8,6 +8,7 @@ import lib, badge
 
 from common import g, badges
 
+from code.standard_gauge.chflirt import ch_e_rabe5210_1, ch_e_rabe5210_2, ch_e_rabe5212_1, ch_e_rabe5222_1, ch_e_rabe5222_2
 from code.standard_gauge.chdd5xx import ch_e_rabe514_1, ch_e_rabe511_1, ch_e_rabe511_2, ch_e_rabe511_3, ch_e_rabe512_1
 from code.standard_gauge.bemstock import be_p_m1_1, be_p_m1_2, be_p_m1_3, be_p_m1_4, be_p_m2_1, be_p_m2_2, be_p_m2_3, be_p_m2_4, be_p_m2_5, be_p_m2_6, be_p_m2_7, be_p_m2_8, be_p_m2_9, be_p_m2_10, be_p_m2_11, be_p_m2_12, be_p_m4_1, be_p_m4_2, be_p_m4_3, be_p_m4_4, be_p_m4_5, be_p_m4_6, be_p_m4_7, be_p_m4_8, be_p_m4_9, be_p_m4_10, be_p_m5_1, be_p_m5_2, be_p_m5_3, be_p_m5_4, be_p_m5_5, be_p_m5_6, be_p_m6_1, be_p_m6_2, be_p_m6_3, be_p_m6_4, be_p_m6_5, be_p_m7_1, be_p_m7_2, be_p_m7_3, be_p_m7_4
 from code.standard_gauge.beistock import be_p_i6_1, be_p_i6_2, be_p_i6_3, be_p_i6_4, be_p_i6_5, be_p_i6_6, be_p_i6_7, be_p_i6_8, be_p_i10_1, be_p_i10_2, be_p_i10_3, be_p_i10_4, be_p_i10_5, be_p_i11_1, be_p_i11_2, be_p_i11_3, be_p_i11_4, be_p_i11_5
@@ -394,6 +395,7 @@ lib.make_purchase_sprites(
     grf.VariantGroup('"Schüttelbecher"', ch_e_rbe44_1, ch_e_rbe44_2, ch_e_rbe44_3),
     grf.VariantGroup('"Mirage"', ch_e_rabde1212_1, ch_e_rabde1212_2),
     grf.VariantGroup('"Chiquita"', ch_e_rabde816_1, ch_e_rabde816_2),
+    grf.VariantGroup('"FLIRT"', ch_e_rabe5210_1, ch_e_rabe5210_2, ch_e_rabe5212_1, ch_e_rabe5222_1, ch_e_rabe5222_2),
     ch_e_rabe514_1,
     grf.VariantGroup('"KISS"', ch_e_rabe511_1, ch_e_rabe511_2, ch_e_rabe511_3, ch_e_rabe512_1),
     # ch carriages

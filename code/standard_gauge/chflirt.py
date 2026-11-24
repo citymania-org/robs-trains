@@ -257,7 +257,7 @@ ch_e_rabe5222_1 = Train(
     id='ch_e_rabe5222_1',
     **COMMON_5222_PROPS,
     purchase_sprite_towed_id='ch_e_rabe52222_1',
-    name='SBB RABe 522.2',
+    name='SBB RABe 522.2', #different cabs (side window)
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('10a',),
@@ -321,7 +321,7 @@ ch_e_rabe5222_2 = Train(
     id='ch_e_rabe5222_2',
     **COMMON_5222_PROPS,
     purchase_sprite_towed_id='ch_e_rabe52222_2',
-    name='SBB RABe 522.2',
+    name='SBB RABe 522.2', #different cabs (side window)
     liveries=make_psd_cc_liveries(
         'pp/Template.psd',
         shading=('10a',),
